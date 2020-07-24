@@ -1,7 +1,7 @@
 ---
 title: 配合 Valine 使用的 Valine-Admin
 date: 2018-04-01 18:00:00
-updated: 2018-04-01 18:00:00
+updated: 2020-07-24 10:00:00
 categories:
   - 技能
   - 博客
@@ -11,9 +11,20 @@ tags:
 keywords: Valine, Valine-Admin
 ---
 
-在[上一篇文章](https://www.iszy.cc/2018/04/01/Valine/)中，我讲了怎样安装 Valine 评论系统。Valine 评论系统现在自带的邮件通知功能有很大缺陷，这就要轮到我今天要讲的 Valine-Admin 了。由 [@云淡风轻](https://ioliu.cn/) 大神开发的 Valine-Admin 实现了基于 leancloud 云引擎的邮件通知、垃圾评论识别和评论管理面板。
+在[上一篇文章](https://www.iszy.cc/2018/04/01/Valine/)中，我讲了怎样安装 Valine 评论系统。Valine 评论系统现在自带的邮件通知功能有很大缺陷，这就要轮到我今天要讲的 Valine-Admin 了。由 [@云淡风轻](https://ioliu.cn/) 大神开发的 Valine-Admin 实现了基于 leancloud 云引擎的邮件通知、垃圾评论识别和评论管理面板，[@赵俊](http://www.zhaojun.im/hexo-valine-admin/)大佬修改优化了一波，能够提供良好的评论通知体验。
 
 <!--more-->
+
+## 说明
+
+本文内容已弃用，本人的库针对我的个人需求做了一些修改，不再适用于一般用户。因为后续原始的 Valine-Admin 开始适配修改版的 Valine，所以建议使用[@赵俊](http://www.zhaojun.im/hexo-valine-admin/)大佬的版本。
+
+赵俊大神的原始链接：[Hexo 优化 --- Valine 扩展之邮件通知](http://www.zhaojun.im/hexo-valine-admin/)
+
+<escape>
+<details>
+  <summary><a>原始文章</a></summary>
+</escape>
 
 ## 问题与改动
 
@@ -59,3 +70,7 @@ SMTP 信息需要准确填写，用于发送通知邮件，部分邮箱如 QQ �
 ![](https://img.iszy.xyz/20190318221157.png)
 
 至此已经可以顺利使用了。由于云引擎的免费实例有每天的强制休眠，可以用定时脚本唤醒，但是大多数人应该不需要用到 24 小时，所以影响不大。
+
+<escape>
+</details>
+</escape>
