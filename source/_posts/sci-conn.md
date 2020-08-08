@@ -58,7 +58,7 @@ keywords: V2ray,SSR,SS,机场,v2ray推荐,网络加速,科学上网,代理推荐
 
 <escape>
 <details>
-  <summary><a>展开查看更多详情</a></summary>
+  <summary>展开查看更多详情</summary>
 </escape>
 
 ### 套餐
