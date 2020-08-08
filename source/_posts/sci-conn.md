@@ -128,7 +128,7 @@ SSR 节点已加入隧道中转，测速情况
 
 <escape>
 <details>
-  <summary><a>展开测速情况</a></summary>
+  <summary>展开测速情况</summary>
 </escape>
 
 部分高峰期测速
@@ -162,7 +162,7 @@ SSR 节点已加入隧道中转，测速情况
 
 <escape>
 <details>
-  <summary><a>展开查看完整套餐</a></summary>
+  <summary>展开查看完整套餐</summary>
 <table>
 <tr><th>组</th><th>套餐</th><th>价格(<strong>HKD</strong>)</th><th>流量</th><th>可用设备</th><th>最高速率</th><th>备注</th></tr>
 <tr>
@@ -281,7 +281,7 @@ SSR 节点已加入隧道中转，测速情况
 
 <escape>
 <details>
-  <summary><a>展开测速情况</a></summary>
+  <summary>展开测速情况</summary>
 </escape>
 
 ![](https://img.iszy.xyz/20200508222325.png)
@@ -310,7 +310,7 @@ SSR 节点已加入隧道中转，测速情况
 
 <escape>
 <details>
-  <summary><a>展开查看完整套餐</a></summary>
+  <summary>展开查看完整套餐</summary>
 <table>
 <tr><th>套餐</th><th>流量</th><th>价格</th><th>IP数</th><th>线路</th><th>客服</th></tr>
 <tr>
@@ -399,7 +399,7 @@ Electry 现已开启 618 优惠活动
 
 <escape>
 <details>
-  <summary><a>展开查看完整套餐</a></summary>
+  <summary>展开查看完整套餐</summary>
 </escape>
 
 | 套餐          | 价格         | 流量      | 可用设备 | 最高速率 |
@@ -428,7 +428,7 @@ Electry 现已开启 618 优惠活动
 
 <escape>
 <details>
-  <summary><a>展开测速情况</a></summary>
+  <summary>展开测速情况</summary>
 </escape>
 
 ![](https://img.iszy.xyz/20200502214036.png)
@@ -458,7 +458,7 @@ Electry 现已开启 618 优惠活动
 
 <escape>
 <details>
-  <summary><a>展开查看完整套餐</a></summary>
+  <summary>展开查看完整套餐</summary>
 </escape>
 
 **包年包月套餐**
@@ -494,7 +494,7 @@ Electry 现已开启 618 优惠活动
 
 <escape>
 <details>
-  <summary><a>展开测速情况</a></summary>
+  <summary>展开测速情况</summary>
 </escape>
 
 ![](https://img.iszy.xyz/20200502214205.png)
@@ -517,7 +517,7 @@ Pro 年付赠送港区 Shadowrocket 兑换码（需自备港区 id）
 
 <escape>
 <details>
-  <summary><a>展开查看完整套餐</a></summary>
+  <summary>展开查看完整套餐</summary>
 </escape>
 
 可选半年、全年缴费周期。Pro 套餐流量支持无极选择，更加灵活。
@@ -547,7 +547,7 @@ V2Club，V2Ray 机场，我是偶然间发现的，一直是我的主力机场�
 
 <escape>
 <details>
-  <summary><a>展开测速情况</a></summary>
+  <summary>展开测速情况</summary>
 </escape>
 
 ![](https://img.iszy.xyz/20200604145914.png)
@@ -560,7 +560,7 @@ V2Club，V2Ray 机场，我是偶然间发现的，一直是我的主力机场�
 
 <escape>
 <details>
-  <summary><a>展开查看完整套餐</a></summary>
+  <summary>展开查看完整套餐</summary>
 <table>
 <tr><th>套餐</th><th>流量</th><th>价格</th><th>备注</th></tr>
 <tr>
@@ -621,7 +621,7 @@ Meet 家的支付问题短时间还不能解决，暂时只支持使用加密货
 
 <escape>
 <details>
-  <summary><a>展开查看完整套餐</a></summary>
+  <summary>展开查看完整套餐</summary>
 </escape>
 
 > 套餐不能叠加使用，请根据自己的使用情况进行选择。
