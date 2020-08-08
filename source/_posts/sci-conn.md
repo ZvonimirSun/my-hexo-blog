@@ -494,7 +494,7 @@ Electry 现已开启 618 优惠活动
 
 <escape>
 <details>
-  <summary>展开测速情况</summary>
+  <summary><strong>展开测速情况</strong></summary>
 </escape>
 
 ![](https://img.iszy.xyz/20200502214205.png)
