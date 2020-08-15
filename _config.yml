@@ -338,6 +338,7 @@ theme_config:
     Jianger’s Blog: https://jianger.space/links/
     文轩设计之路: http://www.wenxuands.com
     HKU’BLOG: http://hkublog.top/index.php/%e5%8f%8b%e9%93%be/
+    usg的blog: http://blog.dgut.top/link/
 
   # Table of Contents in the Sidebar
   # Front-matter variable (unsupport wrap expand_all).
@@ -348,7 +349,7 @@ theme_config:
     # If true, all words will placed on next lines if header width longer then sidebar width.
     wrap: false
     # If true, all level of TOC in a post will be displayed, rather than the activated part of it.
-    expand_all: true
+    expand_all: false
     # Maximum heading depth of generated toc.
     max_depth: 6
 
