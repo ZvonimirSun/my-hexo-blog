@@ -26,7 +26,7 @@ keywords: V2ray,SSR,SS,机场,v2ray推荐,网络加速,科学上网,代理推荐
 | [Electry](#五、Electry)                         | V2Ray          | 线路大佬，高速稳定                       | [官网传送门](https://url.iszy.xyz/electry)    |
 | [ByWave](#六、ByWave)                           | V2Ray          | 高质高端，服务稳定                       | [官网传送门](https://url.iszy.xyz/bywave)     |
 | [MEET](#七、MEET)（已恢复）                     | SSR            | 专注按量付费，高速稳定                   | [官网传送门](https://url.iszy.xyz/fspeed)     |
-| [BoomCloud](#八、BoomCloud)                     | V2ray/SSR/SS   | 多年老站，附赠丰富                       |                                               |
+| [BoomCloud](#八、BoomCloud)                     | V2ray/SSR/SS   | 多年老站，附赠丰富                       | [官网传送门](https://url.iszy.xyz/boomcloud)  |
 | [DuangCloud](#九、DuangCloud)                   | V2Ray          | 平价灵活                                 | [官网传送门](https://url.iszy.xyz/duangcloud) |
 | [V2Club](#十、V2Club)                           | V2Ray          | 稳定坚挺，多年老站                       | [官网传送门](https://url.iszy.xyz/lanan)      |
 
@@ -705,6 +705,8 @@ Meet 家的支付问题短时间还不能解决，暂时只支持使用加密货
 </escape>
 
 ## 八、BoomCloud
+
+[官网传送门](https://url.iszy.xyz/boomcloud)
 
 ### （一）优惠
 
