@@ -1,6 +1,4 @@
 User-agent: *
-Disallow: /tags/
-Disallow: /archives/
 Disallow: *.json$
 
 Sitemap: https://www.iszy.cc/sitemap.xml
