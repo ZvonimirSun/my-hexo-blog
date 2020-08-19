@@ -120,12 +120,36 @@ search:
   content: true
   format: html
 
+# 站点地图
 sitemap:
   path: sitemap.xml
   template: ./sitemap_template.xml
   rel: false
   tags: true
   categories: true
+
+# hexo-neat
+# 博文压缩
+neat_enable: true
+# 压缩html
+neat_html:
+  enable: true
+  exclude:
+# 压缩css  
+neat_css:
+  enable: true
+  exclude:
+    - '**/*.min.css'
+# 压缩js
+neat_js:
+  enable: true
+  mangle: true
+  output:
+  compress:
+  exclude:
+    - '**/*.min.js'
+    - '**/jquery.fancybox.pack.js'
+    - '**/index.js'  
 
 theme_config:
   # ===============================================================
