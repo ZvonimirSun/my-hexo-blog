@@ -64,10 +64,8 @@ graphs: {
   }
 ```
 
-<escape>
 <details>
-  <summary><a>完整配置</a></summary>
-</escape>
+  <summary>完整配置</summary>
 
 ```yaml
 host: 0.0.0.0
@@ -191,9 +189,7 @@ writeBufferLowWaterMark: 32768
 writeBufferHighWaterMark: 65536
 ```
 
-<escape>
 </details>
-</escape>
 
 ### 调整 properties 文件
 

@@ -21,10 +21,8 @@ keywords: Valine, Valine-Admin
 
 赵俊大神的原始链接：[Hexo 优化 --- Valine 扩展之邮件通知](http://www.zhaojun.im/hexo-valine-admin/)
 
-<escape>
 <details>
-  <summary><a>原始文章</a></summary>
-</escape>
+  <summary>原始文章</summary>
 
 ## 问题与改动
 
@@ -71,6 +69,4 @@ SMTP 信息需要准确填写，用于发送通知邮件，部分邮箱如 QQ �
 
 至此已经可以顺利使用了。由于云引擎的免费实例有每天的强制休眠，可以用定时脚本唤醒，但是大多数人应该不需要用到 24 小时，所以影响不大。
 
-<escape>
 </details>
-</escape>

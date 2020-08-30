@@ -24,10 +24,8 @@ keywords: v2ray安装,v2ray配置,v2ray教程,v2ray搭建,v2ray部署,v2ray
 
 首先我们来看一下官方给出的配置文件格式。
 
-<escape>
 <details>
-  <summary><a>官方配置格式</a></summary>
-</escape>
+  <summary>官方配置格式</summary>
 
 ```json
 {
@@ -44,9 +42,7 @@ keywords: v2ray安装,v2ray配置,v2ray教程,v2ray搭建,v2ray部署,v2ray
 }
 ```
 
-<escape>
 </details>
-</escape>
 
 - log: 日志配置，表示 V2Ray 如何输出日志。
 - api: 内置的远程控置 API。
@@ -83,10 +79,8 @@ keywords: v2ray安装,v2ray配置,v2ray教程,v2ray搭建,v2ray部署,v2ray
 
 使用 v2ray 一定对 VMess 不陌生，这个是 v2ray 最常使用的协议。下面是一个最简单的 TCP 连接的配置。
 
-<escape>
 <details>
-  <summary><a>VMess示例</a></summary>
-</escape>
+  <summary>VMess示例</summary>
 
 ```json
 "inbounds": [
@@ -106,18 +100,14 @@ keywords: v2ray安装,v2ray配置,v2ray教程,v2ray搭建,v2ray部署,v2ray
 ]
 ```
 
-<escape>
 </details>
-</escape>
 
 #### Shadowrocks
 
 这个也是一个大家常用的协议，配置起来就简单很多了。
 
-<escape>
 <details>
-  <summary><a>Shadowrocks示例</a></summary>
-</escape>
+  <summary>Shadowrocks示例</summary>
 
 ```json
 "inbounds": [
@@ -134,18 +124,14 @@ keywords: v2ray安装,v2ray配置,v2ray教程,v2ray搭建,v2ray部署,v2ray
 ]
 ```
 
-<escape>
 </details>
-</escape>
 
 #### MTProto
 
 使用 Telegram 的人应该熟悉这个协议，这个就是 tg 专用代理，也可以使用 v2ray 来部署，目前只支持转发到 Telegram 的 IPv4 地址。需要搭配对应的出站配置和路由配置。
 
-<escape>
 <details>
-  <summary><a>MTProto示例</a></summary>
-</escape>
+  <summary>MTProto示例</summary>
 
 ```json
 "inbounds": [
@@ -166,9 +152,7 @@ keywords: v2ray安装,v2ray配置,v2ray教程,v2ray搭建,v2ray部署,v2ray
 ]
 ```
 
-<escape>
 </details>
-</escape>
 
 可使用如下命令生成随机用户密钥，或直接在线生成强密码。
 
@@ -184,10 +168,8 @@ openssl rand -hex 16
 
 这是最简单的配置，即由服务器直接连接，一般的代理都是使用这个。我们一般把它放置在出战配置 outbounds 的第一个，作为默认配置，所有没有在路由配置 routing 中指定流向的流量都走这个出站。
 
-<escape>
 <details>
-  <summary><a>Freedom示例</a></summary>
-</escape>
+  <summary>Freedom示例</summary>
 
 ```json
 "outbounds": [
@@ -198,18 +180,14 @@ openssl rand -hex 16
 }
 ```
 
-<escape>
 </details>
-</escape>
 
 #### MTProto
 
 如果配置了 MTProto 的入站配置，则需要添加一个出战配置来搭配使用。让服务器也通过 mtproto 协议连接到 Telegram 服务器。
 
-<escape>
 <details>
-  <summary><a>MTProto示例</a></summary>
-</escape>
+  <summary>MTProto示例</summary>
 
 ```json
 "outbounds": [
@@ -221,9 +199,7 @@ openssl rand -hex 16
 ]
 ```
 
-<escape>
 </details>
-</escape>
 
 ### 路由配置 routing
 
@@ -231,10 +207,8 @@ openssl rand -hex 16
 
 下面是配置了 MTProto 时需要使用的配置。
 
-<escape>
 <details>
-  <summary><a>带MTProto的路由示例</a></summary>
-</escape>
+  <summary>带MTProto的路由示例</summary>
 
 ```json
 "routing": {
@@ -250,9 +224,7 @@ openssl rand -hex 16
 }
 ```
 
-<escape>
 </details>
-</escape>
 
 ## 完整配置实例
 
@@ -260,10 +232,8 @@ openssl rand -hex 16
 
 #### TCP
 
-<escape>
 <details>
-  <summary><a>TCP配置示例</a></summary>
-</escape>
+  <summary>TCP配置示例</summary>
 
 ```json
 {
@@ -290,18 +260,14 @@ openssl rand -hex 16
 }
 ```
 
-<escape>
 </details>
-</escape>
 
 #### TLS
 
 需要自行申请 ssl 证书。
 
-<escape>
 <details>
-  <summary><a>TLS配置示例</a></summary>
-</escape>
+  <summary>TLS配置示例</summary>
 
 ```json
 {
@@ -340,18 +306,14 @@ openssl rand -hex 16
 }
 ```
 
-<escape>
 </details>
-</escape>
 
 #### WebSocket
 
 下面是普通的 WebSocket 配置。
 
-<escape>
 <details>
-  <summary><a>WebSocket配置示例</a></summary>
-</escape>
+  <summary>WebSocket配置示例</summary>
 
 ```json
 {
@@ -384,16 +346,12 @@ openssl rand -hex 16
 }
 ```
 
-<escape>
 </details>
-</escape>
 
 WebSocket+TLS+Web 实际上就是反代 v2ray 的 WebSocket 端口并套上 https，反代的路径要与`wsSettings`中的`path`保持一致。比如，使用 Nginx 进行反代，v2ray 的配置文件保持上文内容，配置文件大致如下所示。
 
-<escape>
 <details>
-  <summary><a>Nginx 配置示例</a></summary>
-</escape>
+  <summary>Nginx 配置示例</summary>
 
 ```
 server
@@ -439,16 +397,12 @@ server
     }
 ```
 
-<escape>
 </details>
-</escape>
 
 #### mKCP
 
-<escape>
 <details>
-  <summary><a>mKCP配置示例</a></summary>
-</escape>
+  <summary>mKCP配置示例</summary>
 
 ```json
 {
@@ -486,16 +440,12 @@ server
 }
 ```
 
-<escape>
 </details>
-</escape>
 
 ### Shadowsocks
 
-<escape>
 <details>
-  <summary><a>Shadowsocks配置示例</a></summary>
-</escape>
+  <summary>Shadowsocks配置示例</summary>
 
 ```json
 {
@@ -520,16 +470,12 @@ server
 }
 ```
 
-<escape>
 </details>
-</escape>
 
 ### MTProto
 
-<escape>
 <details>
-  <summary><a>MTProto配置示例</a></summary>
-</escape>
+  <summary>MTProto配置示例</summary>
 
 ```json
 {
@@ -574,16 +520,12 @@ server
 }
 ```
 
-<escape>
 </details>
-</escape>
 
 ### 多配置共存
 
-<escape>
 <details>
-  <summary><a>多配置配置示例</a></summary>
-</escape>
+  <summary>多配置配置示例</summary>
 
 ```json
 {
@@ -656,9 +598,7 @@ server
 }
 ```
 
-<escape>
 </details>
-</escape>
 
 ## 后话
 
