@@ -28,7 +28,7 @@ custom_file_path:
   #bodyEnd: source/_data/body-end.njk
   #variable: source/_data/variables.styl
   #mixin: source/_data/mixins.styl
-  #style: source/_data/styles.styl
+  style: source/_data/styles.styl
 
 # ---------------------------------------------------------------
 # Site Information Settings
@@ -113,7 +113,7 @@ menu:
   home: / || fa fa-home
   #about: /about/ || fa fa-user
   tags: /tags/ || fa fa-tags
-  categories: /categories/ || fa fa-th
+  # categories: /categories/ || fa fa-th
   archives: /archives/ || fa fa-archive
   机场推广: /2019/01/03/sci-conn/ || fa fa-ad
   友链: /links/ || fas fa-link
@@ -932,7 +932,7 @@ motion:
 # Progress bar in the top during page loading.
 # For more information: https://github.com/HubSpot/pace
 pace:
-  enable: true
+  enable: false
   # Themes list:
   # big-counter | bounce | barber-shop | center-atom | center-circle | center-radar | center-simple
   # corner-indicator | fill-left | flat-top | flash | loading-bar | mac-osx | material | minimal
