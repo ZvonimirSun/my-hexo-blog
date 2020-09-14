@@ -23,7 +23,7 @@ exturl: false
 | [宅日记](https://crosschannel.cc/links.html)                 | 一个不知名懒肥宅的自留地                           |
 | [ZJBLOG](https://www.zjhuiwan.cn/)                           | 记录生活·分享技术                                  |
 | [yoko blog](https://pengrl.com/link/)                        | 目前主要写些 c++和 Go 语言方面的博客               |
-| [枫糖](https://blog.maplesugar.space/about/links/)           | From rookie to master                              |
+| [枫糖](https://blog.maplesugar.top/about/links/)             | From rookie to master                              |
 | [Serence](https://blog.blinkstar.cn)                         | 一个程序员 + 文艺青年的博客                        |
 | [憨憨](https://www.likeai.me/80.html)                        | Never surrender to fate                            |
 | [Forex Trading](https://www.fi-forex.com/)                   | 外汇交易入门                                       |
