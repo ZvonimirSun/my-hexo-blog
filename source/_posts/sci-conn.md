@@ -1,7 +1,7 @@
 ---
 title: 2020最新优质SS/SSR/Trojan/V2Ray机场推荐
 date: 2019-01-03 03:11:50
-updated: 2020-08-25 13:00:00
+updated: 2020-09-15 13:00:00
 categories:
   - 分享
   - 推广
@@ -25,7 +25,7 @@ keywords: V2ray,SSR,SS,机场,v2ray推荐,网络加速,科学上网,代理推荐
 | [CMYNetwork 红莓网络](#四、CMYNetwork-红莓网络) | SSR/Trojan     | 内网专线，稳定平价，游戏专线(部分)，回国 | [官网传送门](https://url.iszy.xyz/cmynetwork) |
 | [Electry](#五、Electry)                         | V2Ray          | 线路大佬，高速稳定                       | [官网传送门](https://url.iszy.xyz/electry)    |
 | [ByWave](#六、ByWave)                           | V2Ray          | 高质高端，服务稳定                       | [官网传送门](https://url.iszy.xyz/bywave)     |
-| [MEET](#七、MEET)（已恢复）                     | SSR            | 专注按量付费，高速稳定                   | [官网传送门](https://url.iszy.xyz/fspeed)     |
+| [MEET](#七、MEET)                               | SSR            | 专注按量付费，高速稳定                   | [官网传送门](https://url.iszy.xyz/fspeed)     |
 | [BoomCloud](#八、BoomCloud)                     | V2ray/SSR/SS   | 多年老站，附赠丰富                       | [官网传送门](https://url.iszy.xyz/boomcloud)  |
 | [DuangCloud](#九、DuangCloud)                   | V2Ray          | 平价灵活                                 | [官网传送门](https://url.iszy.xyz/duangcloud) |
 | [V2Club](#十、V2Club)                           | V2Ray          | 稳定坚挺，多年老站                       | [官网传送门](https://url.iszy.xyz/lanan)      |
@@ -34,11 +34,9 @@ keywords: V2ray,SSR,SS,机场,v2ray推荐,网络加速,科学上网,代理推荐
 
 更新动态:
 
+- 更新 bywave 优惠(2020.09.15)
 - 更新 V2Club 优惠(2020.08.25)
 - 更新简介、测速(2020.08.15)
-- 增加更新动态
-- 更新心阶云优惠
-- 更新 bywave 价格、优惠
 
 ## 二、心阶云
 
@@ -574,6 +572,11 @@ CMYNetwork 提供三套服务，分别为身在 国内、 国外以及 企业的
 
 > 转官方优惠公告
 
+**十一特惠**:
+
+1. 使用优惠码 `骨折` 在新购或续费时选择年付、两年付、三年付时可获得**一次性 7 折**优惠
+2. 使用优惠码 `柠萌` 在新购或续费时选择月付、季付、半年付时可获得**循环 8 折**优惠
+
 充值获得赠送金
 
 - 充 100 到账 115
@@ -974,7 +977,7 @@ _活动时间持续至情人节，数量有限，先到先得，任何疑问可�
 
 ### （二）简介
 
-V2Club，一家专门提供 v2ray 代理服务的服务商。或许是 V2Ray 的关系，节点一直都挺稳定的，也做了挺长时间了，规模已经蛮大了。经我试验，品质可靠。为了保证服务质量，现在只提供年费套餐了，不过还是可以放心买啦。
+V2Club(旧蓝岸)，一家专门提供 v2ray 代理服务的服务商。或许是 V2Ray 的关系，节点一直都挺稳定的，也做了挺长时间了，规模已经蛮大了。经我试验，品质可靠。为了保证服务质量，现在只提供年费套餐了，不过还是可以放心买啦。
 
 **高端稳定的线路**
 
