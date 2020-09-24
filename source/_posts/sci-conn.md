@@ -68,7 +68,7 @@ keywords: V2ray,SSR,SS,机场,v2ray推荐,网络加速,科学上网,代理推荐
 
 通过本站[链接](https://url.iszy.xyz/xinjie)进入心阶云，购买时使用优惠码，可享受折扣优惠，优惠码不可叠加使用。
 
-5%OFF 折扣码: `HotSummer`，￥ 145 及以上套餐可用。
+5%OFF 折扣码: `OctCoupon`，￥ 145 及以上套餐可用。
 
 **实时服务监控**
 
