@@ -1,4 +1,1 @@
-User-agent: *
-Disallow: *.json$
-
 Sitemap: https://www.iszy.cc/sitemap.xml
