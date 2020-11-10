@@ -255,7 +255,7 @@ SSR 节点已加入隧道中转，测速情况
 注意：套餐定价为**港元**，请自行根据汇率进行换算。参考汇率 `HKD/CNY≈0.9`。
 
 <table>
-<tr><th>组</th><th>套餐</th><th>价格(<strong>HKD</strong>)</th><th>流量</th><th>可用设备</th><th>最高速率</th><th>备注</th></tr>
+<tr><th>组</th><th>套餐</th><th>价格(<strong>港元</strong>)</th><th>流量</th><th>可用设备</th><th>最高速率</th><th>备注</th></tr>
 <tr>
   <td>特别提供</td>
   <td>Special Offer #1</td>
@@ -304,9 +304,9 @@ SSR 节点已加入隧道中转，测速情况
   <td>Lite 月度套餐</td>
   <td>69.9元/31天</td>
   <td rowspan="4">100G/月</td>
-  <td rowspan="4">3</td>
-  <td rowspan="4">200 Mbps</td>
-  <td rowspan="4">适合轻度用户，提供 Pro 同样节点</td>
+  <td rowspan="8">3</td>
+  <td rowspan="8">200 Mbps</td>
+  <td rowspan="4">适合中度用户，提供 Pro 同样节点</td>
 </tr>
 <tr>
   <td>Lite 季度套餐</td>
@@ -319,6 +319,25 @@ SSR 节点已加入隧道中转，测速情况
 <tr>
   <td>Lite 年度套餐</td>
   <td>399.9元/365 天</td>
+</tr>
+<tr>
+  <td rowspan="4">Micro</td>
+  <td>Micro 月度套餐</td>
+  <td>39.9元/31天</td>
+  <td rowspan="4">50G/月</td>
+  <td rowspan="4">适合轻量使用</td>
+</tr>
+<tr>
+  <td>Micro 季度套餐</td>
+  <td>79.9元/93 天</td>
+</tr>
+<tr>
+  <td>Micro 半年套餐</td>
+  <td>159.9元/186 天</td>
+</tr>
+<tr>
+  <td>Micro 年度套餐</td>
+  <td>299.9元/365 天</td>
 </tr>
 <tr>
   <td rowspan="3">Business</td>
