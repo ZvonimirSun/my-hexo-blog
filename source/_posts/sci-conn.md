@@ -1,7 +1,7 @@
 ---
 title: 优质SS/SSR/Trojan/V2Ray商家(机场)推荐
 date: 2019-01-03 03:11:50
-updated: 2020-11-29 10:00:00
+updated: 2020-12-03 10:00:00
 categories:
   - 分享
   - 推广
@@ -28,12 +28,13 @@ keywords: 机场推荐,机场评测,网络加速,科学上网,代理,酸酸乳,�
 | [MEET](#七、MEET)                               | SSR               | 专注按量付费，高速稳定                   | [官网传送门](https://url.iszy.xyz/fspeed)     |
 | [BoomCloud](#八、BoomCloud)                     | V2ray/SSR/SS      | 多年老站，附赠丰富                       | [官网传送门](https://url.iszy.xyz/boomcloud)  |
 | [DuangCloud](#九、DuangCloud)                   | V2Ray             | 平价灵活                                 | [官网传送门](https://url.iszy.xyz/duangcloud) |
-| [V2Club](#十、V2Club)                           | V2Ray/Trojan      | 稳定坚挺，多年老站                       | [官网传送门](https://url.iszy.xyz/lanan)      |
+| [V2Club](#十、V2Club)                           | SS(全专线)        | 稳定坚挺，多年老站                       | [官网传送门](https://url.iszy.xyz/lanan)      |
 
 > 本页机场均在上次网络大波动中提供了稳定的服务，还会持续观察未来表现
 
 更新动态:
 
+- 更新 [V2Club](#十、V2Club) 线路类别，即将更换为 SS 协议（全专线）(2020.12.03)
 - 更新双十一优惠(2020.11.10)
 - 更新 [ByWave](#六、ByWave) 优惠(2020.10.31)
 - 更新[心阶云](#二、心阶云)优惠代码(2020.10.26)
@@ -986,8 +987,7 @@ V2Club(旧蓝岸)，一家专门提供 v2ray 代理服务的服务商。或许�
 
 - 高达 **500Mbps+** 速率可用
 - 满足**YouTube 的 4K 视频**流畅播放，国外网游流畅游玩
-- 高级**BGP 隧道中继 + IEPL 专线**接入
-- 包含国内**BGP 中转**
+- 高级**IEPL 专线**接入
 - 40+全球落地节点
 - 针对国内网络优化的全球极速 CN2 GIA HKT HKBN WTT，让您的网络如虎添翼
 - 低延迟，以香港为例，多线路实测 PIN 值均在 10-50ms 范围内
@@ -1004,7 +1004,7 @@ V2Club(旧蓝岸)，一家专门提供 v2ray 代理服务的服务商。或许�
 **更好的体验**
 
 - 允许**多设备同时在线**（PC 端/移动端/路由器），若是团队使用购买，**分摊成本**
-- **V2ray+Trojan** 双协议加持，更完善的协议，更强大的性能，更丰富的功能
+- IEPL 无审查 + ss 协议，提供更广泛的支持
 - 工单系统，有问题可以及时得到解决
 - 支持支付宝支付
 
