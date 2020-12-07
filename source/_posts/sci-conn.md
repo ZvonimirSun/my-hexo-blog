@@ -158,8 +158,7 @@ SSR 节点已加入隧道中转，测速情况
   - [心阶全平台订阅教程](https://mirrors.心阶.net/)
 - 订阅地址及节点信息请勿截图发到其他地方，请务必打码。
 - 由于众所周知的原因，官网域名会被迫更换，请务必记下用户首页上的多个域名，以免失联，或从本文中的链接访问。
-- 售后公告请关注 [TG 群](https://t.me/xinjiecloud)，建议加入获取最新消息。
-- 交流群关注 [TG 群](https://t.me/New_Xinjie)，建议加入获取最新消息。
+- 售后公告请关注 [TG 群](https://t.me/joinchat/HrJ6BFcUPO-ClrBUroqJUg)，建议加入获取最新消息。
 - 若有充值、使用问题，请联系 [TG 群管理员](https://t.me/foreverforfire)，**请勿通过工单系统提交问题**。
 
 </details>
@@ -1072,7 +1071,7 @@ V2Club(旧蓝岸)，一家专门提供 v2ray 代理服务的服务商。或许�
   - **注：近期力度加强，为保安全，请挂代理后方可访问**）
 - 官方联系
   - 网站提供在线咨询服务
-  - [telegram 官方群组](https://t.me/lan_an)
+  - [telegram 官方群组](https://t.me/niuniandaji)
 
 </details>
 
