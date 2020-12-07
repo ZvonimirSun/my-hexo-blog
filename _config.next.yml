@@ -9,7 +9,7 @@
 # See: https://theme-next.js.org/docs/theme-settings/
 # ---------------------------------------------------------------
 
-# Allow to cache content generation. Introduced in NexT v6.0.0.
+# Allow to cache content generation.
 cache:
   enable: true
 
@@ -53,13 +53,12 @@ favicon:
   apple_touch_icon: /images/apple-touch-icon.png
   safari_pinned_tab: /images/safari-pinned-tab.svg
   android_manifest: /images/manifest.json
-  ms_browserconfig: /images/browserconfig.xml
 
 # Custom Logo (Warning: Do not support scheme Mist)
 custom_logo: #/uploads/custom-logo.jpg
 
 # Creative Commons 4.0 International License.
-# See: https://creativecommons.org/share-your-work/licensing-types-examples
+# See: https://creativecommons.org/about/cclicenses/
 # Available values of license: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero
 # You can set a language value if you prefer a translated version of CC license, e.g. deed.zh
 # CC licenses are available in 39 languages, you can find the specific and correct abbreviation you need on https://creativecommons.org
@@ -216,7 +215,7 @@ chat:
 language_switcher: false
 
 footer:
-  # Specify the date when the site was setup. If not defined, current year will be used.
+  # Specify the year when the site was setup. If not defined, current year will be used.
   since: 2017
 
   # Icon between year and copyright info.
@@ -422,7 +421,7 @@ github_banner:
 #   light | light italic | normal | normal italic | bold | bold italic
 # Be aware that setting too much fonts will cause site running slowly
 # ---------------------------------------------------------------
-# To avoid space between header and sidebar in scheme Pisces / Gemini, Web Safe fonts are recommended for `global` (and `title`):
+# Web Safe fonts are recommended for `global` (and `title`):
 # Arial | Tahoma | Helvetica | Times New Roman | Courier New | Verdana | Georgia | Palatino | Garamond | Comic Sans MS | Trebuchet MS
 # ---------------------------------------------------------------
 
@@ -481,11 +480,11 @@ index_with_subtitle: false
 exturl: false
 
 # Google Webmaster tools verification.
-# See: https://www.google.com/webmasters
+# See: https://developers.google.com/search
 google_site_verification: NVbOnZWipX7gWLG4NVJzJWVD16F6okyUB1NDN6mNoIo
 
 # Bing Webmaster tools verification.
-# See: https://www.bing.com/webmaster
+# See: https://www.bing.com/webmasters
 bing_site_verification: 10AA475F381BF9E4C280F1E2E0B3F280
 
 # Yandex Webmaster tools verification.
@@ -529,16 +528,16 @@ math:
 pjax: true
 
 # FancyBox is a tool that offers a nice and elegant way to add zooming functionality for images.
-# For more information: https://fancyapps.com/fancybox
+# For more information: https://fancyapps.com/fancybox/
 fancybox: true
 
 # A JavaScript library for zooming images like Medium.
 # Warning: Do not enable both `fancybox` and `mediumzoom`.
-# For more information: https://github.com/francoischalifour/medium-zoom
+# For more information: https://medium-zoom.francoischalifour.com
 mediumzoom: false
 
 # Vanilla JavaScript plugin for lazyloading images.
-# For more information: https://github.com/ApoorvSaxena/lozad.js
+# For more information: https://apoorv.pro/lozad.js/demo/
 lazyload: true
 
 # Pangu Support
@@ -547,7 +546,7 @@ lazyload: true
 pangu: true
 
 # Quicklink Support
-# For more information: https://github.com/GoogleChromeLabs/quicklink
+# For more information: https://getquick.link
 # Front-matter variable (unsupport home archive).
 quicklink:
   enable: true
@@ -578,7 +577,7 @@ comments:
   # Available values: tabs | buttons
   style: tabs
   # Choose a comment system to be displayed by default.
-  # Available values: changyan | disqus | disqusjs | gitalk | livere | valine
+  # Available values: disqus | disqusjs | changyan | livere | gitalk | utterances
   active:
   # Setting `true` means remembering the comment system selected by the visitor.
   storage: true
@@ -593,18 +592,17 @@ comments:
     #  order: -2
 
 # Disqus
+# For more information: https://disqus.com
 disqus:
   enable: false
   shortname:
   count: true
 
 # DisqusJS
-# Alternative Disqus - Render comment component using Disqus API.
-# Demo: https://suka.js.org/DisqusJS/
-# For more information: https://github.com/SukkaW/DisqusJS
+# For more information: https://disqusjs.skk.moe
 disqusjs:
   enable: false
-  # API Endpoint of Disqus API (https://disqus.com/api/).
+  # API Endpoint of Disqus API (https://disqus.com/api/docs/).
   # Leave api empty if you are able to connect to Disqus API. Otherwise you need a reverse proxy for it.
   # For example:
   # api: https://disqus.skk.moe/disqus/
@@ -613,6 +611,7 @@ disqusjs:
   shortname: # See: https://disqus.com/admin/settings/general/
 
 # Changyan
+# For more information: https://changyan.kuaizhan.com
 changyan:
   enable: false
   appid:
@@ -735,7 +734,7 @@ valine:
 livere_uid: # <your_uid>
 
 # Gitalk
-# For more information: https://gitalk.github.io, https://github.com/gitalk/gitalk
+# For more information: https://gitalk.github.io
 gitalk:
   enable: false
   github_id: # GitHub repo owner
@@ -748,6 +747,20 @@ gitalk:
   # If you want everyone visiting your site to see a uniform language, you can set a force language value
   # Available values: en | es-ES | fr | ru | zh-CN | zh-TW
   language:
+
+# Utterances
+# For more information: https://utteranc.es
+utterances:
+  enable: false
+  repo: # Github repository name
+  # Available values: pathname | url | title | og:title
+  issue_term: pathname
+  # Available values: github-light | github-dark | preferred-color-scheme | github-dark-orange | icy-dark | dark-blue | photon-dark | boxy-light
+  theme: github-light
+
+# Isso
+# For more information: https://posativ.org/isso/
+isso: # <data_isso>
 
 # ---------------------------------------------------------------
 # Post Widgets & Content Sharing Services
@@ -787,9 +800,7 @@ growingio_analytics: # <project_id>
 cnzz_siteid:
 
 # Show number of visitors of each article.
-# You can visit https://leancloud.cn to get AppID and AppKey.
-# AppID and AppKey are recommended to be the same as valine's for counter compatibility.
-# Warning: Do not enable both `valine.visitor` and `leancloud_visitors`.
+# You can visit https://www.leancloud.cn to get AppID and AppKey.
 leancloud_visitors:
   enable: false
   app_id: # <your app id>
@@ -811,7 +822,7 @@ firestore:
   projectId: # Required
 
 # Show Views / Visitors of the website / page with busuanzi.
-# Get more information on http://ibruce.info/2015/04/04/busuanzi
+# Get more information on http://ibruce.info/2015/04/04/busuanzi/
 busuanzi_count:
   enable: false
   total_visitors: true
@@ -856,20 +867,20 @@ swiftype_key:
 # ---------------------------------------------------------------
 
 # Chatra Support
-# See: https://chatra.io
+# See: https://chatra.com
 # Dashboard: https://app.chatra.io/settings/general
 chatra:
   enable: false
   async: true
   id: # Visit Dashboard to get your ChatraID
-  #embed: # Unfinished experimental feature for developers. See: https://chatra.io/help/api/#injectto
+  #embed: # Unfinished experimental feature for developers. See: https://chatra.com/help/api/#injectto
 
 # Tidio Support
-# See: https://www.tidiochat.com
-# Dashboard: https://www.tidiochat.com/panel/dashboard
+# See: https://www.tidio.com
+# Dashboard: https://www.tidio.com/panel/dashboard
 tidio:
   enable: false
-  key: # Public Key, get it from dashboard. See: https://www.tidiochat.com/panel/settings/developer
+  key: # Public Key, get it from dashboard. See: https://www.tidio.com/panel/settings/developer
 
 # ---------------------------------------------------------------
 # Tags Settings
@@ -949,7 +960,7 @@ canvas_ribbon:
 #! ==============================================================
 
 # It's recommended to use the same version as in `_vendors.yml` to avoid potential problems.
-# Remember to use the https protocol of CDN links when you enable https on your site.
+# Remember to use the HTTPS protocol of CDN links when you enable HTTPS on your site.
 vendors:
   # The CDN provider of NexT internal scripts.
   # Available values: local | jsdelivr | unpkg | cdnjs
@@ -1023,6 +1034,9 @@ vendors:
   algolia_search:
   instant_search:
 
+  # PDF
+  pdfobject:
+
   # Mermaid
   mermaid:
 
@@ -1038,6 +1052,7 @@ vendors:
   canvas_ribbon:
 
 # Assets
+# Accelerate delivery of static files using a CDN
 css: css
 js: js
 images: images
