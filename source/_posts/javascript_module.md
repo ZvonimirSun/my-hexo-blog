@@ -19,7 +19,7 @@ tags:
 
 随着网站逐渐变成"[互联网应用程序](http://en.wikipedia.org/wiki/Web_application)"，嵌入网页的 Javascript 代码越来越庞大，越来越复杂。
 
-![](https://img.iszy.xyz/20190814094600.png?x-oss-process=style/mystyle)
+![](https://img.iszy.cc/20190814094600.png?x-oss-process=style/mystyle)
 
 网页越来越像桌面程序，需要一个团队分工协作、进度管理、单元测试等等......开发者不得不使用软件工程的方法，管理网页的业务逻辑。
 
@@ -29,7 +29,7 @@ Javascript 模块化编程，已经成为一个迫切的需求。理想情况下
 
 Javascript 社区做了很多努力，在现有的运行环境中，实现"模块"的效果。本文总结了当前＂Javascript 模块化编程＂的最佳实践，说明如何投入实用。虽然这不是初级教程，但是只要稍稍了解 Javascript 的基本语法，就能看懂。
 
-![](https://img.iszy.xyz/20190814094950.png?x-oss-process=style/mystyle)
+![](https://img.iszy.cc/20190814094950.png?x-oss-process=style/mystyle)
 
 ## 原始写法
 
@@ -59,13 +59,13 @@ function m2() {
 var module1 = new Object({
   _count: 0,
 
-  m1: function() {
+  m1: function () {
     //...
   },
 
-  m2: function() {
+  m2: function () {
     //...
-  }
+  },
 });
 ```
 
@@ -86,20 +86,20 @@ module1._count = 5;
 使用"[立即执行函数](http://benalman.com/news/2010/11/immediately-invoked-function-expression/)"（Immediately-Invoked Function Expression，IIFE），可以达到不暴露私有成员的目的。
 
 ```js
-var module1 = (function() {
+var module1 = (function () {
   var _count = 0;
 
-  var m1 = function() {
+  var m1 = function () {
     //...
   };
 
-  var m2 = function() {
+  var m2 = function () {
     //...
   };
 
   return {
     m1: m1,
-    m2: m2
+    m2: m2,
   };
 })();
 ```
@@ -117,8 +117,8 @@ module1 就是 Javascript 模块的基本写法。下面，再对这种写法进
 如果一个模块很大，必须分成几个部分，或者一个模块需要继承另一个模块，这时就有必要采用"放大模式"（augmentation）。
 
 ```js
-var module1 = (function(mod) {
-  mod.m3 = function() {
+var module1 = (function (mod) {
+  mod.m3 = function () {
     //...
   };
 
@@ -133,7 +133,7 @@ var module1 = (function(mod) {
 在浏览器环境中，模块的各个部分通常都是从网上获取的，有时无法知道哪个部分会先加载。如果采用上一节的写法，第一个执行的部分有可能加载一个不存在空对象，这时就要采用"宽放大模式"。
 
 ```js
-var module1 = (function(mod) {
+var module1 = (function (mod) {
   //...
 
   return mod;
@@ -149,7 +149,7 @@ var module1 = (function(mod) {
 为了在模块内部调用全局变量，必须显式地将其他变量输入模块。
 
 ```js
-var module1 = (function($, YAHOO) {
+var module1 = (function ($, YAHOO) {
   //...
 })(jQuery, YAHOO);
 ```

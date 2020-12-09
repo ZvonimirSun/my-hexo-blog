@@ -31,7 +31,7 @@ END LOOP;
 
 给出一个 Power 表(表 1)的数据如下：
 
-![](https://img.iszy.xyz/20190318215310.png)
+![](https://img.iszy.cc/20190318215310.png)
 
 1. 3 日的电费=1 日+2 日
 2. 4 日的电费=2 日+3 日
@@ -50,7 +50,7 @@ insert into power values(6,1,60);
 insert into power values(6,2,34);
 ```
 
-![](https://img.iszy.xyz/20190318215323.png)
+![](https://img.iszy.cc/20190318215323.png)
 
 #### 计算整月的电费
 
@@ -80,7 +80,7 @@ end;
 /
 ```
 
-![](https://img.iszy.xyz/20190318215335.png)
+![](https://img.iszy.cc/20190318215335.png)
 
 #### 显示结果
 
@@ -88,4 +88,4 @@ end;
 select * from power;
 ```
 
-![](https://img.iszy.xyz/20190318215348.png)
+![](https://img.iszy.cc/20190318215348.png)

@@ -30,15 +30,15 @@ categories:
 
 你们看，这是 OVERLORD 前两季的封面。
 
-![](https://img.iszy.xyz/20190318215422.png)
+![](https://img.iszy.cc/20190318215422.png)
 
-![](https://img.iszy.xyz/20190318215433.png)
+![](https://img.iszy.cc/20190318215433.png)
 
 再看我平常主要看的番剧封面。
 
-![](https://img.iszy.xyz/20190318215445.png)
+![](https://img.iszy.cc/20190318215445.png)
 
-![](https://img.iszy.xyz/20190318215457.png)
+![](https://img.iszy.cc/20190318215457.png)
 
 哇，明眼人，一看就能看出差别有多么大嘛。我怎么可能看这个主角是个骷髅头的番剧嘛，对不对！(真香警告！)
 
@@ -57,8 +57,8 @@ categories:
 
 在此秀一波承包 OVERLORD 的头像挂件，话说快要过期了啊喂！
 
-![](https://img.iszy.xyz/20190318215532.png)
+![](https://img.iszy.cc/20190318215532.png)
 
-![](https://img.iszy.xyz/20190318215548.png)
+![](https://img.iszy.cc/20190318215548.png)
 
 要等一周才能看到新一期啊，好久啊！没有 OVERLORD 我要死了！

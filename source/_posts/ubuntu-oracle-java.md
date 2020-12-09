@@ -23,7 +23,7 @@ sudo add-apt-repository ppa:webupd8team/java
 sudo apt update
 ```
 
-![](https://img.iszy.xyz/20190318220829.png)
+![](https://img.iszy.cc/20190318220829.png)
 
 ## 安装 Java 8
 
@@ -33,7 +33,7 @@ sudo apt install oracle-java8-installer -y
 
 如下图所示，将会跳出一个界面让你同意 Oracle 的 license，切换到 Yes 回车即可。
 
-![](https://img.iszy.xyz/20190318220840.png)
+![](https://img.iszy.cc/20190318220840.png)
 
 ## 指定 Java 版本
 

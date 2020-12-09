@@ -20,7 +20,7 @@ AMT Emulator 是由俄罗斯技术论坛 Ru-Board 上的大神 Painter 制作的
 
 ### 软件界面
 
-![](https://img.iszy.xyz/18-7-18/5188889.jpg)
+![](https://img.iszy.cc/18-7-18/5188889.jpg)
 
 ### 下载链接
 

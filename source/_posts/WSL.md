@@ -26,49 +26,49 @@ keywords: WSL,Linux,Ubuntu,win10
 
 ### 开启开发人员模式
 
-![](https://img.iszy.xyz/20190318221442.png)
+![](https://img.iszy.cc/20190318221442.png)
 
 ### 启用 WSL 功能
 
-![](https://img.iszy.xyz/20190318221451.png)
+![](https://img.iszy.cc/20190318221451.png)
 
 ### 在应用商店进行搜索
 
-![](https://img.iszy.xyz/20190318221502.png)
+![](https://img.iszy.cc/20190318221502.png)
 
 可以搜到如下 5 个 Linux 子系统。
 
-![](https://img.iszy.xyz/20190318221511.png)
+![](https://img.iszy.cc/20190318221511.png)
 
 ### 安装 Ubuntu
 
 在此，我选择安装我比较熟悉的 Ubuntu，如果对其他感兴趣的也可以安装。
 
-![](https://img.iszy.xyz/20190318221521.png)
+![](https://img.iszy.cc/20190318221521.png)
 
 系统显示安装完成后，打开 Ubuntu，将会进行进一步的安装，将需要等待一段时间。
 
-![](https://img.iszy.xyz/20190318221535.png)
+![](https://img.iszy.cc/20190318221535.png)
 
 接下来设定你在 Ubuntu 子系统中的用户名，可以任意指定。
 
-![](https://img.iszy.xyz/20190318221547.png)
+![](https://img.iszy.cc/20190318221547.png)
 
 接下来设定密码，这将会是你的 root 密码。用过 Linux 的应该知道，密码输入是不会显示的，这是正常现象，输入完密码回车即可。
 
-![](https://img.iszy.xyz/20190318221557.png)
+![](https://img.iszy.cc/20190318221557.png)
 
 当看到如下内容时，子系统已经安装完毕，可以使用了。
 
-![](https://img.iszy.xyz/20190318221608.png)
+![](https://img.iszy.cc/20190318221608.png)
 
 除了通过点击 Ubuntu 图标进入子系统，你同样可以通过在 cmd 或 PowerShell 中输入 ubuntu 进入，无需管理员权限。
 
-![](https://img.iszy.xyz/20190318221620.png)
+![](https://img.iszy.cc/20190318221620.png)
 
 ## 内核版本和发行版本号
 
-![](https://img.iszy.xyz/20190318221636.png)
+![](https://img.iszy.cc/20190318221636.png)
 
 在这里我们可以看到内核版本为 4.4.0，发行版本为 Ubuntu 16.04.3 LTS。
 

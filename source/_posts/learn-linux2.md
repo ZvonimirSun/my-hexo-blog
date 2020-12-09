@@ -24,7 +24,7 @@ keywords: linux, 常用命令, rhel, 学习
 
 用`man man`查看 man 的说明。
 
-![](https://img.iszy.xyz/20190318213752.png)
+![](https://img.iszy.cc/20190318213752.png)
 
 ## 常见工作命令
 
@@ -34,7 +34,7 @@ keywords: linux, 常用命令, rhel, 学习
 
 例子：
 
-![](https://img.iszy.xyz/20190318213805.png)
+![](https://img.iszy.cc/20190318213805.png)
 
 ### date 命令
 
@@ -60,7 +60,7 @@ keywords: linux, 常用命令, rhel, 学习
 
 例子：
 
-![](https://img.iszy.xyz/20190318213820.png)
+![](https://img.iszy.cc/20190318213820.png)
 
 ### poweroff 命令
 
@@ -84,13 +84,13 @@ keywords: linux, 常用命令, rhel, 学习
 
 相当于任务管理器的监控
 
-![](https://img.iszy.xyz/20190318213832.png)
+![](https://img.iszy.cc/20190318213832.png)
 
 ### pidof 命令
 
 查看进程 pid
 
-![](https://img.iszy.xyz/20190318213847.png)
+![](https://img.iszy.cc/20190318213847.png)
 
 ### kill 命令
 

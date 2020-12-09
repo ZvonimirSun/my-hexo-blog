@@ -17,7 +17,7 @@ keywords: SQL
 
 ## 官方的 HELP INDEX 截图
 
-![](https://img.iszy.xyz/20190318220212.png)
+![](https://img.iszy.cc/20190318220212.png)
 
 ## 语句总结
 

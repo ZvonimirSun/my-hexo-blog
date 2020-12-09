@@ -17,7 +17,7 @@ tags:
 
 这个系列的[第一部分](https://www.iszy.cc/2019/08/14/javascript_module/)介绍了 Javascript 模块的基本写法，今天介绍如何规范地使用模块。
 
-![](https://img.iszy.xyz/20190814100700.png?x-oss-process=style/mystyle)
+![](https://img.iszy.cc/20190814100700.png?x-oss-process=style/mystyle)
 
 （接[上文](https://www.iszy.cc/2019/08/14/javascript_module/)）
 
@@ -35,7 +35,7 @@ tags:
 
 2009 年，美国程序员 Ryan Dahl 创造了[node.js](http://nodejs.org/)项目，将 javascript 语言用于服务器端编程。
 
-![](https://img.iszy.xyz/20190814100903.png?x-oss-process=style/mystyle)
+![](https://img.iszy.cc/20190814100903.png?x-oss-process=style/mystyle)
 
 这标志"Javascript 模块化编程"正式诞生。因为老实说，在浏览器环境下，没有模块也不是特别大的问题，毕竟网页程序的复杂性有限；但是在服务器端，一定要有模块，与操作系统和其他应用程序互动，否则根本没法编程。
 
@@ -86,7 +86,7 @@ require([module], callback);
 第一个参数[module]，是一个数组，里面的成员就是要加载的模块；第二个参数 callback，则是加载成功之后的回调函数。如果将前面的代码改写成 AMD 形式，就是下面这样：
 
 ```js
-require(["math"], function(math) {
+require(["math"], function (math) {
   math.add(2, 3);
 });
 ```

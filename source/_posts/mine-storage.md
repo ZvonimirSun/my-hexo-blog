@@ -26,11 +26,11 @@ keywords: 钻井,地下矿体,ArcGIS,GIS
 
 #### 使用“值提取至点”工具提取钻孔地面高程
 
-![](https://img.iszy.xyz/20190318214347.png)
+![](https://img.iszy.cc/20190318214347.png)
 
 #### 计算钻孔在矿洞上下表面的高程
 
-![](https://img.iszy.xyz/20190318214356.png)
+![](https://img.iszy.cc/20190318214356.png)
 
 ### 地下矿体表面拟和生成矿体表面
 
@@ -38,47 +38,47 @@ keywords: 钻井,地下矿体,ArcGIS,GIS
 
 像元大小统一设为 10，样条函数类型选择 TENSION。
 
-![](https://img.iszy.xyz/20190318214411.png)
+![](https://img.iszy.cc/20190318214411.png)
 
 所得结果如下所示。
 
-![](https://img.iszy.xyz/20190318214428.png)
+![](https://img.iszy.cc/20190318214428.png)
 
 上表面 A
 
-![](https://img.iszy.xyz/20190318214440.png)
+![](https://img.iszy.cc/20190318214440.png)
 
 下表面 B
 
 三维显示效果如下图所示。
 
-![](https://img.iszy.xyz/20190318214519.png)
+![](https://img.iszy.cc/20190318214519.png)
 
 #### 提取矿区范围
 
 使用栅格计算器，提取矿区的范围。
 
-![](https://img.iszy.xyz/20190318214555.png)
+![](https://img.iszy.cc/20190318214555.png)
 
 结果如下。
 
-![](https://img.iszy.xyz/20190318214608.png)
+![](https://img.iszy.cc/20190318214608.png)
 
 重分类后，即是矿区的范围。
 
-![](https://img.iszy.xyz/20190318214618.png)
+![](https://img.iszy.cc/20190318214618.png)
 
 ### 使用掩模提取矿区的上下表面
 
-![](https://img.iszy.xyz/20190318214629.png)
+![](https://img.iszy.cc/20190318214629.png)
 
 结果如下图所示。
 
-![](https://img.iszy.xyz/20190318214645.png)
+![](https://img.iszy.cc/20190318214645.png)
 
 上表面 A
 
-![](https://img.iszy.xyz/20190318214659.png)
+![](https://img.iszy.cc/20190318214659.png)
 
 下表面 B
 
@@ -86,15 +86,15 @@ keywords: 钻井,地下矿体,ArcGIS,GIS
 
 #### 利用“填挖方”工具计算储量
 
-![](https://img.iszy.xyz/20190318214710.png)
+![](https://img.iszy.cc/20190318214710.png)
 
 结果如下图所示，矿区面积为 60515200㎡，矿产储量体积 8225087860.089111 立方米。
 
-![](https://img.iszy.xyz/20190318214721.png)
+![](https://img.iszy.cc/20190318214721.png)
 
 #### 矿产储量分布
 
-![](https://img.iszy.xyz/20190318214735.png)
+![](https://img.iszy.cc/20190318214735.png)
 
 #### 按地区矿产储量分布
 
@@ -102,21 +102,21 @@ keywords: 钻井,地下矿体,ArcGIS,GIS
 
 使用“Spatial Analyst 工具”-“区域分析”-“以表格显示分区统计”工具，对 county 每个分区的矿产储量进行统计。
 
-![](https://img.iszy.xyz/20190318214748.png)
+![](https://img.iszy.cc/20190318214748.png)
 
 结果如下。
 
-![](https://img.iszy.xyz/20190318214800.png)
+![](https://img.iszy.cc/20190318214800.png)
 
 ##### 计算矿产储量并出图
 
 将统计结果与 county 要素关联，乘以像元面积即为矿产储量，导出数据。
 
-![](https://img.iszy.xyz/20190318214813.png)
+![](https://img.iszy.cc/20190318214813.png)
 
 最终出图如下。
 
-![](https://img.iszy.xyz/20190318214825.png)
+![](https://img.iszy.cc/20190318214825.png)
 
 ## 实验结果
 
@@ -124,12 +124,12 @@ keywords: 钻井,地下矿体,ArcGIS,GIS
 
 矿区面积为 60515200㎡，矿产储量体积 8225087860.089111 立方米。
 
-![](https://img.iszy.xyz/20190318214836.png)
+![](https://img.iszy.cc/20190318214836.png)
 
 ### 矿产储量分布图
 
-![](https://img.iszy.xyz/20190318214847.png)
+![](https://img.iszy.cc/20190318214847.png)
 
 ### 按地区矿产储量分布图
 
-![](https://img.iszy.xyz/20190318214856.png)
+![](https://img.iszy.cc/20190318214856.png)

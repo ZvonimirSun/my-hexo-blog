@@ -19,7 +19,7 @@ tags:
 
 我采用的是一个非常流行的库[require.js](http://requirejs.org/)。
 
-![](https://img.iszy.xyz/20190814101519.png?x-oss-process=style/mystyle)
+![](https://img.iszy.cc/20190814101519.png?x-oss-process=style/mystyle)
 
 ## 为什么要用 require.js？
 
@@ -88,7 +88,11 @@ alert("加载成功！");
 ```js
 // main.js
 
-require(["moduleA", "moduleB", "moduleC"], function(moduleA, moduleB, moduleC) {
+require(["moduleA", "moduleB", "moduleC"], function (
+  moduleA,
+  moduleB,
+  moduleC
+) {
   // some code here
 });
 ```
@@ -102,7 +106,7 @@ require()异步加载 moduleA，moduleB 和 moduleC，浏览器不会失去响�
 假定主模块依赖 jquery、underscore 和 backbone 这三个模块，main.js 就可以这样写：
 
 ```js
-require(["jquery", "underscore", "backbone"], function($, _, Backbone) {
+require(["jquery", "underscore", "backbone"], function ($, _, Backbone) {
   // some code here
 });
 ```
@@ -120,8 +124,8 @@ require.config({
   paths: {
     jquery: "jquery.min",
     underscore: "underscore.min",
-    backbone: "backbone.min"
-  }
+    backbone: "backbone.min",
+  },
 });
 ```
 
@@ -132,8 +136,8 @@ require.config({
   paths: {
     jquery: "lib/jquery.min",
     underscore: "lib/underscore.min",
-    backbone: "lib/backbone.min"
-  }
+    backbone: "lib/backbone.min",
+  },
 });
 ```
 
@@ -146,8 +150,8 @@ require.config({
   paths: {
     jquery: "jquery.min",
     underscore: "underscore.min",
-    backbone: "backbone.min"
-  }
+    backbone: "backbone.min",
+  },
 });
 ```
 
@@ -156,8 +160,8 @@ require.config({
 ```js
 require.config({
   paths: {
-    jquery: "https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min"
-  }
+    jquery: "https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min",
+  },
 });
 ```
 
@@ -174,13 +178,13 @@ require.js 加载的模块，采用 AMD 规范。也就是说，模块必须按�
 ```js
 // math.js
 
-define(function() {
-  var add = function(x, y) {
+define(function () {
+  var add = function (x, y) {
     return x + y;
   };
 
   return {
-    add: add
+    add: add,
   };
 });
 ```
@@ -190,7 +194,7 @@ define(function() {
 ```js
 // main.js
 
-require(["math"], function(math) {
+require(["math"], function (math) {
   alert(math.add(1, 1));
 });
 ```
@@ -198,13 +202,13 @@ require(["math"], function(math) {
 如果这个模块还依赖其他模块，那么 define()函数的第一个参数，必须是一个数组，指明该模块的依赖性。
 
 ```js
-define(["myLib"], function(myLib) {
+define(["myLib"], function (myLib) {
   function foo() {
     myLib.doSomething();
   }
 
   return {
-    foo: foo
+    foo: foo,
   };
 });
 ```
@@ -225,14 +229,14 @@ define(["myLib"], function(myLib) {
 require.config({
   shim: {
     underscore: {
-      exports: "_"
+      exports: "_",
     },
 
     backbone: {
       deps: ["underscore", "jquery"],
-      exports: "Backbone"
-    }
-  }
+      exports: "Backbone",
+    },
+  },
 });
 ```
 
@@ -261,7 +265,7 @@ require.js 还提供一系列[插件](https://github.com/jrburke/requirejs/wiki/
 domready 插件，可以让回调函数在页面 DOM 结构加载完成后再运行。
 
 ```js
-require(["domready!"], function(doc) {
+require(["domready!"], function (doc) {
   // called once the DOM is ready
 });
 ```
@@ -269,7 +273,7 @@ require(["domready!"], function(doc) {
 text 和 image 插件，则是允许 require.js 加载文本和图片文件。
 
 ```js
-define(["text!review.txt", "image!cat.jpg"], function(review, cat) {
+define(["text!review.txt", "image!cat.jpg"], function (review, cat) {
   console.log(review);
 
   document.body.appendChild(cat);

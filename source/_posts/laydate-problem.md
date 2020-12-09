@@ -21,12 +21,12 @@ keywords: layui, laydate, change
 情形大致如下。
 
 ```js
-layui.use("laydate", function() {
+layui.use("laydate", function () {
   var laydate = layui.laydate;
   laydate.render({
     elem: "#date",
-    change: function() {},
-    done: function() {}
+    change: function () {},
+    done: function () {},
   });
 });
 ```
@@ -35,11 +35,11 @@ layui.use("laydate", function() {
 
 如果是单独的时间选择，效果类似下图，则选中日期后的回调触发的是`change`。
 
-![](https://img.iszy.xyz/20190407214909.png)
+![](https://img.iszy.cc/20190407214909.png)
 
 如果是时间范围的选择，效果类似下图，则选中日期后的回调触发的是`done`。
 
-![](https://img.iszy.xyz/20190407215225.png)
+![](https://img.iszy.cc/20190407215225.png)
 
 需要根据情况在对应的属性后编写回调函数。
 

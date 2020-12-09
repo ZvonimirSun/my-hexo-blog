@@ -39,4 +39,4 @@ tty -s && mesg n || true
 
 这就能让`mesg`在没有 tty 时，不发送消息，而在有 tty 时继续调用。现在你可以不用再看到`ttyname failed: Inappropriate ioctl for device`了。
 
-![](https://img.iszy.xyz/20190318214328.png)
+![](https://img.iszy.cc/20190318214328.png)

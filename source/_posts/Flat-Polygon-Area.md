@@ -22,7 +22,7 @@ keywords: C#,GIS算法,平面多边形,面积
 
 ### 窗体设计
 
-![](https://img.iszy.xyz/20190318213117.png)
+![](https://img.iszy.cc/20190318213117.png)
 
 ### 代码
 

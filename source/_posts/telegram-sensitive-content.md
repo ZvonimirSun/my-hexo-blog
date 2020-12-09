@@ -33,4 +33,4 @@ Telegram 官方终于也是学到了一些，估计也是苦苹果久矣，终�
 3. 打开 `Disable filtering` 开关
 4. 关闭 Telegram iOS 端，重新打开，你将看到原本被过滤的群组已经可以正常进入了
 
-![开关位置](https://img.iszy.xyz/20200105220759.png)
+![开关位置](https://img.iszy.cc/20200105220759.png)
