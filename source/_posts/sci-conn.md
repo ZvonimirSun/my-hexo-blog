@@ -1,7 +1,7 @@
 ---
-title: 优质机场(SS/SSR/Trojan/V2Ray/专线)推荐
+title: 优质机场(SS/SSR/Trojan/V2Ray/专线)推荐【元旦优惠】
 date: 2019-01-03 03:11:50
-updated: 2020-12-16 10:00:00
+updated: 2020-12-31 10:00:00
 categories:
   - 分享
   - 推广
@@ -24,7 +24,7 @@ keywords:
 | [Blinkload](#三、Blinkload)                     | SS(全专线)        | 稳定全能，全专线(iepl,iplc)                  | [官网传送门](https://url.iszy.xyz/blinkload)  |
 | [CMYNetwork 红莓网络](#四、CMYNetwork-红莓网络) | SSR(专线)/Trojan  | 稳定平价，部分专线(iepl,iplc) ，回国线路     | [官网传送门](https://url.iszy.xyz/cmynetwork) |
 | [Electry](#五、Electry)                         | V2Ray(专线、中继) | 线路精专，部分专线(iepl)，高速稳定           | [官网传送门](https://url.iszy.xyz/electry)    |
-| [ByWave](#六、ByWave)                           | V2Ray             | 高质高端，服务稳定                           | [官网传送门](https://url.iszy.xyz/bywave)     |
+| [ByWave](#六、ByWave)【元旦优惠】               | V2Ray             | 高质高端，服务稳定                           | [官网传送门](https://url.iszy.xyz/bywave)     |
 | [MEET](#七、MEET)                               | SSR               | 专注按量付费，高速稳定                       | [官网传送门](https://url.iszy.xyz/fspeed)     |
 | [BoomCloud](#八、BoomCloud)                     | V2ray/SSR/SS      | 多年老站，附赠丰富                           | [官网传送门](https://url.iszy.xyz/boomcloud)  |
 | [DuangCloud](#九、DuangCloud)                   | V2Ray(专线、中继) | 平价灵活，部分专线(iepl)                     | [官网传送门](https://url.iszy.xyz/duangcloud) |
@@ -585,6 +585,17 @@ CMYNetwork 提供三套服务，分别为身在 国内、 国外以及 企业的
 
 > 转官方优惠公告
 
+**ByWave 元旦特惠**
+
+本次活动持续至`2021-01-05 23:59`，以下优惠码均可在续费或新购时使用。
+
+- 优惠代码 A: `2021`
+  - 额度：**30% off 一次性**
+  - 适用范围： 年付、两年付、三年付
+- 优惠代码 B: `bye2020`
+  - 额度： **20% off 循环**
+  - 适用范围： 月付、季付、半年付
+
 **充值获得赠送金**
 
 - 充 100 到账 115
@@ -923,7 +934,15 @@ Meet 家的支付问题短时间还不能解决，暂时只支持使用加密货
 
 [官网传送门](https://url.iszy.xyz/duangcloud)
 
-### （一）简介
+### （一）优惠
+
+> 转官方优惠
+
+- ⭐️**24 日-31 日全场 8 折（不循环，推荐年付）**
+- ⭐️ 优惠码：`happyday`
+- ❗️data relay 和 light 套餐不参与活动
+
+### （二）简介
 
 这是一家稳定运行半年多的纯 V2ray 机场，口碑还不错，官网看上去朴实无华且枯燥，不过线路确实稳定且质量不错，可以推荐一下。
 
@@ -939,7 +958,7 @@ Meet 家的支付问题短时间还不能解决，暂时只支持使用加密货
 <details>
   <summary><strong>展开查看更多详情(套餐、测速等)</strong></summary>
 
-### （二）套餐
+### （三）套餐
 
 可选半年、全年缴费周期。注意，一次性无时间限制 Light 套餐无法叠加无法共存。
 
@@ -952,13 +971,13 @@ Meet 家的支付问题短时间还不能解决，暂时只支持使用加密货
 | Business | 800G/月      | 100 元/月 或 1000 元/年 | 0.125 元/G |
 | Light    | 50G 永久流量 | 100 元一次性            | 2 元/G     |
 
-### （三）测速情况
+### （四）测速情况
 
 待更新~
 
 ![](https://img.iszy.cc/20200502214205.png)
 
-### （四）其他说明
+### （五）其他说明
 
 - [Duang Cloud 使用文档](https://docs.duangcloud.club/)，敬请查阅
 - 暂时只看到有官网工单的客服联系方式，不过响应还算快
