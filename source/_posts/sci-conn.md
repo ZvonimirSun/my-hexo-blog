@@ -1,7 +1,7 @@
 ---
-title: 优质机场(SS/SSR/Trojan/V2Ray/专线)推荐【元旦优惠】
+title: 优质机场(SS/SSR/Trojan/V2Ray/专线)推荐
 date: 2019-01-03 03:11:50
-updated: 2020-12-31 10:00:00
+updated: 2020-01-17 10:00:00
 categories:
   - 分享
   - 推广
@@ -24,7 +24,7 @@ keywords:
 | [Blinkload](#三、Blinkload)                     | SS(全专线)        | 稳定全能，全专线(iepl,iplc)                  | [官网传送门](https://url.iszy.xyz/blinkload)  |
 | [CMYNetwork 红莓网络](#四、CMYNetwork-红莓网络) | SSR(专线)/Trojan  | 稳定平价，部分专线(iepl,iplc) ，回国线路     | [官网传送门](https://url.iszy.xyz/cmynetwork) |
 | [Electry](#五、Electry)                         | V2Ray(专线、中继) | 线路精专，部分专线(iepl)，高速稳定           | [官网传送门](https://url.iszy.xyz/electry)    |
-| [ByWave](#六、ByWave)【元旦优惠】               | V2Ray             | 高质高端，服务稳定                           | [官网传送门](https://url.iszy.xyz/bywave)     |
+| [ByWave](#六、ByWave)                           | V2Ray             | 高质高端，服务稳定                           | [官网传送门](https://url.iszy.xyz/bywave)     |
 | [MEET](#七、MEET)                               | SSR               | 专注按量付费，高速稳定                       | [官网传送门](https://url.iszy.xyz/fspeed)     |
 | [BoomCloud](#八、BoomCloud)                     | V2ray/SSR/SS      | 多年老站，附赠丰富                           | [官网传送门](https://url.iszy.xyz/boomcloud)  |
 | [DuangCloud](#九、DuangCloud)                   | V2Ray(专线、中继) | 平价灵活，部分专线(iepl)                     | [官网传送门](https://url.iszy.xyz/duangcloud) |
@@ -584,17 +584,6 @@ CMYNetwork 提供三套服务，分别为身在 国内、 国外以及 企业的
 优惠码: `iszy`
 
 > 转官方优惠公告
-
-**ByWave 元旦特惠**
-
-本次活动持续至`2021-01-05 23:59`，以下优惠码均可在续费或新购时使用。
-
-- 优惠代码 A: `2021`
-  - 额度：**30% off 一次性**
-  - 适用范围： 年付、两年付、三年付
-- 优惠代码 B: `bye2020`
-  - 额度： **20% off 循环**
-  - 适用范围： 月付、季付、半年付
 
 **充值获得赠送金**
 
