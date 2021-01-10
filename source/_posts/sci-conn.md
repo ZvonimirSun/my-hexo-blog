@@ -142,7 +142,13 @@ keywords:
 
 ### （四）测速情况
 
-![](https://img.iszy.cc/20210110-134617.png)
+SSR 线路测速
+
+![SSR线路](https://img.iszy.cc/20210110-134617.png)
+
+V2ray 线路测速
+
+![V2ray线路](https://img.iszy.cc/20210110-143815.png)
 
 ### （五）其他说明
 
