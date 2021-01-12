@@ -29,7 +29,7 @@ keywords:
 | [BoomCloud](#八、BoomCloud)                     | V2ray/SSR/SS      | 多年老站，附赠丰富                           | [官网传送门](https://url.iszy.xyz/boomcloud)  |
 | [DuangCloud](#九、DuangCloud)                   | V2Ray(专线、中继) | 平价灵活，部分专线(iepl)                     | [官网传送门](https://url.iszy.xyz/duangcloud) |
 | [V2Club](#十、V2Club)                           | SS/V2ray(全专线)  | 稳定坚挺，多年老站，全专线(iepl)             | [官网传送门](https://url.iszy.xyz/lanan)      |
-| [皇朝网络](#十一、皇朝网络)                     | SS                | 超性价比新站，可以一试                       | [官网传送门](https://url.iszy.xyz/dinastio)   |
+| [皇朝网络](#十一、皇朝网络)                     | SS                | 超性价比新站，价格敏感型用户福音             | [官网传送门](https://url.iszy.xyz/dinastio)   |
 
 > 本页机场均在上次网络大波动中提供了稳定的服务，还会持续观察未来表现
 
