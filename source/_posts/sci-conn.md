@@ -1,7 +1,7 @@
 ---
-title: 优质机场(SS/SSR/Trojan/V2Ray/专线)推荐
+title: SS/SSR/Trojan/V2Ray服务商(机场)推荐
 date: 2019-01-03 03:11:50
-updated: 2020-01-14 10:00:00
+updated: 2021-01-14 10:00:00
 categories:
   - 分享
   - 推广
@@ -35,8 +35,8 @@ keywords:
 
 更新动态:
 
-- 更新[ByWave](#六、ByWave)优惠(2020.01.14)
-- 更新部分测速图(2020.01.12)
+- 更新[ByWave](#六、ByWave)优惠(2021.01.14)
+- 更新部分测速图(2021.01.12)
 
 ## 二、心阶云
 
