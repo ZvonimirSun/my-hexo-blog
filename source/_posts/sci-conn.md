@@ -1,7 +1,7 @@
 ---
 title: SS/SSR/Trojan/V2Ray服务商(机场)推荐【新年优惠】
 date: 2019-01-03 03:11:50
-updated: 2021-02-06 10:00:00
+updated: 2021-02-11 10:00:00
 categories:
   - 分享
   - 推广
@@ -22,7 +22,7 @@ keywords:
 | ----------------------------------------------------------- | ----------------- | -------------------------------------------- | --------------------------------------------- |
 | [心阶云](#二、心阶云)【专属优惠】                           | SSR 隧道/V2Ray    | 性价比高，超多线路，部分专线(iplc)，稳定老站 | [官网传送门](https://url.iszy.xyz/xinjie)     |
 | [Blinkload](#三、Blinkload)【冬季优惠】                     | SS(全专线)        | 稳定全能，全专线(iepl,iplc)                  | [官网传送门](https://url.iszy.xyz/blinkload)  |
-| [CMYNetwork 红莓网络](#四、CMYNetwork-红莓网络)【专属优惠】 | SSR(专线)/Trojan  | 稳定平价，部分专线(iepl,iplc) ，回国线路     | [官网传送门](https://url.iszy.xyz/cmynetwork) |
+| [CMYNetwork 红莓网络](#四、CMYNetwork-红莓网络)【新年优惠】 | SSR(专线)/Trojan  | 稳定平价，部分专线(iepl,iplc) ，回国线路     | [官网传送门](https://url.iszy.xyz/cmynetwork) |
 | [Electry](#五、Electry)                                     | V2Ray(专线、中继) | 线路精专，部分专线(iepl)，高速稳定           | [官网传送门](https://url.iszy.xyz/electry)    |
 | [ByWave](#六、ByWave)【新年优惠】                           | V2Ray             | 高质高端，服务稳定                           | [官网传送门](https://url.iszy.xyz/bywave)     |
 | [MEET](#七、MEET)                                           | SSR               | 专注按量付费，高速稳定                       | [官网传送门](https://url.iszy.xyz/fspeed)     |
@@ -380,6 +380,10 @@ V2ray 线路测速
 邀请码: `iszy`
 
 ![](https://img.iszy.cc/20200317212833.png)
+
+> 新年优惠
+
+在 **02 月 02 日到 03 月 02 日**期间，购买任意季/半年/年费套餐，可享受高额折扣。若购买年费套餐，可在折扣的基础上加送 1 个月套餐时间！同时邀请小伙伴拼团，享受折上折中折哦。
 
 ### （二）简介
 
