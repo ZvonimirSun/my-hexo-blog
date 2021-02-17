@@ -35,6 +35,7 @@ keywords:
 
 更新动态:
 
+- 更新[心阶云](#二、心阶云)测速(2021.02.17)
 - 更新新年特惠
 - 更新[DuangCloud](#九、DuangCloud)描述和优惠(2021.01.26)
 - 更新[ByWave](#六、ByWave)优惠(2021.01.14)
@@ -142,13 +143,15 @@ keywords:
 
 ### （四）测速情况
 
-SSR 线路测速
+本地 300M 带宽高峰期测试，仅供参考。
 
-![SSR线路](https://img.iszy.cc/20210110-134617.png)
+**SSR 线路测速**（建议使用）
 
-V2ray 线路测速
+![SSR线路](https://img.iszy.cc/20210217210630.png)
 
-![V2ray线路](https://img.iszy.cc/20210110-143815.png)
+**V2ray 线路测速**
+
+![V2ray线路](https://img.iszy.cc/20210217212647.png)
 
 ### （五）其他说明
 
