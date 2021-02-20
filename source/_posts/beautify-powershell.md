@@ -174,7 +174,7 @@ Set-Theme Agnoster
 
 显示效果如下，我认为是十分美观的。
 
-![](https://img.iszy.cc/20190318211904.png)
+![](https://img.iszy.xyz/20190318211904.png)
 
 其他可选主题有 `Agnoster`、`Avit`、`Darkblood`、`Fish`、`Honukai`、`Paradox`、`Sorin`、`tehrob`，可自行选择。
 

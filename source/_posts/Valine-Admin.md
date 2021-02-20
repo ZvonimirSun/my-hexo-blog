@@ -45,27 +45,27 @@ keywords: Valine, Valine-Admin
 https://github.com/ZvonimirSun/Valine-Admin.git
 ```
 
-![](https://img.iszy.cc/20190318221112.png)
+![](https://img.iszy.xyz/20190318221112.png)
 
 接下来在云引擎的部署页，选择部署目标为`生产环境`，分支或版本号填入`master`，勾选平滑部署，点击部署。
 
-![](https://img.iszy.cc/20190318221123.png)
+![](https://img.iszy.xyz/20190318221123.png)
 
 ### 设置自定义环境变量
 
 此外，还需要设置云引擎的环境变量以支持运行，如图所示。
 
-![](https://img.iszy.cc/20190318221132.png)
+![](https://img.iszy.xyz/20190318221132.png)
 
 SMTP 信息需要准确填写，用于发送通知邮件，部分邮箱如 QQ 邮箱需要使用授权码（密码）。注意我们使用 SSL 发件，所以端口别填错了。
 
 ### 评论管理后台
 
-![](https://img.iszy.cc/20190318221144.png)
+![](https://img.iszy.xyz/20190318221144.png)
 
 在云引擎的设置界面设置 Web 主机域名，便可以通过这个地址访问评论的管理界面。用 \_User 表中的用户登录即可，注意要手动设置密码，才能登录，不能空密码。
 
-![](https://img.iszy.cc/20190318221157.png)
+![](https://img.iszy.xyz/20190318221157.png)
 
 至此已经可以顺利使用了。由于云引擎的免费实例有每天的强制休眠，可以用定时脚本唤醒，但是大多数人应该不需要用到 24 小时，所以影响不大。
 

@@ -77,7 +77,7 @@ iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
 
 安装完成后，可以运行下`scoop help`尝试是否成功，这条命令会显示出 Scoop 的命令说明。
 
-![20190612111652](https://img.iszy.cc/20190612111652.png?x-oss-process=style/mystyle)
+![20190612111652](https://img.iszy.xyz/20190612111652.png?x-oss-process=style/mystyle)
 
 ## Scoop 使用
 
@@ -89,7 +89,7 @@ Scoop 有以下常用命令，我来简单介绍一下。
 
 如果想了解一个具体命令的说明，以`update`为例，运行`scoop help update`即可，其他命令也与此类似。
 
-![20190612112558](https://img.iszy.cc/20190612112558.png?x-oss-process=style/mystyle)
+![20190612112558](https://img.iszy.xyz/20190612112558.png?x-oss-process=style/mystyle)
 
 ### 其他常用
 
@@ -122,11 +122,11 @@ scoop bucket add extras https://github.com/lukesampson/scoop-extras.git
 
 输入`scoop bucket known`就能查看官方已知的存储桶列表，如图所示。
 
-![20190612123004](https://img.iszy.cc/20190612123004.png?x-oss-process=style/mystyle)
+![20190612123004](https://img.iszy.xyz/20190612123004.png?x-oss-process=style/mystyle)
 
 这些存储桶的添加命令可以简化，如以`extras`存储库为例，输入`scoop bucket add extras`即可。
 
-![20190612123538](https://img.iszy.cc/20190612123538.png?x-oss-process=style/mystyle)
+![20190612123538](https://img.iszy.xyz/20190612123538.png?x-oss-process=style/mystyle)
 
 如果已知存储库中没有你需要的软件，你可以自己创建存储桶，自己来书写 manifest，当然也能添加其他人已经写好的库来用。
 

@@ -14,7 +14,7 @@ tags:
 
 ## 遗照留念
 
-![](https://img.iszy.cc/20190318214913.png)
+![](https://img.iszy.xyz/20190318214913.png)
 
 ## 跑路风波
 

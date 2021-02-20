@@ -25,7 +25,7 @@ keywords: mysql,centos,部署
 - 官网地址: [https://dev.mysql.com/downloads/mysql/](https://dev.mysql.com/downloads/mysql/)
 - 下载地址: [https://cdn.mysql.com//Downloads/MySQL-5.7/mysql-5.7.27-linux-glibc2.12-x86_64.tar.gz](https://cdn.mysql.com//Downloads/MySQL-5.7/mysql-5.7.27-linux-glibc2.12-x86_64.tar.gz)
 
-![20190804175143](https://img.iszy.cc/20190804175143.png?x-oss-process=style/mystyle)
+![20190804175143](https://img.iszy.xyz/20190804175143.png?x-oss-process=style/mystyle)
 
 ```bash
 yum install wget -y
@@ -58,7 +58,7 @@ yum install libaio-devel.x86_64 -y
 
 注意保留此时打印出的临时 root 密码。
 
-![20190805095840](https://img.iszy.cc/20190805095840.png?x-oss-process=style/mystyle)
+![20190805095840](https://img.iszy.xyz/20190805095840.png?x-oss-process=style/mystyle)
 
 为了安全起见，我们仅将 data 目录权限保留给 mysql 用户。
 

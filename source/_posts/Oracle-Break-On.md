@@ -73,7 +73,7 @@ Enter BREAK with no clauses to list the current BREAK definition.
 
 显示所有部门的部门编号、名称、员工数和平均薪金，同时显示在每个部门中工作的员工的姓名、薪金和职务。
 
-![](https://img.iszy.cc/20190318215229.png)
+![](https://img.iszy.xyz/20190318215229.png)
 
 ### 答题
 
@@ -105,6 +105,6 @@ clear breaks
 
 ### 部分结果
 
-![](https://img.iszy.cc/20190318215243.png)
+![](https://img.iszy.xyz/20190318215243.png)
 
-![](https://img.iszy.cc/20190318215256.png)
+![](https://img.iszy.xyz/20190318215256.png)

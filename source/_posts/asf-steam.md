@@ -306,33 +306,33 @@ python3 bot.py
 
 帮助命令：`help`
 
-![](https://img.iszy.cc/20190318211533.png)
+![](https://img.iszy.xyz/20190318211533.png)
 
 开始命令：`start`
 
-![](https://img.iszy.cc/20190318211546.png)
+![](https://img.iszy.xyz/20190318211546.png)
 
 暂停命令：`pause`
 
-![](https://img.iszy.cc/20190318211557.png)
+![](https://img.iszy.xyz/20190318211557.png)
 
 继续命令：`resume`
 
-![](https://img.iszy.cc/20190318211609.png)
+![](https://img.iszy.xyz/20190318211609.png)
 
 查看状态命令：`status`
 
-![](https://img.iszy.cc/20190318211620.png)
+![](https://img.iszy.xyz/20190318211620.png)
 
-![](https://img.iszy.cc/20190318211633.png)
+![](https://img.iszy.xyz/20190318211633.png)
 
 查看版本命令：`version`
 
-![](https://img.iszy.cc/20190318211805.png)
+![](https://img.iszy.xyz/20190318211805.png)
 
 激活 steam 密钥命令：`redeem <key>`
 
-![](https://img.iszy.cc/20190318211831.png)
+![](https://img.iszy.xyz/20190318211831.png)
 
 更多命令，请参[官方 WIKI](https://github.com/JustArchi/ArchiSteamFarm/wiki/Commands)。
 

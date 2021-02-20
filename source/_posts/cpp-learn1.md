@@ -33,11 +33,11 @@ keywords: C++, C语言
 
 我们需要在 Visual C++ 下的 Windows 桌面中选择 Windows 桌面向导，这样就能有我们熟悉的创建流程。
 
-![](https://img.iszy.cc/20190318212239.png)
+![](https://img.iszy.xyz/20190318212239.png)
 
 然后在桌面向导中，应用程序类型选择控制台应用程序，勾选空项目，取消勾选其他选项，确定即可。
 
-![](https://img.iszy.cc/20190318212254.png)
+![](https://img.iszy.xyz/20190318212254.png)
 
 ## 后话
 

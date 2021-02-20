@@ -18,7 +18,7 @@ keywords: winrar,无广告
 
 注意，有下图字样的才是正确的版本。
 
-![](https://img.iszy.cc/20190318221343.png)
+![](https://img.iszy.xyz/20190318221343.png)
 
 ## 官网下载试用地址
 

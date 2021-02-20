@@ -72,7 +72,7 @@ int main() {
 
 #### 运行效果
 
-![](https://img.iszy.cc/20190318212316.png)
+![](https://img.iszy.xyz/20190318212316.png)
 
 ### 程序 2
 

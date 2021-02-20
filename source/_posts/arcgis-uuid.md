@@ -50,6 +50,6 @@ UUID 主要有五个算法，也就是五种方法来实现：
   getUUID()
   ```
 
-![](https://img.iszy.cc/20190909102342.png?x-oss-process=style/mystyle)
+![](https://img.iszy.xyz/20190909102342.png?x-oss-process=style/mystyle)
 
 点击 OK，等待运算完成，你将能看到所有的 feature 已经被赋予了 UUID。

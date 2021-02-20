@@ -30,10 +30,10 @@ keywords: telegram,nicegram,ios
 
 1. 打开 [Telegram 网页端](https://web.telegram.org)，登录你需要关闭敏感内容过滤的账号
 2. 点击网页左上角的菜单按钮，选择 Settings 菜单
-   ![菜单按钮](https://img.iszy.cc/20201223141610.png)
-   ![Settings菜单](https://img.iszy.cc/20201223141640.png)
+   ![菜单按钮](https://img.iszy.xyz/20201223141610.png)
+   ![Settings菜单](https://img.iszy.xyz/20201223141640.png)
 3. 打开`Show Sensitive Content`开关，并确认
-   ![](https://img.iszy.cc/20201223140605.png)
+   ![](https://img.iszy.xyz/20201223140605.png)
 4. 关闭 Telegram iOS 端，重新打开，你将看到原本被过滤的群组已经可以正常进入了
 
 ### 桌面端
@@ -45,4 +45,4 @@ keywords: telegram,nicegram,ios
 3. 打开 `Disable filtering` 开关
 4. 关闭 Telegram iOS 端，重新打开，你将看到原本被过滤的群组已经可以正常进入了
 
-![开关位置](https://img.iszy.cc/20200105220759.png)
+![开关位置](https://img.iszy.xyz/20200105220759.png)

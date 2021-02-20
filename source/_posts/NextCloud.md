@@ -54,23 +54,23 @@ yum install -y wget && wget -O install.sh http://download.bt.cn/install/install.
 
 首先登录宝塔面板，会让你一键安装套件，nextcloud 官方推荐使用 LAMP。LNMP 也是能装的，据说会有诡异的问题，我也没试过。
 
-![](https://img.iszy.cc/20190318214938.png)
+![](https://img.iszy.xyz/20190318214938.png)
 
 建议按照我的选择，点击一键安装，宝塔面板会帮你将所需环境安装完成。
 
 在安装完成后，还有几个内容需要添加，后期将会用到。点击左侧导航栏的软件管理，再点击 PHP-7.1 右侧的设置。
 
-![](https://img.iszy.cc/20190318214947.png)
+![](https://img.iszy.xyz/20190318214947.png)
 
 这样将会弹出 php 的管理界面，点击左侧栏的安装扩展，安装如图所示的三个扩展。
 
-![](https://img.iszy.cc/20190318214956.png)
+![](https://img.iszy.xyz/20190318214956.png)
 
 #### 添加站点
 
 点击左侧栏的网站，然后点击添加站点。在域名框中添加你需要的域名，你需要在你域名的 DNS 处将这个子域名解析到你的 VPS 的 IP。
 
-![](https://img.iszy.cc/20190318215015.png)
+![](https://img.iszy.xyz/20190318215015.png)
 
 创建完成后，点击你的网站目录，删除如图所示的自动生成的文件，并将 nextcloud 的网站文件上传到这个目录。
 
@@ -78,7 +78,7 @@ yum install -y wget && wget -O install.sh http://download.bt.cn/install/install.
 
 在页面中选择 Get Nextcloud Server 栏目下的 Download 按钮点击它。出现如下图界面点击 Download Nextcloud 开始下载：
 
-![](https://img.iszy.cc/20190318215030.png)
+![](https://img.iszy.xyz/20190318215030.png)
 
 下下来的文件是个压缩包，你只需要把文件夹中的文件都上传到刚刚的网站目录即可。**注意：只要文件夹中的文件，不要文件夹。**
 
@@ -88,16 +88,16 @@ yum install -y wget && wget -O install.sh http://download.bt.cn/install/install.
 
 接下来新建一个供 nextcloud 使用的数据库。点击数据库，输入数据库名，再点击创建就完成了。
 
-![](https://img.iszy.cc/20190318215042.png)
+![](https://img.iszy.xyz/20190318215042.png)
 
 #### 创建管理员账户
 
 现在你已经可以访问你的域名来访问 nextcloud 了，你将会看到如下所示的界面，你需要在这里创建管理员账户。
 
-![](https://img.iszy.cc/20190318215100.png)
+![](https://img.iszy.xyz/20190318215100.png)
 
 管理员账户的用户名密码，自定。点开存储&数据库，在这里可以修改数据目录。配置数据库选择 MySQL/MariaDB，然后填入刚刚你创建的数据库，最后点击安装完成。**注意：localhost 后一定要写上端口 3306，如图所示**
 
-![](https://img.iszy.cc/20190318215112.png)
+![](https://img.iszy.xyz/20190318215112.png)
 
 现在你已经可以登录你的 nextcloud 了，尽情享用吧。

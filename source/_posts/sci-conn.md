@@ -151,11 +151,11 @@ keywords:
 
 **SSR 线路测速**（建议使用）
 
-![SSR线路](https://img.iszy.cc/20210217210630.png)
+![SSR线路](https://img.iszy.xyz/20210217210630.png)
 
 **V2ray 线路测速**
 
-![V2ray线路](https://img.iszy.cc/20210217212647.png)
+![V2ray线路](https://img.iszy.xyz/20210217212647.png)
 
 ### （五）其他说明
 
@@ -363,7 +363,7 @@ keywords:
 
 部分高峰期测速，这日本线路我居然一条都连不上，难顶。。。
 
-![](https://img.iszy.cc/20210112210447.png)
+![](https://img.iszy.xyz/20210112210447.png)
 
 ### （五）其他说明
 
@@ -386,7 +386,7 @@ keywords:
 
 邀请码: `iszy`
 
-![](https://img.iszy.cc/20200317212833.png)
+![](https://img.iszy.xyz/20200317212833.png)
 
 > 新年优惠
 
@@ -540,7 +540,7 @@ CMYNetwork 提供三套服务，分别为身在 国内、 国外以及 企业的
 
 ### （四）测速情况
 
-![](https://img.iszy.cc/20210110160007.png)
+![](https://img.iszy.xyz/20210110160007.png)
 
 ### （五）其他说明
 
@@ -585,7 +585,7 @@ CMYNetwork 提供三套服务，分别为身在 国内、 国外以及 企业的
 
 ### （三）测速情况
 
-![](https://img.iszy.cc/20210110161158.png)
+![](https://img.iszy.xyz/20210110161158.png)
 
 </details>
 
@@ -673,7 +673,7 @@ CMYNetwork 提供三套服务，分别为身在 国内、 国外以及 企业的
 
 ### （四）测速情况
 
-![](https://img.iszy.cc/20200815171242.png)
+![](https://img.iszy.xyz/20200815171242.png)
 
 ### （五）其他说明
 
@@ -717,7 +717,7 @@ CMYNetwork 提供三套服务，分别为身在 国内、 国外以及 企业的
 
 看着速度总体上都还是比较不错的。
 
-![](https://img.iszy.cc/20200815155833.png)
+![](https://img.iszy.xyz/20200815155833.png)
 
 </details>
 
@@ -996,7 +996,7 @@ CMYNetwork 提供三套服务，分别为身在 国内、 国外以及 企业的
 
 待更新~
 
-![](https://img.iszy.cc/20200502214205.png)
+![](https://img.iszy.xyz/20200502214205.png)
 
 ### （五）其他说明
 
@@ -1107,7 +1107,7 @@ V2Club(旧蓝岸)，一家专门提供 v2ray 代理服务的服务商。或许�
 
 更新于 `12月15日`。
 
-![](https://img.iszy.cc/20201216180421.jpg)
+![](https://img.iszy.xyz/20201216180421.jpg)
 
 ### （五）其他说明
 
@@ -1147,7 +1147,7 @@ V2Club(旧蓝岸)，一家专门提供 v2ray 代理服务的服务商。或许�
 
 这个价格，这速度，只能说反正应该买了不亏。
 
-![](https://img.iszy.cc/20210112210649.png)
+![](https://img.iszy.xyz/20210112210649.png)
 
 ### （四）其他说明
 

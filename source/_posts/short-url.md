@@ -167,4 +167,4 @@ cp .env.setup .env
 
 ~~我个人部署的短域名服务：[ISZY Short URL](https://url.iszy.cc)。有需要的可以使用。~~
 
-![](https://img.iszy.cc/20190318220031.png)
+![](https://img.iszy.xyz/20190318220031.png)

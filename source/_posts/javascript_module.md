@@ -19,7 +19,7 @@ tags:
 
 随着网站逐渐变成"[互联网应用程序](http://en.wikipedia.org/wiki/Web_application)"，嵌入网页的 Javascript 代码越来越庞大，越来越复杂。
 
-![](https://img.iszy.cc/20190814094600.png?x-oss-process=style/mystyle)
+![](https://img.iszy.xyz/20190814094600.png?x-oss-process=style/mystyle)
 
 网页越来越像桌面程序，需要一个团队分工协作、进度管理、单元测试等等......开发者不得不使用软件工程的方法，管理网页的业务逻辑。
 
@@ -29,7 +29,7 @@ Javascript 模块化编程，已经成为一个迫切的需求。理想情况下
 
 Javascript 社区做了很多努力，在现有的运行环境中，实现"模块"的效果。本文总结了当前＂Javascript 模块化编程＂的最佳实践，说明如何投入实用。虽然这不是初级教程，但是只要稍稍了解 Javascript 的基本语法，就能看懂。
 
-![](https://img.iszy.cc/20190814094950.png?x-oss-process=style/mystyle)
+![](https://img.iszy.xyz/20190814094950.png?x-oss-process=style/mystyle)
 
 ## 原始写法
 

@@ -69,7 +69,7 @@ cd ./acme.sh
 
 在用户中心查看。
 
-![](https://img.iszy.cc/20190318221329.png)
+![](https://img.iszy.xyz/20190318221329.png)
 
 ### 输入环境参数
 

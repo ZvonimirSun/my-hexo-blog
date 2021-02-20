@@ -17,7 +17,7 @@ keywords: Valine, 评论系统, 无后端
 
 ## Valine 评论系统简介
 
-![](https://img.iszy.cc/20190318221214.png)
+![](https://img.iszy.xyz/20190318221214.png)
 
 如题目所说，Valine 是一个无后端的极简评论系统。由 [@云淡风轻](https://ioliu.cn/) 大神开发，利用免费的 leancloud 作云数据库，实现了真正的无后端。Valine 有以下几点吸引我的地方：
 
@@ -37,19 +37,19 @@ Valine 官方文档：[文档](https://valine.js.org/quickstart/)
 1. [点击这里登录或注册](https://leancloud.cn/dashboard/login.html#/signup)`Leancloud`
 2. [点击这里创建应用](https://leancloud.cn/dashboard/applist.html#/newapp)，应用名称随意。
 
-![](https://img.iszy.cc/20190318221231.png)
+![](https://img.iszy.xyz/20190318221231.png)
 
 ### 获取 `APP ID` 和 `APP KEY`
 
 进入应用后，在此处获取该应用的 `APP ID` 和 `APP KEY`。
 
-![](https://img.iszy.cc/20190318221242.png)
+![](https://img.iszy.xyz/20190318221242.png)
 
 ### 设置安全域名
 
 为了数据安全，请务必在此处添加安全域名为你的博客地址。如在本地测试，可以先不添加安全域名。
 
-![](https://img.iszy.cc/20190318221253.png)
+![](https://img.iszy.xyz/20190318221253.png)
 
 ### 插入页面
 
