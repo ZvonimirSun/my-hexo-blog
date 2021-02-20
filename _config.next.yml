@@ -30,6 +30,7 @@ custom_file_path:
   #mixin: source/_data/mixins.styl
   style: source/_data/styles.styl
 
+
 # ---------------------------------------------------------------
 # Scheme Settings
 # ---------------------------------------------------------------
@@ -42,6 +43,7 @@ scheme: Gemini
 
 # Dark Mode
 darkmode: true
+
 
 # ---------------------------------------------------------------
 # Site Information Settings
@@ -68,6 +70,7 @@ creative_commons:
   post: true
   language:
 
+
 # ---------------------------------------------------------------
 # Menu Settings
 # ---------------------------------------------------------------
@@ -92,6 +95,7 @@ menu:
 menu_settings:
   icons: true
   badges: true
+
 
 # ---------------------------------------------------------------
 # Sidebar Settings
@@ -206,6 +210,7 @@ chat:
   icon: fa fa-comment # Icon name in Font Awesome, set false to disable icon.
   text: Chat # Button text, change it as you wish.
 
+
 # ---------------------------------------------------------------
 # Footer Settings
 # See: https://theme-next.js.org/docs/theme-settings/footer
@@ -243,6 +248,7 @@ footer:
     gongan_num:
     # The icon for gongan beian. See: http://www.beian.gov.cn/portal/download
     gongan_icon_url:
+
 
 # ---------------------------------------------------------------
 # Post Settings
@@ -321,6 +327,7 @@ post_edit:
 # Available values: left | right | false
 post_navigation: left
 
+
 # ---------------------------------------------------------------
 # Custom Page Settings
 # See: https://theme-next.js.org/docs/theme-settings/custom-pages
@@ -346,6 +353,7 @@ calendar:
   showDeleted: false
   singleEvents: true
   maxResults: 250
+
 
 # ---------------------------------------------------------------
 # Misc Theme Settings
@@ -413,6 +421,7 @@ github_banner:
   permalink: https://github.com/yourname
   title: Follow me on GitHub
 
+
 # ---------------------------------------------------------------
 # Font Settings
 # ---------------------------------------------------------------
@@ -464,13 +473,11 @@ font:
     external: true
     family:
 
+
 # ---------------------------------------------------------------
 # SEO Settings
 # See: https://theme-next.js.org/docs/theme-settings/seo
 # ---------------------------------------------------------------
-
-# Disable Baidu transformation on mobile devices.
-disable_baidu_transformation: true
 
 # If true, site-subtitle will be added to index page.
 # Remember to set up your site-subtitle in Hexo `_config.yml` (e.g. subtitle: Subtitle)
@@ -495,8 +502,6 @@ yandex_site_verification:
 # See: https://ziyuan.baidu.com/site
 baidu_site_verification: tV7s6Tu88n
 
-# Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO.
-baidu_push: true
 
 # ---------------------------------------------------------------
 # Third Party Plugins & Services Settings
@@ -517,6 +522,8 @@ math:
 
   mathjax:
     enable: false
+    # Available values: none | ams | all
+    tags: none
 
   katex:
     enable: false
@@ -566,6 +573,7 @@ quicklink:
   # For more flexibility you can add some patterns (RegExp, Function, or Array) to ignores.
   # See: https://github.com/GoogleChromeLabs/quicklink#custom-ignore-patterns
   ignores:
+
 
 # ---------------------------------------------------------------
 # Comments Settings
@@ -762,6 +770,7 @@ utterances:
 # For more information: https://posativ.org/isso/
 isso: # <data_isso>
 
+
 # ---------------------------------------------------------------
 # Post Widgets & Content Sharing Services
 # See: https://theme-next.js.org/docs/third-party-services/post-widgets
@@ -771,12 +780,13 @@ isso: # <data_isso>
 # To get your ID visit https://widgetpack.com
 rating:
   enable: false
-  id: # <app_id>
-  color: "#fc6423"
+  id:     # <app_id>
+  color:  "#fc6423"
 
 # AddThis Share. See: https://www.addthis.com
 # Go to https://www.addthis.com/dashboard to customize your tools.
 add_this_id:
+
 
 # ---------------------------------------------------------------
 # Statistics and Analytics
@@ -784,6 +794,7 @@ add_this_id:
 # ---------------------------------------------------------------
 
 # Google Analytics
+# See: https://analytics.google.com
 google_analytics:
   tracking_id: G-E60YKKHF8Y # <app_id>
   # By default, NexT will load an external gtag.js script on your site.
@@ -791,13 +802,16 @@ google_analytics:
   only_pageview: false
 
 # Baidu Analytics
+# See: https://tongji.baidu.com
 baidu_analytics: # <app_id>
 
 # Growingio Analytics
+# See: https://www.growingio.com
 growingio_analytics: # <project_id>
 
-# CNZZ count
-cnzz_siteid:
+# Cloudflare Web Analytics
+# See: https://www.cloudflare.com/web-analytics/
+cloudflare_analytics:
 
 # Show number of visitors of each article.
 # You can visit https://www.leancloud.cn to get AppID and AppKey.
@@ -822,7 +836,7 @@ firestore:
   projectId: # Required
 
 # Show Views / Visitors of the website / page with busuanzi.
-# Get more information on http://ibruce.info/2015/04/04/busuanzi/
+# For more information: http://ibruce.info/2015/04/04/busuanzi/
 busuanzi_count:
   enable: false
   total_visitors: true
@@ -831,6 +845,7 @@ busuanzi_count:
   total_views_icon: fa fa-eye
   post_views: true
   post_views_icon: far fa-eye
+
 
 # ---------------------------------------------------------------
 # Search Services
@@ -858,8 +873,6 @@ local_search:
   # Preload the search data when the page loads.
   preload: true
 
-# Swiftype Search API Key
-swiftype_key:
 
 # ---------------------------------------------------------------
 # Chat Services
@@ -867,7 +880,7 @@ swiftype_key:
 # ---------------------------------------------------------------
 
 # Chatra Support
-# See: https://chatra.com
+# For more information: https://chatra.com
 # Dashboard: https://app.chatra.io/settings/general
 chatra:
   enable: false
@@ -876,7 +889,7 @@ chatra:
   #embed: # Unfinished experimental feature for developers. See: https://chatra.com/help/api/#injectto
 
 # Tidio Support
-# See: https://www.tidio.com
+# For more information: https://www.tidio.com
 # Dashboard: https://www.tidio.com/panel/dashboard
 tidio:
   enable: false
@@ -887,11 +900,11 @@ tidio:
 # See: https://theme-next.js.org/docs/tag-plugins/
 # ---------------------------------------------------------------
 
-# Note tag (bs-callout)
+# Note tag (bootstrap callout)
 note:
   # Note tag style values:
-  #  - simple    bs-callout old alert style. Default.
-  #  - modern    bs-callout new (v2-v3) alert style.
+  #  - simple    bootstrap callout old alert style. Default.
+  #  - modern    bootstrap callout new (v2-v3) alert style.
   #  - flat      flat callout style with background, like on Mozilla or StackOverflow.
   #  - disabled  disable all CSS styles import of note tag.
   style: simple
@@ -920,6 +933,7 @@ mermaid:
   enable: false
   # Available themes: default | dark | forest | neutral
   theme: forest
+
 
 # ---------------------------------------------------------------
 # Animation Settings
@@ -952,6 +966,7 @@ canvas_ribbon:
   size: 300 # The width of the ribbon
   alpha: 0.6 # The transparency of the ribbon
   zIndex: -1 # The display level of the ribbon
+
 
 #! ==============================================================
 #! DO NOT EDIT THE FOLLOWING SETTINGS
