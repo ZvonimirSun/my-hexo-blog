@@ -1,7 +1,8 @@
 ---
 title: 直接修改和替换Jar包中文件的几种方式
 categories:
-  - 技巧
+  - 技能
+  - 其他
 tags:
   - Linux
   - Java
