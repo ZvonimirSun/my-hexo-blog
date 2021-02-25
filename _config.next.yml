@@ -448,7 +448,7 @@ font:
   # Global font settings used for all elements inside <body>.
   global:
     external: true
-    family: "EB Garamond, Noto Serif SC"
+    family: "EB Garamond, 'Noto Serif SC'"
     size:
 
   # Font settings for site title (.site-title).
