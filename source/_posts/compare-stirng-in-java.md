@@ -16,7 +16,7 @@ tags:
 
 最近写程序的时候，遇到了需要比较两个 String 对象是否相等的情况，我习惯性的写了形如`if(a == "a"){}`的语句，IDEA 跳出警告，内容如下:
 
-```
+```text
 String values are compared using '==', not 'equals()'.
 ```
 

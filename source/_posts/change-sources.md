@@ -36,23 +36,7 @@ sudo vim /etc/apt/sources.list
 
 #### 进行替换
 
-替换默认的
-
-```
-http://archive.ubuntu.com/
-```
-
-和
-
-```
-http://security.ubuntu.com/
-```
-
-为
-
-```
-https://mirrors.aliyun.com/
-```
+替换默认的`http://archive.ubuntu.com/`和`http://security.ubuntu.com/`为`https://mirrors.aliyun.com/`
 
 **注：**vim 中的全局替换命令为 `:%s/源字符串/目的字符串/g`
 

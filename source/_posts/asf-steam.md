@@ -58,13 +58,13 @@ wget https://github.com/JustArchi/ArchiSteamFarm/releases/download/3.3.0.0/ASF-l
 
 在`/home`中创建`asf`文件夹
 
-```
+```bash
 mkdir /home/asf && cd /home/asf
 ```
 
 解压软件到该目录
 
-```
+```bash
 unzip /root/ASF-linux-x64.zip
 ```
 
@@ -208,14 +208,14 @@ service asf status # 查看服务状态
 
 导入好令牌文件以后，首次启动，将会看到如下字样。
 
-```
+```log
 [*] INFO: ImportAuthenticator() <1> Converting .maFile into ASF format...
 <1> Please enter your Device ID (including "android:"):
 ```
 
 这时输入你的设备 ID，连`android:`字样一起输入，回车。看到如下字样，表示你已经完成，以后启动就不再需要输入了，会自动登录。
 
-```
+```log
 [*] INFO: ImportAuthenticator() <1> Successfully finished importing mobile authenticator!
 ```
 

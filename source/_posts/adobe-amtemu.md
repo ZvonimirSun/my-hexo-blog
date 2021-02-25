@@ -33,7 +33,7 @@ AMT Emulator 是由俄罗斯技术论坛 Ru-Board 上的大神 Painter 制作的
 
 配置清单如下，选用对应软件版本即可。Version 号可能会有变化，对应修改一下即可，大致是这样的。
 
-```
+```text
 Application Name: Adobe Acrobat DC 2018
 Application LEID: V7{}AcrobatCont-18-Win-GM
 Version: 18.9.200
