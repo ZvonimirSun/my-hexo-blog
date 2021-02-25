@@ -3,5 +3,6 @@
   "no-emphasis-as-heading": false,
   "line-length": false,
   "no-alt-text": false,
-  "no-duplicate-heading": false
+  "no-duplicate-heading": false,
+  "fenced-code-language": false
 }
