@@ -3,7 +3,6 @@ title: 如何在JAVA中比较两个String对象
 date: 2019-07-24 19:00:00
 updated: 2019-07-24 19:00:00
 categories:
-  - 技能
   - 编程
 tags:
   - Java

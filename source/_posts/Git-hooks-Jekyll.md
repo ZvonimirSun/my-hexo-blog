@@ -3,8 +3,7 @@ title: 利用 git hooks 自动编译 Jekyll
 date: 2018-03-19 18:00:00
 updated: 2018-03-19 18:00:00
 categories:
-  - 技能
-  - 博客
+  - 建站
 tags:
   - Jekyll
   - Git

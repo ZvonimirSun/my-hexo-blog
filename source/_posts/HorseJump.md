@@ -3,7 +3,6 @@ title: 跳马算法
 date: 2017-09-26 06:00:00
 updated: 2017-09-26 06:00:00
 categories:
-  - 技能
   - 编程
 tags:
   - GIS

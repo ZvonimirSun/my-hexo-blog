@@ -3,9 +3,7 @@ title: 通过Docker快速部署ASF(ArchiSteamFarm)挂卡
 date: 2018-11-17 00:16:00
 updated: 2018-11-17 00:16:00
 categories:
-  - 技能
   - 应用部署
-  - Docker
 tags:
   - Docker
   - Steam

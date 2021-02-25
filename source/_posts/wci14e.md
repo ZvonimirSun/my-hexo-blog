@@ -3,8 +3,7 @@ title: 通过Subtree实现Hexo主题自定义配置的同步
 date: 2020-03-09 11:08:09
 updated: 2020-03-09 11:08:09
 categories:
-  - 技能
-  - 博客
+  - 建站
 tags:
   - Hexo
   - NexT

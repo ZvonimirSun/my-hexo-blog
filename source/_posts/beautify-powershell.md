@@ -3,7 +3,6 @@ title: Powershell 美化——oh-my-posh
 date: 2018-05-06 12:00:00
 updated: 2019-08-14 00:00:06
 categories:
-  - 技能
   - 其他
 tags:
   - Scoop

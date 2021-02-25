@@ -3,7 +3,6 @@ title: Nginx启用TLS1.3正式版教程
 date: 2018-08-12 19:39:14
 updated: 2018-09-30 01:03:50
 categories:
-  - 技能
   - 建站
 tags:
   - Nginx

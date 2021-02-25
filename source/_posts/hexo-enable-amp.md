@@ -3,8 +3,7 @@ title: 本站已全面启用AMP
 date: 2018-08-26 23:17:48
 updated: 2018-08-26 23:17:48
 categories:
-  - 技能
-  - 博客
+  - 建站
 tags:
   - 建站
   - Hexo

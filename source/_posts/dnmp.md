@@ -3,9 +3,7 @@ title: Docker一键部署LNMP
 date: 2019-03-09 15:41:00
 updated: 2019-04-02 23:41:00
 categories:
-  - 技能
   - 应用部署
-  - Docker
 tags:
   - LNMP
   - 建站

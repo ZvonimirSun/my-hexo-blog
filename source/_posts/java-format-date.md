@@ -3,7 +3,6 @@ title: 如何在JAVA中获取格式化的当前时间
 date: 2019-07-25 19:00:00
 updated: 2019-07-25 19:00:00
 categories:
-  - 技能
   - 编程
 tags:
   - Java

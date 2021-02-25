@@ -3,7 +3,6 @@ title: 更改网站域名
 date: 2018-03-19 6:00:00
 updated: 2018-03-19 6:00:00
 categories:
-  - 技能
   - 建站
 tags:
   - 域名

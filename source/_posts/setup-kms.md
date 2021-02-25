@@ -3,9 +3,7 @@ title: Linux自建KMS服务器
 date: 2019-01-11 16:36:00
 updated: 2020-06-30 12:36:00
 categories:
-  - 技能
   - 应用部署
-  - Docker
 tags:
   - KMS
   - Windows

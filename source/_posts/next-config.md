@@ -3,8 +3,7 @@ title: NexT 主题配置记录
 date: 2018-07-22 12:16:13
 updated: 2018-11-28 22:04:00
 categories:
-  - 技能
-  - 博客
+  - 建站
 tags:
   - NexT
   - Hexo
@@ -23,7 +22,7 @@ keywords: Next 主题
 
 ### 下载 NexT 主题
 
-在这里选取 ``v6.5.0`` 版本。
+在这里选取 `v6.5.0` 版本。
 
 ```shell
 cd your-hexo-site
@@ -44,13 +43,13 @@ theme: next
 
 ### 创建文件
 
-在站点文件夹创建 ``source/_data/next.yml`` 文件。
+在站点文件夹创建 `source/_data/next.yml` 文件。
 
 ### 复制配置
 
-将所有配置内容，包括站点和主题配置文件移入 ``source/_data/next.yml`` 文件。
+将所有配置内容，包括站点和主题配置文件移入 `source/_data/next.yml` 文件。
 
-### ``next.yml`` 文件中启用 override
+### `next.yml` 文件中启用 override
 
 修改以下内容。
 
@@ -82,9 +81,9 @@ url: https://www.iszy.cc
 
 ```yaml
 deploy:
-- type: git
-  repo: your git repo
-  branch: master
+  - type: git
+    repo: your git repo
+    branch: master
 ```
 
 ### 本地搜索
@@ -98,9 +97,9 @@ search:
   limit: 10000
 ```
 
-### 启用AMP(选)
+### 启用 AMP(选)
 
-需要安装插件``hexo-generator-amp``，请确保你了解**AMP**，否则不要贸然进行这一步。
+需要安装插件`hexo-generator-amp`，请确保你了解**AMP**，否则不要贸然进行这一步。
 
 #### 安装插件
 
@@ -118,7 +117,7 @@ generator_amp:
     path:   sample/sample-logo.png
     width:  384
     height: 384
-  substituteTitleImage: 
+  substituteTitleImage:
     path:   sample/sample-substituteTitleImage.png
     width:  640
     height: 640
@@ -128,7 +127,7 @@ generator_amp:
 
 #### 修改模板
 
-打开``post``的模板
+打开`post`的模板
 
 ```
 vi themes/next/layout/_macro/post.swig
@@ -138,7 +137,7 @@ vi themes/next/layout/_macro/post.swig
 
 ```html
 {% if is_post() and config.generator_amp %}
-    <link rel="amphtml" href="{{ post.permalink }}amp/">
+<link rel="amphtml" href="{{ post.permalink }}amp/" />
 {% endif %}
 ```
 
@@ -146,7 +145,7 @@ vi themes/next/layout/_macro/post.swig
 
 ### 图标配置
 
-这些图标可以在 [网页图标生成器](https://www.websiteplanet.com/zh-hans/webtools/favicon-generator/) 生成（感谢一位热心读者提供了这个更加好用的工具）。如果前面那个用不来，也可以尝试一下[Favicon Generator](https://realfavicongenerator.net/)。图片存放路径与站点source文件夹中路径一致。
+这些图标可以在 [网页图标生成器](https://www.websiteplanet.com/zh-hans/webtools/favicon-generator/) 生成（感谢一位热心读者提供了这个更加好用的工具）。如果前面那个用不来，也可以尝试一下[Favicon Generator](https://realfavicongenerator.net/)。图片存放路径与站点 source 文件夹中路径一致。
 
 ```yaml
 favicon:
@@ -158,7 +157,7 @@ favicon:
   ms_browserconfig: /images/browserconfig.xml
 ```
 
-### RSS订阅
+### RSS 订阅
 
 安装插件。
 
@@ -187,11 +186,12 @@ theme:
   # Version info of NexT after scheme info (vX.X.X).
   version: false
 ```
+
 ### 备案信息
 
 国内网站需要添加备案信息。
 
-```yaml
+````yaml
 beian:
   enable: true
   icp:苏ICP备18000000号-1 #请换成你自己的备案号
@@ -200,7 +200,7 @@ beian:
 
 ```yaml
 seo: true
-```
+````
 
 ### 菜单配置
 
@@ -322,7 +322,7 @@ post_copyright:
   license: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a>
 ```
 
-### Valine评论
+### Valine 评论
 
 ```yaml
 valine:
@@ -332,7 +332,7 @@ valine:
   notify: false # mail notifier , https://github.com/xCss/Valine/wiki
   verify: false # Verification code
   placeholder: ヾﾉ≧∀≦)o快来评论一下吧! # comment box placeholder
-  avatar:  # gravatar style
+  avatar: # gravatar style
   guest_info: nick,mail,link # custom comment header
   pageSize: 10 # pagination size
   visitor: true # leancloud-counter-security is not supported for now. When visitor is set to be true, appid and appkey are recommended to be the same as leancloud_visitors' for counter compatibility. Article reading statistic https://valine.js.org/visitor.html
@@ -365,9 +365,9 @@ motion:
   enable: false
 ```
 
-### 配置静态文件CDN
+### 配置静态文件 CDN
 
-配置CDN能够节省服务器流量。
+配置 CDN 能够节省服务器流量。
 
 ```yaml
 # Script Vendors.
@@ -451,14 +451,14 @@ vendors:
 
   # Internal version: 3.3.0
   # https://github.com/vinta/pangu.js
-  # Example: 
+  # Example:
   # pangu: //cdn.jsdelivr.net/npm/pangu@3.3.0/dist/browser/pangu.min.js
   # pangu: //cdnjs.cloudflare.com/ajax/libs/pangu/3.3.0/pangu.min.js
   pangu: //cdn.bootcss.com/pangu/3.3.0/pangu.min.js
 
   # needMoreShare2
   # https://github.com/revir/need-more-share2
-  # Example: 
+  # Example:
   # needmoreshare2_js: //cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1.0.0/needsharebutton.min.js
   # needmoreshare2_css: //cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1.0.0/needsharebutton.min.css
   needmoreshare2_js: //cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1.0.0/needsharebutton.min.js
@@ -467,7 +467,7 @@ vendors:
   # bookmark
   # Internal version: 1.0.0
   # https://github.com/theme-next/theme-next-bookmark
-  # Example: 
+  # Example:
   # bookmark: //cdn.jsdelivr.net/gh/theme-next/theme-next-bookmark@1.0.0/bookmark.min.js
   bookmark: //cdn.jsdelivr.net/gh/theme-next/theme-next-bookmark@1.0.0/bookmark.min.js
 

@@ -3,9 +3,7 @@ title: 使用telegram来收发微信消息
 date: 2018-09-18 14:10:09
 updated: 2018-12-18 14:46:09
 categories:
-  - 技能
   - 应用部署
-  - Linux
 tags:
   - 微信
   - Telegram

@@ -3,7 +3,6 @@ title: 军哥LNMP一键安装包的php扩展安装
 date: 2018-08-15 13:43:41
 updated: 2018-08-15 13:43:41
 categories:
-  - 技能
   - 建站
 tags:
   - LNMP

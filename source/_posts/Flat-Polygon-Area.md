@@ -3,7 +3,6 @@ title: 平面多边形面积计算
 date: 2018-01-17 12:00:00
 updated: 2018-01-17 12:00:00
 categories:
-  - 技能
   - 编程
 tags:
   - GIS

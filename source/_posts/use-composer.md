@@ -3,9 +3,7 @@ title: Ubuntu 安装使用 Composer
 date: 2018-08-09 10:47:36
 updated: 2018-08-09 10:47:36
 categories:
-  - 技能
   - 应用部署
-  - Linux
 tags:
   - Composer
   - php

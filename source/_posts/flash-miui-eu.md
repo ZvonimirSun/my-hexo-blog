@@ -3,8 +3,7 @@ title: 小米MI6最新欧版(xiaomi.eu版)MIUI教程
 date: 2019-02-26 14:29:28
 updated: 2019-02-26 14:29:28
 categories:
-  - 技能
-  - 刷机
+  - 其他
 tags:
   - MIUI
   - TWRP

@@ -3,7 +3,6 @@ title: 最新Telegram关闭敏感内容过滤方法
 date: 2020-01-05 21:38:16
 updated: 2020-12-23 21:38:16
 categories:
-  - 技能
   - 其他
 tags:
   - iOS

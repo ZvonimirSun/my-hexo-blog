@@ -3,7 +3,6 @@ title: (转载)Javascript模块化编程（三）：require.js的用法
 date: 2019-08-14 10:05:00
 updated: 2019-08-14 10:05:00
 categories:
-  - 技能
   - 编程
 tags:
   - JavaScript

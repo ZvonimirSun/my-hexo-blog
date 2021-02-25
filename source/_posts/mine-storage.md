@@ -3,7 +3,6 @@ title: 利用钻井数据，计算地下矿体的储量练习
 date: 2018-06-07 12:00:00
 updated: 2018-06-07 12:00:00
 categories:
-  - 技能
   - GIS
 tags:
   - ArcGIS

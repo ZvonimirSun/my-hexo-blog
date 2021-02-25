@@ -3,7 +3,6 @@ title: 八数码问题宽度优先算法
 date: 2018-10-04 22:25:00
 updated: 2018-10-04 22:25:00
 categories:
-  - 技能
   - 编程
 tags:
   - Cpp

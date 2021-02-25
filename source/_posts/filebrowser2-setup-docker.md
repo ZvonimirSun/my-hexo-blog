@@ -3,9 +3,7 @@ title: 通过Docker快速部署FileBrowser 2.0
 date: 2019-02-02 22:04:48
 updated: 2019-02-02 22:04:48
 categories:
-  - 技能
   - 应用部署
-  - Docker
 tags:
   - 文件管理
   - Docker

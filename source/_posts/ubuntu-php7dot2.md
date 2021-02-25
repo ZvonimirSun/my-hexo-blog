@@ -3,9 +3,7 @@ title: 在Ubuntu 16.04中安装php7.2
 date: 2018-08-09 11:19:25
 updated: 2018-08-09 11:19:25
 categories:
-  - 技能
   - 应用部署
-  - Linux
 tags:
   - Linux
   - Ubuntu

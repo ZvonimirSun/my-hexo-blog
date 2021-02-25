@@ -3,7 +3,6 @@ title: 从namecheap转移域名到阿里云/万网
 date: 2018-10-02 12:10:00
 updated: 2018-10-02 12:10:00
 categories:
-  - 技能
   - 建站
 tags:
   - 域名

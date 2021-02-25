@@ -3,7 +3,6 @@ title: 在VMware中安装"开源版Windows"——ReactOS
 date: 2018-07-28 14:43:13
 updated: 2018-07-28 14:43:13
 categories:
-  - 技能
   - 其他
 tags:
   - ReactOS

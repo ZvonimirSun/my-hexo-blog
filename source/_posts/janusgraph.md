@@ -3,9 +3,7 @@ title: JanusGraph 图数据库搭建
 date: 2019-07-02 11:11:13
 updated: 2019-07-30 16:11:13
 categories:
-  - 技能
   - 应用部署
-  - Linux
 tags:
   - JanusGraph
   - Hbase

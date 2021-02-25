@@ -3,7 +3,6 @@ title: ArcGIS批量生成UUID作为唯一ID
 date: 2019-09-06 12:00:00
 updated: 2019-09-06 12:00:00
 categories:
-  - 技能
   - GIS
 tags:
   - ArcGIS

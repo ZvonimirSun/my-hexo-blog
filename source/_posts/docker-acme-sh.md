@@ -3,9 +3,7 @@ title: 通过Docker部署acme.sh
 date: 2019-02-13 13:29:45
 updated: 2019-02-13 13:29:45
 categories:
-  - 技能
   - 应用部署
-  - Docker
 tags:
   - SSL
   - Linux

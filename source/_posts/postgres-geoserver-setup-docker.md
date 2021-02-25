@@ -3,9 +3,7 @@ title: 通过Docker部署Posgresql+Geoserver环境
 date: 2019-02-05 17:57:56
 updated: 2019-02-05 17:57:56
 categories:
-  - 技能
   - 应用部署
-  - Docker
 tags:
   - GIS
   - Postgresql

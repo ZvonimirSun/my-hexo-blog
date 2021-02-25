@@ -3,9 +3,7 @@ title: 使用Docker简单部署v2ray
 date: 2019-02-18 09:03:13
 updated: 2019-02-18 09:03:13
 categories:
-  - 技能
   - 应用部署
-  - Docker
 tags:
   - Docker
   - V2Ray

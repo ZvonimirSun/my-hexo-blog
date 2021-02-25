@@ -3,7 +3,6 @@ title: 用标准方式升级Ubuntu内核并启用BBR
 date: 2019-02-02 17:09:57
 updated: 2019-02-02 17:09:57
 categories:
-  - 技能
   - Linux
 tags:
   - Ubuntu

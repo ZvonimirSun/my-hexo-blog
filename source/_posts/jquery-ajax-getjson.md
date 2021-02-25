@@ -3,7 +3,6 @@ title: JQuery 中 $.ajax 和 $.getJSON 的简单应用对比
 date: 2018-07-09 18:00:00
 updated: 2018-07-09 18:00:00
 categories:
-  - 技能
   - 编程
 tags:
   - JavaScript
@@ -28,12 +27,12 @@ $.ajax({
   dataType: "json",
   data: { key: "test" },
   async: false,
-  success: function(data) {
+  success: function (data) {
     somefunction();
   },
-  error: function() {
+  error: function () {
     console.log("error");
-  }
+  },
 });
 ```
 

@@ -3,9 +3,7 @@ title: 在Ubuntu 16.04环境下使用ASF(v3)实现云挂卡
 date: 2018-08-08 00:59:52
 updated: 2018-08-08 00:59:52
 categories:
-  - 技能
   - 应用部署
-  - Linux
 tags:
   - Steam
   - ArchiSteamFarm
