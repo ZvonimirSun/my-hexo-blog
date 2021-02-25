@@ -6,6 +6,7 @@ categories:
   - 小记
 tags:
   - 转载
+copyright: false
 ---
 
 > 原文链接：[为什么现在很少有男生追女生了？](http://www.coaadmin.cn/life/why-are-few-boys-chasing-girls-now.html) —— COAadmin

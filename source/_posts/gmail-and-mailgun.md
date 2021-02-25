@@ -8,7 +8,9 @@ tags:
   - Mailgun
   - Google
   - 域名邮箱
+  - 转载
 keywords: GMail,Mailgun,企业邮箱,域名邮箱,邮件服务器教程
+copyright: false
 ---
 
 > 原文链接：[奇技淫巧——整合 Gmail 与 Mailgun 实现免费域名邮箱](https://qing.su/article/131.html) —— 香菇肥牛

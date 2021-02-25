@@ -8,6 +8,8 @@ tags:
   - JavaScript
   - 转载
   - 模块化
+author: 阮一峰
+copyright: false
 ---
 
 > 原文链接: [Javascript 模块化编程（二）：AMD 规范](http://www.ruanyifeng.com/blog/2012/10/asynchronous_module_definition.html) —— 阮一峰

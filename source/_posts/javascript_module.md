@@ -8,6 +8,8 @@ tags:
   - JavaScript
   - 转载
   - 模块化
+author: 阮一峰
+copyright: false
 ---
 
 最近学习这个模块化编程，转载几篇大佬文章学习一下。

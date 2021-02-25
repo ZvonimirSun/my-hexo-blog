@@ -8,6 +8,8 @@ tags:
   - JavaScript
   - 模块化
   - 转载
+author: 阮一峰
+copyright: false
 ---
 
 > 原文链接: [Javascript 模块化编程（三）：require.js 的用法](http://www.ruanyifeng.com/blog/2012/11/require_js.html) —— 阮一峰
