@@ -632,7 +632,7 @@ valine:
   appId: CH0Mowr11GIrTm0v8qTIgpzM-gzGzoHsz # Your leancloud application appid
   appKey: oIq5kMAxPQEbaKhJLuivEn3s # Your leancloud application appkey
   serverURLs: https://leancloud.api.iszy.xyz # When the custom domain name is enabled, fill it in here
-  placeholder: 如有疑问，可在评论区留言~~ # Comment box placeholder
+  placeholder: 请填写邮箱信息以便及时收到回复哦(●'◡'●) # Comment box placeholder
   avatar: # Gravatar style
   meta: [nick, mail, link] # Custom comment header
   pageSize: 10 # Pagination size
