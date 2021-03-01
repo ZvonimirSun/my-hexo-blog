@@ -28,15 +28,22 @@ exturl: false
     </div>
 </div>
 
-以上排名不分先后，仅按添加的时间顺序排序。
+友链排名不分先后~
 
-## 交换友联
-
-欢迎大家来交换友链，只要在下面[评论区](#comments)留下你的网站信息即可，建议填写邮箱一栏以防收不到回复通知。留言格式参考[本站信息](#本站信息)即可，我看着没啥问题就会把你加上啦。
+## 友链交换
 
 **本站信息**
 
-- 名称: 随遇而安
-- 地址: [https://www.iszy.cc/links/](https://www.iszy.cc/links/)
-- 简介: 生活吐槽 & 学习记录
-- 头像: [https://www.iszy.cc/images/avatar.png](https://www.iszy.cc/images/avatar.png)
+> 名称: 随遇而安
+> 地址: [https://www.iszy.cc/links/](https://www.iszy.cc/links/)
+> 简介: 生活吐槽 & 学习记录
+> 头像: [https://www.iszy.cc/images/avatar.png](https://www.iszy.cc/images/avatar.png)
+
+交换友链要求:
+
+1. 想要交换友链，根据上面的信息，把本站添加到您的网站中，然后在下方评论区中贴出您的网站信息~~建议填写邮箱一栏以便及时收到回复通知~~
+2. 原创内容的博客或网站优先，站点主题内容是互联网资讯、技术、资源等等
+
+## 留言
+
+其他问题也可以通过评论区的留言和我联系，也可以通过左侧站点概览中的 Telegram、 E-Mail 和我联系，我会尽量及时回复。

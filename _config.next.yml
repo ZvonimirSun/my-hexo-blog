@@ -86,7 +86,7 @@ menu:
   categories: /categories/ || fa fa-th
   archives: /archives/ || fa fa-archive
   优质机场推广: /2019/01/03/sci-conn/ || fa fa-ad
-  友链: /links/ || fas fa-link
+  友链&留言: /links/ || fa fa-comments
   #schedule: /schedule/ || fa fa-calendar
   #sitemap: /sitemap.xml || fa fa-sitemap
   #commonweal: /404/ || fa fa-heartbeat
