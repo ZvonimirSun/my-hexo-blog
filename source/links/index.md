@@ -42,5 +42,5 @@ exturl: false
 **本站信息**
 
 - 网站名称: 随遇而安
-- 网站地址: https://www.iszy.cc/links/
+- 网站地址: [https://www.iszy.cc/links/](https://www.iszy.cc/links/)
 - 网站简介: 生活吐槽 & 学习记录
