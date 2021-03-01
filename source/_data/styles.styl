@@ -52,22 +52,18 @@
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: space-between;
-
-		&::after {
-			content: ' ';
-			display: block;
-			clear: both;
-		}
 	}
 
 	.card {
-		width: 300px;
+		// width: 300px;
 		font-size: 1.1em;
 		padding: 10px 20px;
 		border-radius: 4px;
 		transition-duration: 0.15s;
 		margin-bottom: 1rem;
 		display: flex;
+		flex-basis: 200px;
+		flex-grow: 1;
 
 		&:hover {
 			transform: scale(1.1);
