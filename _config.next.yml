@@ -85,7 +85,7 @@ menu:
   tags: /tags/ || fa fa-tags
   categories: /categories/ || fa fa-th
   archives: /archives/ || fa fa-archive
-  优质机场推广: https://sites.iszy.cc || fa fa-ad
+  优质机场推广: /2019/01/03/sci-conn/ || fa fa-ad
   友链: /links/ || fas fa-link
   #schedule: /schedule/ || fa fa-calendar
   #sitemap: /sitemap.xml || fa fa-sitemap
@@ -163,31 +163,10 @@ links_settings:
   icon: fa fa-globe
   title: Links
   # Available values: block | inline
-  layout: inline
+  layout: block
 
 links:
-  #Title: http://yoursite.com
-  随遇而安: https://www.iszy.cc
-  3NICE: https://3nice.cc/
-  灰's Blog: https://www.hurbai.com/link
-  思维之海: https://vel.life/link/
-  叉叉白: https://www.xxwhite.com/
-  荒岛: https://lala.im/
-  Finen: https://www.finen.top/friends/
-  亿林: https://minemine.cc/friends/
-  Jimmy's Blog: https://blog.jimmyho.net/links.html
-  宅日记: https://crosschannel.cc/links.html
-  ZJBLOG: https://www.zjhuiwan.cn/
-  yoko blog: https://pengrl.com/link/
-  枫糖: https://blog.maplesugar.top/about/links/
-  Serence: https://blog.blinkstar.cn
-  憨憨: https://www.likeai.me/80.html
-  Forex Trading: https://www.fi-forex.com/
-  Jianger’s Blog: https://jianger.space/links/
-  文轩设计之路: http://www.wenxuands.com
-  HKU’BLOG: http://hkublog.top/index.php/%e5%8f%8b%e9%93%be/
-  usg的blog: http://blog.dgut.top/link/
-  浩方: https://blog.hofaeair.net/
+  #Title: https://example.com
 
 # Table of Contents in the Sidebar
 # Front-matter variable (unsupport wrap expand_all).
@@ -896,6 +875,7 @@ tidio:
   enable: false
   key: # Public Key, get it from dashboard. See: https://www.tidio.com/panel/settings/developer
 
+  
 # ---------------------------------------------------------------
 # Tags Settings
 # See: https://theme-next.js.org/docs/tag-plugins/

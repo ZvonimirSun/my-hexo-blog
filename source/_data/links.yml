@@ -1,0 +1,60 @@
+- name: 随遇而安 #友链名称
+  site: https://www.iszy.cc/ #友链地址
+  info: 生活吐槽 & 学习记录 #友链说明
+  avatar: https://www.iszy.cc/images/avatar.png #友链头像
+- name: 3NICE
+  site: https://3nice.cc/
+  info: 老汪，一个不务正业的 GISer
+  avatar: https://img.iszy.xyz/logos/3nice.cc.svg
+- name: 大灰hurbai
+  site: https://www.hurbai.com/link
+  info: 各种资源分享
+  avatar: https://img.iszy.xyz/logos/www.hurbai.com.ico
+- name: 思维之海
+  site: https://vel.life/link/
+  info: 在云端，寻找我的星匙
+  avatar: https://img.iszy.xyz/logos/vel.life.gif
+- name: 叉叉白
+  site: https://www.xxwhite.com/
+  info: 一个小白搞机的记事本
+  avatar: https://img.iszy.xyz/logos/www.xxwhite.com.jpg
+- name: 荒岛
+  site: https://lala.im/
+  info: 暂无介绍~
+  avatar: https://img.iszy.xyz/logos/default.jpeg
+- name: Finen
+  site: https://www.finen.top/friends/
+  info: Stay Hungry! Stay Foolish!
+  avatar: https://img.iszy.xyz/logos/www.finen.top.png
+- name: Jimmy's Blog
+  site: https://blog.jimmyho.net/links.html
+  info: 永远相信美好的事情即将发生
+  avatar: https://img.iszy.xyz/logos/blog.jimmyho.net.jpg
+- name: 宅日记
+  site: https://crosschannel.cc/links.html
+  info: 一个不知名懒肥宅的自留地
+  avatar: https://img.iszy.xyz/logos/default.jpeg
+- name: ZJBLOG
+  site: https://www.zjhuiwan.cn/
+  info: 记录生活·分享技术
+  avatar: https://img.iszy.xyz/logos/www.zjhuiwan.cn.png
+- name: yoko blog
+  site: https://pengrl.com/link/
+  info: 非常程序员
+  avatar: https://img.iszy.xyz/logos/pengrl.com.jpeg
+- name: Jianger’s Blog
+  site: https://jianger.space/links/
+  info: 热爱生活｜分享技术｜鼓捣科技
+  avatar: https://img.iszy.xyz/logos/jianger.space.jpeg
+- name: 文轩设计之路
+  site: http://www.wenxuands.com
+  info: 一个 80 后从事于网站前端设计和平面设计的站长之路。
+  avatar: https://img.iszy.xyz/logos/default.jpeg
+- name: HKU’BLOG
+  site: https://hkublog.top/
+  info: 各种教程分享，鸡汤喝饱
+  avatar: https://img.iszy.xyz/logos/hkublog.top.jpg
+- name: 浩方
+  site: https://blog.hofaeair.net/
+  info: hofaeair 的动力源泉
+  avatar: https://img.iszy.xyz/logos/blog.hofaeair.net.ico
