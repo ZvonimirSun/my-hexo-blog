@@ -580,7 +580,9 @@ CMYNetwork 提供三套服务，分别为身在 国内、 国外以及 企业的
 
 ### （三）测速情况
 
-![](https://img.iszy.xyz/20210110161158.png)
+本地 300M 电信测速
+
+![](https://img.iszy.cc/20210226212647.png)
 
 </details>
 

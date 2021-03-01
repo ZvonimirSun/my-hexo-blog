@@ -31,6 +31,7 @@ exturl: false
 | [文轩设计之路](http://www.wenxuands.com)                     | 一个 80 后从事于网站前端设计和平面设计的站长之路。 |
 | [HKU’BLOG](http://hkublog.top/index.php/%e5%8f%8b%e9%93%be/) | 各种教程分享，鸡汤喝饱                             |
 | [usg 的 blog](http://blog.dgut.top/link/)                    | 物质决定意识，意识反作用于物质                     |
+| [浩方](https://blog.hofaeair.net/)                           | hofaeair 的动力源泉                                |
 
 以上排名不分先后，仅按添加的时间顺序排序。
 
