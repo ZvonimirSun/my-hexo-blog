@@ -28,9 +28,11 @@ keywords:
 | [Blinkload](#八、Blinkload)【冬季优惠】                     | SS(全专线)            | 稳定全能                     | [官网传送门](https://url.iszy.xyz/blinkload)  |
 | [Electry](#九、Electry)                                     | V2Ray(专线、中继)     | 线路大佬，高速稳定           | [官网传送门](https://url.iszy.xyz/electry)    |
 | [V2Club](#十、V2Club)                                       | SS/V2ray(全专线)      | 稳定坚挺，多年老站           | [官网传送门](https://url.iszy.xyz/lanan)      |
-| [皇朝网络](#十一、皇朝网络)                                 | SS 隧道               | 性价比新站                   | [官网传送门](https://url.iszy.xyz/dinastio)   |
+| [皇朝网络](#十一、皇朝网络)【新】                           | SS 隧道               | 性价比新站                   | [官网传送门](https://url.iszy.xyz/dinastio)   |
 
 > 本页机场均在上次网络大波动中提供了稳定的服务，还会持续观察未来表现
+
+**点击前往查看测速: [机场测速集合](https://www.iszy.cc/page/speed-test-collection/)**
 
 更新动态:
 
@@ -45,6 +47,8 @@ keywords:
 [官网传送门](https://url.iszy.xyz/xinjie)
 
 邀请码: `iszy`
+
+[测速](https://www.iszy.cc/page/speed-test-collection/#心阶云)
 
 ### （一）优惠
 
@@ -101,7 +105,7 @@ keywords:
 - 提供昂贵的 IPLC，为稳定性需求较高的用户提供了支持，在良好网络环境下可为游戏加速
 
 <details>
-  <summary><strong>展开查看更多详情(套餐、测速等)</strong></summary>
+  <summary><strong>展开查看更多详情</strong></summary>
 
 ### （三）套餐
 
@@ -140,19 +144,7 @@ keywords:
 | 个人/企业定制【TG/工单详谈】 |      | 3499 元/年 | lv3      | 50         |
 | 流量叠加包(单买无效)         | 30G  | 5 元       |          |            |
 
-### （四）测速情况
-
-本地 300M 带宽高峰期测试，仅供参考。
-
-**SSR 线路测速**（建议使用）
-
-![SSR线路](https://img.iszy.xyz/20210217210630.png)
-
-**V2ray 线路测速**
-
-![V2ray线路](https://img.iszy.xyz/20210217212647.png)
-
-### （五）其他说明
+### （四）其他说明
 
 - 使用邀请码(`iszy`)注册后，在用户面板首页，你可以找到各平台的 ssr 和 V2Ray 客户端的下载链接及相关配置教程。
   - 苹果平台比较特殊，没法提供下载，iOS 可能需要自行在美区苹果商城购买软件。
@@ -168,6 +160,8 @@ keywords:
 ## 三、CMYNetwork 红莓网络
 
 [官网传送门](https://url.iszy.xyz/cmynetwork)
+
+[测速](https://www.iszy.cc/page/speed-test-collection/#CMYNetwork-红莓网络)
 
 ### （一）优惠
 
@@ -217,7 +211,7 @@ keywords:
 - 注册并绑定手机号，赠送 3 天免费试用(非强制)
 
 <details>
-  <summary><strong>展开查看更多详情(套餐、测速等)</strong></summary>
+  <summary><strong>展开查看更多详情</strong></summary>
 
 ### （三）套餐
 
@@ -329,11 +323,7 @@ CMYNetwork 提供三套服务，分别为身在 国内、 国外以及 企业的
 </tr>
 </table>
 
-### （四）测速情况
-
-![](https://img.iszy.xyz/20210110160007.png)
-
-### （五）其他说明
+### （四）其他说明
 
 - [官网地址发布页](https://github.com/caomeicloud/url)，永不失联
 - [官方 TG 通知频道](https://t.me/s/cmynetwork)
@@ -346,6 +336,8 @@ CMYNetwork 提供三套服务，分别为身在 国内、 国外以及 企业的
 
 [官网传送门](https://url.iszy.xyz/fspeed)
 
+[测速](https://www.iszy.cc/page/speed-test-collection/#MEET)
+
 ### （一）简介
 
 **MEET** 是一家专做按量付费套餐的商家，推荐中低流量用户选择。可以了解一下，买个最便宜的套餐试试看。
@@ -356,7 +348,7 @@ CMYNetwork 提供三套服务，分别为身在 国内、 国外以及 企业的
 - 不限制设备数，但仅限个人使用，禁止滥用
 
 <details>
-  <summary><strong>展开查看更多详情(套餐、测速等)</strong></summary>
+  <summary><strong>展开查看更多详情</strong></summary>
 
 ### （二）套餐
 
@@ -368,12 +360,6 @@ CMYNetwork 提供三套服务，分别为身在 国内、 国外以及 企业的
 | 半年套餐     | 180 天 | 300G | 109 元 |
 | 季度套餐     | 90 天  | 100G | 49 元  |
 | 10G 流量月包 | 30 天  | 10G  | 5 元   |
-
-### （三）测速情况
-
-看着速度总体上都还是比较不错的。
-
-![](https://img.iszy.xyz/20200815155833.png)
 
 </details>
 
@@ -420,7 +406,7 @@ CMYNetwork 提供三套服务，分别为身在 国内、 国外以及 企业的
    - 需要注意的是，其提供的是独立账号，而非把服务提供到个人账号，属团体订阅
 
 <details>
-  <summary><strong>展开查看更多详情(套餐、测速等)</strong></summary>
+  <summary><strong>展开查看更多详情</strong></summary>
 
 ### （三）套餐
 
@@ -587,11 +573,7 @@ CMYNetwork 提供三套服务，分别为身在 国内、 国外以及 企业的
 | 德国数据中心   | 1280         | 14800        |
 | 英国数据中心   | 1280         | 14800        |
 
-### （四）测速情况
-
-暂无
-
-### （五）其他说明
+### （四）其他说明
 
 - [BoomCloud Wiki Center](https://boomcloud-hk.github.io/wiki/#/)，提供 BoomCloud 服务相关教程指引及进阶教程
 - 售后 BoomCloud 售后仅支持服务单，因为这能最直白看到你的账号及套餐使用情况，更快的帮助寻找问题所在
@@ -610,6 +592,8 @@ CMYNetwork 提供三套服务，分别为身在 国内、 国外以及 企业的
 ## 六、DuangCloud
 
 [官网传送门](https://url.iszy.xyz/duangcloud)
+
+[测速](https://www.iszy.cc/page/speed-test-collection/#DuangCloud)
 
 ### （一）优惠
 
@@ -633,7 +617,7 @@ CMYNetwork 提供三套服务，分别为身在 国内、 国外以及 企业的
 - 支持支付宝/微信支付
 
 <details>
-  <summary><strong>展开查看更多详情(套餐、测速等)</strong></summary>
+  <summary><strong>展开查看更多详情</strong></summary>
 
 ### （三）套餐
 
@@ -648,13 +632,7 @@ CMYNetwork 提供三套服务，分别为身在 国内、 国外以及 企业的
 | Business | 800G/月      | 100 元/月 或 1000 元/年 | 0.125 元/G |
 | Light    | 50G 永久流量 | 100 元一次性            | 2 元/G     |
 
-### （四）测速情况
-
-待更新~
-
-![](https://img.iszy.xyz/20200502214205.png)
-
-### （五）其他说明
+### （四）其他说明
 
 - [Duang Cloud 使用文档](https://docs.duangcloud.club/)，敬请查阅
 - 官方联系方式，有问题可以联系
@@ -666,6 +644,8 @@ CMYNetwork 提供三套服务，分别为身在 国内、 国外以及 企业的
 ## 七、ByWave
 
 [官网传送门](https://url.iszy.xyz/bywave)
+
+[测速](https://www.iszy.cc/page/speed-test-collection/#ByWave)
 
 ### （一）优惠
 
@@ -699,7 +679,7 @@ CMYNetwork 提供三套服务，分别为身在 国内、 国外以及 企业的
 > 内网中转线路及 IPLC 专线成本极高，但质量极佳，在抵抗网络冲击和稳定性方面卓有成效。
 
 <details>
-  <summary><strong>展开查看更多详情(套餐、测速等)</strong></summary>
+  <summary><strong>展开查看更多详情</strong></summary>
 
 ### （三）套餐
 
@@ -729,11 +709,7 @@ CMYNetwork 提供三套服务，分别为身在 国内、 国外以及 企业的
 |                 | 660      | 440      |
 |                 | 1230     | 820      |
 
-### （四）测速情况
-
-![](https://img.iszy.xyz/20200815171242.png)
-
-### （五）其他说明
+### （四）其他说明
 
 - 在此查看最新域名：[永久域名发布页](https://bywavesite.github.io)，永远不用担心失联。
 - 无法使用问题排查
@@ -747,6 +723,8 @@ CMYNetwork 提供三套服务，分别为身在 国内、 国外以及 企业的
 ## 八、Blinkload
 
 [官网传送门](https://url.iszy.xyz/blinkload)
+
+[测速](https://www.iszy.cc/page/speed-test-collection/#Blinkload)
 
 ### （一）优惠
 
@@ -810,7 +788,7 @@ CMYNetwork 提供三套服务，分别为身在 国内、 国外以及 企业的
 充分考虑到用户与家人同事之间的关联性，特别设计了极其实惠的拼团功能，最高和多位朋友一起拼团购买同套餐，可享受每人 8 折优惠（不可与优惠码同享）。
 
 <details>
-  <summary><strong>展开查看更多详情(套餐、测速等)</strong></summary>
+  <summary><strong>展开查看更多详情</strong></summary>
 
 ### （三）套餐
 
@@ -933,13 +911,7 @@ CMYNetwork 提供三套服务，分别为身在 国内、 国外以及 企业的
 </tr>
 </table>
 
-### （四）测速情况
-
-部分高峰期测速，这日本线路我居然一条都连不上，难顶。。。
-
-![](https://img.iszy.xyz/20210112210447.png)
-
-### （五）其他说明
+### （四）其他说明
 
 - 订阅地址及节点信息请勿截图发到其他地方，请务必打码。
 - 通知公告[Telegram 频道](https://t.me/thessrchannel)(Telegram 需挂代理)
@@ -951,6 +923,8 @@ CMYNetwork 提供三套服务，分别为身在 国内、 国外以及 企业的
 ## 九、Electry
 
 [官网传送门](https://url.iszy.xyz/electry)
+
+[测速](https://www.iszy.cc/page/speed-test-collection/#Electry)
 
 ### （一）简介
 
@@ -966,7 +940,7 @@ CMYNetwork 提供三套服务，分别为身在 国内、 国外以及 企业的
 - 全部线路流量消耗均为正常 1 倍率，无高倍率套路
 
 <details>
-  <summary><strong>展开查看更多详情(套餐、测速等)</strong></summary>
+  <summary><strong>展开查看更多详情</strong></summary>
 
 ### （二）套餐
 
@@ -980,12 +954,6 @@ CMYNetwork 提供三套服务，分别为身在 国内、 国外以及 企业的
 | Advanced Plan | 788/年        | 800GB/月  | 5        | 200Mbps  |
 | Premium Plan  | 1288/年       | 1000GB/月 | 5        | 不限速   |
 
-### （三）测速情况
-
-本地 300M 电信测速
-
-![](https://img.iszy.cc/20210226212647.png)
-
 </details>
 
 ## 十、V2Club
@@ -993,6 +961,8 @@ CMYNetwork 提供三套服务，分别为身在 国内、 国外以及 企业的
 [官网传送门](https://url.iszy.xyz/lanan)
 
 邀请码：`EBtdO6hX`
+
+[测速](https://www.iszy.cc/page/speed-test-collection/#V2Club)
 
 ### （一）简介
 
@@ -1024,7 +994,7 @@ V2Club(旧蓝岸)，一家专门提供 v2ray 代理服务的服务商。或许�
 - 支持支付宝支付
 
 <details>
-  <summary><strong>展开查看更多详情(套餐、测速等)</strong></summary>
+  <summary><strong>展开查看更多详情</strong></summary>
 
 ### （二）套餐
 
@@ -1076,13 +1046,7 @@ V2Club(旧蓝岸)，一家专门提供 v2ray 代理服务的服务商。或许�
 
 > **TIPs**<br>选购推荐，轻度用户（浏览网页/查询/社交等轻度流量消耗）建议购买按量付费的套餐；重度用户及长期用户（视频等流量大户）建议购买年付套餐(折扣多流量够)<br>购买时，建议通过本站链接进入，使用优惠码享受折扣优惠。
 
-### （三）测速情况
-
-更新于 `12月15日`。
-
-![](https://img.iszy.xyz/20201216180421.jpg)
-
-### （四）其他说明
+### （三）其他说明
 
 - 客户端教程和下载
   - [网站](https://url.iszy.xyz/lanan)右上角点击**客户端&教程**即可获取客户端和教程。
@@ -1099,12 +1063,14 @@ V2Club(旧蓝岸)，一家专门提供 v2ray 代理服务的服务商。或许�
 
 邀请码：`vXd43WA0`
 
+[测速](https://www.iszy.cc/page/speed-test-collection/#皇朝网络)
+
 ### （一）简介
 
 这是一家比较新的 SS 机场，在 clash 客户端的加持下，简单易用效果好。经过测试，线路体验不错，也有部分解锁流媒体的线路，足够日常使用了。定价较为激进，非常适合价格敏感型用户使用，属于买不了吃亏，买不了上当的类型。
 
 <details>
-  <summary><strong>展开查看更多详情(套餐、测速等)</strong></summary>
+  <summary><strong>展开查看更多详情</strong></summary>
 
 ### （二）套餐
 
@@ -1116,13 +1082,7 @@ V2Club(旧蓝岸)，一家专门提供 v2ray 代理服务的服务商。或许�
 | 入门订阅 | 200G/月 | 10 元/月   |
 | 高级订阅 | 300G/月 | 30 元/月   |
 
-### （三）测速情况
-
-这个价格，这速度，只能说反正应该买了不亏。
-
-![](https://img.iszy.xyz/20210112210649.png)
-
-### （四）其他说明
+### （三）其他说明
 
 - 客户端教程和下载
   - 进入[网站](https://url.iszy.xyz/dinastio)，左侧列表就有使用说明，各平台说明较全。
