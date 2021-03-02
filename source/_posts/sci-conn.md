@@ -17,18 +17,18 @@ keywords:
 
 ## 一、目录
 
-| 机场名称（点击了解更多）                                    | 类别              | 关键词                                       | 操作                                          |
-| ----------------------------------------------------------- | ----------------- | -------------------------------------------- | --------------------------------------------- |
-| [心阶云](#二、心阶云)【官方长期优惠】                       | SSR 隧道/V2Ray    | 性价比高，超多线路，部分专线(iplc)，稳定老站 | [官网传送门](https://url.iszy.xyz/xinjie)     |
-| [CMYNetwork 红莓网络](#三、CMYNetwork-红莓网络)【新年优惠】 | SSR(专线)/Trojan  | 稳定平价，部分专线(iepl,iplc) ，回国线路     | [官网传送门](https://url.iszy.xyz/cmynetwork) |
-| [MEET](#四、MEET)                                           | SSR               | 专注按量付费，高速稳定                       | [官网传送门](https://url.iszy.xyz/fspeed)     |
-| [BoomCloud](#五、BoomCloud)【官方长期优惠】                 | V2ray/SSR/SS      | 多年老站，附赠丰富                           | [官网传送门](https://url.iszy.xyz/boomcloud)  |
-| [DuangCloud](#六、DuangCloud)【专属优惠】                   | SS(全专线)        | 全专线(iepl)                                 | [官网传送门](https://url.iszy.xyz/duangcloud) |
-| [ByWave](#七、ByWave)                                       | V2Ray             | 高质高端，服务稳定                           | [官网传送门](https://url.iszy.xyz/bywave)     |
-| [Blinkload](#八、Blinkload)【冬季优惠】                     | SS(全专线)        | 稳定全能，全专线(iepl,iplc)                  | [官网传送门](https://url.iszy.xyz/blinkload)  |
-| [Electry](#九、Electry)                                     | V2Ray(专线、中继) | 线路精专，部分专线(iepl)，高速稳定           | [官网传送门](https://url.iszy.xyz/electry)    |
-| [V2Club](#十、V2Club)                                       | SS/V2ray(全专线)  | 稳定坚挺，多年老站，全专线(iepl)             | [官网传送门](https://url.iszy.xyz/lanan)      |
-| [皇朝网络](#十一、皇朝网络)【新】                           | SS                | 超性价比新站，价格敏感型用户福音             | [官网传送门](https://url.iszy.xyz/dinastio)   |
+| 机场名称（点击了解更多）                                    | 类别                  | 关键词                       | 操作                                          |
+| ----------------------------------------------------------- | --------------------- | ---------------------------- | --------------------------------------------- |
+| [心阶云](#二、心阶云)【官方长期优惠】                       | SSR(隧道、专线)/V2Ray | 性价比高，超多线路，稳定老站 | [官网传送门](https://url.iszy.xyz/xinjie)     |
+| [CMYNetwork 红莓网络](#三、CMYNetwork-红莓网络)【新年优惠】 | SSR(专线)/Trojan      | 稳定平价，回国线路           | [官网传送门](https://url.iszy.xyz/cmynetwork) |
+| [MEET](#四、MEET)                                           | SSR                   | 专注按量付费，高速稳定       | [官网传送门](https://url.iszy.xyz/fspeed)     |
+| [BoomCloud](#五、BoomCloud)【官方长期优惠】                 | V2ray/SSR/SS          | 多年老站，附赠丰富           | [官网传送门](https://url.iszy.xyz/boomcloud)  |
+| [DuangCloud](#六、DuangCloud)【专属优惠】                   | SS(全专线)            | 平价灵活                     | [官网传送门](https://url.iszy.xyz/duangcloud) |
+| [ByWave](#七、ByWave)                                       | V2Ray                 | 高质高端，服务稳定           | [官网传送门](https://url.iszy.xyz/bywave)     |
+| [Blinkload](#八、Blinkload)【冬季优惠】                     | SS(全专线)            | 稳定全能                     | [官网传送门](https://url.iszy.xyz/blinkload)  |
+| [Electry](#九、Electry)                                     | V2Ray(专线、中继)     | 线路大佬，高速稳定           | [官网传送门](https://url.iszy.xyz/electry)    |
+| [V2Club](#十、V2Club)                                       | SS/V2ray(全专线)      | 稳定坚挺，多年老站           | [官网传送门](https://url.iszy.xyz/lanan)      |
+| [皇朝网络](#十一、皇朝网络)                                 | SS 隧道               | 性价比新站                   | [官网传送门](https://url.iszy.xyz/dinastio)   |
 
 > 本页机场均在上次网络大波动中提供了稳定的服务，还会持续观察未来表现
 
@@ -1108,13 +1108,13 @@ V2Club(旧蓝岸)，一家专门提供 v2ray 代理服务的服务商。或许�
 
 ### （二）套餐
 
-> 仅高级套餐包含 BGP 线路
+> 全国内中继，仅高级订阅包含 IEPL 专线接入。
 
-| 订阅     | 流量    | 价格     |
-| -------- | ------- | -------- |
-| 基础订阅 | 100G/月 | 5 元/月  |
-| 入门订阅 | 200G/月 | 10 元/月 |
-| 高级订阅 | 300G/月 | 30 元/月 |
+| 订阅     | 流量    | 价格       |
+| -------- | ------- | ---------- |
+| 基础订阅 | 100G/月 | 15 元/季度 |
+| 入门订阅 | 200G/月 | 10 元/月   |
+| 高级订阅 | 300G/月 | 30 元/月   |
 
 ### （三）测速情况
 
