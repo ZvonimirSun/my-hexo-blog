@@ -605,23 +605,23 @@ changyan:
   appid:
   appkey:
 
-# Valine
-# For more information: https://valine.js.org, https://github.com/xCss/Valine
-valine:
+# Waline
+# For more information: https://waline.js.org, https://github.com/lizheming/waline
+waline:
   enable: true
-  appId: CH0Mowr11GIrTm0v8qTIgpzM-gzGzoHsz # Your leancloud application appid
-  appKey: oIq5kMAxPQEbaKhJLuivEn3s # Your leancloud application appkey
-  serverURLs: https://leancloud.api.iszy.xyz # When the custom domain name is enabled, fill it in here
-  placeholder: 请填写邮箱信息以便及时收到回复哦(●'◡'●) # Comment box placeholder
+  serverURL: https://wl.iszy.xyz # Waline server address url
+  placeholder: |-
+    请填写邮箱信息以便及时收到回复哦(●'◡'●)
+    评论会在审核后显示，请勿重复评论~
   avatar: # Gravatar style
   meta: [nick, mail, link] # Custom comment header
   pageSize: 10 # Pagination size
   lang: # Language, available values: en, zh-cn
+  # Warning: Do not enable both `waline.visitor` and `leancloud_visitors`.
   visitor: true # Article reading statistic
   comment_count: true # If false, comment count will only be displayed in post page, not in home page
-  recordIP: true # Whether to record the commenter IP
-  enableQQ: true # Whether to enable the Nickname box to automatically get QQ Nickname and QQ Avatar
   requiredFields: [nick, mail] # Set required fields: [nick] | [nick, mail]
+  libUrl: https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js
   emojiCDN: https://cdn.jsdelivr.net/gh/GamerNoTitle/ValineCDN@master/
   emojiMaps:
     QQ1: "QQ/aini.gif"
