@@ -74,4 +74,4 @@ permalink: /page/speed-test-collection/
 
 [官网传送门](https://url.iszy.xyz/dinastio)
 
-![](https://img.iszy.xyz/20210112210649.png)
+![](https://img.iszy.cc/20210308200608.png)
