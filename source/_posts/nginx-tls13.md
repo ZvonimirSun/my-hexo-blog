@@ -6,7 +6,7 @@ categories:
   - 建站
 tags:
   - Nginx
-  - Openssl
+  - OpenSSL
   - TLS
 keywords: nginx,tls1.3,draft28,draft26,draft23,final,openssl1.1.1
 ---
