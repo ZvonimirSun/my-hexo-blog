@@ -11,6 +11,8 @@ tags:
 
 这篇文章是为了解决 Java 使用 SSL 过程中出现`PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target`的问题。
 
+<!--more-->
+
 ## 问题
 
 今天在给微服务添加自签名证书后，微服务间使用 SSL 验证权限时出现了如下错误。
