@@ -7,6 +7,7 @@ tags:
   - OpenSSL
   - Java
   - 自签名证书
+  - SSL
 ---
 
 这篇文章是为了解决 Java 使用 SSL 过程中出现`PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target`的问题。
