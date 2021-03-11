@@ -1,7 +1,7 @@
 ---
 title: 优质SS/SSR/Trojan/V2Ray机场推荐
 date: 2019-01-03 03:11:50
-updated: 2021-03-02 10:00:00
+updated: 2021-03-11 10:00:00
 categories:
   - 推广
 tags:
@@ -21,7 +21,7 @@ permalink: /page/bgfw/
 | 机场名称（点击了解更多）                                    | 类别                  | 关键词                       | 操作                                          |
 | ----------------------------------------------------------- | --------------------- | ---------------------------- | --------------------------------------------- |
 | [心阶云](#二、心阶云)【官方长期优惠】                       | SSR(隧道、专线)/V2Ray | 性价比高，超多线路，稳定老站 | [官网传送门](https://url.iszy.xyz/xinjie)     |
-| [CMYNetwork 红莓网络](#三、CMYNetwork-红莓网络)【新年优惠】 | SSR(专线)/Trojan      | 稳定平价，回国线路           | [官网传送门](https://url.iszy.xyz/cmynetwork) |
+| [CMYNetwork 红莓网络](#三、CMYNetwork-红莓网络)【新年优惠】 | SSR(专线)/Trojan      | 稳定平价                     | [官网传送门](https://url.iszy.xyz/cmynetwork) |
 | [MEET](#四、MEET)                                           | SSR                   | 专注按量付费，高速稳定       | [官网传送门](https://url.iszy.xyz/fspeed)     |
 | [BoomCloud](#五、BoomCloud)【官方长期优惠】                 | V2ray/SSR/SS          | 多年老站，附赠丰富           | [官网传送门](https://url.iszy.xyz/boomcloud)  |
 | [DuangCloud](#六、DuangCloud)【专属优惠】                   | SS(全专线)            | 平价灵活                     | [官网传送门](https://url.iszy.xyz/duangcloud) |
@@ -102,7 +102,7 @@ permalink: /page/bgfw/
 - 支持 Windows/Mac/iOS/Android/ 路由器，支持多设备同时使用
 - 充值采用支付宝 Alipay，支付安全便捷，使用教程简单易用
 - 和多家 IDC 深入合作，如阿里云，GmoCloud，香港宽频，中华电信……
-- 全球线路全面，香港（HK,HKBN,CN2）、日本(IIJ，NTT)，台湾（HiNet，TFN）、新加坡、美国（GIA,NCP）、韩国(AWS)、俄罗斯(KHV)、英国(NTT)、澳门(CTM)以及回国中转 BGP 等线路可选
+- 全球线路全面，香港（HK,HKBN,CN2）、日本(IIJ，NTT)，台湾（HiNet，TFN）、新加坡、美国（GIA,NCP）、韩国(AWS)、俄罗斯(KHV)、英国(NTT)、澳门(CTM)等线路可选
 - 提供昂贵的 IPLC，为稳定性需求较高的用户提供了支持，在良好网络环境下可为游戏加速
 
 <details>
@@ -180,7 +180,7 @@ permalink: /page/bgfw/
 
 ### （二）简介
 
-**CMYNetwork 红莓网络** 隶属于`CMYNetwork Technology Co., Ltd`，注册于摩纳哥公国，是一家我最近发现一家宝藏机场。除入门套餐外采用全内网中转节点；入门套餐采用 Trojan 新协议，保证稳定性；更有回国专用套餐。经测速和日常使用，可以说是稳定高速，高峰期速度也能拉满。提供网页在线客服和工单，服务还不错。持续使用体验仍在继续跟踪。
+**CMYNetwork 红莓网络** 隶属于`CMYNetwork Technology Co., Ltd`，注册于摩纳哥公国，是一家我最近发现一家宝藏机场。除入门套餐外采用全内网中转节点；入门套餐采用 Trojan 新协议，保证稳定性。经测速和日常使用，可以说是稳定高速，高峰期速度也能拉满。提供网页在线客服和工单，服务还不错。持续使用体验仍在继续跟踪。
 
 **套餐分级定制**
 
@@ -218,7 +218,7 @@ permalink: /page/bgfw/
 
 CMYNetwork 提供三套服务，分别为身在 国内、 国外以及 企业的用户设计，请根据说明开通您需要的服务。购买套餐后，可以在页面顶栏的“客户端下载”内找到使用教程。
 
-#### 回国服务(在国外用 - 解除版权限制)
+<!-- #### 回国服务(在国外用 - 解除版权限制)
 
 注意！此套餐仅限人在国外用户使用！！
 
@@ -238,7 +238,7 @@ CMYNetwork 提供三套服务，分别为身在 国内、 国外以及 企业的
 <tr>
   <td>412元/365天</td>
 </tr>
-</table>
+</table> -->
 
 #### 云游服务(在国内用 - 加速国际网络)
 
