@@ -20,11 +20,11 @@ permalink: /page/speed-test-collection/
 
 **SSR 线路测速**（建议使用）
 
-![SSR线路](https://img.iszy.xyz/20210217210630.png)
+![SSR线路](https://img.iszy.xyz/20210401-073131.png)
 
 **V2ray 线路测速**
 
-![V2ray线路](https://img.iszy.xyz/20210217212647.png)
+![V2ray线路](https://img.iszy.xyz/20210401-091815.png)
 
 ## CMYNetwork 红莓网络
 
