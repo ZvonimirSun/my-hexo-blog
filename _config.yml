@@ -9,12 +9,11 @@ description: 生活吐槽 & 学习记录
 keywords: 随遇而安, Dirge, iszy
 author: Dirge
 language: zh-CN
-timezone: ""
+timezone: ''
 
 # URL
-## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: https://www.iszy.cc
-root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -39,7 +38,7 @@ titlecase: false # Transform title into titlecase
 external_link:
   enable: true # Open external links in new tab
   field: site # Apply to the whole site
-  exclude: ""
+  exclude: ''
 filename_case: 0
 render_drafts: false
 post_asset_folder: false
@@ -49,21 +48,21 @@ highlight:
   enable: true
   line_number: true
   auto_detect: false
-  tab_replace: ""
+  tab_replace: ''
   wrap: true
   hljs: false
 prismjs:
   enable: false
   preprocess: true
   line_number: true
-  tab_replace: ""
+  tab_replace: ''
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
-  path: ""
+  path: ''
   per_page: 10
   order_by: -date
 
@@ -83,7 +82,7 @@ meta_generator: true
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
 ## updated_option supports 'mtime', 'date', 'empty'
-updated_option: "date"
+updated_option: 'mtime'
 
 # Pagination
 ## Set per_page to 0 to disable pagination
@@ -102,11 +101,9 @@ ignore:
 theme: next
 
 # Deployment
-## Docs: https://hexo.io/docs/deployment.html
+## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: git
-  repo: git@github.com:ZvonimirSun/my-hexo-blog.git
-  branch: master
+  type: ''
 
 symbols_count_time:
   symbols: true
@@ -132,26 +129,3 @@ sitemap:
   rel: false
   tags: true
   categories: true
-
-# hexo-neat
-# 博文压缩
-neat_enable: true
-# 压缩html
-neat_html:
-  enable: true
-  exclude:
-# 压缩css
-neat_css:
-  enable: true
-  exclude:
-    - "**/*.min.css"
-# 压缩js
-neat_js:
-  enable: true
-  mangle: true
-  output:
-  compress:
-  exclude:
-    - "**/*.min.js"
-    - "**/jquery.fancybox.pack.js"
-    - "**/index.js"
