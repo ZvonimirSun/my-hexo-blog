@@ -1,5 +1,7 @@
 ---
 title: 日记
+comments: false
+sitemap: false
 exturl: false
 ---
 
