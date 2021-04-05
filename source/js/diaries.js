@@ -1,7 +1,11 @@
-$(document).on("click", ".diary-content", function (e) {
-  if (e.hasClass("show")) {
-    e.removeClass("show");
-  } else {
-    e.addClass("show");
-  }
-});
+document.getElementsByClassName("diary-content").addEventListener(
+  "click",
+  function (e) {
+    if (e.classList.includes("show")) {
+      e.classList.remove("show");
+    } else {
+      e.classList.add("show");
+    }
+  },
+  false
+);
