@@ -9,7 +9,14 @@ exturl: false
     {%- for diary in site.data.diaries %}
     <div class="diary show" onclick="showDetail(this)">
         <div class="diary-time">{{ diary.time.toLocaleString() }}</div>
-        <div class="diary-content" title="{{ diary.content }}"><div class="diary-content-wrapper">{{ diary.content }}</div></div>
+        {%- set ps = diary.content.split('\n') %}
+        <div class="diary-content">
+            <div class="diary-content-wrapper">
+            {%- for s in ps %}
+            <p>{{ p }}</p>
+            {%- endfor %}
+            </div>
+        </div>
     </div>
     {%- endfor %}
     <i></i><i></i><i></i><i></i><i></i>
