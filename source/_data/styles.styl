@@ -162,13 +162,17 @@
 
 		.diary-content {
 			padding: 8px;
-			overflow: hidden;
 
 			&.show {
-				height: 80px;
-				display: -webkit-box;
-				-webkit-box-orient: vertical;
-				-webkit-line-clamp: 3;
+				.diary-content-wrapper {
+					height: 84px;
+					font-size: 20px;
+					line-height: 28px;
+					overflow: hidden;
+					display: -webkit-box;
+					-webkit-box-orient: vertical;
+					-webkit-line-clamp: 3;
+				}
 			}
 		}
 	}
