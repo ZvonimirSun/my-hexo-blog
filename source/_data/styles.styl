@@ -143,8 +143,9 @@
 #diaries {
 	display: flex;
 	flex-flow: row wrap;
-	justify-content: space-between;
+	justify-content: flex-start;
 	align-items: flex-start;
+	margin-right: -1rem;
 
 	.diary {
 		font-size: 1.1em;
@@ -152,7 +153,23 @@
 		border: 1px solid #666666;
 		transition-duration: 0.15s;
 		margin-bottom: 1rem;
-		flex-basis: 400px;
+		margin-right: 1rem;
+
+		@media screen and (min-width: 1200px) {
+			width: 25%;
+		}
+
+		@media screen and (min-width: 992px) {
+			width: 30%;
+		}
+
+		@media screen and (min-width: 768px) {
+			width: 50%;
+		}
+
+		@media screen and (min-width: 480px) {
+			width: 100%;
+		}
 
 		&.show {
 			.diary-content-wrapper {
