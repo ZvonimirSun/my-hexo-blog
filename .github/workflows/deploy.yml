@@ -24,7 +24,7 @@ jobs:
       - name: Install dependencies 🔧
         run: yarn install --frozen-lockfile
       - name: Build app 🔧
-        run: hexo clean && hexo g
+        run: hexo g
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.0
         with:
