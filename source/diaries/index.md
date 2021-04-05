@@ -12,6 +12,7 @@ exturl: false
         <div class="diary-content" title="{{ diary.content }}"><div class="diary-content-wrapper">{{ diary.content }}</div></div>
     </div>
     {%- endfor %}
+    <i></i><i></i><i></i><i></i><i></i>
 </div>
 
 <script src="/js/diaries.js"></script>
