@@ -12,6 +12,6 @@ for (const dom of tmp) {
         }
       }
     },
-    false
+    true
   );
 }
