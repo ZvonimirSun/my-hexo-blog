@@ -13,3 +13,5 @@ exturl: false
     </div>
     {%- endfor %}
 </div>
+
+<script src="/js/diaries.js"></script>
