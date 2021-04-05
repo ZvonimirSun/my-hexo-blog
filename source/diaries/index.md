@@ -7,9 +7,9 @@ exturl: false
 
 <div id="diaries">
     {%- for diary in site.data.diaries %}
-    <div class="diary">
+    <div class="diary show">
         <div class="diary-time">{{ diary.time.toLocaleString() }}</div>
-        <div class="diary-content show" title="{{ diary.content }}">{{ diary.content }}</div>
+        <div class="diary-content" title="{{ diary.content }}"><div class="diary-content-wrapper" onclick="">{{ diary.content }}</div></div>
     </div>
     {%- endfor %}
 </div>

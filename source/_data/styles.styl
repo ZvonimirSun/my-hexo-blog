@@ -144,6 +144,7 @@
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-between;
+	align-items: flex-start;
 
 	.diary {
 		font-size: 1.1em;
@@ -152,6 +153,18 @@
 		transition-duration: 0.15s;
 		margin-bottom: 1rem;
 		flex-basis: 400px;
+
+		&.show {
+			flex-basis: unset;
+
+			.diary-content-wrapper {
+				height: 84px;
+				overflow: hidden;
+				display: -webkit-box;
+				-webkit-box-orient: vertical;
+				-webkit-line-clamp: 3;
+			}
+		}
 
 		.diary-time {
 			padding: 0px 8px;
@@ -162,16 +175,8 @@
 
 		.diary-content {
 			padding: 8px;
-
-			&.show {
-				height: 100px;
-				font-size: 20px;
-				line-height: 28px;
-				overflow: hidden;
-				display: -webkit-box;
-				-webkit-box-orient: vertical;
-				-webkit-line-clamp: 3;
-			}
+			font-size: 20px;
+			line-height: 28px;
 		}
 	}
 }
