@@ -12,7 +12,7 @@ exturl: false
         {%- set ps = diary.content.split('\n') %}
         <div class="diary-content">
             <div class="diary-content-wrapper">
-            {%- for s in ps %}
+            {%- for p in ps %}
             <p>{{ p }}</p>
             {%- endfor %}
             </div>
