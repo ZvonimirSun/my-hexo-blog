@@ -5,9 +5,9 @@ sitemap: false
 exturl: false
 ---
 
-<div id="diaries" onclick="showDetail(this)">
+<div id="diaries">
     {%- for diary in site.data.diaries %}
-    <div class="diary show">
+    <div class="diary show" onclick="showDetail(this)">
         <div class="diary-time">{{ diary.time.toLocaleString() }}</div>
         <div class="diary-content" title="{{ diary.content }}"><div class="diary-content-wrapper">{{ diary.content }}</div></div>
     </div>

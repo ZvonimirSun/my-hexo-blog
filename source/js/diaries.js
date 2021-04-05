@@ -1,8 +1,7 @@
 function showDetail(e) {
-  let d = e.target;
-  if (d.classList.contains("show")) {
-    d.classList.remove("show");
+  if (e.classList.contains("show")) {
+    e.classList.remove("show");
   } else {
-    d.classList.add("show");
+    e.classList.add("show");
   }
 }
