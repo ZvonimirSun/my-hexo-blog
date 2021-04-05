@@ -5,11 +5,11 @@ sitemap: false
 exturl: false
 ---
 
-<div id="diaries">
+<div id="diaries" onclick="showDetail">
     {%- for diary in site.data.diaries %}
     <div class="diary show">
         <div class="diary-time">{{ diary.time.toLocaleString() }}</div>
-        <div class="diary-content" title="{{ diary.content }}"><div class="diary-content-wrapper" onclick="">{{ diary.content }}</div></div>
+        <div class="diary-content" title="{{ diary.content }}"><div class="diary-content-wrapper">{{ diary.content }}</div></div>
     </div>
     {%- endfor %}
 </div>
