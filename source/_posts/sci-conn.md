@@ -1088,7 +1088,8 @@ V2Club(旧蓝岸)，一家专门提供 v2ray 代理服务的服务商。或许�
 - 客户端教程和下载
   - 进入[帮助中心](https://shuttle.onl/index.php?rp=/knowledgebase)，说明比较完善。
 - 官方联系
-  - 暂时好像只看到工单系统一种方式
+  - 在官网可以使用工单、在线客服两种方式
+  - 还提供了官方 tg 群组，可以随时交流，[点击进入](https://t.me/ShuttleGroup)
 
 ---
 

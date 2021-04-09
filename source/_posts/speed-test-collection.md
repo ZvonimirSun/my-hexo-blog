@@ -80,4 +80,4 @@ permalink: /page/speed-test-collection/
 
 [官网传送门](https://url.iszy.xyz/shuttle)
 
-![](https://img.iszy.xyz/20210409210149.png)
+![](https://img.iszy.xyz/20210409220158.png)
