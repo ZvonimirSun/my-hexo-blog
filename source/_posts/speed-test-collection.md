@@ -62,7 +62,7 @@ permalink: /page/speed-test-collection/
 
 本地 300M 电信测速
 
-![](https://img.iszy.cc/20210226212647.png)
+![](https://img.iszy.xyz/20210226212647.png)
 
 ## V2Club
 
@@ -74,7 +74,7 @@ permalink: /page/speed-test-collection/
 
 [官网传送门](https://url.iszy.xyz/dinastio)
 
-![](https://img.iszy.cc/20210308200608.png)
+![](https://img.iszy.xyz/20210308200608.png)
 
 ## Shuttle
 
