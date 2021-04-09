@@ -1,5 +1,5 @@
 ---
-title: 优质SS/SSR/Trojan/V2Ray机场推荐
+title: 优质SS/SSR/Trojan/V2Ray机场推荐（优惠整理）
 date: 2019-01-03 03:11:50
 updated: 2021-04-09 10:00:00
 categories:
@@ -1035,6 +1035,16 @@ V2Club(旧蓝岸)，一家专门提供 v2ray 代理服务的服务商。或许�
 [测速](https://www.iszy.cc/page/speed-test-collection/#Shuttle)
 
 ### （一）优惠
+
+> 本站专属优惠
+
+使用本站专属优惠码，享 **85 折**优惠！
+
+优惠码: `iszy`
+
+(新购续费均可使用 只能用于季付及以上套餐)
+
+> 官方优惠
 
 1. 按季度、年度等购买套餐有更多优惠
 
