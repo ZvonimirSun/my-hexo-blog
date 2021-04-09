@@ -18,18 +18,19 @@ permalink: /page/bgfw/
 
 ## 一、目录
 
-| 机场名称（点击了解更多）                        | 类别                  | 关键词                       | 操作                                          |
-| ----------------------------------------------- | --------------------- | ---------------------------- | --------------------------------------------- |
-| [心阶云](#二、心阶云)【官方长期优惠】           | SSR(隧道、专线)/V2Ray | 性价比高，超多线路，稳定老站 | [官网传送门](https://url.iszy.xyz/xinjie)     |
-| [CMYNetwork 红莓网络](#三、CMYNetwork-红莓网络) | SSR(专线)/Trojan      | 稳定平价                     | [官网传送门](https://url.iszy.xyz/cmynetwork) |
-| [MEET](#四、MEET)                               | SSR                   | 专注按量付费，高速稳定       | [官网传送门](https://url.iszy.xyz/fspeed)     |
-| [BoomCloud](#五、BoomCloud)【官方长期优惠】     | V2ray/SSR/SS          | 多年老站，附赠丰富           | [官网传送门](https://url.iszy.xyz/boomcloud)  |
-| [DuangCloud](#六、DuangCloud)【专属优惠】       | SS(全专线)            | 平价灵活                     | [官网传送门](https://url.iszy.xyz/duangcloud) |
-| [ByWave](#七、ByWave)                           | V2Ray                 | 高质高端，服务稳定           | [官网传送门](https://url.iszy.xyz/bywave)     |
-| [Blinkload](#八、Blinkload)                     | SS(全专线)            | 稳定全能                     | [官网传送门](https://url.iszy.xyz/blinkload)  |
-| [Electry](#九、Electry)                         | V2Ray(专线、中继)     | 线路大佬，高速稳定           | [官网传送门](https://url.iszy.xyz/electry)    |
-| [V2Club](#十、V2Club)                           | SS/V2ray(全专线)      | 稳定坚挺，多年老站           | [官网传送门](https://url.iszy.xyz/lanan)      |
-| [皇朝网络](#十一、皇朝网络)                     | SS 隧道               | 性价比新站                   | [官网传送门](https://url.iszy.xyz/dinastio)   |
+| 机场名称（点击了解更多）                        | 类别                  | 关键词                         | 操作                                          |
+| ----------------------------------------------- | --------------------- | ------------------------------ | --------------------------------------------- |
+| [心阶云](#二、心阶云)【官方长期优惠】           | SSR(隧道、专线)/V2Ray | 性价比高，超多线路，稳定老站   | [官网传送门](https://url.iszy.xyz/xinjie)     |
+| [CMYNetwork 红莓网络](#三、CMYNetwork-红莓网络) | SSR(专线)/Trojan      | 稳定平价                       | [官网传送门](https://url.iszy.xyz/cmynetwork) |
+| [MEET](#四、MEET)                               | SSR                   | 专注按量付费，高速稳定         | [官网传送门](https://url.iszy.xyz/fspeed)     |
+| [BoomCloud](#五、BoomCloud)【官方长期优惠】     | V2ray/SSR/SS          | 多年老站，附赠丰富             | [官网传送门](https://url.iszy.xyz/boomcloud)  |
+| [DuangCloud](#六、DuangCloud)【专属优惠】       | SS(全专线)            | 平价灵活                       | [官网传送门](https://url.iszy.xyz/duangcloud) |
+| [ByWave](#七、ByWave)                           | V2Ray                 | 高质高端，服务稳定             | [官网传送门](https://url.iszy.xyz/bywave)     |
+| [Blinkload](#八、Blinkload)                     | SS(全专线)            | 稳定全能                       | [官网传送门](https://url.iszy.xyz/blinkload)  |
+| [Electry](#九、Electry)                         | V2Ray(专线、中继)     | 线路大佬，高速稳定             | [官网传送门](https://url.iszy.xyz/electry)    |
+| [V2Club](#十、V2Club)                           | SS/V2ray(全专线)      | 稳定坚挺，多年老站             | [官网传送门](https://url.iszy.xyz/lanan)      |
+| [皇朝网络](#十一、皇朝网络)                     | SS 隧道               | 性价比新站                     | [官网传送门](https://url.iszy.xyz/dinastio)   |
+| [Shuttle](#十二、Shuttle)【新】                 | V2ray                 | 平价新站，另含超多小众地区线路 | [官网传送门](https://url.iszy.xyz/shuttle)    |
 
 > 本页机场均在上次网络大波动中提供了稳定的服务，还会持续观察未来表现
 
@@ -37,12 +38,11 @@ permalink: /page/bgfw/
 
 更新动态:
 
-- 更新心阶云信息(2021.04.01)
+- 添加新站[Shuttle](#十二、Shuttle)(2021.04.09)
+- 更新[皇朝网络](#十一、皇朝网络)信息(2021.04.09)
+- 更新[心阶云](#二、心阶云)信息(2021.04.01)
 - 更新优惠(2021.02.25)
 - 更新[心阶云](#二、心阶云)测速(2021.02.17)
-- 更新新年特惠
-- 更新[DuangCloud](#九、DuangCloud)描述和优惠(2021.01.26)
-- 更新[ByWave](#六、ByWave)优惠(2021.01.14)
 
 ## 二、心阶云
 
@@ -102,9 +102,6 @@ permalink: /page/bgfw/
 - 全球线路全面，香港（HK,HKBN,CN2）、日本(IIJ，NTT)，台湾（HiNet，TFN）、新加坡、美国（GIA,NCP）、韩国(AWS)、俄罗斯(KHV)、英国(NTT)、澳门(CTM)等线路可选
 - 提供昂贵的 IPLC，为稳定性需求较高的用户提供了支持，在良好网络环境下可为游戏加速
 
-<details>
-  <summary><strong>展开查看更多详情</strong></summary>
-
 ### （三）套餐
 
 心阶云提供了多样种类的套餐分类，具体可分为：
@@ -146,8 +143,6 @@ permalink: /page/bgfw/
 - 售后公告请关注 [TG 群](https://t.me/joinchat/HrJ6BFcUPO-ClrBUroqJUg)，建议加入获取最新消息。
 - 若有充值、使用问题，请联系 [TG 群管理员](https://t.me/foreverforfire)，**请勿通过工单系统提交问题**。
 
-</details>
-
 ## 三、CMYNetwork 红莓网络
 
 [官网传送门](https://url.iszy.xyz/cmynetwork)
@@ -163,10 +158,6 @@ permalink: /page/bgfw/
 邀请码: `iszy`
 
 ![](https://img.iszy.xyz/20200317212833.png)
-
-> 新年优惠
-
-在 **02 月 02 日到 03 月 02 日**期间，购买任意季/半年/年费套餐，可享受高额折扣。若购买年费套餐，可在折扣的基础上加送 1 个月套餐时间！同时邀请小伙伴拼团，享受折上折中折哦。
 
 ### （二）简介
 
@@ -200,9 +191,6 @@ permalink: /page/bgfw/
 **注册可试用**
 
 - 注册并绑定手机号，赠送 3 天免费试用(非强制)
-
-<details>
-  <summary><strong>展开查看更多详情</strong></summary>
 
 ### （三）套餐
 
@@ -321,8 +309,6 @@ CMYNetwork 提供三套服务，分别为身在 国内、 国外以及 企业的
 - 可在官网右下角与客服联系(推荐)或提交工单
 - [全平台各客户端下载、教程与进阶技巧](https://caomei.wiki/)
 
-</details>
-
 ## 四、MEET
 
 [官网传送门](https://url.iszy.xyz/fspeed)
@@ -338,9 +324,6 @@ CMYNetwork 提供三套服务，分别为身在 国内、 国外以及 企业的
 - 节点高速稳定
 - 不限制设备数，但仅限个人使用，禁止滥用
 
-<details>
-  <summary><strong>展开查看更多详情</strong></summary>
-
 ### （二）套餐
 
 > 套餐不能叠加使用，请根据自己的使用情况进行选择。
@@ -351,8 +334,6 @@ CMYNetwork 提供三套服务，分别为身在 国内、 国外以及 企业的
 | 半年套餐     | 180 天 | 300G | 109 元 |
 | 季度套餐     | 90 天  | 100G | 49 元  |
 | 10G 流量月包 | 30 天  | 10G  | 5 元   |
-
-</details>
 
 ## 五、BoomCloud
 
@@ -395,9 +376,6 @@ CMYNetwork 提供三套服务，分别为身在 国内、 国外以及 企业的
    - Boomcloud 提供的终生 Office 365 订阅（在 Boomcloud 产品有效期内）
    - 包含 OneDrive for Business 和桌面版 Office（最多用于 5 台设备）
    - 需要注意的是，其提供的是独立账号，而非把服务提供到个人账号，属团体订阅
-
-<details>
-  <summary><strong>展开查看更多详情</strong></summary>
 
 ### （三）套餐
 
@@ -578,8 +556,6 @@ CMYNetwork 提供三套服务，分别为身在 国内、 国外以及 企业的
 
 - BoomCloud 售后服务单仅在网站个人中心后台的服务单回复，邮件仅作为提醒作用，直接回复无效。
 
-</details>
-
 ## 六、DuangCloud
 
 [官网传送门](https://url.iszy.xyz/duangcloud)
@@ -607,9 +583,6 @@ CMYNetwork 提供三套服务，分别为身在 国内、 国外以及 企业的
 - 无设备数量限制，可多人使用
 - 支持支付宝/微信支付
 
-<details>
-  <summary><strong>展开查看更多详情</strong></summary>
-
 ### （三）套餐
 
 可选半年、全年缴费周期。注意，一次性无时间限制 Light 套餐无法叠加无法共存。
@@ -629,8 +602,6 @@ CMYNetwork 提供三套服务，分别为身在 国内、 国外以及 企业的
 - 官方联系方式，有问题可以联系
   - 工单方式
   - tg 群：[DuangCloud 客户群](https://t.me/duangcloud)
-
-</details>
 
 ## 七、ByWave
 
@@ -669,9 +640,6 @@ CMYNetwork 提供三套服务，分别为身在 国内、 国外以及 企业的
 
 > 内网中转线路及 IPLC 专线成本极高，但质量极佳，在抵抗网络冲击和稳定性方面卓有成效。
 
-<details>
-  <summary><strong>展开查看更多详情</strong></summary>
-
 ### （三）套餐
 
 以下套餐价格均为**折扣前价格**，两种套餐中包含线路完全相同，仅付费方式不同。专线套餐，将每月重置流量；按量计费版不会重置流量，且流量(套餐)不会过期。
@@ -708,8 +676,6 @@ CMYNetwork 提供三套服务，分别为身在 国内、 国外以及 企业的
   - 如果时间准确无法使用的话请检查浏览器是否有 SwitchOmega 或者代理相关的插件，如果有的话请先关闭这些插件。
   - 如果还是无法使用的话，请在连接后截图客户端中的日志界面发送到在线客服。
 - 建议采用官网在线客服的方式解决问题
-
-</details>
 
 ## 八、Blinkload
 
@@ -777,9 +743,6 @@ CMYNetwork 提供三套服务，分别为身在 国内、 国外以及 企业的
 **拼团功能**
 
 充分考虑到用户与家人同事之间的关联性，特别设计了极其实惠的拼团功能，最高和多位朋友一起拼团购买同套餐，可享受每人 8 折优惠（不可与优惠码同享）。
-
-<details>
-  <summary><strong>展开查看更多详情</strong></summary>
 
 ### （三）套餐
 
@@ -909,8 +872,6 @@ CMYNetwork 提供三套服务，分别为身在 国内、 国外以及 企业的
 - 售前售后[Telegram 官方交流群](https://t.me/thessrgroup)(Telegram 需挂代理)
 - 若有任何问题可联系官网右下角的**网页客服(推荐)**或**Telegram 管理员(推荐)**或发送工单。
 
-</details>
-
 ## 九、Electry
 
 [官网传送门](https://url.iszy.xyz/electry)
@@ -930,9 +891,6 @@ CMYNetwork 提供三套服务，分别为身在 国内、 国外以及 企业的
 - 支付支持支付宝/微信/信用卡
 - 全部线路流量消耗均为正常 1 倍率，无高倍率套路
 
-<details>
-  <summary><strong>展开查看更多详情</strong></summary>
-
 ### （二）套餐
 
 所有套餐线路是一样的，均为 IEPL & CN2 中继线路，只有流量和速率的区别。
@@ -944,8 +902,6 @@ CMYNetwork 提供三套服务，分别为身在 国内、 国外以及 企业的
 | Standard Plan | 588/年        | 400GB/月  | 4        | 150Mbps  |
 | Advanced Plan | 788/年        | 800GB/月  | 5        | 200Mbps  |
 | Premium Plan  | 1288/年       | 1000GB/月 | 5        | 不限速   |
-
-</details>
 
 ## 十、V2Club
 
@@ -983,9 +939,6 @@ V2Club(旧蓝岸)，一家专门提供 v2ray 代理服务的服务商。或许�
 - IEPL 无审查 + ss 协议，提供更广泛的支持
 - 工单系统，有问题可以及时得到解决
 - 支持支付宝支付
-
-<details>
-  <summary><strong>展开查看更多详情</strong></summary>
 
 ### （二）套餐
 
@@ -1046,8 +999,6 @@ V2Club(旧蓝岸)，一家专门提供 v2ray 代理服务的服务商。或许�
   - 网站提供在线咨询服务
   - [telegram 官方群组](https://t.me/niuniandaji)
 
-</details>
-
 ## 十一、皇朝网络
 
 [官网传送门](https://url.iszy.xyz/dinastio)
@@ -1059,9 +1010,6 @@ V2Club(旧蓝岸)，一家专门提供 v2ray 代理服务的服务商。或许�
 ### （一）简介
 
 这是一家比较新的 SS 机场，在 clash 客户端的加持下，简单易用效果好。经过测试，线路体验不错，也有部分解锁流媒体的线路，足够日常使用了。定价较为激进，非常适合价格敏感型用户使用，属于买不了吃亏，买不了上当的类型。
-
-<details>
-  <summary><strong>展开查看更多详情</strong></summary>
 
 ### （二）套餐
 
@@ -1080,7 +1028,57 @@ V2Club(旧蓝岸)，一家专门提供 v2ray 代理服务的服务商。或许�
 - 官方联系
   - 暂时好像只看到工单系统一种方式
 
-</details>
+## 十二、Shuttle
+
+[官网传送门](https://url.iszy.xyz/shuttle)
+
+[测速](https://www.iszy.cc/page/speed-test-collection/#Shuttle)
+
+### （一）优惠
+
+1. 按季度、年度等购买套餐有更多优惠
+
+2. 充值优惠
+
+   - 充 100 到账 110
+   - 充 200 到账 230
+   - 充 300 到账 350
+   - 充 500 到账 600
+   - 充 1000 到账 1200
+
+### （二）简介
+
+这是最近找到的一家 V2ray 机场，价格合适，流量给的也不少，提供 BGP 中转线路和两倍率的 IPLC 专线线路。经过最近一段时间的使用，可以说是非常稳定，速度给力，主流客户端都能够支持的比较好，可以推荐一下。
+
+另外，我发现不少用户其实有小众国家线路的需求，因为使用人数不多，大多数机场一般不提供这些服务。这家机场应用户需求，提供了不少小众国家线路，有此类需求的用户可以考虑一下。
+
+- 线路上，所有节点都提供了一条 BGP 中转和一条两倍率的 IPLC 线路。
+- 除了用户集中的香港有三台服务器节点，也就是六条线路外，其他地区均只有一台服务器节点，也就是两条线路，不过速度上经过测试绝对满足需求。
+- 地区上，除香港外的地区有，美国、台湾、日本、韩国、新加坡、印度、菲律宾、加拿大、阿根廷、英国、法国、德国、荷兰、澳大利亚、俄罗斯、土耳其、埃及
+
+使用人数很少的小众地区节点性能不会特别高，有 BGP 中转和 IPLC 专线加持，我觉得应当是够用的，大家可以参考参考[测速](https://www.iszy.cc/page/speed-test-collection/#Shuttle)。
+
+### （三）套餐
+
+> 套餐间线路没有区别，请按需选购。
+> 按季度、年度等购买套餐有更多优惠哦。
+
+| 订阅          | 流量        | 价格       |
+| ------------- | ----------- | ---------- |
+| **Special⭐** | 120G/不限时 | 50 元      |
+| Trial         | 50G/月      | 40 元/季度 |
+| **Nano⭐**    | 200G/月     | 20 元/月   |
+| Micro         | 360G/月     | 40 元/月   |
+| Small         | 520G/月     | 60 元/月   |
+| Medium        | 1000G/月    | 120 元/月  |
+| Large         | 1640G/月    | 200 元/月  |
+
+### （四）其他说明
+
+- 客户端教程和下载
+  - 进入[帮助中心](https://shuttle.onl/index.php?rp=/knowledgebase)，说明比较完善。
+- 官方联系
+  - 暂时好像只看到工单系统一种方式
 
 ---
 
