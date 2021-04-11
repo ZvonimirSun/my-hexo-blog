@@ -1,5 +1,5 @@
 ---
-title: 优质SS/SSR/Trojan/V2Ray机场推荐（优惠整理）
+title: 优质SS/SSR/Trojan/V2Ray机场推荐索引及优惠整理
 date: 2019-01-03 03:11:50
 updated: 2021-04-09 10:00:00
 categories:
@@ -20,7 +20,7 @@ permalink: /page/bgfw/
 
 | 机场名称（点击了解更多）                        | 类别                  | 关键词                         | 操作                                          |
 | ----------------------------------------------- | --------------------- | ------------------------------ | --------------------------------------------- |
-| [心阶云](/page/xinjiecloud/)【官方长期优惠】    | SSR(隧道、专线)/V2Ray | 性价比高，超多线路，稳定老站   | [官网传送门](https://url.iszy.xyz/xinjie)     |
+| [心阶云 ⭐](/page/xinjiecloud/)【官方长期优惠】 | SSR(隧道、专线)/V2Ray | 性价比高，超多线路，稳定老站   | [官网传送门](https://url.iszy.xyz/xinjie)     |
 | [CMYNetwork 红莓网络](#三、CMYNetwork-红莓网络) | SSR(专线)/Trojan      | 稳定平价                       | [官网传送门](https://url.iszy.xyz/cmynetwork) |
 | [MEET](#四、MEET)                               | SSR                   | 专注按量付费，高速稳定         | [官网传送门](https://url.iszy.xyz/fspeed)     |
 | [BoomCloud](#五、BoomCloud)【官方长期优惠】     | V2ray/SSR/SS          | 多年老站，附赠丰富             | [官网传送门](https://url.iszy.xyz/boomcloud)  |
@@ -50,7 +50,7 @@ permalink: /page/bgfw/
 
 邀请码: `iszy`
 
-[测速](https://www.iszy.cc/page/speed-test-collection/#心阶云)
+[⭐⭐ 测速 ⭐⭐](https://www.iszy.cc/page/speed-test-collection/#心阶云)
 
 ### （一）优惠
 
@@ -62,39 +62,11 @@ permalink: /page/bgfw/
 
 ### （二）简介
 
-**心阶云**是一家长期走中高端路线的 **Shadowsocksr(SSR)** 机场，已经稳定运行多年。实际对比下来，它的性价比还是相当高的，提供的流量十分的充足。现阶段经过升级改造已加入**大量优质 V2ray 线路**，全站 SSR 线路均已加入**隧道中转**，国内采用 **6Gbsp 独享带宽**入口。用了很久，哪怕特殊时期也不必担心断线的问题，体验不错。
+**心阶云**是一家长期走中高端路线的 **ShadowsocksR(SSR)** 机场，也提供部分 V2Ray 线路，已经稳定运行多年。实际对比下来，它的性价比还是相当高的，线路又多，提供的流量也十分充足，主要推荐的套餐充分考虑了当前主流用户能够接受的价位，可以说是无可挑剔。现阶段包含大量优质 V2Ray 线路和更多的 SSR 线路，**Lv.2** 节点采用 **SSR 隧道加密**和 V2ray 技术，配合国内 **6Gbps** 机器和负载均衡技术，保证全时段稳定性。用了很久，稳定通过了“多次网络波动”时期，体验极佳，可以放心使用。
 
-**封闭邀请机制**
-
-心阶云需要邀请码才能注册成功，这样的注册机制一定程度确保了服务的稳定性。
-
-如果需要邀请码，可以使用我的邀请码: `iszy`
-
-也可以直接点击我的[邀请链接](https://url.iszy.xyz/xinjie)，进入注册。
-
-**定期折扣优惠**
-
-通过本站[链接](https://url.iszy.xyz/xinjie)进入心阶云，购买时使用优惠码，可享受折扣优惠，优惠码不可叠加使用。
-
-5%OFF 折扣码: `AprilCode`，￥ 150 及以上套餐可用。
-
-**实时服务监控**
-
-在心阶的面板中有提供**节点详情**，会展示各种节点信息，方便用户选择空闲优质的节点。你可以轻松地查看到目前所有线路的状况，包括节点已使用流量总量(所有用户)、流量倍率、目前用户量等。当然你也可以轻松的在首页查看到自己套餐流量的使用状况。
-
-**每日签到系统**
-
-在心阶的面板中，每天可以签到一次，以获得一定量的流量，不会很多，但是在流量用尽的情况下能够维持必要的轻量使用。
-
-**特供打机神线**
-
-所谓“打机神线”其实是提供与全球多个海外游戏服务器提供连结的线路，确保国际服游戏玩家在进行游戏时候能获得最佳的低延迟网络质量。也就是说，心阶云提供了降低游戏延迟的国际网络线路，而且据我查看一共提供了两条(香港线路)，足以够用。当然，如果有游戏需求，个人推荐最好还是使用游戏加速器效果更佳，毕竟专线专用。
-
-**总结**
-
-- V2ray & SSR 隧道中转
+- SSR 隧道中转 & V2ray
 - 采用封闭邀请，精选客户，稳定可靠安全
-- 定期发放折扣，部分套餐低至 9.5 元/月，具有极高性价比（可提供企业定制服务）
+- 定期发放折扣，部分套餐月均低至 9 元，具有极高性价比（可提供企业定制服务）
 - 全面解锁 Netflix,DMM,HULU,TVB 等各类流媒体，YouTube4K-8K 流畅
 - 支持 Windows/Mac/iOS/Android/ 路由器，支持多设备同时使用
 - 充值采用支付宝 Alipay，支付安全便捷，使用教程简单易用
@@ -102,17 +74,9 @@ permalink: /page/bgfw/
 - 全球线路全面，香港（HK,HKBN,CN2）、日本(IIJ，NTT)，台湾（HiNet，TFN）、新加坡、美国（GIA,NCP）、韩国(AWS)、俄罗斯(KHV)、英国(NTT)、澳门(CTM)等线路可选
 - 提供昂贵的 IPLC，为稳定性需求较高的用户提供了支持，在良好网络环境下可为游戏加速
 
+[⭐ 更多详细介绍 ⭐](https://www.iszy.cc/page/xinjiecloud/)
+
 ### （三）套餐
-
-心阶云提供了多样种类的套餐分类，具体可分为：
-
-- 按月重置流量的月费套餐/半年套餐/年费套餐
-- 每月重置流量的无限流量套餐，其实上是 6666G，跟无限流量其实区别不大啦
-- 不重置流量且有效期为一年的全年固定流量套餐
-- 还有专门针对企业或团队用户的企业定制套餐
-- 另提供了流量不足时救命的流量叠加包
-
-> 特别的，你可以购买全节点或者部分节点。对应的，全节点套餐赋予用户 2 级用户等级；而部分节点套餐只赋予用户 1 级用户等级。套餐过期后长期不续费或新购套餐的用户账号，用户等级会自动将为 0 级。
 
 **包年包月套餐**
 
@@ -132,22 +96,11 @@ permalink: /page/bgfw/
 | <strong>全年 2T 套餐【Lv.2/尊享】</strong>     | 2048G/360 天 | 375 元/360 天 | 2        | 年付     | 10         |
 | 全年畅享套餐【Lv.2/小团队】                    | 6666G/360 天 | 996 元/360 天 | 2        | 年付     | 20         |
 
-### （四）其他说明
-
-- 使用邀请码(`iszy`)注册后，在用户面板首页，你可以找到各平台的 ssr 和 V2Ray 客户端的下载链接及相关配置教程。
-  - 苹果平台比较特殊，没法提供下载，iOS 可能需要自行在美区苹果商城购买软件。
-- 还可以点击以下心阶全平台订阅教程链接进入，查看教程进行服务订阅。
-  - [心阶全平台订阅教程](https://mirrors.心阶.net/)
-- 订阅地址及节点信息请勿截图发到其他地方，请务必打码。
-- 由于众所周知的原因，官网域名会被迫更换，请务必记下用户首页上的多个域名，以免失联，或从本文中的链接访问。
-- 售后公告请关注 [TG 群](https://t.me/joinchat/HrJ6BFcUPO-ClrBUroqJUg)，建议加入获取最新消息。
-- 若有充值、使用问题，请联系 [TG 群管理员](https://t.me/foreverforfire)，**请勿通过工单系统提交问题**。
-
 ## 三、CMYNetwork 红莓网络
 
 [官网传送门](https://url.iszy.xyz/cmynetwork)
 
-[测速](https://www.iszy.cc/page/speed-test-collection/#CMYNetwork-红莓网络)
+[⭐⭐ 测速 ⭐⭐](https://www.iszy.cc/page/speed-test-collection/#CMYNetwork-红莓网络)
 
 ### （一）优惠
 
@@ -313,7 +266,7 @@ CMYNetwork 提供三套服务，分别为身在 国内、 国外以及 企业的
 
 [官网传送门](https://url.iszy.xyz/fspeed)
 
-[测速](https://www.iszy.cc/page/speed-test-collection/#MEET)
+[⭐⭐ 测速 ⭐⭐](https://www.iszy.cc/page/speed-test-collection/#MEET)
 
 ### （一）简介
 
@@ -560,7 +513,7 @@ CMYNetwork 提供三套服务，分别为身在 国内、 国外以及 企业的
 
 [官网传送门](https://url.iszy.xyz/duangcloud)
 
-[测速](https://www.iszy.cc/page/speed-test-collection/#DuangCloud)
+[⭐⭐ 测速 ⭐⭐](https://www.iszy.cc/page/speed-test-collection/#DuangCloud)
 
 ### （一）优惠
 
@@ -607,7 +560,7 @@ CMYNetwork 提供三套服务，分别为身在 国内、 国外以及 企业的
 
 [官网传送门](https://url.iszy.xyz/bywave)
 
-[测速](https://www.iszy.cc/page/speed-test-collection/#ByWave)
+[⭐⭐ 测速 ⭐⭐](https://www.iszy.cc/page/speed-test-collection/#ByWave)
 
 ### （一）优惠
 
@@ -681,7 +634,7 @@ CMYNetwork 提供三套服务，分别为身在 国内、 国外以及 企业的
 
 [官网传送门](https://url.iszy.xyz/blinkload)
 
-[测速](https://www.iszy.cc/page/speed-test-collection/#Blinkload)
+[⭐⭐ 测速 ⭐⭐](https://www.iszy.cc/page/speed-test-collection/#Blinkload)
 
 ### （一）优惠
 
@@ -876,7 +829,7 @@ CMYNetwork 提供三套服务，分别为身在 国内、 国外以及 企业的
 
 [官网传送门](https://url.iszy.xyz/electry)
 
-[测速](https://www.iszy.cc/page/speed-test-collection/#Electry)
+[⭐⭐ 测速 ⭐⭐](https://www.iszy.cc/page/speed-test-collection/#Electry)
 
 ### （一）简介
 
@@ -909,7 +862,7 @@ CMYNetwork 提供三套服务，分别为身在 国内、 国外以及 企业的
 
 邀请码：`EBtdO6hX`
 
-[测速](https://www.iszy.cc/page/speed-test-collection/#V2Club)
+[⭐⭐ 测速 ⭐⭐](https://www.iszy.cc/page/speed-test-collection/#V2Club)
 
 ### （一）简介
 
@@ -1005,7 +958,7 @@ V2Club(旧蓝岸)，一家专门提供 v2ray 代理服务的服务商。或许�
 
 邀请码：`vXd43WA0`
 
-[测速](https://www.iszy.cc/page/speed-test-collection/#皇朝网络)
+[⭐⭐ 测速 ⭐⭐](https://www.iszy.cc/page/speed-test-collection/#皇朝网络)
 
 ### （一）简介
 
@@ -1032,7 +985,7 @@ V2Club(旧蓝岸)，一家专门提供 v2ray 代理服务的服务商。或许�
 
 [官网传送门](https://url.iszy.xyz/shuttle)
 
-[测速](https://www.iszy.cc/page/speed-test-collection/#Shuttle)
+[⭐⭐ 测速 ⭐⭐](https://www.iszy.cc/page/speed-test-collection/#Shuttle)
 
 ### （一）优惠
 
@@ -1066,7 +1019,7 @@ V2Club(旧蓝岸)，一家专门提供 v2ray 代理服务的服务商。或许�
 - 除了用户集中的香港有三台服务器节点，也就是六条线路外，其他地区均只有一台服务器节点，也就是两条线路，不过速度上经过测试绝对满足需求。
 - 地区上，除香港外的地区有，美国、台湾、日本、韩国、新加坡、印度、菲律宾、加拿大、阿根廷、英国、法国、德国、荷兰、澳大利亚、俄罗斯、土耳其、埃及
 
-使用人数很少的小众地区节点性能不会特别高，有 BGP 中转和 IPLC 专线加持，我觉得应当是够用的，大家可以参考参考[测速](https://www.iszy.cc/page/speed-test-collection/#Shuttle)。
+使用人数很少的小众地区节点性能不会特别高，有 BGP 中转和 IPLC 专线加持，我觉得应当是够用的，大家可以参考参考[⭐⭐ 测速 ⭐⭐](https://www.iszy.cc/page/speed-test-collection/#Shuttle)。
 
 ### （三）套餐
 

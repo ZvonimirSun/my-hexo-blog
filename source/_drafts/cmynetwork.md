@@ -1,5 +1,5 @@
 ---
-title: 心阶云--性价比SSR/V2ray机场推荐
+title: CMY Network--高端专线SSR/Trojan机场推荐
 date: 2019-04-11 11:47:31
 updated: 2021-04-11 11:47:31
 categories:
@@ -7,12 +7,12 @@ categories:
 tags:
   - 科学上网
 keywords:
-permalink: /page/xinjiecloud/
+permalink: /page/cmynetwork/
 ---
 
 > **郑重声明**：本文所介绍产品主要是为了方便学习、科研以及外贸工作。请遵守中华人民共和国法律法规，切勿在任何地方发布分裂国家，激化民族矛盾的言论。
 
-本文来介绍一家性价比超高的 SSR/V2Ray 机场，名叫心阶云，可满足多种需求。经过长期使用，稳定性和速度上都很不错，推荐一下。
+本文来介绍一家高端专线 SSR/Trojan 机场，名叫 CMY Network，可满足多种需求。经过长期使用，稳定性和速度上都很不错，推荐一下。
 
 <!--more-->
 
