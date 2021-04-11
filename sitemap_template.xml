@@ -8,6 +8,10 @@
     {% elif post.date %}
     <lastmod>{{ post.date | formatDate }}</lastmod>
     {% endif %}
+    {% if post.permalink.includes("/page/") %}
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    {% endif %}
   </url>
   {% endfor %}
 
