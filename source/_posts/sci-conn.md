@@ -21,7 +21,7 @@ permalink: /page/bgfw/
 | 机场名称（点击了解更多）                        | 类别                  | 关键词                           | 操作                                          |
 | ----------------------------------------------- | --------------------- | -------------------------------- | --------------------------------------------- |
 | [心阶云 ⭐](/page/xinjiecloud/)【官方长期优惠】 | SSR(隧道、专线)/V2Ray | 性价比高，超多线路，稳定老站     | [官网传送门](https://url.iszy.xyz/xinjie)     |
-| [CMYNetwork 红莓网络](#三、CMYNetwork-红莓网络) | SSR(专线)/Trojan      | 稳定平价，超多专线，小众地区线路 | [官网传送门](https://url.iszy.xyz/cmynetwork) |
+| [CMYNetwork 红莓网络](/page/cmynetwork/)        | SSR(专线)/Trojan      | 稳定平价，超多专线，小众地区线路 | [官网传送门](https://url.iszy.xyz/cmynetwork) |
 | [MEET](#四、MEET)                               | SSR                   | 专注按量付费，高速稳定           | [官网传送门](https://url.iszy.xyz/fspeed)     |
 | [BoomCloud](#五、BoomCloud)【官方长期优惠】     | V2ray/SSR/SS          | 多年老站，附赠丰富               | [官网传送门](https://url.iszy.xyz/boomcloud)  |
 | [DuangCloud](#六、DuangCloud)【专属优惠】       | SS(全专线)            | 平价灵活                         | [官网传送门](https://url.iszy.xyz/duangcloud) |
