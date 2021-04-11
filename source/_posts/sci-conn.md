@@ -1,7 +1,7 @@
 ---
 title: 优质SS/SSR/Trojan/V2Ray机场推荐索引及优惠整理
 date: 2019-01-03 03:11:50
-updated: 2021-04-09 10:00:00
+updated: 2021-04-11 10:00:00
 categories:
   - 推广
 tags:
@@ -18,19 +18,19 @@ permalink: /page/bgfw/
 
 ## 一、目录
 
-| 机场名称（点击了解更多）                        | 类别                  | 关键词                         | 操作                                          |
-| ----------------------------------------------- | --------------------- | ------------------------------ | --------------------------------------------- |
-| [心阶云 ⭐](/page/xinjiecloud/)【官方长期优惠】 | SSR(隧道、专线)/V2Ray | 性价比高，超多线路，稳定老站   | [官网传送门](https://url.iszy.xyz/xinjie)     |
-| [CMYNetwork 红莓网络](#三、CMYNetwork-红莓网络) | SSR(专线)/Trojan      | 稳定平价                       | [官网传送门](https://url.iszy.xyz/cmynetwork) |
-| [MEET](#四、MEET)                               | SSR                   | 专注按量付费，高速稳定         | [官网传送门](https://url.iszy.xyz/fspeed)     |
-| [BoomCloud](#五、BoomCloud)【官方长期优惠】     | V2ray/SSR/SS          | 多年老站，附赠丰富             | [官网传送门](https://url.iszy.xyz/boomcloud)  |
-| [DuangCloud](#六、DuangCloud)【专属优惠】       | SS(全专线)            | 平价灵活                       | [官网传送门](https://url.iszy.xyz/duangcloud) |
-| [ByWave](#七、ByWave)                           | V2Ray                 | 高质高端，服务稳定             | [官网传送门](https://url.iszy.xyz/bywave)     |
-| [Blinkload](#八、Blinkload)                     | SS(全专线)            | 稳定全能                       | [官网传送门](https://url.iszy.xyz/blinkload)  |
-| [Electry](#九、Electry)                         | V2Ray(专线、中继)     | 线路大佬，高速稳定             | [官网传送门](https://url.iszy.xyz/electry)    |
-| [V2Club](#十、V2Club)                           | SS/V2ray(全专线)      | 稳定坚挺，多年老站             | [官网传送门](https://url.iszy.xyz/lanan)      |
-| [皇朝网络](#十一、皇朝网络)                     | SS 隧道               | 性价比新站                     | [官网传送门](https://url.iszy.xyz/dinastio)   |
-| [Shuttle](#十二、Shuttle)【新】                 | V2ray                 | 平价新站，另含超多小众地区线路 | [官网传送门](https://url.iszy.xyz/shuttle)    |
+| 机场名称（点击了解更多）                        | 类别                  | 关键词                           | 操作                                          |
+| ----------------------------------------------- | --------------------- | -------------------------------- | --------------------------------------------- |
+| [心阶云 ⭐](/page/xinjiecloud/)【官方长期优惠】 | SSR(隧道、专线)/V2Ray | 性价比高，超多线路，稳定老站     | [官网传送门](https://url.iszy.xyz/xinjie)     |
+| [CMYNetwork 红莓网络](#三、CMYNetwork-红莓网络) | SSR(专线)/Trojan      | 稳定平价，超多专线，小众地区线路 | [官网传送门](https://url.iszy.xyz/cmynetwork) |
+| [MEET](#四、MEET)                               | SSR                   | 专注按量付费，高速稳定           | [官网传送门](https://url.iszy.xyz/fspeed)     |
+| [BoomCloud](#五、BoomCloud)【官方长期优惠】     | V2ray/SSR/SS          | 多年老站，附赠丰富               | [官网传送门](https://url.iszy.xyz/boomcloud)  |
+| [DuangCloud](#六、DuangCloud)【专属优惠】       | SS(全专线)            | 平价灵活                         | [官网传送门](https://url.iszy.xyz/duangcloud) |
+| [ByWave](#七、ByWave)                           | V2Ray                 | 高质高端，服务稳定               | [官网传送门](https://url.iszy.xyz/bywave)     |
+| [Blinkload](#八、Blinkload)                     | SS(全专线)            | 稳定全能，超多专线               | [官网传送门](https://url.iszy.xyz/blinkload)  |
+| [Electry](#九、Electry)                         | V2Ray(专线、中继)     | 线路大佬，高速稳定               | [官网传送门](https://url.iszy.xyz/electry)    |
+| [V2Club](#十、V2Club)                           | SS/V2ray(全专线)      | 稳定坚挺，多年老站               | [官网传送门](https://url.iszy.xyz/lanan)      |
+| [皇朝网络](#十一、皇朝网络)                     | SS 隧道               | 性价比新站                       | [官网传送门](https://url.iszy.xyz/dinastio)   |
+| [Shuttle](#十二、Shuttle)【新】                 | V2ray                 | 平价新站，另含超多小众地区线路   | [官网传送门](https://url.iszy.xyz/shuttle)    |
 
 > 本页机场均在上次网络大波动中提供了稳定的服务，还会持续观察未来表现
 
@@ -51,6 +51,8 @@ permalink: /page/bgfw/
 邀请码: `iszy`
 
 [⭐⭐ 测速 ⭐⭐](https://www.iszy.cc/page/speed-test-collection/#心阶云)
+
+[⭐ 更多详细介绍 ⭐](https://www.iszy.cc/page/xinjiecloud/)
 
 ### （一）优惠
 
@@ -73,8 +75,6 @@ permalink: /page/bgfw/
 - 和多家 IDC 深入合作，如阿里云，GmoCloud，香港宽频，中华电信……
 - 全球线路全面，香港（HK,HKBN,CN2）、日本(IIJ，NTT)，台湾（HiNet，TFN）、新加坡、美国（GIA,NCP）、韩国(AWS)、俄罗斯(KHV)、英国(NTT)、澳门(CTM)等线路可选
 - 提供昂贵的 IPLC，为稳定性需求较高的用户提供了支持，在良好网络环境下可为游戏加速
-
-[⭐ 更多详细介绍 ⭐](https://www.iszy.cc/page/xinjiecloud/)
 
 ### （三）套餐
 
@@ -102,6 +102,8 @@ permalink: /page/bgfw/
 
 [⭐⭐ 测速 ⭐⭐](https://www.iszy.cc/page/speed-test-collection/#CMYNetwork-红莓网络)
 
+[⭐ 更多详细介绍 ⭐](https://www.iszy.cc/page/cmynetwork/)
+
 ### （一）优惠
 
 > 本站专属优惠
@@ -112,68 +114,23 @@ permalink: /page/bgfw/
 
 ![](https://img.iszy.xyz/20200317212833.png)
 
+> 官方优惠
+
+购买任意年费套餐，可获得 95 折折扣。若同时邀请小伙伴拼团，享受折上折。
+
 ### （二）简介
 
-**CMYNetwork 红莓网络** 隶属于`CMYNetwork Technology Co., Ltd`，注册于摩纳哥公国，是一家我最近发现一家宝藏机场。除入门套餐外采用全内网中转节点；入门套餐采用 Trojan 新协议，保证稳定性。经测速和日常使用，可以说是稳定高速，高峰期速度也能拉满。提供网页在线客服和工单，服务还不错。持续使用体验仍在继续跟踪。
+**CMYNetwork 红莓网络** 隶属于`CMYNetwork Technology Co., Ltd`，注册于摩纳哥公国，是一家我最近发现一家宝藏机场。除入门套餐外采用专线中转节点；入门套餐采用 Trojan 新协议，保证稳定性。经测速和日常使用，可以说是稳定高速，高峰期速度也能拉满。提供网页在线客服和工单，服务还不错。
 
-**套餐分级定制**
-
-- Air 套餐直连线路采用**Trojan**
-- Pro 套餐以上套餐及以上包含全内网中转节点、IPLC 专线
-- Extreme 套餐提供**IEPL 及游戏专线**
-
-**流媒体解锁**
-
-- 提供各种**流媒体解锁**，福利中心对最高级套餐(Extreme 套餐)提供各种视频会员**共享账号**
-
-**多平台多订阅**
-
-- 多平台**定制客户端**(windows/macos/android)，简单易用
-- 提供 Quantumultx、小火箭、ClashR 订阅，支持按等级获取订阅
-- 特别的，提供了按区域订阅链接，更加灵活，暂只筛选了日本、美国、港澳台、新加坡
-
-**续命灵活**
-
-- 有灵活的**叠加流量包**供高速流量将尽时使用
-- 流量用完后，提供**无限量限速流量**，限速 2Mbps
-
-**合理的同时在线数量限制**
-
-- 限制公网 ip 同时在线数量，以公网 IP 为准，**同一台路由器下无论多少设备只算做一个 IP 在线**，适合团队使用
-
-**注册可试用**
-
-- 注册并绑定手机号，赠送 3 天免费试用(非强制)
+- 基础线路 Trojan 加成，专业线路 IPLC、IEPL 专线保障
+- 无限低速流量(1Mbps~2Mbps)，流量用完也不会失联
+- 流媒体解锁
+- Extreme 套餐提供各种视频会员**共享账号**
+- 多平台订阅支持
 
 ### （三）套餐
 
-CMYNetwork 提供三套服务，分别为身在 国内、 国外以及 企业的用户设计，请根据说明开通您需要的服务。购买套餐后，可以在页面顶栏的“客户端下载”内找到使用教程。
-
-<!-- #### 回国服务(在国外用 - 解除版权限制)
-
-注意！此套餐仅限人在国外用户使用！！
-
-<table>
-<tr><th>套餐</th><th>流量</th><th>价格</th><th>公网IP数</th><th>线路</th><th>客服</th></tr>
-<tr>
-  <td rowspan="3">Return/海外回国版</td>
-  <td rowspan="3">100G/月</td>
-  <td>39元/30天</td>
-  <td rowspan="3">2</td>
-  <td rowspan="3">数条中国大陆节点<br>无海外节点<br>解锁国内音乐/视频/直播</td>
-  <td rowspan="3">12 x 365在线客服支持</td>
-</tr>
-<tr>
-  <td>117元/90天</td>
-</tr>
-<tr>
-  <td>412元/365天</td>
-</tr>
-</table> -->
-
-#### 云游服务(在国内用 - 加速国际网络)
-
-> 注意，需要内网中转线路，请至少选择 Pro 及以上套餐，专线倍率为 2，需要注意。
+> 注意，需要专线中转线路，请至少选择 Pro 及以上套餐，专线倍率为 2，需要注意。
 
 <table>
 <tr><th>套餐</th><th>流量</th><th>价格</th><th>公网IP数</th><th>线路</th><th>客服</th></tr>
@@ -202,7 +159,7 @@ CMYNetwork 提供三套服务，分别为身在 国内、 国外以及 企业的
   <td>35元/30天</td>
   <td rowspan="4">3</td>
   <td rowspan="4">解锁 CN2 优化直连专线（Trojan）<br>解锁 IPLC 流媒体专线（SSR）<br>解锁港/台/日/美 原生IP线路（Trojan）</td>
-  <td rowspan="8">12 x 365在线客服支持</td>
+  <td rowspan="11">12 x 365在线客服支持</td>
 </tr>
 <tr>
   <td>105元/90天</td>
@@ -233,34 +190,21 @@ CMYNetwork 提供三套服务，分别为身在 国内、 国外以及 企业的
   <td>1024G/月</td>
   <td>696元/365天</td>
 </tr>
-</table>
-
-#### 企业服务(商业用途 - 企业专属套餐)
-
-<table>
-<tr><th>套餐</th><th>流量</th><th>价格</th><th>公网IP数</th><th>备注</th></tr>
 <tr>
   <td rowspan="2">Business/企业版基础套餐</td>
-  <td rowspan="2">2048G/月</td>
+  <td rowspan="2">1200G/月</td>
   <td>298元/30天</td>
   <td rowspan="2">10</td>
   <td rowspan="2">无定制专线，可自助购买<br>如需要线路定制请查看定制套餐<br>可提供国际电子收据（英文/日文可选）</td>
 </tr>
 <tr>
-  <td>1788元/180天</td>
+  <td>3398元/365天</td>
 </tr>
 <tr>
   <td>Business/企业专线定制</td>
   <td colspan="4">此为定制方案，可动态根据需求优化，具体详情请咨询客服</td>
 </tr>
 </table>
-
-### （四）其他说明
-
-- [官网地址发布页](https://github.com/caomeicloud/url)，永不失联
-- [官方 TG 通知频道](https://t.me/s/cmynetwork)
-- 可在官网右下角与客服联系(推荐)或提交工单
-- [全平台各客户端下载、教程与进阶技巧](https://caomei.wiki/)
 
 ## 四、MEET
 
