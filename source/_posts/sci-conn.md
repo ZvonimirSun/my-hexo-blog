@@ -1,7 +1,7 @@
 ---
-title: 优质SS/SSR/Trojan/V2Ray机场推荐索引及优惠整理
+title: 优质SS/SSR/Trojan/V2Ray机场推荐索引及优惠整理【五一】
 date: 2019-01-03 03:11:50
-updated: 2021-04-11 10:00:00
+updated: 2021-04-26 10:00:00
 categories:
   - 推广
 tags:
@@ -29,20 +29,12 @@ permalink: /page/bgfw/
 | [Blinkload](#八、Blinkload)                     | SS(全专线)            | 稳定全能，超多专线               | [官网传送门](https://url.iszy.xyz/blinkload)  |
 | [Electry](#九、Electry)                         | V2Ray(专线、中继)     | 线路大佬，高速稳定               | [官网传送门](https://url.iszy.xyz/electry)    |
 | [V2Club](#十、V2Club)                           | SS/V2ray(全专线)      | 稳定坚挺，多年老站               | [官网传送门](https://url.iszy.xyz/lanan)      |
-| [皇朝网络](#十一、皇朝网络)                     | SS 隧道               | 性价比新站                       | [官网传送门](https://url.iszy.xyz/dinastio)   |
+| [皇朝网络](#十一、皇朝网络)【五一优惠】         | SS 隧道               | 性价比新站                       | [官网传送门](https://url.iszy.xyz/dinastio)   |
 | [Shuttle](#十二、Shuttle)【新】                 | V2ray                 | 平价新站，另含超多小众地区线路   | [官网传送门](https://url.iszy.xyz/shuttle)    |
 
 > 本页机场均在上次网络大波动中提供了稳定的服务，还会持续观察未来表现
 
 **点击前往查看测速: [机场测速集合](https://www.iszy.cc/page/speed-test-collection/)**
-
-更新动态:
-
-- 添加新站[Shuttle](#十二、Shuttle)(2021.04.09)
-- 更新[皇朝网络](#十一、皇朝网络)信息(2021.04.09)
-- 更新[心阶云](#二、心阶云)信息(2021.04.01)
-- 更新优惠(2021.02.25)
-- 更新[心阶云](#二、心阶云)测速(2021.02.17)
 
 ## 二、心阶云
 
@@ -903,6 +895,14 @@ V2Club(旧蓝岸)，一家专门提供 v2ray 代理服务的服务商。或许�
 邀请码：`vXd43WA0`
 
 [⭐⭐ 测速 ⭐⭐](https://www.iszy.cc/page/speed-test-collection/#皇朝网络)
+
+### （一）优惠
+
+> 转官方优惠公告
+
+即日起，全场除迷你订阅外使用优惠码 `j6CFt4UQ` 购买或续费即享 **8.8** 折
+
+开通**年费**，提交工单额外赠送 **2 个月**有效期，活动截止 **5 月 7 日**
 
 ### （一）简介
 
