@@ -12,7 +12,7 @@
     "version": "5.4.0"
   },
   "dependencies": {
-    "@waline/hexo-next": "^1.0.8",
+    "@waline/hexo-next": "^2.0.5",
     "hexo": "^5.4.0",
     "hexo-deployer-git": "^3.0.0",
     "hexo-generator-archive": "^1.0.0",
@@ -28,6 +28,6 @@
     "hexo-renderer-stylus": "^2.0.1",
     "hexo-server": "^2.0.0",
     "hexo-theme-next": "^8.3.0",
-    "hexo-word-counter": "0.0.3"
+    "hexo-word-counter": "^0.0.3"
   }
 }
