@@ -1,7 +1,7 @@
 ---
 title: 心阶云--性价比SSR/V2ray机场推荐
 date: 2019-04-11 11:47:31
-updated: 2021-04-11 11:47:31
+updated: 2021-05-04 11:47:31
 categories:
   - 推广
 tags:
@@ -38,7 +38,7 @@ permalink: /page/xinjiecloud/
 
 **￥ 200** 及以上套餐可用
 
-**九五折**礼遇码: `AprilCode`
+**九五折**礼遇码: `MayComes`
 
 ## 心阶云简介
 

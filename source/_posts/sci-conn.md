@@ -1,7 +1,7 @@
 ---
 title: 优质SS/SSR/Trojan/V2Ray机场推荐索引及优惠整理【五一】
 date: 2019-01-03 03:11:50
-updated: 2021-04-26 10:00:00
+updated: 2021-05-04 10:00:00
 categories:
   - 推广
 tags:
@@ -52,7 +52,7 @@ permalink: /page/bgfw/
 
 **￥ 200** 及以上套餐可用
 
-**九五折**礼遇码: `AprilCode`
+**九五折**礼遇码: `MayComes`
 
 ### （二）简介
 
