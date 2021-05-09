@@ -1,7 +1,7 @@
 ---
 title: 优质SS/SSR/Trojan/V2Ray机场推荐索引及优惠整理【五一】
 date: 2019-01-03 03:11:50
-updated: 2021-05-04 10:00:00
+updated: 2021-05-09 10:00:00
 categories:
   - 推广
 tags:
@@ -24,8 +24,8 @@ permalink: /page/bgfw/
 | [CMYNetwork 红莓网络](/page/cmynetwork/)        | SSR(专线)/Trojan      | 稳定平价，超多专线，小众地区线路 | [官网传送门](https://url.iszy.xyz/cmynetwork) |
 | [MEET](#四、MEET)                               | SSR                   | 专注按量付费，高速稳定           | [官网传送门](https://url.iszy.xyz/fspeed)     |
 | [BoomCloud](#五、BoomCloud)【官方长期优惠】     | V2ray/SSR/SS          | 多年老站，附赠丰富               | [官网传送门](https://url.iszy.xyz/boomcloud)  |
-| [DuangCloud](#六、DuangCloud)【专属优惠】       | SS(全专线)            | 平价灵活                         | [官网传送门](https://url.iszy.xyz/duangcloud) |
-| [ByWave](#七、ByWave)                           | V2Ray                 | 高质高端，服务稳定               | [官网传送门](https://url.iszy.xyz/bywave)     |
+| [DuangCloud](#六、DuangCloud)【五一优惠】       | SS(全专线)            | 平价灵活                         | [官网传送门](https://url.iszy.xyz/duangcloud) |
+| [ByWave](#七、ByWave)【特惠】                   | V2Ray                 | 高质高端，服务稳定               | [官网传送门](https://url.iszy.xyz/bywave)     |
 | [Blinkload](#八、Blinkload)                     | SS(全专线)            | 稳定全能，超多专线               | [官网传送门](https://url.iszy.xyz/blinkload)  |
 | [Electry](#九、Electry)                         | V2Ray(专线、中继)     | 线路大佬，高速稳定               | [官网传送门](https://url.iszy.xyz/electry)    |
 | [V2Club](#十、V2Club)                           | SS/V2ray(全专线)      | 稳定坚挺，多年老站               | [官网传送门](https://url.iszy.xyz/lanan)      |
@@ -453,6 +453,13 @@ permalink: /page/bgfw/
 
 ### （一）优惠
 
+> 转官方优惠公告
+
+- ⭐️ 即日起至 **5 月底**劳动节活动
+- ⭐️ **不循环，推荐年付，续费也可用**
+- ⭐️ 优惠码：`happy holidays`
+- ❗️ Light 套餐不参与活动
+
 > 专属优惠
 
 除 light 套餐外，都能使用以下优惠码获取 9 折优惠，走过路过不要错过。
@@ -507,6 +514,15 @@ permalink: /page/bgfw/
 优惠码: `iszy`
 
 > 转官方优惠公告
+
+**ByWave 特惠**
+
+- 优惠代码 A: `4N6IFVLK6D`
+  额度：**30% off 一次性**
+  适用范围： 年付 两年付 三年付
+- 优惠代码 B: `YH7B0X5CCB`
+  额度： **20% off 循环**
+  适用范围： 月付 季付 半年付
 
 **充值获得赠送金**
 
