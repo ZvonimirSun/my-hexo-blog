@@ -38,7 +38,9 @@ permalink: /page/bgfw/
 
 ## 二、心阶云
 
-[官网传送门](https://url.iszy.xyz/xinjie)
+[官网传送门](https://url.iszy.xyz/xinjie) (官网永久域名，需要代理)
+
+[备用传送门](https://url.iszy.xyz/xinjiebak)
 
 邀请码: `iszy`
 
