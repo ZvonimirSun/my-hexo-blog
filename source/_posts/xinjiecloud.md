@@ -24,9 +24,7 @@ permalink: /page/xinjiecloud/
 
 ### 相关链接
 
-[官网传送门](https://url.iszy.xyz/xinjie) (官网永久域名，需要代理)
-
-[备用传送门](https://url.iszy.xyz/xinjiebak)
+[官网传送门](https://url.iszy.xyz/xinjiebak)
 
 如果需要邀请码，可以使用我的邀请码: `iszy`
 
