@@ -7,7 +7,7 @@ categories:
 tags:
   - 翻墙
   - 科学上网
-  - v2ray
+  - V2Ray
   - ssr
   - 机场
   - SS
@@ -18,12 +18,12 @@ tags:
   - ssr机场
   - 机场推荐
   - 机场评测
-  - v2ray推荐
+  - V2Ray推荐
   - 代理
   - 推荐
   - 加速
   - VPS
-  - v2ray机场
+  - V2Ray机场
   - ssr/v2ray
 permalink: /page/bgfw/
 ---
