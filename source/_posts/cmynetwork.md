@@ -22,7 +22,7 @@ tags:
   - 代理
   - 推荐
   - 加速
-  - vps
+  - VPS
   - v2ray机场
   - ssr/v2ray
 permalink: /page/cmynetwork/
