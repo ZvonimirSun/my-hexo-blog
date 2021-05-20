@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/safari-logo.svg" color="#222">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="google-site-verification" content="NVbOnZWipX7gWLG4NVJzJWVD16F6okyUB1NDN6mNoIo">
+  <meta name="msvalidate.01" content="10AA475F381BF9E4C280F1E2E0B3F280">
+  <meta name="yandex-verification" content="3ec99cb3451ef771">
+  <meta name="baidu-site-verification" content="tV7s6Tu88n">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=EB+Garamond:300,300italic,400,400italic,700,700italic%7C'Noto+Serif+SC':300,300italic,400,400italic,700,700italic%7CCinzel+Decorative:300,300italic,400,400italic,700,700italic%7CJetBrains+Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+<script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;www.iszy.cc&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Gemini&quot;,&quot;version&quot;:&quot;8.4.0&quot;,&quot;exturl&quot;:true,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:false,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:true,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:true,&quot;pangu&quot;:true,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:false,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;搜索...&quot;,&quot;empty&quot;:&quot;没有找到任何搜索结果：${query}&quot;,&quot;hits_time&quot;:&quot;找到 ${hits} 个搜索结果（用时 ${time} 毫秒）&quot;,&quot;hits&quot;:&quot;找到 ${hits} 个搜索结果&quot;},&quot;path&quot;:&quot;&#x2F;search.xml&quot;,&quot;localsearch&quot;:{&quot;enable&quot;:true,&quot;trigger&quot;:&quot;auto&quot;,&quot;top_n_per_article&quot;:1,&quot;unescape&quot;:true,&quot;preload&quot;:true}}</script>
+<meta name="description" content="挂卡是什么，我再次就不赘述了。Steam 玩家估计都有所了解，还不清楚的可以谷歌一下。今天在此分享一下如何在在 Ubuntu 16.04 环境下使用 ArchiSteamFarm(v3)实现云挂卡，24 小时无人值守。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在Ubuntu 16.04环境下使用ASF(v3)实现云挂卡">
+<meta property="og:url" content="https://www.iszy.cc/posts/asf-steam/">
+<meta property="og:site_name" content="随遇而安">
+<meta property="og:description" content="挂卡是什么，我再次就不赘述了。Steam 玩家估计都有所了解，还不清楚的可以谷歌一下。今天在此分享一下如何在在 Ubuntu 16.04 环境下使用 ArchiSteamFarm(v3)实现云挂卡，24 小时无人值守。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img.iszy.xyz/20190318211533.png">
+<meta property="og:image" content="https://img.iszy.xyz/20190318211546.png">
+<meta property="og:image" content="https://img.iszy.xyz/20190318211557.png">
+<meta property="og:image" content="https://img.iszy.xyz/20190318211609.png">
+<meta property="og:image" content="https://img.iszy.xyz/20190318211620.png">
+<meta property="og:image" content="https://img.iszy.xyz/20190318211633.png">
+<meta property="og:image" content="https://img.iszy.xyz/20190318211805.png">
+<meta property="og:image" content="https://img.iszy.xyz/20190318211831.png">
+<meta property="article:published_time" content="2018-08-07T16:59:52.000Z">
+<meta property="article:modified_time" content="2018-08-07T16:59:52.000Z">
+<meta property="article:author" content="Dirge">
+<meta property="article:tag" content="Steam">
+<meta property="article:tag" content="ArchiSteamFarm">
+<meta property="article:tag" content="挂卡">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img.iszy.xyz/20190318211533.png">
+
+
+<link rel="canonical" href="https://www.iszy.cc/posts/asf-steam/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;zh-CN&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;www.iszy.cc&#x2F;posts&#x2F;asf-steam&#x2F;&quot;,&quot;path&quot;:&quot;posts&#x2F;asf-steam&#x2F;&quot;,&quot;title&quot;:&quot;在Ubuntu 16.04环境下使用ASF(v3)实现云挂卡&quot;}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
+<title>在Ubuntu 16.04环境下使用ASF(v3)实现云挂卡 | 随遇而安</title><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.4.0/source/js/config.min.js"></script><link rel="dns-prefetch" href="https://wl.iszy.xyz">
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E60YKKHF8Y"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{&quot;tracking_id&quot;:&quot;G-E60YKKHF8Y&quot;,&quot;only_pageview&quot;:false}</script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.4.0/source/js/third-party/analytics/google-analytics.min.js"></script>
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="随遇而安" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">随遇而安</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">在自由的空气中漂浮</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">127</span></a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">11</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">96</span></a></li>
+        <li class="menu-item menu-item-友链&留言"><a href="/links/" rel="section"><i class="fa fa-comments fa-fw"></i>友链&留言</a></li>
+        <li class="menu-item menu-item-优质机场推荐"><a href="/page/bgfw/" rel="section"><i class="fa fa-ad fa-fw"></i>优质机场推荐</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83"><span class="nav-number">1.</span> <span class="nav-text"> 环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%99%E7%A8%8B"><span class="nav-number">2.</span> <span class="nav-text"> 教程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-root-%E6%9D%83%E9%99%90"><span class="nav-number">2.1.</span> <span class="nav-text"> 使用 root 权限</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85net"><span class="nav-number">2.2.</span> <span class="nav-text"> 安装.NET Core</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B3%A8%E5%86%8C%E5%BE%AE%E8%BD%AF-key-%E5%92%8C%E8%AE%A2%E9%98%85%E6%BA%90"><span class="nav-number">2.2.1.</span> <span class="nav-text"> 注册微软 key 和订阅源</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85net-2"><span class="nav-number">2.2.2.</span> <span class="nav-text"> 安装.NET SDK</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-asf"><span class="nav-number">2.3.</span> <span class="nav-text"> 安装 ASF</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%E6%9C%80%E6%96%B0%E7%A8%B3%E5%AE%9A%E7%89%88-asf"><span class="nav-number">2.3.1.</span> <span class="nav-text"> 下载最新稳定版 ASF</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA-bot-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-number">2.4.</span> <span class="nav-text"> 创建 bot 配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%90%E8%A1%8C"><span class="nav-number">2.5.</span> <span class="nav-text"> 运行</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%B5%8B%E4%BA%88%E6%89%A7%E8%A1%8C%E6%9D%83%E9%99%90"><span class="nav-number">2.5.1.</span> <span class="nav-text"> 赋予执行权限</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BC%80%E5%A7%8B%E8%BF%90%E8%A1%8C"><span class="nav-number">2.5.2.</span> <span class="nav-text"> 开始运行</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%9D%E6%8C%81%E5%90%8E%E5%8F%B0%E8%BF%90%E8%A1%8C"><span class="nav-number">2.6.</span> <span class="nav-text"> 保持后台运行</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E4%B8%80screen"><span class="nav-number">2.6.1.</span> <span class="nav-text"> 方法一：Screen</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E4%BA%8Csystemd%E6%8E%A8%E8%8D%90"><span class="nav-number">2.6.2.</span> <span class="nav-text"> 方法二：Systemd（推荐）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9B%B4%E5%A4%9A%E5%8A%9F%E8%83%BD"><span class="nav-number">3.</span> <span class="nav-text"> 更多功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#steam-%E4%B8%A4%E9%83%A8%E9%AA%8C%E8%AF%81"><span class="nav-number">3.1.</span> <span class="nav-text"> steam 两部验证</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%89%8B%E6%9C%BA-root"><span class="nav-number">3.1.1.</span> <span class="nav-text"> 手机 root</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8F%90%E5%8F%96%E4%BB%A4%E7%89%8C%E6%96%87%E4%BB%B6"><span class="nav-number">3.1.2.</span> <span class="nav-text"> 提取令牌文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8F%90%E5%8F%96%E8%AE%BE%E5%A4%87-id"><span class="nav-number">3.1.3.</span> <span class="nav-text"> 提取设备 ID</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%AE%BE%E5%A4%87-id"><span class="nav-number">3.1.4.</span> <span class="nav-text"> 输入设备 ID</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="nav-number">3.1.5.</span> <span class="nav-text"> 注意事项</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%AF%E7%94%A8-ipc"><span class="nav-number">3.2.</span> <span class="nav-text"> 启用 IPC</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%A8-telegram-%E8%BF%9C%E7%A8%8B%E6%8E%A7%E5%88%B6-asf-%E6%8C%82%E5%8D%A1"><span class="nav-number">3.3.</span> <span class="nav-text"> 用 Telegram 远程控制 ASF 挂卡</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%90%91-telegram-%E7%94%B3%E8%AF%B7-bot-token"><span class="nav-number">3.3.1.</span> <span class="nav-text"> 向 Telegram 申请 bot token</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%94%B3%E8%AF%B7-chat-id"><span class="nav-number">3.3.2.</span> <span class="nav-text"> 申请 Chat ID</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85telegram_bot_asf"><span class="nav-number">3.3.3.</span> <span class="nav-text"> 安装telegram_bot_asf</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%90%8E%E5%8F%B0%E5%90%AF%E5%8A%A8-bot"><span class="nav-number">3.3.4.</span> <span class="nav-text"> 后台启动 bot</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9C%A8-telegram-%E4%B8%AD%E4%BD%BF%E7%94%A8%E8%BF%99%E4%B8%AA-bot"><span class="nav-number">3.3.5.</span> <span class="nav-text"> 在 Telegram 中使用这个 bot</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%8E%E8%AF%9D"><span class="nav-number">4.</span> <span class="nav-text"> 后话</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Dirge"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Dirge</p>
+  <div class="site-description" itemprop="description">生活吐槽 & 学习记录</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">96</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">127</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC8="><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></span>
+  </div>
+
+
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.iszy.cc/posts/asf-steam/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Dirge">
+      <meta itemprop="description" content="生活吐槽 & 学习记录">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="随遇而安">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          在Ubuntu 16.04环境下使用ASF(v3)实现云挂卡
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2018-08-08 00:59:52" itemprop="dateCreated datePublished" datetime="2018-08-08T00:59:52+08:00">2018-08-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%BA%94%E7%94%A8%E9%83%A8%E7%BD%B2/" itemprop="url" rel="index"><span itemprop="name">应用部署</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/posts/asf-steam/#waline-comments" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" id="/posts/asf-steam/" data-xid="/posts/asf-steam/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span id="/posts/asf-steam/" class="post-meta-item leancloud_visitors" data-flag-title="在Ubuntu 16.04环境下使用ASF(v3)实现云挂卡" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>4.1k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>7 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>挂卡是什么，我再次就不赘述了。Steam 玩家估计都有所了解，还不清楚的可以谷歌一下。今天在此分享一下如何在在 Ubuntu 16.04 环境下使用 ArchiSteamFarm(v3)实现云挂卡，24 小时无人值守。</p>
+<span id="more"></span>
+<h2 id="环境"><a class="markdownIt-Anchor" href="#环境"></a> 环境</h2>
+<ul>
+<li>主机：腾讯云香港云主机 1 核 1G</li>
+<li>系统：Ubuntu 16.04</li>
+<li>软件版本：ArchiSteamFarm V3.2.0.5</li>
+</ul>
+<h2 id="教程"><a class="markdownIt-Anchor" href="#教程"></a> 教程</h2>
+<h3 id="使用-root-权限"><a class="markdownIt-Anchor" href="#使用-root-权限"></a> 使用 root 权限</h3>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo su</span><br></pre></td></tr></table></figure>
+<h3 id="安装net"><a class="markdownIt-Anchor" href="#安装net"></a> <span class="exturl" data-url="aHR0cDovL3huLS00OXNxNjZoLk5FVA==">安装.NET<i class="fa fa-external-link-alt"></i></span> Core</h3>
+<h4 id="注册微软-key-和订阅源"><a class="markdownIt-Anchor" href="#注册微软-key-和订阅源"></a> 注册微软 key 和订阅源</h4>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget -q https://packages.microsoft.com/config/ubuntu/16.04/packages-microsoft-prod.deb --no-check-certificate</span><br><span class="line">sudo dpkg -i packages-microsoft-prod.deb</span><br></pre></td></tr></table></figure>
+<h4 id="安装net-2"><a class="markdownIt-Anchor" href="#安装net-2"></a> <span class="exturl" data-url="aHR0cDovL3huLS00OXNxNjZoLk5FVA==">安装.NET<i class="fa fa-external-link-alt"></i></span> SDK</h4>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install apt-transport-https</span><br><span class="line">sudo apt update</span><br><span class="line">sudo apt install dotnet-sdk-2.1</span><br></pre></td></tr></table></figure>
+<h3 id="安装-asf"><a class="markdownIt-Anchor" href="#安装-asf"></a> 安装 ASF</h3>
+<h4 id="下载最新稳定版-asf"><a class="markdownIt-Anchor" href="#下载最新稳定版-asf"></a> 下载最新稳定版 ASF</h4>
+<p>建议选用<code>Pre-release</code>版本，<code>Pre-release</code>版本可能存在稳定性问题。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://github.com/JustArchi/ArchiSteamFarm/releases/download/3.3.0.0/ASF-linux-x64.zip --no-check-certificate</span><br></pre></td></tr></table></figure>
+<p>在<code>/home</code>中创建<code>asf</code>文件夹</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir /home/asf &amp;&amp; <span class="built_in">cd</span> /home/asf</span><br></pre></td></tr></table></figure>
+<p>解压软件到该目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">unzip /root/ASF-linux-x64.zip</span><br></pre></td></tr></table></figure>
+<h3 id="创建-bot-配置文件"><a class="markdownIt-Anchor" href="#创建-bot-配置文件"></a> 创建 bot 配置文件</h3>
+<p>这里只写最简单的配置，更多高级设置可以到<span class="exturl" data-url="aHR0cHM6Ly9qdXN0YXJjaGkuZ2l0aHViLmlvL0FyY2hpU3RlYW1GYXJtLyMv">ASF web config<i class="fa fa-external-link-alt"></i></span>上生成配置文件。</p>
+<p>文件名字自取，这里我取名 test.json，所以这个 bot 的名称就叫 test。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /home/asf/config/test.json</span><br></pre></td></tr></table></figure>
+<p>输入以下内容并保存，注意替换为自己的 steam 用户名和密码。</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;SteamLogin&quot;</span>: <span class="string">&quot;yourusername&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;SteamPassword&quot;</span>: <span class="string">&quot;yourpassword&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;Enabled&quot;</span>: <span class="literal">true</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>由于 asf 就是模拟一个 steam 平台进行游戏，你的好友将会看到你正在游戏的状态。想要让 steam 显示离线状态，可以将配置文件换成以下内容。</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;SteamLogin&quot;</span>: <span class="string">&quot;yourusername&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;SteamPassword&quot;</span>: <span class="string">&quot;yourpassword&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;Enabled&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">&quot;OnlineStatus&quot;</span>: <span class="number">0</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="运行"><a class="markdownIt-Anchor" href="#运行"></a> 运行</h3>
+<h4 id="赋予执行权限"><a class="markdownIt-Anchor" href="#赋予执行权限"></a> 赋予执行权限</h4>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod +x ArchiSteamFarm</span><br></pre></td></tr></table></figure>
+<h4 id="开始运行"><a class="markdownIt-Anchor" href="#开始运行"></a> 开始运行</h4>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./ArchiSteamFarm</span><br></pre></td></tr></table></figure>
+<p>如果正常运行，现在已经开始自动挂卡了。</p>
+<h3 id="保持后台运行"><a class="markdownIt-Anchor" href="#保持后台运行"></a> 保持后台运行</h3>
+<h4 id="方法一screen"><a class="markdownIt-Anchor" href="#方法一screen"></a> 方法一：Screen</h4>
+<p>安装 screen</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt install screen</span><br></pre></td></tr></table></figure>
+<p>创建一个名为 asf 的窗口，并在其中执行程序。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">screen -S asf</span><br><span class="line">cd /home/asf</span><br><span class="line">./ArchiSteamFarm</span><br></pre></td></tr></table></figure>
+<p>按<code>Ctrl+A+D</code>搁置窗口，程序已经在后台运行了，可以放心退出终端了。</p>
+<p>其他命令：</p>
+<ul>
+<li>恢复 screen 窗口命令：<code>screen -r asf</code></li>
+<li>退出 screen 窗口：在窗口中，先按<code>Ctrl+A</code>，再按<code>K</code>，最后输入<code>y</code>确认。</li>
+</ul>
+<h4 id="方法二systemd推荐"><a class="markdownIt-Anchor" href="#方法二systemd推荐"></a> 方法二：Systemd（推荐）</h4>
+<p>安装 systemd</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt install systemd</span><br></pre></td></tr></table></figure>
+<p>创建 service 文件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/systemd/system/asf.service</span><br></pre></td></tr></table></figure>
+<p>输入以下内容并保存</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description=Archi Steam Farm</span><br><span class="line">After=network.target</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line">Type=simple</span><br><span class="line">User=root</span><br><span class="line">EnvironmentFile=/etc/environment</span><br><span class="line">Environment=&quot;&quot;</span><br><span class="line">ExecStart=/home/asf/ArchiSteamFarm</span><br><span class="line">Restart=always</span><br><span class="line">RestartSec=15s</span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure>
+<p>现在可以运行了。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">service asf start  # 开始运行挂卡</span><br><span class="line">service asf stop   # 停止运行</span><br><span class="line">service asf status # 查看服务状态</span><br></pre></td></tr></table></figure>
+<h2 id="更多功能"><a class="markdownIt-Anchor" href="#更多功能"></a> 更多功能</h2>
+<h3 id="steam-两部验证"><a class="markdownIt-Anchor" href="#steam-两部验证"></a> steam 两部验证</h3>
+<p>要知道，如果绑定了 steam 手机令牌的话，登录需要输入密钥，显然不可能在挂卡平台每次都手动输入密钥，这也太蠢了。那么我们就需要将令牌导入到 ASF 中，以实现自动登录。</p>
+<p>各个平台操作不同，详情请见<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0p1c3RBcmNoaS9BcmNoaVN0ZWFtRmFybS93aWtpL1R3by1mYWN0b3ItYXV0aGVudGljYXRpb24=">官方 WIKI<i class="fa fa-external-link-alt"></i></span>。我没有其他设备，这里就只说明以下安卓设备的方法。</p>
+<h4 id="手机-root"><a class="markdownIt-Anchor" href="#手机-root"></a> 手机 root</h4>
+<p>首先，你需要有系统的 root 权限，这个不多说，每个设备都有所不同。</p>
+<h4 id="提取令牌文件"><a class="markdownIt-Anchor" href="#提取令牌文件"></a> 提取令牌文件</h4>
+<p>安装一个能够访问系统根目录的文件管理器，如<span class="exturl" data-url="aHR0cHM6Ly9wbGF5Lmdvb2dsZS5jb20vc3RvcmUvYXBwcy9kZXRhaWxzP2lkPWNvbS5lc3Ryb25ncy5hbmRyb2lkLnBvcA==">ES 文件浏览器<i class="fa fa-external-link-alt"></i></span>。</p>
+<p>将文件<code>/data/data/com.valvesoftware.android.steam.community/files/Steamguard-XXX</code>复制出来，<code>XXX</code>是你的 SteamID。重命名为<code>BotName.maFile</code>并放置到<code>/home/asf/config</code>目录下，程序会自动检测并读取。如我的 bot 名字为 test，则重命名为<code>test.maFile</code>。</p>
+<h4 id="提取设备-id"><a class="markdownIt-Anchor" href="#提取设备-id"></a> 提取设备 ID</h4>
+<p>将文件<code>/data/data/com.valvesoftware.android.steam.community/shared_prefs/steam.uuid.xml</code>打开，找到如<code>android:XXXXXXXXXXXXXXXX</code>字样，这就是你的设备 ID，注意保存。</p>
+<h4 id="输入设备-id"><a class="markdownIt-Anchor" href="#输入设备-id"></a> 输入设备 ID</h4>
+<p>导入好令牌文件以后，首次启动，将会看到如下字样。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[*] INFO: ImportAuthenticator() &lt;1&gt; Converting .maFile into ASF format...</span><br><span class="line">&lt;1&gt; Please enter your Device ID (including &quot;android:&quot;):</span><br></pre></td></tr></table></figure>
+<p>这时输入你的设备 ID，连<code>android:</code>字样一起输入，回车。看到如下字样，表示你已经完成，以后启动就不再需要输入了，会自动登录。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[*] INFO: ImportAuthenticator() &lt;1&gt; Successfully finished importing mobile authenticator!</span><br></pre></td></tr></table></figure>
+<h4 id="注意事项"><a class="markdownIt-Anchor" href="#注意事项"></a> 注意事项</h4>
+<p><strong>注意：为了你的 steam 账号安全，切勿暴露你的令牌文件和设备 ID。拥有这些内容，将能任意变更你的账户。</strong></p>
+<h3 id="启用-ipc"><a class="markdownIt-Anchor" href="#启用-ipc"></a> 启用 IPC</h3>
+<p>启用 IPC 将会提供 API 和图形化 GUI，可以远程进行控制。</p>
+<p>编辑 ASF 配置文件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /home/asf/config/ASF.json</span><br></pre></td></tr></table></figure>
+<p>查找并修改相关内容如下</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&quot;IPC&quot;: true,</span><br><span class="line">&quot;IPCPassword&quot;: null,</span><br><span class="line">&quot;IPCPrefixes&quot;: [</span><br><span class="line">    &quot;http://127.0.0.1:1242/&quot;</span><br><span class="line">],</span><br><span class="line">&quot;SteamOwnerID&quot;: &quot;你的64位id&quot;,</span><br></pre></td></tr></table></figure>
+<p><code>IPCPassword</code>后改为你想要设置的密码，注意加双引号。<code>IPCPrefixes</code>设置为<code>127.0.0.1</code>，则只能本地访问；设置为<code>*</code>则可以从任意地址访问；可以设置多个监听地址，用逗号隔开。</p>
+<h3 id="用-telegram-远程控制-asf-挂卡"><a class="markdownIt-Anchor" href="#用-telegram-远程控制-asf-挂卡"></a> 用 Telegram 远程控制 ASF 挂卡</h3>
+<p>提供给有需求的人，要求主机上 python 版本至少为 3.6。</p>
+<h4 id="向-telegram-申请-bot-token"><a class="markdownIt-Anchor" href="#向-telegram-申请-bot-token"></a> 向 Telegram 申请 bot token</h4>
+<p>在 Telegram 里，搜索<code>@BotFather</code>机器人并启用。</p>
+<p>发送以下命令：</p>
+<ol>
+<li>创建机器人：<code>/newbot</code></li>
+<li>设定 bot 名称：<code>ASF</code>(任取，可重复，这里只是个例子)</li>
+<li>设定 bot 用户名：<code>test_asf_bot</code>(任取，不可重复，这里只是个例子)</li>
+</ol>
+<p><code>@BotFather</code>会发给你一串 token，形如<code>123456789:XXXXXX-XXXXXXXXXX</code>，注意保留。</p>
+<h4 id="申请-chat-id"><a class="markdownIt-Anchor" href="#申请-chat-id"></a> 申请 Chat ID</h4>
+<p>在 Telegram 里，搜索<code>@FalconGate_Bot</code>机器人并启用。</p>
+<p>发送命令：<code>/get_my_id</code></p>
+<p><code>@FalconGate_Bot</code>会发给你一串数字，即是你的 Chat ID。</p>
+<h4 id="安装telegram_bot_asf"><a class="markdownIt-Anchor" href="#安装telegram_bot_asf"></a> 安装<code>telegram_bot_asf</code></h4>
+<p>请确保 python 版本正确</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/deluxghost/telegram-asf.git</span><br><span class="line">cd telegram-asf</span><br><span class="line">sudo pip3 install -r requirements.txt</span><br></pre></td></tr></table></figure>
+<p>编辑<code>bot.py</code>，修改如下内容。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">token = <span class="string">&#x27;123456789:XXXXXX-XXXXXXXXXX&#x27;</span> <span class="comment"># 之前获取的bot token</span></span><br><span class="line">admin = <span class="string">&#x27;123456789&#x27;</span> <span class="comment"># 之前获取的Chat ID</span></span><br><span class="line">ipc_address = <span class="string">&#x27;http://127.0.0.1:1242/&#x27;</span> <span class="comment">#填写ASF的IPC监听地址</span></span><br><span class="line">ipc_password = <span class="string">&#x27;&#x27;</span> <span class="comment"># 填写ASF的IPCPassword，留空表示没有密码</span></span><br></pre></td></tr></table></figure>
+<h4 id="后台启动-bot"><a class="markdownIt-Anchor" href="#后台启动-bot"></a> 后台启动 bot</h4>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">screen -S bot</span><br><span class="line">python3 bot.py</span><br></pre></td></tr></table></figure>
+<h4 id="在-telegram-中使用这个-bot"><a class="markdownIt-Anchor" href="#在-telegram-中使用这个-bot"></a> 在 Telegram 中使用这个 bot</h4>
+<p>搜索刚刚你设定的 bot 用户名，并启用，你已经可以发送命令远程控制 ASF 了。这个机器人只有你能使用。</p>
+<p><strong>常见命令</strong>：</p>
+<p>帮助命令：<code>help</code></p>
+<p><img data-src="https://img.iszy.xyz/20190318211533.png" alt="" /></p>
+<p>开始命令：<code>start</code></p>
+<p><img data-src="https://img.iszy.xyz/20190318211546.png" alt="" /></p>
+<p>暂停命令：<code>pause</code></p>
+<p><img data-src="https://img.iszy.xyz/20190318211557.png" alt="" /></p>
+<p>继续命令：<code>resume</code></p>
+<p><img data-src="https://img.iszy.xyz/20190318211609.png" alt="" /></p>
+<p>查看状态命令：<code>status</code></p>
+<p><img data-src="https://img.iszy.xyz/20190318211620.png" alt="" /></p>
+<p><img data-src="https://img.iszy.xyz/20190318211633.png" alt="" /></p>
+<p>查看版本命令：<code>version</code></p>
+<p><img data-src="https://img.iszy.xyz/20190318211805.png" alt="" /></p>
+<p>激活 steam 密钥命令：<code>redeem &lt;key&gt;</code></p>
+<p><img data-src="https://img.iszy.xyz/20190318211831.png" alt="" /></p>
+<p>更多命令，请参<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0p1c3RBcmNoaS9BcmNoaVN0ZWFtRmFybS93aWtpL0NvbW1hbmRz">官方 WIKI<i class="fa fa-external-link-alt"></i></span>。</p>
+<h2 id="后话"><a class="markdownIt-Anchor" href="#后话"></a> 后话</h2>
+<p>现在你已经成功搭建了云挂卡平台，尽情挂卡吧。</p>
+
+    </div>
+
+    
+    
+    
+      
+  <div class="popular-posts-header">相关文章</div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/posts/docker-asf/" rel="bookmark">通过Docker快速部署ASF(ArchiSteamFarm)挂卡</a></div>
+    </li>
+  </ul>
+
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Dirge
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.iszy.cc/posts/asf-steam/" title="在Ubuntu 16.04环境下使用ASF(v3)实现云挂卡">https://www.iszy.cc/posts/asf-steam/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC8="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/Steam/" rel="tag"><i class="fa fa-tag"></i> Steam</a>
+              <a href="/tags/ArchiSteamFarm/" rel="tag"><i class="fa fa-tag"></i> ArchiSteamFarm</a>
+              <a href="/tags/%E6%8C%82%E5%8D%A1/" rel="tag"><i class="fa fa-tag"></i> 挂卡</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/mc-server-ubuntu/" rel="prev" title="在Ubuntu 16.04搭建Minecraft服务器1.13">
+                  <i class="fa fa-chevron-left"></i> 在Ubuntu 16.04搭建Minecraft服务器1.13
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/use-composer/" rel="next" title="Ubuntu 安装使用 Composer">
+                  Ubuntu 安装使用 Composer <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="waline-comments"></div><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.4.0/source/js/comments.min.js"></script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2017 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Dirge</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">210k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">6:23</span>
+  </span>
+</div>
+  <div class="powered-by">由 <span class="exturl theme-link" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl theme-link" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZw==">NexT.Gemini</span> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.5.0/pjax.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.4.0/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.4.0/source/js/next-boot.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.4.0/source/js/pjax.min.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.4.0/source/js/third-party/search/local-search.min.js"></script>
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.3/dist/katex.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.3/dist/contrib/copy-tex.min.css">
+  <script class="next-config" data-name="katex" type="application/json">{&quot;copy_tex_js&quot;:&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;katex@0.13.3&#x2F;dist&#x2F;contrib&#x2F;copy-tex.min.js&quot;}</script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.4.0/source/js/third-party/math/katex.min.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.1.0/dist/quicklink.umd.js"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{&quot;enable&quot;:true,&quot;home&quot;:false,&quot;archive&quot;:false,&quot;delay&quot;:true,&quot;timeout&quot;:3000,&quot;priority&quot;:true,&quot;ignores&quot;:null,&quot;url&quot;:&quot;https:&#x2F;&#x2F;www.iszy.cc&#x2F;posts&#x2F;asf-steam&#x2F;&quot;}</script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.4.0/source/js/third-party/quicklink.min.js"></script>
+<script class="next-config" data-name="waline" type="application/json">{&quot;lang&quot;:null,&quot;enable&quot;:true,&quot;serverURL&quot;:&quot;https:&#x2F;&#x2F;wl.iszy.xyz&quot;,&quot;placeholder&quot;:&quot;请填写邮箱信息以便及时收到回复哦(●&#39;◡&#39;●)\n评论会在审核后显示，请勿重复评论~&quot;,&quot;avatar&quot;:null,&quot;meta&quot;:[&quot;nick&quot;,&quot;mail&quot;,&quot;link&quot;],&quot;pageSize&quot;:10,&quot;visitor&quot;:true,&quot;comment_count&quot;:true,&quot;requiredFields&quot;:[&quot;nick&quot;,&quot;mail&quot;],&quot;libUrl&quot;:&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;@waline&#x2F;client&#x2F;dist&#x2F;Waline.min.js&quot;,&quot;emojiCDN&quot;:&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;GamerNoTitle&#x2F;ValineCDN@master&#x2F;&quot;,&quot;emojiMaps&quot;:{&quot;QQ1&quot;:&quot;QQ&#x2F;aini.gif&quot;,&quot;QQ2&quot;:&quot;QQ&#x2F;aixin.gif&quot;,&quot;QQ3&quot;:&quot;QQ&#x2F;aoman.gif&quot;,&quot;QQ4&quot;:&quot;QQ&#x2F;baiyan.gif&quot;,&quot;QQ5&quot;:&quot;QQ&#x2F;bangbangtang.gif&quot;,&quot;QQ6&quot;:&quot;QQ&#x2F;baojin.gif&quot;,&quot;QQ7&quot;:&quot;QQ&#x2F;baoquan.gif&quot;,&quot;QQ8&quot;:&quot;QQ&#x2F;bishi.gif&quot;,&quot;QQ9&quot;:&quot;QQ&#x2F;bizui.gif&quot;,&quot;QQ11&quot;:&quot;QQ&#x2F;cahan.gif&quot;,&quot;QQ12&quot;:&quot;QQ&#x2F;caidao.gif&quot;,&quot;QQ13&quot;:&quot;QQ&#x2F;chi.gif&quot;,&quot;QQ14&quot;:&quot;QQ&#x2F;ciya.gif&quot;,&quot;QQ15&quot;:&quot;QQ&#x2F;dabing.gif&quot;,&quot;QQ16&quot;:&quot;QQ&#x2F;daku.gif&quot;,&quot;QQ17&quot;:&quot;QQ&#x2F;dan.gif&quot;,&quot;QQ18&quot;:&quot;QQ&#x2F;deyi.gif&quot;,&quot;QQ19&quot;:&quot;QQ&#x2F;doge.gif&quot;,&quot;QQ20&quot;:&quot;QQ&#x2F;fadai.gif&quot;,&quot;QQ21&quot;:&quot;QQ&#x2F;fanu.gif&quot;,&quot;QQ22&quot;:&quot;QQ&#x2F;fendou.gif&quot;,&quot;QQ23&quot;:&quot;QQ&#x2F;ganga.gif&quot;,&quot;QQ24&quot;:&quot;QQ&#x2F;gouyin.gif&quot;,&quot;QQ25&quot;:&quot;QQ&#x2F;guzhang.gif&quot;,&quot;QQ26&quot;:&quot;QQ&#x2F;haixiu.gif&quot;,&quot;QQ27&quot;:&quot;QQ&#x2F;hanxiao.gif&quot;,&quot;QQ28&quot;:&quot;QQ&#x2F;haobang.gif&quot;,&quot;QQ29&quot;:&quot;QQ&#x2F;haqian.gif&quot;,&quot;QQ30&quot;:&quot;QQ&#x2F;hecai.gif&quot;,&quot;QQ31&quot;:&quot;QQ&#x2F;hexie.gif&quot;,&quot;QQ32&quot;:&quot;QQ&#x2F;huaixiao.gif&quot;,&quot;QQ33&quot;:&quot;QQ&#x2F;jie.gif&quot;,&quot;QQ34&quot;:&quot;QQ&#x2F;jingkong.gif&quot;,&quot;QQ35&quot;:&quot;QQ&#x2F;jingxi.gif&quot;,&quot;QQ36&quot;:&quot;QQ&#x2F;jingya.gif&quot;,&quot;QQ37&quot;:&quot;QQ&#x2F;juhua.gif&quot;,&quot;QQ38&quot;:&quot;QQ&#x2F;keai.gif&quot;,&quot;QQ39&quot;:&quot;QQ&#x2F;kelian.gif&quot;,&quot;QQ40&quot;:&quot;QQ&#x2F;koubi.gif&quot;,&quot;QQ41&quot;:&quot;QQ&#x2F;ku.gif&quot;,&quot;QQ42&quot;:&quot;QQ&#x2F;kuaikule.gif&quot;,&quot;QQ43&quot;:&quot;QQ&#x2F;kulou.gif&quot;,&quot;QQ44&quot;:&quot;QQ&#x2F;kun.gif&quot;,&quot;QQ45&quot;:&quot;QQ&#x2F;lanqiu.gif&quot;,&quot;QQ46&quot;:&quot;QQ&#x2F;leiben.gif&quot;,&quot;QQ47&quot;:&quot;QQ&#x2F;lenghan.gif&quot;,&quot;QQ48&quot;:&quot;QQ&#x2F;liuhan.gif&quot;,&quot;QQ49&quot;:&quot;QQ&#x2F;liulei.gif&quot;,&quot;QQ50&quot;:&quot;QQ&#x2F;nanguo.gif&quot;,&quot;QQ51&quot;:&quot;QQ&#x2F;OK.gif&quot;,&quot;QQ52&quot;:&quot;QQ&#x2F;penxue.gif&quot;,&quot;QQ53&quot;:&quot;QQ&#x2F;piezui.gif&quot;,&quot;QQ54&quot;:&quot;QQ&#x2F;pijiu.gif&quot;,&quot;QQ55&quot;:&quot;QQ&#x2F;qiang.gif&quot;,&quot;QQ56&quot;:&quot;QQ&#x2F;qiaoda.gif&quot;,&quot;QQ57&quot;:&quot;QQ&#x2F;qinqin.gif&quot;,&quot;QQ58&quot;:&quot;QQ&#x2F;qiudale.gif&quot;,&quot;QQ59&quot;:&quot;QQ&#x2F;quantou.gif&quot;,&quot;QQ60&quot;:&quot;QQ&#x2F;saorao.gif&quot;,&quot;QQ61&quot;:&quot;QQ&#x2F;se.gif&quot;,&quot;QQ62&quot;:&quot;QQ&#x2F;shengli.gif&quot;,&quot;QQ63&quot;:&quot;QQ&#x2F;shouqiang.gif&quot;,&quot;QQ64&quot;:&quot;QQ&#x2F;shuai.gif&quot;,&quot;QQ65&quot;:&quot;QQ&#x2F;shui.gif&quot;,&quot;QQ66&quot;:&quot;QQ&#x2F;tiaopi.gif&quot;,&quot;QQ67&quot;:&quot;QQ&#x2F;touxiao.gif&quot;,&quot;QQ68&quot;:&quot;QQ&#x2F;tu.gif&quot;,&quot;QQ69&quot;:&quot;QQ&#x2F;tuosai.gif&quot;,&quot;QQ70&quot;:&quot;QQ&#x2F;weiqu.gif&quot;,&quot;QQ71&quot;:&quot;QQ&#x2F;weixiao.gif&quot;,&quot;QQ72&quot;:&quot;QQ&#x2F;woshou.gif&quot;,&quot;QQ73&quot;:&quot;QQ&#x2F;wozuimei.gif&quot;,&quot;QQ74&quot;:&quot;QQ&#x2F;wunai.gif&quot;,&quot;QQ75&quot;:&quot;QQ&#x2F;xia.gif&quot;,&quot;QQ76&quot;:&quot;QQ&#x2F;xiaojiujie.gif&quot;,&quot;QQ77&quot;:&quot;QQ&#x2F;xiaoku.gif&quot;,&quot;QQ78&quot;:&quot;QQ&#x2F;xiaoyanger.gif&quot;,&quot;QQ79&quot;:&quot;QQ&#x2F;xieyanxiao.gif&quot;,&quot;QQ80&quot;:&quot;QQ&#x2F;xigua.gif&quot;,&quot;QQ81&quot;:&quot;QQ&#x2F;xu.gif&quot;,&quot;QQ82&quot;:&quot;QQ&#x2F;yangtuo.gif&quot;,&quot;QQ83&quot;:&quot;QQ&#x2F;yinxian.gif&quot;,&quot;QQ84&quot;:&quot;QQ&#x2F;yiwen.gif&quot;,&quot;QQ85&quot;:&quot;QQ&#x2F;youhengheng.gif&quot;,&quot;QQ86&quot;:&quot;QQ&#x2F;youling.gif&quot;,&quot;QQ87&quot;:&quot;QQ&#x2F;yun.gif&quot;,&quot;QQ88&quot;:&quot;QQ&#x2F;zaijian.gif&quot;,&quot;QQ89&quot;:&quot;QQ&#x2F;zhayanjian.gif&quot;,&quot;QQ90&quot;:&quot;QQ&#x2F;zhemo.gif&quot;,&quot;QQ91&quot;:&quot;QQ&#x2F;zhouma.gif&quot;,&quot;QQ92&quot;:&quot;QQ&#x2F;zhuakuang.gif&quot;,&quot;QQ93&quot;:&quot;QQ&#x2F;zuohengheng.gif&quot;},&quot;el&quot;:&quot;#waline-comments&quot;,&quot;path&quot;:&quot;&#x2F;posts&#x2F;asf-steam&#x2F;&quot;}</script>
+<script>
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.waline.el).then(() => 
+    NexT.utils.getScript(CONFIG.waline.libUrl, { condition: window.Waline })
+  ).then(() => {
+    new Waline(CONFIG.waline);
+  });
+});
+</script>
+</body>
+</html>
