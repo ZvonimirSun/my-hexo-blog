@@ -1208,6 +1208,119 @@
       </tags>
   </entry>
   <entry>
+    <title>NexT主题v8配置自定义字体</title>
+    <url>/posts/a8mr7k/</url>
+    <content><![CDATA[<p>今天改了一下 NexT 主题的字体配置，发现还是有一些需要注意的地方的，在此记录一下。</p>
+<span id="more"></span>
+<h2 id="简要说明"><a class="markdownIt-Anchor" href="#简要说明"></a> 简要说明</h2>
+<p>在此篇文章发布时，我用的是 v8.2.1 版本的<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL25leHQtdGhlbWUvaGV4by10aGVtZS1uZXh0">next-theme/hexo-theme-next<i class="fa fa-external-link-alt"></i></span>，通过<code>npm install hexo-theme-next</code>安装，所以尽量不想改动主题源文件。</p>
+<p>现在这里展示下最终的配置，只改动了主题的配置(字体部分)，符合我一开始的期望。</p>
+<p>这边的配置是这样的，可以改成自己喜欢的</p>
+<ul>
+<li>中文字体: Noto Serif SC</li>
+<li>英文字体: EB Garamond</li>
+<li>站点标题字体: Cinzel Decorative</li>
+<li>代码字体: JetBrains Mono</li>
+</ul>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">font:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Uri of fonts host, e.g. https://fonts.googleapis.com (Default).</span></span><br><span class="line">  <span class="attr">host:</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Font options:</span></span><br><span class="line">  <span class="comment"># `external: true` will load this font family from `host` above.</span></span><br><span class="line">  <span class="comment"># `family: Times New Roman`. Without any quotes.</span></span><br><span class="line">  <span class="comment"># `size: x.x`. Use `em` as unit. Default: 1 (16px)</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Global font settings used for all elements inside &lt;body&gt;.</span></span><br><span class="line">  <span class="attr">global:</span></span><br><span class="line">    <span class="attr">external:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">family:</span> <span class="string">&quot;EB Garamond, &#x27;Noto Serif SC&#x27;&quot;</span></span><br><span class="line">    <span class="attr">size:</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Font settings for site title (.site-title).</span></span><br><span class="line">  <span class="attr">title:</span></span><br><span class="line">    <span class="attr">external:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">family:</span> <span class="string">Cinzel</span> <span class="string">Decorative</span></span><br><span class="line">    <span class="attr">size:</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Font settings for headlines (&lt;h1&gt; to &lt;h6&gt;).</span></span><br><span class="line">  <span class="attr">headings:</span></span><br><span class="line">    <span class="attr">external:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">family:</span></span><br><span class="line">    <span class="attr">size:</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Font settings for posts (.post-body).</span></span><br><span class="line">  <span class="attr">posts:</span></span><br><span class="line">    <span class="attr">external:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">family:</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Font settings for &lt;code&gt; and code blocks.</span></span><br><span class="line">  <span class="attr">codes:</span></span><br><span class="line">    <span class="attr">external:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">family:</span> <span class="string">JetBrains</span> <span class="string">Mono</span></span><br></pre></td></tr></table></figure>
+<p>如果只需要看最后是怎么配置的，到这里就可以结束了，下面是我折腾的过程。</p>
+<h2 id="折腾过程"><a class="markdownIt-Anchor" href="#折腾过程"></a> 折腾过程</h2>
+<p>涉及到的文件有以下几个。</p>
+<ul>
+<li>config.next.yml(主题配置文件)</li>
+<li>node_modules/hexo-theme-next/source/css/_variables/base.styl(主题源文件中关于字体配置的 css 变量)</li>
+<li>source/_data/styles.styl(自定义样式文件)</li>
+</ul>
+<h3 id="查询资料"><a class="markdownIt-Anchor" href="#查询资料"></a> 查询资料</h3>
+<p>虽说之前就看过主题配置文件中有这个字体配置的地方，姑且还是在网上查了一下其他人是怎么配置的。</p>
+<p>然后我发现完整展示实际配置内容的较少，且基本上每一个类型都只配置了一个 font family，在其中一篇博文中还表示多在 NexT 主题的这个配置下多 font family 的配置是不支持的，这个我还是感觉比较诧异的，应该会有不少人有这样的需求吧。</p>
+<p><img data-src="https://img.iszy.xyz/20210225171504.png" alt="" /></p>
+<p>所以根据网上的说法，就有以下两个方法进行字体配置。</p>
+<ol>
+<li>
+<p>简单配置</p>
+<p>在 NexT 配置中直接进行配置，内容为单个 font-family 值。</p>
+</li>
+<li>
+<p>复杂配置</p>
+<ol>
+<li>
+<p>在主题配置文件中指定自定义样式文件</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">custom_file_path:</span></span><br><span class="line">  <span class="comment">#head: source/_data/head.njk</span></span><br><span class="line">  <span class="comment">#header: source/_data/header.njk</span></span><br><span class="line">  <span class="comment">#sidebar: source/_data/sidebar.njk</span></span><br><span class="line">  <span class="comment">#postMeta: source/_data/post-meta.njk</span></span><br><span class="line">  <span class="comment">#postBodyEnd: source/_data/post-body-end.njk</span></span><br><span class="line">  <span class="comment">#footer: source/_data/footer.njk</span></span><br><span class="line">  <span class="comment">#bodyEnd: source/_data/body-end.njk</span></span><br><span class="line">  <span class="comment">#variable: source/_data/variables.styl</span></span><br><span class="line">  <span class="comment">#mixin: source/_data/mixins.styl</span></span><br><span class="line">  <span class="attr">style:</span> <span class="string">source/_data/styles.styl</span></span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>，在对应路径下创建自定义样式文件，然后在文件中直接对对应的 html 标签编写 css。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">body</span>,</span><br><span class="line"><span class="selector-tag">h1</span>,</span><br><span class="line"><span class="selector-tag">h2</span>,</span><br><span class="line"><span class="selector-tag">h3</span>,</span><br><span class="line"><span class="selector-tag">h4</span>,</span><br><span class="line"><span class="selector-tag">h5</span>,</span><br><span class="line"><span class="selector-tag">h6</span>,</span><br><span class="line"><span class="selector-class">.post-body</span> &#123;</span><br><span class="line">  <span class="attribute">font-family</span>: EB Garamond, <span class="string">&quot;Noto Serif SC&quot;</span>, sans-serif;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.site-title</span> &#123;</span><br><span class="line">  <span class="attribute">font-family</span>: Cinzel Decorative, EB Garamond, <span class="string">&quot;Noto Serif SC&quot;</span>, sans-serif;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">pre,</span><br><span class="line"><span class="selector-tag">code</span> &#123;</span><br><span class="line">  <span class="attribute">font-family</span>: JetBrains Mono, consolas, Menlo, monospace, <span class="string">&quot;Noto Serif SC&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="探寻方案"><a class="markdownIt-Anchor" href="#探寻方案"></a> 探寻方案</h3>
+<p>不过直接加 css 有点不太优雅，万一以后多了什么标签，我还得手动改 css，那就要看看为什么不支持了。</p>
+<p>在主题的代码中，我们能找到这么一段关于字体的配置。</p>
+<figure class="highlight scss"><table><tr><td class="code"><pre><span class="line">get_font_family(config) &#123;</span><br><span class="line">  <span class="variable">$custom-family</span> = hexo-config(&#x27;font.&#x27; + config + &#x27;.family&#x27;);</span><br><span class="line">  return <span class="variable">$custom-family</span> is <span class="selector-tag">a</span> &#x27;string&#x27; ? unquote($custom-family) : null;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Font families.</span></span><br><span class="line"><span class="variable">$font-family-chinese</span>      = &#x27;PingFang SC&#x27;, &#x27;Microsoft YaHei&#x27;;</span><br><span class="line"></span><br><span class="line"><span class="variable">$font-family-base</span>         = <span class="variable">$font-family-chinese</span>, sans-serif;</span><br><span class="line"><span class="variable">$font-family-base</span>         = get_font_family(&#x27;global&#x27;), <span class="variable">$font-family-chinese</span>, sans-serif if get_font_family(&#x27;global&#x27;);</span><br><span class="line"></span><br><span class="line"><span class="variable">$font-family-logo</span>         = <span class="variable">$font-family-base</span>;</span><br><span class="line"><span class="variable">$font-family-logo</span>         = get_font_family(&#x27;title&#x27;), <span class="variable">$font-family-base</span> if get_font_family(&#x27;title&#x27;);</span><br><span class="line"></span><br><span class="line"><span class="variable">$font-family-headings</span>     = <span class="variable">$font-family-base</span>;</span><br><span class="line"><span class="variable">$font-family-headings</span>     = get_font_family(&#x27;headings&#x27;), <span class="variable">$font-family-base</span> if get_font_family(&#x27;headings&#x27;);</span><br><span class="line"></span><br><span class="line"><span class="variable">$font-family-posts</span>        = <span class="variable">$font-family-base</span>;</span><br><span class="line"><span class="variable">$font-family-posts</span>        = get_font_family(&#x27;posts&#x27;), <span class="variable">$font-family-base</span> if get_font_family(&#x27;posts&#x27;);</span><br><span class="line"></span><br><span class="line"><span class="variable">$font-family-monospace</span>    = consolas, Menlo, monospace, <span class="variable">$font-family-chinese</span>;</span><br><span class="line"><span class="variable">$font-family-monospace</span>    = get_font_family(&#x27;codes&#x27;), consolas, Menlo, monospace, <span class="variable">$font-family-chinese</span> if get_font_family(&#x27;codes&#x27;);</span><br></pre></td></tr></table></figure>
+<p>我们可以看到这边最主要的就是这个<code>get_font_family</code>方法，做的事情就是获取配置文件中对应项的值，如果不为空就去掉一下引号返回，否则返回<code>null</code>。</p>
+<p>从代码上来看，并没有不支持多 font family 配置，所以我就试了以下几个配置看看效果。</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">global:</span></span><br><span class="line">  <span class="attr">external:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">family:</span> <span class="string">EB</span> <span class="string">Garamond,</span> <span class="string">Noto</span> <span class="string">Serif</span> <span class="string">SC</span></span><br><span class="line">  <span class="attr">size:</span></span><br></pre></td></tr></table></figure>
+<p>首先这个配置，<code>EB Garamond</code>这个字体是生效了的，但<code>Noto Serif SC</code>没有生效。经过查询，在 css 规范中(<span class="exturl" data-url="aHR0cDovL2ppZ3Nhdy53My5vcmcvY3NzLXZhbGlkYXRvci8=">css 校验器<i class="fa fa-external-link-alt"></i></span>)带空格的 font family 是要加引号的，于是改为了以下配置。</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">global:</span></span><br><span class="line">  <span class="attr">external:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">family:</span> <span class="string">&#x27;EB Garamond&#x27;</span><span class="string">,</span> <span class="string">&#x27;Noto Serif SC&#x27;</span></span><br><span class="line">  <span class="attr">size:</span></span><br></pre></td></tr></table></figure>
+<p>好家伙，这个配置直接在 yaml 结构上就不支持，会报错。应当是被当作 map 解析了，不过结构也不正确，果断跳过。</p>
+<p>经过查询，<code>unquote</code>这个方法，只是去除最外层引号的，而我将整个配置都套进双引号，应当就会被解析为字符串了，所以有了下面的配置。</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">global:</span></span><br><span class="line">  <span class="attr">external:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">family:</span> <span class="string">&quot;&#x27;EB Garamond&#x27;, &#x27;Noto Serif SC&#x27;&quot;</span></span><br><span class="line">  <span class="attr">size:</span></span><br></pre></td></tr></table></figure>
+<p>这个配置其实已经成功了，所有字体都展示得很正常。不过，我们平常确实能看到很多带空格的 font family 是没有加引号的，这又是为什么呢？</p>
+<h3 id="无所谓的优化"><a class="markdownIt-Anchor" href="#无所谓的优化"></a> 无所谓的优化</h3>
+<p>经过进一步的查询，font family 在什么情况下要加引号和转义情况还是比较复杂的，需要先搞清楚 css 字符串和标识符之间的区别。</p>
+<h4 id="字符串和标识符"><a class="markdownIt-Anchor" href="#字符串和标识符"></a> 字符串和标识符</h4>
+<p>关于<span class="exturl" data-url="aHR0cHM6Ly93d3cudzMub3JnL1RSL0NTUzIvc3luZGF0YS5odG1sI3N0cmluZ3M=">字符串<i class="fa fa-external-link-alt"></i></span>，w3c 表示</p>
+<blockquote>
+<p>字符串可以放在单引号也可以放在双引号里，引号里面的相同引号需要转义。</p>
+<p>Strings can either be written with double quotes or with single quotes. Double quotes cannot occur inside double quotes, unless escaped (e.g., as ‘&quot;’ or as ‘\22’). Analogously for single quotes (e.g., “’” or “\27”).</p>
+</blockquote>
+<p>而<span class="exturl" data-url="aHR0cHM6Ly93d3cudzMub3JnL1RSL0NTUzIvc3luZGF0YS5odG1sI2NoYXJhY3RlcnM=">标识符<i class="fa fa-external-link-alt"></i></span>的定义如下</p>
+<blockquote>
+<p>在 CSS 里，标识符(包括元素名称，类名，选择器里的 ID)只能包含字符[a-zA-Z0-9]，ISO 10646 里比 U+00A0 大的字符，还有连字符（-）和下划线（_）。标识符不能以数字，两个下划线后者一个下划线后面跟一个数字开头。标识符也能包含转义字符还有 ISO 10646 定义的数字编码。举个例子：<code>B&amp;W?</code>应该写成<code>B\&amp;W\?</code>或者 <code>B\26 W\3F</code>。</p>
+<p>In CSS, identifiers (including element names, classes, and IDs in selectors) can contain only the characters [a-zA-Z0-9] and ISO 10646 characters U+00A0 and higher, plus the hyphen (-) and the underscore (_); they cannot start with a digit, two hyphens, or a hyphen followed by a digit. Identifiers can also contain escaped characters and any ISO 10646 character as a numeric code (see next item). For instance, the identifier “B&amp;W?” may be written as “B&amp;W?” or “B\26 W\3F”.</p>
+</blockquote>
+<h4 id="空白字符"><a class="markdownIt-Anchor" href="#空白字符"></a> 空白字符</h4>
+<p><span class="exturl" data-url="aHR0cHM6Ly9kcmFmdHMuY3Nzd2cub3JnL2Nzcy1mb250cy0zLyNmb250LWZhbWlseS1wcm9w">css 规范<i class="fa fa-external-link-alt"></i></span>指出</p>
+<blockquote>
+<p>字体族的名字要么作为字符串用引号包含起来，要么作为标识符，不需要引号。这就意味着在没有引号的名称里，开头的大多数标点符号和数字都需要被转义</p>
+<p>Font family names other than generic families must either be given quoted as strings, or unquoted as a sequence of one or more identifiers. This means most punctuation characters and digits at the start of each token must be escaped in unquoted font family names.</p>
+</blockquote>
+<p>规范里用一个新的段落来说明：</p>
+<blockquote>
+<p>如果 font family 的名字是一系列标识符。那么计算机识别的最终值是单个空格分隔的标识符转换成字符串后的值。</p>
+<p>If <strong>a sequence of identifiers</strong> is given as a font family name, the computed value is the name converted to a string by joining all the identifiers in the sequence by single spaces.</p>
+</blockquote>
+<p>所以<code>Microsoft YaHei</code>表示由多个空格分隔的标识符组成了单一字体族名称，而带引号的<code>'Microsoft YaHei'</code>仅是简单的字符串，都是合法的 CSS。</p>
+<h4 id="字体族关键字"><a class="markdownIt-Anchor" href="#字体族关键字"></a> 字体族关键字</h4>
+<p>规范定义了一些通用关键字，</p>
+<blockquote>
+<p>通用关键字: serif, sans-serif, cursive, fantasy, 和 monospace.这些关键字可以作为普通的回退机制，以防期望的字体不可以用的时候。</p>
+<p>The following generic family keywords are defined: ‘serif’, ‘sans-serif’, ‘cursive’, ‘fantasy’, and ‘monospace’.</p>
+</blockquote>
+<p>关于和关键字相同名称的字体族，</p>
+<blockquote>
+<p>当字体族名称恰好和关键字名称一样，那就必须套上引号来防止冲突。</p>
+<p>Font family names that happen to be the same as keyword value (‘inherit’, ‘serif’, etc.) must be quoted to prevent confusion with the keywords with the same names.</p>
+</blockquote>
+<p>另，关键字都是不区分大小写的。</p>
+<h4 id="总结"><a class="markdownIt-Anchor" href="#总结"></a> 总结</h4>
+<p>所以问题也就明晰了，之前不加引号，<code>Noto Serif SC</code>字体应用有问题，就是因为这个字体族名称中有<code>Serif</code>关键字，被解析成了<code>serif</code>并使用了浏览器默认配置的<code>serif</code>字体。</p>
+<p>所以就能把配置进一步优化成我的最终配置。</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">global:</span></span><br><span class="line">  <span class="attr">external:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">family:</span> <span class="string">&quot;EB Garamond, &#x27;Noto Serif SC&#x27;&quot;</span></span><br><span class="line">  <span class="attr">size:</span></span><br></pre></td></tr></table></figure>
+<p>当然去除引号不是必要操作，加上引号还是比较保险的，单字体族的配置中遇到保留关键字也需要套上引号。要像下面这样套多层引号，否则编译的时候会被去掉一层。</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">global:</span></span><br><span class="line">  <span class="attr">external:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">family:</span> <span class="string">&quot;&#x27;Noto Serif SC&#x27;&quot;</span></span><br><span class="line">  <span class="attr">size:</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>建站</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>NexT</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>解决WIN 10中Acrobat图标异常问题</title>
     <url>/posts/acrobat-icon/</url>
     <content><![CDATA[<p>在 WIN 10 上，Acrobat 的快捷方式图标总是出现异常，令人十分困扰。今天终于找到了解决的方法，在此记录一下。</p>
@@ -2239,116 +2352,29 @@ SWIFT 代码：CIBKCNBJ100<br />
       </tags>
   </entry>
   <entry>
-    <title>NexT主题v8配置自定义字体</title>
-    <url>/posts/a8mr7k/</url>
-    <content><![CDATA[<p>今天改了一下 NexT 主题的字体配置，发现还是有一些需要注意的地方的，在此记录一下。</p>
+    <title>如何在JAVA中比较两个String对象</title>
+    <url>/posts/compare-stirng-in-java/</url>
+    <content><![CDATA[<p>记录一下，最近在 JAVA 中比较两个 String 对象遇到的一个小坑。</p>
 <span id="more"></span>
-<h2 id="简要说明"><a class="markdownIt-Anchor" href="#简要说明"></a> 简要说明</h2>
-<p>在此篇文章发布时，我用的是 v8.2.1 版本的<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL25leHQtdGhlbWUvaGV4by10aGVtZS1uZXh0">next-theme/hexo-theme-next<i class="fa fa-external-link-alt"></i></span>，通过<code>npm install hexo-theme-next</code>安装，所以尽量不想改动主题源文件。</p>
-<p>现在这里展示下最终的配置，只改动了主题的配置(字体部分)，符合我一开始的期望。</p>
-<p>这边的配置是这样的，可以改成自己喜欢的</p>
-<ul>
-<li>中文字体: Noto Serif SC</li>
-<li>英文字体: EB Garamond</li>
-<li>站点标题字体: Cinzel Decorative</li>
-<li>代码字体: JetBrains Mono</li>
-</ul>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">font:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Uri of fonts host, e.g. https://fonts.googleapis.com (Default).</span></span><br><span class="line">  <span class="attr">host:</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Font options:</span></span><br><span class="line">  <span class="comment"># `external: true` will load this font family from `host` above.</span></span><br><span class="line">  <span class="comment"># `family: Times New Roman`. Without any quotes.</span></span><br><span class="line">  <span class="comment"># `size: x.x`. Use `em` as unit. Default: 1 (16px)</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Global font settings used for all elements inside &lt;body&gt;.</span></span><br><span class="line">  <span class="attr">global:</span></span><br><span class="line">    <span class="attr">external:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">family:</span> <span class="string">&quot;EB Garamond, &#x27;Noto Serif SC&#x27;&quot;</span></span><br><span class="line">    <span class="attr">size:</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Font settings for site title (.site-title).</span></span><br><span class="line">  <span class="attr">title:</span></span><br><span class="line">    <span class="attr">external:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">family:</span> <span class="string">Cinzel</span> <span class="string">Decorative</span></span><br><span class="line">    <span class="attr">size:</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Font settings for headlines (&lt;h1&gt; to &lt;h6&gt;).</span></span><br><span class="line">  <span class="attr">headings:</span></span><br><span class="line">    <span class="attr">external:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">family:</span></span><br><span class="line">    <span class="attr">size:</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Font settings for posts (.post-body).</span></span><br><span class="line">  <span class="attr">posts:</span></span><br><span class="line">    <span class="attr">external:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">family:</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Font settings for &lt;code&gt; and code blocks.</span></span><br><span class="line">  <span class="attr">codes:</span></span><br><span class="line">    <span class="attr">external:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">family:</span> <span class="string">JetBrains</span> <span class="string">Mono</span></span><br></pre></td></tr></table></figure>
-<p>如果只需要看最后是怎么配置的，到这里就可以结束了，下面是我折腾的过程。</p>
-<h2 id="折腾过程"><a class="markdownIt-Anchor" href="#折腾过程"></a> 折腾过程</h2>
-<p>涉及到的文件有以下几个。</p>
-<ul>
-<li>config.next.yml(主题配置文件)</li>
-<li>node_modules/hexo-theme-next/source/css/_variables/base.styl(主题源文件中关于字体配置的 css 变量)</li>
-<li>source/_data/styles.styl(自定义样式文件)</li>
-</ul>
-<h3 id="查询资料"><a class="markdownIt-Anchor" href="#查询资料"></a> 查询资料</h3>
-<p>虽说之前就看过主题配置文件中有这个字体配置的地方，姑且还是在网上查了一下其他人是怎么配置的。</p>
-<p>然后我发现完整展示实际配置内容的较少，且基本上每一个类型都只配置了一个 font family，在其中一篇博文中还表示多在 NexT 主题的这个配置下多 font family 的配置是不支持的，这个我还是感觉比较诧异的，应该会有不少人有这样的需求吧。</p>
-<p><img data-src="https://img.iszy.xyz/20210225171504.png" alt="" /></p>
-<p>所以根据网上的说法，就有以下两个方法进行字体配置。</p>
-<ol>
-<li>
-<p>简单配置</p>
-<p>在 NexT 配置中直接进行配置，内容为单个 font-family 值。</p>
-</li>
-<li>
-<p>复杂配置</p>
-<ol>
-<li>
-<p>在主题配置文件中指定自定义样式文件</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">custom_file_path:</span></span><br><span class="line">  <span class="comment">#head: source/_data/head.njk</span></span><br><span class="line">  <span class="comment">#header: source/_data/header.njk</span></span><br><span class="line">  <span class="comment">#sidebar: source/_data/sidebar.njk</span></span><br><span class="line">  <span class="comment">#postMeta: source/_data/post-meta.njk</span></span><br><span class="line">  <span class="comment">#postBodyEnd: source/_data/post-body-end.njk</span></span><br><span class="line">  <span class="comment">#footer: source/_data/footer.njk</span></span><br><span class="line">  <span class="comment">#bodyEnd: source/_data/body-end.njk</span></span><br><span class="line">  <span class="comment">#variable: source/_data/variables.styl</span></span><br><span class="line">  <span class="comment">#mixin: source/_data/mixins.styl</span></span><br><span class="line">  <span class="attr">style:</span> <span class="string">source/_data/styles.styl</span></span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>，在对应路径下创建自定义样式文件，然后在文件中直接对对应的 html 标签编写 css。</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">body</span>,</span><br><span class="line"><span class="selector-tag">h1</span>,</span><br><span class="line"><span class="selector-tag">h2</span>,</span><br><span class="line"><span class="selector-tag">h3</span>,</span><br><span class="line"><span class="selector-tag">h4</span>,</span><br><span class="line"><span class="selector-tag">h5</span>,</span><br><span class="line"><span class="selector-tag">h6</span>,</span><br><span class="line"><span class="selector-class">.post-body</span> &#123;</span><br><span class="line">  <span class="attribute">font-family</span>: EB Garamond, <span class="string">&quot;Noto Serif SC&quot;</span>, sans-serif;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.site-title</span> &#123;</span><br><span class="line">  <span class="attribute">font-family</span>: Cinzel Decorative, EB Garamond, <span class="string">&quot;Noto Serif SC&quot;</span>, sans-serif;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">pre,</span><br><span class="line"><span class="selector-tag">code</span> &#123;</span><br><span class="line">  <span class="attribute">font-family</span>: JetBrains Mono, consolas, Menlo, monospace, <span class="string">&quot;Noto Serif SC&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-</li>
-</ol>
-<h3 id="探寻方案"><a class="markdownIt-Anchor" href="#探寻方案"></a> 探寻方案</h3>
-<p>不过直接加 css 有点不太优雅，万一以后多了什么标签，我还得手动改 css，那就要看看为什么不支持了。</p>
-<p>在主题的代码中，我们能找到这么一段关于字体的配置。</p>
-<figure class="highlight scss"><table><tr><td class="code"><pre><span class="line">get_font_family(config) &#123;</span><br><span class="line">  <span class="variable">$custom-family</span> = hexo-config(&#x27;font.&#x27; + config + &#x27;.family&#x27;);</span><br><span class="line">  return <span class="variable">$custom-family</span> is <span class="selector-tag">a</span> &#x27;string&#x27; ? unquote($custom-family) : null;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Font families.</span></span><br><span class="line"><span class="variable">$font-family-chinese</span>      = &#x27;PingFang SC&#x27;, &#x27;Microsoft YaHei&#x27;;</span><br><span class="line"></span><br><span class="line"><span class="variable">$font-family-base</span>         = <span class="variable">$font-family-chinese</span>, sans-serif;</span><br><span class="line"><span class="variable">$font-family-base</span>         = get_font_family(&#x27;global&#x27;), <span class="variable">$font-family-chinese</span>, sans-serif if get_font_family(&#x27;global&#x27;);</span><br><span class="line"></span><br><span class="line"><span class="variable">$font-family-logo</span>         = <span class="variable">$font-family-base</span>;</span><br><span class="line"><span class="variable">$font-family-logo</span>         = get_font_family(&#x27;title&#x27;), <span class="variable">$font-family-base</span> if get_font_family(&#x27;title&#x27;);</span><br><span class="line"></span><br><span class="line"><span class="variable">$font-family-headings</span>     = <span class="variable">$font-family-base</span>;</span><br><span class="line"><span class="variable">$font-family-headings</span>     = get_font_family(&#x27;headings&#x27;), <span class="variable">$font-family-base</span> if get_font_family(&#x27;headings&#x27;);</span><br><span class="line"></span><br><span class="line"><span class="variable">$font-family-posts</span>        = <span class="variable">$font-family-base</span>;</span><br><span class="line"><span class="variable">$font-family-posts</span>        = get_font_family(&#x27;posts&#x27;), <span class="variable">$font-family-base</span> if get_font_family(&#x27;posts&#x27;);</span><br><span class="line"></span><br><span class="line"><span class="variable">$font-family-monospace</span>    = consolas, Menlo, monospace, <span class="variable">$font-family-chinese</span>;</span><br><span class="line"><span class="variable">$font-family-monospace</span>    = get_font_family(&#x27;codes&#x27;), consolas, Menlo, monospace, <span class="variable">$font-family-chinese</span> if get_font_family(&#x27;codes&#x27;);</span><br></pre></td></tr></table></figure>
-<p>我们可以看到这边最主要的就是这个<code>get_font_family</code>方法，做的事情就是获取配置文件中对应项的值，如果不为空就去掉一下引号返回，否则返回<code>null</code>。</p>
-<p>从代码上来看，并没有不支持多 font family 配置，所以我就试了以下几个配置看看效果。</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">global:</span></span><br><span class="line">  <span class="attr">external:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">family:</span> <span class="string">EB</span> <span class="string">Garamond,</span> <span class="string">Noto</span> <span class="string">Serif</span> <span class="string">SC</span></span><br><span class="line">  <span class="attr">size:</span></span><br></pre></td></tr></table></figure>
-<p>首先这个配置，<code>EB Garamond</code>这个字体是生效了的，但<code>Noto Serif SC</code>没有生效。经过查询，在 css 规范中(<span class="exturl" data-url="aHR0cDovL2ppZ3Nhdy53My5vcmcvY3NzLXZhbGlkYXRvci8=">css 校验器<i class="fa fa-external-link-alt"></i></span>)带空格的 font family 是要加引号的，于是改为了以下配置。</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">global:</span></span><br><span class="line">  <span class="attr">external:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">family:</span> <span class="string">&#x27;EB Garamond&#x27;</span><span class="string">,</span> <span class="string">&#x27;Noto Serif SC&#x27;</span></span><br><span class="line">  <span class="attr">size:</span></span><br></pre></td></tr></table></figure>
-<p>好家伙，这个配置直接在 yaml 结构上就不支持，会报错。应当是被当作 map 解析了，不过结构也不正确，果断跳过。</p>
-<p>经过查询，<code>unquote</code>这个方法，只是去除最外层引号的，而我将整个配置都套进双引号，应当就会被解析为字符串了，所以有了下面的配置。</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">global:</span></span><br><span class="line">  <span class="attr">external:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">family:</span> <span class="string">&quot;&#x27;EB Garamond&#x27;, &#x27;Noto Serif SC&#x27;&quot;</span></span><br><span class="line">  <span class="attr">size:</span></span><br></pre></td></tr></table></figure>
-<p>这个配置其实已经成功了，所有字体都展示得很正常。不过，我们平常确实能看到很多带空格的 font family 是没有加引号的，这又是为什么呢？</p>
-<h3 id="无所谓的优化"><a class="markdownIt-Anchor" href="#无所谓的优化"></a> 无所谓的优化</h3>
-<p>经过进一步的查询，font family 在什么情况下要加引号和转义情况还是比较复杂的，需要先搞清楚 css 字符串和标识符之间的区别。</p>
-<h4 id="字符串和标识符"><a class="markdownIt-Anchor" href="#字符串和标识符"></a> 字符串和标识符</h4>
-<p>关于<span class="exturl" data-url="aHR0cHM6Ly93d3cudzMub3JnL1RSL0NTUzIvc3luZGF0YS5odG1sI3N0cmluZ3M=">字符串<i class="fa fa-external-link-alt"></i></span>，w3c 表示</p>
-<blockquote>
-<p>字符串可以放在单引号也可以放在双引号里，引号里面的相同引号需要转义。</p>
-<p>Strings can either be written with double quotes or with single quotes. Double quotes cannot occur inside double quotes, unless escaped (e.g., as ‘&quot;’ or as ‘\22’). Analogously for single quotes (e.g., “’” or “\27”).</p>
-</blockquote>
-<p>而<span class="exturl" data-url="aHR0cHM6Ly93d3cudzMub3JnL1RSL0NTUzIvc3luZGF0YS5odG1sI2NoYXJhY3RlcnM=">标识符<i class="fa fa-external-link-alt"></i></span>的定义如下</p>
-<blockquote>
-<p>在 CSS 里，标识符(包括元素名称，类名，选择器里的 ID)只能包含字符[a-zA-Z0-9]，ISO 10646 里比 U+00A0 大的字符，还有连字符（-）和下划线（_）。标识符不能以数字，两个下划线后者一个下划线后面跟一个数字开头。标识符也能包含转义字符还有 ISO 10646 定义的数字编码。举个例子：<code>B&amp;W?</code>应该写成<code>B\&amp;W\?</code>或者 <code>B\26 W\3F</code>。</p>
-<p>In CSS, identifiers (including element names, classes, and IDs in selectors) can contain only the characters [a-zA-Z0-9] and ISO 10646 characters U+00A0 and higher, plus the hyphen (-) and the underscore (_); they cannot start with a digit, two hyphens, or a hyphen followed by a digit. Identifiers can also contain escaped characters and any ISO 10646 character as a numeric code (see next item). For instance, the identifier “B&amp;W?” may be written as “B&amp;W?” or “B\26 W\3F”.</p>
-</blockquote>
-<h4 id="空白字符"><a class="markdownIt-Anchor" href="#空白字符"></a> 空白字符</h4>
-<p><span class="exturl" data-url="aHR0cHM6Ly9kcmFmdHMuY3Nzd2cub3JnL2Nzcy1mb250cy0zLyNmb250LWZhbWlseS1wcm9w">css 规范<i class="fa fa-external-link-alt"></i></span>指出</p>
-<blockquote>
-<p>字体族的名字要么作为字符串用引号包含起来，要么作为标识符，不需要引号。这就意味着在没有引号的名称里，开头的大多数标点符号和数字都需要被转义</p>
-<p>Font family names other than generic families must either be given quoted as strings, or unquoted as a sequence of one or more identifiers. This means most punctuation characters and digits at the start of each token must be escaped in unquoted font family names.</p>
-</blockquote>
-<p>规范里用一个新的段落来说明：</p>
-<blockquote>
-<p>如果 font family 的名字是一系列标识符。那么计算机识别的最终值是单个空格分隔的标识符转换成字符串后的值。</p>
-<p>If <strong>a sequence of identifiers</strong> is given as a font family name, the computed value is the name converted to a string by joining all the identifiers in the sequence by single spaces.</p>
-</blockquote>
-<p>所以<code>Microsoft YaHei</code>表示由多个空格分隔的标识符组成了单一字体族名称，而带引号的<code>'Microsoft YaHei'</code>仅是简单的字符串，都是合法的 CSS。</p>
-<h4 id="字体族关键字"><a class="markdownIt-Anchor" href="#字体族关键字"></a> 字体族关键字</h4>
-<p>规范定义了一些通用关键字，</p>
-<blockquote>
-<p>通用关键字: serif, sans-serif, cursive, fantasy, 和 monospace.这些关键字可以作为普通的回退机制，以防期望的字体不可以用的时候。</p>
-<p>The following generic family keywords are defined: ‘serif’, ‘sans-serif’, ‘cursive’, ‘fantasy’, and ‘monospace’.</p>
-</blockquote>
-<p>关于和关键字相同名称的字体族，</p>
-<blockquote>
-<p>当字体族名称恰好和关键字名称一样，那就必须套上引号来防止冲突。</p>
-<p>Font family names that happen to be the same as keyword value (‘inherit’, ‘serif’, etc.) must be quoted to prevent confusion with the keywords with the same names.</p>
-</blockquote>
-<p>另，关键字都是不区分大小写的。</p>
-<h4 id="总结"><a class="markdownIt-Anchor" href="#总结"></a> 总结</h4>
-<p>所以问题也就明晰了，之前不加引号，<code>Noto Serif SC</code>字体应用有问题，就是因为这个字体族名称中有<code>Serif</code>关键字，被解析成了<code>serif</code>并使用了浏览器默认配置的<code>serif</code>字体。</p>
-<p>所以就能把配置进一步优化成我的最终配置。</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">global:</span></span><br><span class="line">  <span class="attr">external:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">family:</span> <span class="string">&quot;EB Garamond, &#x27;Noto Serif SC&#x27;&quot;</span></span><br><span class="line">  <span class="attr">size:</span></span><br></pre></td></tr></table></figure>
-<p>当然去除引号不是必要操作，加上引号还是比较保险的，单字体族的配置中遇到保留关键字也需要套上引号。要像下面这样套多层引号，否则编译的时候会被去掉一层。</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">global:</span></span><br><span class="line">  <span class="attr">external:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">family:</span> <span class="string">&quot;&#x27;Noto Serif SC&#x27;&quot;</span></span><br><span class="line">  <span class="attr">size:</span></span><br></pre></td></tr></table></figure>
+<h2 id="问题"><a class="markdownIt-Anchor" href="#问题"></a> 问题</h2>
+<p>最近写程序的时候，遇到了需要比较两个 String 对象是否相等的情况，我习惯性的写了形如<code>if(a == &quot;a&quot;)&#123;&#125;</code>的语句，IDEA 跳出警告，内容如下:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">String values are compared using &#x27;==&#x27;, not &#x27;equals()&#x27;.</span><br></pre></td></tr></table></figure>
+<p>也就是说我刚刚那句话应该写成<code>if(a.equals(&quot;a&quot;))&#123;&#125;</code>才对，果然不再标红了。</p>
+<h2 id="说明"><a class="markdownIt-Anchor" href="#说明"></a> 说明</h2>
+<p>那么，为什么会这样呢？<code>==</code>和<code>equals()</code>分别是什么效果呢？</p>
+<p>对于基本数据类型<code>byte</code>(字节型)、<code>short</code>(短整型)、<code>int</code>(整型)、<code>long</code>(长整型)、<code>float</code>(单精度浮点型)、<code>double</code>(双精度浮点型)、<code>boolean</code>(布尔型)、<code>char</code>(字符型)，<code>==</code>比较的就是他们的值，也不存在<code>equals()</code>方法。</p>
+<p>而对于<code>String</code>这样的引用数据类型，<code>==</code>比较的是两个对象的<strong>引用地址</strong>即内存地址是否相同，如果内存地址相同，自然就是同一个对象了，同一个对象之间有啥好比的。</p>
+<p>我们一般的应用场景主要是要比较两个 String 对象的内容，那就需要使用<code>equals()</code>方法。我们可以看一下<code>java.lang.String</code>中<code>equals()</code>方法的定义，可以看到<code>equals()</code>才是在比较两个 String 对象的值。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* Compares this string to the specified object.  The result is &#123;<span class="doctag">@code</span></span></span><br><span class="line"><span class="comment">* true&#125; if and only if the argument is not &#123;<span class="doctag">@code</span> null&#125; and is a &#123;<span class="doctag">@code</span></span></span><br><span class="line"><span class="comment">* String&#125; object that represents the same sequence of characters as this</span></span><br><span class="line"><span class="comment">* object.</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">* <span class="doctag">@param</span>  anObject</span></span><br><span class="line"><span class="comment">*         The object to compare this &#123;<span class="doctag">@code</span> String&#125; against</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">* <span class="doctag">@return</span>  &#123;<span class="doctag">@code</span> true&#125; if the given object represents a &#123;<span class="doctag">@code</span> String&#125;</span></span><br><span class="line"><span class="comment">*          equivalent to this string, &#123;<span class="doctag">@code</span> false&#125; otherwise</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">* <span class="doctag">@see</span>  #compareTo(String)</span></span><br><span class="line"><span class="comment">* <span class="doctag">@see</span>  #equalsIgnoreCase(String)</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">equals</span><span class="params">(Object anObject)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">this</span> == anObject) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (anObject <span class="keyword">instanceof</span> String) &#123;</span><br><span class="line">        String anotherString = (String)anObject;</span><br><span class="line">        <span class="keyword">int</span> n = value.length;</span><br><span class="line">        <span class="keyword">if</span> (n == anotherString.value.length) &#123;</span><br><span class="line">            <span class="keyword">char</span> v1[] = value;</span><br><span class="line">            <span class="keyword">char</span> v2[] = anotherString.value;</span><br><span class="line">            <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">while</span> (n-- != <span class="number">0</span>) &#123;</span><br><span class="line">                <span class="keyword">if</span> (v1[i] != v2[i])</span><br><span class="line">                    <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">                i++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>还有一个特例的情况，比如<code>&quot;abcde&quot; == &quot;abcde&quot;</code>或是<code>&quot;abcde&quot; == &quot;abc&quot; + &quot;de&quot;</code>都是会返回<code>true</code>的，因为双方都是由编译器直接实现的，没有被声明为变量。</p>
+<h2 id="小结"><a class="markdownIt-Anchor" href="#小结"></a> 小结</h2>
+<p>当然，如果你知道自己在做什么，就是要利用<code>==</code>的这个特性，自然是没有问题的。其他时候用<code>equals()</code>方法即可。</p>
 ]]></content>
       <categories>
-        <category>建站</category>
+        <category>编程</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
-        <tag>NexT</tag>
+        <tag>Java</tag>
       </tags>
   </entry>
   <entry>
@@ -2920,29 +2946,54 @@ SWIFT 代码：CIBKCNBJ100<br />
       </tags>
   </entry>
   <entry>
-    <title>如何在JAVA中比较两个String对象</title>
-    <url>/posts/compare-stirng-in-java/</url>
-    <content><![CDATA[<p>记录一下，最近在 JAVA 中比较两个 String 对象遇到的一个小坑。</p>
+    <title>闲置VPS能用来干点啥</title>
+    <url>/posts/free-vps/</url>
+    <content><![CDATA[<p>总是看到线路好、价格合适的 VPS 就忍不住剁手，到现在多多少少有几台闲置的 VPS，放着也是放着，能干点啥好呢？</p>
 <span id="more"></span>
-<h2 id="问题"><a class="markdownIt-Anchor" href="#问题"></a> 问题</h2>
-<p>最近写程序的时候，遇到了需要比较两个 String 对象是否相等的情况，我习惯性的写了形如<code>if(a == &quot;a&quot;)&#123;&#125;</code>的语句，IDEA 跳出警告，内容如下:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">String values are compared using &#x27;==&#x27;, not &#x27;equals()&#x27;.</span><br></pre></td></tr></table></figure>
-<p>也就是说我刚刚那句话应该写成<code>if(a.equals(&quot;a&quot;))&#123;&#125;</code>才对，果然不再标红了。</p>
-<h2 id="说明"><a class="markdownIt-Anchor" href="#说明"></a> 说明</h2>
-<p>那么，为什么会这样呢？<code>==</code>和<code>equals()</code>分别是什么效果呢？</p>
-<p>对于基本数据类型<code>byte</code>(字节型)、<code>short</code>(短整型)、<code>int</code>(整型)、<code>long</code>(长整型)、<code>float</code>(单精度浮点型)、<code>double</code>(双精度浮点型)、<code>boolean</code>(布尔型)、<code>char</code>(字符型)，<code>==</code>比较的就是他们的值，也不存在<code>equals()</code>方法。</p>
-<p>而对于<code>String</code>这样的引用数据类型，<code>==</code>比较的是两个对象的<strong>引用地址</strong>即内存地址是否相同，如果内存地址相同，自然就是同一个对象了，同一个对象之间有啥好比的。</p>
-<p>我们一般的应用场景主要是要比较两个 String 对象的内容，那就需要使用<code>equals()</code>方法。我们可以看一下<code>java.lang.String</code>中<code>equals()</code>方法的定义，可以看到<code>equals()</code>才是在比较两个 String 对象的值。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* Compares this string to the specified object.  The result is &#123;<span class="doctag">@code</span></span></span><br><span class="line"><span class="comment">* true&#125; if and only if the argument is not &#123;<span class="doctag">@code</span> null&#125; and is a &#123;<span class="doctag">@code</span></span></span><br><span class="line"><span class="comment">* String&#125; object that represents the same sequence of characters as this</span></span><br><span class="line"><span class="comment">* object.</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">* <span class="doctag">@param</span>  anObject</span></span><br><span class="line"><span class="comment">*         The object to compare this &#123;<span class="doctag">@code</span> String&#125; against</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">* <span class="doctag">@return</span>  &#123;<span class="doctag">@code</span> true&#125; if the given object represents a &#123;<span class="doctag">@code</span> String&#125;</span></span><br><span class="line"><span class="comment">*          equivalent to this string, &#123;<span class="doctag">@code</span> false&#125; otherwise</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">* <span class="doctag">@see</span>  #compareTo(String)</span></span><br><span class="line"><span class="comment">* <span class="doctag">@see</span>  #equalsIgnoreCase(String)</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">equals</span><span class="params">(Object anObject)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">this</span> == anObject) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (anObject <span class="keyword">instanceof</span> String) &#123;</span><br><span class="line">        String anotherString = (String)anObject;</span><br><span class="line">        <span class="keyword">int</span> n = value.length;</span><br><span class="line">        <span class="keyword">if</span> (n == anotherString.value.length) &#123;</span><br><span class="line">            <span class="keyword">char</span> v1[] = value;</span><br><span class="line">            <span class="keyword">char</span> v2[] = anotherString.value;</span><br><span class="line">            <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">while</span> (n-- != <span class="number">0</span>) &#123;</span><br><span class="line">                <span class="keyword">if</span> (v1[i] != v2[i])</span><br><span class="line">                    <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">                i++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>还有一个特例的情况，比如<code>&quot;abcde&quot; == &quot;abcde&quot;</code>或是<code>&quot;abcde&quot; == &quot;abc&quot; + &quot;de&quot;</code>都是会返回<code>true</code>的，因为双方都是由编译器直接实现的，没有被声明为变量。</p>
-<h2 id="小结"><a class="markdownIt-Anchor" href="#小结"></a> 小结</h2>
-<p>当然，如果你知道自己在做什么，就是要利用<code>==</code>的这个特性，自然是没有问题的。其他时候用<code>equals()</code>方法即可。</p>
+<ol>
+<li>
+<p>建代理</p>
+<p>鉴于我国的特色国情，访问外网总还是需要一些辅助。既然有闲置的 VPS，如果是国外的，线路速度也还不错的，可以考虑建个代理。虽然网上老说，会被检测啦，容易被封啦，其实不去选特别热门的商家，代理不要公开，自己好好用，基本也不会被封的。</p>
+</li>
+<li>
+<p>搭建个人博客</p>
+<p>这个么，如果你原本没有博客的话，可以考虑在 VPS 上建个博客。现在建站已经容易很多了，lnmp 一键脚本非常好用，也有免费的宝塔面板。博客可以采用 wordpress，或者静态的 Hexo、Jekyll 等，都有许多模板可用。相比于其他不是自建的博客，自建博客有了更高的自由度，当然也需要你有一定的基础。</p>
+</li>
+<li>
+<p>云盘</p>
+<p>国内许多免费云盘服务都陆续结束了服务，百度云盘又各种限速、审核，国外网盘访问困难。自建私人云盘就自由的多了。如果你有一台流量充足、硬盘足够的 VPS，就可以考虑以下自建云盘了。当然，硬盘不充足还有其他的选择，比如腾讯云和阿里云挂载自家的对象存储到服务器上做硬盘，牺牲了一定的性能，但能弥补硬盘的不足。</p>
+</li>
+<li>
+<p>PT/BT 下载</p>
+<p>在允许 BT 下载的服务器上凭借着大带宽、高流量、24 小时不关机，刷刷上传量，造福大众岂不是美滋滋。当然，一定要是服务商允许 BT 才行，不然小心给你封了。</p>
+</li>
+<li>
+<p>自建 DNS 服务器</p>
+<p>不想再被运营商劫持、不想再被 DNS 污染，那就在服务器上自建纯净 DNS 吧。当然要注意打开端口，而且最好不要是 53 端口，不然经过 GFW 就被污染了，一点用都没有。顺便，DNS 不解决翻墙问题。</p>
+</li>
+<li>
+<p>自建邮箱服务器</p>
+<p>厌恶了国内的免费邮箱，想要拥有自己的域名服务器？那么你可以在自己的服务器商搭建邮箱服务器。服务器怎么配置全凭你喜好。当然也有更好的实现方式。像我现在用 mailgun 转发，配合 gmail，用得还是非常舒服的。</p>
+</li>
+<li>
+<p>虚拟主机</p>
+<p>VPS 嘛，虽然说是虚拟服务器，那也是一台服务器啊，那就可以拆分成虚拟主机来卖咯。当然可能大家都得共用一个 IP 了，如果有哪个网站有问题，说不定会牵连同 IP 的其他网站。而且吧，弄成虚拟主机也没那么简单，还有许多工作要做，如果只是简单的 lnmp 一键脚本这样的虚拟主机，还是就跟朋友用用吧，分担一下网费。</p>
+</li>
+<li>
+<p>搭建感兴趣的其他服务</p>
+<p>在 GitHub 上面有许多有意思的项目，如果你比较感兴趣，你可以将其部署到你的服务器上玩一玩。感觉也是非常不错的。</p>
+</li>
+<li>
+<p>其他</p>
+<p>我前面说的基本都是 Linux 主机，Windows 服务器或许也能做吧。但是 Windows 自身内存占用较多，成本或许也更高了。Windows 主机的话还能干些只有 Windows 能干的事，比如说一些挂机的工作，需要运行 exe 程序的。</p>
+</li>
+</ol>
 ]]></content>
       <categories>
-        <category>编程</category>
+        <category>小记</category>
       </categories>
       <tags>
-        <tag>Java</tag>
+        <tag>VPS</tag>
       </tags>
   </entry>
   <entry>
@@ -3277,54 +3328,85 @@ SWIFT 代码：CIBKCNBJ100<br />
       </tags>
   </entry>
   <entry>
-    <title>闲置VPS能用来干点啥</title>
-    <url>/posts/free-vps/</url>
-    <content><![CDATA[<p>总是看到线路好、价格合适的 VPS 就忍不住剁手，到现在多多少少有几台闲置的 VPS，放着也是放着，能干点啥好呢？</p>
+    <title>JanusGraph 图数据库搭建</title>
+    <url>/posts/janusgraph/</url>
+    <content><![CDATA[<p>最近折腾了一波 JanusGraph 图数据库的部署，采用 <code>JanusGraph</code> + <code>HBase</code> + <code>ElasticSearch</code> 架构，在此记录下过程。</p>
 <span id="more"></span>
+<h2 id="搭建"><a class="markdownIt-Anchor" href="#搭建"></a> 搭建</h2>
+<h3 id="搭建准备"><a class="markdownIt-Anchor" href="#搭建准备"></a> 搭建准备</h3>
+<p>本文主要记录 JanusGraph 图数据库的部署，需要另行搭建 HBase 和 ElasticSearch，本文以本地已经部署好 HBase 和 ElasticSearch 为例。</p>
+<ul>
+<li>HBase 地址: <code>127.0.0.1:2181</code></li>
+<li>ElasticSearch 地址: <code>127.0.0.1:9200</code></li>
+</ul>
+<p>另外，系统需安装有<code>unzip</code>、<code>jdk</code>和你喜欢的文本编辑器，且建议在非 root 用户下执行。</p>
+<h3 id="文件准备"><a class="markdownIt-Anchor" href="#文件准备"></a> 文件准备</h3>
+<blockquote>
+<p>项目地址: <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0phbnVzR3JhcGgvamFudXNncmFwaA==">JanusGraph/janusgraph<i class="fa fa-external-link-alt"></i></span></p>
+</blockquote>
+<p>在 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0phbnVzR3JhcGgvamFudXNncmFwaC9yZWxlYXNlcw==">Github release 页面<i class="fa fa-external-link-alt"></i></span>上下载我们所需要的文件，形如<code>janusgraph-&#123;VERSION&#125;-hadoop2.zip</code>，在这里我们下载最新版 <code>0.3.2</code> 版本: <a href="https://github.com/JanusGraph/janusgraph/releases/download/v0.3.2/janusgraph-0.3.2-hadoop2.zip"><code>janusgraph-0.3.2-hadoop2.zip</code></a>，并解压出来。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line">wget https://github.com/JanusGraph/janusgraph/releases/download/v0.3.2/janusgraph-0.3.2-hadoop2.zip -cO janusgraph-0.3.2-hadoop2.zip</span><br><span class="line">unzip janusgraph-0.3.2-hadoop2.zip</span><br><span class="line">mv janusgraph-0.3.2-hadoop2 janusgraph</span><br><span class="line"><span class="built_in">cd</span> janusgraph</span><br></pre></td></tr></table></figure>
+<p>接下来的操作大部分在此文件夹内进行，即<code>~/janusgraph</code>文件夹内。</p>
+<h3 id="调整-gremlin-server-配置"><a class="markdownIt-Anchor" href="#调整-gremlin-server-配置"></a> 调整 Gremlin Server 配置</h3>
+<p>通过<code>vi conf/gremlin-server/gremlin-server.yaml</code>打开，有以下部分配置需要改动。</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 监听地址，默认对外开放，若只允许本地访问则更改为 127.0.0.1</span></span><br><span class="line"><span class="attr">host:</span> <span class="number">0.0</span><span class="number">.0</span><span class="number">.0</span></span><br><span class="line"><span class="comment"># 监听端口，有需要可以更改</span></span><br><span class="line"><span class="attr">port:</span> <span class="number">8182</span></span><br><span class="line"><span class="comment"># 服务类型，可选以下内容</span></span><br><span class="line"><span class="comment"># - WebSocketChannelizer 提供WebSocket服务</span></span><br><span class="line"><span class="comment"># - HttpChannelizer 提供Http服务</span></span><br><span class="line"><span class="comment"># - WsAndHttpChannelizer 推荐，同时提供WebSocket和Http服务，从0.2.0版本开始支持</span></span><br><span class="line"><span class="attr">channelizer:</span> <span class="string">org.apache.tinkerpop.gremlin.server.channel.WsAndHttpChannelizer</span></span><br><span class="line"><span class="attr">graphs:</span> &#123;</span><br><span class="line">    <span class="comment"># 所要用到的配置文件路径，可自定义</span></span><br><span class="line">    <span class="attr">graph:</span> <span class="string">conf/gremlin-server/janusgraph.properties</span>,</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<details>
+  <summary>完整配置</summary>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">host:</span> <span class="number">0.0</span><span class="number">.0</span><span class="number">.0</span></span><br><span class="line"><span class="attr">port:</span> <span class="number">8182</span></span><br><span class="line"><span class="attr">scriptEvaluationTimeout:</span> <span class="number">30000</span></span><br><span class="line"><span class="attr">channelizer:</span> <span class="string">org.apache.tinkerpop.gremlin.server.channel.WsAndHttpChannelizer</span></span><br><span class="line"><span class="attr">graphs:</span> &#123; <span class="attr">graph:</span> <span class="string">conf/gremlin-server/janusgraph.properties</span> &#125;</span><br><span class="line"><span class="attr">scriptEngines:</span></span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">gremlin-groovy:</span></span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">plugins:</span></span><br><span class="line">          &#123;</span><br><span class="line">            <span class="attr">org.janusgraph.graphdb.tinkerpop.plugin.JanusGraphGremlinPlugin:</span> &#123;&#125;,</span><br><span class="line">            <span class="string">?</span> <span class="string">org.apache.tinkerpop.gremlin.server.jsr223.GremlinServerGremlinPlugin</span></span><br><span class="line">            <span class="string">:</span> &#123;&#125;,</span><br><span class="line">            <span class="string">?</span> <span class="string">org.apache.tinkerpop.gremlin.tinkergraph.jsr223.TinkerGraphGremlinPlugin</span></span><br><span class="line">            <span class="string">:</span> &#123;&#125;,</span><br><span class="line">            <span class="attr">org.apache.tinkerpop.gremlin.jsr223.ImportGremlinPlugin:</span></span><br><span class="line">              &#123;</span><br><span class="line">                <span class="attr">classImports:</span> [<span class="string">java.lang.Math</span>],</span><br><span class="line">                <span class="attr">methodImports:</span> [<span class="string">java.lang.Math#*</span>],</span><br><span class="line">              &#125;,</span><br><span class="line">            <span class="attr">org.apache.tinkerpop.gremlin.jsr223.ScriptFileGremlinPlugin:</span></span><br><span class="line">              &#123; <span class="attr">files:</span> [<span class="string">scripts/empty-sample.groovy</span>] &#125;,</span><br><span class="line">          &#125;,</span><br><span class="line">      &#125;,</span><br><span class="line">  &#125;</span><br><span class="line"><span class="attr">serializers:</span></span><br><span class="line">  <span class="bullet">-</span> &#123;</span><br><span class="line">      <span class="attr">className:</span> <span class="string">org.apache.tinkerpop.gremlin.driver.ser.GryoMessageSerializerV3d0</span>,</span><br><span class="line">      <span class="attr">config:</span></span><br><span class="line">        &#123;</span><br><span class="line">          <span class="attr">ioRegistries:</span> [<span class="string">org.janusgraph.graphdb.tinkerpop.JanusGraphIoRegistry</span>],</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;</span><br><span class="line">  <span class="bullet">-</span> &#123;</span><br><span class="line">      <span class="attr">className:</span> <span class="string">org.apache.tinkerpop.gremlin.driver.ser.GryoMessageSerializerV3d0</span>,</span><br><span class="line">      <span class="attr">config:</span> &#123; <span class="attr">serializeResultToString:</span> <span class="literal">true</span> &#125;,</span><br><span class="line">    &#125;</span><br><span class="line">  <span class="bullet">-</span> &#123;</span><br><span class="line">      <span class="attr">className:</span> <span class="string">org.apache.tinkerpop.gremlin.driver.ser.GraphSONMessageSerializerV3d0</span>,</span><br><span class="line">      <span class="attr">config:</span></span><br><span class="line">        &#123;</span><br><span class="line">          <span class="attr">ioRegistries:</span> [<span class="string">org.janusgraph.graphdb.tinkerpop.JanusGraphIoRegistry</span>],</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;</span><br><span class="line">  <span class="comment"># Older serialization versions for backwards compatibility:</span></span><br><span class="line">  <span class="bullet">-</span> &#123;</span><br><span class="line">      <span class="attr">className:</span> <span class="string">org.apache.tinkerpop.gremlin.driver.ser.GryoMessageSerializerV1d0</span>,</span><br><span class="line">      <span class="attr">config:</span></span><br><span class="line">        &#123;</span><br><span class="line">          <span class="attr">ioRegistries:</span> [<span class="string">org.janusgraph.graphdb.tinkerpop.JanusGraphIoRegistry</span>],</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;</span><br><span class="line">  <span class="bullet">-</span> &#123;</span><br><span class="line">      <span class="attr">className:</span> <span class="string">org.apache.tinkerpop.gremlin.driver.ser.GryoLiteMessageSerializerV1d0</span>,</span><br><span class="line">      <span class="attr">config:</span></span><br><span class="line">        &#123;</span><br><span class="line">          <span class="attr">ioRegistries:</span> [<span class="string">org.janusgraph.graphdb.tinkerpop.JanusGraphIoRegistry</span>],</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;</span><br><span class="line">  <span class="bullet">-</span> &#123;</span><br><span class="line">      <span class="attr">className:</span> <span class="string">org.apache.tinkerpop.gremlin.driver.ser.GryoMessageSerializerV1d0</span>,</span><br><span class="line">      <span class="attr">config:</span> &#123; <span class="attr">serializeResultToString:</span> <span class="literal">true</span> &#125;,</span><br><span class="line">    &#125;</span><br><span class="line">  <span class="bullet">-</span> &#123;</span><br><span class="line">      <span class="attr">className:</span> <span class="string">org.apache.tinkerpop.gremlin.driver.ser.GraphSONMessageSerializerGremlinV2d0</span>,</span><br><span class="line">      <span class="attr">config:</span></span><br><span class="line">        &#123;</span><br><span class="line">          <span class="attr">ioRegistries:</span> [<span class="string">org.janusgraph.graphdb.tinkerpop.JanusGraphIoRegistry</span>],</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;</span><br><span class="line">  <span class="bullet">-</span> &#123;</span><br><span class="line">      <span class="attr">className:</span> <span class="string">org.apache.tinkerpop.gremlin.driver.ser.GraphSONMessageSerializerGremlinV1d0</span>,</span><br><span class="line">      <span class="attr">config:</span></span><br><span class="line">        &#123;</span><br><span class="line">          <span class="attr">ioRegistries:</span></span><br><span class="line">            [<span class="string">org.janusgraph.graphdb.tinkerpop.JanusGraphIoRegistryV1d0</span>],</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;</span><br><span class="line">  <span class="bullet">-</span> &#123;</span><br><span class="line">      <span class="attr">className:</span> <span class="string">org.apache.tinkerpop.gremlin.driver.ser.GraphSONMessageSerializerV1d0</span>,</span><br><span class="line">      <span class="attr">config:</span></span><br><span class="line">        &#123;</span><br><span class="line">          <span class="attr">ioRegistries:</span></span><br><span class="line">            [<span class="string">org.janusgraph.graphdb.tinkerpop.JanusGraphIoRegistryV1d0</span>],</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;</span><br><span class="line"><span class="attr">processors:</span></span><br><span class="line">  <span class="bullet">-</span> &#123;</span><br><span class="line">      <span class="attr">className:</span> <span class="string">org.apache.tinkerpop.gremlin.server.op.session.SessionOpProcessor</span>,</span><br><span class="line">      <span class="attr">config:</span> &#123; <span class="attr">sessionTimeout:</span> <span class="number">28800000</span> &#125;,</span><br><span class="line">    &#125;</span><br><span class="line">  <span class="bullet">-</span> &#123;</span><br><span class="line">      <span class="attr">className:</span> <span class="string">org.apache.tinkerpop.gremlin.server.op.traversal.TraversalOpProcessor</span>,</span><br><span class="line">      <span class="attr">config:</span> &#123; <span class="attr">cacheExpirationTime:</span> <span class="number">600000</span>, <span class="attr">cacheMaxSize:</span> <span class="number">1000</span> &#125;,</span><br><span class="line">    &#125;</span><br><span class="line"><span class="attr">metrics:</span></span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">consoleReporter:</span> &#123; <span class="attr">enabled:</span> <span class="literal">true</span>, <span class="attr">interval:</span> <span class="number">180000</span> &#125;,</span><br><span class="line">    <span class="attr">csvReporter:</span></span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">enabled:</span> <span class="literal">true</span>,</span><br><span class="line">        <span class="attr">interval:</span> <span class="number">180000</span>,</span><br><span class="line">        <span class="attr">fileName:</span> <span class="string">/tmp/gremlin-server-metrics.csv</span>,</span><br><span class="line">      &#125;,</span><br><span class="line">    <span class="attr">jmxReporter:</span> &#123; <span class="attr">enabled:</span> <span class="literal">true</span> &#125;,</span><br><span class="line">    <span class="attr">slf4jReporter:</span> &#123; <span class="attr">enabled:</span> <span class="literal">true</span>, <span class="attr">interval:</span> <span class="number">180000</span> &#125;,</span><br><span class="line">    <span class="attr">gangliaReporter:</span></span><br><span class="line">      &#123; <span class="attr">enabled:</span> <span class="literal">false</span>, <span class="attr">interval:</span> <span class="number">180000</span>, <span class="attr">addressingMode:</span> <span class="string">MULTICAST</span> &#125;,</span><br><span class="line">    <span class="attr">graphiteReporter:</span> &#123; <span class="attr">enabled:</span> <span class="literal">false</span>, <span class="attr">interval:</span> <span class="number">180000</span> &#125;,</span><br><span class="line">  &#125;</span><br><span class="line"><span class="attr">maxInitialLineLength:</span> <span class="number">4096</span></span><br><span class="line"><span class="attr">maxHeaderSize:</span> <span class="number">8192</span></span><br><span class="line"><span class="attr">maxChunkSize:</span> <span class="number">8192</span></span><br><span class="line"><span class="attr">maxContentLength:</span> <span class="number">65536</span></span><br><span class="line"><span class="attr">maxAccumulationBufferComponents:</span> <span class="number">1024</span></span><br><span class="line"><span class="attr">resultIterationBatchSize:</span> <span class="number">64</span></span><br><span class="line"><span class="attr">writeBufferLowWaterMark:</span> <span class="number">32768</span></span><br><span class="line"><span class="attr">writeBufferHighWaterMark:</span> <span class="number">65536</span></span><br></pre></td></tr></table></figure>
+</details>
+<h3 id="调整-properties-文件"><a class="markdownIt-Anchor" href="#调整-properties-文件"></a> 调整 properties 文件</h3>
+<p>通过<code>vi conf/gremlin-server/janusgraph.properties</code>打开 properties 文件，加入以下内容。</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">gremlin.graph</span> <span class="string">=</span> <span class="string">org.janusgraph.core.JanusGraphFactory</span></span><br><span class="line"><span class="string">storage.backend</span> <span class="string">=</span> <span class="string">hbase</span></span><br><span class="line"><span class="comment"># 可换成远程 HBase 所在 IP</span></span><br><span class="line"><span class="string">storage.hostname</span> <span class="string">=</span> <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span></span><br><span class="line"><span class="comment"># 若采用 HBase 集群，使用下面的写法，采用&#x27;,&#x27;分隔各个 IP</span></span><br><span class="line"><span class="comment"># storage.hostname = 192.168.0.1,192.168.0.2</span></span><br><span class="line"><span class="string">storage.port</span> <span class="string">=</span> <span class="number">2181</span></span><br><span class="line"><span class="string">cache.db-cache</span> <span class="string">=</span> <span class="literal">true</span></span><br><span class="line"><span class="string">cache.db-cache-clean-wait</span> <span class="string">=</span> <span class="number">20</span></span><br><span class="line"><span class="string">cache.db-cache-time</span> <span class="string">=</span> <span class="number">180000</span></span><br><span class="line"><span class="string">cache.db-cache-size</span> <span class="string">=</span> <span class="number">0.5</span></span><br><span class="line"><span class="string">index.search.backend</span> <span class="string">=</span> <span class="string">elasticsearch</span></span><br><span class="line"><span class="comment"># 可换成远程 ElasticSearch 所在地址</span></span><br><span class="line"><span class="string">index.search.hostname</span> <span class="string">=</span> <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span><span class="string">:9200</span></span><br><span class="line"><span class="comment"># 若采用 ElasticSearch 集群，使用下面的写法，采用&#x27;,&#x27;分隔各个 IP，默认端口可省略</span></span><br><span class="line"><span class="string">index.search.hostname</span> <span class="string">=</span> <span class="number">192.168</span><span class="number">.0</span><span class="number">.1</span><span class="string">,192.168.0.2:9200,192.168.0.3</span></span><br></pre></td></tr></table></figure>
+<h3 id="临时启用服务"><a class="markdownIt-Anchor" href="#临时启用服务"></a> 临时启用服务</h3>
+<p>运行如下命令启动服务。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">bin/gremlin-server.sh conf/gremlin-server/gremlin-server.yaml</span><br></pre></td></tr></table></figure>
+<p>由于使用了默认配置文件，则可以省略配置文件路径。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">bin/gremlin-server.sh</span><br></pre></td></tr></table></figure>
+<p>当屏幕上出现如下内容时，则代表服务已经开启完成。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[gremlin-server-boss-1] INFO  org.apache.tinkerpop.gremlin.server.GremlinServer  - Channel started at port 8182.</span><br></pre></td></tr></table></figure>
+<h3 id="守护进程"><a class="markdownIt-Anchor" href="#守护进程"></a> 守护进程</h3>
+<h4 id="配置"><a class="markdownIt-Anchor" href="#配置"></a> 配置</h4>
+<p>在此以 systemd 为例进行配置，可以参考一下，注意替换文件路径。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo vi /etc/systemd/system/janusgraph.service</span><br></pre></td></tr></table></figure>
+<p>输入以下内容并保存:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description=JanusGraph Server</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line"><span class="comment"># Environment=&quot;PATH=yourpath&quot;</span></span><br><span class="line">ExecStart=/root/janusgraph/bin/gremlin-server.sh /root/janusgraph/conf/gremlin-server/gremlin-server.yaml</span><br><span class="line">ExecReload=/bin/<span class="built_in">kill</span> -HUP <span class="variable">$MAINPID</span></span><br><span class="line">Type=simple</span><br><span class="line">User=root</span><br><span class="line">Group=root</span><br><span class="line">Restart=always</span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure>
+<p>可能会遇到错误，显示<code>java: command not found</code>，请把上面的备注取消掉，替换上自己的系统环境变量。</p>
+<h4 id="常用命令"><a class="markdownIt-Anchor" href="#常用命令"></a> 常用命令</h4>
+<ul>
+<li>启用服务: <code>sudo service janusgraph start</code></li>
+<li>关闭服务: <code>sudo service janusgraph stop</code></li>
+<li>重启服务: <code>sudo service janusgraph restart</code></li>
+<li>开机启动: <code>sudo systemctl enable janusgraph</code></li>
+<li>取消开机启动: <code>sudo systemctl disable janusgraph</code></li>
+<li>查看日志: <code>sudo journalctl -u janusgraph --since tody</code></li>
+</ul>
+<h2 id="测试"><a class="markdownIt-Anchor" href="#测试"></a> 测试</h2>
+<h3 id="测试-websocket"><a class="markdownIt-Anchor" href="#测试-websocket"></a> 测试 WebSocket</h3>
+<p>运行<code>bin/gremlin.sh</code>。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[admin@localhost janusgraph]$ bin/gremlin.sh</span><br><span class="line"></span><br><span class="line">         \,,,/</span><br><span class="line">         (o o)</span><br><span class="line">-----oOOo-(3)-oOOo-----</span><br><span class="line">plugin activated: janusgraph.imports</span><br><span class="line">plugin activated: tinkerpop.server</span><br><span class="line">plugin activated: tinkerpop.utilities</span><br><span class="line">plugin activated: tinkerpop.hadoop</span><br><span class="line">plugin activated: tinkerpop.spark</span><br><span class="line">plugin activated: tinkerpop.tinkergraph</span><br><span class="line">gremlin&gt; :remote connect tinkerpop.server conf/remote.yaml</span><br><span class="line">==&gt;Configured localhost/127.0.0.1:8182</span><br><span class="line">gremlin&gt; :&gt; g.V().count()</span><br><span class="line">==&gt;0</span><br><span class="line">gremlin&gt;</span><br></pre></td></tr></table></figure>
+<p>如能正常响应，则表示部署成功。</p>
+<h3 id="测试-http"><a class="markdownIt-Anchor" href="#测试-http"></a> 测试 Http</h3>
+<p>运行如下命令测试 http 能否正常响应。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -XPOST -Hcontent-type:application/json -d <span class="string">&#x27;&#123;&quot;gremlin&quot;:&quot;g.V().count()&quot;&#125;&#x27;</span> http://localhost:8182</span><br></pre></td></tr></table></figure>
+<p>应有类似如下返回内容，则为正常。</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;requestId&quot;</span>: <span class="string">&quot;47608dd1-275d-4708-acf7-fa1e6355328b&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;status&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;message&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;code&quot;</span>: <span class="number">200</span>,</span><br><span class="line">    <span class="attr">&quot;attributes&quot;</span>: &#123; <span class="attr">&quot;@type&quot;</span>: <span class="string">&quot;g:Map&quot;</span>, <span class="attr">&quot;@value&quot;</span>: [] &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">&quot;result&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;data&quot;</span>: &#123;</span><br><span class="line">      <span class="attr">&quot;@type&quot;</span>: <span class="string">&quot;g:List&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;@value&quot;</span>: [&#123; <span class="attr">&quot;@type&quot;</span>: <span class="string">&quot;g:Int64&quot;</span>, <span class="attr">&quot;@value&quot;</span>: <span class="number">0</span> &#125;]</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">&quot;meta&quot;</span>: &#123; <span class="attr">&quot;@type&quot;</span>: <span class="string">&quot;g:Map&quot;</span>, <span class="attr">&quot;@value&quot;</span>: [] &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="可能遇到的坑"><a class="markdownIt-Anchor" href="#可能遇到的坑"></a> 可能遇到的坑</h2>
+<p>别问我怎么知道的</p>
 <ol>
-<li>
-<p>建代理</p>
-<p>鉴于我国的特色国情，访问外网总还是需要一些辅助。既然有闲置的 VPS，如果是国外的，线路速度也还不错的，可以考虑建个代理。虽然网上老说，会被检测啦，容易被封啦，其实不去选特别热门的商家，代理不要公开，自己好好用，基本也不会被封的。</p>
-</li>
-<li>
-<p>搭建个人博客</p>
-<p>这个么，如果你原本没有博客的话，可以考虑在 VPS 上建个博客。现在建站已经容易很多了，lnmp 一键脚本非常好用，也有免费的宝塔面板。博客可以采用 wordpress，或者静态的 Hexo、Jekyll 等，都有许多模板可用。相比于其他不是自建的博客，自建博客有了更高的自由度，当然也需要你有一定的基础。</p>
-</li>
-<li>
-<p>云盘</p>
-<p>国内许多免费云盘服务都陆续结束了服务，百度云盘又各种限速、审核，国外网盘访问困难。自建私人云盘就自由的多了。如果你有一台流量充足、硬盘足够的 VPS，就可以考虑以下自建云盘了。当然，硬盘不充足还有其他的选择，比如腾讯云和阿里云挂载自家的对象存储到服务器上做硬盘，牺牲了一定的性能，但能弥补硬盘的不足。</p>
-</li>
-<li>
-<p>PT/BT 下载</p>
-<p>在允许 BT 下载的服务器上凭借着大带宽、高流量、24 小时不关机，刷刷上传量，造福大众岂不是美滋滋。当然，一定要是服务商允许 BT 才行，不然小心给你封了。</p>
-</li>
-<li>
-<p>自建 DNS 服务器</p>
-<p>不想再被运营商劫持、不想再被 DNS 污染，那就在服务器上自建纯净 DNS 吧。当然要注意打开端口，而且最好不要是 53 端口，不然经过 GFW 就被污染了，一点用都没有。顺便，DNS 不解决翻墙问题。</p>
-</li>
-<li>
-<p>自建邮箱服务器</p>
-<p>厌恶了国内的免费邮箱，想要拥有自己的域名服务器？那么你可以在自己的服务器商搭建邮箱服务器。服务器怎么配置全凭你喜好。当然也有更好的实现方式。像我现在用 mailgun 转发，配合 gmail，用得还是非常舒服的。</p>
-</li>
-<li>
-<p>虚拟主机</p>
-<p>VPS 嘛，虽然说是虚拟服务器，那也是一台服务器啊，那就可以拆分成虚拟主机来卖咯。当然可能大家都得共用一个 IP 了，如果有哪个网站有问题，说不定会牵连同 IP 的其他网站。而且吧，弄成虚拟主机也没那么简单，还有许多工作要做，如果只是简单的 lnmp 一键脚本这样的虚拟主机，还是就跟朋友用用吧，分担一下网费。</p>
-</li>
-<li>
-<p>搭建感兴趣的其他服务</p>
-<p>在 GitHub 上面有许多有意思的项目，如果你比较感兴趣，你可以将其部署到你的服务器上玩一玩。感觉也是非常不错的。</p>
-</li>
-<li>
-<p>其他</p>
-<p>我前面说的基本都是 Linux 主机，Windows 服务器或许也能做吧。但是 Windows 自身内存占用较多，成本或许也更高了。Windows 主机的话还能干些只有 Windows 能干的事，比如说一些挂机的工作，需要运行 exe 程序的。</p>
-</li>
+<li>本地是否安装 java</li>
+<li>配置文件路径是否正确</li>
+<li>远程 hbase 和 es 端口防火墙是否开放</li>
+<li>远程 hbase 和 es 是否监听的是本地地址</li>
 </ol>
 ]]></content>
       <categories>
-        <category>小记</category>
+        <category>应用部署</category>
       </categories>
       <tags>
-        <tag>VPS</tag>
+        <tag>ElasticSearch</tag>
+        <tag>JanusGraph</tag>
+        <tag>Hbase</tag>
+        <tag>Gremlin</tag>
       </tags>
   </entry>
   <entry>
@@ -3578,88 +3660,6 @@ SWIFT 代码：CIBKCNBJ100<br />
         <tag>php</tag>
         <tag>LNMP</tag>
         <tag>建站</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JanusGraph 图数据库搭建</title>
-    <url>/posts/janusgraph/</url>
-    <content><![CDATA[<p>最近折腾了一波 JanusGraph 图数据库的部署，采用 <code>JanusGraph</code> + <code>HBase</code> + <code>ElasticSearch</code> 架构，在此记录下过程。</p>
-<span id="more"></span>
-<h2 id="搭建"><a class="markdownIt-Anchor" href="#搭建"></a> 搭建</h2>
-<h3 id="搭建准备"><a class="markdownIt-Anchor" href="#搭建准备"></a> 搭建准备</h3>
-<p>本文主要记录 JanusGraph 图数据库的部署，需要另行搭建 HBase 和 ElasticSearch，本文以本地已经部署好 HBase 和 ElasticSearch 为例。</p>
-<ul>
-<li>HBase 地址: <code>127.0.0.1:2181</code></li>
-<li>ElasticSearch 地址: <code>127.0.0.1:9200</code></li>
-</ul>
-<p>另外，系统需安装有<code>unzip</code>、<code>jdk</code>和你喜欢的文本编辑器，且建议在非 root 用户下执行。</p>
-<h3 id="文件准备"><a class="markdownIt-Anchor" href="#文件准备"></a> 文件准备</h3>
-<blockquote>
-<p>项目地址: <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0phbnVzR3JhcGgvamFudXNncmFwaA==">JanusGraph/janusgraph<i class="fa fa-external-link-alt"></i></span></p>
-</blockquote>
-<p>在 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0phbnVzR3JhcGgvamFudXNncmFwaC9yZWxlYXNlcw==">Github release 页面<i class="fa fa-external-link-alt"></i></span>上下载我们所需要的文件，形如<code>janusgraph-&#123;VERSION&#125;-hadoop2.zip</code>，在这里我们下载最新版 <code>0.3.2</code> 版本: <a href="https://github.com/JanusGraph/janusgraph/releases/download/v0.3.2/janusgraph-0.3.2-hadoop2.zip"><code>janusgraph-0.3.2-hadoop2.zip</code></a>，并解压出来。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line">wget https://github.com/JanusGraph/janusgraph/releases/download/v0.3.2/janusgraph-0.3.2-hadoop2.zip -cO janusgraph-0.3.2-hadoop2.zip</span><br><span class="line">unzip janusgraph-0.3.2-hadoop2.zip</span><br><span class="line">mv janusgraph-0.3.2-hadoop2 janusgraph</span><br><span class="line"><span class="built_in">cd</span> janusgraph</span><br></pre></td></tr></table></figure>
-<p>接下来的操作大部分在此文件夹内进行，即<code>~/janusgraph</code>文件夹内。</p>
-<h3 id="调整-gremlin-server-配置"><a class="markdownIt-Anchor" href="#调整-gremlin-server-配置"></a> 调整 Gremlin Server 配置</h3>
-<p>通过<code>vi conf/gremlin-server/gremlin-server.yaml</code>打开，有以下部分配置需要改动。</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 监听地址，默认对外开放，若只允许本地访问则更改为 127.0.0.1</span></span><br><span class="line"><span class="attr">host:</span> <span class="number">0.0</span><span class="number">.0</span><span class="number">.0</span></span><br><span class="line"><span class="comment"># 监听端口，有需要可以更改</span></span><br><span class="line"><span class="attr">port:</span> <span class="number">8182</span></span><br><span class="line"><span class="comment"># 服务类型，可选以下内容</span></span><br><span class="line"><span class="comment"># - WebSocketChannelizer 提供WebSocket服务</span></span><br><span class="line"><span class="comment"># - HttpChannelizer 提供Http服务</span></span><br><span class="line"><span class="comment"># - WsAndHttpChannelizer 推荐，同时提供WebSocket和Http服务，从0.2.0版本开始支持</span></span><br><span class="line"><span class="attr">channelizer:</span> <span class="string">org.apache.tinkerpop.gremlin.server.channel.WsAndHttpChannelizer</span></span><br><span class="line"><span class="attr">graphs:</span> &#123;</span><br><span class="line">    <span class="comment"># 所要用到的配置文件路径，可自定义</span></span><br><span class="line">    <span class="attr">graph:</span> <span class="string">conf/gremlin-server/janusgraph.properties</span>,</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-<details>
-  <summary>完整配置</summary>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">host:</span> <span class="number">0.0</span><span class="number">.0</span><span class="number">.0</span></span><br><span class="line"><span class="attr">port:</span> <span class="number">8182</span></span><br><span class="line"><span class="attr">scriptEvaluationTimeout:</span> <span class="number">30000</span></span><br><span class="line"><span class="attr">channelizer:</span> <span class="string">org.apache.tinkerpop.gremlin.server.channel.WsAndHttpChannelizer</span></span><br><span class="line"><span class="attr">graphs:</span> &#123; <span class="attr">graph:</span> <span class="string">conf/gremlin-server/janusgraph.properties</span> &#125;</span><br><span class="line"><span class="attr">scriptEngines:</span></span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">gremlin-groovy:</span></span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">plugins:</span></span><br><span class="line">          &#123;</span><br><span class="line">            <span class="attr">org.janusgraph.graphdb.tinkerpop.plugin.JanusGraphGremlinPlugin:</span> &#123;&#125;,</span><br><span class="line">            <span class="string">?</span> <span class="string">org.apache.tinkerpop.gremlin.server.jsr223.GremlinServerGremlinPlugin</span></span><br><span class="line">            <span class="string">:</span> &#123;&#125;,</span><br><span class="line">            <span class="string">?</span> <span class="string">org.apache.tinkerpop.gremlin.tinkergraph.jsr223.TinkerGraphGremlinPlugin</span></span><br><span class="line">            <span class="string">:</span> &#123;&#125;,</span><br><span class="line">            <span class="attr">org.apache.tinkerpop.gremlin.jsr223.ImportGremlinPlugin:</span></span><br><span class="line">              &#123;</span><br><span class="line">                <span class="attr">classImports:</span> [<span class="string">java.lang.Math</span>],</span><br><span class="line">                <span class="attr">methodImports:</span> [<span class="string">java.lang.Math#*</span>],</span><br><span class="line">              &#125;,</span><br><span class="line">            <span class="attr">org.apache.tinkerpop.gremlin.jsr223.ScriptFileGremlinPlugin:</span></span><br><span class="line">              &#123; <span class="attr">files:</span> [<span class="string">scripts/empty-sample.groovy</span>] &#125;,</span><br><span class="line">          &#125;,</span><br><span class="line">      &#125;,</span><br><span class="line">  &#125;</span><br><span class="line"><span class="attr">serializers:</span></span><br><span class="line">  <span class="bullet">-</span> &#123;</span><br><span class="line">      <span class="attr">className:</span> <span class="string">org.apache.tinkerpop.gremlin.driver.ser.GryoMessageSerializerV3d0</span>,</span><br><span class="line">      <span class="attr">config:</span></span><br><span class="line">        &#123;</span><br><span class="line">          <span class="attr">ioRegistries:</span> [<span class="string">org.janusgraph.graphdb.tinkerpop.JanusGraphIoRegistry</span>],</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;</span><br><span class="line">  <span class="bullet">-</span> &#123;</span><br><span class="line">      <span class="attr">className:</span> <span class="string">org.apache.tinkerpop.gremlin.driver.ser.GryoMessageSerializerV3d0</span>,</span><br><span class="line">      <span class="attr">config:</span> &#123; <span class="attr">serializeResultToString:</span> <span class="literal">true</span> &#125;,</span><br><span class="line">    &#125;</span><br><span class="line">  <span class="bullet">-</span> &#123;</span><br><span class="line">      <span class="attr">className:</span> <span class="string">org.apache.tinkerpop.gremlin.driver.ser.GraphSONMessageSerializerV3d0</span>,</span><br><span class="line">      <span class="attr">config:</span></span><br><span class="line">        &#123;</span><br><span class="line">          <span class="attr">ioRegistries:</span> [<span class="string">org.janusgraph.graphdb.tinkerpop.JanusGraphIoRegistry</span>],</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;</span><br><span class="line">  <span class="comment"># Older serialization versions for backwards compatibility:</span></span><br><span class="line">  <span class="bullet">-</span> &#123;</span><br><span class="line">      <span class="attr">className:</span> <span class="string">org.apache.tinkerpop.gremlin.driver.ser.GryoMessageSerializerV1d0</span>,</span><br><span class="line">      <span class="attr">config:</span></span><br><span class="line">        &#123;</span><br><span class="line">          <span class="attr">ioRegistries:</span> [<span class="string">org.janusgraph.graphdb.tinkerpop.JanusGraphIoRegistry</span>],</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;</span><br><span class="line">  <span class="bullet">-</span> &#123;</span><br><span class="line">      <span class="attr">className:</span> <span class="string">org.apache.tinkerpop.gremlin.driver.ser.GryoLiteMessageSerializerV1d0</span>,</span><br><span class="line">      <span class="attr">config:</span></span><br><span class="line">        &#123;</span><br><span class="line">          <span class="attr">ioRegistries:</span> [<span class="string">org.janusgraph.graphdb.tinkerpop.JanusGraphIoRegistry</span>],</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;</span><br><span class="line">  <span class="bullet">-</span> &#123;</span><br><span class="line">      <span class="attr">className:</span> <span class="string">org.apache.tinkerpop.gremlin.driver.ser.GryoMessageSerializerV1d0</span>,</span><br><span class="line">      <span class="attr">config:</span> &#123; <span class="attr">serializeResultToString:</span> <span class="literal">true</span> &#125;,</span><br><span class="line">    &#125;</span><br><span class="line">  <span class="bullet">-</span> &#123;</span><br><span class="line">      <span class="attr">className:</span> <span class="string">org.apache.tinkerpop.gremlin.driver.ser.GraphSONMessageSerializerGremlinV2d0</span>,</span><br><span class="line">      <span class="attr">config:</span></span><br><span class="line">        &#123;</span><br><span class="line">          <span class="attr">ioRegistries:</span> [<span class="string">org.janusgraph.graphdb.tinkerpop.JanusGraphIoRegistry</span>],</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;</span><br><span class="line">  <span class="bullet">-</span> &#123;</span><br><span class="line">      <span class="attr">className:</span> <span class="string">org.apache.tinkerpop.gremlin.driver.ser.GraphSONMessageSerializerGremlinV1d0</span>,</span><br><span class="line">      <span class="attr">config:</span></span><br><span class="line">        &#123;</span><br><span class="line">          <span class="attr">ioRegistries:</span></span><br><span class="line">            [<span class="string">org.janusgraph.graphdb.tinkerpop.JanusGraphIoRegistryV1d0</span>],</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;</span><br><span class="line">  <span class="bullet">-</span> &#123;</span><br><span class="line">      <span class="attr">className:</span> <span class="string">org.apache.tinkerpop.gremlin.driver.ser.GraphSONMessageSerializerV1d0</span>,</span><br><span class="line">      <span class="attr">config:</span></span><br><span class="line">        &#123;</span><br><span class="line">          <span class="attr">ioRegistries:</span></span><br><span class="line">            [<span class="string">org.janusgraph.graphdb.tinkerpop.JanusGraphIoRegistryV1d0</span>],</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;</span><br><span class="line"><span class="attr">processors:</span></span><br><span class="line">  <span class="bullet">-</span> &#123;</span><br><span class="line">      <span class="attr">className:</span> <span class="string">org.apache.tinkerpop.gremlin.server.op.session.SessionOpProcessor</span>,</span><br><span class="line">      <span class="attr">config:</span> &#123; <span class="attr">sessionTimeout:</span> <span class="number">28800000</span> &#125;,</span><br><span class="line">    &#125;</span><br><span class="line">  <span class="bullet">-</span> &#123;</span><br><span class="line">      <span class="attr">className:</span> <span class="string">org.apache.tinkerpop.gremlin.server.op.traversal.TraversalOpProcessor</span>,</span><br><span class="line">      <span class="attr">config:</span> &#123; <span class="attr">cacheExpirationTime:</span> <span class="number">600000</span>, <span class="attr">cacheMaxSize:</span> <span class="number">1000</span> &#125;,</span><br><span class="line">    &#125;</span><br><span class="line"><span class="attr">metrics:</span></span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">consoleReporter:</span> &#123; <span class="attr">enabled:</span> <span class="literal">true</span>, <span class="attr">interval:</span> <span class="number">180000</span> &#125;,</span><br><span class="line">    <span class="attr">csvReporter:</span></span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">enabled:</span> <span class="literal">true</span>,</span><br><span class="line">        <span class="attr">interval:</span> <span class="number">180000</span>,</span><br><span class="line">        <span class="attr">fileName:</span> <span class="string">/tmp/gremlin-server-metrics.csv</span>,</span><br><span class="line">      &#125;,</span><br><span class="line">    <span class="attr">jmxReporter:</span> &#123; <span class="attr">enabled:</span> <span class="literal">true</span> &#125;,</span><br><span class="line">    <span class="attr">slf4jReporter:</span> &#123; <span class="attr">enabled:</span> <span class="literal">true</span>, <span class="attr">interval:</span> <span class="number">180000</span> &#125;,</span><br><span class="line">    <span class="attr">gangliaReporter:</span></span><br><span class="line">      &#123; <span class="attr">enabled:</span> <span class="literal">false</span>, <span class="attr">interval:</span> <span class="number">180000</span>, <span class="attr">addressingMode:</span> <span class="string">MULTICAST</span> &#125;,</span><br><span class="line">    <span class="attr">graphiteReporter:</span> &#123; <span class="attr">enabled:</span> <span class="literal">false</span>, <span class="attr">interval:</span> <span class="number">180000</span> &#125;,</span><br><span class="line">  &#125;</span><br><span class="line"><span class="attr">maxInitialLineLength:</span> <span class="number">4096</span></span><br><span class="line"><span class="attr">maxHeaderSize:</span> <span class="number">8192</span></span><br><span class="line"><span class="attr">maxChunkSize:</span> <span class="number">8192</span></span><br><span class="line"><span class="attr">maxContentLength:</span> <span class="number">65536</span></span><br><span class="line"><span class="attr">maxAccumulationBufferComponents:</span> <span class="number">1024</span></span><br><span class="line"><span class="attr">resultIterationBatchSize:</span> <span class="number">64</span></span><br><span class="line"><span class="attr">writeBufferLowWaterMark:</span> <span class="number">32768</span></span><br><span class="line"><span class="attr">writeBufferHighWaterMark:</span> <span class="number">65536</span></span><br></pre></td></tr></table></figure>
-</details>
-<h3 id="调整-properties-文件"><a class="markdownIt-Anchor" href="#调整-properties-文件"></a> 调整 properties 文件</h3>
-<p>通过<code>vi conf/gremlin-server/janusgraph.properties</code>打开 properties 文件，加入以下内容。</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">gremlin.graph</span> <span class="string">=</span> <span class="string">org.janusgraph.core.JanusGraphFactory</span></span><br><span class="line"><span class="string">storage.backend</span> <span class="string">=</span> <span class="string">hbase</span></span><br><span class="line"><span class="comment"># 可换成远程 HBase 所在 IP</span></span><br><span class="line"><span class="string">storage.hostname</span> <span class="string">=</span> <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span></span><br><span class="line"><span class="comment"># 若采用 HBase 集群，使用下面的写法，采用&#x27;,&#x27;分隔各个 IP</span></span><br><span class="line"><span class="comment"># storage.hostname = 192.168.0.1,192.168.0.2</span></span><br><span class="line"><span class="string">storage.port</span> <span class="string">=</span> <span class="number">2181</span></span><br><span class="line"><span class="string">cache.db-cache</span> <span class="string">=</span> <span class="literal">true</span></span><br><span class="line"><span class="string">cache.db-cache-clean-wait</span> <span class="string">=</span> <span class="number">20</span></span><br><span class="line"><span class="string">cache.db-cache-time</span> <span class="string">=</span> <span class="number">180000</span></span><br><span class="line"><span class="string">cache.db-cache-size</span> <span class="string">=</span> <span class="number">0.5</span></span><br><span class="line"><span class="string">index.search.backend</span> <span class="string">=</span> <span class="string">elasticsearch</span></span><br><span class="line"><span class="comment"># 可换成远程 ElasticSearch 所在地址</span></span><br><span class="line"><span class="string">index.search.hostname</span> <span class="string">=</span> <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span><span class="string">:9200</span></span><br><span class="line"><span class="comment"># 若采用 ElasticSearch 集群，使用下面的写法，采用&#x27;,&#x27;分隔各个 IP，默认端口可省略</span></span><br><span class="line"><span class="string">index.search.hostname</span> <span class="string">=</span> <span class="number">192.168</span><span class="number">.0</span><span class="number">.1</span><span class="string">,192.168.0.2:9200,192.168.0.3</span></span><br></pre></td></tr></table></figure>
-<h3 id="临时启用服务"><a class="markdownIt-Anchor" href="#临时启用服务"></a> 临时启用服务</h3>
-<p>运行如下命令启动服务。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">bin/gremlin-server.sh conf/gremlin-server/gremlin-server.yaml</span><br></pre></td></tr></table></figure>
-<p>由于使用了默认配置文件，则可以省略配置文件路径。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">bin/gremlin-server.sh</span><br></pre></td></tr></table></figure>
-<p>当屏幕上出现如下内容时，则代表服务已经开启完成。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[gremlin-server-boss-1] INFO  org.apache.tinkerpop.gremlin.server.GremlinServer  - Channel started at port 8182.</span><br></pre></td></tr></table></figure>
-<h3 id="守护进程"><a class="markdownIt-Anchor" href="#守护进程"></a> 守护进程</h3>
-<h4 id="配置"><a class="markdownIt-Anchor" href="#配置"></a> 配置</h4>
-<p>在此以 systemd 为例进行配置，可以参考一下，注意替换文件路径。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo vi /etc/systemd/system/janusgraph.service</span><br></pre></td></tr></table></figure>
-<p>输入以下内容并保存:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description=JanusGraph Server</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line"><span class="comment"># Environment=&quot;PATH=yourpath&quot;</span></span><br><span class="line">ExecStart=/root/janusgraph/bin/gremlin-server.sh /root/janusgraph/conf/gremlin-server/gremlin-server.yaml</span><br><span class="line">ExecReload=/bin/<span class="built_in">kill</span> -HUP <span class="variable">$MAINPID</span></span><br><span class="line">Type=simple</span><br><span class="line">User=root</span><br><span class="line">Group=root</span><br><span class="line">Restart=always</span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure>
-<p>可能会遇到错误，显示<code>java: command not found</code>，请把上面的备注取消掉，替换上自己的系统环境变量。</p>
-<h4 id="常用命令"><a class="markdownIt-Anchor" href="#常用命令"></a> 常用命令</h4>
-<ul>
-<li>启用服务: <code>sudo service janusgraph start</code></li>
-<li>关闭服务: <code>sudo service janusgraph stop</code></li>
-<li>重启服务: <code>sudo service janusgraph restart</code></li>
-<li>开机启动: <code>sudo systemctl enable janusgraph</code></li>
-<li>取消开机启动: <code>sudo systemctl disable janusgraph</code></li>
-<li>查看日志: <code>sudo journalctl -u janusgraph --since tody</code></li>
-</ul>
-<h2 id="测试"><a class="markdownIt-Anchor" href="#测试"></a> 测试</h2>
-<h3 id="测试-websocket"><a class="markdownIt-Anchor" href="#测试-websocket"></a> 测试 WebSocket</h3>
-<p>运行<code>bin/gremlin.sh</code>。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[admin@localhost janusgraph]$ bin/gremlin.sh</span><br><span class="line"></span><br><span class="line">         \,,,/</span><br><span class="line">         (o o)</span><br><span class="line">-----oOOo-(3)-oOOo-----</span><br><span class="line">plugin activated: janusgraph.imports</span><br><span class="line">plugin activated: tinkerpop.server</span><br><span class="line">plugin activated: tinkerpop.utilities</span><br><span class="line">plugin activated: tinkerpop.hadoop</span><br><span class="line">plugin activated: tinkerpop.spark</span><br><span class="line">plugin activated: tinkerpop.tinkergraph</span><br><span class="line">gremlin&gt; :remote connect tinkerpop.server conf/remote.yaml</span><br><span class="line">==&gt;Configured localhost/127.0.0.1:8182</span><br><span class="line">gremlin&gt; :&gt; g.V().count()</span><br><span class="line">==&gt;0</span><br><span class="line">gremlin&gt;</span><br></pre></td></tr></table></figure>
-<p>如能正常响应，则表示部署成功。</p>
-<h3 id="测试-http"><a class="markdownIt-Anchor" href="#测试-http"></a> 测试 Http</h3>
-<p>运行如下命令测试 http 能否正常响应。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -XPOST -Hcontent-type:application/json -d <span class="string">&#x27;&#123;&quot;gremlin&quot;:&quot;g.V().count()&quot;&#125;&#x27;</span> http://localhost:8182</span><br></pre></td></tr></table></figure>
-<p>应有类似如下返回内容，则为正常。</p>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;requestId&quot;</span>: <span class="string">&quot;47608dd1-275d-4708-acf7-fa1e6355328b&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;status&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;message&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;code&quot;</span>: <span class="number">200</span>,</span><br><span class="line">    <span class="attr">&quot;attributes&quot;</span>: &#123; <span class="attr">&quot;@type&quot;</span>: <span class="string">&quot;g:Map&quot;</span>, <span class="attr">&quot;@value&quot;</span>: [] &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">&quot;result&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;data&quot;</span>: &#123;</span><br><span class="line">      <span class="attr">&quot;@type&quot;</span>: <span class="string">&quot;g:List&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;@value&quot;</span>: [&#123; <span class="attr">&quot;@type&quot;</span>: <span class="string">&quot;g:Int64&quot;</span>, <span class="attr">&quot;@value&quot;</span>: <span class="number">0</span> &#125;]</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">&quot;meta&quot;</span>: &#123; <span class="attr">&quot;@type&quot;</span>: <span class="string">&quot;g:Map&quot;</span>, <span class="attr">&quot;@value&quot;</span>: [] &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="可能遇到的坑"><a class="markdownIt-Anchor" href="#可能遇到的坑"></a> 可能遇到的坑</h2>
-<p>别问我怎么知道的</p>
-<ol>
-<li>本地是否安装 java</li>
-<li>配置文件路径是否正确</li>
-<li>远程 hbase 和 es 端口防火墙是否开放</li>
-<li>远程 hbase 和 es 是否监听的是本地地址</li>
-</ol>
-]]></content>
-      <categories>
-        <category>应用部署</category>
-      </categories>
-      <tags>
-        <tag>ElasticSearch</tag>
-        <tag>JanusGraph</tag>
-        <tag>Hbase</tag>
-        <tag>Gremlin</tag>
       </tags>
   </entry>
   <entry>
