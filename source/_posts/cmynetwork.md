@@ -188,6 +188,7 @@ permalink: /page/cmynetwork/
 ## 其他的话
 
 - [官网地址发布页](https://github.com/caomeicloud/url)，永不失联
+- [最新地址跳转页](https://caomeijump.com)
 - [官方 TG 通知频道](https://t.me/s/cmynetwork)
 - 可在官网右下角与客服联系(推荐)或提交工单
 - [全平台各客户端下载、教程与进阶技巧](https://caomei.wiki/)
