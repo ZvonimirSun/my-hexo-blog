@@ -617,6 +617,7 @@ waline:
   serverURL: https://wl.iszy.xyz # Waline server address url
   placeholder: |-
     请填写邮箱信息以便及时收到回复哦(●'◡'●)
+    本站支持匿名评论，无需登录~
     评论会在审核后显示，请勿重复评论~
   avatar: # Gravatar style
   meta: [nick, mail, link] # Custom comment header
