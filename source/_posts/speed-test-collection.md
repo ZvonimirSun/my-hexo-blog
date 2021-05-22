@@ -14,7 +14,7 @@ permalink: /page/speed-test-collection/
 
 ## 心阶云
 
-[官网传送门](https://url.iszy.xyz/xinjie)
+[官网传送门](https://url.iszy.xyz/xinjiebak)
 
 本地 300M 带宽高峰期测试，仅供参考。
 
