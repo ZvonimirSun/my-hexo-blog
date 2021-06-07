@@ -1,7 +1,7 @@
 ---
 title: 机场测速集合
 date: 2019-03-02 14:20:52
-updated: 2021-04-09 14:20:52
+updated: 2021-06-07 14:20:52
 categories:
 tags:
   - 科学上网
@@ -16,15 +16,15 @@ permalink: /page/speed-test-collection/
 
 [官网传送门](https://url.iszy.xyz/xinjiebak)
 
-本地 300M 带宽高峰期测试，仅供参考。
+本地高峰期测试，仅供参考。
 
 **SSR 线路测速**（建议使用）
 
-![SSR线路](https://img.iszy.xyz/20210401-073131.png)
+![SSR线路](https://img.iszy.xyz/20210607203121.png)
 
 **V2ray 线路测速**
 
-![V2ray线路](https://img.iszy.xyz/20210401-091815.png)
+![V2ray线路](https://img.iszy.xyz/20210607204320.png)
 
 ## CMYNetwork 红莓网络
 
