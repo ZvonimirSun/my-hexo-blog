@@ -1,5 +1,5 @@
 ---
-title: 【评测】优质SS/SSR/Trojan/V2Ray机场推荐
+title: 【评测】优质SS/SSR/Trojan/V2Ray机场推荐【618】
 date: 2019-01-03 03:11:50
 updated: 2021-06-05 10:00:00
 categories:
@@ -48,7 +48,7 @@ permalink: /page/bgfw/
 | [Electry](#九-electry)【官网无法访问，在搞清楚情况前暂不推荐】                         | V2Ray(专线、中继)     | 线路大佬，高速稳定               | [官网传送门](https://url.iszy.xyz/electry)    |
 | [V2Club](#十-v2club)                           | SS/V2ray(全专线)      | 稳定坚挺，多年老站               | [官网传送门](https://url.iszy.xyz/lanan)      |
 | [皇朝网络](#十一-皇朝网络)         | SS 隧道               | 性价比新站                       | [官网传送门](https://url.iszy.xyz/dinastio)   |
-| [Shuttle](#十二-shuttle)                 | V2ray                 | 平价新站，另含超多小众地区线路   | [官网传送门](https://url.iszy.xyz/shuttle)    |
+| [Shuttle](#十二-shuttle)【618特惠】                 | V2ray                 | 平价新站，另含超多小众地区线路   | [官网传送门](https://url.iszy.xyz/shuttle)    |
 
 > 本页机场均在上次网络大波动中提供了稳定的服务，还会持续观察未来表现
 
@@ -969,6 +969,14 @@ V2Club(旧蓝岸)，一家专门提供 v2ray 代理服务的服务商。或许�
 (新购续费均可使用 只能用于季付及以上套餐)
 
 > 官方优惠
+
+**618特惠**
+
+所有订阅套餐购买年付及以上使用优惠码`真的假的`，即可享受**6.18折**的限时特价。
+
+优惠码限量**50个**，年付套餐平均每天不足**4毛钱**。
+
+*以下为旧优惠，不确定还有没有~*
 
 - 新购套餐和续费产品同时可用：
   - 优惠代码 1：`P9SHYY0C7E`
