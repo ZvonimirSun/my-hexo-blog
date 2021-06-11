@@ -622,7 +622,10 @@ waline:
   requiredMeta: [nick, mail] # Set required fields: [nick] | [nick, mail]
   libUrl: https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js
   dark: 'auto'
-  emoji: ['https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/qq','https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/bilibili','https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/alus']
+  emoji: 
+    - https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/qq
+    - https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/bilibili
+    - https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/alus
 
 # LiveRe comments system
 # You can get your uid from https://livere.com/insight/myCode (General web site)
