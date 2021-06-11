@@ -606,20 +606,22 @@ changyan:
   appkey:
 
 # Waline
-# For more information: https://waline.js.org, https://github.com/lizheming/waline
+# For more information: https://waline.js.org, https://github.com/walinejs/waline
 waline:
   enable: true
   serverURL: https://wl.iszy.xyz # Waline server address url
-  placeholder: 本站支持匿名评论，无需登录~(●'◡'●)
+  locale:
+    placeholder: 本站支持匿名评论，无需登录~(●'◡'●)
   avatar: # Gravatar style
   meta: [nick, mail, link] # Custom comment header
   pageSize: 10 # Pagination size
-  lang: # Language, available values: en, zh-cn
+  #lang: # Language, available values: en, zh-cn
   # Warning: Do not enable both `waline.visitor` and `leancloud_visitors`.
   visitor: true # Article reading statistic
   comment_count: true # If false, comment count will only be displayed in post page, not in home page
-  requiredFields: [nick, mail] # Set required fields: [nick] | [nick, mail]
+  requiredMeta: [nick, mail] # Set required fields: [nick] | [nick, mail]
   libUrl: https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js
+  dark: 'auto'
   emojiCDN: https://cdn.jsdelivr.net/gh/GamerNoTitle/ValineCDN@master/
   emojiMaps:
     QQ1: "QQ/aini.gif"
