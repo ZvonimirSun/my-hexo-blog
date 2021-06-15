@@ -275,6 +275,33 @@
       </tags>
   </entry>
   <entry>
+    <title>给数组原型对象添加方法</title>
+    <url>/posts/6/</url>
+    <content><![CDATA[<p>今天使用<code>for...in</code>方法的时候发现枚举到了意料之外的<code>prototype</code>内的方法，发现是没有正确为数组原型对象添加方法，在此记录。</p>
+<span id="more"></span>
+<h2 id="问题"><a class="markdownIt-Anchor" href="#问题"></a> 问题</h2>
+<p>一般我们如何给一个数组原型对象添加方法呢，比如我们添加一个去重方法。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Array</span>.prototype.unique = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> n = &#123;&#125;,</span><br><span class="line">    r = [];</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="built_in">this</span>.length; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (!n[<span class="built_in">this</span>[i]]) &#123;</span><br><span class="line">      n[<span class="built_in">this</span>[i]] = <span class="literal">true</span>;</span><br><span class="line">      r.push(<span class="built_in">this</span>[i]);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> r;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>我看不少文章里这样就好了，这就会出现我刚刚说到的问题。在你使用<code>for...in</code>方法遍历数组时就会拿到<code>unique</code>这个 key 值，这个是不符合我们预期的。</p>
+<p>其实出现这样的情况是因为<code>Array.prototype</code>对象的<code>unique</code>属性的描述值<code>enumerable</code>为<code>true</code>，也就是可枚举，在枚举对象属性时会被枚举到（<code>for...in</code>或<code>Object.keys</code>方法）。</p>
+<p>根据<span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvSmF2YVNjcmlwdC9FbnVtZXJhYmlsaXR5X2FuZF9vd25lcnNoaXBfb2ZfcHJvcGVydGllcw==">MDN Web Docs<i class="fa fa-external-link-alt"></i></span>说明，可枚举属性是指那些内部 <code>可枚举</code> 标志设置为 <code>true</code> 的属性，对于通过直接的赋值和属性初始化的属性，该标识值默认为即为 <code>true</code>，对于通过 <code>Object.defineProperty</code> 等定义的属性，该标识值默认为 <code>false</code>。可枚举的属性可以通过 <code>for...in</code> 循环进行遍历（除非该属性名是一个 <code>Symbol</code>）。</p>
+<h2 id="解决"><a class="markdownIt-Anchor" href="#解决"></a> 解决</h2>
+<p>正确的方法如下，忽略方法内容。</p>
+<h3 id="方法一"><a class="markdownIt-Anchor" href="#方法一"></a> 方法一</h3>
+<p>先添加方法，再通过 <code>Object.defineProperty</code> 设置为不可枚举。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Array</span>.prototype.unique = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;;</span><br><span class="line"><span class="built_in">Object</span>.defineProperty(<span class="built_in">Array</span>.prototype, <span class="string">&quot;unique&quot;</span>, &#123;</span><br><span class="line">  <span class="attr">enumerable</span>: <span class="literal">false</span>,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h3 id="方法二"><a class="markdownIt-Anchor" href="#方法二"></a> 方法二</h3>
+<p>或者直接通过 <code>Object.defineProperty</code> 方法添加。此时<code>enumerable</code>默认为<code>false</code>，不用特别指定。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Object</span>.defineProperty(<span class="built_in">Array</span>.prototype, <span class="string">&quot;unique&quot;</span>, &#123;</span><br><span class="line">  <span class="attr">value</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>解决Elasticsearch查询记录超过10000时的异常</title>
     <url>/posts/6x5bzj/</url>
     <content><![CDATA[<p>最近遇到使用 ElasticSearch 做分页查询时，前面的页码都正常，后面的页码就会 500 错误的问题，一度怀疑是接口页码算错了。后来想起 ES 有个 10000 条数据的限制，默认返回数据量为 10000 条，超过的话就会报错。这里记录下解决办法。</p>
