@@ -1,6 +1,6 @@
 {
-  "name": "\u968f\u9047\u800c\u5b89",
-  "short_name": "\u968f\u9047\u800c\u5b89",
+  "name": "随遇而安",
+  "short_name": "随遇而安",
   "start_url": "/",
   "icons": [
     {
@@ -9,9 +9,10 @@
       "type": "image/png"
     },
     {
-      "src": "/images/android-chrome-384x384.png",
-      "sizes": "384x384",
-      "type": "image/png"
+      "src": "/images/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ],
   "theme_color": "#ffffff",

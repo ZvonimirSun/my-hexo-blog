@@ -51,7 +51,7 @@ favicon:
   small: /images/favicon-16x16.png
   medium: /images/favicon-32x32.png
   apple_touch_icon: /images/apple-touch-icon.png
-  safari_pinned_tab: /images/safari-logo.svg
+  #safari_pinned_tab: /images/logo.svg
   android_manifest: /manifest.json
 
 # Custom Logo (Warning: Do not support scheme Mist)
