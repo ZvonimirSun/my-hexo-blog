@@ -1,7 +1,7 @@
 ---
 title: 【评测】优质SS/SSR/Trojan/V2Ray机场推荐【618】
 date: 2019-01-03 03:11:50
-updated: 2021-06-05 10:00:00
+updated: 2021-06-16 10:00:00
 categories:
   - 推广
 tags:
@@ -40,15 +40,15 @@ permalink: /page/bgfw/
 | ----------------------------------------------- | --------------------- | -------------------------------- | --------------------------------------------- |
 | [心阶云 ⭐](/page/xinjiecloud/)【官方长期优惠】 | SSR(隧道、专线)/V2Ray | 性价比高，超多线路，稳定老站     | [官网传送门](https://url.iszy.xyz/xinjie)     |
 | [CMYNetwork 红莓网络](/page/cmynetwork/)        | SSR(专线)/Trojan      | 稳定平价，超多专线，小众地区线路 | [官网传送门](https://url.iszy.xyz/cmynetwork) |
-| [MEET](#四-meet)                               | SSR                   | 专注按量付费，高速稳定           | [官网传送门](https://url.iszy.xyz/fspeed)     |
-| [BoomCloud](#五-boomcloud)【官方长期优惠】     | V2ray/SSR/SS          | 多年老站，附赠丰富               | [官网传送门](https://url.iszy.xyz/boomcloud)  |
-| [DuangCloud](#六-duangcloud)【专属优惠】       | SS(全专线)            | 平价灵活                         | [官网传送门](https://url.iszy.xyz/duangcloud) |
-| [ByWave](#七-bywave)【特惠】                   | V2Ray                 | 高质高端，服务稳定               | [官网传送门](https://url.iszy.xyz/bywave)     |
-| [Blinkload](#八-blinkload)                     | SS(全专线)            | 稳定全能，超多专线               | [官网传送门](https://url.iszy.xyz/blinkload)  |
-| [Electry](#九-electry)【官网无法访问，在搞清楚情况前暂不推荐】                         | V2Ray(专线、中继)     | 线路大佬，高速稳定               | [官网传送门](https://url.iszy.xyz/electry)    |
-| [V2Club](#十-v2club)                           | SS/V2ray(全专线)      | 稳定坚挺，多年老站               | [官网传送门](https://url.iszy.xyz/lanan)      |
-| [皇朝网络](#十一-皇朝网络)         | SS 隧道               | 性价比新站                       | [官网传送门](https://url.iszy.xyz/dinastio)   |
-| [Shuttle](#十二-shuttle)【618特惠】                 | V2ray                 | 平价新站，另含超多小众地区线路   | [官网传送门](https://url.iszy.xyz/shuttle)    |
+| [MEET](#四-meet)                                | SSR                   | 专注按量付费，高速稳定           | [官网传送门](https://url.iszy.xyz/fspeed)     |
+| [BoomCloud](#五-boomcloud)【官方长期优惠】      | V2ray/SSR/SS          | 多年老站，附赠丰富               | [官网传送门](https://url.iszy.xyz/boomcloud)  |
+| [DuangCloud](#六-duangcloud)【专属优惠】        | SS(全专线)            | 平价灵活                         | [官网传送门](https://url.iszy.xyz/duangcloud) |
+| [ByWave](#七-bywave)【618 特惠】                | V2Ray                 | 高质高端，服务稳定               | [官网传送门](https://url.iszy.xyz/bywave)     |
+| [Blinkload](#八-blinkload)                      | SS(全专线)            | 稳定全能，超多专线               | [官网传送门](https://url.iszy.xyz/blinkload)  |
+| [Electry](#九-electry)                          | V2Ray(专线、中继)     | 线路大佬，高速稳定               | [官网传送门](https://url.iszy.xyz/electry)    |
+| [V2Club](#十-v2club)                            | SS/V2ray(全专线)      | 稳定坚挺，多年老站               | [官网传送门](https://url.iszy.xyz/lanan)      |
+| [皇朝网络](#十一-皇朝网络)                      | SS 隧道               | 性价比新站                       | [官网传送门](https://url.iszy.xyz/dinastio)   |
+| [Shuttle](#十二-shuttle)【618 特惠】            | V2ray                 | 平价新站，另含超多小众地区线路   | [官网传送门](https://url.iszy.xyz/shuttle)    |
 
 > 本页机场均在上次网络大波动中提供了稳定的服务，还会持续观察未来表现
 
@@ -70,7 +70,7 @@ permalink: /page/bgfw/
 
 **￥ 115** 及以上套餐可用
 
-儿童节**95折**礼遇码: `SoooHot`
+儿童节**95 折**礼遇码: `SoooHot`
 
 ### （二）简介
 
@@ -526,14 +526,14 @@ permalink: /page/bgfw/
 
 > 转官方优惠公告
 
-**ByWave 特惠**
+**ByWave 618 年中特惠**
 
 - 优惠代码 A: `4N6IFVLK6D`
-  额度：**30% off 一次性**
-  适用范围： 年付 两年付 三年付
+  额度：**7 折 一次性**
+  适用范围： 年付或以上
 - 优惠代码 B: `YH7B0X5CCB`
-  额度： **20% off 循环**
-  适用范围： 月付 季付 半年付
+  额度： **8 折 一次性**
+  适用范围： 月付 季付 半年付 一次性流量包
 
 **充值获得赠送金**
 
@@ -970,13 +970,13 @@ V2Club(旧蓝岸)，一家专门提供 v2ray 代理服务的服务商。或许�
 
 > 官方优惠
 
-**618特惠**
+**618 特惠**
 
-所有订阅套餐购买年付及以上使用优惠码`真的假的`，即可享受**6.18折**的限时特价。
+所有订阅套餐购买年付及以上使用优惠码`真的假的`，即可享受**6.18 折**的限时特价。
 
-优惠码限量**50个**，年付套餐平均每天不足**4毛钱**。
+优惠码限量**50 个**，年付套餐平均每天不足**4 毛钱**。
 
-*以下为旧优惠，不确定还有没有~*
+_以下为旧优惠，不确定还有没有~_
 
 - 新购套餐和续费产品同时可用：
   - 优惠代码 1：`P9SHYY0C7E`
