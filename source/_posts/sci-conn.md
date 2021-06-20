@@ -1,7 +1,7 @@
 ---
 title: 【评测】优质SS/SSR/Trojan/V2Ray机场推荐【618】
 date: 2019-01-03 03:11:50
-updated: 2021-06-16 10:00:00
+updated: 2021-06-20 10:00:00
 categories:
   - 推广
 tags:
@@ -36,19 +36,19 @@ permalink: /page/bgfw/
 
 ## 一、目录
 
-| 机场名称（点击了解更多）                        | 类别                  | 关键词                           | 操作                                          |
-| ----------------------------------------------- | --------------------- | -------------------------------- | --------------------------------------------- |
-| [心阶云 ⭐](/page/xinjiecloud/)【官方长期优惠】 | SSR(隧道、专线)/V2Ray | 性价比高，超多线路，稳定老站     | [官网传送门](https://url.iszy.xyz/xinjie)     |
-| [CMYNetwork 红莓网络](/page/cmynetwork/)        | SSR(专线)/Trojan      | 稳定平价，超多专线，小众地区线路 | [官网传送门](https://url.iszy.xyz/cmynetwork) |
-| [MEET](#四-meet)                                | SSR                   | 专注按量付费，高速稳定           | [官网传送门](https://url.iszy.xyz/fspeed)     |
-| [BoomCloud](#五-boomcloud)【官方长期优惠】      | V2ray/SSR/SS          | 多年老站，附赠丰富               | [官网传送门](https://url.iszy.xyz/boomcloud)  |
-| [DuangCloud](#六-duangcloud)【专属优惠】        | SS(全专线)            | 平价灵活                         | [官网传送门](https://url.iszy.xyz/duangcloud) |
-| [ByWave](#七-bywave)【618 特惠】                | V2Ray                 | 高质高端，服务稳定               | [官网传送门](https://url.iszy.xyz/bywave)     |
-| [Blinkload](#八-blinkload)                      | SS(全专线)            | 稳定全能，超多专线               | [官网传送门](https://url.iszy.xyz/blinkload)  |
-| [Electry](#九-electry)                          | V2Ray(专线、中继)     | 线路大佬，高速稳定               | [官网传送门](https://url.iszy.xyz/electry)    |
-| [V2Club](#十-v2club)                            | SS/V2ray(全专线)      | 稳定坚挺，多年老站               | [官网传送门](https://url.iszy.xyz/lanan)      |
-| [皇朝网络](#十一-皇朝网络)                      | SS 隧道               | 性价比新站                       | [官网传送门](https://url.iszy.xyz/dinastio)   |
-| [Shuttle](#十二-shuttle)【618 特惠】            | V2ray                 | 平价新站，另含超多小众地区线路   | [官网传送门](https://url.iszy.xyz/shuttle)    |
+| 机场名称（点击了解更多）                             | 类别                  | 关键词                           | 操作                                          |
+| ---------------------------------------------------- | --------------------- | -------------------------------- | --------------------------------------------- |
+| [心阶云 ⭐](/page/xinjiecloud/)【官方长期优惠】      | SSR(隧道、专线)/V2Ray | 性价比高，超多线路，稳定老站     | [官网传送门](https://url.iszy.xyz/xinjie)     |
+| [CMYNetwork 红莓网络](/page/cmynetwork/)【618 特惠】 | SSR(专线)/Trojan      | 稳定平价，超多专线，小众地区线路 | [官网传送门](https://url.iszy.xyz/cmynetwork) |
+| [MEET](#四-meet)                                     | SSR                   | 专注按量付费，高速稳定           | [官网传送门](https://url.iszy.xyz/fspeed)     |
+| [BoomCloud](#五-boomcloud)【官方长期优惠】           | V2ray/SSR/SS          | 多年老站，附赠丰富               | [官网传送门](https://url.iszy.xyz/boomcloud)  |
+| [DuangCloud](#六-duangcloud)【专属优惠】             | SS(全专线)            | 平价灵活                         | [官网传送门](https://url.iszy.xyz/duangcloud) |
+| [ByWave](#七-bywave)【618 特惠】                     | V2Ray                 | 高质高端，服务稳定               | [官网传送门](https://url.iszy.xyz/bywave)     |
+| [Blinkload](#八-blinkload)                           | SS(全专线)            | 稳定全能，超多专线               | [官网传送门](https://url.iszy.xyz/blinkload)  |
+| [Electry](#九-electry)                               | V2Ray(专线、中继)     | 线路大佬，高速稳定               | [官网传送门](https://url.iszy.xyz/electry)    |
+| [V2Club](#十-v2club)                                 | SS/V2ray(全专线)      | 稳定坚挺，多年老站               | [官网传送门](https://url.iszy.xyz/lanan)      |
+| [皇朝网络](#十一-皇朝网络)                           | SS 隧道               | 性价比新站                       | [官网传送门](https://url.iszy.xyz/dinastio)   |
+| [Shuttle](#十二-shuttle)【618 特惠】                 | V2ray                 | 平价新站，另含超多小众地区线路   | [官网传送门](https://url.iszy.xyz/shuttle)    |
 
 > 本页机场均在上次网络大波动中提供了稳定的服务，还会持续观察未来表现
 
@@ -115,6 +115,12 @@ permalink: /page/bgfw/
 [⭐ 更多详细介绍 ⭐](https://www.iszy.cc/page/cmynetwork/)
 
 ### （一）优惠
+
+> 618 特惠【官方公告】
+
+**618 年中狂欢季限时活动进行中...**
+
+在 **6 月 1 日到 7 月 1 日**期间，购买任意**年费**套餐，可享受高额折扣。若购买年费套餐，可在折扣的基础上**加送 1 个月**套餐时间！同时邀请小伙伴拼团，享受折上折中折哦。
 
 > 本站专属优惠
 
