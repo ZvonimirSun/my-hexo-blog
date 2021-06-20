@@ -1,12 +1,13 @@
 ---
 title: 最新Telegram关闭敏感内容过滤方法
 date: 2020-01-05 21:38:16
-updated: 2020-12-23 21:38:16
+updated: 2021-06-20 18:38:16
 categories:
   - 其他
 tags:
   - iOS
   - Telegram
+  - Nicegram
 keywords: telegram,nicegram,ios
 ---
 
@@ -18,31 +19,32 @@ keywords: telegram,nicegram,ios
 
 为啥在 iOS 上的 Telegram 会有这种敏感内容过滤呢，自然是苹果喜欢多管闲事，限制在苹果设备上的社交 App 中的敏感内容。本来吧，这也是件好事，不过吧，一来，除了 iOS 其他设备都不存在过滤，用户用着就不平衡了；二来，这个 Telegram 的判定机制和申诉的途径比较坑爹，Telegram 中又有一堆喜欢在各种群里面发广告，奇怪图片的机器人，害得一群讨论正常内容的群组在 iOS 上无法进入，且是否能够解封全凭运气，体验极差。
 
-现在 Telegram 官方曲线救国，在其他客户端，比如网页端，提供了关闭敏感内容过滤的开关。
+现在 Telegram 官方曲线救国，在其他客户端，比如桌面端，提供了关闭敏感内容过滤的开关。
 
 > 想要无障碍地体验流畅不卡顿的 Telegram，可以了解一下优质的网络加速服务。【[优质机场(SS/SSR/Trojan/V2Ray/专线)推荐](/2019/01/03/sci-conn/)】
 
 ## 方法
 
-首先呢，开关在移动端的 App 里是看不到的，可以在网页端或桌面端进行关闭。
+首先呢，开关在移动端的 App 里是看不到的，可以在~~网页端或~~桌面端进行关闭。(网页端已改版，找不到这个开关了)
 
-### 网页端
-
-1. 打开 [Telegram 网页端](https://web.telegram.org)，登录你需要关闭敏感内容过滤的账号
-2. 点击网页左上角的菜单按钮，选择 Settings 菜单
-   ![菜单按钮](https://img.iszy.xyz/20201223141610.png)
-   ![Settings菜单](https://img.iszy.xyz/20201223141640.png)
-3. 打开`Show Sensitive Content`开关，并确认
-   ![](https://img.iszy.xyz/20201223140605.png)
-4. 关闭 Telegram iOS 端，重新打开，你将看到原本被过滤的群组已经可以正常进入了
-
-### 桌面端
+如果根据步骤找不到开关，建议检查下 Telegram 版本。
 
 步骤：
 
 1. 打开 Telegram 桌面端，登录你需要关闭敏感内容过滤的账号
-2. 打开 `Settings` - `Privacy and Security` - `Sensitive Content`
-3. 打开 `Disable filtering` 开关
-4. 关闭 Telegram iOS 端，重新打开，你将看到原本被过滤的群组已经可以正常进入了
 
-![开关位置](https://img.iszy.xyz/20200105220759.png)
+2. 打开菜单
+
+   ![菜单位置](https://img.iszy.xyz/20210620194729.png)
+
+3. 打开 `Settings` - `Privacy and Security` - `Sensitive Content`
+
+   ![Settings](https://img.iszy.xyz/20210620194935.png)
+
+   ![Privacy and Security](https://img.iszy.xyz/20210620195102.png)
+
+4. 打开 `Disable filtering` 开关
+
+   ![Disable filtering](https://img.iszy.xyz/20210620195246.png)
+
+5. 关闭 Telegram iOS 端，重新打开，你将看到原本被过滤的群组已经可以正常进入了

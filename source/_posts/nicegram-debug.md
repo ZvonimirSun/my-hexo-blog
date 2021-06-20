@@ -1,16 +1,17 @@
 ---
 title: 最新开启Nicegram Debug方法
 date: 2019-10-15 14:07:23
-updated: 2019-10-15 14:07:23
+updated: 2021-06-20 14:07:23
 categories:
   - 其他
 tags:
   - iOS
   - Telegram
+  - Nicegram
 keywords: nicegram,nicegram debug,telegram,ios
 ---
 
-记录一下最新的开启`Nicegram Debug`的方式，帮助有需要的人。
+记录一下最新的开启`Nicegram Debug`的方式，帮助有需要的人。官方 Telegram 已支持解锁，建议使用官方客户端。
 
 <!--more-->
 
