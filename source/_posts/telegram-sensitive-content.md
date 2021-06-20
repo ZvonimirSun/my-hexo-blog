@@ -21,7 +21,7 @@ keywords: telegram,nicegram,ios
 
 现在 Telegram 官方曲线救国，在其他客户端，比如桌面端，提供了关闭敏感内容过滤的开关。
 
-> 想要无障碍地体验流畅不卡顿的 Telegram，可以了解一下优质的网络加速服务。【[优质机场(SS/SSR/Trojan/V2Ray/专线)推荐](/2019/01/03/sci-conn/)】
+> 想要无障碍地体验流畅不卡顿的 Telegram，可以了解一下优质的网络加速服务。【[优质机场(SS/SSR/Trojan/V2Ray/专线)推荐](/page/bgfw/)】
 
 ## 方法
 
