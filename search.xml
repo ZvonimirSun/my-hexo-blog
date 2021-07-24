@@ -334,7 +334,7 @@
       </tags>
   </entry>
   <entry>
-    <title>NestjS 实践记录（一）：项目创建</title>
+    <title>NestJS 实践记录（一）：项目创建</title>
     <url>/posts/7/</url>
     <content><![CDATA[<p>最近想写一些功能接口给自己用，平常写前端比较多，我自己可怜的小服务器用 java 资源不是很充足，所以准备还是用 Node.js 来实现后端，选用 NestJS 作为本次开发的后端框架。</p>
 <span id="more"></span>
