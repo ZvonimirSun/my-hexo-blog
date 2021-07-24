@@ -6,7 +6,7 @@
   <link href="https://www.iszy.cc/atom.xml" rel="self"/>
   
   <link href="https://www.iszy.cc/"/>
-  <updated>2021-06-15T10:24:35.000Z</updated>
+  <updated>2021-07-24T19:02:26.000Z</updated>
   <id>https://www.iszy.cc/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>NestjS 实践记录（一）：项目创建</title>
+    <link href="https://www.iszy.cc/posts/7/"/>
+    <id>https://www.iszy.cc/posts/7/</id>
+    <published>2021-07-24T19:02:26.000Z</published>
+    <updated>2021-07-24T19:02:26.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近想写一些功能接口给自己用，平常写前端比较多，我自己可怜的小服务器用 java 资源不是很充足，所以准备还是用 Node.js 来实现后端，选用 NestJS 作为本次开发的后端框架。</p><span id="more"></span><h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2><blockquote><p>Nest (NestJS) 是一个用于构建高效、可扩展的 Node.js 服务器端应用程序的开发框架。它利用 JavaScript 的渐进增强的能力，使用并完全支持 TypeScript （仍然允许开发者使用纯 JavaScript 进行开发），并结合了 OOP （面向对象编程）、FP （函数式编程）和 FRP （函数响应式编程）。</p><p>在底层，Nest 构建在强大的 HTTP 服务器框架上，例如 Express （默认），并且还可以通过配置从而使用 Fastify ！</p><p>Nest 在这些常见的 Node.js 框架 (Express/Fastify) 之上提高了一个抽象级别，但仍然向开发者直接暴露了底层框架的 API。这使得开发者可以自由地使用适用于底层平台的无数的第三方模块。</p></blockquote><p>NestJS 是我最近才了解到的一个非常流行的 Node.js 框架，用起来很有一种在编写 Spring Boot 的熟悉感，又能使用我更加熟悉的 JavaScript 来进行编写，是对我来说比较理想的后端框架。在此记录下实践的过程。</p><h2 id="项目创建"><a class="markdownIt-Anchor" href="#项目创建"></a> 项目创建</h2><p>本机环境：</p><ul><li>Node.js: 14.17.0</li><li>npm: 7.11.2</li><li>NestJS: 8.0.0</li><li>TypeScirpt: 4.3.5</li></ul><p>在安装好 Node.js 后，在全局安装 <code>NestJS cli</code>（下面简称 <code>cli</code>）。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g @nestjs/cli</span><br></pre></td></tr></table></figure><p>运行如下命令创建项目，<code>cli</code>会根据参数初始化项目文件。接着会让你选择想用的包管理器，<code>npm</code>或<code>yarn</code>，我选择了<code>yarn</code>，因为我感觉国内即使换了源，<code>yarn</code> 似乎也更快一些。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nest new project-name</span><br></pre></td></tr></table></figure><p>完成安装后就会显示如下信息。</p><p><img data-src="https://img.iszy.xyz/20210724195818.png" alt="" /></p><p>目录结构可以参考 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL25lc3Rqcy90eXBlc2NyaXB0LXN0YXJ0ZXI=">Nest framework TypeScript starter repository<i class="fa fa-external-link-alt"></i></span>，项目就是基于这个创建的。我们可以看到这个模板使用了 TypeScript 语言，NestJS 也是可以基于 JavaScript 运行的，创建时加上参数配置如下所示即可。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nest new project-name -l JavaScript</span><br></pre></td></tr></table></figure><p>更多参数可以参考 cli 的帮助，<code>nest new --help</code>。</p><p><img data-src="https://img.iszy.xyz/20210724201411.png" alt="" /></p><p>运行<code>yarn start</code>后，NestJS 就会开始运行，当显示<code>Nest application successfully started</code>时，即表示启动完成。</p><p><img data-src="https://img.iszy.xyz/20210724201050.png" alt="" /></p><p>此时可以访问 <span class="exturl" data-url="aHR0cDovL2xvY2FsaG9zdDozMDAw">http://localhost:3000<i class="fa fa-external-link-alt"></i></span>，就能看到默认返回的 <code>Hello World!</code> 了。</p><p><img data-src="https://img.iszy.xyz/20210724201226.png" alt="" /></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;最近想写一些功能接口给自己用，平常写前端比较多，我自己可怜的小服务器用 java 资源不是很充足，所以准备还是用 Node.js 来实现后端，选用 NestJS 作为本次开发的后端框架。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="编程" scheme="https://www.iszy.cc/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="JavaScript" scheme="https://www.iszy.cc/tags/JavaScript/"/>
+    
+    <category term="NestJS" scheme="https://www.iszy.cc/tags/NestJS/"/>
+    
+    <category term="TypeScript" scheme="https://www.iszy.cc/tags/TypeScript/"/>
+    
+  </entry>
   
   <entry>
     <title>给数组原型对象添加方法</title>
@@ -456,33 +481,6 @@
     <category term="iOS" scheme="https://www.iszy.cc/tags/iOS/"/>
     
     <category term="Nicegram" scheme="https://www.iszy.cc/tags/Nicegram/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Ubuntu部署Spark集群记录</title>
-    <link href="https://www.iszy.cc/posts/spark-cluster-setup/"/>
-    <id>https://www.iszy.cc/posts/spark-cluster-setup/</id>
-    <published>2020-01-05T21:12:00.000Z</published>
-    <updated>2020-01-05T21:12:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>今天记录一下，在 Ubuntu 14.04 上部署 Spark 集群的过程。</p><span id="more"></span><h2 id="前期准备"><a class="markdownIt-Anchor" href="#前期准备"></a> 前期准备</h2><h3 id="系统及软件版本说明"><a class="markdownIt-Anchor" href="#系统及软件版本说明"></a> 系统及软件版本说明</h3><p>本章操作中所使用的相关操作系统及软件版本如下：</p><table><thead><tr><th>软件</th><th>版本</th></tr></thead><tbody><tr><td>操作系统</td><td>Ubuntu 14.04.1</td></tr><tr><td>JDK</td><td>1.8.0</td></tr><tr><td>Hadoop</td><td>2.7.3</td></tr><tr><td>Spark</td><td>2.2.0</td></tr></tbody></table><h3 id="jdk-安装"><a class="markdownIt-Anchor" href="#jdk-安装"></a> JDK 安装</h3><p>集群中每台机器都需要安装 JDK，步骤如下：</p><ol><li><p>上传<code>jdk-8u191-linux-x64.tar.gz</code>到<code>/opt</code>目录并解压</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf jdk-8u191-linux-x64.tar.gz</span><br></pre></td></tr></table></figure></li><li><p>将 JDK 环境变量配置到/etc/profile 中</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;export JAVA_HOME=/opt/jdk1.8.0_191&#x27;</span> &gt;&gt; /etc/profile</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;export JRE_HOME=/opt/jdk1.8.0_191/jre&#x27;</span> &gt;&gt; /etc/profile</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;export CLASSPATH=$JAVA_HOME/lib:$JRE_HOME/lib&#x27;</span> &gt;&gt; /etc/profile</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;export PATH=$JAVA_HOME/bin:$PATH&#x27;</span> &gt;&gt; /etc/profile</span><br><span class="line"><span class="built_in">source</span> /etc/profile</span><br></pre></td></tr></table></figure></li></ol><h3 id="网络配置"><a class="markdownIt-Anchor" href="#网络配置"></a> 网络配置</h3><p>如有三台机器，分别命名为 master、slave1、slave2。那么我们就分别修改各自机器上<code>/etc/hostname</code>文件中的机器名为上述名称。<br />修改每台机器的/etc/hosts 文件，添加上述三对网络 IP 和机器名的对应：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1       localhost</span><br><span class="line">192.168.1.2     master</span><br><span class="line">192.168.1.3     slave1</span><br><span class="line">192.168.1.4     slave2</span><br></pre></td></tr></table></figure><h3 id="ssh-免密登录配置"><a class="markdownIt-Anchor" href="#ssh-免密登录配置"></a> SSH 免密登录配置</h3><p>该操作是要让 master 节点可以无密码 SSH 登陆到各个 slave 节点上。</p><ol><li><p>首先生成 master 节点的公钥，在 master 节点的终端中执行</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p ~/.ssh</span><br><span class="line"><span class="built_in">cd</span> ~/.ssh</span><br><span class="line">ssh-keygen -t rsa</span><br></pre></td></tr></table></figure><p>多次回车完成 ssh 密钥对创建</p></li><li><p>在各节点上将该公钥加入授权</p><p>将公钥加入 master 本机授权，master 节点上执行命令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat ~/.ssh/id_rsa.pub &gt;&gt; ~/.ssh/authorized_keys</span><br></pre></td></tr></table></figure><p>完成后执行 <code>ssh master</code> 验证一下（可能需要输入 <code>yes</code>，成功后执行 <code>exit</code> 返回原来的终端）</p><p>接着在 master 节点将上公匙分发到 slave1 和 slave2 节点，如下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">scp ~/.ssh/id_rsa.pub root@slave1:/root</span><br><span class="line">scp ~/.ssh/id_rsa.pub root@slave2:/root</span><br></pre></td></tr></table></figure><p>接着分别在 slave1 和 slave2 节点上，将 ssh 公匙加入授权：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p ~/.ssh</span><br><span class="line">cat ~/id_rsa.pub &gt;&gt; ~/.ssh/authorized_keys</span><br></pre></td></tr></table></figure><p>这样，在 master 节点上就可以无密码 ssh 登录到各个 slave 节点了，在 master 节点上执行 <code>ssh slave1</code> 和 <code>ssh slave2</code> 命令进行检验。</p></li></ol><h2 id="hadoop-集群部署"><a class="markdownIt-Anchor" href="#hadoop-集群部署"></a> Hadoop 集群部署</h2><p>Spark 配置前需要部署 Hadoop 集群，这个在<a href="/2019/12/01/hadoop-cluster-setup/">上一篇文章</a>里讲过，可以前往查看。</p><h2 id="spark-集群部署"><a class="markdownIt-Anchor" href="#spark-集群部署"></a> Spark 集群部署</h2><h3 id="安装及配置"><a class="markdownIt-Anchor" href="#安装及配置"></a> 安装及配置</h3><ol><li><p>上传 <code>spark-2.2.0-bin-hadoop2.7.tgz</code> 到 <code>/opt</code> 目录并解压。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf spark-2.2.0-bin-hadoop2.7.tgz</span><br></pre></td></tr></table></figure></li><li><p>将 Spark 环境变量配置到<code>/etc/profile</code>中</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;export SPARK_HOME=/opt/spark-2.2.0-bin-hadoop2.7&#x27;</span> &gt;&gt; /etc/profile</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;export PATH=$SPARK_HOME/bin:$PATH&#x27;</span> &gt;&gt; /etc/profile</span><br><span class="line"><span class="built_in">source</span> /etc/profile</span><br></pre></td></tr></table></figure></li><li><p>编辑<code>spark-env.sh</code>文件</p><p>复制 <code>spark-env.sh.template</code> 并重命名为 <code>spark-env.sh</code>，编辑<code>spark-env.sh</code>文件</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cp /opt/spark-2.2.0-bin-hadoop2.7/conf/spark-env.sh.template /opt/spark-2.2.0-bin-hadoop2.7/conf/spark-env.sh</span><br><span class="line">vi /opt/spark-2.2.0-bin-hadoop2.7/conf/spark-env.sh</span><br></pre></td></tr></table></figure><p>添加如下内容：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> JAVA_HOME=/opt/jdk1.8.0_191</span><br><span class="line"><span class="built_in">export</span> SPARK_MASTER_IP=192.168.2.76</span><br><span class="line"><span class="built_in">export</span> SPARK_WORKER_MEMORY=4g</span><br><span class="line"><span class="built_in">export</span> HADOOP_HOME=/opt/hadoop-2.7.3</span><br><span class="line"><span class="built_in">export</span> HADOOP_CONF_DIR=/opt/hadoop-2.7.3/etc/hadoop</span><br></pre></td></tr></table></figure><ul><li><code>SPARK_MASTER_IP</code>为 master 节点 IP</li><li><code>SPARK_WORKER_MEMORY</code>可根据实际情况调整</li></ul></li><li><p>编辑<code>slaves</code>文件</p><p>复制 <code>slaves.template</code> 并重命名为 <code>slaves</code>，编辑<code>slaves</code>文件</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cp /opt/spark-2.2.0-bin-hadoop2.7/conf/slaves.template /opt/spark-2.2.0-bin-hadoop2.7/conf/slaves</span><br><span class="line">vi /opt/spark-2.2.0-bin-hadoop2.7/conf/slaves</span><br></pre></td></tr></table></figure><p>内容：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">master</span><br><span class="line">slave1</span><br><span class="line">slave2</span><br></pre></td></tr></table></figure></li><li><p>文件配置分发</p><p>至此，master 上的 spark 配置已经结束，需将<code>/etc/profile</code>、<code>/opt/spark-2.2.0-bin-hadoop2.7</code>通过 scp 分发至至 slave1、slave2，重新编译 <code>/etc/profile</code> 使生效。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">scp /etc/profile root@slave1:/etc/profile</span><br><span class="line">scp /etc/profile root@slave2:/etc/profile</span><br><span class="line">scp -r /opt/spark-2.2.0-bin-hadoop2.7 root@slave1:/opt/spark-2.2.0-bin-hadoop2.7</span><br><span class="line">scp -r /opt/spark-2.2.0-bin-hadoop2.7 root@slave2:/opt/spark-2.2.0-bin-hadoop2.7</span><br></pre></td></tr></table></figure><p>分别登录 slave1 和 slave2 执行<code>source /etc/profile</code></p></li></ol><h3 id="启动及验证"><a class="markdownIt-Anchor" href="#启动及验证"></a> 启动及验证</h3><ol><li><p>启动 Spark</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/opt/spark-2.2.0-bin-hadoop2.7/start-all.sh</span><br></pre></td></tr></table></figure></li><li><p>验证</p><p>浏览器访问 <span class="exturl" data-url="aHR0cDovLzE5Mi4xNjguMS4yOjgwODAv">http://192.168.1.2:8080/<i class="fa fa-external-link-alt"></i></span> (master 节点 IP)，查看 Spark 集群配置及运行情况</p></li></ol>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;今天记录一下，在 Ubuntu 14.04 上部署 Spark 集群的过程。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="应用部署" scheme="https://www.iszy.cc/categories/%E5%BA%94%E7%94%A8%E9%83%A8%E7%BD%B2/"/>
-    
-    
-    <category term="Ubuntu" scheme="https://www.iszy.cc/tags/Ubuntu/"/>
-    
-    <category term="Hadoop" scheme="https://www.iszy.cc/tags/Hadoop/"/>
-    
-    <category term="集群" scheme="https://www.iszy.cc/tags/%E9%9B%86%E7%BE%A4/"/>
-    
-    <category term="Spark" scheme="https://www.iszy.cc/tags/Spark/"/>
     
   </entry>
   
