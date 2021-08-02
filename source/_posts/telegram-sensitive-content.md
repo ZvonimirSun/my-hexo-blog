@@ -1,7 +1,7 @@
 ---
 title: 最新Telegram关闭敏感内容过滤方法
 date: 2020-01-05 21:38:16
-updated: 2021-06-20 18:38:16
+updated: 2021-08-01 18:38:16
 categories:
   - 其他
 tags:
@@ -25,9 +25,33 @@ keywords: telegram,nicegram,ios
 
 ## 方法
 
-首先呢，开关在移动端的 App 里是看不到的，可以在~~网页端或~~桌面端进行关闭。(网页端已改版，找不到这个开关了)
+首先呢，开关在移动端的 App 里是看不到的，可以在网页端或桌面端进行关闭。
 
 如果根据步骤找不到开关，建议检查下 Telegram 版本。
+
+### 网页端
+
+地址: [Telegram Web](https://web.telegram.org/k/)
+
+当前版本 Telegram WebK alpha 0.6.2
+
+步骤:
+
+1. 点击菜单中的 `Settings` 打开设置
+
+   ![Settings](https://img.iszy.xyz/20210802093233.png)
+
+2. 点击 `Privacy and Security`
+
+   ![Privacy and Security](https://img.iszy.xyz/20210802093803.png)
+
+3. 打开 `Disable filtering` 开关
+
+   ![Disable filtering](https://img.iszy.xyz/20210802093917.png)
+
+4. 关闭 Telegram iOS 端，重新打开，你将看到原本被过滤的群组已经可以正常进入了
+
+### 桌面端
 
 步骤：
 
