@@ -5084,8 +5084,30 @@ SWIFT 代码：CIBKCNBJ100<br />
 <p>想要无障碍地体验流畅不卡顿的 Telegram，可以了解一下优质的网络加速服务。【<a href="/page/bgfw/">优质机场(SS/SSR/Trojan/V2Ray/专线)推荐</a>】</p>
 </blockquote>
 <h2 id="方法"><a class="markdownIt-Anchor" href="#方法"></a> 方法</h2>
-<p>首先呢，开关在移动端的 App 里是看不到的，可以在<s>网页端或</s>桌面端进行关闭。(网页端已改版，找不到这个开关了)</p>
+<p>首先呢，开关在移动端的 App 里是看不到的，可以在网页端或桌面端进行关闭。</p>
 <p>如果根据步骤找不到开关，建议检查下 Telegram 版本。</p>
+<h3 id="网页端"><a class="markdownIt-Anchor" href="#网页端"></a> 网页端</h3>
+<p>地址: <span class="exturl" data-url="aHR0cHM6Ly93ZWIudGVsZWdyYW0ub3JnL2sv">Telegram Web<i class="fa fa-external-link-alt"></i></span></p>
+<p>当前版本 Telegram WebK alpha 0.6.2</p>
+<p>步骤:</p>
+<ol>
+<li>
+<p>点击菜单中的 <code>Settings</code> 打开设置</p>
+<p><img data-src="https://img.iszy.xyz/20210802093233.png" alt="Settings" /></p>
+</li>
+<li>
+<p>点击 <code>Privacy and Security</code></p>
+<p><img data-src="https://img.iszy.xyz/20210802093803.png" alt="Privacy and Security" /></p>
+</li>
+<li>
+<p>打开 <code>Disable filtering</code> 开关</p>
+<p><img data-src="https://img.iszy.xyz/20210802093917.png" alt="Disable filtering" /></p>
+</li>
+<li>
+<p>关闭 Telegram iOS 端，重新打开，你将看到原本被过滤的群组已经可以正常进入了</p>
+</li>
+</ol>
+<h3 id="桌面端"><a class="markdownIt-Anchor" href="#桌面端"></a> 桌面端</h3>
 <p>步骤：</p>
 <ol>
 <li>
