@@ -16,11 +16,11 @@ permalink: /page/speed-test-collection/
 
 [官网传送门](https://url.iszy.xyz/xinjiebak)
 
-本地高峰期测试，仅供参考。
-
 **SSR 线路测速**（建议使用）
 
-![SSR线路](https://img.iszy.xyz/20210607203121.png)
+2020-08-07
+
+![SSR线路](https://img.iszy.xyz/20210807130828.png)
 
 **V2ray 线路测速**
 
