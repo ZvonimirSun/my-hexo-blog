@@ -45,8 +45,10 @@ permalink: /page/bgfw/
 | [DuangCloud](#五-duangcloud)【专属优惠】        | SS(全专线)            | 平价灵活                         | [官网传送门](https://url.iszy.xyz/duangcloud) |
 | [ByWave](#六-bywave)                            | V2Ray                 | 高质高端，服务稳定               | [官网传送门](https://url.iszy.xyz/bywave)     |
 | [Blinkload](#七-blinkload)                      | SS(全专线)            | 稳定全能，超多专线               | [官网传送门](https://url.iszy.xyz/blinkload)  |
-| [皇朝网络](#十-皇朝网络)                        | SS 隧道               | 性价比新站                       | [官网传送门](https://url.iszy.xyz/dinastio)   |
-| [Shuttle](#十一-shuttle)                        | V2ray                 | 平价新站，另含超多小众地区线路   | [官网传送门](https://url.iszy.xyz/shuttle)    |
+| [Electry](#八-electry)                          | V2ray(专线中继)       | 高速稳定                         | [官网传送门](https://url.iszy.xyz/electry)    |
+| V2Club (暂停注册)                               | SS/V2ray(全专线)      | 稳定坚挺，多年老站               | [官网传送门](https://url.iszy.xyz/lanan)      |
+| [皇朝网络](#九-皇朝网络)                        | SS 隧道               | 性价比新站                       | [官网传送门](https://url.iszy.xyz/dinastio)   |
+| [Shuttle](#十-shuttle)                          | V2ray                 | 平价新站，另含超多小众地区线路   | [官网传送门](https://url.iszy.xyz/shuttle)    |
 
 > 本页机场均在上次网络大波动中提供了稳定的服务，还会持续观察未来表现
 
@@ -776,13 +778,11 @@ permalink: /page/bgfw/
 - 售前售后[Telegram 官方交流群](https://t.me/thessrgroup)(Telegram 需挂代理)
 - 若有任何问题可联系官网右下角的**网页客服(推荐)**或**Telegram 管理员(推荐)**或发送工单。
 
-<!--
-
 ## 八、Electry
 
 [官网传送门](https://url.iszy.xyz/electry)
 
-[⭐⭐ 测速 ⭐⭐](https://www.iszy.cc/page/speed-test-collection/#Electry)
+[⭐⭐ 测速 ⭐⭐](https://www.iszy.cc/page/speed-test-collection/#Electry) (2021-08-07)
 
 ### （一）简介
 
@@ -808,7 +808,6 @@ permalink: /page/bgfw/
 | Standard Plan | 588/年        | 400GB/月  | 4        | 150Mbps  |
 | Advanced Plan | 788/年        | 800GB/月  | 5        | 200Mbps  |
 | Premium Plan  | 1288/年       | 1000GB/月 | 5        | 不限速   |
--->
 
 <!--
 
@@ -910,7 +909,7 @@ V2Club(旧蓝岸)，一家专门提供 v2ray 代理服务的服务商。或许�
 
 -->
 
-## 八、皇朝网络
+## 九、皇朝网络
 
 [官网传送门](https://url.iszy.xyz/dinastio)
 
@@ -939,7 +938,7 @@ V2Club(旧蓝岸)，一家专门提供 v2ray 代理服务的服务商。或许�
 - 官方联系
   - 暂时好像只看到工单系统一种方式
 
-## 九、Shuttle
+## 十、Shuttle
 
 [官网传送门](https://url.iszy.xyz/shuttle)
 
