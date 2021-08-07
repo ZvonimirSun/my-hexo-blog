@@ -24,7 +24,7 @@ permalink: /page/speed-test-collection/
 
 **V2ray 线路测速**
 
-![V2ray线路](https://img.iszy.xyz/20210607204320.png)
+![V2ray线路](https://img.iszy.xyz/20210807132104.png)
 
 ## CMYNetwork 红莓网络
 
