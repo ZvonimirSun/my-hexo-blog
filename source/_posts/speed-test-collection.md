@@ -60,9 +60,9 @@ permalink: /page/speed-test-collection/
 
 [官网传送门](https://url.iszy.xyz/electry)
 
-本地 300M 电信测速
+2021-08-07
 
-![](https://img.iszy.xyz/20210226212647.png)
+![](https://img.iszy.xyz/20210807123726.png)
 
 ## V2Club
 
