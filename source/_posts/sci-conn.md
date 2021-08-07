@@ -55,7 +55,7 @@ permalink: /page/bgfw/
 **点击前往查看测速: [机场测速集合](https://www.iszy.cc/page/speed-test-collection/)**
 
 <details>
-<summary><strong>展开查看机场们的介绍~</strong></summary>
+<summary style="cursor:pointer"><strong style="color:red">展开查看机场们的介绍~</strong></summary>
 
 ## 一、心阶云
 
