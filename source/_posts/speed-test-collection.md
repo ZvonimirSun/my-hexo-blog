@@ -70,7 +70,7 @@ permalink: /page/speed-test-collection/
 
 ![](https://img.iszy.xyz/20201216180421.jpg)
 
-## 皇朝网络
+## 闲鱼网络
 
 [官网传送门](https://url.iszy.xyz/dinastio)
 
