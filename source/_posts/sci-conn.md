@@ -1,7 +1,7 @@
 ---
 title: 【评测】优质SS/SSR/Trojan/V2Ray机场推荐
 date: 2019-01-03 03:11:50
-updated: 2021-08-07 11:00:00
+updated: 2021-08-13 11:00:00
 categories:
   - 推广
 tags:
@@ -479,6 +479,10 @@ permalink: /page/bgfw/
 - **9 折**优惠码: `iszy.cc`
 
 本站优惠码一个账户仅可享受一次
+
+> 转官方优惠公告
+
+全套餐 8 折优惠码: `DuangCloudWula`
 
 ### （二）简介
 
