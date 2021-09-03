@@ -6,7 +6,7 @@
   <link href="https://www.iszy.cc/atom.xml" rel="self"/>
   
   <link href="https://www.iszy.cc/"/>
-  <updated>2021-07-24T19:02:26.000Z</updated>
+  <updated>2021-09-01T12:20:04.000Z</updated>
   <id>https://www.iszy.cc/</id>
   
   <author>
@@ -15,6 +15,63 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>经纬度定位工具</title>
+    <link href="https://www.iszy.cc/posts/9/"/>
+    <id>https://www.iszy.cc/posts/9/</id>
+    <published>2021-09-01T12:20:04.000Z</published>
+    <updated>2021-09-01T12:20:04.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>我有个朋友有经纬度定位的需求，正好前几天做了个 GeoJSON 工具给自己用，部分内容可以直接用上，就准备自己做一个，应该能比网上的界面更加清爽舒服一些。</p><h2 id="成果"><a class="markdownIt-Anchor" href="#成果"></a> 成果</h2><p>欢迎体验</p><p><span class="exturl" data-url="aHR0cHM6Ly90b29scy5pc3p5Lnh5ei9naXMvbGF0TG5n">经纬度查询-ISZY 工具集合<i class="fa fa-external-link-alt"></i></span></p><p><img data-src="https://img.iszy.xyz/20210903134509.png" alt="经纬度查询-ISZY 工具集合" /></p><h2 id="功能"><a class="markdownIt-Anchor" href="#功能"></a> 功能</h2><ul><li>界面由 Leaflet 地图窗口和 JSON 编辑器组成</li><li>底图，默认使用高德街道底图，天地图个人 token 每日访问次数有限<ul><li>高德街道底图</li><li>高德影像底图</li><li>天地图街道底图</li><li>天地图影像底图</li><li>天地图地形底图</li><li>OpenStreetMap 街道底图</li></ul></li><li>默认定位到 <code>105N , 35E</code> 感觉地图展示起来好看点，中心点默认弹窗展示中心经纬度。经纬度随着移动地图会实时更新。</li><li>如果允许定位，初始会尝试定位到设备所在位置。坐标经过高德接口转换成高德地图所用的火星坐标系</li><li>点击地图，会展示点击位置的经纬度。</li><li>通过直接输入经纬度，将会在地图进行定位，并调用高德接口查询标准地址。</li><li>可以输入结构化地址，查找目标定位。</li></ul><h2 id="后续"><a class="markdownIt-Anchor" href="#后续"></a> 后续</h2><ol><li>考虑支持切换坐标系，火星坐标系和 WGS84 坐标系</li><li>考虑将高德瓦片做偏移，矫正到 WGS84 坐标系</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;我有个朋友有经纬度定位的需求，正好前几天做了个 GeoJSON 工具给自己用，部分内容可以直接用上，就准备自己做一个，应该能比网上的界面更加清爽舒服一些。&lt;/p&gt;
+&lt;h2 id=&quot;成果&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#成果&quot;&gt;&lt;/a</summary>
+      
+    
+    
+    
+    <category term="编程" scheme="https://www.iszy.cc/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="JavaScript" scheme="https://www.iszy.cc/tags/JavaScript/"/>
+    
+    <category term="Vue" scheme="https://www.iszy.cc/tags/Vue/"/>
+    
+    <category term="GIS" scheme="https://www.iszy.cc/tags/GIS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>自用GeoJSON工具</title>
+    <link href="https://www.iszy.cc/posts/8/"/>
+    <id>https://www.iszy.cc/posts/8/</id>
+    <published>2021-08-27T12:19:59.000Z</published>
+    <updated>2021-08-27T12:19:59.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>平常遇到 GeoJSON 都喜欢去 <span class="exturl" data-url="aHR0cHM6Ly9nZW9qc29uLmlv">GeoJSON.IO<i class="fa fa-external-link-alt"></i></span> 上看一下数据，是 Mapbox 做的，功能还挺好用的。不过这个网站不开代理有时候速度还是挺慢的，我正好在写小工具集合，何不自己写一个呢。</p><h2 id="成果"><a class="markdownIt-Anchor" href="#成果"></a> 成果</h2><p>欢迎体验</p><p><span class="exturl" data-url="aHR0cHM6Ly90b29scy5pc3p5Lnh5ei9naXMvZ2VvanNvbg==">GeoJSON-ISZY 工具集合<i class="fa fa-external-link-alt"></i></span></p><p><img data-src="https://img.iszy.xyz/20210903134058.png" alt="GeoJSON-ISZY 工具集合" /></p><h2 id="功能"><a class="markdownIt-Anchor" href="#功能"></a> 功能</h2><p>当然，自己看过 <span class="exturl" data-url="aHR0cDovL0dlb0pTT04uSU8=">GeoJSON.IO<i class="fa fa-external-link-alt"></i></span> 这个网站后呢，可以发现虽然看着挺简单的页面，功能还不少呢。我决定先做个比较基础的，包含以下功能，先能用再说。</p><ul><li>界面由 Leaflet 地图窗口和 JSON 编辑器组成</li><li>底图，默认使用高德街道底图，天地图个人 token 每日访问次数有限<ul><li>高德街道底图</li><li>高德影像底图</li><li>天地图街道底图</li><li>天地图影像底图</li><li>天地图地形底图</li><li>OpenStreetMap 街道底图</li></ul></li><li>支持在 JSON 编辑器输入 GeoJSON 后将 GeoJSON 添加到地图上<ul><li>在 JSON 编辑器输入完，编辑器失焦后，尝试解析 GeoJSON 并添加到地图上</li><li>在 JSON 编辑器一段时间没有继续输入，但没有失焦的情况下，也尝试解析 GeoJSON 并添加到地图上</li></ul></li><li>支持地图上单个 Feature 图形选择，选择后跳出弹窗展示属性，可编辑，编辑实时同步</li><li>通过表格界面展示所有 Feature 的属性表，支持编辑</li></ul><h2 id="部分说明"><a class="markdownIt-Anchor" href="#部分说明"></a> 部分说明</h2><p>使用 Vue 3 开发，有些注意事项记录下。</p><ol><li><p>通过 leaflet-src.esm.js 能够按需导出 leaflet 中的组件，引入 jsoneditor 用于 GeoJSON 输入</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;</span><br><span class="line">  map,</span><br><span class="line">  control,</span><br><span class="line">  tileLayer,</span><br><span class="line">  layerGroup,</span><br><span class="line">  geoJSON,</span><br><span class="line">  GeoJSON,</span><br><span class="line">&#125; <span class="keyword">from</span> <span class="string">&quot;leaflet/dist/leaflet-src.esm.js&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> JSONEditor <span class="keyword">from</span> <span class="string">&quot;jsoneditor&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&quot;jsoneditor/dist/jsoneditor.min.css&quot;</span>;</span><br></pre></td></tr></table></figure></li><li><p>初始化的 <code>map 对象</code>和 <code>JSONEditor 对象</code>如果要存入 data，需要使用 <code>markRaw</code> 标记不监听。</p></li><li><p>勿把经过代理的 <code>Layer 对象</code>直接加入图层控制组件，否则不能成功销毁 <code>map 对象</code>，可以通过以下方法规避。</p><ul><li>在销毁 <code>map 对象</code>前提前将该图层移出地图</li><li>在将 <code>Layer 对象</code>存入 data 前，使用 <code>markRaw</code> 标记不监听</li><li>如果需要监听该 <code>Layer 对象</code>变化，可以将监听后的对象用 <code>toRaw</code>方法转出未监听版本加入图层控制</li><li>在组件 beforeUnmount 时销毁对应的 <code>map 对象</code>和 <code>JSONEditor 对象</code>，这样会清除页面上的 DOM 和监听事件</li></ul></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;平常遇到 GeoJSON 都喜欢去 &lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9nZW9qc29uLmlv&quot;&gt;GeoJSON.IO&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt; 上看一下数</summary>
+      
+    
+    
+    
+    <category term="编程" scheme="https://www.iszy.cc/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="JavaScript" scheme="https://www.iszy.cc/tags/JavaScript/"/>
+    
+    <category term="Vue" scheme="https://www.iszy.cc/tags/Vue/"/>
+    
+    <category term="GIS" scheme="https://www.iszy.cc/tags/GIS/"/>
+    
+  </entry>
   
   <entry>
     <title>NestJS 实践记录（一）：项目创建</title>
@@ -431,56 +488,6 @@
     <category term="Hexo" scheme="https://www.iszy.cc/tags/Hexo/"/>
     
     <category term="NexT" scheme="https://www.iszy.cc/tags/NexT/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LayUI Icon 扩展 Iconfont 图标</title>
-    <link href="https://www.iszy.cc/posts/layui-iconfont/"/>
-    <id>https://www.iszy.cc/posts/layui-iconfont/</id>
-    <published>2020-01-28T12:14:43.000Z</published>
-    <updated>2020-01-28T12:14:43.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>layui 的所有图标全部采用字体形式，取材于阿里巴巴矢量图标库（iconfont）。不过 layui 自带的图标太少了，可以说连够用都算不上，所以今天就要用 iconfont 上的图标扩展一下。</p><span id="more"></span><h2 id="引入图标"><a class="markdownIt-Anchor" href="#引入图标"></a> 引入图标</h2><p>正常引入 layui 和 iconfont 的 css。</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;/layui/css/layui.css&quot;</span> <span class="attr">media</span>=<span class="string">&quot;all&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;/iconfont/iconfont.css&quot;</span> <span class="attr">media</span>=<span class="string">&quot;all&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure><h2 id="加入样式"><a class="markdownIt-Anchor" href="#加入样式"></a> 加入样式</h2><p>加入样式，优先采用 layui 自带图标。</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></span><br><span class="line"><span class="css">  <span class="selector-class">.layui-icon</span> &#123;</span></span><br><span class="line"><span class="css">    <span class="attribute">font-family</span>: layui-icon, iconfont <span class="meta">!important</span>;</span></span><br><span class="line"><span class="css">    <span class="attribute">font-size</span>: <span class="number">16px</span>;</span></span><br><span class="line"><span class="css">    <span class="attribute">font-style</span>: normal;</span></span><br><span class="line"><span class="css">    -webkit-<span class="attribute">font-smoothing</span>: antialiased;</span></span><br><span class="line"><span class="css">    -moz-osx-<span class="attribute">font-smoothing</span>: grayscale;</span></span><br><span class="line"><span class="css">  &#125;</span></span><br><span class="line"><span class="css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;layui 的所有图标全部采用字体形式，取材于阿里巴巴矢量图标库（iconfont）。不过 layui 自带的图标太少了，可以说连够用都算不上，所以今天就要用 iconfont 上的图标扩展一下。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="编程" scheme="https://www.iszy.cc/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-    
-    <category term="JavaScript" scheme="https://www.iszy.cc/tags/JavaScript/"/>
-    
-    <category term="JQuery" scheme="https://www.iszy.cc/tags/JQuery/"/>
-    
-    <category term="LayUI" scheme="https://www.iszy.cc/tags/LayUI/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>最新Telegram关闭敏感内容过滤方法</title>
-    <link href="https://www.iszy.cc/posts/telegram-sensitive-content/"/>
-    <id>https://www.iszy.cc/posts/telegram-sensitive-content/</id>
-    <published>2020-01-05T21:38:16.000Z</published>
-    <updated>2021-08-01T18:38:16.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>分享一下最新的官方 Telegram 关闭敏感内容过滤的方法。</p><span id="more"></span><h2 id="原由"><a class="markdownIt-Anchor" href="#原由"></a> 原由</h2><p>为啥在 iOS 上的 Telegram 会有这种敏感内容过滤呢，自然是苹果喜欢多管闲事，限制在苹果设备上的社交 App 中的敏感内容。本来吧，这也是件好事，不过吧，一来，除了 iOS 其他设备都不存在过滤，用户用着就不平衡了；二来，这个 Telegram 的判定机制和申诉的途径比较坑爹，Telegram 中又有一堆喜欢在各种群里面发广告，奇怪图片的机器人，害得一群讨论正常内容的群组在 iOS 上无法进入，且是否能够解封全凭运气，体验极差。</p><p>现在 Telegram 官方曲线救国，在其他客户端，比如桌面端，提供了关闭敏感内容过滤的开关。</p><blockquote><p>想要无障碍地体验流畅不卡顿的 Telegram，可以了解一下优质的网络加速服务。【<a href="/page/bgfw/">优质机场(SS/SSR/Trojan/V2Ray/专线)推荐</a>】</p></blockquote><h2 id="方法"><a class="markdownIt-Anchor" href="#方法"></a> 方法</h2><p>首先呢，开关在移动端的 App 里是看不到的，可以在网页端或桌面端进行关闭。</p><p>如果根据步骤找不到开关，建议检查下 Telegram 版本。</p><h3 id="网页端"><a class="markdownIt-Anchor" href="#网页端"></a> 网页端</h3><p>地址: <span class="exturl" data-url="aHR0cHM6Ly93ZWIudGVsZWdyYW0ub3JnL2sv">Telegram Web<i class="fa fa-external-link-alt"></i></span></p><p>当前版本 Telegram WebK alpha 0.6.2</p><p>步骤:</p><ol><li><p>点击菜单中的 <code>Settings</code> 打开设置</p><p><img data-src="https://img.iszy.xyz/20210802093233.png" alt="Settings" /></p></li><li><p>点击 <code>Privacy and Security</code></p><p><img data-src="https://img.iszy.xyz/20210802093803.png" alt="Privacy and Security" /></p></li><li><p>打开 <code>Disable filtering</code> 开关</p><p><img data-src="https://img.iszy.xyz/20210802093917.png" alt="Disable filtering" /></p></li><li><p>关闭 Telegram iOS 端，重新打开，你将看到原本被过滤的群组已经可以正常进入了</p></li></ol><h3 id="桌面端"><a class="markdownIt-Anchor" href="#桌面端"></a> 桌面端</h3><p>步骤：</p><ol><li><p>打开 Telegram 桌面端，登录你需要关闭敏感内容过滤的账号</p></li><li><p>打开菜单</p><p><img data-src="https://img.iszy.xyz/20210620194729.png" alt="菜单位置" /></p></li><li><p>打开 <code>Settings</code> - <code>Privacy and Security</code> - <code>Sensitive Content</code></p><p><img data-src="https://img.iszy.xyz/20210620194935.png" alt="Settings" /></p><p><img data-src="https://img.iszy.xyz/20210620195102.png" alt="Privacy and Security" /></p></li><li><p>打开 <code>Disable filtering</code> 开关</p><p><img data-src="https://img.iszy.xyz/20210620195246.png" alt="Disable filtering" /></p></li><li><p>关闭 Telegram iOS 端，重新打开，你将看到原本被过滤的群组已经可以正常进入了</p></li></ol>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;分享一下最新的官方 Telegram 关闭敏感内容过滤的方法。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="其他" scheme="https://www.iszy.cc/categories/%E5%85%B6%E4%BB%96/"/>
-    
-    
-    <category term="Telegram" scheme="https://www.iszy.cc/tags/Telegram/"/>
-    
-    <category term="iOS" scheme="https://www.iszy.cc/tags/iOS/"/>
-    
-    <category term="Nicegram" scheme="https://www.iszy.cc/tags/Nicegram/"/>
     
   </entry>
   
