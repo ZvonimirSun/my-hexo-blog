@@ -61,7 +61,7 @@ permalink: /page/bgfw/
 
 邀请码: `iszy`
 
-[⭐⭐ 测速 ⭐⭐](https://www.iszy.cc/page/speed-test-collection/#FreeWhale-自由鲸) (2020-08-07)
+[⭐⭐ 测速 ⭐⭐](https://www.iszy.cc/page/speed-test-collection/#freewhale-自由鲸) (2020-08-07)
 
 [⭐ 更多详细介绍 ⭐](https://www.iszy.cc/page/freewhale/)
 
