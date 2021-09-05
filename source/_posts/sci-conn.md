@@ -38,7 +38,7 @@ permalink: /page/bgfw/
 
 | 机场名称（点击了解更多）                                | 类别                  | 关键词                           | 操作                                          |
 | ------------------------------------------------------- | --------------------- | -------------------------------- | --------------------------------------------- |
-| [自由鲸 FreeWhale ⭐](/page/freewhale/)【官方长期优惠】 | SSR(隧道、专线)/V2Ray | 性价比高，超多线路，稳定老站     | [官网传送门](https://t.xinjie.eu.org/iszy)    |
+| [FreeWhale 自由鲸 ⭐](/page/freewhale/)【官方长期优惠】 | SSR(隧道、专线)/V2Ray | 性价比高，超多线路，稳定老站     | [官网传送门](https://t.xinjie.eu.org/iszy)    |
 | [CMYNetwork 红莓网络](/page/cmynetwork/)                | SSR(专线)/Trojan      | 稳定平价，超多专线，小众地区线路 | [官网传送门](https://url.iszy.xyz/cmynetwork) |
 | [MEET](#三-meet)                                        | SSR                   | 专注按量付费，高速稳定           | [官网传送门](https://url.iszy.xyz/fspeed)     |
 | [BoomCloud](#四-boomcloud)【官方长期优惠】              | V2ray/SSR/SS          | 多年老站，附赠丰富               | [官网传送门](https://url.iszy.xyz/boomcloud)  |
@@ -55,13 +55,13 @@ permalink: /page/bgfw/
 <details>
 <summary style="cursor:pointer"><strong style="color:red">展开查看机场们的介绍~</strong></summary>
 
-## 一、自由鲸
+## 一、FreeWhale 自由鲸
 
 [官网传送门](https://t.xinjie.eu.org/iszy)
 
 邀请码: `iszy`
 
-[⭐⭐ 测速 ⭐⭐](https://www.iszy.cc/page/speed-test-collection/#自由鲸) (2020-08-07)
+[⭐⭐ 测速 ⭐⭐](https://www.iszy.cc/page/speed-test-collection/#FreeWhale-自由鲸) (2020-08-07)
 
 [⭐ 更多详细介绍 ⭐](https://www.iszy.cc/page/freewhale/)
 
