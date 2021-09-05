@@ -48,7 +48,7 @@ permalink: /page/freewhale/
 
 机场测速在这里提供下，仅供参考。考虑到测速会占用大量服务器带宽，尤其是在高峰期，或许会影响其他用户的正常使用，在此不会频繁更新测速记录，仅在出现重大情况或是用户要求更新时更新测速。测速时间会在速度图的底部留有记录。
 
-[⭐⭐ 自由鲸 FreeWhale 测速 ⭐⭐](https://www.iszy.cc/page/speed-test-collection/#自由鲸FreeWhale)
+[⭐⭐ 自由鲸 FreeWhale 测速 ⭐⭐](https://www.iszy.cc/page/speed-test-collection/#自由鲸-FreeWhale)
 
 ### 优惠
 

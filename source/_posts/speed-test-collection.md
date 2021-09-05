@@ -12,7 +12,7 @@ permalink: /page/speed-test-collection/
 
 <!--more-->
 
-## 自由鲸
+## 自由鲸 FreeWhale
 
 [官网传送门](https://t.xinjie.eu.org/iszy)
 
