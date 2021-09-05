@@ -36,17 +36,17 @@ permalink: /page/bgfw/
 
 ## 目录
 
-| 机场名称（点击了解更多）                        | 类别                  | 关键词                           | 操作                                          |
-| ----------------------------------------------- | --------------------- | -------------------------------- | --------------------------------------------- |
-| [心阶云 ⭐](/page/xinjiecloud/)【官方长期优惠】 | SSR(隧道、专线)/V2Ray | 性价比高，超多线路，稳定老站     | [官网传送门](https://url.iszy.xyz/xinjie)     |
-| [CMYNetwork 红莓网络](/page/cmynetwork/)        | SSR(专线)/Trojan      | 稳定平价，超多专线，小众地区线路 | [官网传送门](https://url.iszy.xyz/cmynetwork) |
-| [MEET](#三-meet)                                | SSR                   | 专注按量付费，高速稳定           | [官网传送门](https://url.iszy.xyz/fspeed)     |
-| [BoomCloud](#四-boomcloud)【官方长期优惠】      | V2ray/SSR/SS          | 多年老站，附赠丰富               | [官网传送门](https://url.iszy.xyz/boomcloud)  |
-| [DuangCloud](#五-duangcloud)【专属优惠】        | SS(全专线)            | 平价灵活                         | [官网传送门](https://url.iszy.xyz/duangcloud) |
-| [ByWave](#六-bywave)                            | V2Ray                 | 高质高端，服务稳定               | [官网传送门](https://url.iszy.xyz/bywave)     |
-| [Blinkload](#七-blinkload)                      | SS(全专线)            | 稳定全能，超多专线               | [官网传送门](https://url.iszy.xyz/blinkload)  |
-| [闲鱼网络](#八-闲鱼网络)(皇朝网络)              | SS 隧道               | 性价比新站                       | [官网传送门](https://url.iszy.xyz/dinastio)   |
-| [Shuttle](#九-shuttle)                          | V2ray                 | 平价新站，另含超多小众地区线路   | [官网传送门](https://url.iszy.xyz/shuttle)    |
+| 机场名称（点击了解更多）                                | 类别                  | 关键词                           | 操作                                          |
+| ------------------------------------------------------- | --------------------- | -------------------------------- | --------------------------------------------- |
+| [自由鲸 FreeWhale ⭐](/page/freewhale/)【官方长期优惠】 | SSR(隧道、专线)/V2Ray | 性价比高，超多线路，稳定老站     | [官网传送门](https://t.xinjie.eu.org/iszy)    |
+| [CMYNetwork 红莓网络](/page/cmynetwork/)                | SSR(专线)/Trojan      | 稳定平价，超多专线，小众地区线路 | [官网传送门](https://url.iszy.xyz/cmynetwork) |
+| [MEET](#三-meet)                                        | SSR                   | 专注按量付费，高速稳定           | [官网传送门](https://url.iszy.xyz/fspeed)     |
+| [BoomCloud](#四-boomcloud)【官方长期优惠】              | V2ray/SSR/SS          | 多年老站，附赠丰富               | [官网传送门](https://url.iszy.xyz/boomcloud)  |
+| [DuangCloud](#五-duangcloud)【专属优惠】                | SS(全专线)            | 平价灵活                         | [官网传送门](https://url.iszy.xyz/duangcloud) |
+| [ByWave](#六-bywave)                                    | V2Ray                 | 高质高端，服务稳定               | [官网传送门](https://url.iszy.xyz/bywave)     |
+| [Blinkload](#七-blinkload)                              | SS(全专线)            | 稳定全能，超多专线               | [官网传送门](https://url.iszy.xyz/blinkload)  |
+| [闲鱼网络](#八-闲鱼网络)(皇朝网络)                      | SS 隧道               | 性价比新站                       | [官网传送门](https://url.iszy.xyz/dinastio)   |
+| [Shuttle](#九-shuttle)                                  | V2ray                 | 平价新站，另含超多小众地区线路   | [官网传送门](https://url.iszy.xyz/shuttle)    |
 
 > 本页机场均在上次网络大波动中提供了稳定的服务，还会持续观察未来表现
 
@@ -55,15 +55,15 @@ permalink: /page/bgfw/
 <details>
 <summary style="cursor:pointer"><strong style="color:red">展开查看机场们的介绍~</strong></summary>
 
-## 一、心阶云
+## 一、自由鲸
 
-[官网传送门](https://url.iszy.xyz/xinjiebak)
+[官网传送门](https://t.xinjie.eu.org/iszy)
 
 邀请码: `iszy`
 
-[⭐⭐ 测速 ⭐⭐](https://www.iszy.cc/page/speed-test-collection/#心阶云) (2020-08-07)
+[⭐⭐ 测速 ⭐⭐](https://www.iszy.cc/page/speed-test-collection/#自由鲸) (2020-08-07)
 
-[⭐ 更多详细介绍 ⭐](https://www.iszy.cc/page/xinjiecloud/)
+[⭐ 更多详细介绍 ⭐](https://www.iszy.cc/page/freewhale/)
 
 ### （一）优惠
 
@@ -75,7 +75,7 @@ permalink: /page/bgfw/
 
 ### （二）简介
 
-**心阶云**是一家长期走中高端路线的 **ShadowsocksR(SSR)** 机场，也提供部分 V2Ray 线路，已经稳定运行多年。实际对比下来，它的性价比还是相当高的，线路又多，提供的流量也十分充足，主要推荐的套餐充分考虑了当前主流用户能够接受的价位，可以说是无可挑剔。现阶段包含大量优质 V2Ray 线路和更多的 SSR 线路，**Lv.2** 节点采用 **SSR 隧道加密**和 V2ray 技术，配合国内 **6Gbps** 机器和负载均衡技术，保证全时段稳定性。用了很久，稳定通过了“多次网络波动”时期，体验极佳，可以放心使用。
+**自由鲸 FreeWhale**是一家长期走中高端路线的 **ShadowsocksR(SSR)** 机场，也提供部分 V2Ray 线路，已经稳定运行多年。实际对比下来，它的性价比还是相当高的，线路又多，提供的流量也十分充足，主要推荐的套餐充分考虑了当前主流用户能够接受的价位，可以说是无可挑剔。现阶段包含大量优质 V2Ray 线路和更多的 SSR 线路，**Lv.2** 节点采用 **SSR 隧道加密**和 V2ray 技术，配合国内 **6Gbps** 机器和负载均衡技术，保证全时段稳定性。用了很久，稳定通过了“多次网络波动”时期，体验极佳，可以放心使用。
 
 - SSR 隧道中转 & V2ray
 - 采用封闭邀请，精选客户，稳定可靠安全

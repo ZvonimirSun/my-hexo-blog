@@ -12,10 +12,13 @@ permalink: /page/speed-test-collection/
 
 <!--more-->
 
-## 心阶云
+## 自由鲸
 
-[官网传送门](https://url.iszy.xyz/xinjiebak)
+[官网传送门](https://t.xinjie.eu.org/iszy)
 
+调整中，稍后测试
+
+<!--
 **SSR 线路测速**（建议使用）
 
 2020-08-07
@@ -24,7 +27,7 @@ permalink: /page/speed-test-collection/
 
 **V2ray 线路测速**
 
-![V2ray线路](https://img.iszy.xyz/20210807132104.png)
+![V2ray线路](https://img.iszy.xyz/20210807132104.png) -->
 
 ## CMYNetwork 红莓网络
 
