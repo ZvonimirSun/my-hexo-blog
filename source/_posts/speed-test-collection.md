@@ -1,7 +1,7 @@
 ---
 title: 机场测速集合
 date: 2019-03-02 14:20:52
-updated: 2021-08-07 14:20:52
+updated: 2021-09-18 14:20:52
 categories:
 tags:
   - 科学上网
@@ -16,18 +16,11 @@ permalink: /page/speed-test-collection/
 
 [官网传送门](https://t.xinjie.eu.org/iszy)
 
-调整中，稍后测试
-
-<!--
 **SSR 线路测速**（建议使用）
 
-2020-08-07
+2021-09-18
 
-![SSR线路](https://img.iszy.xyz/20210807130828.png)
-
-**V2ray 线路测速**
-
-![V2ray线路](https://img.iszy.xyz/20210807132104.png) -->
+![SSR线路](https://img.iszy.xyz/20210918005527.png)
 
 ## CMYNetwork 红莓网络
 
