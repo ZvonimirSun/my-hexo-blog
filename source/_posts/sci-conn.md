@@ -1,7 +1,7 @@
 ---
 title: 【评测】优质SS/SSR/Trojan/V2Ray机场推荐
 date: 2019-01-03 03:11:50
-updated: 2021-08-13 11:00:00
+updated: 2021-09-18 11:00:00
 categories:
   - 推广
 tags:
@@ -61,7 +61,7 @@ permalink: /page/bgfw/
 
 邀请码: `iszy`
 
-[⭐⭐ 测速 ⭐⭐](https://www.iszy.cc/page/speed-test-collection/#freewhale-自由鲸) (2021-08-07)
+[⭐⭐ 测速 ⭐⭐](https://www.iszy.cc/page/speed-test-collection/#freewhale-自由鲸) (2021-09-18)
 
 [⭐ 更多详细介绍 ⭐](https://www.iszy.cc/page/freewhale/)
 
