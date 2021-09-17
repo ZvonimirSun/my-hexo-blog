@@ -71,7 +71,7 @@ permalink: /page/bgfw/
 
 **￥ 115** 及以上套餐可用
 
-端午节**95 折**礼遇码：`FeelHot`
+九月**95 折**礼遇码：`PeacefulSep`
 
 ### （二）简介
 
