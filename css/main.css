@@ -3088,19 +3088,19 @@ mark.search-keyword {
   margin-top: 1rem;
 }
 #links .link-navigation {
-  display: flex;
-  flex-flow: row wrap;
+  display: grid;
   justify-content: space-between;
+  grid-template-columns: repeat(auto-fill, 300px);
 }
 #links .card {
   font-size: 1.1em;
-  padding: 10px 20px;
+  padding: 5px 8px;
   border-radius: 4px;
   transition-duration: 0.15s;
-  margin-bottom: 1rem;
+  margin-bottom: 8px;
   display: flex;
-  flex-basis: 200px;
-  flex-grow: 1;
+  width: 300px;
+  box-sizing: border-box;
 }
 #links .card:hover {
   transform: scale(1.1);
