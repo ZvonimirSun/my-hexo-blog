@@ -661,9 +661,9 @@ waline:
   dark: "auto"
   emoji:
     - https://cdn.jsdelivr.net/gh/zvonimirsun/emojis@1.0.2/bilibili-xhl
-    - https://cdn.jsdelivr.net/gh/zvonimirsun/emojis@1.0.2/qq
-    - https://cdn.jsdelivr.net/gh/zvonimirsun/emojis@1.0.2/bilibili
-    - https://cdn.jsdelivr.net/gh/zvonimirsun/emojis@1.0.2/alus
+#     - https://cdn.jsdelivr.net/gh/zvonimirsun/emojis@1.0.2/qq
+#     - https://cdn.jsdelivr.net/gh/zvonimirsun/emojis@1.0.2/bilibili
+#     - https://cdn.jsdelivr.net/gh/zvonimirsun/emojis@1.0.2/alus
 
 # ---------------------------------------------------------------
 # Post Widgets & Content Sharing Services
