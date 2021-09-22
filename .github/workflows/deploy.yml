@@ -33,3 +33,15 @@ jobs:
         with:
           branch: gh-pages
           folder: public
+      - name: Deploy to server
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          port: ${{ secrets.PORT }}
+          key: ${{ secrets.KEY }}
+          script: |
+            whoami
+            cd /root/docker/nginx/html/www.iszy.cc
+            git pull --rebase
+            ls -al
