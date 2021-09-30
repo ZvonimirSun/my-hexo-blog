@@ -6,7 +6,7 @@
   <link href="https://www.iszy.cc/atom.xml" rel="self"/>
   
   <link href="https://www.iszy.cc/"/>
-  <updated>2021-09-23T13:28:25.000Z</updated>
+  <updated>2021-09-30T11:04:48.000Z</updated>
   <id>https://www.iszy.cc/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>VS Code + ESLint 自动格式化和快捷键配置</title>
+    <link href="https://www.iszy.cc/posts/12/"/>
+    <id>https://www.iszy.cc/posts/12/</id>
+    <published>2021-09-30T11:04:48.000Z</published>
+    <updated>2021-09-30T11:04:48.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>在此记录一下 VS Code 配合 ESLint 进行自动修复格式化，以及快捷键的配置。</p><span id="more"></span><h2 id="准备"><a class="markdownIt-Anchor" href="#准备"></a> 准备</h2><p>首先在 VS Code 中使用 ESLint，<code>ESLint</code> 插件肯定是少不了的。</p><p><img data-src="https://img.iszy.xyz/1632972151436.png" alt="ESLint" /></p><p>如果需要支持 Vue，还需要安装 <code>Vetur</code> 插件。</p><p><img data-src="https://img.iszy.xyz/1632972292437.png" alt="Vetur" /></p><p>当然项目中需要在 devDependencies 里添加 eslint 相关内容。</p><p><img data-src="https://img.iszy.xyz/1632972500989.png" alt="devDependencies" /></p><p>如果需要对所有项目使用，建议全局安装 eslint。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install eslint -g</span><br></pre></td></tr></table></figure><h2 id="配置自动格式化"><a class="markdownIt-Anchor" href="#配置自动格式化"></a> 配置自动格式化</h2><p>打开 VS Code 首选项，切换成 JSON 模式。</p><p><img data-src="https://img.iszy.xyz/1632973295099.png" alt="" /></p><p>然后添加如下内容。</p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;editor.codeActionsOnSave&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;source.fixAll.eslint&quot;</span>: <span class="literal">true</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">&quot;eslint.validate&quot;</span>: [<span class="string">&quot;javascript&quot;</span>, <span class="string">&quot;vue&quot;</span>, <span class="string">&quot;html&quot;</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>此时，当你在保存 js、vue、html 文件时，ESLint 将会执行自动修复格式化操作。</p><h2 id="添加-eslint-自动修复快捷键"><a class="markdownIt-Anchor" href="#添加-eslint-自动修复快捷键"></a> 添加 ESLint 自动修复快捷键</h2><p>自动格式化是好，但是有时候我们想自己主动触发格式化，而不是在每次保存时自动修复格式化。那么为了方便，我们可以考虑设置一个快捷键，用于触发格式化。不用配置上一部分的内容。</p><p>打开 <code>文件</code> -&gt; <code>首选项</code> -&gt; <code>键盘快捷方式</code>。或者英文的 <code>Code</code> -&gt; <code>Preferences</code> -&gt; <code>Keyboard Shortcuts</code>。</p><p><img data-src="https://img.iszy.xyz/1632973421746.png" alt="快捷键" /></p><p>此时会列出当前可以绑定快捷键的所有功能和快捷键，在这里搜索<code>fix</code>。</p><p><img data-src="https://img.iszy.xyz/1632973767580.png" alt="修复快捷键" /></p><p>可以看到<code>全部修复</code>也就是修复当前文件的全部错误，是没有绑定快捷键的。点击条目前面的加号，或是双击该条，可以添加和覆盖绑定的快捷键。打开后先按下想要绑定的快捷键再回车，即可保存。右键该条目可以删除或重置键绑定。这边我按照自己的习惯绑定了<code>Alt</code> + <code>X</code>。</p><p><img data-src="https://img.iszy.xyz/1632973867998.png" alt="" /></p><p>此时，在你打开的文件中按下此快捷键，就会触发 ESLint 的自动修复格式化。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;在此记录一下 VS Code 配合 ESLint 进行自动修复格式化，以及快捷键的配置。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="编程" scheme="https://www.iszy.cc/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="VS Code" scheme="https://www.iszy.cc/tags/VS-Code/"/>
+    
+    <category term="IDE" scheme="https://www.iszy.cc/tags/IDE/"/>
+    
+    <category term="ESLint" scheme="https://www.iszy.cc/tags/ESLint/"/>
+    
+    <category term="格式化" scheme="https://www.iszy.cc/tags/%E6%A0%BC%E5%BC%8F%E5%8C%96/"/>
+    
+  </entry>
   
   <entry>
     <title>完全通过 Github Actions 实现项目的自动化部署</title>
@@ -472,29 +499,6 @@
     <category term="Linux" scheme="https://www.iszy.cc/tags/Linux/"/>
     
     <category term="Java" scheme="https://www.iszy.cc/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>利用Github自建图床的几种方式</title>
-    <link href="https://www.iszy.cc/posts/ufjg58/"/>
-    <id>https://www.iszy.cc/posts/ufjg58/</id>
-    <published>2020-05-05T10:18:02.000Z</published>
-    <updated>2020-05-05T10:18:02.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>本文我来简单讲一下利用 Github 自建图床的几种方式，希望能对大家有些帮助。</p><span id="more"></span><h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2><p>本来我是在自己服务器上搭的图床，套上 cdn，使用体验挺好。为什么想到用 Github 来自建图床呢，主要是考虑到以下几个方面。</p><ol><li>首先，Github 有着免费的存储空间，不用占据自己的硬盘。当然，虽然官方对 repo 没有磁盘限制，但是推荐在 1GB 以下，超过 1GB 会有邮件通知。上传超过 50M 的单个文件会 warning，无法上传超过 100M 的单个文件。不过，对于我这样用于博客图床的，图片容量不会很大，其实已经很够用了。</li><li>其次，我使用 Github 主要是出于版本管理和迁移成本的考虑。由于图片放在 Github 上，当我想要迁移到其他地方，只需要简单的 git clone 以下即可，想要回退版本，防止误操作也很方便。</li><li>此外，Github 使用人数很多，所以各种基于 Github 的工具和使用案例很多，不会给自己增添麻烦。比如 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL01vbHVuZXJmaW5uL1BpY0dv">PicGo<i class="fa fa-external-link-alt"></i></span>，一个用于快速上传图片并获取图片 URL 链接的工具，其中就支持 Github，也可以自定义链接，很好用。</li></ol><p>这么来看，Github 是一个很好的图床承载工具。</p><h2 id="准备条件"><a class="markdownIt-Anchor" href="#准备条件"></a> 准备条件</h2><h3 id="建立-repo"><a class="markdownIt-Anchor" href="#建立-repo"></a> 建立 Repo</h3><p>我们要用 Github 做图床，首先建个 Repo 应该不难理解吧，这个就是你用来存储图片的仓库了。<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL25ldw==">点击前往<i class="fa fa-external-link-alt"></i></span></p><p><img data-src="https://img.iszy.xyz/20200505113214.png" alt="" /></p><p>点击 Create repository，这个仓库就建好了。</p><p><img data-src="https://img.iszy.xyz/20200505113547.png" alt="" /></p><p>比如我这里建立了一个名为 img-hosting 的仓库作为示例，链接形如</p><p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1p2b25pbWlyU3VuL2ltZy1ob3N0aW5n">https://github.com/ZvonimirSun/img-hosting<i class="fa fa-external-link-alt"></i></span></p><h3 id="上传工具"><a class="markdownIt-Anchor" href="#上传工具"></a> 上传工具</h3><p>既然要用 GitHub 作为图床，如果没有一个方便的上传图片的方式，用起来就很难受了。这边推荐下我主要在用的工具，也就是我前面提到的 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL01vbHVuZXJmaW5uL1BpY0dv">PicGo<i class="fa fa-external-link-alt"></i></span>，文档比较完善，我这边就不再细说，大家可以直接看下官方说明，配置很简单的。</p><p><span class="exturl" data-url="aHR0cHM6Ly9waWNnby5naXRodWIuaW8vUGljR28tRG9jL3poL2d1aWRlL2NvbmZpZy5odG1sI2dpdGh1YiVFNSU5QiVCRSVFNSVCQSU4QQ==">传送门<i class="fa fa-external-link-alt"></i></span></p><p><img data-src="https://img.iszy.xyz/20200505114811.png" alt="" /></p><p>通过设定自定义域名，就可以每次自动获取你需要的链接格式。</p><h2 id="获取图片链接方案"><a class="markdownIt-Anchor" href="#获取图片链接方案"></a> 获取图片链接方案</h2><h3 id="直连方案"><a class="markdownIt-Anchor" href="#直连方案"></a> 直连方案</h3><p>这个方案听着就很简单了，就是直接使用 Github 存储的直链，形如</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://raw.githubusercontent.com/ZvonimirSun/my-img-hosting/master/20190317184116.png</span><br></pre></td></tr></table></figure><p>只要把链接里的 GitHub 用户名，和你的 repo 名替换即可。master 是分支名，一般没有特别设置都是这个，不用改动。最后跟上你的图片目录即可。</p><p>PicGo 中可以把自定义域名配置为<code>https://raw.githubusercontent.com/ZvonimirSun/my-img-hosting/master</code></p><p>有些人说要使用用 Github Pages，我是觉得没有必要的。一是因为 GitHub Pages 有 1GB 容量限制，二是因为 GitHub Pages 渲染页面比较容易失败，徒增麻烦。不过 Github Pages 可以配置自定义域名，有这个需求的可以尝试，在此我就不推荐了。</p><h3 id="公用-cdn-方案"><a class="markdownIt-Anchor" href="#公用-cdn-方案"></a> 公用 CDN 方案</h3><p>众所周知，GitHub 在国内因为某些不可描述之事使用体验不佳，用户在加载图片的时候会十分缓慢，这时候一个 CDN 就帮助很大了。</p><p>这不就巧了吗，jsDelivr 为开发者提供了免费公共 CDN 加速服务，其中就对 Github 进行了加速，只要通过 jsDelivr 的链接引用你的资源，就能获得 jsDelivr 全球 CDN 的加速效果。鉴于 jsDelivr 是在国内有节点的，使用体验就很好了。</p><p>使用方法很简单，jsDelivr 加速 GitHub 文件的链接格式如下。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://cdn.jsdelivr.net/gh/user/repo@version/file</span><br></pre></td></tr></table></figure><p>上面的示例就改成这样即可。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://cdn.jsdelivr.net/gh/ZvonimirSun/my-img-hosting@master/20190317184116.png</span><br></pre></td></tr></table></figure><p>PicGo 中可以把自定义域名配置为<code>https://cdn.jsdelivr.net/gh/ZvonimirSun/my-img-hosting@master</code></p><h3 id="nginx-反代cdn"><a class="markdownIt-Anchor" href="#nginx-反代cdn"></a> Nginx 反代+CDN</h3><p>这个方案吧，感觉稍微有点憨。就是我想用自己的域名，正好我的 VPS 不缺流量，还有个百度云加速 CDN 可以用。于是我采用了 Nginx 反代 GitHub 直链，然后给我的域名套 CDN 的方式。</p><p>这是我的 Nginx 配置，大家可以参考下。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">server</span><br><span class="line">    &#123;</span><br><span class="line">        listen 80;</span><br><span class="line">        #listen [::]:80;</span><br><span class="line">        server_name img.iszy.xyz;</span><br><span class="line">        return 301 https://$host$request_uri;</span><br><span class="line"></span><br><span class="line">        access_log off;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">server</span><br><span class="line">    &#123;</span><br><span class="line">        listen 443 ssl http2;</span><br><span class="line">        #listen [::]:443 ssl http2;</span><br><span class="line">        server_name img.iszy.xyz;</span><br><span class="line"></span><br><span class="line">        include conf.d/iszyxyz-ssl.conf;</span><br><span class="line"></span><br><span class="line">        location ~ ^(.*)/$ &#123;</span><br><span class="line">            add_header Access-Control-Allow-Origin *;</span><br><span class="line">            add_header Access-Control-Allow-Methods &#x27;GET, POST, OPTIONS&#x27;;</span><br><span class="line">            add_header Access-Control-Allow-Headers &#x27;DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization&#x27;;</span><br><span class="line"></span><br><span class="line">            if ($request_method = &#x27;OPTIONS&#x27;) &#123;</span><br><span class="line">                return 204;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        location / &#123;</span><br><span class="line">            proxy_pass https://raw.githubusercontent.com/ZvonimirSun/my-img-hosting/master/;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        access_log off;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;本文我来简单讲一下利用 Github 自建图床的几种方式，希望能对大家有些帮助。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="建站" scheme="https://www.iszy.cc/categories/%E5%BB%BA%E7%AB%99/"/>
-    
-    
-    <category term="Github" scheme="https://www.iszy.cc/tags/Github/"/>
-    
-    <category term="图床" scheme="https://www.iszy.cc/tags/%E5%9B%BE%E5%BA%8A/"/>
     
   </entry>
   
