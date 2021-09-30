@@ -1,7 +1,7 @@
 ---
 title: 【评测】优质SS/SSR/Trojan/V2Ray机场推荐
 date: 2019-01-03 03:11:50
-updated: 2021-09-18 11:00:00
+updated: 2021-09-30 11:00:00
 categories:
   - 推广
 tags:
@@ -43,7 +43,7 @@ permalink: /page/bgfw/
 | [MEET](#三-meet)                                        | SSR                   | 专注按量付费，高速稳定           | [官网传送门](https://url.iszy.xyz/fspeed)     |
 | [BoomCloud](#四-boomcloud)【官方长期优惠】              | V2ray/SSR/SS          | 多年老站，附赠丰富               | [官网传送门](https://url.iszy.xyz/boomcloud)  |
 | [DuangCloud](#五-duangcloud)【专属优惠】                | SS(全专线)            | 平价灵活                         | [官网传送门](https://url.iszy.xyz/duangcloud) |
-| [ByWave](#六-bywave)                                    | V2Ray                 | 高质高端，服务稳定               | [官网传送门](https://url.iszy.xyz/bywave)     |
+| [ByWave](#六-bywave)【国庆特惠】                        | V2Ray                 | 高质高端，服务稳定               | [官网传送门](https://url.iszy.xyz/bywave)     |
 | [Blinkload](#七-blinkload)                              | SS(全专线)            | 稳定全能，超多专线               | [官网传送门](https://url.iszy.xyz/blinkload)  |
 | [闲鱼网络](#八-闲鱼网络)(皇朝网络)                      | SS 隧道               | 性价比新站                       | [官网传送门](https://url.iszy.xyz/dinastio)   |
 | [Shuttle](#九-shuttle)                                  | V2ray                 | 平价新站，另含超多小众地区线路   | [官网传送门](https://url.iszy.xyz/shuttle)    |
@@ -530,6 +530,13 @@ permalink: /page/bgfw/
 优惠码: `iszy`
 
 > 转官方优惠公告
+
+- 优惠代码 A: `国庆快乐`
+  - 额度： **7 折**一次性优惠
+  - 适用范围： 年付或以上
+- 优惠代码 B: `国庆开心`
+  - 额度： **8 折**一次性优惠
+  - 适用范围： 月付 季付 半年付 一次性流量包
 
 **充值获得赠送金**
 
