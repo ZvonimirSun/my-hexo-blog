@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)">
 <meta name="generator" content="Hexo 5.4.0">
 
 <link rel="preconnect" href="https://fonts.iszy.xyz" crossorigin>
@@ -27,7 +28,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
   <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"www.iszy.cc","root":"/","images":"/images","scheme":"Gemini","version":"8.7.1","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.7.1/source/js/config.min.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.iszy.cc","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/config.min.js"></script>
 <meta name="description" content="File Browser 作为一款远端文件浏览器，可以把你的服务器轻松地变为私人网盘。今天我就来简单介绍一下，如何通过 Docker 轻松部署 File Browser 2.0。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="通过Docker快速部署FileBrowser 2.0">
@@ -56,7 +57,7 @@
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-E60YKKHF8Y"></script>
   <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-E60YKKHF8Y","only_pageview":false}</script>
-  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.7.1/source/js/third-party/analytics/google-analytics.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/third-party/analytics/google-analytics.min.js"></script>
 
 
 
@@ -164,13 +165,12 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#file-browser-%E7%AE%80%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text"> File Browser 简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE"><span class="nav-number">2.</span> <span class="nav-text"> 安装及配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-docker"><span class="nav-number">2.1.</span> <span class="nav-text"> 安装 Docker</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-number">2.2.</span> <span class="nav-text"> 创建配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA-db-%E6%96%87%E4%BB%B6"><span class="nav-number">2.3.</span> <span class="nav-text"> 创建一个 db 文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%AF%E5%8A%A8-file-browser"><span class="nav-number">2.4.</span> <span class="nav-text"> 启动 File Browser</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B6%E4%BB%96"><span class="nav-number">3.</span> <span class="nav-text"> 其他</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%A1%E7%90%86"><span class="nav-number">3.1.</span> <span class="nav-text"> 管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%98%B2%E7%81%AB%E5%A2%99%E9%85%8D%E7%BD%AE"><span class="nav-number">3.2.</span> <span class="nav-text"> 防火墙配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#iptables"><span class="nav-number">3.2.1.</span> <span class="nav-text"> iptables</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ufw"><span class="nav-number">3.2.2.</span> <span class="nav-text"> ufw</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%8E%E8%AF%9D"><span class="nav-number">4.</span> <span class="nav-text"> 后话</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#File-Browser-%E7%AE%80%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text">File Browser 简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE"><span class="nav-number">2.</span> <span class="nav-text">安装及配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-Docker"><span class="nav-number">2.1.</span> <span class="nav-text">安装 Docker</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-number">2.2.</span> <span class="nav-text">创建配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA-db-%E6%96%87%E4%BB%B6"><span class="nav-number">2.3.</span> <span class="nav-text">创建一个 db 文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%AF%E5%8A%A8-File-Browser"><span class="nav-number">2.4.</span> <span class="nav-text">启动 File Browser</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B6%E4%BB%96"><span class="nav-number">3.</span> <span class="nav-text">其他</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%A1%E7%90%86"><span class="nav-number">3.1.</span> <span class="nav-text">管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%98%B2%E7%81%AB%E5%A2%99%E9%85%8D%E7%BD%AE"><span class="nav-number">3.2.</span> <span class="nav-text">防火墙配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#iptables"><span class="nav-number">3.2.1.</span> <span class="nav-text">iptables</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ufw"><span class="nav-number">3.2.2.</span> <span class="nav-text">ufw</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%8E%E8%AF%9D"><span class="nav-number">4.</span> <span class="nav-text">后话</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
-          <div class="site-overview">
-            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="Dirge"
       src="/images/avatar.png">
   <p class="site-author-name" itemprop="name">Dirge</p>
@@ -202,7 +202,6 @@
 
 
 
-          </div>
         </div>
       </div>
         <div class="back-to-top animated" role="button" aria-label="返回顶部">
@@ -319,7 +318,7 @@
     <div class="post-body" itemprop="articleBody">
         <p>File Browser 作为一款远端文件浏览器，可以把你的服务器轻松地变为私人网盘。今天我就来简单介绍一下，如何通过 Docker 轻松部署 File Browser 2.0。</p>
 <span id="more"></span>
-<h2 id="file-browser-简介"><a class="markdownIt-Anchor" href="#file-browser-简介"></a> File Browser 简介</h2>
+<h2 id="File-Browser-简介">File Browser 简介</h2>
 <p>File Browser 可以在指定目录中提供文件管理界面，可以上传、删除、预览、重命名和编辑文件。 它允许创建多个用户，每个用户都可以拥有自己的目录。 它可以用作独立应用程序或中间件。</p>
 <p>功能概览：</p>
 <ul>
@@ -330,43 +329,43 @@
 <li>执行自定义命令</li>
 <li>个性化界面</li>
 </ul>
-<h2 id="安装及配置"><a class="markdownIt-Anchor" href="#安装及配置"></a> 安装及配置</h2>
-<h3 id="安装-docker"><a class="markdownIt-Anchor" href="#安装-docker"></a> 安装 Docker</h3>
+<h2 id="安装及配置">安装及配置</h2>
+<h3 id="安装-Docker">安装 Docker</h3>
 <p>Docker 的安装很简单，教程很多，在这里只列举一下，Ubuntu 和 CentOS 的安装脚本。</p>
 <ul>
 <li>Ubuntu: <code>wget -qO- https://get.docker.com/ | sudo sh</code></li>
 <li>CentOS: <code>curl -fsSL https://get.docker.com -o get-docker.sh &amp;&amp; sudo sh get-docker.sh</code></li>
 </ul>
-<h3 id="创建配置文件"><a class="markdownIt-Anchor" href="#创建配置文件"></a> 创建配置文件</h3>
+<h3 id="创建配置文件">创建配置文件</h3>
 <p>如果要自定义设置的话，那就要创建一个配置文件，注意配置文件中的路径都是 Docker 容器中的虚拟路径。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi filebrowser.json</span><br></pre></td></tr></table></figure>
 <p>我的配置文件内容如下</p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;address&quot;</span>: <span class="string">&quot;0.0.0.0&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;port&quot;</span>: <span class="number">80</span>,</span><br><span class="line">  <span class="attr">&quot;locale&quot;</span>: <span class="string">&quot;zh-cn&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;baseURL&quot;</span>: <span class="string">&quot;/&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;log&quot;</span>: <span class="string">&quot;stdout&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;database&quot;</span>: <span class="string">&quot;/database.db&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;root&quot;</span>: <span class="string">&quot;/srv&quot;</span>, <span class="comment">// 文件管理根目录</span></span><br><span class="line">  <span class="attr">&quot;cert&quot;</span>: <span class="string">&quot;/ssl.cer&quot;</span>, <span class="comment">// 如果不需要 https 请去掉</span></span><br><span class="line">  <span class="attr">&quot;key&quot;</span>: <span class="string">&quot;/ssl.key&quot;</span> <span class="comment">//   cert 和 key 两行配置</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>如果需要更多配置内容，请参考<span class="exturl" data-url="aHR0cHM6Ly9kb2NzLmZpbGVicm93c2VyLnh5ei9jbGkvZmlsZWJyb3dzZXItY29uZmlnLXNldA==">官方文档<i class="fa fa-external-link-alt"></i></span>。</p>
-<h3 id="创建一个-db-文件"><a class="markdownIt-Anchor" href="#创建一个-db-文件"></a> 创建一个 db 文件</h3>
+<h3 id="创建一个-db-文件">创建一个 db 文件</h3>
 <p>如果需要长久化存储账号配置等信息，需要提前创建一个空的 db 文件用于存储。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch database.db</span><br></pre></td></tr></table></figure>
-<h3 id="启动-file-browser"><a class="markdownIt-Anchor" href="#启动-file-browser"></a> 启动 File Browser</h3>
+<h3 id="启动-File-Browser">启动 File Browser</h3>
 <p>使用如下命令启动 File Browser。注意替换所有<code>:</code>前的路径为你自己的路径，<code>:</code>后的路径为 docker 容器中的虚拟路径，不要修改。可以把 8888 改成任意你想要的端口。如果上面配置文件里面没有写 https 配置的话，可以不用加上证书和密钥的映射。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">docker run \</span><br><span class="line">-v /your/path:/srv \</span><br><span class="line">-v /your/path/to/example.cer:/ssl.cer \</span><br><span class="line">-v /your/path/to/example.key:/ssl.key \</span><br><span class="line">-v /your/path/to/database.db:/database.db \</span><br><span class="line">-v /your/path/to/filebrowser.json:/.filebrowser.json \</span><br><span class="line">-p 8888:80 \</span><br><span class="line">--name filebrowser \</span><br><span class="line">--restart=always \</span><br><span class="line">filebrowser/filebrowser</span><br></pre></td></tr></table></figure>
 <p>访问你的浏览器，现在应该可以开始使用了。如果通过外网访问，别忘了在防火墙打开端口。</p>
-<p><img data-src="https://img.iszy.xyz/20190318213056.png" alt="File Browser" /></p>
-<h2 id="其他"><a class="markdownIt-Anchor" href="#其他"></a> 其他</h2>
-<h3 id="管理"><a class="markdownIt-Anchor" href="#管理"></a> 管理</h3>
+<p><img data-src="https://img.iszy.xyz/20190318213056.png" alt="File Browser"></p>
+<h2 id="其他">其他</h2>
+<h3 id="管理">管理</h3>
 <p>这里的管理指的是在服务器上对 File Browser 进行管理，File Browser 内的操作我就不再赘述了。</p>
 <ul>
 <li>关闭 File Browser: <code>docker stop filebrowser</code></li>
 <li>开启 File Browser: <code>docker start filebrowser</code></li>
 <li>卸载 File Browser: <code>docker rm filebrowser</code></li>
 </ul>
-<h3 id="防火墙配置"><a class="markdownIt-Anchor" href="#防火墙配置"></a> 防火墙配置</h3>
+<h3 id="防火墙配置">防火墙配置</h3>
 <p>如果需要外网访问，需要在服务器上打开端口，以上面的<code>8888</code>端口为例。</p>
 <p>这里仅举例 iptables 和 ufw 的操作。</p>
-<h4 id="iptables"><a class="markdownIt-Anchor" href="#iptables"></a> iptables</h4>
+<h4 id="iptables">iptables</h4>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo iptables -A INPUT -p tcp --dport 8888 -j ACCEPT</span><br><span class="line">sudo iptables -A OUTPUT -p tcp --sport 8888 -j ACCEPT</span><br></pre></td></tr></table></figure>
-<h4 id="ufw"><a class="markdownIt-Anchor" href="#ufw"></a> ufw</h4>
+<h4 id="ufw">ufw</h4>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ufw allow 8888</span><br></pre></td></tr></table></figure>
-<h2 id="后话"><a class="markdownIt-Anchor" href="#后话"></a> 后话</h2>
+<h2 id="后话">后话</h2>
 <p>好了，以上就是通过 Docker 在 Linux 系统上安装以及使用 File Browser 的方法。既然是 Docker，那么在其他支持 Docker 的平台也是可以用的，Docker 部分的操作是一致的。</p>
 <p>有更多问题，欢迎在评论区留言。</p>
 
@@ -463,7 +462,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">209k</span>
+    <span title="站点总字数">210k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
@@ -485,31 +484,34 @@
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.7.1/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.7.1/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.7.1/source/js/next-boot.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.7.1/source/js/pjax.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/next-boot.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/pjax.min.js"></script>
 
   
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.7.1/source/js/third-party/search/local-search.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/third-party/search/local-search.min.js"></script>
 
 
 
-  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.7.1/source/js/third-party/fancybox.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/third-party/fancybox.min.js"></script>
 
-  
-
-
-
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/third-party/pace.min.js"></script>
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/katex.min.css" integrity="sha256-e8fkE+LP8R8PMyAaC6jji0vzbcvXB0WnNxM/19zvcdU=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/contrib/copy-tex.min.css" integrity="sha256-+oItviPaTmqjDhk4y4fLLUIMgRQYDV/ZyrRNvQiebWM=" crossorigin="anonymous">
-  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/contrib/copy-tex.min.js","integrity":"sha256-etSqbSVF4+Lwe8MGk/Vanc1sR+mWv+qOG73fxWw9p94="}}</script>
-  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.7.1/source/js/third-party/math/katex.min.js"></script>
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha256-M6KFoDq9eUpmogkDgw6+3R3ZgUPSuFXnQyr8tskSfQs=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/copy-tex.min.css" integrity="sha256-+oItviPaTmqjDhk4y4fLLUIMgRQYDV/ZyrRNvQiebWM=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/copy-tex.min.js","integrity":"sha256-etSqbSVF4+Lwe8MGk/Vanc1sR+mWv+qOG73fxWw9p94="}}</script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/third-party/math/katex.min.js"></script>
 
 
   <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
   <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":false,"delay":true,"timeout":3000,"priority":true,"url":"https://www.iszy.cc/posts/filebrowser2-setup-docker/"}</script>
-  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.7.1/source/js/third-party/quicklink.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/third-party/quicklink.min.js"></script>
 <script class="next-config" data-name="waline" type="application/json">{"lang":"zh-CN","enable":true,"serverURL":"https://wl.iszy.xyz","placeholder":"Just go go","avatar":null,"pageSize":10,"visitor":true,"comment_count":true,"requiredFields":[],"locale":{"placeholder":"本站支持匿名评论，无需登录~(●'◡'●)\n与文章无关的留言请前往本站留言板，谢谢配合~"},"meta":["nick","mail","link"],"requiredMeta":["nick","mail"],"libUrl":"https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js","dark":"auto","emoji":["https://cdn.jsdelivr.net/gh/zvonimirsun/emojis@1.0.2/bilibili-xhl"],"el":"#waline-comments","path":"/posts/filebrowser2-setup-docker/"}</script>
 <script>
 document.addEventListener('page:loaded', () => {

@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)">
 <meta name="generator" content="Hexo 5.4.0">
 
 <link rel="preconnect" href="https://fonts.iszy.xyz" crossorigin>
@@ -27,7 +28,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
   <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"www.iszy.cc","root":"/","images":"/images","scheme":"Gemini","version":"8.7.1","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.7.1/source/js/config.min.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.iszy.cc","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/config.min.js"></script>
 <meta name="description" content="今天我更换了网站的域名，从原来的的 sunziyang.com 改为了 iszy.me，我觉得新的域名比原本的好看一些，可惜我买不起 szy.com 或者 szy.me。网站更改域名算是一件比较大的事情，还是有一些必要的工作要做的，于是在此做一个记录。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="更改网站域名">
@@ -56,7 +57,7 @@
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-E60YKKHF8Y"></script>
   <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-E60YKKHF8Y","only_pageview":false}</script>
-  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.7.1/source/js/third-party/analytics/google-analytics.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/third-party/analytics/google-analytics.min.js"></script>
 
 
 
@@ -164,13 +165,12 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E7%AB%99%E6%94%B9%E7%89%88"><span class="nav-number">1.</span> <span class="nav-text"> 网站改版</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%B9%E6%97%A7%E7%BD%91%E7%AB%99%E5%81%9A-301-%E8%B7%B3%E8%BD%AC"><span class="nav-number">2.</span> <span class="nav-text"> 对旧网站做 301 跳转</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E5%86%85%E6%9B%B4%E6%94%B9%E7%BD%91%E7%AB%99%E5%9F%9F%E5%90%8D"><span class="nav-number">3.</span> <span class="nav-text"> 搜索引擎内更改网站域名</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#google"><span class="nav-number">3.1.</span> <span class="nav-text"> Google</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#baidu"><span class="nav-number">3.2.</span> <span class="nav-text"> Baidu</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B0%E7%BD%91%E7%AB%99%E7%AE%A1%E7%90%86"><span class="nav-number">3.3.</span> <span class="nav-text"> 新网站管理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%8E%E8%AF%9D"><span class="nav-number">4.</span> <span class="nav-text"> 后话</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E7%AB%99%E6%94%B9%E7%89%88"><span class="nav-number">1.</span> <span class="nav-text">网站改版</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%B9%E6%97%A7%E7%BD%91%E7%AB%99%E5%81%9A-301-%E8%B7%B3%E8%BD%AC"><span class="nav-number">2.</span> <span class="nav-text">对旧网站做 301 跳转</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E5%86%85%E6%9B%B4%E6%94%B9%E7%BD%91%E7%AB%99%E5%9F%9F%E5%90%8D"><span class="nav-number">3.</span> <span class="nav-text">搜索引擎内更改网站域名</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Google"><span class="nav-number">3.1.</span> <span class="nav-text">Google</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Baidu"><span class="nav-number">3.2.</span> <span class="nav-text">Baidu</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B0%E7%BD%91%E7%AB%99%E7%AE%A1%E7%90%86"><span class="nav-number">3.3.</span> <span class="nav-text">新网站管理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%8E%E8%AF%9D"><span class="nav-number">4.</span> <span class="nav-text">后话</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
-          <div class="site-overview">
-            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="Dirge"
       src="/images/avatar.png">
   <p class="site-author-name" itemprop="name">Dirge</p>
@@ -202,7 +202,6 @@
 
 
 
-          </div>
         </div>
       </div>
         <div class="back-to-top animated" role="button" aria-label="返回顶部">
@@ -319,16 +318,16 @@
     <div class="post-body" itemprop="articleBody">
         <p>今天我更换了网站的域名，从原来的的 <span class="exturl" data-url="aHR0cDovL3N1bnppeWFuZy5jb20=">sunziyang.com<i class="fa fa-external-link-alt"></i></span> 改为了 <span class="exturl" data-url="aHR0cDovL2lzenkubWU=">iszy.me<i class="fa fa-external-link-alt"></i></span>，我觉得新的域名比原本的好看一些，可惜我买不起 <span class="exturl" data-url="aHR0cDovL3N6eS5jb20=">szy.com<i class="fa fa-external-link-alt"></i></span> 或者 <span class="exturl" data-url="aHR0cDovL3N6eS5tZQ==">szy.me<i class="fa fa-external-link-alt"></i></span>。网站更改域名算是一件比较大的事情，还是有一些必要的工作要做的，于是在此做一个记录。</p>
 <span id="more"></span>
-<h2 id="网站改版"><a class="markdownIt-Anchor" href="#网站改版"></a> 网站改版</h2>
+<h2 id="网站改版">网站改版</h2>
 <p>首先呢，我的网站是通过 jekyll 编译的，一些编译的内容和域名是关联在一起的。我也讲不清楚，就是如果域名不完全匹配，即使是 http 和 https 的区别，网站的一些图标就不能正常显示。所以我需要更改配置后，重新编译网站。其他的网站可能不会遇到我这个问题。</p>
 <p>另外，由于我是全站 https 的，更换域名也就需要重新申请一个新域名的 ssl 证书。正好 Let’s Encrypt 的泛域名证书已经正式推出了，我也就顺势申请了泛域名证书，现在已经用上了。关于泛域名证书获取的过程可以看我的<a href="https://www.iszy.cc/2018/03/18/wild-card/">上一篇文章</a>。</p>
-<h2 id="对旧网站做-301-跳转"><a class="markdownIt-Anchor" href="#对旧网站做-301-跳转"></a> 对旧网站做 301 跳转</h2>
+<h2 id="对旧网站做-301-跳转">对旧网站做 301 跳转</h2>
 <p>为了保证搜索引擎的正常抓取和索引，并尽量减少网站的正常改版过程中的流量损失，要对旧网站做 301 跳转。</p>
 <p>网上的教程应该很多吧，无论是针对 Apache 的，还是 Nginx 的，连针对微软的 IIS 的教程都有。我还特别去看过，讲道理还挺简单的，在此我就不赘述了。如果真有人需要，在评论里说一声，我在这里做整理。</p>
 <p>对于我来说就比较简单了，我的 VPS 上用的免费的宝塔面板，提供了简单的设置 301 跳转的功能。一般来说，这样子的控制面板应该都会提供这样的功能。</p>
-<p><img data-src="https://img.iszy.xyz/20190318212214.png" alt="" /></p>
-<h2 id="搜索引擎内更改网站域名"><a class="markdownIt-Anchor" href="#搜索引擎内更改网站域名"></a> 搜索引擎内更改网站域名</h2>
-<h3 id="google"><a class="markdownIt-Anchor" href="#google"></a> Google</h3>
+<p><img data-src="https://img.iszy.xyz/20190318212214.png" alt=""></p>
+<h2 id="搜索引擎内更改网站域名">搜索引擎内更改网站域名</h2>
+<h3 id="Google">Google</h3>
 <p>我就在这里简单讲一下一般流程。</p>
 <ol>
 <li>首先在 Search Console 中<strong>添加你的新网站</strong>。</li>
@@ -337,7 +336,7 @@
 <li>然后提交地址更改请求。</li>
 </ol>
 <p>接下来就交给 Google 来完成了，他会自动将你旧网站的索引迁移到新网站去，旧网站的索引将会作废，直到最终完成。</p>
-<h3 id="baidu"><a class="markdownIt-Anchor" href="#baidu"></a> Baidu</h3>
+<h3 id="Baidu">Baidu</h3>
 <ol>
 <li>首先在百度站长工具中<strong>添加你的新站点</strong>。</li>
 <li>进入你的旧网站的控制台，使用<strong>网站改版工具</strong>。</li>
@@ -345,9 +344,9 @@
 <li>然后选择刚刚添加的新站点名。</li>
 <li>提交，百度会完成接下来的工作。</li>
 </ol>
-<h3 id="新网站管理"><a class="markdownIt-Anchor" href="#新网站管理"></a> 新网站管理</h3>
+<h3 id="新网站管理">新网站管理</h3>
 <p>不多说，和你旧网站的管理一致，可能需要等到迁移完成。</p>
-<h2 id="后话"><a class="markdownIt-Anchor" href="#后话"></a> 后话</h2>
+<h2 id="后话">后话</h2>
 <p>反正我网站的流量也不多，也不用来赚钱，域名换了也就换了。如果你的网站比较大的话，还是要慎重选择是否要进行网站的改版，会对网站造成很大的影响。</p>
 
     </div>
@@ -434,7 +433,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">209k</span>
+    <span title="站点总字数">210k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
@@ -456,31 +455,34 @@
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.7.1/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.7.1/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.7.1/source/js/next-boot.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.7.1/source/js/pjax.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/next-boot.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/pjax.min.js"></script>
 
   
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.7.1/source/js/third-party/search/local-search.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/third-party/search/local-search.min.js"></script>
 
 
 
-  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.7.1/source/js/third-party/fancybox.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/third-party/fancybox.min.js"></script>
 
-  
-
-
-
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/third-party/pace.min.js"></script>
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/katex.min.css" integrity="sha256-e8fkE+LP8R8PMyAaC6jji0vzbcvXB0WnNxM/19zvcdU=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/contrib/copy-tex.min.css" integrity="sha256-+oItviPaTmqjDhk4y4fLLUIMgRQYDV/ZyrRNvQiebWM=" crossorigin="anonymous">
-  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/contrib/copy-tex.min.js","integrity":"sha256-etSqbSVF4+Lwe8MGk/Vanc1sR+mWv+qOG73fxWw9p94="}}</script>
-  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.7.1/source/js/third-party/math/katex.min.js"></script>
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha256-M6KFoDq9eUpmogkDgw6+3R3ZgUPSuFXnQyr8tskSfQs=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/copy-tex.min.css" integrity="sha256-+oItviPaTmqjDhk4y4fLLUIMgRQYDV/ZyrRNvQiebWM=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/copy-tex.min.js","integrity":"sha256-etSqbSVF4+Lwe8MGk/Vanc1sR+mWv+qOG73fxWw9p94="}}</script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/third-party/math/katex.min.js"></script>
 
 
   <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
   <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":false,"delay":true,"timeout":3000,"priority":true,"url":"https://www.iszy.cc/posts/change-domain/"}</script>
-  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.7.1/source/js/third-party/quicklink.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/third-party/quicklink.min.js"></script>
 <script class="next-config" data-name="waline" type="application/json">{"lang":"zh-CN","enable":true,"serverURL":"https://wl.iszy.xyz","placeholder":"Just go go","avatar":null,"pageSize":10,"visitor":true,"comment_count":true,"requiredFields":[],"locale":{"placeholder":"本站支持匿名评论，无需登录~(●'◡'●)\n与文章无关的留言请前往本站留言板，谢谢配合~"},"meta":["nick","mail","link"],"requiredMeta":["nick","mail"],"libUrl":"https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js","dark":"auto","emoji":["https://cdn.jsdelivr.net/gh/zvonimirsun/emojis@1.0.2/bilibili-xhl"],"el":"#waline-comments","path":"/posts/change-domain/"}</script>
 <script>
 document.addEventListener('page:loaded', () => {

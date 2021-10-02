@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)">
 <meta name="generator" content="Hexo 5.4.0">
 
 <link rel="preconnect" href="https://fonts.iszy.xyz" crossorigin>
@@ -27,7 +28,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
   <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"www.iszy.cc","root":"/","images":"/images","scheme":"Gemini","version":"8.7.1","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.7.1/source/js/config.min.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.iszy.cc","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/config.min.js"></script>
 <meta name="description" content="本文介绍一下如何通过 Docker 部署 Postgresql + PostGIS + Geoserver 环境。本文操作在 Ubuntu 18.04 中完成，理论上适用于其他可用 Docker 的系统环境。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="通过Docker部署Posgresql+Geoserver环境">
@@ -56,7 +57,7 @@
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-E60YKKHF8Y"></script>
   <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-E60YKKHF8Y","only_pageview":false}</script>
-  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.7.1/source/js/third-party/analytics/google-analytics.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/third-party/analytics/google-analytics.min.js"></script>
 
 
 
@@ -164,13 +165,12 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-docker"><span class="nav-number">1.</span> <span class="nav-text"> 安装 Docker</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-postgresql-postgis"><span class="nav-number">2.</span> <span class="nav-text"> 安装 Postgresql + PostGIS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%95%9C%E5%83%8F%E8%AF%B4%E6%98%8E"><span class="nav-number">2.1.</span> <span class="nav-text"> 镜像说明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E5%91%BD%E4%BB%A4"><span class="nav-number">2.2.</span> <span class="nav-text"> 部署命令</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-geoserver"><span class="nav-number">3.</span> <span class="nav-text"> 安装 Geoserver</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%95%9C%E5%83%8F%E8%AF%B4%E6%98%8E-2"><span class="nav-number">3.1.</span> <span class="nav-text"> 镜像说明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E5%91%BD%E4%BB%A4-2"><span class="nav-number">3.2.</span> <span class="nav-text"> 部署命令</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-Docker"><span class="nav-number">1.</span> <span class="nav-text">安装 Docker</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-Postgresql-PostGIS"><span class="nav-number">2.</span> <span class="nav-text">安装 Postgresql + PostGIS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%95%9C%E5%83%8F%E8%AF%B4%E6%98%8E"><span class="nav-number">2.1.</span> <span class="nav-text">镜像说明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E5%91%BD%E4%BB%A4"><span class="nav-number">2.2.</span> <span class="nav-text">部署命令</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-Geoserver"><span class="nav-number">3.</span> <span class="nav-text">安装 Geoserver</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%95%9C%E5%83%8F%E8%AF%B4%E6%98%8E-2"><span class="nav-number">3.1.</span> <span class="nav-text">镜像说明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E5%91%BD%E4%BB%A4-2"><span class="nav-number">3.2.</span> <span class="nav-text">部署命令</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
-          <div class="site-overview">
-            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="Dirge"
       src="/images/avatar.png">
   <p class="site-author-name" itemprop="name">Dirge</p>
@@ -202,7 +202,6 @@
 
 
 
-          </div>
         </div>
       </div>
         <div class="back-to-top animated" role="button" aria-label="返回顶部">
@@ -319,26 +318,26 @@
     <div class="post-body" itemprop="articleBody">
         <p>本文介绍一下如何通过 Docker 部署 <code>Postgresql</code> + <code>PostGIS</code> + <code>Geoserver</code> 环境。本文操作在 Ubuntu 18.04 中完成，理论上适用于其他可用 Docker 的系统环境。</p>
 <span id="more"></span>
-<h2 id="安装-docker"><a class="markdownIt-Anchor" href="#安装-docker"></a> 安装 Docker</h2>
+<h2 id="安装-Docker">安装 Docker</h2>
 <p>Docker 的安装很简单，教程很多，在这里只列举一下，Ubuntu 和 CentOS 的安装脚本。</p>
 <ul>
 <li>Ubuntu: <code>wget -qO- https://get.docker.com/ | sudo sh</code></li>
 <li>CentOS: <code>curl -fsSL https://get.docker.com -o get-docker.sh &amp;&amp; sudo sh get-docker.sh</code></li>
 </ul>
-<h2 id="安装-postgresql-postgis"><a class="markdownIt-Anchor" href="#安装-postgresql-postgis"></a> 安装 Postgresql + PostGIS</h2>
+<h2 id="安装-Postgresql-PostGIS">安装 Postgresql + PostGIS</h2>
 <p>在这里使用 kartoza 大佬的 docker 镜像<code>kartoza/postgis:10.0-2.4</code>。</p>
-<h3 id="镜像说明"><a class="markdownIt-Anchor" href="#镜像说明"></a> 镜像说明</h3>
+<h3 id="镜像说明">镜像说明</h3>
 <ul>
 <li>Postgresql: <code>10.3.1</code></li>
 <li>PostGIS: <code>2.4.4</code></li>
 </ul>
 <p>项目地址：<code>https://github.com/kartoza/docker-postgis</code></p>
-<h3 id="部署命令"><a class="markdownIt-Anchor" href="#部署命令"></a> 部署命令</h3>
+<h3 id="部署命令">部署命令</h3>
 <p>运行以下命令部署 Postgresql + PostGis，注意替换命令中的用户名和密码。还有更多环境变量可用，亦可选择其他镜像版本可以参考项目 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2thcnRvemEvZG9ja2VyLXBvc3RnaXMvYmxvYi9kZXZlbG9wL1JFQURNRS5tZA==">README<i class="fa fa-external-link-alt"></i></span>。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd ~ &amp;&amp; mkdir postgres_data</span><br><span class="line">docker run --name &quot;postgis&quot; -p 5432:5432 -d -t -v $HOME/postgres_data:/var/lib/postgresql -e POSTGRES_USER=&quot;postgres&quot; -e POSTGRES_PASS=&quot;postgres&quot; -e ALLOW_IP_RANGE=0.0.0.0/0 --restart=always kartoza/postgis:10.0-2.4</span><br></pre></td></tr></table></figure>
-<h2 id="安装-geoserver"><a class="markdownIt-Anchor" href="#安装-geoserver"></a> 安装 Geoserver</h2>
+<h2 id="安装-Geoserver">安装 Geoserver</h2>
 <p>在这里使用我 build 的 docker 镜像<code>zvonimirsun/geoserver:2.14.2</code>。</p>
-<h3 id="镜像说明-2"><a class="markdownIt-Anchor" href="#镜像说明-2"></a> 镜像说明</h3>
+<h3 id="镜像说明-2">镜像说明</h3>
 <ul>
 <li>Geoserver: <code>2.14.2</code></li>
 <li>oraclejdk: <code>8</code></li>
@@ -346,7 +345,7 @@
 </ul>
 <p>项目地址：<code>https://github.com/ZvonimirSun/docker-geoserver</code></p>
 <p>本项目 fork 自 kartoza 大佬的<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2thcnRvemEvZG9ja2VyLWdlb3NlcnZlcg==">项目<i class="fa fa-external-link-alt"></i></span>，修复了命令中的一个不知道为何会存在的一个低级错误，替换了过期的下载链接。我只 build 了<code>2.14.2</code>的版本，使用了 oraclejdk8。想要旧版本 geoserver 的可以看 kartoza 大佬的<span class="exturl" data-url="aHR0cHM6Ly9odWIuZG9ja2VyLmNvbS9yL2thcnRvemEvZ2Vvc2VydmVyL3RhZ3M=">镜像<i class="fa fa-external-link-alt"></i></span>，现在的最新版本为<code>geoserver 2.13.0</code>，默认使用的是 openjdk。如果仍旧不是自己想要的版本或是要添加插件，可以根据 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1p2b25pbWlyU3VuL2RvY2tlci1nZW9zZXJ2ZXIvYmxvYi9tYXN0ZXIvUkVBRE1FLm1k">README<i class="fa fa-external-link-alt"></i></span> 自行 build。</p>
-<h3 id="部署命令-2"><a class="markdownIt-Anchor" href="#部署命令-2"></a> 部署命令</h3>
+<h3 id="部署命令-2">部署命令</h3>
 <p>运行以下命令部署 Geoserver，注意替换命令中的用户名和密码。还有更多环境变量可用，可以参考项目 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1p2b25pbWlyU3VuL2RvY2tlci1nZW9zZXJ2ZXIvYmxvYi9tYXN0ZXIvUkVBRE1FLm1k">README<i class="fa fa-external-link-alt"></i></span>。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd ~ &amp;&amp; mkdir geoserver_data</span><br><span class="line">docker run -d -p 8080:8080 --name geoserver -v $HOME/geoserver_data:/opt/geoserver/data_dir zvonimirsun/geoserver:2.14.2</span><br></pre></td></tr></table></figure>
 
@@ -445,7 +444,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">209k</span>
+    <span title="站点总字数">210k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
@@ -467,31 +466,34 @@
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.7.1/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.7.1/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.7.1/source/js/next-boot.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.7.1/source/js/pjax.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/next-boot.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/pjax.min.js"></script>
 
   
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.7.1/source/js/third-party/search/local-search.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/third-party/search/local-search.min.js"></script>
 
 
 
-  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.7.1/source/js/third-party/fancybox.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/third-party/fancybox.min.js"></script>
 
-  
-
-
-
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/third-party/pace.min.js"></script>
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/katex.min.css" integrity="sha256-e8fkE+LP8R8PMyAaC6jji0vzbcvXB0WnNxM/19zvcdU=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/contrib/copy-tex.min.css" integrity="sha256-+oItviPaTmqjDhk4y4fLLUIMgRQYDV/ZyrRNvQiebWM=" crossorigin="anonymous">
-  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/contrib/copy-tex.min.js","integrity":"sha256-etSqbSVF4+Lwe8MGk/Vanc1sR+mWv+qOG73fxWw9p94="}}</script>
-  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.7.1/source/js/third-party/math/katex.min.js"></script>
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha256-M6KFoDq9eUpmogkDgw6+3R3ZgUPSuFXnQyr8tskSfQs=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/copy-tex.min.css" integrity="sha256-+oItviPaTmqjDhk4y4fLLUIMgRQYDV/ZyrRNvQiebWM=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/copy-tex.min.js","integrity":"sha256-etSqbSVF4+Lwe8MGk/Vanc1sR+mWv+qOG73fxWw9p94="}}</script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/third-party/math/katex.min.js"></script>
 
 
   <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
   <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":false,"delay":true,"timeout":3000,"priority":true,"url":"https://www.iszy.cc/posts/postgres-geoserver-setup-docker/"}</script>
-  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.7.1/source/js/third-party/quicklink.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/third-party/quicklink.min.js"></script>
 <script class="next-config" data-name="waline" type="application/json">{"lang":"zh-CN","enable":true,"serverURL":"https://wl.iszy.xyz","placeholder":"Just go go","avatar":null,"pageSize":10,"visitor":true,"comment_count":true,"requiredFields":[],"locale":{"placeholder":"本站支持匿名评论，无需登录~(●'◡'●)\n与文章无关的留言请前往本站留言板，谢谢配合~"},"meta":["nick","mail","link"],"requiredMeta":["nick","mail"],"libUrl":"https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js","dark":"auto","emoji":["https://cdn.jsdelivr.net/gh/zvonimirsun/emojis@1.0.2/bilibili-xhl"],"el":"#waline-comments","path":"/posts/postgres-geoserver-setup-docker/"}</script>
 <script>
 document.addEventListener('page:loaded', () => {

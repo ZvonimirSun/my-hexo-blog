@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)">
 <meta name="generator" content="Hexo 5.4.0">
 
 <link rel="preconnect" href="https://fonts.iszy.xyz" crossorigin>
@@ -27,7 +28,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
   <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"www.iszy.cc","root":"/","images":"/images","scheme":"Gemini","version":"8.7.1","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.7.1/source/js/config.min.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.iszy.cc","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/config.min.js"></script>
 <meta name="description" content="ReactOS 是一个适用于 x86&#x2F;x64 平台的免费、开源的操作系统暨项目，旨在提供 Windows 平台下的程序与驱动的二进制兼容性，简直可以说是开源版的 Windows。借由逆向工程等手段，其以净室设计的方法进行开发。为确保操作系统没有任何一部分是看过泄漏出来的微软 Windows 源码的人所写，或者逆向工程的过程达不到净室设计标准，一个全盘的源码审查由 ReactOS 主要开发者下令展开">
 <meta property="og:type" content="article">
 <meta property="og:title" content="在VMware中安装&quot;开源版Windows&quot;——ReactOS">
@@ -73,7 +74,7 @@
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-E60YKKHF8Y"></script>
   <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-E60YKKHF8Y","only_pageview":false}</script>
-  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.7.1/source/js/third-party/analytics/google-analytics.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/third-party/analytics/google-analytics.min.js"></script>
 
 
 
@@ -181,13 +182,12 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%E7%B3%BB%E7%BB%9F%E9%95%9C%E5%83%8F"><span class="nav-number">1.</span> <span class="nav-text"> 下载系统镜像</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">2.</span> <span class="nav-text"> 安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E6%9C%BA"><span class="nav-number">2.1.</span> <span class="nav-text"> 创建虚拟机</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%96%B0%E5%BB%BA%E8%99%9A%E6%8B%9F%E6%9C%BA"><span class="nav-number">2.1.1.</span> <span class="nav-text"> 新建虚拟机</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%89%E6%8B%A9%E9%95%9C%E5%83%8F"><span class="nav-number">2.1.2.</span> <span class="nav-text"> 选择镜像</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E7%B1%BB%E5%9E%8B%E8%AE%BE%E7%BD%AE"><span class="nav-number">2.1.3.</span> <span class="nav-text"> 系统类型设置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%89%E6%8B%A9%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AD%98%E5%82%A8%E4%BD%8D%E7%BD%AE"><span class="nav-number">2.1.4.</span> <span class="nav-text"> 选择虚拟机存储位置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%A1%AC%E7%9B%98%E8%AE%BE%E7%BD%AE"><span class="nav-number">2.1.5.</span> <span class="nav-text"> 硬盘设置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE"><span class="nav-number">2.1.6.</span> <span class="nav-text"> 其他参数设置</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-reactos"><span class="nav-number">2.2.</span> <span class="nav-text"> 安装 ReactOS</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%89%E6%8B%A9%E8%AF%AD%E8%A8%80"><span class="nav-number">2.2.1.</span> <span class="nav-text"> 选择语言</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%B0%83%E6%95%B4%E5%B1%8F%E5%B9%95%E5%88%86%E8%BE%A8%E7%8E%87"><span class="nav-number">2.2.2.</span> <span class="nav-text"> 调整屏幕分辨率</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-2"><span class="nav-number">2.2.3.</span> <span class="nav-text"> 安装</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE"><span class="nav-number">3.</span> <span class="nav-text"> 设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%8E%E8%AF%9D"><span class="nav-number">4.</span> <span class="nav-text"> 后话</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%E7%B3%BB%E7%BB%9F%E9%95%9C%E5%83%8F"><span class="nav-number">1.</span> <span class="nav-text">下载系统镜像</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">2.</span> <span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E6%9C%BA"><span class="nav-number">2.1.</span> <span class="nav-text">创建虚拟机</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%96%B0%E5%BB%BA%E8%99%9A%E6%8B%9F%E6%9C%BA"><span class="nav-number">2.1.1.</span> <span class="nav-text">新建虚拟机</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%89%E6%8B%A9%E9%95%9C%E5%83%8F"><span class="nav-number">2.1.2.</span> <span class="nav-text">选择镜像</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E7%B1%BB%E5%9E%8B%E8%AE%BE%E7%BD%AE"><span class="nav-number">2.1.3.</span> <span class="nav-text">系统类型设置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%89%E6%8B%A9%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AD%98%E5%82%A8%E4%BD%8D%E7%BD%AE"><span class="nav-number">2.1.4.</span> <span class="nav-text">选择虚拟机存储位置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%A1%AC%E7%9B%98%E8%AE%BE%E7%BD%AE"><span class="nav-number">2.1.5.</span> <span class="nav-text">硬盘设置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE"><span class="nav-number">2.1.6.</span> <span class="nav-text">其他参数设置</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-ReactOS"><span class="nav-number">2.2.</span> <span class="nav-text">安装 ReactOS</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%89%E6%8B%A9%E8%AF%AD%E8%A8%80"><span class="nav-number">2.2.1.</span> <span class="nav-text">选择语言</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%B0%83%E6%95%B4%E5%B1%8F%E5%B9%95%E5%88%86%E8%BE%A8%E7%8E%87"><span class="nav-number">2.2.2.</span> <span class="nav-text">调整屏幕分辨率</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-2"><span class="nav-number">2.2.3.</span> <span class="nav-text">安装</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE"><span class="nav-number">3.</span> <span class="nav-text">设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%8E%E8%AF%9D"><span class="nav-number">4.</span> <span class="nav-text">后话</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
-          <div class="site-overview">
-            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="Dirge"
       src="/images/avatar.png">
   <p class="site-author-name" itemprop="name">Dirge</p>
@@ -219,7 +219,6 @@
 
 
 
-          </div>
         </div>
       </div>
         <div class="back-to-top animated" role="button" aria-label="返回顶部">
@@ -336,57 +335,57 @@
     <div class="post-body" itemprop="articleBody">
         <p>ReactOS 是一个适用于 x86/x64 平台的免费、开源的操作系统暨项目，旨在提供 Windows 平台下的程序与驱动的二进制兼容性，简直可以说是开源版的 Windows。借由逆向工程等手段，其以净室设计的方法进行开发。为确保操作系统没有任何一部分是看过泄漏出来的微软 Windows 源码的人所写，或者逆向工程的过程达不到净室设计标准，一个全盘的源码审查由 ReactOS 主要开发者下令展开。此审查目前已经结束。这篇文章将演示如何在 VMWare 虚拟机上体验 ReactOS。</p>
 <span id="more"></span>
-<h2 id="下载系统镜像"><a class="markdownIt-Anchor" href="#下载系统镜像"></a> 下载系统镜像</h2>
+<h2 id="下载系统镜像">下载系统镜像</h2>
 <p>前往 ReactOS 官网<span class="exturl" data-url="aHR0cHM6Ly93d3cucmVhY3Rvcy5vcmcvZG93bmxvYWQ=">下载系统镜像<i class="fa fa-external-link-alt"></i></span>。</p>
-<p><img data-src="https://img.iszy.xyz/20190318215607.png" alt="" /></p>
+<p><img data-src="https://img.iszy.xyz/20190318215607.png" alt=""></p>
 <p>将会得到一个 zip 压缩包，解压后是 ReactOS 的安装镜像。</p>
-<h2 id="安装"><a class="markdownIt-Anchor" href="#安装"></a> 安装</h2>
+<h2 id="安装">安装</h2>
 <p>首先你要安装有 VMware Workstation Pro(或 Player 版)，这部分安装不再赘述。</p>
-<h3 id="创建虚拟机"><a class="markdownIt-Anchor" href="#创建虚拟机"></a> 创建虚拟机</h3>
-<h4 id="新建虚拟机"><a class="markdownIt-Anchor" href="#新建虚拟机"></a> 新建虚拟机</h4>
-<p><img data-src="https://img.iszy.xyz/20190318215634.png" alt="" /></p>
-<h4 id="选择镜像"><a class="markdownIt-Anchor" href="#选择镜像"></a> 选择镜像</h4>
-<p><img data-src="https://img.iszy.xyz/20190318215652.png" alt="" /></p>
-<h4 id="系统类型设置"><a class="markdownIt-Anchor" href="#系统类型设置"></a> 系统类型设置</h4>
+<h3 id="创建虚拟机">创建虚拟机</h3>
+<h4 id="新建虚拟机">新建虚拟机</h4>
+<p><img data-src="https://img.iszy.xyz/20190318215634.png" alt=""></p>
+<h4 id="选择镜像">选择镜像</h4>
+<p><img data-src="https://img.iszy.xyz/20190318215652.png" alt=""></p>
+<h4 id="系统类型设置">系统类型设置</h4>
 <p>全部选择其他</p>
-<p><img data-src="https://img.iszy.xyz/20190318215707.png" alt="" /></p>
-<h4 id="选择虚拟机存储位置"><a class="markdownIt-Anchor" href="#选择虚拟机存储位置"></a> 选择虚拟机存储位置</h4>
-<p><img data-src="https://img.iszy.xyz/20190318215717.png" alt="" /></p>
-<h4 id="硬盘设置"><a class="markdownIt-Anchor" href="#硬盘设置"></a> 硬盘设置</h4>
+<p><img data-src="https://img.iszy.xyz/20190318215707.png" alt=""></p>
+<h4 id="选择虚拟机存储位置">选择虚拟机存储位置</h4>
+<p><img data-src="https://img.iszy.xyz/20190318215717.png" alt=""></p>
+<h4 id="硬盘设置">硬盘设置</h4>
 <p>容量设置为 8G，不用太多</p>
-<p><img data-src="https://img.iszy.xyz/20190318215728.png" alt="" /></p>
-<h4 id="其他参数设置"><a class="markdownIt-Anchor" href="#其他参数设置"></a> 其他参数设置</h4>
+<p><img data-src="https://img.iszy.xyz/20190318215728.png" alt=""></p>
+<h4 id="其他参数设置">其他参数设置</h4>
 <p>内存建议至少 512M，如果想的话，可以开启加速 3D 图形</p>
-<p><img data-src="https://img.iszy.xyz/20190318215740.png" alt="" /></p>
+<p><img data-src="https://img.iszy.xyz/20190318215740.png" alt=""></p>
 <p>点击完成即可。</p>
-<h3 id="安装-reactos"><a class="markdownIt-Anchor" href="#安装-reactos"></a> 安装 ReactOS</h3>
+<h3 id="安装-ReactOS">安装 ReactOS</h3>
 <p>首先启动虚拟机，进入安装进程。</p>
-<h4 id="选择语言"><a class="markdownIt-Anchor" href="#选择语言"></a> 选择语言</h4>
+<h4 id="选择语言">选择语言</h4>
 <p>有许多语言可供选择，在这里我选择<code>Chinese (RPC)</code>，点击回车。</p>
-<p><img data-src="https://img.iszy.xyz/20190318215752.png" alt="" /></p>
-<h4 id="调整屏幕分辨率"><a class="markdownIt-Anchor" href="#调整屏幕分辨率"></a> 调整屏幕分辨率</h4>
+<p><img data-src="https://img.iszy.xyz/20190318215752.png" alt=""></p>
+<h4 id="调整屏幕分辨率">调整屏幕分辨率</h4>
 <p>一路回车到如下界面，可以调整屏幕分辨率，若不需要，回车即可。</p>
-<p><img data-src="https://img.iszy.xyz/20190318215803.png" alt="" /></p>
+<p><img data-src="https://img.iszy.xyz/20190318215803.png" alt=""></p>
 <p>在此，我调整了分辨率为<code>1280x1024x32</code>。</p>
-<p><img data-src="https://img.iszy.xyz/20190318215814.png" alt="" /></p>
-<h4 id="安装-2"><a class="markdownIt-Anchor" href="#安装-2"></a> 安装</h4>
+<p><img data-src="https://img.iszy.xyz/20190318215814.png" alt=""></p>
+<h4 id="安装-2">安装</h4>
 <p>一路回车进行安装，到如下界面。在虚拟机右下角断开 CD 连接后回车重启。</p>
-<p><img data-src="https://img.iszy.xyz/20190318215825.png" alt="" /></p>
-<h2 id="设置"><a class="markdownIt-Anchor" href="#设置"></a> 设置</h2>
+<p><img data-src="https://img.iszy.xyz/20190318215825.png" alt=""></p>
+<h2 id="设置">设置</h2>
 <p>启动后直接回车进入第一个系统，后面都是类 Windows 的操作，比较简单，不用设置的地方下一步即可。</p>
-<p><img data-src="https://img.iszy.xyz/20190318215850.png" alt="" /></p>
+<p><img data-src="https://img.iszy.xyz/20190318215850.png" alt=""></p>
 <p>在此页面可以设置时区、输入语言和键盘，可惜似乎没有中文的输入法支持。</p>
-<p><img data-src="https://img.iszy.xyz/20190318215901.png" alt="" /></p>
+<p><img data-src="https://img.iszy.xyz/20190318215901.png" alt=""></p>
 <p>在此页面可以设置系统密码，我在此留空，不设密码。</p>
-<p><img data-src="https://img.iszy.xyz/20190318215909.png" alt="" /></p>
+<p><img data-src="https://img.iszy.xyz/20190318215909.png" alt=""></p>
 <p>时区选择北京，关闭夏令时。</p>
-<p><img data-src="https://img.iszy.xyz/20190318215922.png" alt="" /></p>
+<p><img data-src="https://img.iszy.xyz/20190318215922.png" alt=""></p>
 <p>一路下一步完成安装，重启后即可进入系统。自动安装驱动可以取消，反正也没有可以支持的内容。</p>
-<p><img data-src="https://img.iszy.xyz/20190318215937.png" alt="" /></p>
-<h2 id="后话"><a class="markdownIt-Anchor" href="#后话"></a> 后话</h2>
+<p><img data-src="https://img.iszy.xyz/20190318215937.png" alt=""></p>
+<h2 id="后话">后话</h2>
 <p>ReactOS 完成度已经很高了，经网友测试已经可以兼容许多 Windows 下的程序，完全没有使用 Windows 的代码，可以说是非常了不起了。现在 ReactOS 仍在积极开发，提供了许多新的功能，看官大可以体验一下，说不定未来这个系统真的能够代理 Windows 呢。</p>
 <p>在此我就体验了一下 ReactOS 自带的扫雷游戏，更多功能留给看官自行探索。</p>
-<p><img data-src="https://img.iszy.xyz/20190318215950.png" alt="" /></p>
+<p><img data-src="https://img.iszy.xyz/20190318215950.png" alt=""></p>
 
     </div>
 
@@ -464,7 +463,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">209k</span>
+    <span title="站点总字数">210k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
@@ -486,31 +485,34 @@
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.7.1/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.7.1/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.7.1/source/js/next-boot.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.7.1/source/js/pjax.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/next-boot.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/pjax.min.js"></script>
 
   
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.7.1/source/js/third-party/search/local-search.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/third-party/search/local-search.min.js"></script>
 
 
 
-  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.7.1/source/js/third-party/fancybox.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/third-party/fancybox.min.js"></script>
 
-  
-
-
-
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/third-party/pace.min.js"></script>
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/katex.min.css" integrity="sha256-e8fkE+LP8R8PMyAaC6jji0vzbcvXB0WnNxM/19zvcdU=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/contrib/copy-tex.min.css" integrity="sha256-+oItviPaTmqjDhk4y4fLLUIMgRQYDV/ZyrRNvQiebWM=" crossorigin="anonymous">
-  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/contrib/copy-tex.min.js","integrity":"sha256-etSqbSVF4+Lwe8MGk/Vanc1sR+mWv+qOG73fxWw9p94="}}</script>
-  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.7.1/source/js/third-party/math/katex.min.js"></script>
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha256-M6KFoDq9eUpmogkDgw6+3R3ZgUPSuFXnQyr8tskSfQs=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/copy-tex.min.css" integrity="sha256-+oItviPaTmqjDhk4y4fLLUIMgRQYDV/ZyrRNvQiebWM=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/copy-tex.min.js","integrity":"sha256-etSqbSVF4+Lwe8MGk/Vanc1sR+mWv+qOG73fxWw9p94="}}</script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/third-party/math/katex.min.js"></script>
 
 
   <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
   <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":false,"delay":true,"timeout":3000,"priority":true,"url":"https://www.iszy.cc/posts/reactos-vmware/"}</script>
-  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.7.1/source/js/third-party/quicklink.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.8.0/source/js/third-party/quicklink.min.js"></script>
 <script class="next-config" data-name="waline" type="application/json">{"lang":"zh-CN","enable":true,"serverURL":"https://wl.iszy.xyz","placeholder":"Just go go","avatar":null,"pageSize":10,"visitor":true,"comment_count":true,"requiredFields":[],"locale":{"placeholder":"本站支持匿名评论，无需登录~(●'◡'●)\n与文章无关的留言请前往本站留言板，谢谢配合~"},"meta":["nick","mail","link"],"requiredMeta":["nick","mail"],"libUrl":"https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js","dark":"auto","emoji":["https://cdn.jsdelivr.net/gh/zvonimirsun/emojis@1.0.2/bilibili-xhl"],"el":"#waline-comments","path":"/posts/reactos-vmware/"}</script>
 <script>
 document.addEventListener('page:loaded', () => {
