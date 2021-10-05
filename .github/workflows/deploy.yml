@@ -26,6 +26,8 @@ jobs:
         run: npm install hexo-cli -g
       - name: Install dependencies 🔧
         run: yarn install --frozen-lockfile
+      - name: Build algolia
+        run: export HEXO_ALGOLIA_INDEXING_KEY=${{ secrets.HEXO_ALGOLIA_INDEXING_KEY }} && hexo algolia
       - name: Build app 🔧
         run: hexo g
       - name: Deploy 🚀
