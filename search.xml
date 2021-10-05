@@ -786,7 +786,7 @@
 <p>用自己的 VPS 后，我仍然采用和虚拟主机一样的流程，利用免费的宝塔 Linux 面板来管理网站。写完文章后的一般流程就是，先用我本地的 Ubuntu 虚拟机编译网站，然后将生成的站点打包上传到我的服务器上解压出来。但是，我都已经有了自己的 VPS 了，同样是 Linux 系统，我何不直接在服务器上自动编译呢？这样就跟 Github Pages 差不多了，我认为还是相当不错的。正好还有 git hooks 这么有意思的东西，可以帮助我完成这件事情。</p>
 <h2 id="步骤">步骤</h2>
 <h3 id="配置-Jekyll-环境">配置 Jekyll 环境</h3>
-<h4 id="首先我使用-RVM-来安装-ruby。">首先我使用 RVM 来安装 ruby。</h4>
+<h4 id="首先我使用-RVM-来安装-ruby">首先我使用 RVM 来安装 ruby</h4>
 <p><strong>安装 RVM</strong></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB</span><br></pre></td></tr></table></figure>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">\curl -sSL https://get.rvm.io | bash -s stable</span><br></pre></td></tr></table></figure>
