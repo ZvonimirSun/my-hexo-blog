@@ -6,7 +6,7 @@
   <link href="https://www.iszy.cc/atom.xml" rel="self"/>
   
   <link href="https://www.iszy.cc/"/>
-  <updated>2021-09-30T11:04:48.000Z</updated>
+  <updated>2021-10-05T15:41:01.000Z</updated>
   <id>https://www.iszy.cc/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Dockerfile 指令 COPY 拷贝文件夹</title>
+    <link href="https://www.iszy.cc/posts/13/"/>
+    <id>https://www.iszy.cc/posts/13/</id>
+    <published>2021-10-05T15:41:01.000Z</published>
+    <updated>2021-10-05T15:41:01.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天在编写 dockerfile 时使用 COPY 拷贝文件夹时遇到了意料之外的情况。在此记录一下正确的使用方法。</p><span id="more"></span><h2 id="背景说明">背景说明</h2><p>今天在通过 dockerfile 将文件夹拷贝到镜像的时候发现，是把文件夹下的内容拷贝进去了。</p><p>dockerfile 如下：</p><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span> node:alpine</span><br><span class="line"><span class="keyword">WORKDIR</span><span class="bash"> /usr/src/app</span></span><br><span class="line"><span class="keyword">COPY</span><span class="bash"> dist node_modules package.json ./</span></span><br><span class="line"><span class="keyword">EXPOSE</span> <span class="number">3000</span></span><br><span class="line"><span class="keyword">CMD</span><span class="bash"> [<span class="string">&quot;yarn&quot;</span>, <span class="string">&quot;start:prod&quot;</span>]</span></span><br></pre></td></tr></table></figure><p>我是想把 dist 和 node_modules 两个文件夹都拷贝到镜像中，又不想用多条 COPY 来分别拷贝，那样会多一个 layer。结果发现 dist 和 node_modules 两个文件夹本身没有被拷贝进镜像，而是把文件夹下的内容分别拷贝进的镜像。</p><p>经过测试发现：</p><ul><li><code>ADD</code> 命令和 <code>COPY</code> 命令在复制文件时行为一致</li><li><code>COPY/ADD</code> 命令的源如果是文件夹，复制的是文件夹的内容而不是其本身</li><li>使用 <code>*</code> 匹配所有文件，如果遇到文件夹也会保持上述逻辑，即仅复制内容</li></ul><p>这个逻辑很诡异，和我们的一般预期不符。</p><p>我发现在六年前就已经有人问过类似的问题了，看来也没啥要改的意思。</p><h2 id="实现方法">实现方法</h2><p>下面列举几个事项方式，大家可以参考着使用。</p><h3 id="单个文件夹复制，指定目标目录">单个文件夹复制，指定目标目录</h3><p>一种方法就是一次复制一个文件夹，然后 COPY 的时候要指定到镜像中的具体目录，比如把上面的 dockerfile 改成这样：</p><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span> node:alpine</span><br><span class="line"><span class="keyword">WORKDIR</span><span class="bash"> /usr/src/app</span></span><br><span class="line"><span class="keyword">COPY</span><span class="bash"> dist ./dist</span></span><br><span class="line"><span class="keyword">COPY</span><span class="bash"> node_modules ./node_modules</span></span><br><span class="line"><span class="keyword">COPY</span><span class="bash"> package.json ./</span></span><br><span class="line"><span class="keyword">EXPOSE</span> <span class="number">3000</span></span><br><span class="line"><span class="keyword">CMD</span><span class="bash"> [<span class="string">&quot;yarn&quot;</span>, <span class="string">&quot;start:prod&quot;</span>]</span></span><br></pre></td></tr></table></figure><h3 id="放到另一个文件夹中统一复制">放到另一个文件夹中统一复制</h3><p>上面那种写法很麻烦，还会增加 layer 数。这边想了一个变相的方法，不是很优雅。</p><p>就是将需要拷贝的文件夹都放到一个统一的文件夹中，然后在 dockerfile 中拷贝这个文件夹，文件夹下的目录结构就能够得到保持。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir dockerPackages &amp;&amp; mv dist node_modules dockerPackages</span><br></pre></td></tr></table></figure><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span> node:alpine</span><br><span class="line"><span class="keyword">WORKDIR</span><span class="bash"> /usr/src/app</span></span><br><span class="line"><span class="keyword">COPY</span><span class="bash"> dockerPackages package.json ./</span></span><br><span class="line"><span class="keyword">EXPOSE</span> <span class="number">3000</span></span><br><span class="line"><span class="keyword">CMD</span><span class="bash"> [<span class="string">&quot;yarn&quot;</span>, <span class="string">&quot;start:prod&quot;</span>]</span></span><br></pre></td></tr></table></figure><h3 id="利用-dockerignore-文件">利用 .dockerignore 文件</h3><p>我们上面的写法其实就是像完成一件事，那就是仅把部分内容拷贝进镜像，然后忽略其他内容。这样，我们就可以利用 <code>.dockerignore</code> 文件，来更加优雅地实现。先忽略所有文件，然后将我们需要拷贝的文件排除。</p><p><code>.dockerignore</code>:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">*</span><br><span class="line">!dist</span><br><span class="line">!node_modules</span><br><span class="line">!package.json</span><br></pre></td></tr></table></figure><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">FROM</span> node:alpine</span><br><span class="line"><span class="keyword">WORKDIR</span><span class="bash"> /usr/src/app</span></span><br><span class="line"><span class="keyword">COPY</span><span class="bash"> . ./</span></span><br><span class="line"><span class="keyword">EXPOSE</span> <span class="number">3000</span></span><br><span class="line"><span class="keyword">CMD</span><span class="bash"> [<span class="string">&quot;yarn&quot;</span>, <span class="string">&quot;start:prod&quot;</span>]</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;今天在编写 dockerfile 时使用 COPY 拷贝文件夹时遇到了意料之外的情况。在此记录一下正确的使用方法。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="工具与中间件" scheme="https://www.iszy.cc/categories/%E5%B7%A5%E5%85%B7%E4%B8%8E%E4%B8%AD%E9%97%B4%E4%BB%B6/"/>
+    
+    <category term="Docker" scheme="https://www.iszy.cc/categories/%E5%B7%A5%E5%85%B7%E4%B8%8E%E4%B8%AD%E9%97%B4%E4%BB%B6/Docker/"/>
+    
+    
+    <category term="Docker" scheme="https://www.iszy.cc/tags/Docker/"/>
+    
+    <category term="Dockerfile" scheme="https://www.iszy.cc/tags/Dockerfile/"/>
+    
+    <category term="Dockerfile COPY" scheme="https://www.iszy.cc/tags/Dockerfile-COPY/"/>
+    
+  </entry>
   
   <entry>
     <title>VS Code + ESLint 自动格式化和快捷键配置</title>
@@ -474,31 +501,6 @@
     
     
     <category term="ElasticSearch" scheme="https://www.iszy.cc/tags/ElasticSearch/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>直接修改和替换Jar包中文件的几种方式</title>
-    <link href="https://www.iszy.cc/posts/kmznu4/"/>
-    <id>https://www.iszy.cc/posts/kmznu4/</id>
-    <published>2020-05-18T00:24:52.000Z</published>
-    <updated>2020-05-18T00:24:52.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>在我们日常打包部署 Jar 包的时候，时常会出现需要修改少量内容或替换某个文件的时候，重新打包完整 Jar 包并在网上传输费时费力，所以需要直接修改 Jar 包，这里就对直接修改 和替换 Jar 包中文件的几种方式做一下总结。</p><span id="more"></span><h2 id="通用方法——解压后重新打包-Jar-包">通用方法——解压后重新打包 Jar 包</h2><p>这个通用方法，就是将 Jar 包进行解压，修改或替换文件后，重新打包成 Jar 包的方式。这个方法需要部署 JAVA jdk，需要用到其中的 jar 命令。</p><p>我们可以先看下 jar 命令的官方说明，<code>0</code>参数是关键。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">用法: jar &#123;ctxui&#125;[vfmn0PMe] [jar-file] [manifest-file] [entry-point] [-C dir] files ...</span><br><span class="line">选项:</span><br><span class="line">    -c  创建新档案</span><br><span class="line">    -t  列出档案目录</span><br><span class="line">    -x  从档案中提取指定的 (或所有) 文件</span><br><span class="line">    -u  更新现有档案</span><br><span class="line">    -v  在标准输出中生成详细输出</span><br><span class="line">    -f  指定档案文件名</span><br><span class="line">    -m  包含指定清单文件中的清单信息</span><br><span class="line">    -n  创建新档案后执行 Pack200 规范化</span><br><span class="line">    -e  为捆绑到可执行 jar 文件的独立应用程序</span><br><span class="line">        指定应用程序入口点</span><br><span class="line">    -0  仅存储; 不使用任何 ZIP 压缩</span><br><span class="line">    -P  保留文件名中的前导 &#x27;/&#x27; (绝对路径) 和 &quot;..&quot; (父目录) 组件</span><br><span class="line">    -M  不创建条目的清单文件</span><br><span class="line">    -i  为指定的 jar 文件生成索引信息</span><br><span class="line">    -C  更改为指定的目录并包含以下文件</span><br><span class="line">如果任何文件为目录, 则对其进行递归处理。</span><br><span class="line">清单文件名, 档案文件名和入口点名称的指定顺序</span><br><span class="line">与 &#x27;m&#x27;, &#x27;f&#x27; 和 &#x27;e&#x27; 标记的指定顺序相同。</span><br><span class="line"></span><br><span class="line">示例 1: 将两个类文件归档到一个名为 classes.jar 的档案中:</span><br><span class="line">       jar cvf classes.jar Foo.class Bar.class</span><br><span class="line">示例 2: 使用现有的清单文件 &#x27;mymanifest&#x27; 并</span><br><span class="line">           将 foo/ 目录中的所有文件归档到 &#x27;classes.jar&#x27; 中:</span><br><span class="line">       jar cvfm classes.jar mymanifest -C foo/ .</span><br></pre></td></tr></table></figure><p>所以流程就是这样的，首先解压 jar 包。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 解压</span><br><span class="line">jar -xvf test.jar</span><br></pre></td></tr></table></figure><p>进入文件夹编辑或者替换需要更改的文件，然后重新进行打包，加了 <code>0</code> 参数表示只打包不压缩。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 压缩</span><br><span class="line">jar -cvf0m test.jar ./META-INF/MANIFEST.MF .</span><br></pre></td></tr></table></figure><p>不要漏了这个 MANIFET.MF 文件，，这个文件里面记录了该 JAR 包的版本、创建人和类搜索路径等信息。如果一个 JAR 文件被当作可执行文件，则其中的 MANIFEST 文件需要指出该程序的主类文件，漏掉了则不能正常执行。</p><h2 id="Windows-方式">Windows 方式</h2><p>在 Windows 上因为有许多完善好用的 GUI 应用，编辑起来就简单很多。Jar 包通常可以通过安装的压缩软件直接打开，所以至少要安装一个压缩软件，我想基本上每个人都会有的。</p><h3 id="仅文本文件">仅文本文件</h3><p>对于文本文件来说，一般可以直接在 Jar 包里打开，修改保存后，压缩软件会提醒说文件已经修改，是否更新到 Jar 包中，点确定即可。</p><p><img data-src="https://img.iszy.xyz/20200517234204.png" alt=""></p><h3 id="所有文件">所有文件</h3><p>所有文件，都可以通过将文件拖进 Jar 包的方式，添加或替换内容。需要注意的是，压缩方式需要选择存储/不压缩，或是其他类似的表达。当然也可以通过上面的通用方法解决。</p><p><img data-src="https://img.iszy.xyz/20200517234555.png" alt=""></p><h2 id="Linux-方式">Linux 方式</h2><p>我指的 Linux 方式，基本就是指命令行的方式，不包含桌面操作，那个我不是很了解，或许会和 Windows 上的操作比较接近。</p><h3 id="仅文本文件-2">仅文本文件</h3><p>首先需要系统里面安装 vim 和 zip 两个包，如果是 Ubuntu，可以运行<code>sudo apt install vim zip -y</code>安装。</p><p>然后你可能已经想到了，那就是通过 vim 工具打开 Jar 包，将会显示 Jar 包中的所有文件夹和文件绝对路径，每行显示一个。</p><p><img data-src="https://img.iszy.xyz/20200518084041.png" alt=""></p><p>通过将光标移动到需要修改的文件上，回车进入文件，像编辑普通文件一样进行修改，修改完成后，<code>:wq</code>退出返回到文件列表。</p><p>接下来可以选择继续编辑其他文件或退出 Jar 包。退出 Jar 包时，请一定要通过<code>:q</code>退出，这个很重要，如果你像上面保存文件一样加了 w 参数，这个 Jar 包就废了，它将会变成保存了文件列表的一个文本文件。所以请千万通过<code>:q</code>参数退出 Jar 包，切记！</p><h3 id="所有文件-2">所有文件</h3><p>这个我暂时只知道通过上面说明的通用方法进行修改替换文件，如有小伙伴知道其他方法，希望可以告诉我，十分感谢。</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;在我们日常打包部署 Jar 包的时候，时常会出现需要修改少量内容或替换某个文件的时候，重新打包完整 Jar 包并在网上传输费时费力，所以需要直接修改 Jar 包，这里就对直接修改 和替换 Jar 包中文件的几种方式做一下总结。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="编程" scheme="https://www.iszy.cc/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-    
-    <category term="Windows" scheme="https://www.iszy.cc/tags/Windows/"/>
-    
-    <category term="Linux" scheme="https://www.iszy.cc/tags/Linux/"/>
-    
-    <category term="Java" scheme="https://www.iszy.cc/tags/Java/"/>
     
   </entry>
   
