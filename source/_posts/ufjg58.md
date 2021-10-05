@@ -39,7 +39,7 @@ updated: 2020-05-05 10:18:02
 
 比如我这里建立了一个名为 img-hosting 的仓库作为示例，链接形如
 
-https://github.com/ZvonimirSun/img-hosting
+[https://github.com/ZvonimirSun/img-hosting](https://github.com/ZvonimirSun/img-hosting)
 
 ### 上传工具
 

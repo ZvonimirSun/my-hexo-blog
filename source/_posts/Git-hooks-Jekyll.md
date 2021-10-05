@@ -30,7 +30,7 @@ keywords: Jekyll, Git, hooks
 
 ### 配置 Jekyll 环境
 
-#### 首先我使用 RVM 来安装 ruby。
+#### 首先我使用 RVM 来安装 ruby
 
 **安装 RVM**
 
