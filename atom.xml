@@ -414,11 +414,11 @@
     <category term="编程" scheme="https://www.iszy.cc/categories/%E7%BC%96%E7%A8%8B/"/>
     
     
-    <category term="SSL" scheme="https://www.iszy.cc/tags/SSL/"/>
-    
     <category term="OpenSSL" scheme="https://www.iszy.cc/tags/OpenSSL/"/>
     
     <category term="自签名证书" scheme="https://www.iszy.cc/tags/%E8%87%AA%E7%AD%BE%E5%90%8D%E8%AF%81%E4%B9%A6/"/>
+    
+    <category term="SSL" scheme="https://www.iszy.cc/tags/SSL/"/>
     
   </entry>
   
@@ -437,13 +437,13 @@
     
     
     
-    <category term="Java" scheme="https://www.iszy.cc/tags/Java/"/>
-    
-    <category term="SSL" scheme="https://www.iszy.cc/tags/SSL/"/>
-    
     <category term="OpenSSL" scheme="https://www.iszy.cc/tags/OpenSSL/"/>
     
+    <category term="Java" scheme="https://www.iszy.cc/tags/Java/"/>
+    
     <category term="自签名证书" scheme="https://www.iszy.cc/tags/%E8%87%AA%E7%AD%BE%E5%90%8D%E8%AF%81%E4%B9%A6/"/>
+    
+    <category term="SSL" scheme="https://www.iszy.cc/tags/SSL/"/>
     
   </entry>
   
