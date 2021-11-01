@@ -10,8 +10,23 @@ on:
   workflow_dispatch:
 
 jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2
+      - name: Restore cached ./node_modules
+        uses: actions/cache@v2
+        with:
+          path: ./node_modules
+          key: ${{ runner.os }}-yarn-lock-${{ hashFiles('./yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-lock-
+      - name: Install dependencies 🔧
+        run: yarn install --frozen-lockfile
   build:
     runs-on: ubuntu-latest
+    needs: [install]
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v2
@@ -24,8 +39,6 @@ jobs:
             ${{ runner.os }}-yarn-lock-
       - name: Install hexo
         run: npm install hexo-cli -g
-      - name: Install dependencies 🔧
-        run: yarn install --frozen-lockfile
       - name: Build app 🔧
         run: hexo g
       - name: Deploy 🚀
@@ -33,6 +46,10 @@ jobs:
         with:
           branch: gh-pages
           folder: public
+  deploy:
+    runs-on: ubuntu-latest
+    needs: [build]
+    steps:
       - name: Deploy to server
         uses: appleboy/ssh-action@master
         with:
