@@ -52,9 +52,6 @@ permalink: /page/bgfw/
 
 **点击前往查看测速: [机场测速集合](https://www.iszy.cc/page/speed-test-collection/)**
 
-<details>
-<summary style="cursor:pointer"><strong style="color:red">展开查看机场们的介绍~</strong></summary>
-
 ## 一、FreeWhale 自由鲸
 
 [官网传送门](https://t.xinjie.eu.org/iszy)
@@ -1036,8 +1033,6 @@ Shuttle 双十一特惠
 - 官方联系
   - 在官网可以使用工单、在线客服两种方式
   - 还提供了官方 tg 群组，可以随时交流，购买套餐后可在套餐页看到进群链接
-
-</details>
 
 ---
 
