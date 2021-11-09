@@ -156,9 +156,9 @@ asn1@0.1.11:
   integrity sha1-VZvhg3bQik7E2+gId9J4GGObLfc=
 
 asn1@~0.2.3:
-  version "0.2.4"
-  resolved "https://r.cnpmjs.org/asn1/download/asn1-0.2.4.tgz#8d2475dfab553bb33e77b54e59e880bb8ce23136"
-  integrity sha1-jSR136tVO7M+d7VOWeiAu4ziMTY=
+  version "0.2.6"
+  resolved "https://r.cnpmjs.org/asn1/download/asn1-0.2.6.tgz#0d3a7bb6e64e02a90c0303b31f292868ea09a08d"
+  integrity sha1-DTp7tuZOAqkMAwOzHykoaOoJoI0=
   dependencies:
     safer-buffer "~2.1.0"
 
@@ -965,9 +965,9 @@ extsprintf@1.3.0:
   integrity sha1-lpGEQOMEGnpBT4xS48V06zw+HgU=
 
 extsprintf@^1.2.0:
-  version "1.4.0"
-  resolved "https://r.cnpmjs.org/extsprintf/download/extsprintf-1.4.0.tgz#e2689f8f356fad62cca65a3a91c5df5f9551692f"
-  integrity sha1-4mifjzVvrWLMplo6kcXfX5VRaS8=
+  version "1.4.1"
+  resolved "https://r.cnpmjs.org/extsprintf/download/extsprintf-1.4.1.tgz#8d172c064867f235c0c84a596806d279bf4bcc07"
+  integrity sha1-jRcsBkhn8jXAyEpZaAbSeb9LzAc=
 
 fast-deep-equal@^3.1.1:
   version "3.1.3"
@@ -1472,9 +1472,9 @@ hexo-server@^2.0.0:
     serve-static "^1.14.1"
 
 hexo-theme-next@^8.3.0:
-  version "8.8.0"
-  resolved "https://r.cnpmjs.org/hexo-theme-next/download/hexo-theme-next-8.8.0.tgz#8f8591803cd89567a4ff2a70785f967d53ce50b2"
-  integrity sha1-j4WRgDzYlWek/ypweF+WfVPOULI=
+  version "8.8.1"
+  resolved "https://r.cnpmjs.org/hexo-theme-next/download/hexo-theme-next-8.8.1.tgz#f5a09bb145fc76a3a17973a093c7125aad6eaa05"
+  integrity sha1-9aCbsUX8dqOheXOgk8cSWq1uqgU=
 
 hexo-util@2.4.0:
   version "2.4.0"
@@ -2183,9 +2183,9 @@ mime@1.6.0:
   integrity sha1-Ms2eXGRVO9WNGaVor0Uqz/BJgbE=
 
 mime@^2.4.3:
-  version "2.5.2"
-  resolved "https://r.cnpmjs.org/mime/download/mime-2.5.2.tgz#6e3dc6cc2b9510643830e5f19d5cb753da5eeabe"
-  integrity sha1-bj3GzCuVEGQ4MOXxnVy3U9pe6r4=
+  version "2.6.0"
+  resolved "https://r.cnpmjs.org/mime/download/mime-2.6.0.tgz#a2a682a95cd4d0cb1d6257e28f83da7e35800367"
+  integrity sha1-oqaCqVzU0MsdYlfij4PafjWAA2c=
 
 min-indent@^1.0.0:
   version "1.0.1"
