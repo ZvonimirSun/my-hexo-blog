@@ -1,7 +1,7 @@
 ---
 title: 【评测2021】优质SS/SSR/Trojan/V2Ray机场推荐【双十一特惠】
 date: 2019-01-03 03:11:50
-updated: 2021-11-01 11:00:00
+updated: 2021-11-10 11:00:00
 categories:
   - 推广
 tags:
@@ -36,17 +36,17 @@ permalink: /page/bgfw/
 
 ## 目录
 
-| 机场名称（点击了解更多）                                | 类别                  | 关键词                           | 操作                                          |
-| ------------------------------------------------------- | --------------------- | -------------------------------- | --------------------------------------------- |
-| [FreeWhale 自由鲸 ⭐](/page/freewhale/)【官方长期优惠】 | SSR(隧道、专线)/V2Ray | 性价比高，超多线路，稳定老站     | [官网传送门](https://t.xinjie.eu.org/iszy)    |
-| [CMYNetwork 红莓网络](/page/cmynetwork/)                | SSR(专线)/Trojan      | 稳定平价，超多专线，小众地区线路 | [官网传送门](https://url.iszy.xyz/cmynetwork) |
-| [MEET](#三、MEET)                                       | SSR                   | 专注按量付费，高速稳定           | [官网传送门](https://url.iszy.xyz/fspeed)     |
-| [BoomCloud](#四、BoomCloud)【官方长期优惠】             | V2ray/SSR/SS          | 多年老站，附赠丰富               | [官网传送门](https://url.iszy.xyz/boomcloud)  |
-| [DuangCloud](#五、DuangCloud)【双十一特惠】             | SS(全专线)            | 平价灵活                         | [官网传送门](https://url.iszy.xyz/duangcloud) |
-| [ByWave](#六、ByWave)【双十一特惠】                     | V2Ray                 | 高质高端，服务稳定               | [官网传送门](https://url.iszy.xyz/bywave)     |
-| [Blinkload](#七、Blinkload)                             | SS(全专线)            | 稳定全能，超多专线               | [官网传送门](https://url.iszy.xyz/blinkload)  |
-| [闲鱼网络](#八、闲鱼网络)(皇朝网络)                     | SS 隧道               | 性价比新站                       | [官网传送门](https://url.iszy.xyz/dinastio)   |
-| [Shuttle](#九、Shuttle)【双十一特惠】                   | V2ray                 | 平价新站，另含超多小众地区线路   | [官网传送门](https://url.iszy.xyz/shuttle)    |
+| 机场名称（点击了解更多）                              | 类别                  | 关键词                           | 操作                                          |
+| ----------------------------------------------------- | --------------------- | -------------------------------- | --------------------------------------------- |
+| [FreeWhale 自由鲸 ⭐](/page/freewhale/)【双十一特惠】 | SSR(隧道、专线)/V2Ray | 性价比高，超多线路，稳定老站     | [官网传送门](https://t.xinjie.eu.org/iszy)    |
+| [CMYNetwork 红莓网络](/page/cmynetwork/)              | SSR(专线)/Trojan      | 稳定平价，超多专线，小众地区线路 | [官网传送门](https://url.iszy.xyz/cmynetwork) |
+| [MEET](#三、MEET)                                     | SSR                   | 专注按量付费，高速稳定           | [官网传送门](https://url.iszy.xyz/fspeed)     |
+| [BoomCloud](#四、BoomCloud)【官方长期优惠】           | V2ray/SSR/SS          | 多年老站，附赠丰富               | [官网传送门](https://url.iszy.xyz/boomcloud)  |
+| [DuangCloud](#五、DuangCloud)【双十一特惠】           | SS(全专线)            | 平价灵活                         | [官网传送门](https://url.iszy.xyz/duangcloud) |
+| [ByWave](#六、ByWave)【双十一特惠】                   | V2Ray                 | 高质高端，服务稳定               | [官网传送门](https://url.iszy.xyz/bywave)     |
+| [Blinkload](#七、Blinkload)                           | SS(全专线)            | 稳定全能，超多专线               | [官网传送门](https://url.iszy.xyz/blinkload)  |
+| [闲鱼网络](#八、闲鱼网络)(皇朝网络)                   | SS 隧道               | 性价比新站                       | [官网传送门](https://url.iszy.xyz/dinastio)   |
+| [Shuttle](#九、Shuttle)【双十一特惠】                 | V2ray                 | 平价新站，另含超多小众地区线路   | [官网传送门](https://url.iszy.xyz/shuttle)    |
 
 > 本页机场均在上次网络大波动中提供了稳定的服务，还会持续观察未来表现
 
@@ -63,6 +63,10 @@ permalink: /page/bgfw/
 [⭐ 更多详细介绍 ⭐](https://www.iszy.cc/page/freewhale/)
 
 ### （一）优惠
+
+> 转官方优惠公告
+
+双十一**88 折**礼遇码：`1111`【￥ 115 及以上套餐可用,C 套餐可叠加】
 
 > 官方长期优惠
 
