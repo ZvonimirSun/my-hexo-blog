@@ -2,9 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.iszy.cc/page/freewhale/</loc>
+    <loc>https://www.iszy.cc/page/cmynetwork/</loc>
     
-    <lastmod>2021-11-10</lastmod>
+    <lastmod>2021-11-13</lastmod>
     
     
     <changefreq>daily</changefreq>
@@ -14,6 +14,17 @@
   
   <url>
     <loc>https://www.iszy.cc/page/bgfw/</loc>
+    
+    <lastmod>2021-11-13</lastmod>
+    
+    
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.iszy.cc/page/freewhale/</loc>
     
     <lastmod>2021-11-10</lastmod>
     
@@ -111,17 +122,6 @@
     
     <lastmod>2021-07-24</lastmod>
     
-    
-  </url>
-  
-  <url>
-    <loc>https://www.iszy.cc/page/cmynetwork/</loc>
-    
-    <lastmod>2021-07-04</lastmod>
-    
-    
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
     
   </url>
   
@@ -872,7 +872,7 @@
 
   <url>
     <loc>https://www.iszy.cc/</loc>
-    <lastmod>2021-11-10</lastmod>
+    <lastmod>2021-11-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
