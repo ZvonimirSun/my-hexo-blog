@@ -1,7 +1,7 @@
 ---
-title: CMY Network--高端专线SSR/Trojan机场推荐
+title: CMY Network--高端专线SSR/Trojan机场推荐【双十一特惠】
 date: 2019-04-11 11:47:31
-updated: 2021-07-04 23:00:00
+updated: 2021-11-13 11:00:00
 categories:
   - 推广
 tags:
@@ -53,6 +53,12 @@ permalink: /page/cmynetwork/
 邀请码: `iszy`
 
 ![](https://img.iszy.xyz/20200317212833.png)
+
+> 官方优惠
+
+11.11 双十一特惠限时活动进行中...
+
+在 11 月 1 日到 12 月 1 日期间，购买任意年费套餐，可享受高额折扣，并在折扣的基础上加送 1 个月套餐时间！若同时邀请小伙伴拼团，享受折上折中折哦。
 
 ## CMY Network 简介
 
