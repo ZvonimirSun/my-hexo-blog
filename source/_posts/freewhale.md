@@ -60,7 +60,7 @@ permalink: /page/freewhale/
 
 **￥ 115** 及以上套餐可用
 
-九月**95 折**礼遇码：`PeacefulSep`
+**95 折**礼遇码：`EnjoyNov11`
 
 ## 自由鲸 FreeWhale 简介
 
