@@ -1,5 +1,5 @@
 ---
-title: 自由鲸FreeWhale--性价比SSR/V2Ray机场推荐【双十一特惠】
+title: 自由鲸FreeWhale--性价比SSR/V2Ray机场推荐
 date: 2019-04-11 11:47:31
 updated: 2021-11-10 23:00:00
 categories:
@@ -51,10 +51,6 @@ permalink: /page/freewhale/
 [⭐⭐ FreeWhale 自由鲸 测速 ⭐⭐](https://www.iszy.cc/page/speed-test-collection/#freewhale-自由鲸)
 
 ### 优惠
-
-> 转官方优惠公告
-
-双十一**88 折**礼遇码：`1111`【￥ 115 及以上套餐可用,C 套餐可叠加】
 
 > 官方长期优惠
 
