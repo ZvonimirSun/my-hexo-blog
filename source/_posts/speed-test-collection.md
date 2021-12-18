@@ -1,7 +1,7 @@
 ---
 title: 机场测速集合
 date: 2019-03-02 14:20:52
-updated: 2021-12-17 14:20:52
+updated: 2021-12-18 11:20:52
 categories:
 tags:
   - 科学上网
@@ -52,14 +52,6 @@ permalink: /page/speed-test-collection/
 
 ![](https://img.iszy.xyz/20210112210447.png)
 
-## Electry
-
-[官网传送门](https://url.iszy.xyz/electry)
-
-2021-08-07
-
-![](https://img.iszy.xyz/20210807123726.png)
-
 ## V2Club
 
 [官网传送门](https://url.iszy.xyz/lanan)
@@ -70,7 +62,9 @@ permalink: /page/speed-test-collection/
 
 [官网传送门](https://url.iszy.xyz/dinastio)
 
-![](https://img.iszy.xyz/20210308200608.png)
+2021-12-18
+
+![](https://img.iszy.xyz/1639797582174.png)
 
 ## Shuttle
 

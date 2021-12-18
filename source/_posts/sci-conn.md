@@ -1,7 +1,7 @@
 ---
 title: 【评测2021】优质SS/SSR/Trojan/V2Ray机场推荐
 date: 2019-01-03 03:11:50
-updated: 2021-12-14 11:00:00
+updated: 2021-12-18 11:00:00
 categories:
   - 推广
 tags:
@@ -36,17 +36,17 @@ permalink: /page/bgfw/
 
 ## 目录
 
-| 机场名称（点击了解更多）                               | 类别                  | 关键词                           | 操作                                          |
-| ------------------------------------------------------ | --------------------- | -------------------------------- | --------------------------------------------- |
-| [FreeWhale 自由鲸 ⭐](/page/freewhale/)  | SSR(隧道、专线)/V2Ray | 性价比高，超多线路，稳定老站     | [官网传送门](https://t.xinjie.eu.org/iszy)    |
-| [CMYNetwork 红莓网络](/page/cmynetwork/) | SSR(专线)/Trojan      | 稳定平价，超多专线，小众地区线路 | [官网传送门](https://url.iszy.xyz/cmynetwork) |
-| [MEET](#三、MEET)                                      | SSR                   | 专注按量付费，高速稳定           | [官网传送门](https://url.iszy.xyz/fspeed)     |
-| [BoomCloud](#四、BoomCloud)【官方长期优惠】            | V2ray/SSR/SS          | 多年老站，附赠丰富               | [官网传送门](https://url.iszy.xyz/boomcloud)  |
-| [DuangCloud](#五、DuangCloud)            | SS(全专线)            | 平价灵活                         | [官网传送门](https://url.iszy.xyz/duangcloud) |
-| [ByWave](#六、ByWave)                    | V2Ray                 | 高质高端，服务稳定               | [官网传送门](https://url.iszy.xyz/bywave)     |
-| [Blinkload](#七、Blinkload)                            | SS(全专线)            | 稳定全能，超多专线               | [官网传送门](https://url.iszy.xyz/blinkload)  |
-| [闲鱼网络](#八、闲鱼网络)(皇朝网络)                    | SS 隧道               | 性价比新站                       | [官网传送门](https://url.iszy.xyz/dinastio)   |
-| [Shuttle](#九、Shuttle)                  | V2ray                 | 平价新站，另含超多小众地区线路   | [官网传送门](https://url.iszy.xyz/shuttle)    |
+| 机场名称（点击了解更多）                    | 类别                  | 关键词                           | 操作                                          |
+| ------------------------------------------- | --------------------- | -------------------------------- | --------------------------------------------- |
+| [FreeWhale 自由鲸 ⭐](/page/freewhale/)     | SSR(隧道、专线)/V2Ray | 性价比高，超多线路，稳定老站     | [官网传送门](https://t.xinjie.eu.org/iszy)    |
+| [CMYNetwork 红莓网络](/page/cmynetwork/)    | SSR(专线)/Trojan      | 稳定平价，超多专线，小众地区线路 | [官网传送门](https://url.iszy.xyz/cmynetwork) |
+| [MEET](#三、MEET)                           | SSR                   | 专注按量付费，高速稳定           | [官网传送门](https://url.iszy.xyz/fspeed)     |
+| [BoomCloud](#四、BoomCloud)【官方长期优惠】 | V2ray/SSR/SS          | 多年老站，附赠丰富               | [官网传送门](https://url.iszy.xyz/boomcloud)  |
+| [DuangCloud](#五、DuangCloud)               | SS(全专线)            | 平价灵活                         | [官网传送门](https://url.iszy.xyz/duangcloud) |
+| [ByWave](#六、ByWave)                       | V2Ray                 | 高质高端，服务稳定               | [官网传送门](https://url.iszy.xyz/bywave)     |
+| [Blinkload](#七、Blinkload)                 | SS(全专线)            | 稳定全能，超多专线               | [官网传送门](https://url.iszy.xyz/blinkload)  |
+| [闲鱼网络](#八、闲鱼网络)(皇朝网络)         | SS 隧道               | 性价比新站                       | [官网传送门](https://url.iszy.xyz/dinastio)   |
+| [Shuttle](#九、Shuttle)                     | V2ray                 | 平价新站，另含超多小众地区线路   | [官网传送门](https://url.iszy.xyz/shuttle)    |
 
 > 本页机场均在上次网络大波动中提供了稳定的服务，还会持续观察未来表现
 
@@ -58,7 +58,7 @@ permalink: /page/bgfw/
 
 邀请码: `iszy`
 
-[⭐⭐ 测速 ⭐⭐](https://www.iszy.cc/page/speed-test-collection/#freewhale-自由鲸) (2021-09-18)
+[⭐⭐ 测速 ⭐⭐](https://www.iszy.cc/page/speed-test-collection/#FreeWhale-自由鲸) (2021-12-17)
 
 [⭐ 更多详细介绍 ⭐](https://www.iszy.cc/page/freewhale/)
 
@@ -913,7 +913,7 @@ V2Club(旧蓝岸)，一家专门提供 v2ray 代理服务的服务商。或许�
 
 邀请码：`vXd43WA0`
 
-[⭐⭐ 测速 ⭐⭐](https://www.iszy.cc/page/speed-test-collection/#闲鱼网络)
+[⭐⭐ 测速 ⭐⭐](https://www.iszy.cc/page/speed-test-collection/#闲鱼网络)(2021-12-18)
 
 ### （一）简介
 
@@ -921,13 +921,13 @@ V2Club(旧蓝岸)，一家专门提供 v2ray 代理服务的服务商。或许�
 
 ### （二）套餐
 
-> 全国内中继，仅高级订阅包含 IEPL 专线接入。
+> 中转隧道线路，部分 BGP 线路。
 
-| 订阅     | 流量    | 价格       |
-| -------- | ------- | ---------- |
-| 基础订阅 | 100G/月 | 20 元/季度 |
-| 入门订阅 | 200G/月 | 20 元/月   |
-| 高级订阅 | 300G/月 | 30 元/月   |
+| 订阅     | 流量    | 价格         |
+| -------- | ------- | ------------ |
+| 迷你订阅 | 30G/月  | **20 元/年** |
+| 基础订阅 | 100G/月 | 22 元/季度   |
+| 入门订阅 | 200G/月 | 16 元/月     |
 
 ### （三）其他说明
 
@@ -956,11 +956,11 @@ V2Club(旧蓝岸)，一家专门提供 v2ray 代理服务的服务商。或许�
 
 充值获取赠金:
 
-- 充100到账110
-- 充200到账230
-- 充300到账350
-- 充500到账600
-- 充1000到账1200
+- 充 100 到账 110
+- 充 200 到账 230
+- 充 300 到账 350
+- 充 500 到账 600
+- 充 1000 到账 1200
 
 ### （二）简介
 
