@@ -50,7 +50,7 @@ permalink: /page/bgfw/
 
 > 本页机场均在上次网络大波动中提供了稳定的服务，还会持续观察未来表现
 
-**点击前往查看测速: [机场测速集合](https://www.iszy.cc/page/speed-test-collection/)**
+点击前往查看测速: **[机场测速集合](https://www.iszy.cc/page/speed-test-collection/)**
 
 ## 一、FreeWhale 自由鲸
 
