@@ -36,17 +36,17 @@ permalink: /page/bgfw/
 
 ## 目录
 
-| 机场名称（点击了解更多）                    | 类别                  | 关键词                           | 操作                                          |
-| ------------------------------------------- | --------------------- | -------------------------------- | --------------------------------------------- |
-| [FreeWhale 自由鲸 ⭐](/page/freewhale/)     | SSR(隧道、专线)/V2Ray | 性价比高，超多线路，稳定老站     | [官网传送门](https://t.xinjie.eu.org/iszy)    |
-| [CMYNetwork 红莓网络](/page/cmynetwork/)    | SSR(专线)/Trojan      | 稳定平价，超多专线，小众地区线路 | [官网传送门](https://url.iszy.xyz/cmynetwork) |
-| [MEET](#三、MEET)                           | SSR                   | 专注按量付费，高速稳定           | [官网传送门](https://url.iszy.xyz/fspeed)     |
-| [BoomCloud](#四、BoomCloud)【官方长期优惠】 | V2ray/SSR/SS          | 多年老站，附赠丰富               | [官网传送门](https://url.iszy.xyz/boomcloud)  |
-| [DuangCloud](#五、DuangCloud)               | SS(全专线)            | 平价灵活                         | [官网传送门](https://url.iszy.xyz/duangcloud) |
-| [ByWave](#六、ByWave)                       | V2Ray                 | 高质高端，服务稳定               | [官网传送门](https://url.iszy.xyz/bywave)     |
-| [Blinkload](#七、Blinkload)                 | SS(全专线)            | 稳定全能，超多专线               | [官网传送门](https://url.iszy.xyz/blinkload)  |
-| [闲鱼网络](#八、闲鱼网络)(皇朝网络)         | SS 隧道               | 性价比新站                       | [官网传送门](https://url.iszy.xyz/dinastio)   |
-| [Shuttle](#九、Shuttle)                     | V2ray                 | 平价新站，另含超多小众地区线路   | [官网传送门](https://url.iszy.xyz/shuttle)    |
+| 机场名称（点击了解更多）                    | 类别                  | 关键词                           | 操作                                                                                                                                                  |
+| ------------------------------------------- | --------------------- | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [FreeWhale 自由鲸 ⭐](/page/freewhale/)     | SSR(隧道、专线)/V2Ray | 性价比高，超多线路，稳定老站     | [官网传送门](https://t.xinjie.eu.org/iszy) [测速](https://www.iszy.cc/page/speed-test-collection/#FreeWhale-%E8%87%AA%E7%94%B1%E9%B2%B8)              |
+| [CMYNetwork 红莓网络](/page/cmynetwork/)    | SSR(专线)/Trojan      | 稳定平价，超多专线，小众地区线路 | [官网传送门](https://url.iszy.xyz/cmynetwork) [测速](https://www.iszy.cc/page/speed-test-collection/#CMYNetwork-%E7%BA%A2%E8%8E%93%E7%BD%91%E7%BB%9C) |
+| [MEET](#三、MEET)                           | SSR                   | 专注按量付费，高速稳定           | [官网传送门](https://url.iszy.xyz/fspeed) [测速](https://www.iszy.cc/page/speed-test-collection/#MEET)                                                |
+| [DuangCloud](#四、DuangCloud)               | SS(全专线)            | 平价灵活                         | [官网传送门](https://url.iszy.xyz/duangcloud) [测速](https://www.iszy.cc/page/speed-test-collection/#DuangCloud)                                      |
+| [ByWave](#五、ByWave)                       | V2Ray                 | 高质高端，服务稳定               | [官网传送门](https://url.iszy.xyz/bywave) [测速](https://www.iszy.cc/page/speed-test-collection/#ByWave)                                              |
+| [Blinkload](#六、Blinkload)                 | SS(全专线)            | 稳定全能，超多专线               | [官网传送门](https://url.iszy.xyz/blinkload) [测速](https://www.iszy.cc/page/speed-test-collection/#Blinkload)                                        |
+| [闲鱼网络](#七、闲鱼网络)(皇朝网络)         | SS 隧道               | 性价比新站                       | [官网传送门](https://url.iszy.xyz/dinastio) [测速](https://www.iszy.cc/page/speed-test-collection/#%E9%97%B2%E9%B1%BC%E7%BD%91%E7%BB%9C)              |
+| [Shuttle](#八、Shuttle)                     | V2ray                 | 平价新站，另含超多小众地区线路   | [官网传送门](https://url.iszy.xyz/shuttle) [测速](https://www.iszy.cc/page/speed-test-collection/#Shuttle)                                            |
+| [BoomCloud](#九、BoomCloud)【官方长期优惠】 | V2ray/SSR/SS          | 多年老站，附赠丰富               | [官网传送门](https://url.iszy.xyz/boomcloud)                                                                                                          |
 
 > 本页机场均在上次网络大波动中提供了稳定的服务，还会持续观察未来表现
 
@@ -236,228 +236,7 @@ permalink: /page/bgfw/
 | 季度套餐     | 90 天  | 100G | 49 元  |
 | 10G 流量月包 | 30 天  | 10G  | 5 元   |
 
-## 四、BoomCloud
-
-[官网传送门](https://url.iszy.xyz/boomcloud)
-
-### （一）优惠
-
-> 官方优惠
-
-选择年付可享**9 折**优惠
-
-### （二）简介
-
-**BoomCloud**是一家采用**SS/SSR/V2ray**技术提供国际网络加速服务的香港公司。这家机场的服务经过一段时间的试用下来，较为稳定，速度理想。节点采用**全部中继，含 IPLC**。值得一提的是，这家机场的**年付套餐**赠送的**附加服务**十分超值。
-
-**优质高速的线路**
-
-- 香港、日本、新加坡、美国等，50+中继高速线路
-- 节点全内网中专，拥有 IPLC 线路
-
-**多平台协议支持**
-
-- 同时支持 SS/SSR/V2ray 协议连接
-- 领先加密技术，隐私保护，数据传输全加密
-- Windows/Mac/Android/iOS 全平台通用
-- 支持 UDP，支持 TCP
-
-**流媒体解锁**
-
-- Netflix、TVB、BBC、HBO 支持
-
-**丰厚附加服务赠送**
-
-购买部分年付套餐的用户，可前往【附加服务】，免费领取附加服务订阅，目前支持的附加服务有：
-
-1. G Suite 账户：
-   - Google Apps 账户，使用包括 Google 云端硬盘、Gmail 在内的多种服务。同时，Boomcloud G Suite 账户提供无限容量的 Google 云端硬盘
-   - 需要注意的是，其提供的是独立账号，而非把服务提供到个人账号，属团体订阅
-2. Office 365 ProPlus 订阅：
-   - Boomcloud 提供的终生 Office 365 订阅（在 Boomcloud 产品有效期内）
-   - 包含 OneDrive for Business 和桌面版 Office（最多用于 5 台设备）
-   - 需要注意的是，其提供的是独立账号，而非把服务提供到个人账号，属团体订阅
-
-### （三）套餐
-
-> 注:<br>由于香港公司的支付货币为港币，套餐定价为人民币，实际支付价格可能会因当日汇率波动而收到影响，购买时需注意。<br>除无限流量套餐外，其他套餐默认可同时登录终端的数量为 5 个，可通过在购买时选择增加到 8 个或无限终端数量（需加价，一般用户不太需要）。
-
-#### 包年包月服务
-
-<table>
-<tr><th>套餐</th><th>每月流量(G)</th><th>付费周期</th><th>价格(元)</th><th>折合每月每G价格(元)</th></tr>
-<tr>
-  <td rowspan="4">Silver</td>
-  <td rowspan="4">60</td>
-  <td>半年</td>
-  <td>158</td>
-  <td>0.4389</td>
-</tr>
-<tr>
-  <td>每年</td>
-  <td>298</td>
-  <td>0.4139</td>
-</tr>
-<tr>
-  <td>两年</td>
-  <td>588</td>
-  <td>0.4083</td>
-</tr>
-<tr>
-  <td>三年</td>
-  <td>848</td>
-  <td>0.3926</td>
-</tr>
-<tr>
-  <td rowspan="12">Gold</td>
-  <td rowspan="6">120</td>
-  <td>每月</td>
-  <td>38</td>
-  <td>0.3167</td>
-</tr>
-<tr>
-  <td>每季</td>
-  <td>112</td>
-  <td>0.3111</td>
-</tr>
-<tr>
-  <td>半年</td>
-  <td>216</td>
-  <td>0.3</td>
-</tr>
-<tr>
-  <td>每年</td>
-  <td>408</td>
-  <td>0.2833</td>
-</tr>
-<tr>
-  <td>两年</td>
-  <td>800</td>
-  <td>0.2778</td>
-</tr>
-<tr>
-  <td>三年</td>
-  <td>1188</td>
-  <td>0.275</td>
-</tr>
-<tr>
-  <td rowspan="6">200</td>
-  <td>每月</td>
-  <td>50</td>
-  <td>0.25</td>
-</tr>
-<tr>
-  <td>每季</td>
-  <td>148</td>
-  <td>0.2467</td>
-</tr>
-<tr>
-  <td>半年</td>
-  <td>288</td>
-  <td>0.24</td>
-</tr>
-<tr>
-  <td>每年</td>
-  <td>552</td>
-  <td>0.23</td>
-</tr>
-<tr>
-  <td>两年</td>
-  <td>1088</td>
-  <td>0.2267</td>
-</tr>
-<tr>
-  <td>三年</td>
-  <td>1288</td>
-  <td>0.1789</td>
-</tr>
-<tr>
-  <td rowspan="6">Platinum</td>
-  <td rowspan="6">300</td>
-  <td>每月</td>
-  <td>58</td>
-  <td>0.1933</td>
-</tr>
-<tr>
-  <td>每季</td>
-  <td>172</td>
-  <td>0.1911</td>
-</tr>
-<tr>
-  <td>半年</td>
-  <td>330</td>
-  <td>0.1833</td>
-</tr>
-<tr>
-  <td>每年</td>
-  <td>588</td>
-  <td>0.1633</td>
-</tr>
-<tr>
-  <td>两年</td>
-  <td>1108</td>
-  <td>0.1539</td>
-</tr>
-<tr>
-  <td>三年</td>
-  <td>1688</td>
-  <td>0.1563</td>
-</tr>
-<tr>
-  <td rowspan="2">Team</td>
-  <td rowspan="2">不限量</td>
-  <td>每季</td>
-  <td>3699</td>
-  <td rowspan="2">NAN</td>
-</tr>
-<tr>
-  <td>每年</td>
-  <td>11888</td>
-</tr>
-</table>
-
-#### 弹性套餐（固定流量）
-
-| 弹性套餐   | 总流量 | 有效期 | 线路 | 价格(元) | 折合每 G 价格 |
-| ---------- | ------ | ------ | ---- | -------- | ------------- |
-| 基础流量包 | 30G    | 365 天 | 15+  | 45       | 1.5 元/G      |
-| 飞享流量包 | 120G   | 365 天 | 25+  | 120      | 1 元/G        |
-| 自由流量包 | 200G   | 365 天 | 25+  | 160      | 0.8 元/G      |
-
-#### 企业定制套餐
-
-- 标准单线 + 高级单线接入点
-- 100Mbps~500Mbps 速率保障
-- 持 TCP 先进加速技术
-- 支持多种扩展连接协议
-- 可选流量范围：3TiB
-- 支持级别：标准支持 + 有限商业支持
-- 支持响应：8 小时（工作时间）
-
-| 数据中心分布   | 每月价格(元) | 每年价格(元) |
-| -------------- | ------------ | ------------ |
-| 香港数据中心   | 2180         | 22300        |
-| 美国数据中心   | 1280         | 20800        |
-| 日本数据中心   | 2080         | 20300        |
-| 新加坡数据中心 | 1280         | 14800        |
-| 德国数据中心   | 1280         | 14800        |
-| 英国数据中心   | 1280         | 14800        |
-
-### （四）其他说明
-
-- [BoomCloud Wiki Center](https://boomcloud-hk.github.io/wiki/#/)，提供 BoomCloud 服务相关教程指引及进阶教程
-- 售后 BoomCloud 售后仅支持服务单，因为这能最直白看到你的账号及套餐使用情况，更快的帮助寻找问题所在
-- 服务单服务时间介绍
-
-  | 周期     | 响应时间  | 其他              |
-  | -------- | --------- | ----------------- |
-  | 工作日   | 8 小时内  | Telegram 紧急反馈 |
-  | 节假日   | 48 小时内 | Telegram 紧急反馈 |
-  | AFF 提现 | 24 小时内 | 工单跟进          |
-
-- BoomCloud 售后服务单仅在网站个人中心后台的服务单回复，邮件仅作为提醒作用，直接回复无效。
-
-## 五、DuangCloud
+## 四、DuangCloud
 
 [官网传送门](https://url.iszy.xyz/duangcloud)
 
@@ -504,7 +283,7 @@ permalink: /page/bgfw/
   - 工单方式
   - tg 群：[DuangCloud 客户群](https://t.me/duangcloud)
 
-## 六、ByWave
+## 五、ByWave
 
 [官网传送门](https://url.iszy.xyz/bywave)
 
@@ -578,7 +357,7 @@ permalink: /page/bgfw/
   - 如果还是无法使用的话，请在连接后截图客户端中的日志界面发送到在线客服。
 - 建议采用官网在线客服的方式解决问题
 
-## 七、Blinkload
+## 六、Blinkload
 
 [官网传送门](https://url.iszy.xyz/blinkload)
 
@@ -907,7 +686,7 @@ V2Club(旧蓝岸)，一家专门提供 v2ray 代理服务的服务商。或许�
 
 -->
 
-## 八、闲鱼网络
+## 七、闲鱼网络
 
 [官网传送门](https://url.iszy.xyz/dinastio)
 
@@ -936,7 +715,7 @@ V2Club(旧蓝岸)，一家专门提供 v2ray 代理服务的服务商。或许�
 - 官方联系
   - 暂时好像只看到工单系统一种方式
 
-## 九、Shuttle
+## 八、Shuttle
 
 [官网传送门](https://url.iszy.xyz/shuttle)
 
@@ -1005,6 +784,227 @@ V2Club(旧蓝岸)，一家专门提供 v2ray 代理服务的服务商。或许�
 - 官方联系
   - 在官网可以使用工单、在线客服两种方式
   - 还提供了官方 tg 群组，可以随时交流，购买套餐后可在套餐页看到进群链接
+
+## 九、BoomCloud
+
+[官网传送门](https://url.iszy.xyz/boomcloud)
+
+### （一）优惠
+
+> 官方优惠
+
+选择年付可享**9 折**优惠
+
+### （二）简介
+
+**BoomCloud**是一家采用**SS/SSR/V2ray**技术提供国际网络加速服务的香港公司。这家机场的服务经过一段时间的试用下来，较为稳定，速度理想。节点采用**全部中继，含 IPLC**。值得一提的是，这家机场的**年付套餐**赠送的**附加服务**十分超值。
+
+**优质高速的线路**
+
+- 香港、日本、新加坡、美国等，50+中继高速线路
+- 节点全内网中专，拥有 IPLC 线路
+
+**多平台协议支持**
+
+- 同时支持 SS/SSR/V2ray 协议连接
+- 领先加密技术，隐私保护，数据传输全加密
+- Windows/Mac/Android/iOS 全平台通用
+- 支持 UDP，支持 TCP
+
+**流媒体解锁**
+
+- Netflix、TVB、BBC、HBO 支持
+
+**丰厚附加服务赠送**
+
+购买部分年付套餐的用户，可前往【附加服务】，免费领取附加服务订阅，目前支持的附加服务有：
+
+1. G Suite 账户：
+   - Google Apps 账户，使用包括 Google 云端硬盘、Gmail 在内的多种服务。同时，Boomcloud G Suite 账户提供无限容量的 Google 云端硬盘
+   - 需要注意的是，其提供的是独立账号，而非把服务提供到个人账号，属团体订阅
+2. Office 365 ProPlus 订阅：
+   - Boomcloud 提供的终生 Office 365 订阅（在 Boomcloud 产品有效期内）
+   - 包含 OneDrive for Business 和桌面版 Office（最多用于 5 台设备）
+   - 需要注意的是，其提供的是独立账号，而非把服务提供到个人账号，属团体订阅
+
+### （三）套餐
+
+> 注:<br>由于香港公司的支付货币为港币，套餐定价为人民币，实际支付价格可能会因当日汇率波动而收到影响，购买时需注意。<br>除无限流量套餐外，其他套餐默认可同时登录终端的数量为 5 个，可通过在购买时选择增加到 8 个或无限终端数量（需加价，一般用户不太需要）。
+
+#### 包年包月服务
+
+<table>
+<tr><th>套餐</th><th>每月流量(G)</th><th>付费周期</th><th>价格(元)</th><th>折合每月每G价格(元)</th></tr>
+<tr>
+  <td rowspan="4">Silver</td>
+  <td rowspan="4">60</td>
+  <td>半年</td>
+  <td>158</td>
+  <td>0.4389</td>
+</tr>
+<tr>
+  <td>每年</td>
+  <td>298</td>
+  <td>0.4139</td>
+</tr>
+<tr>
+  <td>两年</td>
+  <td>588</td>
+  <td>0.4083</td>
+</tr>
+<tr>
+  <td>三年</td>
+  <td>848</td>
+  <td>0.3926</td>
+</tr>
+<tr>
+  <td rowspan="12">Gold</td>
+  <td rowspan="6">120</td>
+  <td>每月</td>
+  <td>38</td>
+  <td>0.3167</td>
+</tr>
+<tr>
+  <td>每季</td>
+  <td>112</td>
+  <td>0.3111</td>
+</tr>
+<tr>
+  <td>半年</td>
+  <td>216</td>
+  <td>0.3</td>
+</tr>
+<tr>
+  <td>每年</td>
+  <td>408</td>
+  <td>0.2833</td>
+</tr>
+<tr>
+  <td>两年</td>
+  <td>800</td>
+  <td>0.2778</td>
+</tr>
+<tr>
+  <td>三年</td>
+  <td>1188</td>
+  <td>0.275</td>
+</tr>
+<tr>
+  <td rowspan="6">200</td>
+  <td>每月</td>
+  <td>50</td>
+  <td>0.25</td>
+</tr>
+<tr>
+  <td>每季</td>
+  <td>148</td>
+  <td>0.2467</td>
+</tr>
+<tr>
+  <td>半年</td>
+  <td>288</td>
+  <td>0.24</td>
+</tr>
+<tr>
+  <td>每年</td>
+  <td>552</td>
+  <td>0.23</td>
+</tr>
+<tr>
+  <td>两年</td>
+  <td>1088</td>
+  <td>0.2267</td>
+</tr>
+<tr>
+  <td>三年</td>
+  <td>1288</td>
+  <td>0.1789</td>
+</tr>
+<tr>
+  <td rowspan="6">Platinum</td>
+  <td rowspan="6">300</td>
+  <td>每月</td>
+  <td>58</td>
+  <td>0.1933</td>
+</tr>
+<tr>
+  <td>每季</td>
+  <td>172</td>
+  <td>0.1911</td>
+</tr>
+<tr>
+  <td>半年</td>
+  <td>330</td>
+  <td>0.1833</td>
+</tr>
+<tr>
+  <td>每年</td>
+  <td>588</td>
+  <td>0.1633</td>
+</tr>
+<tr>
+  <td>两年</td>
+  <td>1108</td>
+  <td>0.1539</td>
+</tr>
+<tr>
+  <td>三年</td>
+  <td>1688</td>
+  <td>0.1563</td>
+</tr>
+<tr>
+  <td rowspan="2">Team</td>
+  <td rowspan="2">不限量</td>
+  <td>每季</td>
+  <td>3699</td>
+  <td rowspan="2">NAN</td>
+</tr>
+<tr>
+  <td>每年</td>
+  <td>11888</td>
+</tr>
+</table>
+
+#### 弹性套餐（固定流量）
+
+| 弹性套餐   | 总流量 | 有效期 | 线路 | 价格(元) | 折合每 G 价格 |
+| ---------- | ------ | ------ | ---- | -------- | ------------- |
+| 基础流量包 | 30G    | 365 天 | 15+  | 45       | 1.5 元/G      |
+| 飞享流量包 | 120G   | 365 天 | 25+  | 120      | 1 元/G        |
+| 自由流量包 | 200G   | 365 天 | 25+  | 160      | 0.8 元/G      |
+
+#### 企业定制套餐
+
+- 标准单线 + 高级单线接入点
+- 100Mbps~500Mbps 速率保障
+- 持 TCP 先进加速技术
+- 支持多种扩展连接协议
+- 可选流量范围：3TiB
+- 支持级别：标准支持 + 有限商业支持
+- 支持响应：8 小时（工作时间）
+
+| 数据中心分布   | 每月价格(元) | 每年价格(元) |
+| -------------- | ------------ | ------------ |
+| 香港数据中心   | 2180         | 22300        |
+| 美国数据中心   | 1280         | 20800        |
+| 日本数据中心   | 2080         | 20300        |
+| 新加坡数据中心 | 1280         | 14800        |
+| 德国数据中心   | 1280         | 14800        |
+| 英国数据中心   | 1280         | 14800        |
+
+### （四）其他说明
+
+- [BoomCloud Wiki Center](https://boomcloud-hk.github.io/wiki/#/)，提供 BoomCloud 服务相关教程指引及进阶教程
+- 售后 BoomCloud 售后仅支持服务单，因为这能最直白看到你的账号及套餐使用情况，更快的帮助寻找问题所在
+- 服务单服务时间介绍
+
+  | 周期     | 响应时间  | 其他              |
+  | -------- | --------- | ----------------- |
+  | 工作日   | 8 小时内  | Telegram 紧急反馈 |
+  | 节假日   | 48 小时内 | Telegram 紧急反馈 |
+  | AFF 提现 | 24 小时内 | 工单跟进          |
+
+- BoomCloud 售后服务单仅在网站个人中心后台的服务单回复，邮件仅作为提醒作用，直接回复无效。
 
 ---
 

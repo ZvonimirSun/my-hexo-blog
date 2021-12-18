@@ -52,12 +52,6 @@ permalink: /page/speed-test-collection/
 
 ![](https://img.iszy.xyz/20210112210447.png)
 
-## V2Club
-
-[官网传送门](https://url.iszy.xyz/lanan)
-
-![](https://img.iszy.xyz/20201216180421.jpg)
-
 ## 闲鱼网络
 
 [官网传送门](https://url.iszy.xyz/dinastio)
