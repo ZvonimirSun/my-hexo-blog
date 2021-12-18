@@ -36,17 +36,17 @@ permalink: /page/bgfw/
 
 ## 目录
 
-| 机场名称（点击了解更多）                    | 类别                  | 关键词                           | 操作                                                                                                                                                  |
-| ------------------------------------------- | --------------------- | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [FreeWhale 自由鲸 ⭐](/page/freewhale/)     | SSR(隧道、专线)/V2Ray | 性价比高，超多线路，稳定老站     | [官网传送门](https://t.xinjie.eu.org/iszy) [测速](https://www.iszy.cc/page/speed-test-collection/#FreeWhale-%E8%87%AA%E7%94%B1%E9%B2%B8)              |
-| [CMYNetwork 红莓网络](/page/cmynetwork/)    | SSR(专线)/Trojan      | 稳定平价，超多专线，小众地区线路 | [官网传送门](https://url.iszy.xyz/cmynetwork) [测速](https://www.iszy.cc/page/speed-test-collection/#CMYNetwork-%E7%BA%A2%E8%8E%93%E7%BD%91%E7%BB%9C) |
-| [MEET](#三、MEET)                           | SSR                   | 专注按量付费，高速稳定           | [官网传送门](https://url.iszy.xyz/fspeed) [测速](https://www.iszy.cc/page/speed-test-collection/#MEET)                                                |
-| [DuangCloud](#四、DuangCloud)               | SS(全专线)            | 平价灵活                         | [官网传送门](https://url.iszy.xyz/duangcloud) [测速](https://www.iszy.cc/page/speed-test-collection/#DuangCloud)                                      |
-| [ByWave](#五、ByWave)                       | V2Ray                 | 高质高端，服务稳定               | [官网传送门](https://url.iszy.xyz/bywave) [测速](https://www.iszy.cc/page/speed-test-collection/#ByWave)                                              |
-| [Blinkload](#六、Blinkload)                 | SS(全专线)            | 稳定全能，超多专线               | [官网传送门](https://url.iszy.xyz/blinkload) [测速](https://www.iszy.cc/page/speed-test-collection/#Blinkload)                                        |
-| [闲鱼网络](#七、闲鱼网络)(皇朝网络)         | SS 隧道               | 性价比新站                       | [官网传送门](https://url.iszy.xyz/dinastio) [测速](https://www.iszy.cc/page/speed-test-collection/#%E9%97%B2%E9%B1%BC%E7%BD%91%E7%BB%9C)              |
-| [Shuttle](#八、Shuttle)                     | V2ray                 | 平价新站，另含超多小众地区线路   | [官网传送门](https://url.iszy.xyz/shuttle) [测速](https://www.iszy.cc/page/speed-test-collection/#Shuttle)                                            |
-| [BoomCloud](#九、BoomCloud)【官方长期优惠】 | V2ray/SSR/SS          | 多年老站，附赠丰富               | [官网传送门](https://url.iszy.xyz/boomcloud)                                                                                                          |
+| 机场名称（点击了解更多）                    | 类别                  | 关键词                           | 操作                                                                                                                                                    |
+| ------------------------------------------- | --------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [FreeWhale 自由鲸 ⭐](/page/freewhale/)     | SSR(隧道、专线)/V2Ray | 性价比高，超多线路，稳定老站     | [官网传送门](https://t.xinjie.eu.org/iszy) / [测速](https://www.iszy.cc/page/speed-test-collection/#FreeWhale-%E8%87%AA%E7%94%B1%E9%B2%B8)              |
+| [CMYNetwork 红莓网络](/page/cmynetwork/)    | SSR(专线)/Trojan      | 稳定平价，超多专线，小众地区线路 | [官网传送门](https://url.iszy.xyz/cmynetwork) / [测速](https://www.iszy.cc/page/speed-test-collection/#CMYNetwork-%E7%BA%A2%E8%8E%93%E7%BD%91%E7%BB%9C) |
+| [MEET](#三、MEET)                           | SSR                   | 专注按量付费，高速稳定           | [官网传送门](https://url.iszy.xyz/fspeed) / [测速](https://www.iszy.cc/page/speed-test-collection/#MEET)                                                |
+| [DuangCloud](#四、DuangCloud)               | SS(全专线)            | 平价灵活                         | [官网传送门](https://url.iszy.xyz/duangcloud) / [测速](https://www.iszy.cc/page/speed-test-collection/#DuangCloud)                                      |
+| [ByWave](#五、ByWave)                       | V2Ray                 | 高质高端，服务稳定               | [官网传送门](https://url.iszy.xyz/bywave) / [测速](https://www.iszy.cc/page/speed-test-collection/#ByWave)                                              |
+| [Blinkload](#六、Blinkload)                 | SS(全专线)            | 稳定全能，超多专线               | [官网传送门](https://url.iszy.xyz/blinkload) / [测速](https://www.iszy.cc/page/speed-test-collection/#Blinkload)                                        |
+| [闲鱼网络](#七、闲鱼网络)(皇朝网络)         | SS 隧道               | 性价比新站                       | [官网传送门](https://url.iszy.xyz/dinastio) / [测速](https://www.iszy.cc/page/speed-test-collection/#%E9%97%B2%E9%B1%BC%E7%BD%91%E7%BB%9C)              |
+| [Shuttle](#八、Shuttle)                     | V2ray                 | 平价新站，另含超多小众地区线路   | [官网传送门](https://url.iszy.xyz/shuttle) / [测速](https://www.iszy.cc/page/speed-test-collection/#Shuttle)                                            |
+| [BoomCloud](#九、BoomCloud)【官方长期优惠】 | V2ray/SSR/SS          | 多年老站，附赠丰富               | [官网传送门](https://url.iszy.xyz/boomcloud)                                                                                                            |
 
 > 本页机场均在上次网络大波动中提供了稳定的服务，还会持续观察未来表现
 
