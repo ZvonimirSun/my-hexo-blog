@@ -11,6 +11,8 @@ tags:
 mathjax: true
 ---
 
+> 原文链接: [低微漏洞处理办法记录](https://www.cnblogs.com/lsdb/p/8204578.html) —— 诸子流
+
 <!--more-->
 
 1. 允许 Traceroute 探测
