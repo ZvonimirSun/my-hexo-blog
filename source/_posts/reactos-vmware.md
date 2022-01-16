@@ -19,7 +19,7 @@ ReactOS 是一个适用于 x86/x64 平台的免费、开源的操作系统暨项
 
 前往 ReactOS 官网[下载系统镜像](https://www.reactos.org/download)。
 
-![](https://img.iszy.xyz/20190318215607.png)
+![](https://img.iszy.xyz/20190318215607.png?x-oss-process=style/big)
 
 将会得到一个 zip 压缩包，解压后是 ReactOS 的安装镜像。
 
@@ -69,23 +69,23 @@ ReactOS 是一个适用于 x86/x64 平台的免费、开源的操作系统暨项
 
 有许多语言可供选择，在这里我选择`Chinese (RPC)`，点击回车。
 
-![](https://img.iszy.xyz/20190318215752.png)
+![](https://img.iszy.xyz/20190318215752.png?x-oss-process=style/big)
 
 #### 调整屏幕分辨率
 
 一路回车到如下界面，可以调整屏幕分辨率，若不需要，回车即可。
 
-![](https://img.iszy.xyz/20190318215803.png)
+![](https://img.iszy.xyz/20190318215803.png?x-oss-process=style/big)
 
 在此，我调整了分辨率为`1280x1024x32`。
 
-![](https://img.iszy.xyz/20190318215814.png)
+![](https://img.iszy.xyz/20190318215814.png?x-oss-process=style/big)
 
 #### 安装
 
 一路回车进行安装，到如下界面。在虚拟机右下角断开 CD 连接后回车重启。
 
-![](https://img.iszy.xyz/20190318215825.png)
+![](https://img.iszy.xyz/20190318215825.png?x-oss-process=style/big)
 
 ## 设置
 

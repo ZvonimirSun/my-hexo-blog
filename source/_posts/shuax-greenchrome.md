@@ -91,7 +91,7 @@ GreenChrome 插件直接下载地址：[点击下载](https://shuax.com/gc)
 
 ### 设置界面
 
-![](https://img.iszy.xyz/20190318220157.png)
+![](https://img.iszy.xyz/20190318220157.png?x-oss-process=style/big)
 
 ### 我的设置
 

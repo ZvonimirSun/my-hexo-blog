@@ -20,7 +20,7 @@ permalink: /page/speed-test-collection/
 
 2021-12-17
 
-![SSR线路](https://img.iszy.xyz/1639673724521.png)
+![SSR线路](https://img.iszy.xyz/1639673724521.png?x-oss-process=style/big)
 
 ## CMYNetwork 红莓网络
 
@@ -28,31 +28,31 @@ permalink: /page/speed-test-collection/
 
 2021-12-18
 
-![](https://img.iszy.xyz/1639801389357.png)
+![](https://img.iszy.xyz/1639801389357.png?x-oss-process=style/big)
 
 ## MEET
 
 [官网传送门](https://url.iszy.xyz/fspeed)
 
-![](https://img.iszy.xyz/20200815155833.png)
+![](https://img.iszy.xyz/20200815155833.png?x-oss-process=style/big)
 
 ## DuangCloud
 
 [官网传送门](https://url.iszy.xyz/duangcloud)
 
-![](https://img.iszy.xyz/20200502214205.png)
+![](https://img.iszy.xyz/20200502214205.png?x-oss-process=style/big)
 
 ## ByWave
 
 [官网传送门](https://url.iszy.xyz/bywave)
 
-![](https://img.iszy.xyz/20200815171242.png)
+![](https://img.iszy.xyz/20200815171242.png?x-oss-process=style/big)
 
 ## Blinkload
 
 [官网传送门](https://url.iszy.xyz/blinkload)
 
-![](https://img.iszy.xyz/20210112210447.png)
+![](https://img.iszy.xyz/20210112210447.png?x-oss-process=style/big)
 
 ## 闲鱼网络
 
@@ -60,10 +60,10 @@ permalink: /page/speed-test-collection/
 
 2021-12-18
 
-![](https://img.iszy.xyz/1639797582174.png)
+![](https://img.iszy.xyz/1639797582174.png?x-oss-process=style/big)
 
 ## Shuttle
 
 [官网传送门](https://url.iszy.xyz/shuttle)
 
-![](https://img.iszy.xyz/20210409220158.png)
+![](https://img.iszy.xyz/20210409220158.png?x-oss-process=style/big)

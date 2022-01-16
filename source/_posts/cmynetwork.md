@@ -34,7 +34,7 @@ permalink: /page/cmynetwork/
 
 <!--more-->
 
-![](https://img.iszy.xyz/20210411191903.png)
+![](https://img.iszy.xyz/20210411191903.png?x-oss-process=style/big)
 
 ## 前言
 

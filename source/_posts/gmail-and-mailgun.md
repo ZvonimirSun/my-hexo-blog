@@ -31,11 +31,11 @@ copyright: false
 
 首先，我们要去 mailgun.com 注册一个账号。注册账号并验证邮箱后，可以登录到后台，然后在 Domains 选项卡中点击 Add New Domain。
 
-![](https://img.iszy.xyz/20190318213148.png)
+![](https://img.iszy.xyz/20190318213148.png?x-oss-process=style/big)
 
 输入域名 (比如 example.com) 之后点击下一步，会提示修改 DNS 记录。请移步你的域名 DNS 解析商，添加好对应的 DNS 记录。相关的记录一共有 5 条，其中 2 条 TXT 记录，2 条 MX 记录，1 条 CNAME 记录。添加好后点击页面底部的 Continue to Domain Overview，进入管理控制台。
 
-![](https://img.iszy.xyz/20190318213158.png)
+![](https://img.iszy.xyz/20190318213158.png?x-oss-process=style/big)
 
 在控制台中，顶部有提示，DNS 需要 24~48 小时生效。如果确认自己更改的 DNS 已经生效了，就可以点击控制台中的 Check DNS Records Now，如上图。如果 DNS 设置无误，那么这个域名就可以开始使用了，我们可以看到此时域名的状态已经变成了绿色的 Active。
 
@@ -45,15 +45,15 @@ copyright: false
 
 点击顶部 Routes 选项卡，然后点击 Create Route，如下图所示。
 
-![](https://img.iszy.xyz/20190318213212.png)
+![](https://img.iszy.xyz/20190318213212.png?x-oss-process=style/big)
 
 在 Create New Route 界面中，Expression Type 选择 Catch All，Actions 勾选 Forward 并输入你的 GMail 邮箱地址，其他所有选项保持默认即可，最后点击下面的 Create Route。
 
-![](https://img.iszy.xyz/20190318213224.png)
+![](https://img.iszy.xyz/20190318213224.png?x-oss-process=style/big)
 
 这时，我们回到 Domains 列表中点击我们自己的域名，应该能看到如下图的页面，其中包含了 SMTP 服务器和密码，以及 API 等内容。我们只需要知道服务器密码即可。
 
-![](https://img.iszy.xyz/20190318213235.png)
+![](https://img.iszy.xyz/20190318213235.png?x-oss-process=style/big)
 
 至此，Mailgun 的设置完毕，我们需要登录 GMail，设置收发信。
 
@@ -63,11 +63,11 @@ copyright: false
 
 登录你的个人 Gmail 后台，在 Settings 里面找到 Accounts and Import，点击 Add another email address，如下图。
 
-![](https://img.iszy.xyz/20190318213248.png)
+![](https://img.iszy.xyz/20190318213248.png?x-oss-process=style/big)
 
 在弹出的小窗口中，输入姓名和你要使用的域名邮箱，这里以 admin@example.com 为例。勾选 Treat as an alias, 然后点击 Next step。在服务器配置的页面输入我们刚才的服务器信息、SMTP 用户名和密码。端口为 587，加密方式选择 TLS，如下图所示。填好后点击 Add account。
 
-![](https://img.iszy.xyz/20190318213257.png)
+![](https://img.iszy.xyz/20190318213257.png?x-oss-process=style/big)
 
 如果用户名和密码输入无误，GMail 会向你的 admin@example.com 邮箱发送一封验证邮件，而此时，这封邮件已经被转发至你的 GMail 邮箱了，所以只要点击收到的邮件中的验证链接就大功告成了。
 

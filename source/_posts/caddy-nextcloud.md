@@ -29,7 +29,7 @@ keywords: NextCloud,Caddy
 
 Caddy Web Server 会自动申请 ssl 证书，全站 https，但是需要提前将域名解析到所在 VPS，否则 Caddy 会启动失败。不需要 ssl 的或想要 IP 访问的请自行调整 Caddy 配置。
 
-![](https://img.iszy.xyz/20190318212135.png)
+![](https://img.iszy.xyz/20190318212135.png?x-oss-process=style/big)
 
 ## 环境配置
 

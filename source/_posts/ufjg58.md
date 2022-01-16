@@ -31,11 +31,11 @@ updated: 2020-05-05 10:18:02
 
 我们要用 Github 做图床，首先建个 Repo 应该不难理解吧，这个就是你用来存储图片的仓库了。[点击前往](https://github.com/new)
 
-![](https://img.iszy.xyz/20200505113214.png)
+![](https://img.iszy.xyz/20200505113214.png?x-oss-process=style/big)
 
 点击 Create repository，这个仓库就建好了。
 
-![](https://img.iszy.xyz/20200505113547.png)
+![](https://img.iszy.xyz/20200505113547.png?x-oss-process=style/big)
 
 比如我这里建立了一个名为 img-hosting 的仓库作为示例，链接形如
 

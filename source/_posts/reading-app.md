@@ -21,7 +21,7 @@ keywords: 小说,免费,追书神器,阅读,无广告,安卓,开源
 
 ## 应用界面
 
-![](https://img.iszy.xyz/20190318220006.png)
+![](https://img.iszy.xyz/20190318220006.png?x-oss-process=style/big)
 
 ## 应用特点
 

@@ -34,7 +34,7 @@ permalink: /page/freewhale/
 
 <!--more-->
 
-![](https://img.iszy.xyz/20210905234122.png)
+![](https://img.iszy.xyz/20210905234122.png?x-oss-process=style/big)
 
 ## 前言
 

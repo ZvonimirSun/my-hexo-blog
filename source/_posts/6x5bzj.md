@@ -36,7 +36,7 @@ This limit can be set by changing the [index.max_result_window] index level sett
 
    在 5.x 版本以上的 ES 中已经不再支持。
 
-   ![](https://img.iszy.xyz/20210226173324.png)
+   ![](https://img.iszy.xyz/20210226173324.png?x-oss-process=style/big)
 
 2. 通过接口修改索引的配置(推荐)
 

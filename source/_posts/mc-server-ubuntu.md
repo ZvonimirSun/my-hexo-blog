@@ -57,7 +57,7 @@ java -Xmx1024M -Xms1024M -jar server.jar nogui
 
 如图所示，首次运行需要同意 EULA 协议。
 
-![](https://img.iszy.xyz/20190318214212.png)
+![](https://img.iszy.xyz/20190318214212.png?x-oss-process=style/big)
 
 下面编辑生成的`eula.txt`。
 
@@ -67,7 +67,7 @@ vi eula.txt
 
 如图所示，将`eula=false`改为`eula=true`。
 
-![](https://img.iszy.xyz/20190318214227.png)
+![](https://img.iszy.xyz/20190318214227.png?x-oss-process=style/big)
 
 再次启动，`-Xmx`和`-Xms`可以调整内存大小，请自行根据情况调整，内存太少将会卡顿严重。
 
@@ -77,7 +77,7 @@ java -Xmx1024M -Xms1024M -jar server.jar nogui
 
 如图所示，你的服务器已经启动成功，注意打开服务器端口。
 
-![](https://img.iszy.xyz/20190318214241.png)
+![](https://img.iszy.xyz/20190318214241.png?x-oss-process=style/big)
 
 按`Ctrl+C`可以中止服务器
 
@@ -135,7 +135,7 @@ service minecraft stop #停止 Minecraft 服务
 service minecraft status # 查看 Minecraft 服务运行状态
 ```
 
-![](https://img.iszy.xyz/20190318214300.png)
+![](https://img.iszy.xyz/20190318214300.png?x-oss-process=style/big)
 
 ## 后话
 

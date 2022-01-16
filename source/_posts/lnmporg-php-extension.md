@@ -69,7 +69,7 @@ cd zip
 /usr/local/php/bin/phpize
 ```
 
-![](https://img.iszy.xyz/20190318204059.png)
+![](https://img.iszy.xyz/20190318204059.png?x-oss-process=style/big)
 
 #### 执行 configure
 

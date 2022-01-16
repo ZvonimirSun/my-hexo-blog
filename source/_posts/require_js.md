@@ -20,7 +20,7 @@ copyright: false
 
 我采用的是一个非常流行的库[require.js](http://requirejs.org/)。
 
-![](https://img.iszy.xyz/20190814101519.png?x-oss-process=style/mystyle)
+![](https://img.iszy.xyz/20190814101519.png)
 
 ## 为什么要用 require.js？
 
