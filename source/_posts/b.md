@@ -1,5 +1,5 @@
 ---
-title: 解决使用@vue/cli-plugin-babel导致动态import进行代码拆分失败问题
+title: 解决使用@vue/cli-plugin-babel导致动态import代码拆分失败问题
 date: 2022-01-18 14:47:53
 updated: 2022-01-18 14:47:53
 categories:
