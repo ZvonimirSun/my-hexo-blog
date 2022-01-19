@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)">
+<meta name="generator" content="Hexo 5.4.0">
+
+<link rel="preconnect" href="https://fonts.iszy.xyz" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="google-site-verification" content="NVbOnZWipX7gWLG4NVJzJWVD16F6okyUB1NDN6mNoIo">
+  <meta name="msvalidate.01" content="10AA475F381BF9E4C280F1E2E0B3F280">
+  <meta name="yandex-verification" content="3ec99cb3451ef771">
+  <meta name="baidu-site-verification" content="tV7s6Tu88n">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.iszy.xyz/css?family=EB+Garamond:300,300italic,400,400italic,700,700italic%7C'Noto+Serif+SC':300,300italic,400,400italic,700,700italic%7CCinzel+Decorative:300,300italic,400,400italic,700,700italic%7CJetBrains+Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.iszy.cc","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.9.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.9.0/source/js/config.min.js"></script>
+<meta name="description" content="在此记录在 Ubuntu 16.04 搭建 Minecraft 服务器 1.13 的全过程。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在Ubuntu 16.04搭建Minecraft服务器1.13">
+<meta property="og:url" content="https://www.iszy.cc/posts/mc-server-ubuntu/">
+<meta property="og:site_name" content="随遇而安">
+<meta property="og:description" content="在此记录在 Ubuntu 16.04 搭建 Minecraft 服务器 1.13 的全过程。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img.iszy.xyz/20190318214212.png?x-oss-process=style/big">
+<meta property="og:image" content="https://img.iszy.xyz/20190318214227.png?x-oss-process=style/big">
+<meta property="og:image" content="https://img.iszy.xyz/20190318214241.png?x-oss-process=style/big">
+<meta property="og:image" content="https://img.iszy.xyz/20190318214300.png?x-oss-process=style/big">
+<meta property="article:published_time" content="2018-08-05T12:47:10.000Z">
+<meta property="article:modified_time" content="2018-08-05T12:47:10.000Z">
+<meta property="article:author" content="Dirge">
+<meta property="article:tag" content="Ubuntu">
+<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="Minecraft">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img.iszy.xyz/20190318214212.png?x-oss-process=style/big">
+
+
+<link rel="canonical" href="https://www.iszy.cc/posts/mc-server-ubuntu/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.iszy.cc/posts/mc-server-ubuntu/","path":"posts/mc-server-ubuntu/","title":"在Ubuntu 16.04搭建Minecraft服务器1.13"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>在Ubuntu 16.04搭建Minecraft服务器1.13 | 随遇而安</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E60YKKHF8Y"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-E60YKKHF8Y","only_pageview":false}</script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.9.0/source/js/third-party/analytics/google-analytics.min.js"></script>
+
+
+
+<link rel="dns-prefetch" href="https://wl.iszy.xyz">
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="随遇而安" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">随遇而安</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">在自由的空气中漂浮</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">153</span></a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">16</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">109</span></a></li>
+        <li class="menu-item menu-item-友链&留言"><a href="/links/" rel="section"><i class="fa fa-comments fa-fw"></i>友链&留言</a></li>
+        <li class="menu-item menu-item-优质机场推荐"><a href="/page/bgfw/" rel="section"><i class="fa fa-globe-asia fa-fw"></i>优质机场推荐</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-Java-%E8%BF%90%E8%A1%8C%E5%BA%93"><span class="nav-number">1.</span> <span class="nav-text">安装 Java 运行库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E6%96%B0%E7%94%A8%E6%88%B7%E5%92%8C%E7%BB%84"><span class="nav-number">2.</span> <span class="nav-text">创建新用户和组</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E7%94%A8%E6%88%B7%E5%92%8C%E7%BB%84"><span class="nav-number">2.1.</span> <span class="nav-text">创建用户和组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%99%BB%E5%BD%95%E5%88%B0%E7%94%A8%E6%88%B7-minecraft"><span class="nav-number">2.2.</span> <span class="nav-text">登录到用户 minecraft</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%E5%B9%B6%E5%90%AF%E5%8A%A8-Minecraft"><span class="nav-number">3.</span> <span class="nav-text">下载并启动 Minecraft</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD-Minecraft-%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number">3.1.</span> <span class="nav-text">下载 Minecraft 服务器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%AF%E5%8A%A8-Minecraft"><span class="nav-number">3.2.</span> <span class="nav-text">启动 Minecraft</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%93%E5%BC%80%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E5%8F%A3"><span class="nav-number">3.3.</span> <span class="nav-text">打开服务器端口</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%A8%E5%86%8C%E4%B8%BA-service"><span class="nav-number">4.</span> <span class="nav-text">注册为 service</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%88%E9%80%80%E5%87%BA-minecraft-%E7%94%A8%E6%88%B7"><span class="nav-number">4.1.</span> <span class="nav-text">先退出 minecraft 用户</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA-systemd-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-number">4.2.</span> <span class="nav-text">创建 systemd 配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%AF%E5%8A%A8-Minecraft-2"><span class="nav-number">4.3.</span> <span class="nav-text">启动 Minecraft</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%8E%E8%AF%9D"><span class="nav-number">5.</span> <span class="nav-text">后话</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Dirge"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Dirge</p>
+  <div class="site-description" itemprop="description">生活吐槽 & 学习记录</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">109</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">153</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></span>
+  </div>
+
+
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.iszy.cc/posts/mc-server-ubuntu/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Dirge">
+      <meta itemprop="description" content="生活吐槽 & 学习记录">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="随遇而安">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          在Ubuntu 16.04搭建Minecraft服务器1.13<span class="exturl post-edit-link" data-url="aHR0cHM6Ly9naXRodWIuY29tL1p2b25pbWlyU3VuL215LWhleG8tYmxvZy90cmVlL21haW4vc291cmNlL19wb3N0cy9tYy1zZXJ2ZXItdWJ1bnR1Lm1k" title="编辑"><i class="fa fa-pen-nib"></i></span>
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2018-08-05 12:47:10" itemprop="dateCreated datePublished" datetime="2018-08-05T12:47:10+00:00">2018-08-05</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%BA%94%E7%94%A8%E9%83%A8%E7%BD%B2/" itemprop="url" rel="index"><span itemprop="name">应用部署</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/posts/mc-server-ubuntu/#waline-comments" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" id="/posts/mc-server-ubuntu/" data-xid="/posts/mc-server-ubuntu/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span id="/posts/mc-server-ubuntu/" class="post-meta-item leancloud_visitors" data-flag-title="在Ubuntu 16.04搭建Minecraft服务器1.13" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.3k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>在此记录在 Ubuntu 16.04 搭建 Minecraft 服务器 1.13 的全过程。</p>
+<span id="more"></span>
+<h2 id="安装-Java-运行库">安装 Java 运行库</h2>
+<p>在前一篇文章——<a href="https://www.iszy.cc/2018/08/05/ubuntu-oracle-java/">在 Ubuntu 16.04 中安装 Oracle Java 8</a>中已经有了详细讲述。</p>
+<h2 id="创建新用户和组">创建新用户和组</h2>
+<h3 id="创建用户和组">创建用户和组</h3>
+<p>创建用户和组 minecraft，用以运行 minecraft 服务端</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo adduser minecraft</span><br><span class="line">sudo groupadd minecraft</span><br><span class="line">sudo usermod -a -G minecraft minecraft</span><br></pre></td></tr></table></figure>
+<h3 id="登录到用户-minecraft">登录到用户 minecraft</h3>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">su minecraft</span><br><span class="line">cd</span><br></pre></td></tr></table></figure>
+<h2 id="下载并启动-Minecraft">下载并启动 Minecraft</h2>
+<h3 id="下载-Minecraft-服务器">下载 Minecraft 服务器</h3>
+<p>官方地址：<span class="exturl" data-url="aHR0cHM6Ly9taW5lY3JhZnQubmV0L3poLWhhbnMvZG93bmxvYWQvc2VydmVy">下载 MINECRAFT ：JAVA 版的服务器<i class="fa fa-external-link-alt"></i></span></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget https://launcher.mojang.com/mc/game/1.13/server/d0caafb8438ebd206f99930cfaecfa6c9a13dca0/server.jar</span><br><span class="line">chmod a+x server.jar</span><br></pre></td></tr></table></figure>
+<h3 id="启动-Minecraft">启动 Minecraft</h3>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -Xmx1024M -Xms1024M -jar server.jar nogui</span><br></pre></td></tr></table></figure>
+<p>如图所示，首次运行需要同意 EULA 协议。</p>
+<p><img data-src="https://img.iszy.xyz/20190318214212.png?x-oss-process=style/big" alt=""></p>
+<p>下面编辑生成的<code>eula.txt</code>。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi eula.txt</span><br></pre></td></tr></table></figure>
+<p>如图所示，将<code>eula=false</code>改为<code>eula=true</code>。</p>
+<p><img data-src="https://img.iszy.xyz/20190318214227.png?x-oss-process=style/big" alt=""></p>
+<p>再次启动，<code>-Xmx</code>和<code>-Xms</code>可以调整内存大小，请自行根据情况调整，内存太少将会卡顿严重。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -Xmx1024M -Xms1024M -jar server.jar nogui</span><br></pre></td></tr></table></figure>
+<p>如图所示，你的服务器已经启动成功，注意打开服务器端口。</p>
+<p><img data-src="https://img.iszy.xyz/20190318214241.png?x-oss-process=style/big" alt=""></p>
+<p>按<code>Ctrl+C</code>可以中止服务器</p>
+<h3 id="打开服务器端口">打开服务器端口</h3>
+<p>使用如下语句打开服务器端口。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">iptables -A INPUT -p tcp -m tcp --dport 25565 -j ACCEPT</span><br></pre></td></tr></table></figure>
+<h2 id="注册为-service">注册为 service</h2>
+<h3 id="先退出-minecraft-用户">先退出 minecraft 用户</h3>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">exit</span><br></pre></td></tr></table></figure>
+<h3 id="创建-systemd-配置文件">创建 systemd 配置文件</h3>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vi /etc/systemd/system/minecraft.service</span><br></pre></td></tr></table></figure>
+<p>写入如下内容</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description=start and stop the minecraft-server</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line">WorkingDirectory=/home/minecraft</span><br><span class="line">User=minecraft</span><br><span class="line">Group=minecraft</span><br><span class="line">Restart=on-failure</span><br><span class="line">RestartSec=20 5</span><br><span class="line">ExecStart=/usr/bin/java -Xms1024M -Xmx1024M -jar server.jar nogui</span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br><span class="line">Alias=minecraft.service</span><br></pre></td></tr></table></figure>
+<h3 id="启动-Minecraft-2">启动 Minecraft</h3>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service minecraft start</span><br></pre></td></tr></table></figure>
+<p>还可以使用如下语句</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">service minecraft stop #停止 Minecraft 服务</span><br><span class="line">service minecraft status # 查看 Minecraft 服务运行状态</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://img.iszy.xyz/20190318214300.png?x-oss-process=style/big" alt=""></p>
+<h2 id="后话">后话</h2>
+<p>至此，已经成功在 Ubuntu 16.04 搭建了 Minecraft 服务器 1.13，可以尽情玩耍了。当然，需要获得更好的体验，还有更多调整需要进行。</p>
+
+    </div>
+
+    
+    
+    
+      
+  <div class="popular-posts-header">相关文章</div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/posts/WSL/" rel="bookmark">体验 Windows 10 内置 Linux 子系统</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/posts/ubuntu-php7dot2/" rel="bookmark">在Ubuntu 16.04中安装php7.2</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/posts/update-kernel-enable-bbr/" rel="bookmark">用标准方式升级Ubuntu内核并启用BBR</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/posts/change-sources/" rel="bookmark">Ubuntu 16.04 更改软件源</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/posts/docker-asf/" rel="bookmark">通过Docker快速部署ASF(ArchiSteamFarm)挂卡</a></div>
+    </li>
+  </ul>
+
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Dirge
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.iszy.cc/posts/mc-server-ubuntu/" title="在Ubuntu 16.04搭建Minecraft服务器1.13">https://www.iszy.cc/posts/mc-server-ubuntu/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/Ubuntu/" rel="tag"><i class="fa fa-tag"></i> Ubuntu</a>
+              <a href="/tags/Linux/" rel="tag"><i class="fa fa-tag"></i> Linux</a>
+              <a href="/tags/Minecraft/" rel="tag"><i class="fa fa-tag"></i> Minecraft</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/ubuntu-oracle-java/" rel="prev" title="在Ubuntu 16.04中安装Oracle Java 8">
+                  <i class="fa fa-chevron-left"></i> 在Ubuntu 16.04中安装Oracle Java 8
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/asf-steam/" rel="next" title="在Ubuntu 16.04环境下使用ASF(v3)实现云挂卡">
+                  在Ubuntu 16.04环境下使用ASF(v3)实现云挂卡 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="waline-comments"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2017 – 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Dirge</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">235k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">7:08</span>
+  </span>
+</div>
+  <div class="powered-by">由 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZw==">NexT.Gemini</span> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.9.0/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.9.0/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.9.0/source/js/next-boot.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.9.0/source/js/pjax.min.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.9.0/source/js/third-party/search/local-search.min.js"></script>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.9.0/source/js/third-party/fancybox.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.9.0/source/js/third-party/pace.min.js"></script>
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" integrity="sha256-9/mhQQwkpU5okPfM5l0v3LnP9xtc6JK8dKW0/WlGaUc=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/copy-tex.min.css" integrity="sha256-+oItviPaTmqjDhk4y4fLLUIMgRQYDV/ZyrRNvQiebWM=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/copy-tex.min.js","integrity":"sha256-etSqbSVF4+Lwe8MGk/Vanc1sR+mWv+qOG73fxWw9p94="}}</script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.9.0/source/js/third-party/math/katex.min.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":false,"delay":true,"timeout":3000,"priority":true,"url":"https://www.iszy.cc/posts/mc-server-ubuntu/"}</script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.9.0/source/js/third-party/quicklink.min.js"></script>
+<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-CN","enable":true,"serverURL":"https://wl.iszy.xyz","placeholder":"Just go go","avatar":null,"pageSize":10,"visitor":true,"comment_count":true,"requiredFields":[],"locale":{"placeholder":"本站支持匿名评论，无需登录~(●'◡'●)\n与文章无关的留言请前往本站留言板，谢谢配合~"},"meta":["nick","mail","link"],"requiredMeta":["nick","mail"],"libUrl":"https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js","dark":"auto","emoji":["https://cdn.jsdelivr.net/gh/zvonimirsun/emojis@1.0.2/bilibili-xhl"],"el":"#waline-comments","path":"/posts/mc-server-ubuntu/"}</script>
+<script>
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.waline.el).then(() => 
+    NexT.utils.getScript(CONFIG.waline.libUrl, { condition: window.Waline })
+  ).then(() => {
+    new Waline(CONFIG.waline);
+  });
+});
+</script>
+</body>
+</html>

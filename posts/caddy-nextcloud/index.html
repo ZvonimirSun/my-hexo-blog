@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)">
+<meta name="generator" content="Hexo 5.4.0">
+
+<link rel="preconnect" href="https://fonts.iszy.xyz" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="google-site-verification" content="NVbOnZWipX7gWLG4NVJzJWVD16F6okyUB1NDN6mNoIo">
+  <meta name="msvalidate.01" content="10AA475F381BF9E4C280F1E2E0B3F280">
+  <meta name="yandex-verification" content="3ec99cb3451ef771">
+  <meta name="baidu-site-verification" content="tV7s6Tu88n">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.iszy.xyz/css?family=EB+Garamond:300,300italic,400,400italic,700,700italic%7C'Noto+Serif+SC':300,300italic,400,400italic,700,700italic%7CCinzel+Decorative:300,300italic,400,400italic,700,700italic%7CJetBrains+Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.iszy.cc","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.9.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.9.0/source/js/config.min.js"></script>
+<meta name="description" content="今天准备做一个完整的采用 Caddy Web Server 部署 NextCloud 的教程。本教程除 Web 服务器配置，部分参考橙叶博客文章——VPS 快速完美部署 ownCloud&#x2F;Nextcloud 全过程。有什么问题，欢迎在评论区留言或者联系我，我一定会及时回复的。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VPS 使用 Caddy 快速搭建 Nextcloud 全过程">
+<meta property="og:url" content="https://www.iszy.cc/posts/caddy-nextcloud/">
+<meta property="og:site_name" content="随遇而安">
+<meta property="og:description" content="今天准备做一个完整的采用 Caddy Web Server 部署 NextCloud 的教程。本教程除 Web 服务器配置，部分参考橙叶博客文章——VPS 快速完美部署 ownCloud&#x2F;Nextcloud 全过程。有什么问题，欢迎在评论区留言或者联系我，我一定会及时回复的。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img.iszy.xyz/20190318212135.png?x-oss-process=style/big">
+<meta property="og:image" content="https://img.iszy.xyz/20190318212151.png">
+<meta property="article:published_time" content="2018-07-15T21:00:00.000Z">
+<meta property="article:modified_time" content="2018-07-15T21:00:00.000Z">
+<meta property="article:author" content="Dirge">
+<meta property="article:tag" content="Nextcloud">
+<meta property="article:tag" content="Caddy">
+<meta property="article:tag" content="文件管理">
+<meta property="article:tag" content="php">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img.iszy.xyz/20190318212135.png?x-oss-process=style/big">
+
+
+<link rel="canonical" href="https://www.iszy.cc/posts/caddy-nextcloud/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.iszy.cc/posts/caddy-nextcloud/","path":"posts/caddy-nextcloud/","title":"VPS 使用 Caddy 快速搭建 Nextcloud 全过程"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>VPS 使用 Caddy 快速搭建 Nextcloud 全过程 | 随遇而安</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E60YKKHF8Y"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-E60YKKHF8Y","only_pageview":false}</script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.9.0/source/js/third-party/analytics/google-analytics.min.js"></script>
+
+
+
+<link rel="dns-prefetch" href="https://wl.iszy.xyz">
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="随遇而安" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">随遇而安</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">在自由的空气中漂浮</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">153</span></a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">16</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">109</span></a></li>
+        <li class="menu-item menu-item-友链&留言"><a href="/links/" rel="section"><i class="fa fa-comments fa-fw"></i>友链&留言</a></li>
+        <li class="menu-item menu-item-优质机场推荐"><a href="/page/bgfw/" rel="section"><i class="fa fa-globe-asia fa-fw"></i>优质机场推荐</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#VPS-%E5%8F%8A%E7%B3%BB%E7%BB%9F%E7%8E%AF%E5%A2%83"><span class="nav-number">1.</span> <span class="nav-text">VPS 及系统环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DNS-%E8%A7%A3%E6%9E%90"><span class="nav-number">2.</span> <span class="nav-text">DNS 解析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"><span class="nav-number">3.</span> <span class="nav-text">环境配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9B%B4%E6%96%B0%E8%BD%AF%E4%BB%B6%E6%BA%90"><span class="nav-number">3.1.</span> <span class="nav-text">更新软件源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-Caddy"><span class="nav-number">3.2.</span> <span class="nav-text">安装 Caddy</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E"><span class="nav-number">3.3.</span> <span class="nav-text">使用说明</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E5%B9%B6%E9%85%8D%E7%BD%AE-MySQL"><span class="nav-number">4.</span> <span class="nav-text">安装并配置 MySQL</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">4.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE"><span class="nav-number">4.2.</span> <span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-php7-0"><span class="nav-number">5.</span> <span class="nav-text">安装 php7.0</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E6%96%87%E4%BB%B6%E5%8F%8A%E7%BD%91%E7%AB%99%E7%9B%AE%E5%BD%95"><span class="nav-number">6.</span> <span class="nav-text">创建文件及网站目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-NextCloud"><span class="nav-number">7.</span> <span class="nav-text">安装 NextCloud</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD"><span class="nav-number">7.1.</span> <span class="nav-text">下载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE%E6%96%87%E4%BB%B6%E5%A4%B9%E6%9D%83%E9%99%90"><span class="nav-number">7.2.</span> <span class="nav-text">设置文件夹权限</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8C%82%E8%BD%BD%E8%85%BE%E8%AE%AF-COS-%E4%BD%9C%E4%B8%BA%E5%AD%98%E5%82%A8%E7%9B%98-%E9%80%89"><span class="nav-number">8.</span> <span class="nav-text">挂载腾讯 COS 作为存储盘(选)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-COSFS-%E5%B7%A5%E5%85%B7"><span class="nav-number">8.1.</span> <span class="nav-text">安装 COSFS 工具</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85"><span class="nav-number">8.1.1.</span> <span class="nav-text">环境安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%E6%BA%90%E7%A0%81"><span class="nav-number">8.1.2.</span> <span class="nav-text">下载源码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85"><span class="nav-number">8.1.3.</span> <span class="nav-text">编译安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-number">8.1.4.</span> <span class="nav-text">配置文件</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8C%82%E8%BD%BD"><span class="nav-number">8.2.</span> <span class="nav-text">挂载</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%90%E8%A1%8C%E5%B7%A5%E5%85%B7"><span class="nav-number">8.2.1.</span> <span class="nav-text">运行工具</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E5%BC%80%E6%9C%BA%E8%87%AA%E5%8A%A8%E6%8C%82%E8%BD%BD"><span class="nav-number">8.2.2.</span> <span class="nav-text">配置开机自动挂载</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%96%E8%BE%91-Caddy-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-number">9.</span> <span class="nav-text">编辑 Caddy 配置文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-2"><span class="nav-number">10.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9B%B4%E5%A4%9A%E9%97%AE%E9%A2%98"><span class="nav-number">11.</span> <span class="nav-text">更多问题</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Dirge"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Dirge</p>
+  <div class="site-description" itemprop="description">生活吐槽 & 学习记录</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">109</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">153</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></span>
+  </div>
+
+
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.iszy.cc/posts/caddy-nextcloud/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Dirge">
+      <meta itemprop="description" content="生活吐槽 & 学习记录">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="随遇而安">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          VPS 使用 Caddy 快速搭建 Nextcloud 全过程<span class="exturl post-edit-link" data-url="aHR0cHM6Ly9naXRodWIuY29tL1p2b25pbWlyU3VuL215LWhleG8tYmxvZy90cmVlL21haW4vc291cmNlL19wb3N0cy9jYWRkeS1uZXh0Y2xvdWQubWQ=" title="编辑"><i class="fa fa-pen-nib"></i></span>
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2018-07-15 21:00:00" itemprop="dateCreated datePublished" datetime="2018-07-15T21:00:00+00:00">2018-07-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%BA%94%E7%94%A8%E9%83%A8%E7%BD%B2/" itemprop="url" rel="index"><span itemprop="name">应用部署</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/posts/caddy-nextcloud/#waline-comments" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" id="/posts/caddy-nextcloud/" data-xid="/posts/caddy-nextcloud/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span id="/posts/caddy-nextcloud/" class="post-meta-item leancloud_visitors" data-flag-title="VPS 使用 Caddy 快速搭建 Nextcloud 全过程" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>6.6k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>12 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>今天准备做一个完整的采用 Caddy Web Server 部署 NextCloud 的教程。本教程除 Web 服务器配置，部分参考橙叶博客文章——<span class="exturl" data-url="aHR0cHM6Ly93d3cub3JnbGVhZi5jb20vMjIwMy5odG1s">VPS 快速完美部署 ownCloud/Nextcloud 全过程<i class="fa fa-external-link-alt"></i></span>。有什么问题，欢迎在评论区留言或者联系我，我一定会及时回复的。</p>
+<span id="more"></span>
+<h2 id="VPS-及系统环境">VPS 及系统环境</h2>
+<ul>
+<li>VPS：国内腾讯云的香港云主机</li>
+<li>系统：Ubuntu 16.04</li>
+</ul>
+<p>我采用的 VPS 是国内腾讯云的香港云主机，全世界范围内 ping 值都很低，按流量计费最大能开到 200M 带宽。毕竟是腾讯的，国内访问速度出奇的快。</p>
+<p>系统采用的是 Ubuntu 16.04，Debian 系的应该都能够一样实现吧。</p>
+<h2 id="DNS-解析">DNS 解析</h2>
+<p>Caddy Web Server 会自动申请 ssl 证书，全站 https，但是需要提前将域名解析到所在 VPS，否则 Caddy 会启动失败。不需要 ssl 的或想要 IP 访问的请自行调整 Caddy 配置。</p>
+<p><img data-src="https://img.iszy.xyz/20190318212135.png?x-oss-process=style/big" alt=""></p>
+<h2 id="环境配置">环境配置</h2>
+<p>ssh 登录 VPS 后，在 root 用户下继续执行下面的操作。</p>
+<h3 id="更新软件源">更新软件源</h3>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt update</span><br></pre></td></tr></table></figure>
+<h3 id="安装-Caddy">安装 Caddy</h3>
+<p>为节省时间，此处采用了 Toyo 大佬的一键脚本。详细页面参见：<span class="exturl" data-url="aHR0cHM6Ly9kb3ViLmlvL3NoZWxsLWpjMS8=">『原创』Go 语言 跨平台支持的极简 HTTP Server —— Caddy 一键安装脚本<i class="fa fa-external-link-alt"></i></span>。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">wget -N --no-check-certificate https://softs.loan/Bash/caddy_install.sh &amp;&amp; chmod +x caddy_install.sh &amp;&amp; bash caddy_install.sh install http.cgi,http.expires,http.filemanager,http.git,http.filter</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 如果上面这个脚本无法下载，尝试使用备用下载：</span></span><br><span class="line">wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/caddy_install.sh &amp;&amp; chmod +x caddy_install.sh &amp;&amp; bash caddy_install.sh install http.cgi,http.expires,http.filemanager,http.git,http.filter</span><br></pre></td></tr></table></figure>
+<blockquote>
+<h3 id="使用说明">使用说明</h3>
+<p><strong>启动：</strong>/etc/init.d/caddy start</p>
+<p><strong>停止：</strong>/etc/init.d/caddy stop</p>
+<p><strong>重启：</strong>/etc/init.d/caddy restart</p>
+<p><strong>查看状态：</strong>/etc/init.d/caddy status</p>
+<p><strong>查看 Caddy 启动日志：</strong> tail -f /tmp/caddy.log</p>
+<p><strong>安装目录：</strong>/usr/local/caddy</p>
+<p><strong>Caddy 配置文件位置：</strong>/usr/local/caddy/Caddyfile</p>
+<p><strong>Caddy 自动申请 SSL 证书位置：</strong>/.caddy/acme/acme-v02.api.letsencrypt.org/sites/xxx.xxx(域名)/</p>
+</blockquote>
+<h2 id="安装并配置-MySQL">安装并配置 MySQL</h2>
+<h3 id="安装">安装</h3>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt install mysql-server</span><br></pre></td></tr></table></figure>
+<p>将会有图形界面用以设定 root 密码，根据提示进行操作即可。</p>
+<h3 id="配置">配置</h3>
+<p>这里采用 SQL 命令配置数据库</p>
+<ol>
+<li>
+<p>登录数据库</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>创建名为 nextcloud 的数据库</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> DATABASE nextcloud;</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>切换数据库</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">USE nextcloud;</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>创建名为 nextcloud 的用户，密码为 password (注意替换为自己的)，并赋予权限。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">GRANT</span> <span class="keyword">All</span>  <span class="keyword">ON</span> nextcloud.<span class="operator">*</span> <span class="keyword">TO</span> nextcloud<span class="variable">@localhost</span> IDENTIFIED <span class="keyword">BY</span> <span class="string">&#x27;password&#x27;</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>登出数据库</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">exit</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="安装-php7-0">安装 php7.0</h2>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt install php7.0 php7.0-mbstring php7.0-zip php7.0-dom php7.0-xml php7.0-gd php7.0-curl php7.0-mysql -y</span><br></pre></td></tr></table></figure>
+<p>打开 <code>/etc/php/7.0/fpm/pool.d/www.conf</code> 查看 <code>php7.0-fpm</code> 监听的地址，<strong>留作后用</strong>。不同系统可能位置不同，也可能配置在 <code>/etc/php7.0/fpm/php-fpm.conf</code> 中。</p>
+<p>监听地址可能为以下两种：</p>
+<ul>
+<li>语句为 <code>listen = /run/php/php7.0-fpm.sock</code>，此时监听地址为 <code>/run/php/php7.0-fpm.sock</code></li>
+<li>语句为 <code>listen = 127.0.0.1:9000</code>，此时 <code>php7.0-fpm</code> 绑定了 9000 端口，监听地址为 <code>127.0.0.1:9000</code></li>
+</ul>
+<p>监听地址可以自行修改。修改后运行以下内容应用。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service php7.0-fpm reload</span><br></pre></td></tr></table></figure>
+<h2 id="创建文件及网站目录">创建文件及网站目录</h2>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">cd /</span><br><span class="line">mkdir /home &amp;&amp; cd /home</span><br><span class="line">mkdir wwwroot wwwdata &amp;&amp; cd wwwroot</span><br><span class="line">mkdir example.com &amp;&amp; cd example.com #文件夹名字及位置自定</span><br><span class="line">chown www-data:www-data /home/wwwdata -Rf</span><br><span class="line">chmod 770 /home/wwwdata -Rf</span><br><span class="line">chown www-data:www-data /home/wwwroot/example.com -Rf</span><br></pre></td></tr></table></figure>
+<h2 id="安装-NextCloud">安装 NextCloud</h2>
+<h3 id="下载">下载</h3>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">cd /home/wwwroot/example.com</span><br><span class="line">wget https://download.nextcloud.com/server/releases/nextcloud-13.0.4.zip</span><br><span class="line">unzip nextcloud-13.0.4.zip</span><br><span class="line">rm nextcloud-13.0.4.zip</span><br><span class="line">mv nextcloud/* .</span><br><span class="line">mv nextcloud/.* .</span><br><span class="line">rm nextcloud -r</span><br></pre></td></tr></table></figure>
+<h3 id="设置文件夹权限">设置文件夹权限</h3>
+<p>新建 <code>set.sh</code> 文件，添加如下内容：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/bin/bash</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 将ocpath替换为自己的网站文件夹位置</span></span><br><span class="line">ocpath=&#x27;/home/wwwroot/example.com&#x27; #1</span><br><span class="line">htuser=&#x27;www-data&#x27;</span><br><span class="line">htgroup=&#x27;www-data&#x27;</span><br><span class="line">rootuser=&#x27;root&#x27;</span><br><span class="line"></span><br><span class="line">printf &quot;Creating possible missing Directories\n&quot;</span><br><span class="line">mkdir -p $ocpath/data</span><br><span class="line">mkdir -p $ocpath/assets</span><br><span class="line">mkdir -p $ocpath/updater</span><br><span class="line"></span><br><span class="line">printf &quot;chmod Files and Directories\n&quot;</span><br><span class="line">find $&#123;ocpath&#125;/ -type f -print0 | xargs -0 chmod 0640</span><br><span class="line">find $&#123;ocpath&#125;/ -type d -print0 | xargs -0 chmod 0750</span><br><span class="line"></span><br><span class="line">printf &quot;chown Directories\n&quot;</span><br><span class="line">chown -R $&#123;rootuser&#125;:$&#123;htgroup&#125; $&#123;ocpath&#125;/</span><br><span class="line">chown -R $&#123;htuser&#125;:$&#123;htgroup&#125; $&#123;ocpath&#125;/apps/</span><br><span class="line">chown -R $&#123;htuser&#125;:$&#123;htgroup&#125; $&#123;ocpath&#125;/assets/</span><br><span class="line">chown -R $&#123;htuser&#125;:$&#123;htgroup&#125; $&#123;ocpath&#125;/config/</span><br><span class="line">chown -R $&#123;htuser&#125;:$&#123;htgroup&#125; $&#123;ocpath&#125;/data/</span><br><span class="line">chown -R $&#123;htuser&#125;:$&#123;htgroup&#125; $&#123;ocpath&#125;/themes/</span><br><span class="line">chown -R $&#123;htuser&#125;:$&#123;htgroup&#125; $&#123;ocpath&#125;/updater/</span><br><span class="line"></span><br><span class="line">chmod +x $&#123;ocpath&#125;/occ</span><br><span class="line"></span><br><span class="line">printf &quot;chmod/chown .htaccess\n&quot;</span><br><span class="line">if [ -f $&#123;ocpath&#125;/.htaccess ]</span><br><span class="line">  then</span><br><span class="line">    chmod 0644 $&#123;ocpath&#125;/.htaccess</span><br><span class="line">    chown $&#123;rootuser&#125;:$&#123;htgroup&#125; $&#123;ocpath&#125;/.htaccess</span><br><span class="line">fi</span><br><span class="line">if [ -f $&#123;ocpath&#125;/data/.htaccess ]</span><br><span class="line">  then</span><br><span class="line">    chmod 0644 $&#123;ocpath&#125;/data/.htaccess</span><br><span class="line">    chown $&#123;rootuser&#125;:$&#123;htgroup&#125; $&#123;ocpath&#125;/data/.htaccess</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
+<p>打开文件，将 “#1” 所在行的地址更改为你自己的网站文件地址，然后保存。</p>
+<p>赋予权限并运行。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">chmod +x set.sh</span><br><span class="line">./set.sh</span><br></pre></td></tr></table></figure>
+<h2 id="挂载腾讯-COS-作为存储盘-选">挂载腾讯 COS 作为存储盘(选)</h2>
+<p>这一步为选做，小硬盘 VPS 福音。</p>
+<p>由于我用的是腾讯云主机，同地域 COS 内网流量免费，将文件存储到 COS 能极大地节省 VPS 的硬盘空间。在此处我默认你已经创建了腾讯云对象存储的 Bucket，不会的请谷歌解决。</p>
+<h3 id="安装-COSFS-工具">安装 COSFS 工具</h3>
+<h4 id="环境安装">环境安装</h4>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt install automake autotools-dev g++ git libcurl4-gnutls-dev libfuse-dev libssl-dev libxml2-dev make pkg-config fuse -y</span><br></pre></td></tr></table></figure>
+<h4 id="下载源码">下载源码</h4>
+<p>使用 Github 原始地址：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/tencentyun/cosfs /usr/cosfs</span><br></pre></td></tr></table></figure>
+<p>如果国内主机速度过慢，可以使用我在 gitee 备份的库：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://gitee.com/sunziyang97/cosfs.git /usr/cosfs</span><br></pre></td></tr></table></figure>
+<h4 id="编译安装">编译安装</h4>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/cosfs</span><br><span class="line">./autogen.sh</span><br><span class="line">./configure</span><br><span class="line">make</span><br><span class="line">sudo make install</span><br></pre></td></tr></table></figure>
+<h4 id="配置文件">配置文件</h4>
+<p>在  <code>/etc/passwd-cosfs</code> 文件中，配置您的存储桶的名称，以及该存储桶对应的 SecretId 和 SecretKey，相关概念参见  <span class="exturl" data-url="aHR0cHM6Ly9jbG91ZC50ZW5jZW50LmNvbS9kb2N1bWVudC9wcm9kdWN0LzQzNi82MjI1">对象存储基本概念<i class="fa fa-external-link-alt"></i></span>。使用冒号隔开，注意冒号为半角符号。 并为  <code>/etc/passwd-cosfs</code>  设置可读权限。命令格式如下：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">echo &lt;bucketname&gt;:&lt;SecretId&gt;:&lt;SecretKey&gt; &gt; /etc/passwd-cosfs</span><br><span class="line">chmod 640 /etc/passwd-cosfs</span><br></pre></td></tr></table></figure>
+<p>其中：<br>
+<code>bucketname</code>/ <code>SecretId</code>/<code>SecretKey</code> 需要替换为用户的真实信息。</p>
+<p><code>bucketname</code> 形如 <code>bucketprefix-123456789</code>, 更多关于 <code>bucketname</code> 的命名规范，参见<span class="exturl" data-url="aHR0cHM6Ly9jbG91ZC50ZW5jZW50LmNvbS9kb2N1bWVudC9wcm9kdWN0LzQzNi8xMzMxMiMuRTUuQUQuOTguRTUuODIuQTguRTYuQTEuQjYuRTUuOTEuQkQuRTUuOTAuOEQuRTguQTcuODQuRTguOEMuODM=">存储桶命名规范<i class="fa fa-external-link-alt"></i></span>。</p>
+<h3 id="挂载">挂载</h3>
+<h4 id="运行工具">运行工具</h4>
+<p>将配置好的存储桶挂载到指定目录，命令行如下：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cosfs nextcloud-123456789 /home/wwwdata -ourl=http://cos.ap-hongkong.myqcloud.com -ouid=33 -ogid=33 -o allow_other -o umask=007</span><br></pre></td></tr></table></figure>
+<p>注意替换为自己的信息</p>
+<h4 id="配置开机自动挂载">配置开机自动挂载</h4>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">echo cosfs#nextcloud-1253146816 /home/wwwdata fuse _netdev,url=http://cos.ap-hongkong.myqcloud.com,uid=33,gid=33,allow_other,umask=007 0 0 &gt;&gt; /etc/fstab</span><br><span class="line">mount -a</span><br></pre></td></tr></table></figure>
+<p>注意替换为自己的信息</p>
+<h2 id="编辑-Caddy-配置文件">编辑 Caddy 配置文件</h2>
+<p>打开配置文件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /usr/local/caddy/Caddyfile</span><br></pre></td></tr></table></figure>
+<p>添加如下内容</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line">pan.iszy.me &#123;</span><br><span class="line"></span><br><span class="line">    root   /home/wwwroot/pan.iszy.me</span><br><span class="line">    log    /home/wwwlog/pan.iszy.me.log</span><br><span class="line">    errors /home/wwwlog/pan.iszy.me.errors.log</span><br><span class="line">    tls hi@iszy.me</span><br><span class="line"></span><br><span class="line">    # 1</span><br><span class="line">    fastcgi / /run/php/php7.0-fpm.sock php</span><br><span class="line"></span><br><span class="line">    # checks for images</span><br><span class="line">    rewrite &#123;</span><br><span class="line">        ext .svg .gif .png .html .ttf .woff .ico .jpg .jpeg</span><br><span class="line">        r ^/index.php/(.+)$</span><br><span class="line">        to /&#123;1&#125; /index.php?&#123;1&#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    rewrite &#123;</span><br><span class="line">        r ^/index.php/.*$</span><br><span class="line">        to /index.php?&#123;query&#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    # client support (e.g. os x calendar / contacts)</span><br><span class="line">    redir /.well-known/carddav /remote.php/carddav 301</span><br><span class="line">    redir /.well-known/caldav /remote.php/caldav 301</span><br><span class="line"></span><br><span class="line">    # remove trailing / as it causes errors with php-fpm</span><br><span class="line">    rewrite &#123;</span><br><span class="line">        r ^/remote.php/(webdav|caldav|carddav|dav)(\/?)(\/?)$</span><br><span class="line">        to /remote.php/&#123;1&#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    rewrite &#123;</span><br><span class="line">        r ^/remote.php/(webdav|caldav|carddav|dav)/(.+?)(\/?)(\/?)$</span><br><span class="line">        to /remote.php/&#123;1&#125;/&#123;2&#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    rewrite &#123;</span><br><span class="line">        r ^/public.php/(dav|webdav|caldav|carddav)(\/?)(\/?)$</span><br><span class="line">        to /public.php/&#123;1&#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    rewrite &#123;</span><br><span class="line">        r ^/public.php/(dav|webdav|caldav|carddav)/(.+)(\/?)(\/?)$</span><br><span class="line">        to /public.php/&#123;1&#125;/&#123;2&#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    # .htaccess / data / config / ... shouldn&#x27;t be accessible from outside</span><br><span class="line">    status 403 &#123;</span><br><span class="line">        /.htaccess</span><br><span class="line">        /data</span><br><span class="line">        /config</span><br><span class="line">        /db_structure</span><br><span class="line">        /.xml</span><br><span class="line">        /README</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    header / Strict-Transport-Security &quot;max-age=31536000;&quot;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在 <code>#1</code> 处将地址替换为之前查看的 <code>php7.0-fpm</code> 监听的地址。</p>
+<p>重启 Caddy。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service caddy restart</span><br></pre></td></tr></table></figure>
+<h2 id="安装-2">安装</h2>
+<p>访问 <span class="exturl" data-url="aHR0cDovL2V4YW1wbGUuY29t">example.com<i class="fa fa-external-link-alt"></i></span> (你自己的网站)，输入信息并安装。</p>
+<p><strong>注意点：</strong></p>
+<ul>
+<li>数据目录填写绝对地址，本例中应使用 <code>/home/wwwdata</code>。</li>
+<li>数据库用户名为之前创建的 <code>nextcloud</code>，密码为你设定的密码</li>
+<li>数据库地址要加端口，如 <code>localhost:3306</code></li>
+</ul>
+<p>配图为我前一次<a href="https://www.iszy.cc/2017/12/18/NextCloud/">使用宝塔面板进行安装</a>时的截图。</p>
+<p><img data-src="https://img.iszy.xyz/20190318212151.png" alt=""></p>
+<h2 id="更多问题">更多问题</h2>
+<p>安装完成后登录，进入<code>设置</code>—<code>管理</code>—<code>基本设置</code>，还有一些问题需要解决。我们下篇文章继续说明。</p>
+<p><strong>有什么问题，欢迎在评论区留言或者联系我，我一定会及时回复的。</strong></p>
+
+    </div>
+
+    
+    
+    
+      
+  <div class="popular-posts-header">相关文章</div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/posts/NextCloud/" rel="bookmark">从头开始搭建NextCloud私有云盘</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/posts/filebrowser2-setup-docker/" rel="bookmark">通过Docker快速部署FileBrowser 2.0</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/posts/lnmporg-php-extension/" rel="bookmark">军哥LNMP一键安装包的php扩展安装</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/posts/ubuntu-php7dot2/" rel="bookmark">在Ubuntu 16.04中安装php7.2</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/posts/use-composer/" rel="bookmark">Ubuntu 安装使用 Composer</a></div>
+    </li>
+  </ul>
+
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Dirge
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.iszy.cc/posts/caddy-nextcloud/" title="VPS 使用 Caddy 快速搭建 Nextcloud 全过程">https://www.iszy.cc/posts/caddy-nextcloud/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/Nextcloud/" rel="tag"><i class="fa fa-tag"></i> Nextcloud</a>
+              <a href="/tags/Caddy/" rel="tag"><i class="fa fa-tag"></i> Caddy</a>
+              <a href="/tags/%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/" rel="tag"><i class="fa fa-tag"></i> 文件管理</a>
+              <a href="/tags/php/" rel="tag"><i class="fa fa-tag"></i> php</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/jquery-ajax-getjson/" rel="prev" title="JQuery 中 $.ajax 和 $.getJSON 的简单应用对比">
+                  <i class="fa fa-chevron-left"></i> JQuery 中 $.ajax 和 $.getJSON 的简单应用对比
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/next-config/" rel="next" title="NexT 主题配置记录">
+                  NexT 主题配置记录 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="waline-comments"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2017 – 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Dirge</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">235k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">7:08</span>
+  </span>
+</div>
+  <div class="powered-by">由 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZw==">NexT.Gemini</span> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.9.0/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.9.0/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.9.0/source/js/next-boot.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.9.0/source/js/pjax.min.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.9.0/source/js/third-party/search/local-search.min.js"></script>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.9.0/source/js/third-party/fancybox.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.9.0/source/js/third-party/pace.min.js"></script>
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" integrity="sha256-9/mhQQwkpU5okPfM5l0v3LnP9xtc6JK8dKW0/WlGaUc=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/copy-tex.min.css" integrity="sha256-+oItviPaTmqjDhk4y4fLLUIMgRQYDV/ZyrRNvQiebWM=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/copy-tex.min.js","integrity":"sha256-etSqbSVF4+Lwe8MGk/Vanc1sR+mWv+qOG73fxWw9p94="}}</script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.9.0/source/js/third-party/math/katex.min.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":false,"delay":true,"timeout":3000,"priority":true,"url":"https://www.iszy.cc/posts/caddy-nextcloud/"}</script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.9.0/source/js/third-party/quicklink.min.js"></script>
+<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-CN","enable":true,"serverURL":"https://wl.iszy.xyz","placeholder":"Just go go","avatar":null,"pageSize":10,"visitor":true,"comment_count":true,"requiredFields":[],"locale":{"placeholder":"本站支持匿名评论，无需登录~(●'◡'●)\n与文章无关的留言请前往本站留言板，谢谢配合~"},"meta":["nick","mail","link"],"requiredMeta":["nick","mail"],"libUrl":"https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js","dark":"auto","emoji":["https://cdn.jsdelivr.net/gh/zvonimirsun/emojis@1.0.2/bilibili-xhl"],"el":"#waline-comments","path":"/posts/caddy-nextcloud/"}</script>
+<script>
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.waline.el).then(() => 
+    NexT.utils.getScript(CONFIG.waline.libUrl, { condition: window.Waline })
+  ).then(() => {
+    new Waline(CONFIG.waline);
+  });
+});
+</script>
+</body>
+</html>
