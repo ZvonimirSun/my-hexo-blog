@@ -5203,7 +5203,7 @@ SWIFT 代码：CIBKCNBJ100<br>
       </tags>
   </entry>
   <entry>
-    <title>解决使用@vue/cli-plugin-babel导致动态import进行代码拆分失败问题</title>
+    <title>解决使用@vue/cli-plugin-babel导致动态import代码拆分失败问题</title>
     <url>/posts/b/</url>
     <content><![CDATA[<p>本文记录下使用 vue-cli 的 babel 插件导致动态 import 代码拆分失败的问题。</p>
 <span id="more"></span>

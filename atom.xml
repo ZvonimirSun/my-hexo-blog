@@ -17,7 +17,7 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>解决使用@vue/cli-plugin-babel导致动态import进行代码拆分失败问题</title>
+    <title>解决使用@vue/cli-plugin-babel导致动态import代码拆分失败问题</title>
     <link href="https://www.iszy.cc/posts/b/"/>
     <id>https://www.iszy.cc/posts/b/</id>
     <published>2022-01-18T14:47:53.000Z</published>
