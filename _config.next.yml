@@ -166,7 +166,7 @@ links:
   #Title: https://example.com
 
 # Table of Contents in the Sidebar
-# Front-matter variable (unsupport wrap expand_all).
+# Front-matter variable (nonsupport wrap expand_all).
 toc:
   enable: true
   # Automatically add list number to toc.
@@ -248,7 +248,7 @@ symbols_count_time:
 tag_icon: true
 
 # Donate (Sponsor) settings
-# Front-matter variable (unsupport animation).
+# Front-matter variable (nonsupport animation).
 reward_settings:
   # If true, a donate button will be displayed in every article by default.
   enable: false
@@ -300,8 +300,8 @@ post_navigation: left
 
 # TagCloud settings for tags page.
 tagcloud:
-  min: 12 # Minimun font size in px
-  max: 30 # Maxium font size in px
+  min: 12 # Minimum font size in px
+  max: 30 # Maximum font size in px
   amount: 200 # Total amount of tags
   orderby: name # Order of tags
   order: 1 # Sort order
@@ -337,8 +337,10 @@ text_align:
 # Reduce padding / margin indents on devices with narrow width.
 mobile_layout_economy: true
 
-# Android Chrome header panel color ($brand-bg / $headband-bg => $black-deep).
-android_chrome_color: "#222"
+# Browser header panel color.
+theme_color:
+  light: "#222"
+  dark: "#222"
 
 # Override browsers' default behavior.
 body_scrollbar:
@@ -490,7 +492,7 @@ baidu_site_verification: tV7s6Tu88n
 math:
   # Default (false) will load mathjax / katex script on demand.
   # That is it only render those page which has `mathjax: true` in front-matter.
-  # If you set it to true, it will load mathjax / katex srcipt EVERY PAGE.
+  # If you set it to true, it will load mathjax / katex script EVERY PAGE.
   every_page: false
 
   mathjax:
@@ -527,7 +529,7 @@ pangu: true
 
 # Quicklink Support
 # For more information: https://getquick.link
-# Front-matter variable (unsupport home archive).
+# Front-matter variable (nonsupport home archive).
 quicklink:
   enable: true
 
@@ -559,7 +561,7 @@ comments:
   storage: true
   # Lazyload all comment systems.
   lazyload: false
-  # Modify texts or order for any navs, here are some examples.
+  # Modify texts or order for any naves, here are some examples.
   nav:
     #disqus:
     #  text: Load Disqus
@@ -608,7 +610,7 @@ gitalk:
   admin_user: # GitHub repo owner and collaborators, only these guys can initialize gitHub issues
   distraction_free_mode: true # Facebook-like distraction free mode
   # When the official proxy is not available, you can change it to your own proxy address
-  proxy: https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token # This is official proxy adress
+  proxy: https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token # This is official proxy address
   # Gitalk's display language depends on user's browser or system environment
   # If you want everyone visiting your site to see a uniform language, you can set a force language value
   # Available values: en | es-ES | fr | ru | zh-CN | zh-TW
@@ -807,6 +809,8 @@ note:
 
 # Tabs tag
 tabs:
+  # Make the nav bar of tabs with long content stick to the top.
+  sticky: false
   transition:
     tabs: false
     labels: true
@@ -824,7 +828,9 @@ pdf:
 mermaid:
   enable: false
   # Available themes: default | dark | forest | neutral
-  theme: forest
+  theme:
+    light: default
+    dark: dark
 
 # ---------------------------------------------------------------
 # Animation Settings
@@ -871,16 +877,20 @@ canvas_ribbon:
 
 vendors:
   # The CDN provider of NexT internal scripts.
-  # Available values: local | jsdelivr | unpkg | cdnjs
+  # Available values: local | jsdelivr | unpkg | cdnjs | custom
   # Warning: If you are using the latest master branch of NexT, please set `internal: local`
-  internal: jsdelivr
+  internal: local
   # The default CDN provider of third-party plugins.
-  # Available values: local | jsdelivr | unpkg | cdnjs
+  # Available values: local | jsdelivr | unpkg | cdnjs | custom
   # Dependencies for `plugins: local`: https://github.com/next-theme/plugins
   plugins: jsdelivr
+  # Custom CDN URL
+  # For example:
+  # custom_cdn_url: https://cdn.jsdelivr.net/npm/${npm_name}@${version}/${minified}
+  # custom_cdn_url: https://cdnjs.cloudflare.com/ajax/libs/${cdnjs_name}/${version}/${cdnjs_file}
+  custom_cdn_url:
 
 # Assets
 # Accelerate delivery of static files using a CDN
 css: css
-js: js
 images: images
