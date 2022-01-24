@@ -413,7 +413,7 @@ font:
   enable: true
 
   # Uri of fonts host, e.g. https://fonts.googleapis.com (Default).
-  host: https://fonts.iszy.xyz
+  host: https://fonts.cdn.iszy.xyz
 
   # Font options:
   # `external: true` will load this font family from `host` above.
@@ -883,12 +883,12 @@ vendors:
   # The default CDN provider of third-party plugins.
   # Available values: local | jsdelivr | unpkg | cdnjs | custom
   # Dependencies for `plugins: local`: https://github.com/next-theme/plugins
-  plugins: jsdelivr
+  plugins: custom
   # Custom CDN URL
   # For example:
   # custom_cdn_url: https://cdn.jsdelivr.net/npm/${npm_name}@${version}/${minified}
   # custom_cdn_url: https://cdnjs.cloudflare.com/ajax/libs/${cdnjs_name}/${version}/${cdnjs_file}
-  custom_cdn_url:
+  custom_cdn_url: https://jsdelivr.cdn.iszy.xyz/npm/${npm_name}@${version}/${minified}
 
 # Assets
 # Accelerate delivery of static files using a CDN
