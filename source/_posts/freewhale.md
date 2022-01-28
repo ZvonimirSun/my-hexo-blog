@@ -1,7 +1,7 @@
 ---
 title: 自由鲸FreeWhale--性价比SSR/V2Ray机场推荐
 date: 2019-04-11 11:47:31
-updated: 2021-12-17 11:00:00
+updated: 2022-01-28 11:00:00
 categories:
   - 推广
 tags:
