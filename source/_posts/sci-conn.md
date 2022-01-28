@@ -118,8 +118,6 @@ permalink: /page/bgfw/
 
 邀请码: `iszy`
 
-![](https://img.iszy.xyz/20200317212833.png)
-
 ### （二）简介
 
 **CMYNetwork 红莓网络** 隶属于`CMYNetwork Technology Co., Ltd`，注册于摩纳哥公国，是一家我最近发现一家宝藏机场。除入门套餐外采用专线中转节点；入门套餐采用 Trojan 新协议，保证稳定性。经测速和日常使用，可以说是稳定高速，高峰期速度也能拉满。提供网页在线客服和工单，服务还不错。
