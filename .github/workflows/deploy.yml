@@ -30,6 +30,11 @@ jobs:
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Restore file modification time 🔧
+        run: |
+          git ls-files -z | while read -d '' path; do touch -d "$(git log -1 --format="@%ct" "$path")" "$path"; done
       - name: Restore cached ./node_modules
         uses: actions/cache@v2
         with:
@@ -37,7 +42,7 @@ jobs:
           key: ${{ runner.os }}-yarn-lock-${{ hashFiles('./yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-yarn-lock-
-      - name: Install hexo
+      - name: Install hexo 🔧
         run: npm install hexo-cli -g
       - name: Build app 🔧
         run: hexo g

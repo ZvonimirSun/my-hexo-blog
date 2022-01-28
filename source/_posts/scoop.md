@@ -140,10 +140,10 @@ scoop bucket add extras https://github.com/lukesampson/scoop-extras.git
 
 2. 大佬的存储桶:
 
-   - Ash258: https://github.com/Ash258/scoop-Ash258.git
+   - Ash258: [https://github.com/Ash258/scoop-Ash258.git](https://github.com/Ash258/scoop-Ash258.git)
 
 3. 我自己的存储桶:
 
    额，这个存储桶就只有几个我自己需要用的应用，如有需要可以看看。
 
-   - iszy: https://github.com/ZvonimirSun/scoop-iszy.git
+   - iszy: [https://github.com/ZvonimirSun/scoop-iszy.git](https://github.com/ZvonimirSun/scoop-iszy.git)
