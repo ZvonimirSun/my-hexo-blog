@@ -35,7 +35,7 @@ permalink: /page/cmynetwork/
 
 ![](https://img.iszy.xyz/20210411191903.png?x-oss-process=style/big)
 
-## 前言
+## 一、前言
 
 ### 相关链接
 
@@ -51,7 +51,7 @@ permalink: /page/cmynetwork/
 
 邀请码: `iszy`
 
-## CMY Network 简介
+## 二、CMY Network 简介
 
 **CMYNetwork 红莓网络** 隶属于`CMYNetwork Technology Co., Ltd`，注册于摩纳哥公国，是一家我最近发现一家宝藏机场。除入门套餐外采用全内网中转节点；入门套餐采用 Trojan 新协议，保证稳定性。经测速和日常使用，可以说是稳定高速，高峰期速度也能拉满。提供网页在线客服和工单，服务还不错。持续使用体验仍在继续跟踪。
 
@@ -86,7 +86,7 @@ permalink: /page/cmynetwork/
 
 - 注册并绑定手机号，赠送 3 天免费试用(非强制)
 
-## 套餐
+## 三、套餐
 
 > 注意，需要专线中转线路，请至少选择 Pro 及以上套餐，专线倍率为 2，需要注意。
 
@@ -182,7 +182,7 @@ permalink: /page/cmynetwork/
 </tr>
 </table>
 
-## 其他的话
+## 四、其他的话
 
 - [官网地址发布页](https://github.com/caomeicloud/url)，永不失联
 - [最新地址跳转页](https://caomeijump.com)
