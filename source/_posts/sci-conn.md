@@ -1,7 +1,7 @@
 ---
-title: 【评测2022】优质SS/SSR/Trojan/V2Ray机场推荐
+title: 【评测2022】优质SS/SSR/Trojan/V2Ray机场推荐【春节特惠】
 date: 2019-01-03 03:11:50
-updated: 2021-01-21 11:00:00
+updated: 2021-01-28 11:00:00
 categories:
   - 推广
 tags:
@@ -45,7 +45,7 @@ permalink: /page/bgfw/
 | [ByWave](#五、ByWave)                    | V2Ray                 | 高质高端，服务稳定               | [官网传送门](https://url.iszy.xyz/bywave) / [测速](https://www.iszy.cc/page/speed-test-collection/#ByWave)                                                          |
 | [Blinkload](#六、Blinkload)              | SS(全专线)            | 稳定全能，超多专线               | [官网传送门](https://url.iszy.xyz/blinkload) / [测速](https://www.iszy.cc/page/speed-test-collection/#Blinkload)                                                    |
 | [闲鱼网络](#七、闲鱼网络)(皇朝网络)      | SS 隧道               | 性价比新站                       | [官网传送门](https://url.iszy.xyz/dinastio) / [测速](https://www.iszy.cc/page/speed-test-collection/#%E9%97%B2%E9%B1%BC%E7%BD%91%E7%BB%9C)(2021-12-18)              |
-| [Shuttle](#八、Shuttle)                  | V2ray                 | 平价新站，另含超多小众地区线路   | [官网传送门](https://url.iszy.xyz/shuttle) / [测速](https://www.iszy.cc/page/speed-test-collection/#Shuttle)                                                        |
+| [Shuttle](#八、Shuttle) 【春节特惠】     | V2ray                 | 平价新站，另含超多小众地区线路   | [官网传送门](https://url.iszy.xyz/shuttle) / [测速](https://www.iszy.cc/page/speed-test-collection/#Shuttle)                                                        |
 
 > 本页机场均在上次网络大波动中提供了稳定的服务，还会持续观察未来表现
 
@@ -733,6 +733,22 @@ V2Club(旧蓝岸)，一家专门提供 v2ray 代理服务的服务商。或许�
 (新购续费均可使用 只能用于季付及以上套餐)
 
 > 转官方优惠
+
+以下优惠码均可在续费或新购时使用。
+
+失效日期 **2022 年 02 月 15 日**
+
+- 优惠代码 A：`R63H0BYUH3`
+
+  额度： 7 折一次性优惠
+
+  适用范围： 年付或以上
+
+- 优惠代码 B：`J82MQ48RIQ`
+
+  额度： 8 折一次性优惠
+
+  适用范围： 月付 季付 半年付 一次性流量包
 
 充值获取赠金:
 
