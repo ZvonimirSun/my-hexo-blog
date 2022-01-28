@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.iszy.cc/page/freewhale/</loc>
+    <loc>https://www.iszy.cc/page/cmynetwork/</loc>
     
     <lastmod>2022-01-28</lastmod>
     
@@ -14,6 +14,17 @@
   
   <url>
     <loc>https://www.iszy.cc/page/bgfw/</loc>
+    
+    <lastmod>2022-01-28</lastmod>
+    
+    
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.iszy.cc/page/freewhale/</loc>
     
     <lastmod>2022-01-28</lastmod>
     
@@ -43,17 +54,6 @@
     <loc>https://www.iszy.cc/page/speed-test-collection/</loc>
     
     <lastmod>2021-12-18</lastmod>
-    
-    
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.iszy.cc/page/cmynetwork/</loc>
-    
-    <lastmod>2021-12-09</lastmod>
     
     
     <changefreq>daily</changefreq>
