@@ -5381,6 +5381,70 @@ SWIFT 代码：CIBKCNBJ100<br>
       </tags>
   </entry>
   <entry>
+    <title>JS实现UTF-8下的Base64编解码</title>
+    <url>/posts/c/</url>
+    <content><![CDATA[<p>记录下 JavaScript 实现 UTF-8 下的 Base64 编解码。</p>
+<span id="more"></span>
+<h2 id="小工具">小工具</h2>
+<p>这边做了个 Base64 编解码的小工具，供大家使用。</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly90b29scy5pc3p5Lnh5ei9jcnlwdG8vYmFzZTY0">Base64 编解码<i class="fa fa-external-link-alt"></i></span></p>
+<h2 id="Base64-编解码">Base64 编解码</h2>
+<blockquote>
+<p>来源：<span class="exturl" data-url="aHR0cHM6Ly96aC53aWtpcGVkaWEub3JnL3dpa2kvQmFzZTY0">Base64-维基百科<i class="fa fa-external-link-alt"></i></span> &gt; <strong>Base64</strong>（基底 64）是一种基于 64 个可打印字符来表示二进制数据的表示方法。由于 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>l</mi><mi>o</mi><msub><mi>g</mi><mrow><mn>2</mn></mrow></msub><mn>6</mn><mn>4</mn><mo>=</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">log_{2}64 = 6</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.01968em;">l</span><span class="mord mathit">o</span><span class="mord"><span class="mord mathit" style="margin-right:0.03588em;">g</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.03588em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord mathrm">2</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mord mathrm">6</span><span class="mord mathrm">4</span><span class="mrel">=</span><span class="mord mathrm">6</span></span></span></span>，所以每 6 个比特为一个单元，对应某个可打印字符。3 个字节相当于 24 个比特，对应于 4 个 Base64 单元，即 3 个字节可由 4 个可打印字符来表示。在 Base64 中的可打印字符包括字母 A-Z、a-z、数字 0-9，这样共有 62 个字符，此外两个可打印符号在不同的系统中而不同。一些如 uuencode 的其他编码方法，和之后 BinHex 的版本使用不同的 64 字符集来代表 6 个二进制数字，但是不被称为 Base64。<br>
+Base64 常用于在通常处理文本数据的场合，表示、传输、存储一些二进制数据，包括 MIME 的电子邮件及 XML 的一些复杂数据。</p>
+</blockquote>
+<p>其实在 JavaScript 中，原生就有两个函数被分别用来处理解码和编码 base64 字符串：</p>
+<ul>
+<li><code>btoa()</code>: 从二进制数据的“字符串”创建一个 Base64 编码的 ASCII 字符串（“btoa”其实是“二进制转 ASCII”的意思）。</li>
+<li><code>atob()</code>: 解码 Base64 编码的字符串（“atob”其实是“ASCII 到二进制”的意思）。</li>
+</ul>
+<p>其中的使用的算法在<span class="exturl" data-url="aHR0cHM6Ly9kYXRhdHJhY2tlci5pZXRmLm9yZy9kb2MvaHRtbC9yZmM0NjQ4I3NlY3Rpb24tNA==">RFC 4648, 第四段<i class="fa fa-external-link-alt"></i></span>中进行了描述。</p>
+<p><img data-src="https://img.iszy.xyz/1643809821264.png" alt="The Base 64 Alphabet"></p>
+<p>可以通过<code>window.atob(string)</code>、<code>window.btoa(base64string)</code>的方式调用，非常方便。</p>
+<h2 id="UTF-8-字符串编解码">UTF-8 字符串编解码</h2>
+<p>如上面的描述所言，<code>btoa</code>和<code>atob</code>都只支持 ASCII 字符，并不支持 Unicode 字符。在大多数浏览器中对 Unicode 字符串调用将会报<code>Character Out Of Range</code>错误，因为字符超出了 ASCII 的范围。</p>
+<h3 id="解决方法">解决方法</h3>
+<p>我们可以将字符串转义过后再进行编码，解码时将解码结果重新转义为 Unicode 字符串。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">utf8_to_b64</span>(<span class="params">str</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> btoa(<span class="built_in">unescape</span>(<span class="built_in">encodeURIComponent</span>(str)));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">b64_to_utf8</span>(<span class="params">str</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">decodeURIComponent</span>(<span class="built_in">escape</span>(atob(str)));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 用例:</span></span><br><span class="line">utf8_to_b64(<span class="string">&quot;测试&quot;</span>); <span class="comment">// &quot;5rWL6K+V&quot;</span></span><br><span class="line">b64_to_utf8(<span class="string">&quot;5rWL6K+V&quot;</span>); <span class="comment">// &quot;测试&quot;</span></span><br></pre></td></tr></table></figure>
+<h3 id="解析">解析</h3>
+<p>这中间看起来比较神奇，发生了个什么事呢？</p>
+<p>主要呢就是利用了<code>encodeURIComponent</code>、<code>decodeURIComponent</code>会把接受到的字符串参数当作 UTF-8 字符串来进行处理。</p>
+<h4 id="utf8-to-b64">utf8_to_b64</h4>
+<p>先看<code>utf8_to_b64</code>方法。</p>
+<p>这里由于<code>encodeURIComponent</code>方法接受的是 UTF-8 字符串，可以先用<code>encodeURIComponent</code>方法将 UTF-8 字符串转成了形如<code>%XX%XX</code>的十六进制符号。然后使用<code>unescape</code>方法将十六进制翻译为了 ASCII 中对应的内容，这样就变成了<code>btoa</code>方法能够接受的 ASCII 字符串。最后直接使用<code>btoa</code>方法编码为 Base64 字符串。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">encodeURIComponent</span>(<span class="string">&quot;测试&quot;</span>); <span class="comment">// &quot;%E6%B5%8B%E8%AF%95&quot;</span></span><br><span class="line"><span class="built_in">unescape</span>(<span class="string">&quot;%E6%B5%8B%E8%AF%95&quot;</span>); <span class="comment">// &quot;æµ\x8Bè¯\x95&quot;</span></span><br><span class="line">btoa(<span class="string">&quot;æµ\x8Bè¯\x95&quot;</span>); <span class="comment">// &quot;5rWL6K+V&quot;</span></span><br></pre></td></tr></table></figure>
+<p>总的来说就是一个将 UTF-8 字符串转为 ASCII 字符串再编码的一个过程。</p>
+<h4 id="b64-to-utf8">b64_to_utf8</h4>
+<p>再看<code>b64_to_utf8</code>方法。</p>
+<p>其实就是反过来，先将 Base64 字符串通过<code>atob</code>方法解码为 ASCII 字符串，然后通过<code>escape</code>方法将 ASCII 字符串转为十六进制符号，最后将十六进制符号通过<code>decodeURIComponent</code>方法解析为 UTF-8。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">atob(<span class="string">&quot;5rWL6K+V&quot;</span>); <span class="comment">// &quot;æµ\x8Bè¯\x95&quot;</span></span><br><span class="line"><span class="built_in">escape</span>(<span class="string">&quot;æµ\x8Bè¯\x95&quot;</span>); <span class="comment">// &quot;%E6%B5%8B%E8%AF%95&quot;</span></span><br><span class="line"><span class="built_in">decodeURIComponent</span>(<span class="string">&quot;%E6%B5%8B%E8%AF%95&quot;</span>); <span class="comment">// &quot;测试&quot;</span></span><br></pre></td></tr></table></figure>
+<h3 id="弃用unescape和escape方法">弃用<code>unescape</code>和<code>escape</code>方法</h3>
+<h4 id="原由">原由</h4>
+<blockquote>
+<p>该特性已经从 Web 标准中删除，虽然一些浏览器目前仍然支持它，但也许会在未来的某个时间停止支持，请尽量不要使用该特性。</p>
+</blockquote>
+<p>可以看到<code>unescape</code>和<code>escape</code>方法已经被标记为废弃，并推荐使用<code>decodeURI</code>或<code>decodeURIComponent</code>替代<code>unescape</code>，推荐使用 <code>encodeURI</code> 或 <code>encodeURIComponent</code> 替代<code>escape</code>。</p>
+<p>根据<span class="exturl" data-url="aHR0cHM6Ly96aC53aWtpcGVkaWEub3JnL3dpa2kvJUU3JTk5JUJFJUU1JTg4JTg2JUU1JThGJUI3JUU3JUJDJTk2JUU3JUEwJTgx">百分号编码-维基百科<i class="fa fa-external-link-alt"></i></span>中的内容可以知道，<code>escape</code> 在处理 <code>0xff</code> 之外字符的时候，是直接使用字符的 <code>unicode</code> 在前面加上一个 「%u」，而 <code>encodeURI</code> 则是先进行 UTF-8，再在 UTF-8 的每个字节码前加上一个 「%」</p>
+<blockquote>
+<p>2005 年 1 月发布的 RFC 3986，建议所有新的 URI 必须对未保留字符不加以百分号编码；其它字符建议先转换为 UTF-8 字节序列, 然后对其字节值使用百分号编码。此前的 URI 不受此标准的影响。<br>
+有一些不符合标准的把 Unicode 字符在 URI 中表示为: <code>%uxxxx</code>, 其中 xxxx 是用 4 个十六进制数字表示的 Unicode 的码位值。任何 RFC 都没有这样的字符表示方法，并且已经被 W3C 拒绝 （页面存档备份，存于互联网档案馆）。第三版的 ECMA-262 仍然包含函数<code>escape(string)</code>使用这种语法, 但也有函数<code>encodeURI(uri)</code>转换字符到 UTF-8 字节序列并用百分号编码每个字节。</p>
+</blockquote>
+<p>所以<code>escape</code>是对百分号编码的非标准实现，所以被废弃实属正常。</p>
+<h4 id="解决方法-2">解决方法</h4>
+<p>虽说<code>escape</code>是对百分号编码的非标准实现，但是在上面的方法中我们实际上利用了<code>escape</code>的这种特性，这边提供了不使用<code>unescape</code>和<code>escape</code>方法后的实现。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">utf8_to_b64</span>(<span class="params">str</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> btoa(</span><br><span class="line">    <span class="built_in">encodeURIComponent</span>(str).replace(<span class="regexp">/%([0-9A-F]&#123;2&#125;)/g</span>, <span class="function"><span class="keyword">function</span> (<span class="params">match, p1</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="built_in">String</span>.fromCharCode(<span class="string">&quot;0x&quot;</span> + p1);</span><br><span class="line">    &#125;)</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">b64_to_utf8</span>(<span class="params">str</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">decodeURIComponent</span>(</span><br><span class="line">    atob(str)</span><br><span class="line">      .split(<span class="string">&quot;&quot;</span>)</span><br><span class="line">      .map(<span class="function"><span class="keyword">function</span> (<span class="params">c</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;%&quot;</span> + (<span class="string">&quot;00&quot;</span> + c.charCodeAt(<span class="number">0</span>).toString(<span class="number">16</span>)).slice(-<span class="number">2</span>);</span><br><span class="line">      &#125;)</span><br><span class="line">      .join(<span class="string">&quot;&quot;</span>)</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 用例:</span></span><br><span class="line">utf8_to_b64(<span class="string">&quot;测试&quot;</span>); <span class="comment">// &quot;5rWL6K+V&quot;</span></span><br><span class="line">b64_to_utf8(<span class="string">&quot;5rWL6K+V&quot;</span>); <span class="comment">// &quot;测试&quot;</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+        <tag>Node.js</tag>
+        <tag>Base64</tag>
+        <tag>UTF-8</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>VPS 使用 Caddy 快速搭建 Nextcloud 全过程</title>
     <url>/posts/caddy-nextcloud/</url>
     <content><![CDATA[<p>今天准备做一个完整的采用 Caddy Web Server 部署 NextCloud 的教程。本教程除 Web 服务器配置，部分参考橙叶博客文章——<span class="exturl" data-url="aHR0cHM6Ly93d3cub3JnbGVhZi5jb20vMjIwMy5odG1s">VPS 快速完美部署 ownCloud/Nextcloud 全过程<i class="fa fa-external-link-alt"></i></span>。有什么问题，欢迎在评论区留言或者联系我，我一定会及时回复的。</p>
@@ -6734,6 +6798,46 @@ SWIFT 代码：CIBKCNBJ100<br>
       </tags>
   </entry>
   <entry>
+    <title>本站已全面启用AMP</title>
+    <url>/posts/hexo-enable-amp/</url>
+    <content><![CDATA[<p>早有听闻 Google 的 AMP，能够显著加快网站的移动访问。现在本站终于全面启用了 AMP，现在已经有部分 AMP 页面加入了索引，效果很不错。</p>
+<span id="more"></span>
+<h2 id="AMP-简介">AMP 简介</h2>
+<p>Accelerated Mobile Pages（简称 AMP，意为“加速移动页面”）是 Google 带领开发的开源项目，目的是为提升移动设备对网站的访问速度。AMP 也可指其派生的标准和库等项目成果。AMP 在 HTML 等广泛使用的网络技术基础上进行改良，它的核心称作 AMP HTML，是 HTML 的一种。服务于技术预览期结束后的 2016 年 2 月正式发布。</p>
+<p><img data-src="https://img.iszy.xyz/20190318213401.png?x-oss-process=style/big" alt=""></p>
+<h2 id="Hexo-博客启用方式">Hexo 博客启用方式</h2>
+<p>本站采用 NexT 主题，就以此作为演示。</p>
+<h3 id="安装hexo-generator-amp插件">安装<code>hexo-generator-amp</code>插件</h3>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-amp --save</span><br></pre></td></tr></table></figure>
+<p>如果不成功，加个<code>sudo</code>再试一下。</p>
+<h3 id="修改主题">修改主题</h3>
+<p>本文使用的是 NexT 主题 v6.4.0，这个版本已有提供用户自定义增加内容的设置。</p>
+<p>打开<code>themes/next/layout/_custom</code>文件夹中的<code>head.swig</code>文件。</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vi themes/next/layout/_custom/head.swig</span><br></pre></td></tr></table></figure>
+<p>在文件中添加如下内容。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% if is_post() and config.generator_amp %&#125;</span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;amphtml&quot;</span> <span class="attr">href</span>=<span class="string">&quot;./amp/&quot;</span> /&gt;</span></span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="修改站点配置">修改站点配置</h3>
+<p>打开<strong>站点配置文件</strong><code>_config.yml</code>，加入以下内容。</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">generator_amp:</span></span><br><span class="line">  <span class="attr">templateDir:</span> <span class="string">amp-template</span></span><br><span class="line">  <span class="attr">assetDistDir:</span> <span class="string">amp-dist</span></span><br><span class="line">  <span class="attr">logo:</span></span><br><span class="line">    <span class="attr">path:</span> <span class="string">sample/sample-logo.png</span></span><br><span class="line">    <span class="attr">width:</span> <span class="number">600</span></span><br><span class="line">    <span class="attr">height:</span> <span class="number">60</span></span><br><span class="line">  <span class="attr">substituteTitleImage:</span></span><br><span class="line">    <span class="attr">path:</span> <span class="string">sample/sample-substituteTitleImage.png</span></span><br><span class="line">    <span class="attr">width:</span> <span class="number">1024</span></span><br><span class="line">    <span class="attr">height:</span> <span class="number">800</span></span><br><span class="line">  <span class="attr">warningLog:</span> <span class="literal">false</span> <span class="comment"># To display warning, please set true.</span></span><br><span class="line">  <span class="attr">validateAMP:</span> <span class="literal">true</span> <span class="comment"># To AMP HTML validate automatically, please set true.</span></span><br></pre></td></tr></table></figure>
+<h3 id="部署">部署</h3>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
+<h2 id="查看效果">查看效果</h2>
+<p>在我的每篇文章地址后加上<code>./amp/</code>即可看到效果，以本文为例。</p>
+<p><img data-src="https://img.iszy.xyz/20190318213417.png" alt=""></p>
+<h2 id="Google-的-AMP-测试">Google 的 AMP 测试</h2>
+<p>可以使用 Google 的<span class="exturl" data-url="aHR0cHM6Ly9zZWFyY2guZ29vZ2xlLmNvbS90ZXN0L2FtcA==">AMP 测试<i class="fa fa-external-link-alt"></i></span>来测试你的 AMP 网页的有效性。然后你就能放心地将网页提交给 Google 和百度了。</p>
+<p><img data-src="https://img.iszy.xyz/20190318213428.png?x-oss-process=style/big" alt=""></p>
+]]></content>
+      <categories>
+        <category>建站</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>建站</tag>
+        <tag>AMP</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Ubuntu部署Hadoop集群记录</title>
     <url>/posts/hadoop-cluster-setup/</url>
     <content><![CDATA[<p>今天记录一下，部署 Hadoop 集群的过程。</p>
@@ -6899,46 +7003,6 @@ SWIFT 代码：CIBKCNBJ100<br>
         <tag>Ubuntu</tag>
         <tag>Hadoop</tag>
         <tag>集群</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>本站已全面启用AMP</title>
-    <url>/posts/hexo-enable-amp/</url>
-    <content><![CDATA[<p>早有听闻 Google 的 AMP，能够显著加快网站的移动访问。现在本站终于全面启用了 AMP，现在已经有部分 AMP 页面加入了索引，效果很不错。</p>
-<span id="more"></span>
-<h2 id="AMP-简介">AMP 简介</h2>
-<p>Accelerated Mobile Pages（简称 AMP，意为“加速移动页面”）是 Google 带领开发的开源项目，目的是为提升移动设备对网站的访问速度。AMP 也可指其派生的标准和库等项目成果。AMP 在 HTML 等广泛使用的网络技术基础上进行改良，它的核心称作 AMP HTML，是 HTML 的一种。服务于技术预览期结束后的 2016 年 2 月正式发布。</p>
-<p><img data-src="https://img.iszy.xyz/20190318213401.png?x-oss-process=style/big" alt=""></p>
-<h2 id="Hexo-博客启用方式">Hexo 博客启用方式</h2>
-<p>本站采用 NexT 主题，就以此作为演示。</p>
-<h3 id="安装hexo-generator-amp插件">安装<code>hexo-generator-amp</code>插件</h3>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-amp --save</span><br></pre></td></tr></table></figure>
-<p>如果不成功，加个<code>sudo</code>再试一下。</p>
-<h3 id="修改主题">修改主题</h3>
-<p>本文使用的是 NexT 主题 v6.4.0，这个版本已有提供用户自定义增加内容的设置。</p>
-<p>打开<code>themes/next/layout/_custom</code>文件夹中的<code>head.swig</code>文件。</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vi themes/next/layout/_custom/head.swig</span><br></pre></td></tr></table></figure>
-<p>在文件中添加如下内容。</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% if is_post() and config.generator_amp %&#125;</span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;amphtml&quot;</span> <span class="attr">href</span>=<span class="string">&quot;./amp/&quot;</span> /&gt;</span></span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="修改站点配置">修改站点配置</h3>
-<p>打开<strong>站点配置文件</strong><code>_config.yml</code>，加入以下内容。</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">generator_amp:</span></span><br><span class="line">  <span class="attr">templateDir:</span> <span class="string">amp-template</span></span><br><span class="line">  <span class="attr">assetDistDir:</span> <span class="string">amp-dist</span></span><br><span class="line">  <span class="attr">logo:</span></span><br><span class="line">    <span class="attr">path:</span> <span class="string">sample/sample-logo.png</span></span><br><span class="line">    <span class="attr">width:</span> <span class="number">600</span></span><br><span class="line">    <span class="attr">height:</span> <span class="number">60</span></span><br><span class="line">  <span class="attr">substituteTitleImage:</span></span><br><span class="line">    <span class="attr">path:</span> <span class="string">sample/sample-substituteTitleImage.png</span></span><br><span class="line">    <span class="attr">width:</span> <span class="number">1024</span></span><br><span class="line">    <span class="attr">height:</span> <span class="number">800</span></span><br><span class="line">  <span class="attr">warningLog:</span> <span class="literal">false</span> <span class="comment"># To display warning, please set true.</span></span><br><span class="line">  <span class="attr">validateAMP:</span> <span class="literal">true</span> <span class="comment"># To AMP HTML validate automatically, please set true.</span></span><br></pre></td></tr></table></figure>
-<h3 id="部署">部署</h3>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
-<h2 id="查看效果">查看效果</h2>
-<p>在我的每篇文章地址后加上<code>./amp/</code>即可看到效果，以本文为例。</p>
-<p><img data-src="https://img.iszy.xyz/20190318213417.png" alt=""></p>
-<h2 id="Google-的-AMP-测试">Google 的 AMP 测试</h2>
-<p>可以使用 Google 的<span class="exturl" data-url="aHR0cHM6Ly9zZWFyY2guZ29vZ2xlLmNvbS90ZXN0L2FtcA==">AMP 测试<i class="fa fa-external-link-alt"></i></span>来测试你的 AMP 网页的有效性。然后你就能放心地将网页提交给 Google 和百度了。</p>
-<p><img data-src="https://img.iszy.xyz/20190318213428.png?x-oss-process=style/big" alt=""></p>
-]]></content>
-      <categories>
-        <category>建站</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>建站</tag>
-        <tag>AMP</tag>
       </tags>
   </entry>
   <entry>
@@ -7699,7 +7763,7 @@ SWIFT 代码：CIBKCNBJ100<br>
       </categories>
       <tags>
         <tag>JavaScript</tag>
-        <tag>Nodejs</tag>
+        <tag>Node.js</tag>
       </tags>
   </entry>
   <entry>
@@ -10089,8 +10153,8 @@ V2Club(旧蓝岸)，一家专门提供 v2ray 代理服务的服务商。或许�
       </categories>
       <tags>
         <tag>Docker</tag>
+        <tag>Node.js</tag>
         <tag>Telegram</tag>
-        <tag>Nodejs</tag>
         <tag>ASF</tag>
       </tags>
   </entry>
