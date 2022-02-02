@@ -11,7 +11,6 @@ mathjax: true
 date: 2022-02-03 00:26:51
 ---
 
-
 记录下 JavaScript 实现 UTF-8 下的 Base64 编解码。
 
 <!--more-->
@@ -134,4 +133,20 @@ function b64_to_utf8(str) {
 // 用例:
 utf8_to_b64("测试"); // "5rWL6K+V"
 b64_to_utf8("5rWL6K+V"); // "测试"
+```
+
+## Node.js 下的 Base64 编解码
+
+在 Node.js 中使用上面的方法，你可能会发现，`btoa`和`atob`方法，由于只支持 ASCII 方法也已经被标记为废弃了，那么在 Node.js 中用什么方法呢？
+
+Node.js 中提供了一个更加简便的方法，那就是利用`Buffer`，除了支持字符串，也支持其他数据。
+
+```js
+function utf8_to_b64(str) {
+  return Buffer.from(str).toString("base64");
+}
+
+function b64_to_utf8(str) {
+  return Buffer.from(str, "base64").toString("utf8");
+}
 ```
