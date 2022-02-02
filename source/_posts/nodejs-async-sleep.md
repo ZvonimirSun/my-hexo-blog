@@ -5,7 +5,7 @@ updated: 2019-03-08 14:18:04
 categories:
   - 编程
 tags:
-  - Nodejs
+  - Node.js
   - JavaScript
 keywords: async, sleep, nodejs, javascript
 ---
