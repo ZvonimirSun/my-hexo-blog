@@ -5433,6 +5433,10 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <h4 id="解决方法-2">解决方法</h4>
 <p>虽说<code>escape</code>是对百分号编码的非标准实现，但是在上面的方法中我们实际上利用了<code>escape</code>的这种特性，这边提供了不使用<code>unescape</code>和<code>escape</code>方法后的实现。</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">utf8_to_b64</span>(<span class="params">str</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> btoa(</span><br><span class="line">    <span class="built_in">encodeURIComponent</span>(str).replace(<span class="regexp">/%([0-9A-F]&#123;2&#125;)/g</span>, <span class="function"><span class="keyword">function</span> (<span class="params">match, p1</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="built_in">String</span>.fromCharCode(<span class="string">&quot;0x&quot;</span> + p1);</span><br><span class="line">    &#125;)</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">b64_to_utf8</span>(<span class="params">str</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">decodeURIComponent</span>(</span><br><span class="line">    atob(str)</span><br><span class="line">      .split(<span class="string">&quot;&quot;</span>)</span><br><span class="line">      .map(<span class="function"><span class="keyword">function</span> (<span class="params">c</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;%&quot;</span> + (<span class="string">&quot;00&quot;</span> + c.charCodeAt(<span class="number">0</span>).toString(<span class="number">16</span>)).slice(-<span class="number">2</span>);</span><br><span class="line">      &#125;)</span><br><span class="line">      .join(<span class="string">&quot;&quot;</span>)</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 用例:</span></span><br><span class="line">utf8_to_b64(<span class="string">&quot;测试&quot;</span>); <span class="comment">// &quot;5rWL6K+V&quot;</span></span><br><span class="line">b64_to_utf8(<span class="string">&quot;5rWL6K+V&quot;</span>); <span class="comment">// &quot;测试&quot;</span></span><br></pre></td></tr></table></figure>
+<h2 id="Node-js-下的-Base64-编解码">Node.js 下的 Base64 编解码</h2>
+<p>在 Node.js 中使用上面的方法，你可能会发现，<code>btoa</code>和<code>atob</code>方法，由于只支持 ASCII 方法也已经被标记为废弃了，那么在 Node.js 中用什么方法呢？</p>
+<p>Node.js 中提供了一个更加简便的方法，那就是利用<code>Buffer</code>，除了支持字符串，也支持其他数据。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">utf8_to_b64</span>(<span class="params">str</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> Buffer.from(str).toString(<span class="string">&quot;base64&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">b64_to_utf8</span>(<span class="params">str</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> Buffer.from(str, <span class="string">&quot;base64&quot;</span>).toString(<span class="string">&quot;utf8&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>编程</category>
@@ -6798,46 +6802,6 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
       </tags>
   </entry>
   <entry>
-    <title>本站已全面启用AMP</title>
-    <url>/posts/hexo-enable-amp/</url>
-    <content><![CDATA[<p>早有听闻 Google 的 AMP，能够显著加快网站的移动访问。现在本站终于全面启用了 AMP，现在已经有部分 AMP 页面加入了索引，效果很不错。</p>
-<span id="more"></span>
-<h2 id="AMP-简介">AMP 简介</h2>
-<p>Accelerated Mobile Pages（简称 AMP，意为“加速移动页面”）是 Google 带领开发的开源项目，目的是为提升移动设备对网站的访问速度。AMP 也可指其派生的标准和库等项目成果。AMP 在 HTML 等广泛使用的网络技术基础上进行改良，它的核心称作 AMP HTML，是 HTML 的一种。服务于技术预览期结束后的 2016 年 2 月正式发布。</p>
-<p><img data-src="https://img.iszy.xyz/20190318213401.png?x-oss-process=style/big" alt=""></p>
-<h2 id="Hexo-博客启用方式">Hexo 博客启用方式</h2>
-<p>本站采用 NexT 主题，就以此作为演示。</p>
-<h3 id="安装hexo-generator-amp插件">安装<code>hexo-generator-amp</code>插件</h3>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-amp --save</span><br></pre></td></tr></table></figure>
-<p>如果不成功，加个<code>sudo</code>再试一下。</p>
-<h3 id="修改主题">修改主题</h3>
-<p>本文使用的是 NexT 主题 v6.4.0，这个版本已有提供用户自定义增加内容的设置。</p>
-<p>打开<code>themes/next/layout/_custom</code>文件夹中的<code>head.swig</code>文件。</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vi themes/next/layout/_custom/head.swig</span><br></pre></td></tr></table></figure>
-<p>在文件中添加如下内容。</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% if is_post() and config.generator_amp %&#125;</span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;amphtml&quot;</span> <span class="attr">href</span>=<span class="string">&quot;./amp/&quot;</span> /&gt;</span></span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="修改站点配置">修改站点配置</h3>
-<p>打开<strong>站点配置文件</strong><code>_config.yml</code>，加入以下内容。</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">generator_amp:</span></span><br><span class="line">  <span class="attr">templateDir:</span> <span class="string">amp-template</span></span><br><span class="line">  <span class="attr">assetDistDir:</span> <span class="string">amp-dist</span></span><br><span class="line">  <span class="attr">logo:</span></span><br><span class="line">    <span class="attr">path:</span> <span class="string">sample/sample-logo.png</span></span><br><span class="line">    <span class="attr">width:</span> <span class="number">600</span></span><br><span class="line">    <span class="attr">height:</span> <span class="number">60</span></span><br><span class="line">  <span class="attr">substituteTitleImage:</span></span><br><span class="line">    <span class="attr">path:</span> <span class="string">sample/sample-substituteTitleImage.png</span></span><br><span class="line">    <span class="attr">width:</span> <span class="number">1024</span></span><br><span class="line">    <span class="attr">height:</span> <span class="number">800</span></span><br><span class="line">  <span class="attr">warningLog:</span> <span class="literal">false</span> <span class="comment"># To display warning, please set true.</span></span><br><span class="line">  <span class="attr">validateAMP:</span> <span class="literal">true</span> <span class="comment"># To AMP HTML validate automatically, please set true.</span></span><br></pre></td></tr></table></figure>
-<h3 id="部署">部署</h3>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
-<h2 id="查看效果">查看效果</h2>
-<p>在我的每篇文章地址后加上<code>./amp/</code>即可看到效果，以本文为例。</p>
-<p><img data-src="https://img.iszy.xyz/20190318213417.png" alt=""></p>
-<h2 id="Google-的-AMP-测试">Google 的 AMP 测试</h2>
-<p>可以使用 Google 的<span class="exturl" data-url="aHR0cHM6Ly9zZWFyY2guZ29vZ2xlLmNvbS90ZXN0L2FtcA==">AMP 测试<i class="fa fa-external-link-alt"></i></span>来测试你的 AMP 网页的有效性。然后你就能放心地将网页提交给 Google 和百度了。</p>
-<p><img data-src="https://img.iszy.xyz/20190318213428.png?x-oss-process=style/big" alt=""></p>
-]]></content>
-      <categories>
-        <category>建站</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>建站</tag>
-        <tag>AMP</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Ubuntu部署Hadoop集群记录</title>
     <url>/posts/hadoop-cluster-setup/</url>
     <content><![CDATA[<p>今天记录一下，部署 Hadoop 集群的过程。</p>
@@ -7003,6 +6967,46 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
         <tag>Ubuntu</tag>
         <tag>Hadoop</tag>
         <tag>集群</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>本站已全面启用AMP</title>
+    <url>/posts/hexo-enable-amp/</url>
+    <content><![CDATA[<p>早有听闻 Google 的 AMP，能够显著加快网站的移动访问。现在本站终于全面启用了 AMP，现在已经有部分 AMP 页面加入了索引，效果很不错。</p>
+<span id="more"></span>
+<h2 id="AMP-简介">AMP 简介</h2>
+<p>Accelerated Mobile Pages（简称 AMP，意为“加速移动页面”）是 Google 带领开发的开源项目，目的是为提升移动设备对网站的访问速度。AMP 也可指其派生的标准和库等项目成果。AMP 在 HTML 等广泛使用的网络技术基础上进行改良，它的核心称作 AMP HTML，是 HTML 的一种。服务于技术预览期结束后的 2016 年 2 月正式发布。</p>
+<p><img data-src="https://img.iszy.xyz/20190318213401.png?x-oss-process=style/big" alt=""></p>
+<h2 id="Hexo-博客启用方式">Hexo 博客启用方式</h2>
+<p>本站采用 NexT 主题，就以此作为演示。</p>
+<h3 id="安装hexo-generator-amp插件">安装<code>hexo-generator-amp</code>插件</h3>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-amp --save</span><br></pre></td></tr></table></figure>
+<p>如果不成功，加个<code>sudo</code>再试一下。</p>
+<h3 id="修改主题">修改主题</h3>
+<p>本文使用的是 NexT 主题 v6.4.0，这个版本已有提供用户自定义增加内容的设置。</p>
+<p>打开<code>themes/next/layout/_custom</code>文件夹中的<code>head.swig</code>文件。</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vi themes/next/layout/_custom/head.swig</span><br></pre></td></tr></table></figure>
+<p>在文件中添加如下内容。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% if is_post() and config.generator_amp %&#125;</span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;amphtml&quot;</span> <span class="attr">href</span>=<span class="string">&quot;./amp/&quot;</span> /&gt;</span></span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="修改站点配置">修改站点配置</h3>
+<p>打开<strong>站点配置文件</strong><code>_config.yml</code>，加入以下内容。</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">generator_amp:</span></span><br><span class="line">  <span class="attr">templateDir:</span> <span class="string">amp-template</span></span><br><span class="line">  <span class="attr">assetDistDir:</span> <span class="string">amp-dist</span></span><br><span class="line">  <span class="attr">logo:</span></span><br><span class="line">    <span class="attr">path:</span> <span class="string">sample/sample-logo.png</span></span><br><span class="line">    <span class="attr">width:</span> <span class="number">600</span></span><br><span class="line">    <span class="attr">height:</span> <span class="number">60</span></span><br><span class="line">  <span class="attr">substituteTitleImage:</span></span><br><span class="line">    <span class="attr">path:</span> <span class="string">sample/sample-substituteTitleImage.png</span></span><br><span class="line">    <span class="attr">width:</span> <span class="number">1024</span></span><br><span class="line">    <span class="attr">height:</span> <span class="number">800</span></span><br><span class="line">  <span class="attr">warningLog:</span> <span class="literal">false</span> <span class="comment"># To display warning, please set true.</span></span><br><span class="line">  <span class="attr">validateAMP:</span> <span class="literal">true</span> <span class="comment"># To AMP HTML validate automatically, please set true.</span></span><br></pre></td></tr></table></figure>
+<h3 id="部署">部署</h3>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
+<h2 id="查看效果">查看效果</h2>
+<p>在我的每篇文章地址后加上<code>./amp/</code>即可看到效果，以本文为例。</p>
+<p><img data-src="https://img.iszy.xyz/20190318213417.png" alt=""></p>
+<h2 id="Google-的-AMP-测试">Google 的 AMP 测试</h2>
+<p>可以使用 Google 的<span class="exturl" data-url="aHR0cHM6Ly9zZWFyY2guZ29vZ2xlLmNvbS90ZXN0L2FtcA==">AMP 测试<i class="fa fa-external-link-alt"></i></span>来测试你的 AMP 网页的有效性。然后你就能放心地将网页提交给 Google 和百度了。</p>
+<p><img data-src="https://img.iszy.xyz/20190318213428.png?x-oss-process=style/big" alt=""></p>
+]]></content>
+      <categories>
+        <category>建站</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>建站</tag>
+        <tag>AMP</tag>
       </tags>
   </entry>
   <entry>
