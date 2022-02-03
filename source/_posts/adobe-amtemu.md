@@ -3,10 +3,11 @@ title: 超强 Adobe 系列软件一键破解工具——amtemu
 date: 2018-03-30 12:00:00
 updated: 2019-03-05 12:00:00
 categories:
-  - 软件
+  - 工具
 tags:
   - Adobe
-keywords: adobe, amtemu, 破解
+  - amtemu
+  - 破解
 ---
 
 我今天想在这里介绍一个超强大的适用于全部 adobe 系列软件的一键破解工具——amtemu。虽然这个软件已经出了很久了，但是不妨碍它强大啊，能够有效破解最新版 adobe 系列软件。

@@ -3,11 +3,11 @@ title: 申请AdSense记录
 date: 2018-08-18 10:54:33
 updated: 2018-08-31 14:46:33
 categories:
-  - 建站
+  - 其他
 tags:
   - 广告
-  - Google AdSense
-keywords: AdSense,谷歌,google
+  - Google
+  - AdSence
 ---
 
 在我博客改版后第一次尝试申请 Google AdSense，这次希望可以成功。

@@ -3,11 +3,11 @@ title: ArcGIS批量生成UUID作为唯一ID
 date: 2019-09-06 12:00:00
 updated: 2019-09-06 12:00:00
 categories:
-  - GIS
+  - 技术
 tags:
   - ArcGIS
   - Python
-keywords: arcgis,uuid,python,批量
+  - UUID
 ---
 
 最近需要将一批数据添加唯一 ID，UUID 作为一个具有唯一性的通用编号方案，正适合承担这个任务。

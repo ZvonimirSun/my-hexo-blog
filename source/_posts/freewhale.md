@@ -2,7 +2,7 @@
 title: 自由鲸FreeWhale--性价比SSR/V2Ray机场推荐
 date: 2019-04-11 11:47:31
 categories:
-  - 推广
+  - 其他
 tags:
   - 翻墙
   - 科学上网

@@ -3,7 +3,7 @@ title: NexT主题v8配置自定义字体
 date: 2021-02-25 03:53:59
 updated: 2021-02-25 03:53:59
 categories:
-  - 建站
+  - 工具
 tags:
   - Hexo
   - NexT

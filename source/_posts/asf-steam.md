@@ -3,12 +3,14 @@ title: 在Ubuntu 16.04环境下使用ASF(v3)实现云挂卡
 date: 2018-08-08 00:59:52
 updated: 2018-08-08 00:59:52
 categories:
-  - 应用部署
+  - 应用
 tags:
   - Steam
   - ArchiSteamFarm
+  - ASF
   - 挂卡
-keywords: asf,ArchiSteamFarm,挂卡,steam,linux,ubuntu
+  - Ubuntu
+  - Linux
 ---
 
 挂卡是什么，我再次就不赘述了。Steam 玩家估计都有所了解，还不清楚的可以谷歌一下。今天在此分享一下如何在在 Ubuntu 16.04 环境下使用 ArchiSteamFarm(v3)实现云挂卡，24 小时无人值守。

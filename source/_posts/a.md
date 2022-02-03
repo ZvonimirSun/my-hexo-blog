@@ -3,12 +3,14 @@ title: (转载)低微漏洞处理办法记录
 date: 2021-01-12 09:39:41
 updated: 2021-01-12 09:39:41
 categories:
-  - 系统
-  - Linux
+  - [技术]
+  - [转载]
 tags:
   - Linux
   - CVE
+author: 诸子流
 mathjax: true
+copyright: false
 ---
 
 > 原文链接: [低微漏洞处理办法记录](https://www.cnblogs.com/lsdb/p/8204578.html) —— 诸子流

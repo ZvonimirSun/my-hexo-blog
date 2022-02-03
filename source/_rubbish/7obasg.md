@@ -3,7 +3,7 @@ title: iOS 14.5可以用Apple Watch解锁iPhone了
 date: 2021-02-02 05:09:25
 updated: 2021-02-02 05:09:25
 categories:
-  - 杂记
+  - 杂谈
 tags:
   - iOS
   - Apple

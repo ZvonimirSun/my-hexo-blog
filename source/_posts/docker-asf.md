@@ -3,7 +3,7 @@ title: 通过Docker快速部署ASF(ArchiSteamFarm)挂卡
 date: 2018-11-17 00:16:00
 updated: 2018-11-17 00:16:00
 categories:
-  - 应用部署
+  - 应用
 tags:
   - Docker
   - Steam
@@ -114,34 +114,34 @@ docker run -it -p 1242:1242 -v /home/asf:/app/config --name asf justarchi/archis
 
 ```
 server {
-        listen *:443 ssl;
-        server_name asf.mydomain.com;
-        ssl_certificate /path/to/your/certificate.crt;
-        ssl_certificate_key /path/to/your/certificate.key;
+    listen *:443 ssl;
+    server_name asf.mydomain.com;
+    ssl_certificate /path/to/your/certificate.crt;
+    ssl_certificate_key /path/to/your/certificate.key;
 
-	location /Api/NLog {
-		proxy_pass http://127.0.0.1:1242;
-#		proxy_set_header Host 127.0.0.1; # Only if you need to override default host
-		proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-		proxy_set_header X-Forwarded-Host $host:$server_port;
-		proxy_set_header X-Forwarded-Proto $scheme;
-		proxy_set_header X-Forwarded-Server $host;
-		proxy_set_header X-Real-IP $remote_addr;
+    location /Api/NLog {
+        proxy_pass http://127.0.0.1:1242;
+#        proxy_set_header Host 127.0.0.1; # Only if you need to override default host
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Host $host:$server_port;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header X-Forwarded-Server $host;
+        proxy_set_header X-Real-IP $remote_addr;
 
-		# We add those 3 extra options for websockets proxying, see https://nginx.org/en/docs/http/websocket.html
-		proxy_http_version 1.1;
-		proxy_set_header Connection "Upgrade";
-		proxy_set_header Upgrade $http_upgrade;
-	}
+        # We add those 3 extra options for websockets proxying, see https://nginx.org/en/docs/http/websocket.html
+        proxy_http_version 1.1;
+        proxy_set_header Connection "Upgrade";
+        proxy_set_header Upgrade $http_upgrade;
+    }
 
-	location / {
-		proxy_pass http://127.0.0.1:1242;
-#		proxy_set_header Host 127.0.0.1; # Only if you need to override default host
-		proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-		proxy_set_header X-Forwarded-Host $host:$server_port;
-		proxy_set_header X-Forwarded-Proto $scheme;
-		proxy_set_header X-Forwarded-Server $host;
-		proxy_set_header X-Real-IP $remote_addr;
-	}
+    location / {
+        proxy_pass http://127.0.0.1:1242;
+#        proxy_set_header Host 127.0.0.1; # Only if you need to override default host
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Host $host:$server_port;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header X-Forwarded-Server $host;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
 }
 ```

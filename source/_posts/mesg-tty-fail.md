@@ -3,12 +3,10 @@ title: "解决ttyname failed: Inappropriate ioctl for device问题"
 date: 2018-08-11 09:41:17
 updated: 2018-08-11 09:41:17
 categories:
-  - 系统
-  - Linux
+  - 技术
 tags:
   - 终端
   - Linux
-keywords: ttyname,fail,iotl,linux,git,deploy
 ---
 
 在我使用`git push`、`hexo deploy`等类似操作时，时常会看到`ttyname failed: Inappropriate ioctl for device`的报错信息。这怎么能行，不是`0 errors,0 warnings`能行？这里就来记录一下这个问题的解决办法。

@@ -3,10 +3,10 @@ title: (转载)为什么现在很少有男生追女生了？
 date: 2018-07-07 12:00:00
 updated: 2018-07-07 12:00:00
 categories:
-  - 杂记
-tags:
-  - 转载
+  - [杂谈]
+  - [转载]
 copyright: false
+author: COAadmin
 ---
 
 > 原文链接：[为什么现在很少有男生追女生了？](http://www.coaadmin.cn/life/why-are-few-boys-chasing-girls-now.html) —— COAadmin

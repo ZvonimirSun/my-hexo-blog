@@ -3,7 +3,7 @@ title: Ubuntu部署Spark集群记录
 date: 2020-01-05 21:12:00
 updated: 2020-01-05 21:12:00
 categories:
-  - 应用部署
+  - 应用
 tags:
   - Hadoop
   - Spark

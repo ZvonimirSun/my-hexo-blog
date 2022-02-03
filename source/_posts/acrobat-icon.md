@@ -3,7 +3,7 @@ title: 解决WIN 10中Acrobat图标异常问题
 date: 2018-12-24 13:46:00
 updated: 2018-12-24 13:46:00
 categories:
-  - 杂记
+  - 其他
 tags:
   - Adobe
   - Arcobat

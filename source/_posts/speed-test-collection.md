@@ -3,8 +3,10 @@ title: 机场测速集合
 date: 2019-03-02 14:20:52
 updated: 2021-12-18 11:20:52
 categories:
+  - 其他
 tags:
   - 科学上网
+  - 测速
 permalink: /page/speed-test-collection/
 ---
 

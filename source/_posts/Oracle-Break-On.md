@@ -3,7 +3,7 @@ title: Oracle PL/SQL BREAK-ON排列实例
 date: 2017-12-05 12:00:00
 updated: 2017-12-05 12:00:00
 categories:
-  - 数据库
+  - 技术
 tags:
   - Oracle
   - SQL
@@ -18,15 +18,15 @@ keywords: 笔记, Oracle, break on, SQL*Plus
 
 1. `BRE[AK][ON report_element [action [action]]] ...`
 
-- report_element 的语法为`{column|expr|ROW|REPORT}`
+   - report_element 的语法为`{column|expr|ROW|REPORT}`
 
-- action 的语法为`[SKI[P] n|[SKI[P]] PAGE][NODUP[LICATES]|DUP[LICATES]]`
+   - action 的语法为`[SKI[P] n|[SKI[P]] PAGE][NODUP[LICATES]|DUP[LICATES]]`
 
 2. 指定报告中发生更改的位置以及要执行的格式化操作，比如：
 
-- 抑制显示给定列的重复值。
-- 每次给定列值更改时跳过一行。
-- 每次给定列值发生变化或在报告结束时打印计算的数字。
+   - 抑制显示给定列的重复值。
+   - 每次给定列值更改时跳过一行。
+   - 每次给定列值发生变化或在报告结束时打印计算的数字。
 
 3. 不带参数直接输入 BREAK 来查看当前的 BREAK 定义。
 

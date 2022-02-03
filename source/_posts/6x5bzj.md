@@ -3,7 +3,7 @@ title: 解决Elasticsearch查询记录超过10000时的异常
 date: 2021-02-26 03:50:06
 updated: 2021-02-26 03:50:06
 categories:
-  - 编程
+  - 技术
 tags:
   - ElasticSearch
 ---

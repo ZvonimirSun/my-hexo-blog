@@ -2,7 +2,7 @@
 title: 【评测2022】优质SS/SSR/Trojan/V2Ray机场推荐【春节特惠】
 date: 2019-01-03 03:11:50
 categories:
-  - 推广
+  - 其他
 tags:
   - 翻墙
   - 科学上网

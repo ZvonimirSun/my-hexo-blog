@@ -1,11 +1,10 @@
 ---
 title: BT下载中的Peer状态有什么含义
 categories:
-  - 杂记
+  - 技术
 date: 2022-02-03 18:29:02
 tags:
 ---
-
 
 记录下 BT 下载中节点(Peer)状态码含义。
 

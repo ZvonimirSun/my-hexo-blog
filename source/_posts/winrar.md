@@ -1,10 +1,11 @@
 ---
-title: 经典压缩软件WinRAR官方中文无广告正式版
+title: 经典压缩软件WinRAR 6.10官方中文无广告正式版
 date: 2018-10-11 21:12:00
-updated: 2019-05-20 14:12:00
 categories:
-  - 软件
-keywords: winrar,无广告
+  - 工具
+tags:
+  - WinRAR
+  - 无广告
 ---
 
 国内代理版本的 WinRAR 无论是否有 key，都有广告，这怎么能忍，尤其是其实有简体中文版本的无广告商业付费 WinRAR 的时候。在这里分享一下简体中文版本的无广告商业付费 WinRAR 的地址。
@@ -21,10 +22,10 @@ keywords: winrar,无广告
 
 ## 官网下载试用地址
 
-最新版本`5.71`，下载链接已更新。
+最新版本`6.10`，下载链接已更新。
 
-- 简体中文 64 位：[点击下载](https://www.win-rar.com/fileadmin/winrar-versions/sc20190509/wrr/winrar-x64-571sc.exe)
-- 简体中文 32 位：[点击下载](https://www.win-rar.com/fileadmin/winrar-versions/sc20190509/wrr/wrar571sc.exe)
+- 简体中文 64 位：[点击下载](https://www.win-rar.com/fileadmin/winrar-versions/sc/sc20220127/wrr/winrar-x64-610sc.exe)
+- 简体中文 32 位：[点击下载](https://www.win-rar.com/fileadmin/winrar-versions/sc/sc20220127/wrr/winrar-x32-610sc.exe)
 
 ## 支持正版
 

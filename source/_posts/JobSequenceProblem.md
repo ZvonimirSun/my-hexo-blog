@@ -3,7 +3,7 @@ title: 最佳工作序列算法
 date: 2017-09-26 09:00:00
 updated: 2017-09-26 09:00:00
 categories:
-  - 编程
+  - 技术
 tags:
   - GIS
   - Csharp

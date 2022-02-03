@@ -3,7 +3,7 @@ title: Google 中国竟然在 B 站发视频了
 date: 2018-05-24 12:00:00
 updated: 2018-05-24 12:00:00
 categories:
-  - 杂记
+  - 杂谈
 tags:
   - Google
   - Bilibili

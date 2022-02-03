@@ -3,8 +3,7 @@ title: Ubuntu 16.04 更改软件源
 date: 2018-05-05 12:00:00
 updated: 2018-05-05 12:00:00
 categories:
-  - 系统
-  - Linux
+  - 技术
 tags:
   - Ubuntu
   - 软件源

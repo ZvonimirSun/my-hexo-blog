@@ -3,7 +3,7 @@ title: JQuery 中 $.ajax 和 $.getJSON 的简单应用对比
 date: 2018-07-09 18:00:00
 updated: 2018-07-09 18:00:00
 categories:
-  - 编程
+  - 技术
 tags:
   - JavaScript
   - JQuery

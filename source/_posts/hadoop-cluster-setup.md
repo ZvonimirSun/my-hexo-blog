@@ -3,7 +3,7 @@ title: Ubuntu部署Hadoop集群记录
 date: 2019-12-01 20:12:00
 updated: 2019-12-01 20:12:00
 categories:
-  - 应用部署
+  - 应用
 tags:
   - Hadoop
   - 集群
@@ -308,4 +308,4 @@ tags:
       /opt/hadoop-2.7.3/sbin/start-yarn.sh
       ```
 
-   浏览器输入访问 http://master:50070 (替换 master 节点 IP)验证部署成功。
+   浏览器输入访问 [http://master:50070](http://master:50070) (替换 master 节点 IP)验证部署成功。

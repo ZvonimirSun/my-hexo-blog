@@ -3,7 +3,7 @@ title: v2ray配置文件简单说明和常见配置实例
 date: 2019-02-18 09:55:13
 updated: 2019-03-03 11:02:03
 categories:
-  - 杂记
+  - 杂谈
 tags:
   - 科学上网
   - V2Ray

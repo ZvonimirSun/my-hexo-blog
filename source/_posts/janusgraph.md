@@ -3,7 +3,7 @@ title: JanusGraph 图数据库搭建
 date: 2019-07-02 11:11:13
 updated: 2019-07-30 16:11:13
 categories:
-  - 应用部署
+  - 技术
 tags:
   - JanusGraph
   - Hbase
@@ -78,10 +78,10 @@ scriptEngines:
         plugins:
           {
             org.janusgraph.graphdb.tinkerpop.plugin.JanusGraphGremlinPlugin: {},
-            ? org.apache.tinkerpop.gremlin.server.jsr223.GremlinServerGremlinPlugin
-            : {},
-            ? org.apache.tinkerpop.gremlin.tinkergraph.jsr223.TinkerGraphGremlinPlugin
-            : {},
+            org.apache.tinkerpop.gremlin.server.jsr223.GremlinServerGremlinPlugin:
+              {},
+            org.apache.tinkerpop.gremlin.tinkergraph.jsr223.TinkerGraphGremlinPlugin:
+              {},
             org.apache.tinkerpop.gremlin.jsr223.ImportGremlinPlugin:
               {
                 classImports: [java.lang.Math],

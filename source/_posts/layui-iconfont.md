@@ -3,7 +3,7 @@ title: LayUI Icon 扩展 Iconfont 图标
 date: 2020-01-28 12:14:43
 updated: 2020-01-28 12:14:43
 categories:
-  - 编程
+  - 技术
 tags:
   - JavaScript
   - JQuery

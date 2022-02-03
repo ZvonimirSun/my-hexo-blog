@@ -3,7 +3,7 @@ title: 服务器无法访问的后果
 date: 2018-03-23 12:00:00
 updated: 2018-03-23 12:00:00
 categories:
-  - 杂记
+  - 杂谈
 tags:
   - VPS
   - SEO

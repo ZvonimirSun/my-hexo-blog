@@ -3,12 +3,12 @@ title: (转载)整合 Gmail 与 Mailgun 实现免费域名邮箱 — 香菇肥�
 date: 2018-07-06 12:00:00
 updated: 2018-07-06 12:00:00
 categories:
-  - 杂记
+  - [应用]
+  - [转载]
 tags:
   - Mailgun
   - Google
   - 域名邮箱
-  - 转载
 keywords: GMail,Mailgun,企业邮箱,域名邮箱,邮件服务器教程
 copyright: false
 ---

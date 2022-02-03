@@ -3,7 +3,7 @@ title: Oracle PL/SQL while loop循环实例
 date: 2017-11-29 12:00:00
 updated: 2017-11-29 12:00:00
 categories:
-  - 数据库
+  - 技术
 tags:
   - Oracle
   - SQL
@@ -20,7 +20,7 @@ keywords: Oracle, while-loop, 循环, PL/SQL
 
 ```sql
 WHILE condition LOOP
-	some_statements;
+    some_statements;
 END LOOP;
 ```
 
@@ -55,26 +55,26 @@ insert into power values(6,2,34);
 
 ```sql
 declare
-	a number;
-	b number;
-	x number;
-	y number;
+    a number;
+    b number;
+    x number;
+    y number;
 begin
-	a:=1;
-	b:=2;
-	while (b<=29) loop
-		select fee
-		into x
-		from power
-		where day=a;
-		select fee
-		into y
-		from power
-		where day=b;
-		insert into power values(6,a+2,x+y);
-		a:=a+1;
-		b:=b+1;
-	end loop;
+    a:=1;
+    b:=2;
+    while (b<=29) loop
+        select fee
+        into x
+        from power
+        where day=a;
+        select fee
+        into y
+        from power
+        where day=b;
+        insert into power values(6,a+2,x+y);
+        a:=a+1;
+        b:=b+1;
+    end loop;
 end;
 /
 ```

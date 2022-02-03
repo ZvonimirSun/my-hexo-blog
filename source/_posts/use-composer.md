@@ -3,7 +3,7 @@ title: Ubuntu 安装使用 Composer
 date: 2018-08-09 10:47:36
 updated: 2018-08-09 10:47:36
 categories:
-  - 应用部署
+  - 应用
 tags:
   - Composer
   - php

@@ -3,7 +3,7 @@ title: 阿里的《旅行青蛙·中国之旅》上线了
 date: 2018-05-09 12:00:00
 updated: 2018-05-09 12:00:00
 categories:
-  - 杂记
+  - 杂谈
 tags:
   - 游戏
 keywords: 旅行青蛙,travel,frog,淘宝,阿里

@@ -3,7 +3,7 @@ title: 奇异人生（Life is strange）
 date: 2017-10-02 12:00:00
 updated: 2017-10-02 12:00:00
 categories:
-  - 杂记
+  - 杂谈
 tags:
   - 游戏
   - 奇异人生
