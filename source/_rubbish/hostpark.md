@@ -3,7 +3,7 @@ title: 买 hostpark 云主机的烦心事
 date: 2018-03-22 12:00:00
 updated: 2018-03-22 12:00:00
 categories:
-  - 小记
+  - 杂记
 ---
 
 我这篇文章就是用来喷 hostpark 的。

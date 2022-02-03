@@ -3,7 +3,7 @@ title: 2017年终总结
 date: 2018-02-13 12:00:00
 updated: 2018-02-13 12:00:00
 categories:
-  - 小记
+  - 杂记
 tags:
   - 总结回顾
 keywords: 新年回顾

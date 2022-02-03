@@ -3,7 +3,7 @@ title: (转载)为什么现在很少有男生追女生了？
 date: 2018-07-07 12:00:00
 updated: 2018-07-07 12:00:00
 categories:
-  - 小记
+  - 杂记
 tags:
   - 转载
 copyright: false

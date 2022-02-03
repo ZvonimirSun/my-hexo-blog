@@ -3,7 +3,7 @@ title: 更换手机套餐的一点感慨
 date: 2018-04-22 12:00:00
 updated: 2018-04-22 12:00:00
 categories:
-  - 小记
+  - 杂记
 tags:
   - 手机套餐
 keywords: 手机套餐,联通
