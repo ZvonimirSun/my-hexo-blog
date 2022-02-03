@@ -18,7 +18,7 @@
 <p>这个东西隐藏的是真的很深，可能是开发者留出来的彩蛋，方便开发调试用？网上还有说可以输入<code>badidea</code>，亲测已经没有效果。不知道后续版本会不会移除<code>thisisunsafe</code>，理论上应该不会，毕竟不太可能误触。不然还得去 flags 页面关闭所有的安全警告，反而是更不安全了。</p>
 ]]></content>
       <categories>
-        <category>其他</category>
+        <category>杂记</category>
       </categories>
       <tags>
         <tag>MacOS</tag>
@@ -4620,7 +4620,7 @@
 <p>WSL 最初在 Win 10 Insider Preview build 14316 开始可用，现在正式版已经升级到 1803 版，内部版本号为 17134，功能已经完善了太多。除了受限于 Windows 文件系统，文件操作较慢，其他已经和原版 Ubuntu，不相上下，完全可以替代虚拟机，完成我的工作了，我感觉非常满意。</p>
 ]]></content>
       <categories>
-        <category>其他</category>
+        <category>杂记</category>
       </categories>
       <tags>
         <tag>WSL</tag>
@@ -4809,7 +4809,7 @@
 </ol>
 ]]></content>
       <categories>
-        <category>其他</category>
+        <category>杂记</category>
       </categories>
       <tags>
         <tag>Adobe</tag>
@@ -5323,7 +5323,7 @@ SWIFT 代码：CIBKCNBJ100<br>
 <p>至此，美化完成，相比之前的蓝底 PowerShell，我自认为已经好看了很多。我在 WSL 里也安装了 oh-my-zsh 可以说是完美衔接了。</p>
 ]]></content>
       <categories>
-        <category>其他</category>
+        <category>杂记</category>
       </categories>
       <tags>
         <tag>Scoop</tag>
@@ -5960,6 +5960,74 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
       </tags>
   </entry>
   <entry>
+    <title>BT下载中的Peer状态有什么含义</title>
+    <url>/posts/d/</url>
+    <content><![CDATA[<p>记录下 BT 下载中节点(Peer)状态码含义。</p>
+<span id="more"></span>
+<table>
+<thead>
+<tr>
+<th>状态码</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>O</td>
+<td>远程节点状态良好，未阻塞本客户端</td>
+</tr>
+<tr>
+<td>D</td>
+<td>正在从远程节点下载</td>
+</tr>
+<tr>
+<td>d</td>
+<td>如果远程节点允许，本客户端将会从该节点下载</td>
+</tr>
+<tr>
+<td>U</td>
+<td>正在上传到远程节点</td>
+</tr>
+<tr>
+<td>u</td>
+<td>如果远程节点请求，本客户端将会向该节点上传</td>
+</tr>
+<tr>
+<td>K</td>
+<td>远程节点未阻塞，但本客户端对远程节点提供的数据不感兴趣</td>
+</tr>
+<tr>
+<td>?</td>
+<td>本客户端未阻塞远程节点，但远程节点对本客户端提供的数据不感兴趣</td>
+</tr>
+<tr>
+<td>E</td>
+<td>加密连接</td>
+</tr>
+<tr>
+<td>H</td>
+<td>远程节点是通过 DHT 网络发现的</td>
+</tr>
+<tr>
+<td>X</td>
+<td>远程节点是通过节点间交换发现的(PEX)</td>
+</tr>
+<tr>
+<td>I</td>
+<td>该节点是一个传入节点</td>
+</tr>
+<tr>
+<td>T</td>
+<td>正在通过 uTP 连接该节点</td>
+</tr>
+</tbody>
+</table>
+]]></content>
+      <categories>
+        <category>杂记</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Docker一键部署LNMP</title>
     <url>/posts/dnmp/</url>
     <content><![CDATA[<p>之前一段时间，我已经把服务器上的应用全部 Docker 化了。我把我服务器上的 LNMP 配置，提取出来，来写一下如何用 Docker 部署一个最简单的 LNMP。</p>
@@ -6465,7 +6533,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <p>推荐使用 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RvcGpvaG53dS9NYWdpc2svcmVsZWFzZXMv">Magisk<i class="fa fa-external-link-alt"></i></span>。下载最新 Release 的 zip 安装包，通过 TWRP 直接刷入即可。卸载也是很简单的，下载对应版本<code>Magisk-uninstaller</code>的 zip 包，刷入即可。需要安装 Magisk Manager 进行管理，<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RvcGpvaG53dS9NYWdpc2svcmVsZWFzZXMvZG93bmxvYWQvbWFuYWdlci12Ny4wLjAvTWFnaXNrTWFuYWdlci12Ny4wLjAuYXBr">点击这里<i class="fa fa-external-link-alt"></i></span>下载。</p>
 ]]></content>
       <categories>
-        <category>其他</category>
+        <category>杂记</category>
       </categories>
       <tags>
         <tag>MIUI</tag>
@@ -6770,7 +6838,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <p>如果大家在使用过程中遇到任何问题，欢迎在这里留言，我将及时回复。本文作者为香菇肥牛，原文地址为<span class="exturl" data-url="aHR0cHM6Ly9xaW5nLnN1L2FydGljbGUvMTMxLmh0bWw=">https://qing.su/article/131.html<i class="fa fa-external-link-alt"></i></span>。转载需经过作者同意且需注明原文链接。谢谢！</p>
 ]]></content>
       <categories>
-        <category>其他</category>
+        <category>杂记</category>
       </categories>
       <tags>
         <tag>转载</tag>
@@ -7734,7 +7802,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <p>将两个开关均打开，重新启动 Nicegram，该账号已经能够正常访问苹果封锁的群组了。</p>
 ]]></content>
       <categories>
-        <category>其他</category>
+        <category>杂记</category>
       </categories>
       <tags>
         <tag>Telegram</tag>
@@ -7874,7 +7942,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <p><img data-src="https://img.iszy.xyz/20190318215950.png" alt=""></p>
 ]]></content>
       <categories>
-        <category>其他</category>
+        <category>杂记</category>
       </categories>
       <tags>
         <tag>ReactOS</tag>
@@ -10086,7 +10154,7 @@ V2Club(旧蓝岸)，一家专门提供 v2ray 代理服务的服务商。或许�
 </ol>
 ]]></content>
       <categories>
-        <category>其他</category>
+        <category>杂记</category>
       </categories>
       <tags>
         <tag>Telegram</tag>
