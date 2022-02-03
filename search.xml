@@ -18,7 +18,7 @@
 <p>这个东西隐藏的是真的很深，可能是开发者留出来的彩蛋，方便开发调试用？网上还有说可以输入<code>badidea</code>，亲测已经没有效果。不知道后续版本会不会移除<code>thisisunsafe</code>，理论上应该不会，毕竟不太可能误触。不然还得去 flags 页面关闭所有的安全警告，反而是更不安全了。</p>
 ]]></content>
       <categories>
-        <category>杂记</category>
+        <category>技术</category>
       </categories>
       <tags>
         <tag>MacOS</tag>
@@ -26,7 +26,7 @@
       </tags>
   </entry>
   <entry>
-    <title>多次提前还贷计算器</title>
+    <title>多次提前还贷计算器及PMT 函数</title>
     <url>/posts/1/</url>
     <content><![CDATA[<p>最近写了个计算多次提前还贷的计算器，大家可以尝试使用，计算结果仅供参考。</p>
 <span id="more"></span>
@@ -87,7 +87,8 @@
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Copy of Excel&#x27;s PMT function.</span></span><br><span class="line"><span class="comment"> * Credit: http://stackoverflow.com/questions/2094967/excel-pmt-function-in-js</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param </span>ratePerPeriod       The interest rate for the loan.</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param </span>numberOfPayments    The total number of payments for the loan in months.</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param </span>presentValue        The present value, or the total amount that a series of future payments is worth now;</span></span><br><span class="line"><span class="comment"> *                            Also known as the principal.</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param </span>futureValue         The future value, or a cash balance you want to attain after the last payment is made.</span></span><br><span class="line"><span class="comment"> *                            If fv is omitted, it is assumed to be 0 (zero), that is, the future value of a loan is 0.</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param </span>type                Optional, defaults to 0. The number 0 (zero) or 1 and indicates when payments are due.</span></span><br><span class="line"><span class="comment"> *                              0 = At the end of period</span></span><br><span class="line"><span class="comment"> *                              1 = At the beginning of the period</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@returns <span class="type">&#123;number&#125;</span></span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">pmt</span>(<span class="params">ratePerPeriod, numberOfPayments, presentValue, futureValue, type</span>) </span>&#123;</span><br><span class="line">  futureValue = <span class="keyword">typeof</span> futureValue !== <span class="string">&quot;undefined&quot;</span> ? futureValue : <span class="number">0</span>;</span><br><span class="line">  type = <span class="keyword">typeof</span> type !== <span class="string">&quot;undefined&quot;</span> ? type : <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (ratePerPeriod !== <span class="number">0.0</span>) &#123;</span><br><span class="line">    <span class="comment">// Interest rate exists</span></span><br><span class="line">    <span class="keyword">const</span> q = <span class="built_in">Math</span>.pow(<span class="number">1</span> + ratePerPeriod, numberOfPayments);</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      -(ratePerPeriod * (futureValue + q * presentValue)) /</span><br><span class="line">      ((-<span class="number">1</span> + q) * (<span class="number">1</span> + ratePerPeriod * type))</span><br><span class="line">    );</span><br><span class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (numberOfPayments !== <span class="number">0.0</span>) &#123;</span><br><span class="line">    <span class="comment">// No interest rate, but number of payments exists</span></span><br><span class="line">    <span class="keyword">return</span> -(futureValue + presentValue) / numberOfPayments;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>编程</category>
+        <category>技术</category>
+        <category>应用</category>
       </categories>
       <tags>
         <tag>小工具</tag>
@@ -134,8 +135,7 @@
 <p>基本能够在我提交代码后，很好的完成整套部署流程，不再需要去服务器上进行操作，方便了很多。不过感觉通过循环监听文件的方法不是很优雅，效率也不是很高，后面我会考虑是否能有更好的替代方案。</p>
 ]]></content>
       <categories>
-        <category>工具与中间件</category>
-        <category>Github</category>
+        <category>应用</category>
       </categories>
       <tags>
         <tag>Git</tag>
@@ -171,8 +171,7 @@
 <p>这次的体验很好，基本上不用浪费自己服务器的性能，也可以通过自定义的脚本将服务器上自己关心的内容输出到日志中。我暂时认为这就是现阶段通过 Github Actions 完成自动化部署的最佳方案了。希望对大家有所帮助。</p>
 ]]></content>
       <categories>
-        <category>工具与中间件</category>
-        <category>Github</category>
+        <category>应用</category>
       </categories>
       <tags>
         <tag>Git</tag>
@@ -212,7 +211,7 @@
 <p>此时，在你打开的文件中按下此快捷键，就会触发 ESLint 的自动修复格式化。</p>
 ]]></content>
       <categories>
-        <category>编程</category>
+        <category>工具</category>
       </categories>
       <tags>
         <tag>VS Code</tag>
@@ -256,8 +255,7 @@
 <figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">FROM</span> node:alpine</span><br><span class="line"><span class="keyword">WORKDIR</span><span class="bash"> /usr/src/app</span></span><br><span class="line"><span class="keyword">COPY</span><span class="bash"> . ./</span></span><br><span class="line"><span class="keyword">EXPOSE</span> <span class="number">3000</span></span><br><span class="line"><span class="keyword">CMD</span><span class="bash"> [<span class="string">&quot;yarn&quot;</span>, <span class="string">&quot;start:prod&quot;</span>]</span></span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>工具与中间件</category>
-        <category>Docker</category>
+        <category>技术</category>
       </categories>
       <tags>
         <tag>Docker</tag>
@@ -335,8 +333,7 @@
 <p>现在 docker pull 使用的就是 nexus 的代理地址了，可以省去前面的地址了。</p>
 ]]></content>
       <categories>
-        <category>工具与中间件</category>
-        <category>Nexus</category>
+        <category>工具</category>
       </categories>
       <tags>
         <tag>Docker Registry</tag>
@@ -3168,7 +3165,7 @@
 </table>
 ]]></content>
       <categories>
-        <category>编程</category>
+        <category>技术</category>
       </categories>
       <tags>
         <tag>Markdown</tag>
@@ -3200,7 +3197,7 @@
 <figure class="highlight scala"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> com.supermap.bdt.base.algorithm.<span class="type">CRSTransform</span></span><br><span class="line"><span class="keyword">import</span> com.supermap.bdt.<span class="type">FeatureRDD</span></span><br><span class="line"><span class="keyword">import</span> org.geotools.factory.<span class="type">Hints</span></span><br><span class="line"><span class="keyword">import</span> org.geotools.geometry.jts.<span class="type">JTSFactoryFinder</span></span><br><span class="line"><span class="keyword">import</span> org.geotools.referencing.<span class="type">ReferencingFactoryFinder</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 此处仅为示例</span></span><br><span class="line"><span class="keyword">val</span> featureRDD: <span class="type">FeatureRDD</span> = <span class="literal">null</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">val</span> hints = <span class="keyword">new</span> <span class="type">Hints</span>(<span class="type">Hints</span>.<span class="type">FORCE_LONGITUDE_FIRST_AXIS_ORDER</span>, <span class="literal">true</span>)</span><br><span class="line"><span class="keyword">val</span> factory = <span class="type">ReferencingFactoryFinder</span>.getCRSAuthorityFactory(<span class="string">&quot;EPSG&quot;</span>, hints)</span><br><span class="line"><span class="keyword">val</span> newFeatureRDD: <span class="type">FeatureRDD</span> = <span class="type">CRSTransform</span>.transform(featureRDD, factory.createCoordinateReferenceSystem(<span class="string">&quot;EPSG:4528&quot;</span>))</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>GIS</category>
+        <category>技术</category>
       </categories>
       <tags>
         <tag>GeoTools</tag>
@@ -3232,10 +3229,10 @@
 <p>对于更高位，实际上还需要知道 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>2</mn><mrow><mn>2</mn><mn>7</mn></mrow></msup><mi>a</mi><mtext> </mtext><mi>m</mi><mi>o</mi><mi>d</mi><mtext> </mtext><mn>5</mn><msup><mn>8</mn><mrow><mn>2</mn></mrow></msup><mo separator="true">,</mo><msup><mn>2</mn><mrow><mn>2</mn><mn>7</mn></mrow></msup><mi>a</mi><mtext> </mtext><mi>m</mi><mi>o</mi><mi>d</mi><mtext> </mtext><mn>5</mn><msup><mn>8</mn><mrow><mn>3</mn></mrow></msup><mo separator="true">,</mo><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">2^{27}a\ mod\ 58^{2},2^{27}a\ mod\ 58^{3},...</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:1.008548em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathrm">2</span><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord scriptstyle uncramped"><span class="mord mathrm">2</span><span class="mord mathrm">7</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mord mathit">a</span><span class="mord mspace"> </span><span class="mord mathit">m</span><span class="mord mathit">o</span><span class="mord mathit">d</span><span class="mord mspace"> </span><span class="mord mathrm">5</span><span class="mord"><span class="mord mathrm">8</span><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord scriptstyle uncramped"><span class="mord mathrm">2</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mpunct">,</span><span class="mord"><span class="mord mathrm">2</span><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord scriptstyle uncramped"><span class="mord mathrm">2</span><span class="mord mathrm">7</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mord mathit">a</span><span class="mord mspace"> </span><span class="mord mathit">m</span><span class="mord mathit">o</span><span class="mord mathit">d</span><span class="mord mspace"> </span><span class="mord mathrm">5</span><span class="mord"><span class="mord mathrm">8</span><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord scriptstyle uncramped"><span class="mord mathrm">3</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mpunct">,</span><span class="mord mathrm">.</span><span class="mord mathrm">.</span><span class="mord mathrm">.</span></span></span></span>，这些值也可以 枚举 58 次得到，最后我得到的值是 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>2</mn><mrow><mn>2</mn><mn>7</mn></mrow></msup><mi>a</mi><mtext> </mtext><mi>m</mi><mi>o</mi><mi>d</mi><mtext> </mtext><mn>5</mn><msup><mn>8</mn><mrow><mn>4</mn></mrow></msup><mo>=</mo><mn>1</mn><mn>7</mn><mn>4</mn><mn>9</mn><mn>9</mn><mn>6</mn><mn>8</mn></mrow><annotation encoding="application/x-tex">2^{27}a\ mod\ 58^{4}=1749968</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathrm">2</span><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord scriptstyle uncramped"><span class="mord mathrm">2</span><span class="mord mathrm">7</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mord mathit">a</span><span class="mord mspace"> </span><span class="mord mathit">m</span><span class="mord mathit">o</span><span class="mord mathit">d</span><span class="mord mspace"> </span><span class="mord mathrm">5</span><span class="mord"><span class="mord mathrm">8</span><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord scriptstyle uncramped"><span class="mord mathrm">4</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mrel">=</span><span class="mord mathrm">1</span><span class="mord mathrm">7</span><span class="mord mathrm">4</span><span class="mord mathrm">9</span><span class="mord mathrm">9</span><span class="mord mathrm">6</span><span class="mord mathrm">8</span></span></span></span> 。</p>
 <p>这时我发现，每一位的字符表是相同的（实际上只对 <code>b=43234084</code> 是这样的），然后再微调一下参数（上面代码中的两个 magic number 就相当于这里的 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi><mo separator="true">,</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">a,b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">a</span><span class="mpunct">,</span><span class="mord mathit">b</span></span></span></span>），最后处理了一下 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>≥</mo><msup><mn>2</mn><mrow><mn>2</mn><mn>7</mn></mrow></msup></mrow><annotation encoding="application/x-tex">\geq 2^{27}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:0.950078em;vertical-align:-0.13597em;"></span><span class="base textstyle uncramped"><span class="mrel">≥</span><span class="mord"><span class="mord mathrm">2</span><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord scriptstyle uncramped"><span class="mord mathrm">2</span><span class="mord mathrm">7</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span> 的情况就得到了这份代码。</p>
 <h2 id="Vue-JS-实现">Vue + JS 实现</h2>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line"><span class="javascript">  <span class="attr">name</span>: <span class="string">&quot;bilibiliBv2av&quot;</span>,</span></span><br><span class="line"><span class="javascript">  <span class="attr">data</span>: <span class="function">() =&gt;</span> (&#123;</span></span><br><span class="line"><span class="javascript">    <span class="attr">aid</span>: <span class="string">&quot;19390801&quot;</span>,</span></span><br><span class="line"><span class="javascript">    <span class="attr">bvid</span>: <span class="string">&quot;&quot;</span>,</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">    <span class="attr">table</span>: <span class="string">&quot;fZodR9XQDSUm21yCkr6zBqiveYah8bt4xsWpHnJE7jL5VG3guMTKNPAwcF&quot;</span>,</span></span><br><span class="line"><span class="javascript">    <span class="attr">tr</span>: &#123;&#125;,</span></span><br><span class="line"><span class="javascript">    <span class="attr">s</span>: [<span class="number">11</span>, <span class="number">10</span>, <span class="number">3</span>, <span class="number">8</span>, <span class="number">4</span>, <span class="number">6</span>],</span></span><br><span class="line"><span class="javascript">    <span class="attr">xor</span>: <span class="number">177451812</span>,</span></span><br><span class="line"><span class="javascript">    <span class="attr">add</span>: <span class="number">8728348608</span>,</span></span><br><span class="line"><span class="javascript">  &#125;),</span></span><br><span class="line"><span class="javascript">  <span class="function"><span class="title">mounted</span>(<span class="params"></span>)</span> &#123;</span></span><br><span class="line"><span class="javascript">    <span class="built_in">this</span>.init();</span></span><br><span class="line"><span class="javascript">  &#125;,</span></span><br><span class="line"><span class="javascript">  <span class="attr">methods</span>: &#123;</span></span><br><span class="line"><span class="javascript">    <span class="function"><span class="title">init</span>(<span class="params"></span>)</span> &#123;</span></span><br><span class="line"><span class="javascript">      <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">58</span>; i++) &#123;</span></span><br><span class="line"><span class="javascript">        <span class="built_in">this</span>.tr[<span class="built_in">this</span>.table[i]] = i;</span></span><br><span class="line"><span class="javascript">      &#125;</span></span><br><span class="line"><span class="javascript">      <span class="built_in">this</span>.enc(<span class="built_in">this</span>.aid);</span></span><br><span class="line"><span class="javascript">    &#125;,</span></span><br><span class="line"><span class="javascript">    <span class="function"><span class="title">dec</span>(<span class="params">x</span>)</span> &#123;</span></span><br><span class="line"><span class="javascript">      <span class="keyword">try</span> &#123;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">let</span> r = <span class="number">0</span>;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">6</span>; i++) &#123;</span></span><br><span class="line"><span class="javascript">          r += <span class="built_in">this</span>.tr[x[<span class="built_in">this</span>.s[i]]] * <span class="number">58</span> ** i;</span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript">        <span class="built_in">this</span>.aid = (r - <span class="built_in">this</span>.add) ^ <span class="built_in">this</span>.xor;</span></span><br><span class="line"><span class="javascript">      &#125; <span class="keyword">catch</span> (e) &#123;</span></span><br><span class="line"><span class="javascript">        <span class="built_in">this</span>.aid = <span class="string">&quot;&quot;</span>;</span></span><br><span class="line"><span class="javascript">      &#125;</span></span><br><span class="line"><span class="javascript">    &#125;,</span></span><br><span class="line"><span class="javascript">    <span class="function"><span class="title">enc</span>(<span class="params">x</span>)</span> &#123;</span></span><br><span class="line"><span class="javascript">      <span class="keyword">try</span> &#123;</span></span><br><span class="line"><span class="javascript">        x = <span class="built_in">parseInt</span>(x);</span></span><br><span class="line"><span class="javascript">        <span class="keyword">if</span> (!<span class="built_in">isNaN</span>(x)) &#123;</span></span><br><span class="line"><span class="javascript">          x = (x ^ <span class="built_in">this</span>.xor) + <span class="built_in">this</span>.add;</span></span><br><span class="line"><span class="javascript">          <span class="keyword">const</span> r = [</span></span><br><span class="line"><span class="javascript">            <span class="string">&quot;B&quot;</span>,</span></span><br><span class="line"><span class="javascript">            <span class="string">&quot;V&quot;</span>,</span></span><br><span class="line"><span class="javascript">            <span class="string">&quot;1&quot;</span>,</span></span><br><span class="line"><span class="javascript">            <span class="string">&quot; &quot;</span>,</span></span><br><span class="line"><span class="javascript">            <span class="string">&quot; &quot;</span>,</span></span><br><span class="line"><span class="javascript">            <span class="string">&quot;4&quot;</span>,</span></span><br><span class="line"><span class="javascript">            <span class="string">&quot; &quot;</span>,</span></span><br><span class="line"><span class="javascript">            <span class="string">&quot;1&quot;</span>,</span></span><br><span class="line"><span class="javascript">            <span class="string">&quot; &quot;</span>,</span></span><br><span class="line"><span class="javascript">            <span class="string">&quot;7&quot;</span>,</span></span><br><span class="line"><span class="javascript">            <span class="string">&quot; &quot;</span>,</span></span><br><span class="line"><span class="javascript">            <span class="string">&quot; &quot;</span>,</span></span><br><span class="line"><span class="javascript">          ];</span></span><br><span class="line"><span class="javascript">          <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">6</span>; i++) &#123;</span></span><br><span class="line"><span class="javascript">            r[<span class="built_in">this</span>.s[i]] = <span class="built_in">this</span>.table[<span class="built_in">Math</span>.floor(x / <span class="number">58</span> ** i) % <span class="number">58</span>];</span></span><br><span class="line"><span class="javascript">          &#125;</span></span><br><span class="line"><span class="javascript">          <span class="built_in">this</span>.bvid = r.join(<span class="string">&quot;&quot;</span>);</span></span><br><span class="line"><span class="javascript">        &#125; <span class="keyword">else</span> &#123;</span></span><br><span class="line"><span class="javascript">          <span class="built_in">this</span>.bvid = <span class="string">&quot;&quot;</span>;</span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript">      &#125; <span class="keyword">catch</span> (e) &#123;</span></span><br><span class="line"><span class="javascript">        <span class="built_in">this</span>.bvid = <span class="string">&quot;&quot;</span>;</span></span><br><span class="line"><span class="javascript">      &#125;</span></span><br><span class="line"><span class="javascript">    &#125;,</span></span><br><span class="line"><span class="javascript">  &#125;,</span></span><br><span class="line"><span class="javascript">&#125;;</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">  <span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line"><span class="javascript">    <span class="attr">name</span>: <span class="string">&quot;bilibiliBv2av&quot;</span>,</span></span><br><span class="line"><span class="javascript">    <span class="attr">data</span>: <span class="function">() =&gt;</span> (&#123;</span></span><br><span class="line"><span class="javascript">      <span class="attr">aid</span>: <span class="string">&quot;19390801&quot;</span>,</span></span><br><span class="line"><span class="javascript">      <span class="attr">bvid</span>: <span class="string">&quot;&quot;</span>,</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">      <span class="attr">table</span>: <span class="string">&quot;fZodR9XQDSUm21yCkr6zBqiveYah8bt4xsWpHnJE7jL5VG3guMTKNPAwcF&quot;</span>,</span></span><br><span class="line"><span class="javascript">      <span class="attr">tr</span>: &#123;&#125;,</span></span><br><span class="line"><span class="javascript">      <span class="attr">s</span>: [<span class="number">11</span>, <span class="number">10</span>, <span class="number">3</span>, <span class="number">8</span>, <span class="number">4</span>, <span class="number">6</span>],</span></span><br><span class="line"><span class="javascript">      <span class="attr">xor</span>: <span class="number">177451812</span>,</span></span><br><span class="line"><span class="javascript">      <span class="attr">add</span>: <span class="number">8728348608</span>,</span></span><br><span class="line"><span class="javascript">    &#125;),</span></span><br><span class="line"><span class="javascript">    <span class="function"><span class="title">mounted</span>(<span class="params"></span>)</span> &#123;</span></span><br><span class="line"><span class="javascript">      <span class="built_in">this</span>.init();</span></span><br><span class="line"><span class="javascript">    &#125;,</span></span><br><span class="line"><span class="javascript">    <span class="attr">methods</span>: &#123;</span></span><br><span class="line"><span class="javascript">      <span class="function"><span class="title">init</span>(<span class="params"></span>)</span> &#123;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">58</span>; i++) &#123;</span></span><br><span class="line"><span class="javascript">          <span class="built_in">this</span>.tr[<span class="built_in">this</span>.table[i]] = i;</span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript">        <span class="built_in">this</span>.enc(<span class="built_in">this</span>.aid);</span></span><br><span class="line"><span class="javascript">      &#125;,</span></span><br><span class="line"><span class="javascript">      <span class="function"><span class="title">dec</span>(<span class="params">x</span>)</span> &#123;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">try</span> &#123;</span></span><br><span class="line"><span class="javascript">          <span class="keyword">let</span> r = <span class="number">0</span>;</span></span><br><span class="line"><span class="javascript">          <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">6</span>; i++) &#123;</span></span><br><span class="line"><span class="javascript">            r += <span class="built_in">this</span>.tr[x[<span class="built_in">this</span>.s[i]]] * <span class="number">58</span> ** i;</span></span><br><span class="line"><span class="javascript">          &#125;</span></span><br><span class="line"><span class="javascript">          <span class="built_in">this</span>.aid = (r - <span class="built_in">this</span>.add) ^ <span class="built_in">this</span>.xor;</span></span><br><span class="line"><span class="javascript">        &#125; <span class="keyword">catch</span> (e) &#123;</span></span><br><span class="line"><span class="javascript">          <span class="built_in">this</span>.aid = <span class="string">&quot;&quot;</span>;</span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript">      &#125;,</span></span><br><span class="line"><span class="javascript">      <span class="function"><span class="title">enc</span>(<span class="params">x</span>)</span> &#123;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">try</span> &#123;</span></span><br><span class="line"><span class="javascript">          x = <span class="built_in">parseInt</span>(x);</span></span><br><span class="line"><span class="javascript">          <span class="keyword">if</span> (!<span class="built_in">isNaN</span>(x)) &#123;</span></span><br><span class="line"><span class="javascript">            x = (x ^ <span class="built_in">this</span>.xor) + <span class="built_in">this</span>.add;</span></span><br><span class="line"><span class="javascript">            <span class="keyword">const</span> r = [</span></span><br><span class="line"><span class="javascript">              <span class="string">&quot;B&quot;</span>,</span></span><br><span class="line"><span class="javascript">              <span class="string">&quot;V&quot;</span>,</span></span><br><span class="line"><span class="javascript">              <span class="string">&quot;1&quot;</span>,</span></span><br><span class="line"><span class="javascript">              <span class="string">&quot; &quot;</span>,</span></span><br><span class="line"><span class="javascript">              <span class="string">&quot; &quot;</span>,</span></span><br><span class="line"><span class="javascript">              <span class="string">&quot;4&quot;</span>,</span></span><br><span class="line"><span class="javascript">              <span class="string">&quot; &quot;</span>,</span></span><br><span class="line"><span class="javascript">              <span class="string">&quot;1&quot;</span>,</span></span><br><span class="line"><span class="javascript">              <span class="string">&quot; &quot;</span>,</span></span><br><span class="line"><span class="javascript">              <span class="string">&quot;7&quot;</span>,</span></span><br><span class="line"><span class="javascript">              <span class="string">&quot; &quot;</span>,</span></span><br><span class="line"><span class="javascript">              <span class="string">&quot; &quot;</span>,</span></span><br><span class="line"><span class="javascript">            ];</span></span><br><span class="line"><span class="javascript">            <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">6</span>; i++) &#123;</span></span><br><span class="line"><span class="javascript">              r[<span class="built_in">this</span>.s[i]] = <span class="built_in">this</span>.table[<span class="built_in">Math</span>.floor(x / <span class="number">58</span> ** i) % <span class="number">58</span>];</span></span><br><span class="line"><span class="javascript">            &#125;</span></span><br><span class="line"><span class="javascript">            <span class="built_in">this</span>.bvid = r.join(<span class="string">&quot;&quot;</span>);</span></span><br><span class="line"><span class="javascript">          &#125; <span class="keyword">else</span> &#123;</span></span><br><span class="line"><span class="javascript">            <span class="built_in">this</span>.bvid = <span class="string">&quot;&quot;</span>;</span></span><br><span class="line"><span class="javascript">          &#125;</span></span><br><span class="line"><span class="javascript">        &#125; <span class="keyword">catch</span> (e) &#123;</span></span><br><span class="line"><span class="javascript">          <span class="built_in">this</span>.bvid = <span class="string">&quot;&quot;</span>;</span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript">      &#125;,</span></span><br><span class="line"><span class="javascript">    &#125;,</span></span><br><span class="line"><span class="javascript">  &#125;;</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>编程</category>
+        <category>其他</category>
       </categories>
       <tags>
         <tag>JavaScript</tag>
@@ -3266,7 +3263,7 @@
 <p>新的一年里，我希望我能多看点书，多学点东西；我想多省点钱，多减点肥。也不多说，我感觉这都完不成，新年暂时就先这点展望吧。</p>
 ]]></content>
       <categories>
-        <category>杂记</category>
+        <category>杂谈</category>
       </categories>
       <tags>
         <tag>总结回顾</tag>
@@ -3292,7 +3289,8 @@
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;codePanel&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">textarea</span> <span class="attr">ref</span>=<span class="string">&quot;codemirror&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">textarea</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">  <span class="comment">// 引入CodeMirror和基础样式</span></span></span><br><span class="line"><span class="javascript">  <span class="keyword">import</span> CodeMirror <span class="keyword">from</span> <span class="string">&quot;codemirror&quot;</span>;</span></span><br><span class="line"><span class="javascript">  <span class="keyword">import</span> <span class="string">&quot;codemirror/lib/codemirror.css&quot;</span>;</span></span><br><span class="line"><span class="javascript">  <span class="comment">// JSON代码高亮需要由JavaScript插件支持</span></span></span><br><span class="line"><span class="javascript">  <span class="keyword">import</span> <span class="string">&quot;codemirror/mode/javascript/javascript.js&quot;</span>;</span></span><br><span class="line"><span class="javascript">  <span class="comment">// 选择IDEA主题样式，还有其他很多主题可选</span></span></span><br><span class="line"><span class="javascript">  <span class="keyword">import</span> <span class="string">&quot;codemirror/theme/idea.css&quot;</span>;</span></span><br><span class="line"><span class="javascript">  <span class="comment">// 支持使用Sublime快捷键</span></span></span><br><span class="line"><span class="javascript">  <span class="keyword">import</span> <span class="string">&quot;codemirror/keymap/sublime.js&quot;</span>;</span></span><br><span class="line"><span class="javascript">  <span class="comment">// 搜索功能的依赖</span></span></span><br><span class="line"><span class="javascript">  <span class="keyword">import</span> <span class="string">&quot;codemirror/addon/dialog/dialog.js&quot;</span>;</span></span><br><span class="line"><span class="javascript">  <span class="keyword">import</span> <span class="string">&quot;codemirror/addon/dialog/dialog.css&quot;</span>;</span></span><br><span class="line"><span class="javascript">  <span class="comment">// 支持搜索功能</span></span></span><br><span class="line"><span class="javascript">  <span class="keyword">import</span> <span class="string">&quot;codemirror/addon/search/search&quot;</span>;</span></span><br><span class="line"><span class="javascript">  <span class="keyword">import</span> <span class="string">&quot;codemirror/addon/search/searchcursor.js&quot;</span>;</span></span><br><span class="line"><span class="javascript">  <span class="comment">// 支持各种代码折叠</span></span></span><br><span class="line"><span class="javascript">  <span class="keyword">import</span> <span class="string">&quot;codemirror/addon/fold/foldgutter.css&quot;</span>;</span></span><br><span class="line"><span class="javascript">  <span class="keyword">import</span> <span class="string">&quot;codemirror/addon/fold/foldcode.js&quot;</span>;</span></span><br><span class="line"><span class="javascript">  <span class="keyword">import</span> <span class="string">&quot;codemirror/addon/fold/foldgutter.js&quot;</span>;</span></span><br><span class="line"><span class="javascript">  <span class="keyword">import</span> <span class="string">&quot;codemirror/addon/fold/brace-fold.js&quot;</span>;</span></span><br><span class="line"><span class="javascript">  <span class="keyword">import</span> <span class="string">&quot;codemirror/addon/fold/comment-fold.js&quot;</span>;</span></span><br><span class="line"><span class="javascript">  <span class="comment">// 支持代码区域全屏功能</span></span></span><br><span class="line"><span class="javascript">  <span class="keyword">import</span> <span class="string">&quot;codemirror/addon/display/fullscreen.css&quot;</span>;</span></span><br><span class="line"><span class="javascript">  <span class="keyword">import</span> <span class="string">&quot;codemirror/addon/display/fullscreen.js&quot;</span>;</span></span><br><span class="line"><span class="javascript">  <span class="comment">// 支持括号自动匹配</span></span></span><br><span class="line"><span class="javascript">  <span class="keyword">import</span> <span class="string">&quot;codemirror/addon/edit/matchbrackets.js&quot;</span>;</span></span><br><span class="line"><span class="javascript">  <span class="keyword">import</span> <span class="string">&quot;codemirror/addon/edit/closebrackets.js&quot;</span>;</span></span><br><span class="line"><span class="javascript">  <span class="comment">// 支持代码自动补全</span></span></span><br><span class="line"><span class="javascript">  <span class="keyword">import</span> <span class="string">&quot;codemirror/addon/hint/show-hint.css&quot;</span>;</span></span><br><span class="line"><span class="javascript">  <span class="keyword">import</span> <span class="string">&quot;codemirror/addon/hint/show-hint.js&quot;</span>;</span></span><br><span class="line"><span class="javascript">  <span class="keyword">import</span> <span class="string">&quot;codemirror/addon/hint/anyword-hint.js&quot;</span>;</span></span><br><span class="line"><span class="javascript">  <span class="comment">// 行注释</span></span></span><br><span class="line"><span class="javascript">  <span class="keyword">import</span> <span class="string">&quot;codemirror/addon/comment/comment.js&quot;</span>;</span></span><br><span class="line"><span class="javascript">  <span class="comment">// JSON错误检查</span></span></span><br><span class="line"><span class="javascript">  <span class="keyword">import</span> <span class="string">&quot;codemirror/addon/lint/lint.css&quot;</span>;</span></span><br><span class="line"><span class="javascript">  <span class="keyword">import</span> <span class="string">&quot;codemirror/addon/lint/lint.js&quot;</span>;</span></span><br><span class="line"><span class="javascript">  <span class="comment">// 需要依赖全局的jsonlint，不是很优雅</span></span></span><br><span class="line"><span class="javascript">  <span class="keyword">import</span> <span class="string">&quot;codemirror/addon/lint/json-lint.js&quot;</span>;</span></span><br><span class="line"><span class="javascript">  <span class="comment">// 引入jsonlint</span></span></span><br><span class="line"><span class="javascript">  <span class="keyword">import</span> jsonlint <span class="keyword">from</span> <span class="string">&quot;jsonlint-mod&quot;</span>;</span></span><br><span class="line"><span class="javascript">  <span class="built_in">window</span>.jsonlint = jsonlint;</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">  <span class="keyword">let</span> codemirror;</span></span><br><span class="line"><span class="javascript">  <span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line"><span class="javascript">    <span class="attr">name</span>: <span class="string">&quot;JSON编辑器&quot;</span>,</span></span><br><span class="line"><span class="javascript">    <span class="attr">data</span>: <span class="function">() =&gt;</span> (&#123;</span></span><br><span class="line"><span class="javascript">      <span class="attr">code</span>: <span class="string">&quot;&quot;</span>,</span></span><br><span class="line"><span class="javascript">    &#125;),</span></span><br><span class="line"><span class="javascript">    <span class="function"><span class="title">mounted</span>(<span class="params"></span>)</span> &#123;</span></span><br><span class="line"><span class="javascript">      <span class="comment">// 防止转为监听对象，vue3中如果CodeMirror对象被转为监听对象，会无法正常使用</span></span></span><br><span class="line"><span class="javascript">      codemirror = markRaw(</span></span><br><span class="line"><span class="javascript">        <span class="comment">// 用ref获取需要渲染的textarea的DOM</span></span></span><br><span class="line"><span class="javascript">        CodeMirror.fromTextArea(<span class="built_in">this</span>.$refs.codemirror, &#123;</span></span><br><span class="line"><span class="javascript">          <span class="comment">// JS高亮显示</span></span></span><br><span class="line"><span class="javascript">          <span class="attr">mode</span>: <span class="string">&quot;application/json&quot;</span>,</span></span><br><span class="line"><span class="javascript">          <span class="attr">indentUnit</span>: <span class="number">2</span>, <span class="comment">// 缩进单位，默认2</span></span></span><br><span class="line"><span class="javascript">          <span class="attr">smartIndent</span>: <span class="literal">true</span>, <span class="comment">// 是否智能缩进</span></span></span><br><span class="line"><span class="javascript">          <span class="comment">// 显示行号</span></span></span><br><span class="line"><span class="javascript">          <span class="attr">styleActiveLine</span>: <span class="literal">true</span>,</span></span><br><span class="line"><span class="javascript">          <span class="attr">lineNumbers</span>: <span class="literal">true</span>,</span></span><br><span class="line"><span class="javascript">          <span class="comment">// 设置主题</span></span></span><br><span class="line"><span class="javascript">          <span class="attr">theme</span>: <span class="string">&quot;idea&quot;</span>,</span></span><br><span class="line"><span class="javascript">          <span class="comment">// 绑定sublime快捷键</span></span></span><br><span class="line"><span class="javascript">          <span class="attr">keyMap</span>: <span class="string">&quot;sublime&quot;</span>,</span></span><br><span class="line"><span class="javascript">          <span class="comment">// 开启代码折叠</span></span></span><br><span class="line"><span class="javascript">          <span class="attr">lineWrapping</span>: <span class="literal">true</span>,</span></span><br><span class="line"><span class="javascript">          <span class="attr">foldGutter</span>: <span class="literal">true</span>,</span></span><br><span class="line"><span class="javascript">          <span class="attr">gutters</span>: [</span></span><br><span class="line"><span class="javascript">            <span class="string">&quot;CodeMirror-linenumbers&quot;</span>,</span></span><br><span class="line"><span class="javascript">            <span class="string">&quot;CodeMirror-foldgutter&quot;</span>,</span></span><br><span class="line"><span class="javascript">            <span class="string">&quot;CodeMirror-lint-markers&quot;</span>,</span></span><br><span class="line"><span class="javascript">          ],</span></span><br><span class="line"><span class="javascript">          <span class="comment">// CodeMirror-lint-markers是实现语法报错功能</span></span></span><br><span class="line"><span class="javascript">          <span class="attr">lint</span>: <span class="literal">true</span>,</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">          <span class="comment">// 全屏模式</span></span></span><br><span class="line"><span class="javascript">          <span class="attr">fullScreen</span>: <span class="literal">false</span>,</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">          <span class="comment">// 括号匹配</span></span></span><br><span class="line"><span class="javascript">          <span class="attr">matchBrackets</span>: <span class="literal">true</span>,</span></span><br><span class="line"><span class="javascript">          <span class="attr">autoCloseBrackets</span>: <span class="literal">true</span>,</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">          <span class="comment">// 额外快捷键</span></span></span><br><span class="line"><span class="javascript">          <span class="attr">extraKeys</span>: &#123;</span></span><br><span class="line"><span class="javascript">            <span class="attr">F11</span>: <span class="function">(<span class="params">cm</span>) =&gt;</span> &#123;</span></span><br><span class="line"><span class="javascript">              cm.setOption(<span class="string">&quot;fullScreen&quot;</span>, !cm.getOption(<span class="string">&quot;fullScreen&quot;</span>));</span></span><br><span class="line"><span class="javascript">            &#125;,</span></span><br><span class="line"><span class="javascript">            <span class="attr">Esc</span>: <span class="function">(<span class="params">cm</span>) =&gt;</span> &#123;</span></span><br><span class="line"><span class="javascript">              <span class="keyword">if</span> (cm.getOption(<span class="string">&quot;fullScreen&quot;</span>)) &#123;</span></span><br><span class="line"><span class="javascript">                cm.setOption(<span class="string">&quot;fullScreen&quot;</span>, <span class="literal">false</span>);</span></span><br><span class="line"><span class="javascript">              &#125;</span></span><br><span class="line"><span class="javascript">            &#125;,</span></span><br><span class="line"><span class="javascript">          &#125;,</span></span><br><span class="line"><span class="javascript">        &#125;)</span></span><br><span class="line"><span class="javascript">      );</span></span><br><span class="line"><span class="javascript">      <span class="comment">// 将编辑器中的值存储下来</span></span></span><br><span class="line"><span class="javascript">      codemirror.on(<span class="string">&quot;change&quot;</span>, <span class="function">(<span class="params">cm</span>) =&gt;</span> &#123;</span></span><br><span class="line"><span class="javascript">        <span class="built_in">this</span>.code = cm.getValue();</span></span><br><span class="line"><span class="javascript">      &#125;);</span></span><br><span class="line"><span class="javascript">    &#125;,</span></span><br><span class="line"><span class="javascript">    <span class="function"><span class="title">beforeUnmount</span>(<span class="params"></span>)</span> &#123;</span></span><br><span class="line"><span class="javascript">      <span class="built_in">this</span>.destroy();</span></span><br><span class="line"><span class="javascript">    &#125;,</span></span><br><span class="line"><span class="javascript">    <span class="attr">methods</span>: &#123;</span></span><br><span class="line"><span class="javascript">      <span class="function"><span class="title">destroy</span>(<span class="params"></span>)</span> &#123;</span></span><br><span class="line"><span class="javascript">        <span class="comment">// 获取代表编辑器的DOM</span></span></span><br><span class="line"><span class="javascript">        <span class="keyword">const</span> element = codemirror.doc.cm.getWrapperElement();</span></span><br><span class="line"><span class="javascript">        <span class="comment">// 删除编辑器实例</span></span></span><br><span class="line"><span class="javascript">        element &amp;&amp; element.remove &amp;&amp; element.remove();</span></span><br><span class="line"><span class="javascript">      &#125;,</span></span><br><span class="line"><span class="javascript">    &#125;,</span></span><br><span class="line"><span class="javascript">  &#125;;</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>编程</category>
+        <category>技术</category>
+        <category>应用</category>
       </categories>
       <tags>
         <tag>JavaScript</tag>
@@ -3317,7 +3315,7 @@
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> VuexPersist <span class="keyword">from</span> <span class="string">&quot;@/plugins/VuexPersist&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> createStore(&#123;</span><br><span class="line">  <span class="attr">plugins</span>: [VuexPersist()],</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>编程</category>
+        <category>技术</category>
       </categories>
       <tags>
         <tag>JavaScript</tag>
@@ -3405,7 +3403,8 @@
 </ul>
 ]]></content>
       <categories>
-        <category>编程</category>
+        <category>技术</category>
+        <category>应用</category>
       </categories>
       <tags>
         <tag>JavaScript</tag>
@@ -3434,7 +3433,7 @@
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Object</span>.defineProperty(<span class="built_in">Array</span>.prototype, <span class="string">&quot;unique&quot;</span>, &#123;</span><br><span class="line">  <span class="attr">value</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>编程</category>
+        <category>技术</category>
       </categories>
       <tags>
         <tag>JavaScript</tag>
@@ -3466,7 +3465,7 @@
 </ol>
 ]]></content>
       <categories>
-        <category>编程</category>
+        <category>技术</category>
       </categories>
       <tags>
         <tag>ElasticSearch</tag>
@@ -3526,7 +3525,7 @@
 </ul>
 ]]></content>
       <categories>
-        <category>编程</category>
+        <category>应用</category>
       </categories>
       <tags>
         <tag>JavaScript</tag>
@@ -3571,7 +3570,7 @@
 <p>程序不太好看，仅仅满足实现，欢迎指正。</p>
 ]]></content>
       <categories>
-        <category>编程</category>
+        <category>技术</category>
       </categories>
       <tags>
         <tag>Cpp</tag>
@@ -3632,7 +3631,7 @@
 </ol>
 ]]></content>
       <categories>
-        <category>编程</category>
+        <category>应用</category>
       </categories>
       <tags>
         <tag>JavaScript</tag>
@@ -3675,7 +3674,7 @@
 </ol>
 ]]></content>
       <categories>
-        <category>编程</category>
+        <category>应用</category>
       </categories>
       <tags>
         <tag>JavaScript</tag>
@@ -3713,7 +3712,7 @@
 <p><strong>代码如果存在问题，请一定帮我指正!大神，谢谢了!</strong></p>
 ]]></content>
       <categories>
-        <category>编程</category>
+        <category>技术</category>
       </categories>
       <tags>
         <tag>算法</tag>
@@ -3734,7 +3733,7 @@
 <figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.Drawing;</span><br><span class="line"><span class="keyword">using</span> System.Windows.Forms;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">area</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">partial</span> <span class="keyword">class</span> <span class="title">Main</span> : <span class="title">Form</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="title">List</span>&lt;<span class="title">Point</span>&gt; list</span> = <span class="keyword">new</span> List&lt;Point&gt;();</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">Main</span>(<span class="params"></span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            InitializeComponent();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">btnAdd_Click</span>(<span class="params"><span class="built_in">object</span> sender, EventArgs e</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (txtX.Text != <span class="string">&quot;&quot;</span> &amp;&amp; txtY.Text != <span class="string">&quot;&quot;</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">//插入点</span></span><br><span class="line">                <span class="keyword">if</span> (Int32.TryParse(txtX.Text, <span class="keyword">out</span> <span class="built_in">int</span> x) &amp;&amp; Int32.TryParse(txtY.Text, <span class="keyword">out</span> <span class="built_in">int</span> y))</span><br><span class="line">                &#123;</span><br><span class="line">                    listPoint.BeginUpdate();</span><br><span class="line">                    Point point = <span class="keyword">new</span> Point(x, y);</span><br><span class="line">                    list.Add(point);</span><br><span class="line">                    listPoint.Items.Add(point);</span><br><span class="line">                    listPoint.EndUpdate();</span><br><span class="line"></span><br><span class="line">                    txtX.Text = <span class="string">&quot;&quot;</span>;</span><br><span class="line">                    txtY.Text = <span class="string">&quot;&quot;</span>;</span><br><span class="line">                    txtX.Focus();</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                &#123;</span><br><span class="line">                    MessageBox.Show(<span class="string">&quot;请输入数字！&quot;</span>);</span><br><span class="line">                    txtX.Text = <span class="string">&quot;&quot;</span>;</span><br><span class="line">                    txtY.Text = <span class="string">&quot;&quot;</span>;</span><br><span class="line">                    txtX.Focus();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">btnCalcu_Click</span>(<span class="params"><span class="built_in">object</span> sender, EventArgs e</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (list.Count &gt;= <span class="number">3</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">//将线首加入列表，保证多边形闭合</span></span><br><span class="line">                list.Add(list[<span class="number">0</span>]);</span><br><span class="line"></span><br><span class="line">                <span class="comment">//计算面积</span></span><br><span class="line">                <span class="built_in">double</span> area = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">                <span class="comment">//根据公式进行计算</span></span><br><span class="line">                <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; list.Count - <span class="number">1</span>; i++)</span><br><span class="line">                &#123;</span><br><span class="line">                    area += (list[i].X +list[i+<span class="number">1</span>].X) * (list[i + <span class="number">1</span>].Y - list[i].Y);</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                <span class="comment">//保证面积为正</span></span><br><span class="line">                area = Math.Abs(area / <span class="number">2</span>);</span><br><span class="line">                txtResult.Text = <span class="string">&quot;面积：&quot;</span> + area.ToString(<span class="string">&quot;0.0&quot;</span>);</span><br><span class="line">                btnAdd.Enabled = <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                MessageBox.Show(<span class="string">&quot;请添加至少3个点！&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">btnClear_Click</span>(<span class="params"><span class="built_in">object</span> sender, EventArgs e</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">//清空所有点</span></span><br><span class="line">            list.Clear();</span><br><span class="line">            listPoint.Items.Clear();</span><br><span class="line">            txtX.Text = <span class="string">&quot;&quot;</span>;</span><br><span class="line">            txtY.Text = <span class="string">&quot;&quot;</span>;</span><br><span class="line">            txtResult.Text = <span class="string">&quot;面积：&quot;</span>;</span><br><span class="line">            btnAdd.Enabled = <span class="literal">true</span>;</span><br><span class="line">            txtX.Focus();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>编程</category>
+        <category>技术</category>
       </categories>
       <tags>
         <tag>算法</tag>
@@ -3785,8 +3784,7 @@
 <p>其实吧，我觉得现在这个情况还不够令人满意，我还需要在本地编辑完了，进行推送。我的理想情况是这样，最好能在我的 VPS 上做一个 panel，能够在线编辑我服务器上的 markdown 文件，然后通过自动化脚本对 Jekyll 进行编译。暂时还不知道怎样实现这个方案，我觉得是可行的，未来如果实现了，我再来补充。</p>
 ]]></content>
       <categories>
-        <category>工具与中间件</category>
-        <category>Git</category>
+        <category>技术</category>
       </categories>
       <tags>
         <tag>Git</tag>
@@ -3814,7 +3812,7 @@
 <p><strong>代码如果存在问题，请一定帮我指正!大神，谢谢了!</strong></p>
 ]]></content>
       <categories>
-        <category>编程</category>
+        <category>技术</category>
       </categories>
       <tags>
         <tag>算法</tag>
@@ -3848,7 +3846,7 @@
 </ol>
 ]]></content>
       <categories>
-        <category>编程</category>
+        <category>技术</category>
       </categories>
       <tags>
         <tag>算法</tag>
@@ -3913,7 +3911,7 @@
 </table>
 ]]></content>
       <categories>
-        <category>数据库</category>
+        <category>技术</category>
       </categories>
       <tags>
         <tag>SQL Server</tag>
@@ -3973,7 +3971,7 @@
 <p>现在你已经可以登录你的 nextcloud 了，尽情享用吧。</p>
 ]]></content>
       <categories>
-        <category>应用部署</category>
+        <category>应用</category>
       </categories>
       <tags>
         <tag>Nextcloud</tag>
@@ -3988,8 +3986,8 @@
 <span id="more"></span>
 <h2 id="BREAK-ON-语法">BREAK ON 语法</h2>
 <ol>
-<li><code>BRE[AK][ON report_element [action [action]]] ...</code></li>
-</ol>
+<li>
+<p><code>BRE[AK][ON report_element [action [action]]] ...</code></p>
 <ul>
 <li>
 <p>report_element 的语法为<code>&#123;column|expr|ROW|REPORT&#125;</code></p>
@@ -3998,15 +3996,15 @@
 <p>action 的语法为<code>[SKI[P] n|[SKI[P]] PAGE][NODUP[LICATES]|DUP[LICATES]]</code></p>
 </li>
 </ul>
-<ol start="2">
-<li>指定报告中发生更改的位置以及要执行的格式化操作，比如：</li>
-</ol>
+</li>
+<li>
+<p>指定报告中发生更改的位置以及要执行的格式化操作，比如：</p>
 <ul>
 <li>抑制显示给定列的重复值。</li>
 <li>每次给定列值更改时跳过一行。</li>
 <li>每次给定列值发生变化或在报告结束时打印计算的数字。</li>
 </ul>
-<ol start="3">
+</li>
 <li>
 <p>不带参数直接输入 BREAK 来查看当前的 BREAK 定义。</p>
 </li>
@@ -4094,7 +4092,7 @@
 <p><img data-src="https://img.iszy.xyz/20190318215256.png" alt=""></p>
 ]]></content>
       <categories>
-        <category>数据库</category>
+        <category>技术</category>
       </categories>
       <tags>
         <tag>Oracle</tag>
@@ -4108,7 +4106,7 @@
 <span id="more"></span>
 <h2 id="WHILE-LOOP-语法">WHILE-LOOP 语法</h2>
 <p>当<strong>条件为真</strong>时，执行语句。</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">WHILE <span class="keyword">condition</span> LOOP</span><br><span class="line">	some_statements;</span><br><span class="line"><span class="keyword">END</span> LOOP;</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">WHILE <span class="keyword">condition</span> LOOP</span><br><span class="line">    some_statements;</span><br><span class="line"><span class="keyword">END</span> LOOP;</span><br></pre></td></tr></table></figure>
 <h2 id="实例">实例</h2>
 <h3 id="题目">题目</h3>
 <p>给出一个 Power 表(表 1)的数据如下：</p>
@@ -4124,14 +4122,14 @@
 <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> <span class="built_in">power</span>(mon <span class="type">int</span>,<span class="keyword">day</span> <span class="type">int</span>,fee <span class="type">int</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> power <span class="keyword">values</span>(<span class="number">6</span>,<span class="number">1</span>,<span class="number">60</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> power <span class="keyword">values</span>(<span class="number">6</span>,<span class="number">2</span>,<span class="number">34</span>);</span><br></pre></td></tr></table></figure>
 <p><img data-src="https://img.iszy.xyz/20190318215323.png" alt=""></p>
 <h4 id="计算整月的电费">计算整月的电费</h4>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">declare</span></span><br><span class="line">	a number;</span><br><span class="line">	b number;</span><br><span class="line">	x number;</span><br><span class="line">	y number;</span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line">	a:<span class="operator">=</span><span class="number">1</span>;</span><br><span class="line">	b:<span class="operator">=</span><span class="number">2</span>;</span><br><span class="line">	while (b<span class="operator">&lt;=</span><span class="number">29</span>) loop</span><br><span class="line">		<span class="keyword">select</span> fee</span><br><span class="line">		<span class="keyword">into</span> x</span><br><span class="line">		<span class="keyword">from</span> power</span><br><span class="line">		<span class="keyword">where</span> <span class="keyword">day</span><span class="operator">=</span>a;</span><br><span class="line">		<span class="keyword">select</span> fee</span><br><span class="line">		<span class="keyword">into</span> y</span><br><span class="line">		<span class="keyword">from</span> power</span><br><span class="line">		<span class="keyword">where</span> <span class="keyword">day</span><span class="operator">=</span>b;</span><br><span class="line">		<span class="keyword">insert</span> <span class="keyword">into</span> power <span class="keyword">values</span>(<span class="number">6</span>,a<span class="operator">+</span><span class="number">2</span>,x<span class="operator">+</span>y);</span><br><span class="line">		a:<span class="operator">=</span>a<span class="operator">+</span><span class="number">1</span>;</span><br><span class="line">		b:<span class="operator">=</span>b<span class="operator">+</span><span class="number">1</span>;</span><br><span class="line">	<span class="keyword">end</span> loop;</span><br><span class="line"><span class="keyword">end</span>;</span><br><span class="line"><span class="operator">/</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">declare</span></span><br><span class="line">    a number;</span><br><span class="line">    b number;</span><br><span class="line">    x number;</span><br><span class="line">    y number;</span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line">    a:<span class="operator">=</span><span class="number">1</span>;</span><br><span class="line">    b:<span class="operator">=</span><span class="number">2</span>;</span><br><span class="line">    while (b<span class="operator">&lt;=</span><span class="number">29</span>) loop</span><br><span class="line">        <span class="keyword">select</span> fee</span><br><span class="line">        <span class="keyword">into</span> x</span><br><span class="line">        <span class="keyword">from</span> power</span><br><span class="line">        <span class="keyword">where</span> <span class="keyword">day</span><span class="operator">=</span>a;</span><br><span class="line">        <span class="keyword">select</span> fee</span><br><span class="line">        <span class="keyword">into</span> y</span><br><span class="line">        <span class="keyword">from</span> power</span><br><span class="line">        <span class="keyword">where</span> <span class="keyword">day</span><span class="operator">=</span>b;</span><br><span class="line">        <span class="keyword">insert</span> <span class="keyword">into</span> power <span class="keyword">values</span>(<span class="number">6</span>,a<span class="operator">+</span><span class="number">2</span>,x<span class="operator">+</span>y);</span><br><span class="line">        a:<span class="operator">=</span>a<span class="operator">+</span><span class="number">1</span>;</span><br><span class="line">        b:<span class="operator">=</span>b<span class="operator">+</span><span class="number">1</span>;</span><br><span class="line">    <span class="keyword">end</span> loop;</span><br><span class="line"><span class="keyword">end</span>;</span><br><span class="line"><span class="operator">/</span></span><br></pre></td></tr></table></figure>
 <p><img data-src="https://img.iszy.xyz/20190318215335.png" alt=""></p>
 <h4 id="显示结果">显示结果</h4>
 <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> power;</span><br></pre></td></tr></table></figure>
 <p><img data-src="https://img.iszy.xyz/20190318215348.png" alt=""></p>
 ]]></content>
       <categories>
-        <category>数据库</category>
+        <category>技术</category>
       </categories>
       <tags>
         <tag>Oracle</tag>
@@ -4189,7 +4187,7 @@
 <p>emmm，我知道国外还有一些其他的评论系统可用，我就不一一评述了。</p>
 ]]></content>
       <categories>
-        <category>建站</category>
+        <category>工具</category>
       </categories>
       <tags>
         <tag>评论系统</tag>
@@ -4427,7 +4425,7 @@
 </table>
 ]]></content>
       <categories>
-        <category>数据库</category>
+        <category>技术</category>
       </categories>
       <tags>
         <tag>数据库</tag>
@@ -4481,7 +4479,7 @@
 </table>
 ]]></content>
       <categories>
-        <category>编程</category>
+        <category>工具</category>
       </categories>
       <tags>
         <tag>Visual Studio</tag>
@@ -4527,7 +4525,7 @@
 </details>
 ]]></content>
       <categories>
-        <category>建站</category>
+        <category>应用</category>
       </categories>
       <tags>
         <tag>评论系统</tag>
@@ -4576,7 +4574,7 @@
 <p><a href="https://www.iszy.cc/2018/04/01/Valine-Admin/">下一篇文章</a>，我将写一下这个 Valine-Admin 的配置。同样是十分简单的。</p>
 ]]></content>
       <categories>
-        <category>建站</category>
+        <category>应用</category>
       </categories>
       <tags>
         <tag>评论系统</tag>
@@ -4620,7 +4618,7 @@
 <p>WSL 最初在 Win 10 Insider Preview build 14316 开始可用，现在正式版已经升级到 1803 版，内部版本号为 17134，功能已经完善了太多。除了受限于 Windows 文件系统，文件操作较慢，其他已经和原版 Ubuntu，不相上下，完全可以替代虚拟机，完成我的工作了，我感觉非常满意。</p>
 ]]></content>
       <categories>
-        <category>杂记</category>
+        <category>应用</category>
       </categories>
       <tags>
         <tag>WSL</tag>
@@ -4671,8 +4669,8 @@
 </ol>
 ]]></content>
       <categories>
-        <category>系统</category>
-        <category>Linux</category>
+        <category>技术</category>
+        <category>转载</category>
       </categories>
       <tags>
         <tag>Linux</tag>
@@ -4785,7 +4783,7 @@
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">global:</span></span><br><span class="line">  <span class="attr">external:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">family:</span> <span class="string">&quot;&#x27;Noto Serif SC&#x27;&quot;</span></span><br><span class="line">  <span class="attr">size:</span></span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>建站</category>
+        <category>工具</category>
       </categories>
       <tags>
         <tag>Hexo</tag>
@@ -4809,7 +4807,7 @@
 </ol>
 ]]></content>
       <categories>
-        <category>杂记</category>
+        <category>其他</category>
       </categories>
       <tags>
         <tag>Adobe</tag>
@@ -4835,10 +4833,12 @@
 <p><strong>参考来源：</strong><span class="exturl" data-url="aHR0cHM6Ly93d3cucmVkZGl0LmNvbS9yL1BpcmFjeS9jb21tZW50cy83YnBpcTYvdHJpY2tfdG9fYWN0aXZhdGVfYWRvYmVfY2NfMjAxOF9pbmNsdWRpbmdfYWRvYmVfeGQv">Trick to Activate Adobe CC 2018 (including Adobe XD)<i class="fa fa-external-link-alt"></i></span></p>
 ]]></content>
       <categories>
-        <category>软件</category>
+        <category>工具</category>
       </categories>
       <tags>
         <tag>Adobe</tag>
+        <tag>amtemu</tag>
+        <tag>破解</tag>
       </tags>
   </entry>
   <entry>
@@ -4908,11 +4908,12 @@ SWIFT 代码：CIBKCNBJ100<br>
 <p>关于手续费，我只是看网上说会有 10 美元手续费，我不知道是哪边收的，反正问了中信是这么答的，或许 Google 会扣费，不管了。如果西联汇款不够方便，那就选择电汇了，方便是第一要义嘛。</p>
 ]]></content>
       <categories>
-        <category>建站</category>
+        <category>其他</category>
       </categories>
       <tags>
         <tag>广告</tag>
-        <tag>Google AdSense</tag>
+        <tag>Google</tag>
+        <tag>AdSence</tag>
       </tags>
   </entry>
   <entry>
@@ -4976,11 +4977,12 @@ SWIFT 代码：CIBKCNBJ100<br>
 <p>点击 OK，等待运算完成，你将能看到所有的 feature 已经被赋予了 UUID。</p>
 ]]></content>
       <categories>
-        <category>GIS</category>
+        <category>技术</category>
       </categories>
       <tags>
         <tag>Python</tag>
         <tag>ArcGIS</tag>
+        <tag>UUID</tag>
       </tags>
   </entry>
   <entry>
@@ -5115,11 +5117,14 @@ SWIFT 代码：CIBKCNBJ100<br>
 <p>现在你已经成功搭建了云挂卡平台，尽情挂卡吧。</p>
 ]]></content>
       <categories>
-        <category>应用部署</category>
+        <category>应用</category>
       </categories>
       <tags>
+        <tag>Ubuntu</tag>
+        <tag>Linux</tag>
         <tag>Steam</tag>
         <tag>ArchiSteamFarm</tag>
+        <tag>ASF</tag>
         <tag>挂卡</tag>
       </tags>
   </entry>
@@ -5165,11 +5170,11 @@ SWIFT 代码：CIBKCNBJ100<br>
 <p>（完）</p>
 ]]></content>
       <categories>
-        <category>编程</category>
+        <category>应用</category>
+        <category>转载</category>
       </categories>
       <tags>
         <tag>JavaScript</tag>
-        <tag>转载</tag>
         <tag>模块化</tag>
       </tags>
   </entry>
@@ -5195,6 +5200,9 @@ SWIFT 代码：CIBKCNBJ100<br>
 <p><img data-src="https://img.iszy.xyz/20210309181047.png?x-oss-process=style/big" alt=""></p>
 <p>这样就将证书导入到了该服务器的 Java 证书信任库中了，<strong>涉及到这个证书的 Java 应用需要重启才能生效</strong>。</p>
 ]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
       <tags>
         <tag>OpenSSL</tag>
         <tag>Java</tag>
@@ -5235,7 +5243,7 @@ SWIFT 代码：CIBKCNBJ100<br>
 <figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;presets&quot;</span>: [[<span class="string">&quot;@babel/preset-env&quot;</span>, &#123; <span class="attr">&quot;modules&quot;</span>: <span class="literal">false</span> &#125;]]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>编程</category>
+        <category>技术</category>
       </categories>
       <tags>
         <tag>Babel</tag>
@@ -5256,7 +5264,7 @@ SWIFT 代码：CIBKCNBJ100<br>
 <p>当然，支付宝做的这些措施并不一定就一定有效了，关键还是要我们自己能够擦亮双眼，识别出骗局，保护好自己的财产。</p>
 ]]></content>
       <categories>
-        <category>杂记</category>
+        <category>杂谈</category>
       </categories>
   </entry>
   <entry>
@@ -5323,11 +5331,12 @@ SWIFT 代码：CIBKCNBJ100<br>
 <p>至此，美化完成，相比之前的蓝底 PowerShell，我自认为已经好看了很多。我在 WSL 里也安装了 oh-my-zsh 可以说是完美衔接了。</p>
 ]]></content>
       <categories>
-        <category>杂记</category>
+        <category>技术</category>
       </categories>
       <tags>
         <tag>Scoop</tag>
         <tag>PowerShell</tag>
+        <tag>oh-my-posh</tag>
       </tags>
   </entry>
   <entry>
@@ -5373,7 +5382,7 @@ SWIFT 代码：CIBKCNBJ100<br>
 <p><img data-src="https://img.iszy.xyz/20190318212107.png?x-oss-process=style/big" alt=""></p>
 ]]></content>
       <categories>
-        <category>建站</category>
+        <category>应用</category>
       </categories>
       <tags>
         <tag>备案</tag>
@@ -5390,8 +5399,7 @@ SWIFT 代码：CIBKCNBJ100<br>
 <p><span class="exturl" data-url="aHR0cHM6Ly90b29scy5pc3p5Lnh5ei9jcnlwdG8vYmFzZTY0">Base64 编解码<i class="fa fa-external-link-alt"></i></span></p>
 <h2 id="Base64-编解码">Base64 编解码</h2>
 <blockquote>
-<p>来源：<span class="exturl" data-url="aHR0cHM6Ly96aC53aWtpcGVkaWEub3JnL3dpa2kvQmFzZTY0">Base64-维基百科<i class="fa fa-external-link-alt"></i></span><br>
-<strong>Base64</strong>（基底 64）是一种基于 64 个可打印字符来表示二进制数据的表示方法。由于 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>l</mi><mi>o</mi><msub><mi>g</mi><mrow><mn>2</mn></mrow></msub><mn>6</mn><mn>4</mn><mo>=</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">log_{2}64 = 6</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.01968em;">l</span><span class="mord mathit">o</span><span class="mord"><span class="mord mathit" style="margin-right:0.03588em;">g</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.03588em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord mathrm">2</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mord mathrm">6</span><span class="mord mathrm">4</span><span class="mrel">=</span><span class="mord mathrm">6</span></span></span></span>，所以每 6 个比特为一个单元，对应某个可打印字符。3 个字节相当于 24 个比特，对应于 4 个 Base64 单元，即 3 个字节可由 4 个可打印字符来表示。在 Base64 中的可打印字符包括字母 A-Z、a-z、数字 0-9，这样共有 62 个字符，此外两个可打印符号在不同的系统中而不同。一些如 uuencode 的其他编码方法，和之后 BinHex 的版本使用不同的 64 字符集来代表 6 个二进制数字，但是不被称为 Base64。<br>
+<p>来源：<span class="exturl" data-url="aHR0cHM6Ly96aC53aWtpcGVkaWEub3JnL3dpa2kvQmFzZTY0">Base64-维基百科<i class="fa fa-external-link-alt"></i></span> &gt; <strong>Base64</strong>（基底 64）是一种基于 64 个可打印字符来表示二进制数据的表示方法。由于 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>l</mi><mi>o</mi><msub><mi>g</mi><mrow><mn>2</mn></mrow></msub><mn>6</mn><mn>4</mn><mo>=</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">log_{2}64 = 6</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.01968em;">l</span><span class="mord mathit">o</span><span class="mord"><span class="mord mathit" style="margin-right:0.03588em;">g</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.03588em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord mathrm">2</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mord mathrm">6</span><span class="mord mathrm">4</span><span class="mrel">=</span><span class="mord mathrm">6</span></span></span></span>，所以每 6 个比特为一个单元，对应某个可打印字符。3 个字节相当于 24 个比特，对应于 4 个 Base64 单元，即 3 个字节可由 4 个可打印字符来表示。在 Base64 中的可打印字符包括字母 A-Z、a-z、数字 0-9，这样共有 62 个字符，此外两个可打印符号在不同的系统中而不同。一些如 uuencode 的其他编码方法，和之后 BinHex 的版本使用不同的 64 字符集来代表 6 个二进制数字，但是不被称为 Base64。<br>
 Base64 常用于在通常处理文本数据的场合，表示、传输、存储一些二进制数据，包括 MIME 的电子邮件及 XML 的一些复杂数据。</p>
 </blockquote>
 <p>其实在 JavaScript 中，原生就有两个函数被分别用来处理解码和编码 base64 字符串：</p>
@@ -5440,7 +5448,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">utf8_to_b64</span>(<span class="params">str</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> Buffer.from(str).toString(<span class="string">&quot;base64&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">b64_to_utf8</span>(<span class="params">str</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> Buffer.from(str, <span class="string">&quot;base64&quot;</span>).toString(<span class="string">&quot;utf8&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>编程</category>
+        <category>技术</category>
       </categories>
       <tags>
         <tag>JavaScript</tag>
@@ -5581,7 +5589,8 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <p><strong>有什么问题，欢迎在评论区留言或者联系我，我一定会及时回复的。</strong></p>
 ]]></content>
       <categories>
-        <category>应用部署</category>
+        <category>应用</category>
+        <category>工具</category>
       </categories>
       <tags>
         <tag>Nextcloud</tag>
@@ -5644,7 +5653,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">service mysql reload</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>应用部署</category>
+        <category>应用</category>
       </categories>
       <tags>
         <tag>MySQL</tag>
@@ -5688,7 +5697,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <p>反正我网站的流量也不多，也不用来赚钱，域名换了也就换了。如果你的网站比较大的话，还是要慎重选择是否要进行网站的改版，会对网站造成很大的影响。</p>
 ]]></content>
       <categories>
-        <category>建站</category>
+        <category>应用</category>
       </categories>
       <tags>
         <tag>域名</tag>
@@ -5710,7 +5719,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <p>终究会越来越好吧，就这样吧，结束这篇胡言乱语。</p>
 ]]></content>
       <categories>
-        <category>杂记</category>
+        <category>杂谈</category>
       </categories>
       <tags>
         <tag>手机套餐</tag>
@@ -5741,8 +5750,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 </ul>
 ]]></content>
       <categories>
-        <category>系统</category>
-        <category>Linux</category>
+        <category>技术</category>
       </categories>
       <tags>
         <tag>Ubuntu</tag>
@@ -5909,7 +5917,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 </ul>
 ]]></content>
       <categories>
-        <category>推广</category>
+        <category>其他</category>
       </categories>
       <tags>
         <tag>翻墙</tag>
@@ -5954,7 +5962,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <p>当然，如果你知道自己在做什么，就是要利用<code>==</code>的这个特性，自然是没有问题的。其他时候用<code>equals()</code>方法即可。</p>
 ]]></content>
       <categories>
-        <category>编程</category>
+        <category>技术</category>
       </categories>
       <tags>
         <tag>Java</tag>
@@ -6025,7 +6033,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 </table>
 ]]></content>
       <categories>
-        <category>杂记</category>
+        <category>技术</category>
       </categories>
   </entry>
   <entry>
@@ -6133,7 +6141,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 </ul>
 ]]></content>
       <categories>
-        <category>应用部署</category>
+        <category>应用</category>
       </categories>
       <tags>
         <tag>Docker</tag>
@@ -6181,7 +6189,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <p>所以，这就部署好了，还是很方便的，尤其是在你的 VPS 上有不少 docker，并统一使用 docker-compose 进行管理的时候。有兴趣的可以这么折腾一下啦。</p>
 ]]></content>
       <categories>
-        <category>应用部署</category>
+        <category>应用</category>
       </categories>
       <tags>
         <tag>Docker</tag>
@@ -6233,10 +6241,10 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 </ul>
 <h2 id="Nginx-反代-IPC-配置">Nginx 反代 IPC 配置</h2>
 <p>可以参考一下，由 ASF 作者提供。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">        listen *:443 ssl;</span><br><span class="line">        server_name asf.mydomain.com;</span><br><span class="line">        ssl_certificate /path/to/your/certificate.crt;</span><br><span class="line">        ssl_certificate_key /path/to/your/certificate.key;</span><br><span class="line"></span><br><span class="line">	location /Api/NLog &#123;</span><br><span class="line">		proxy_pass http://127.0.0.1:1242;</span><br><span class="line">#		proxy_set_header Host 127.0.0.1; # Only if you need to override default host</span><br><span class="line">		proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;</span><br><span class="line">		proxy_set_header X-Forwarded-Host $host:$server_port;</span><br><span class="line">		proxy_set_header X-Forwarded-Proto $scheme;</span><br><span class="line">		proxy_set_header X-Forwarded-Server $host;</span><br><span class="line">		proxy_set_header X-Real-IP $remote_addr;</span><br><span class="line"></span><br><span class="line">		# We add those 3 extra options for websockets proxying, see https://nginx.org/en/docs/http/websocket.html</span><br><span class="line">		proxy_http_version 1.1;</span><br><span class="line">		proxy_set_header Connection &quot;Upgrade&quot;;</span><br><span class="line">		proxy_set_header Upgrade $http_upgrade;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	location / &#123;</span><br><span class="line">		proxy_pass http://127.0.0.1:1242;</span><br><span class="line">#		proxy_set_header Host 127.0.0.1; # Only if you need to override default host</span><br><span class="line">		proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;</span><br><span class="line">		proxy_set_header X-Forwarded-Host $host:$server_port;</span><br><span class="line">		proxy_set_header X-Forwarded-Proto $scheme;</span><br><span class="line">		proxy_set_header X-Forwarded-Server $host;</span><br><span class="line">		proxy_set_header X-Real-IP $remote_addr;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    listen *:443 ssl;</span><br><span class="line">    server_name asf.mydomain.com;</span><br><span class="line">    ssl_certificate /path/to/your/certificate.crt;</span><br><span class="line">    ssl_certificate_key /path/to/your/certificate.key;</span><br><span class="line"></span><br><span class="line">    location /Api/NLog &#123;</span><br><span class="line">        proxy_pass http://127.0.0.1:1242;</span><br><span class="line">#        proxy_set_header Host 127.0.0.1; # Only if you need to override default host</span><br><span class="line">        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;</span><br><span class="line">        proxy_set_header X-Forwarded-Host $host:$server_port;</span><br><span class="line">        proxy_set_header X-Forwarded-Proto $scheme;</span><br><span class="line">        proxy_set_header X-Forwarded-Server $host;</span><br><span class="line">        proxy_set_header X-Real-IP $remote_addr;</span><br><span class="line"></span><br><span class="line">        # We add those 3 extra options for websockets proxying, see https://nginx.org/en/docs/http/websocket.html</span><br><span class="line">        proxy_http_version 1.1;</span><br><span class="line">        proxy_set_header Connection &quot;Upgrade&quot;;</span><br><span class="line">        proxy_set_header Upgrade $http_upgrade;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    location / &#123;</span><br><span class="line">        proxy_pass http://127.0.0.1:1242;</span><br><span class="line">#        proxy_set_header Host 127.0.0.1; # Only if you need to override default host</span><br><span class="line">        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;</span><br><span class="line">        proxy_set_header X-Forwarded-Host $host:$server_port;</span><br><span class="line">        proxy_set_header X-Forwarded-Proto $scheme;</span><br><span class="line">        proxy_set_header X-Forwarded-Server $host;</span><br><span class="line">        proxy_set_header X-Real-IP $remote_addr;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>应用部署</category>
+        <category>应用</category>
       </categories>
       <tags>
         <tag>Docker</tag>
@@ -6283,7 +6291,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <p>至此，域名转移成功，再等一段时间，阿里云会自己修改域名信息、实名认证等，过后就能正常操作域名了。</p>
 ]]></content>
       <categories>
-        <category>建站</category>
+        <category>应用</category>
       </categories>
       <tags>
         <tag>备案</tag>
@@ -6422,7 +6430,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <p>我使用微信频率不高，一般也就看看公众号，觉得用着还是非常舒适的，请看官们自行斟酌自己的使用情况。喜欢折腾的也可以自己配置着玩玩，挺有意思的。有点期待，未来会不会也能用 tg 来收发 QQ 消息呢？</p>
 ]]></content>
       <categories>
-        <category>应用部署</category>
+        <category>应用</category>
       </categories>
       <tags>
         <tag>Python</tag>
@@ -6488,7 +6496,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <p>有更多问题，欢迎在评论区留言。</p>
 ]]></content>
       <categories>
-        <category>应用部署</category>
+        <category>应用</category>
       </categories>
       <tags>
         <tag>Docker</tag>
@@ -6534,7 +6542,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <p>推荐使用 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RvcGpvaG53dS9NYWdpc2svcmVsZWFzZXMv">Magisk<i class="fa fa-external-link-alt"></i></span>。下载最新 Release 的 zip 安装包，通过 TWRP 直接刷入即可。卸载也是很简单的，下载对应版本<code>Magisk-uninstaller</code>的 zip 包，刷入即可。需要安装 Magisk Manager 进行管理，<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RvcGpvaG53dS9NYWdpc2svcmVsZWFzZXMvZG93bmxvYWQvbWFuYWdlci12Ny4wLjAvTWFnaXNrTWFuYWdlci12Ny4wLjAuYXBr">点击这里<i class="fa fa-external-link-alt"></i></span>下载。</p>
 ]]></content>
       <categories>
-        <category>杂记</category>
+        <category>应用</category>
       </categories>
       <tags>
         <tag>MIUI</tag>
@@ -6587,7 +6595,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 </ol>
 ]]></content>
       <categories>
-        <category>杂记</category>
+        <category>杂谈</category>
       </categories>
       <tags>
         <tag>VPS</tag>
@@ -6775,7 +6783,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 </ul>
 ]]></content>
       <categories>
-        <category>推广</category>
+        <category>其他</category>
       </categories>
       <tags>
         <tag>翻墙</tag>
@@ -6839,12 +6847,12 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <p>如果大家在使用过程中遇到任何问题，欢迎在这里留言，我将及时回复。本文作者为香菇肥牛，原文地址为<span class="exturl" data-url="aHR0cHM6Ly9xaW5nLnN1L2FydGljbGUvMTMxLmh0bWw=">https://qing.su/article/131.html<i class="fa fa-external-link-alt"></i></span>。转载需经过作者同意且需注明原文链接。谢谢！</p>
 ]]></content>
       <categories>
-        <category>杂记</category>
+        <category>应用</category>
+        <category>转载</category>
       </categories>
       <tags>
-        <tag>转载</tag>
-        <tag>Mailgun</tag>
         <tag>Google</tag>
+        <tag>Mailgun</tag>
         <tag>域名邮箱</tag>
       </tags>
   </entry>
@@ -6863,7 +6871,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <p>嘛，就这样吧，扯了一堆，就是发表一点点看法吧。</p>
 ]]></content>
       <categories>
-        <category>杂记</category>
+        <category>杂谈</category>
       </categories>
       <tags>
         <tag>Bilibili</tag>
@@ -7030,7 +7038,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 </ol>
 ]]></content>
       <categories>
-        <category>应用部署</category>
+        <category>应用</category>
       </categories>
       <tags>
         <tag>Ubuntu</tag>
@@ -7070,7 +7078,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <p><img data-src="https://img.iszy.xyz/20190318213428.png?x-oss-process=style/big" alt=""></p>
 ]]></content>
       <categories>
-        <category>建站</category>
+        <category>其他</category>
       </categories>
       <tags>
         <tag>Hexo</tag>
@@ -7125,7 +7133,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -H <span class="string">&quot;Content-Type: application/json&quot;</span> -XPUT http://localhost:9200/_cluster/settings -d <span class="string">&#x27;&#123;&quot;transient&quot;:&#123;&quot;cluster.routing.allocation.disk.threshold_enabled&quot;:false&#125;&#125;&#x27;</span></span><br><span class="line">curl -H <span class="string">&quot;Content-Type: application/json&quot;</span> -XPUT http://localhost:9200/_all/_settings -d <span class="string">&#x27;&#123;&quot;index.blocks.read_only_allow_delete&quot;:null&#125;&#x27;</span></span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>编程</category>
+        <category>技术</category>
       </categories>
       <tags>
         <tag>ElasticSearch</tag>
@@ -7156,7 +7164,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 监听地址，默认对外开放，若只允许本地访问则更改为 127.0.0.1</span></span><br><span class="line"><span class="attr">host:</span> <span class="number">0.0</span><span class="number">.0</span><span class="number">.0</span></span><br><span class="line"><span class="comment"># 监听端口，有需要可以更改</span></span><br><span class="line"><span class="attr">port:</span> <span class="number">8182</span></span><br><span class="line"><span class="comment"># 服务类型，可选以下内容</span></span><br><span class="line"><span class="comment"># - WebSocketChannelizer 提供WebSocket服务</span></span><br><span class="line"><span class="comment"># - HttpChannelizer 提供Http服务</span></span><br><span class="line"><span class="comment"># - WsAndHttpChannelizer 推荐，同时提供WebSocket和Http服务，从0.2.0版本开始支持</span></span><br><span class="line"><span class="attr">channelizer:</span> <span class="string">org.apache.tinkerpop.gremlin.server.channel.WsAndHttpChannelizer</span></span><br><span class="line"><span class="attr">graphs:</span> &#123;</span><br><span class="line">    <span class="comment"># 所要用到的配置文件路径，可自定义</span></span><br><span class="line">    <span class="attr">graph:</span> <span class="string">conf/gremlin-server/janusgraph.properties</span>,</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
 <details>
   <summary>完整配置</summary>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">host:</span> <span class="number">0.0</span><span class="number">.0</span><span class="number">.0</span></span><br><span class="line"><span class="attr">port:</span> <span class="number">8182</span></span><br><span class="line"><span class="attr">scriptEvaluationTimeout:</span> <span class="number">30000</span></span><br><span class="line"><span class="attr">channelizer:</span> <span class="string">org.apache.tinkerpop.gremlin.server.channel.WsAndHttpChannelizer</span></span><br><span class="line"><span class="attr">graphs:</span> &#123; <span class="attr">graph:</span> <span class="string">conf/gremlin-server/janusgraph.properties</span> &#125;</span><br><span class="line"><span class="attr">scriptEngines:</span></span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">gremlin-groovy:</span></span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">plugins:</span></span><br><span class="line">          &#123;</span><br><span class="line">            <span class="attr">org.janusgraph.graphdb.tinkerpop.plugin.JanusGraphGremlinPlugin:</span> &#123;&#125;,</span><br><span class="line">            <span class="string">?</span> <span class="string">org.apache.tinkerpop.gremlin.server.jsr223.GremlinServerGremlinPlugin</span></span><br><span class="line">            <span class="string">:</span> &#123;&#125;,</span><br><span class="line">            <span class="string">?</span> <span class="string">org.apache.tinkerpop.gremlin.tinkergraph.jsr223.TinkerGraphGremlinPlugin</span></span><br><span class="line">            <span class="string">:</span> &#123;&#125;,</span><br><span class="line">            <span class="attr">org.apache.tinkerpop.gremlin.jsr223.ImportGremlinPlugin:</span></span><br><span class="line">              &#123;</span><br><span class="line">                <span class="attr">classImports:</span> [<span class="string">java.lang.Math</span>],</span><br><span class="line">                <span class="attr">methodImports:</span> [<span class="string">java.lang.Math#*</span>],</span><br><span class="line">              &#125;,</span><br><span class="line">            <span class="attr">org.apache.tinkerpop.gremlin.jsr223.ScriptFileGremlinPlugin:</span></span><br><span class="line">              &#123; <span class="attr">files:</span> [<span class="string">scripts/empty-sample.groovy</span>] &#125;,</span><br><span class="line">          &#125;,</span><br><span class="line">      &#125;,</span><br><span class="line">  &#125;</span><br><span class="line"><span class="attr">serializers:</span></span><br><span class="line">  <span class="bullet">-</span> &#123;</span><br><span class="line">      <span class="attr">className:</span> <span class="string">org.apache.tinkerpop.gremlin.driver.ser.GryoMessageSerializerV3d0</span>,</span><br><span class="line">      <span class="attr">config:</span></span><br><span class="line">        &#123;</span><br><span class="line">          <span class="attr">ioRegistries:</span> [<span class="string">org.janusgraph.graphdb.tinkerpop.JanusGraphIoRegistry</span>],</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;</span><br><span class="line">  <span class="bullet">-</span> &#123;</span><br><span class="line">      <span class="attr">className:</span> <span class="string">org.apache.tinkerpop.gremlin.driver.ser.GryoMessageSerializerV3d0</span>,</span><br><span class="line">      <span class="attr">config:</span> &#123; <span class="attr">serializeResultToString:</span> <span class="literal">true</span> &#125;,</span><br><span class="line">    &#125;</span><br><span class="line">  <span class="bullet">-</span> &#123;</span><br><span class="line">      <span class="attr">className:</span> <span class="string">org.apache.tinkerpop.gremlin.driver.ser.GraphSONMessageSerializerV3d0</span>,</span><br><span class="line">      <span class="attr">config:</span></span><br><span class="line">        &#123;</span><br><span class="line">          <span class="attr">ioRegistries:</span> [<span class="string">org.janusgraph.graphdb.tinkerpop.JanusGraphIoRegistry</span>],</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;</span><br><span class="line">  <span class="comment"># Older serialization versions for backwards compatibility:</span></span><br><span class="line">  <span class="bullet">-</span> &#123;</span><br><span class="line">      <span class="attr">className:</span> <span class="string">org.apache.tinkerpop.gremlin.driver.ser.GryoMessageSerializerV1d0</span>,</span><br><span class="line">      <span class="attr">config:</span></span><br><span class="line">        &#123;</span><br><span class="line">          <span class="attr">ioRegistries:</span> [<span class="string">org.janusgraph.graphdb.tinkerpop.JanusGraphIoRegistry</span>],</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;</span><br><span class="line">  <span class="bullet">-</span> &#123;</span><br><span class="line">      <span class="attr">className:</span> <span class="string">org.apache.tinkerpop.gremlin.driver.ser.GryoLiteMessageSerializerV1d0</span>,</span><br><span class="line">      <span class="attr">config:</span></span><br><span class="line">        &#123;</span><br><span class="line">          <span class="attr">ioRegistries:</span> [<span class="string">org.janusgraph.graphdb.tinkerpop.JanusGraphIoRegistry</span>],</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;</span><br><span class="line">  <span class="bullet">-</span> &#123;</span><br><span class="line">      <span class="attr">className:</span> <span class="string">org.apache.tinkerpop.gremlin.driver.ser.GryoMessageSerializerV1d0</span>,</span><br><span class="line">      <span class="attr">config:</span> &#123; <span class="attr">serializeResultToString:</span> <span class="literal">true</span> &#125;,</span><br><span class="line">    &#125;</span><br><span class="line">  <span class="bullet">-</span> &#123;</span><br><span class="line">      <span class="attr">className:</span> <span class="string">org.apache.tinkerpop.gremlin.driver.ser.GraphSONMessageSerializerGremlinV2d0</span>,</span><br><span class="line">      <span class="attr">config:</span></span><br><span class="line">        &#123;</span><br><span class="line">          <span class="attr">ioRegistries:</span> [<span class="string">org.janusgraph.graphdb.tinkerpop.JanusGraphIoRegistry</span>],</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;</span><br><span class="line">  <span class="bullet">-</span> &#123;</span><br><span class="line">      <span class="attr">className:</span> <span class="string">org.apache.tinkerpop.gremlin.driver.ser.GraphSONMessageSerializerGremlinV1d0</span>,</span><br><span class="line">      <span class="attr">config:</span></span><br><span class="line">        &#123;</span><br><span class="line">          <span class="attr">ioRegistries:</span></span><br><span class="line">            [<span class="string">org.janusgraph.graphdb.tinkerpop.JanusGraphIoRegistryV1d0</span>],</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;</span><br><span class="line">  <span class="bullet">-</span> &#123;</span><br><span class="line">      <span class="attr">className:</span> <span class="string">org.apache.tinkerpop.gremlin.driver.ser.GraphSONMessageSerializerV1d0</span>,</span><br><span class="line">      <span class="attr">config:</span></span><br><span class="line">        &#123;</span><br><span class="line">          <span class="attr">ioRegistries:</span></span><br><span class="line">            [<span class="string">org.janusgraph.graphdb.tinkerpop.JanusGraphIoRegistryV1d0</span>],</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;</span><br><span class="line"><span class="attr">processors:</span></span><br><span class="line">  <span class="bullet">-</span> &#123;</span><br><span class="line">      <span class="attr">className:</span> <span class="string">org.apache.tinkerpop.gremlin.server.op.session.SessionOpProcessor</span>,</span><br><span class="line">      <span class="attr">config:</span> &#123; <span class="attr">sessionTimeout:</span> <span class="number">28800000</span> &#125;,</span><br><span class="line">    &#125;</span><br><span class="line">  <span class="bullet">-</span> &#123;</span><br><span class="line">      <span class="attr">className:</span> <span class="string">org.apache.tinkerpop.gremlin.server.op.traversal.TraversalOpProcessor</span>,</span><br><span class="line">      <span class="attr">config:</span> &#123; <span class="attr">cacheExpirationTime:</span> <span class="number">600000</span>, <span class="attr">cacheMaxSize:</span> <span class="number">1000</span> &#125;,</span><br><span class="line">    &#125;</span><br><span class="line"><span class="attr">metrics:</span></span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">consoleReporter:</span> &#123; <span class="attr">enabled:</span> <span class="literal">true</span>, <span class="attr">interval:</span> <span class="number">180000</span> &#125;,</span><br><span class="line">    <span class="attr">csvReporter:</span></span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">enabled:</span> <span class="literal">true</span>,</span><br><span class="line">        <span class="attr">interval:</span> <span class="number">180000</span>,</span><br><span class="line">        <span class="attr">fileName:</span> <span class="string">/tmp/gremlin-server-metrics.csv</span>,</span><br><span class="line">      &#125;,</span><br><span class="line">    <span class="attr">jmxReporter:</span> &#123; <span class="attr">enabled:</span> <span class="literal">true</span> &#125;,</span><br><span class="line">    <span class="attr">slf4jReporter:</span> &#123; <span class="attr">enabled:</span> <span class="literal">true</span>, <span class="attr">interval:</span> <span class="number">180000</span> &#125;,</span><br><span class="line">    <span class="attr">gangliaReporter:</span></span><br><span class="line">      &#123; <span class="attr">enabled:</span> <span class="literal">false</span>, <span class="attr">interval:</span> <span class="number">180000</span>, <span class="attr">addressingMode:</span> <span class="string">MULTICAST</span> &#125;,</span><br><span class="line">    <span class="attr">graphiteReporter:</span> &#123; <span class="attr">enabled:</span> <span class="literal">false</span>, <span class="attr">interval:</span> <span class="number">180000</span> &#125;,</span><br><span class="line">  &#125;</span><br><span class="line"><span class="attr">maxInitialLineLength:</span> <span class="number">4096</span></span><br><span class="line"><span class="attr">maxHeaderSize:</span> <span class="number">8192</span></span><br><span class="line"><span class="attr">maxChunkSize:</span> <span class="number">8192</span></span><br><span class="line"><span class="attr">maxContentLength:</span> <span class="number">65536</span></span><br><span class="line"><span class="attr">maxAccumulationBufferComponents:</span> <span class="number">1024</span></span><br><span class="line"><span class="attr">resultIterationBatchSize:</span> <span class="number">64</span></span><br><span class="line"><span class="attr">writeBufferLowWaterMark:</span> <span class="number">32768</span></span><br><span class="line"><span class="attr">writeBufferHighWaterMark:</span> <span class="number">65536</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">host:</span> <span class="number">0.0</span><span class="number">.0</span><span class="number">.0</span></span><br><span class="line"><span class="attr">port:</span> <span class="number">8182</span></span><br><span class="line"><span class="attr">scriptEvaluationTimeout:</span> <span class="number">30000</span></span><br><span class="line"><span class="attr">channelizer:</span> <span class="string">org.apache.tinkerpop.gremlin.server.channel.WsAndHttpChannelizer</span></span><br><span class="line"><span class="attr">graphs:</span> &#123; <span class="attr">graph:</span> <span class="string">conf/gremlin-server/janusgraph.properties</span> &#125;</span><br><span class="line"><span class="attr">scriptEngines:</span></span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">gremlin-groovy:</span></span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">plugins:</span></span><br><span class="line">          &#123;</span><br><span class="line">            <span class="attr">org.janusgraph.graphdb.tinkerpop.plugin.JanusGraphGremlinPlugin:</span> &#123;&#125;,</span><br><span class="line">            <span class="attr">org.apache.tinkerpop.gremlin.server.jsr223.GremlinServerGremlinPlugin:</span></span><br><span class="line">              &#123;&#125;,</span><br><span class="line">            <span class="attr">org.apache.tinkerpop.gremlin.tinkergraph.jsr223.TinkerGraphGremlinPlugin:</span></span><br><span class="line">              &#123;&#125;,</span><br><span class="line">            <span class="attr">org.apache.tinkerpop.gremlin.jsr223.ImportGremlinPlugin:</span></span><br><span class="line">              &#123;</span><br><span class="line">                <span class="attr">classImports:</span> [<span class="string">java.lang.Math</span>],</span><br><span class="line">                <span class="attr">methodImports:</span> [<span class="string">java.lang.Math#*</span>],</span><br><span class="line">              &#125;,</span><br><span class="line">            <span class="attr">org.apache.tinkerpop.gremlin.jsr223.ScriptFileGremlinPlugin:</span></span><br><span class="line">              &#123; <span class="attr">files:</span> [<span class="string">scripts/empty-sample.groovy</span>] &#125;,</span><br><span class="line">          &#125;,</span><br><span class="line">      &#125;,</span><br><span class="line">  &#125;</span><br><span class="line"><span class="attr">serializers:</span></span><br><span class="line">  <span class="bullet">-</span> &#123;</span><br><span class="line">      <span class="attr">className:</span> <span class="string">org.apache.tinkerpop.gremlin.driver.ser.GryoMessageSerializerV3d0</span>,</span><br><span class="line">      <span class="attr">config:</span></span><br><span class="line">        &#123;</span><br><span class="line">          <span class="attr">ioRegistries:</span> [<span class="string">org.janusgraph.graphdb.tinkerpop.JanusGraphIoRegistry</span>],</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;</span><br><span class="line">  <span class="bullet">-</span> &#123;</span><br><span class="line">      <span class="attr">className:</span> <span class="string">org.apache.tinkerpop.gremlin.driver.ser.GryoMessageSerializerV3d0</span>,</span><br><span class="line">      <span class="attr">config:</span> &#123; <span class="attr">serializeResultToString:</span> <span class="literal">true</span> &#125;,</span><br><span class="line">    &#125;</span><br><span class="line">  <span class="bullet">-</span> &#123;</span><br><span class="line">      <span class="attr">className:</span> <span class="string">org.apache.tinkerpop.gremlin.driver.ser.GraphSONMessageSerializerV3d0</span>,</span><br><span class="line">      <span class="attr">config:</span></span><br><span class="line">        &#123;</span><br><span class="line">          <span class="attr">ioRegistries:</span> [<span class="string">org.janusgraph.graphdb.tinkerpop.JanusGraphIoRegistry</span>],</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;</span><br><span class="line">  <span class="comment"># Older serialization versions for backwards compatibility:</span></span><br><span class="line">  <span class="bullet">-</span> &#123;</span><br><span class="line">      <span class="attr">className:</span> <span class="string">org.apache.tinkerpop.gremlin.driver.ser.GryoMessageSerializerV1d0</span>,</span><br><span class="line">      <span class="attr">config:</span></span><br><span class="line">        &#123;</span><br><span class="line">          <span class="attr">ioRegistries:</span> [<span class="string">org.janusgraph.graphdb.tinkerpop.JanusGraphIoRegistry</span>],</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;</span><br><span class="line">  <span class="bullet">-</span> &#123;</span><br><span class="line">      <span class="attr">className:</span> <span class="string">org.apache.tinkerpop.gremlin.driver.ser.GryoLiteMessageSerializerV1d0</span>,</span><br><span class="line">      <span class="attr">config:</span></span><br><span class="line">        &#123;</span><br><span class="line">          <span class="attr">ioRegistries:</span> [<span class="string">org.janusgraph.graphdb.tinkerpop.JanusGraphIoRegistry</span>],</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;</span><br><span class="line">  <span class="bullet">-</span> &#123;</span><br><span class="line">      <span class="attr">className:</span> <span class="string">org.apache.tinkerpop.gremlin.driver.ser.GryoMessageSerializerV1d0</span>,</span><br><span class="line">      <span class="attr">config:</span> &#123; <span class="attr">serializeResultToString:</span> <span class="literal">true</span> &#125;,</span><br><span class="line">    &#125;</span><br><span class="line">  <span class="bullet">-</span> &#123;</span><br><span class="line">      <span class="attr">className:</span> <span class="string">org.apache.tinkerpop.gremlin.driver.ser.GraphSONMessageSerializerGremlinV2d0</span>,</span><br><span class="line">      <span class="attr">config:</span></span><br><span class="line">        &#123;</span><br><span class="line">          <span class="attr">ioRegistries:</span> [<span class="string">org.janusgraph.graphdb.tinkerpop.JanusGraphIoRegistry</span>],</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;</span><br><span class="line">  <span class="bullet">-</span> &#123;</span><br><span class="line">      <span class="attr">className:</span> <span class="string">org.apache.tinkerpop.gremlin.driver.ser.GraphSONMessageSerializerGremlinV1d0</span>,</span><br><span class="line">      <span class="attr">config:</span></span><br><span class="line">        &#123;</span><br><span class="line">          <span class="attr">ioRegistries:</span></span><br><span class="line">            [<span class="string">org.janusgraph.graphdb.tinkerpop.JanusGraphIoRegistryV1d0</span>],</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;</span><br><span class="line">  <span class="bullet">-</span> &#123;</span><br><span class="line">      <span class="attr">className:</span> <span class="string">org.apache.tinkerpop.gremlin.driver.ser.GraphSONMessageSerializerV1d0</span>,</span><br><span class="line">      <span class="attr">config:</span></span><br><span class="line">        &#123;</span><br><span class="line">          <span class="attr">ioRegistries:</span></span><br><span class="line">            [<span class="string">org.janusgraph.graphdb.tinkerpop.JanusGraphIoRegistryV1d0</span>],</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;</span><br><span class="line"><span class="attr">processors:</span></span><br><span class="line">  <span class="bullet">-</span> &#123;</span><br><span class="line">      <span class="attr">className:</span> <span class="string">org.apache.tinkerpop.gremlin.server.op.session.SessionOpProcessor</span>,</span><br><span class="line">      <span class="attr">config:</span> &#123; <span class="attr">sessionTimeout:</span> <span class="number">28800000</span> &#125;,</span><br><span class="line">    &#125;</span><br><span class="line">  <span class="bullet">-</span> &#123;</span><br><span class="line">      <span class="attr">className:</span> <span class="string">org.apache.tinkerpop.gremlin.server.op.traversal.TraversalOpProcessor</span>,</span><br><span class="line">      <span class="attr">config:</span> &#123; <span class="attr">cacheExpirationTime:</span> <span class="number">600000</span>, <span class="attr">cacheMaxSize:</span> <span class="number">1000</span> &#125;,</span><br><span class="line">    &#125;</span><br><span class="line"><span class="attr">metrics:</span></span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">consoleReporter:</span> &#123; <span class="attr">enabled:</span> <span class="literal">true</span>, <span class="attr">interval:</span> <span class="number">180000</span> &#125;,</span><br><span class="line">    <span class="attr">csvReporter:</span></span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">enabled:</span> <span class="literal">true</span>,</span><br><span class="line">        <span class="attr">interval:</span> <span class="number">180000</span>,</span><br><span class="line">        <span class="attr">fileName:</span> <span class="string">/tmp/gremlin-server-metrics.csv</span>,</span><br><span class="line">      &#125;,</span><br><span class="line">    <span class="attr">jmxReporter:</span> &#123; <span class="attr">enabled:</span> <span class="literal">true</span> &#125;,</span><br><span class="line">    <span class="attr">slf4jReporter:</span> &#123; <span class="attr">enabled:</span> <span class="literal">true</span>, <span class="attr">interval:</span> <span class="number">180000</span> &#125;,</span><br><span class="line">    <span class="attr">gangliaReporter:</span></span><br><span class="line">      &#123; <span class="attr">enabled:</span> <span class="literal">false</span>, <span class="attr">interval:</span> <span class="number">180000</span>, <span class="attr">addressingMode:</span> <span class="string">MULTICAST</span> &#125;,</span><br><span class="line">    <span class="attr">graphiteReporter:</span> &#123; <span class="attr">enabled:</span> <span class="literal">false</span>, <span class="attr">interval:</span> <span class="number">180000</span> &#125;,</span><br><span class="line">  &#125;</span><br><span class="line"><span class="attr">maxInitialLineLength:</span> <span class="number">4096</span></span><br><span class="line"><span class="attr">maxHeaderSize:</span> <span class="number">8192</span></span><br><span class="line"><span class="attr">maxChunkSize:</span> <span class="number">8192</span></span><br><span class="line"><span class="attr">maxContentLength:</span> <span class="number">65536</span></span><br><span class="line"><span class="attr">maxAccumulationBufferComponents:</span> <span class="number">1024</span></span><br><span class="line"><span class="attr">resultIterationBatchSize:</span> <span class="number">64</span></span><br><span class="line"><span class="attr">writeBufferLowWaterMark:</span> <span class="number">32768</span></span><br><span class="line"><span class="attr">writeBufferHighWaterMark:</span> <span class="number">65536</span></span><br></pre></td></tr></table></figure>
 </details>
 <h3 id="调整-properties-文件">调整 properties 文件</h3>
 <p>通过<code>vi conf/gremlin-server/janusgraph.properties</code>打开 properties 文件，加入以下内容。</p>
@@ -7204,7 +7212,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 </ol>
 ]]></content>
       <categories>
-        <category>应用部署</category>
+        <category>技术</category>
       </categories>
       <tags>
         <tag>ElasticSearch</tag>
@@ -7225,7 +7233,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <p>由于 SimpleDateFormat 不是线程安全的，推荐在需要格式化的时候创建 SimpleDateFormat 的局部变量，而不要公用，否则可能会出现冲突，线程挂死等问题。</p>
 ]]></content>
       <categories>
-        <category>编程</category>
+        <category>技术</category>
       </categories>
       <tags>
         <tag>Java</tag>
@@ -7281,11 +7289,11 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <p>这个系列的第二部分，将讨论如何在浏览器环境组织不同的模块、管理模块之间的依赖性。</p>
 ]]></content>
       <categories>
-        <category>编程</category>
+        <category>技术</category>
+        <category>转载</category>
       </categories>
       <tags>
         <tag>JavaScript</tag>
-        <tag>转载</tag>
         <tag>模块化</tag>
       </tags>
   </entry>
@@ -7310,7 +7318,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <p>在实际使用过程中，我觉得似乎差别不大，实在不知道还有什么区别。希望了解的大佬能够教我。</p>
 ]]></content>
       <categories>
-        <category>编程</category>
+        <category>技术</category>
       </categories>
       <tags>
         <tag>JavaScript</tag>
@@ -7351,7 +7359,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <p>这个我暂时只知道通过上面说明的通用方法进行修改替换文件，如有小伙伴知道其他方法，希望可以告诉我，十分感谢。</p>
 ]]></content>
       <categories>
-        <category>编程</category>
+        <category>技术</category>
       </categories>
       <tags>
         <tag>Windows</tag>
@@ -7380,7 +7388,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$(<span class="string">&quot;#date&quot;</span>).change();</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>编程</category>
+        <category>技术</category>
       </categories>
       <tags>
         <tag>JavaScript</tag>
@@ -7401,7 +7409,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></span><br><span class="line"><span class="css">  <span class="selector-class">.layui-icon</span> &#123;</span></span><br><span class="line"><span class="css">    <span class="attribute">font-family</span>: layui-icon, iconfont <span class="meta">!important</span>;</span></span><br><span class="line"><span class="css">    <span class="attribute">font-size</span>: <span class="number">16px</span>;</span></span><br><span class="line"><span class="css">    <span class="attribute">font-style</span>: normal;</span></span><br><span class="line"><span class="css">    -webkit-<span class="attribute">font-smoothing</span>: antialiased;</span></span><br><span class="line"><span class="css">    -moz-osx-<span class="attribute">font-smoothing</span>: grayscale;</span></span><br><span class="line"><span class="css">  &#125;</span></span><br><span class="line"><span class="css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>编程</category>
+        <category>技术</category>
       </categories>
       <tags>
         <tag>JavaScript</tag>
@@ -7458,7 +7466,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <p>现在你已经成功安装了 zip 扩展，其他扩展也可以类比着来，有什么问题，可以在评论区问我。</p>
 ]]></content>
       <categories>
-        <category>建站</category>
+        <category>应用</category>
       </categories>
       <tags>
         <tag>php</tag>
@@ -7515,7 +7523,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <p>至此，已经成功在 Ubuntu 16.04 搭建了 Minecraft 服务器 1.13，可以尽情玩耍了。当然，需要获得更好的体验，还有更多调整需要进行。</p>
 ]]></content>
       <categories>
-        <category>应用部署</category>
+        <category>应用</category>
       </categories>
       <tags>
         <tag>Ubuntu</tag>
@@ -7541,8 +7549,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <p><img data-src="https://img.iszy.xyz/20190318214328.png" alt=""></p>
 ]]></content>
       <categories>
-        <category>系统</category>
-        <category>Linux</category>
+        <category>技术</category>
       </categories>
       <tags>
         <tag>Linux</tag>
@@ -7619,7 +7626,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <p><img data-src="https://img.iszy.xyz/20190318214856.png" alt=""></p>
 ]]></content>
       <categories>
-        <category>GIS</category>
+        <category>技术</category>
       </categories>
       <tags>
         <tag>ArcGIS</tag>
@@ -7717,7 +7724,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Script Vendors.</span></span><br><span class="line"><span class="comment"># Set a CDN address for the vendor you want to customize.</span></span><br><span class="line"><span class="comment"># For example</span></span><br><span class="line"><span class="comment">#    jquery: https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js</span></span><br><span class="line"><span class="comment"># Be aware that you should use the same version as internal ones to avoid potential problems.</span></span><br><span class="line"><span class="comment"># Please use the https protocol of CDN files when you enable https on your site.</span></span><br><span class="line"><span class="attr">vendors:</span></span><br><span class="line">  <span class="comment"># Internal path prefix. Please do not edit it.</span></span><br><span class="line">  <span class="attr">_internal:</span> <span class="string">lib</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Internal version: 2.1.3</span></span><br><span class="line">  <span class="attr">jquery:</span> <span class="string">//cdn.bootcss.com/jquery/2.1.3/jquery.min.js</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Internal version: 2.1.5</span></span><br><span class="line">  <span class="comment"># See: http://fancyapps.com/fancybox/</span></span><br><span class="line">  <span class="attr">fancybox:</span> <span class="string">//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js</span></span><br><span class="line">  <span class="attr">fancybox_css:</span> <span class="string">//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Internal version: 1.0.6</span></span><br><span class="line">  <span class="comment"># See: https://github.com/ftlabs/fastclick</span></span><br><span class="line">  <span class="attr">fastclick:</span> <span class="string">//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Internal version: 1.9.7</span></span><br><span class="line">  <span class="comment"># See: https://github.com/tuupola/jquery_lazyload</span></span><br><span class="line">  <span class="attr">lazyload:</span> <span class="string">//cdn.bootcss.com/jquery_lazyload/1.9.7/jquery.lazyload.min.js</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Internal version: 1.2.1</span></span><br><span class="line">  <span class="comment"># See: http://VelocityJS.org</span></span><br><span class="line">  <span class="attr">velocity:</span> <span class="string">//cdn.bootcss.com/velocity/1.2.1/velocity.min.js</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Internal version: 1.2.1</span></span><br><span class="line">  <span class="comment"># See: http://VelocityJS.org</span></span><br><span class="line">  <span class="attr">velocity_ui:</span> <span class="string">//cdn.bootcss.com/velocity/1.2.1/velocity.ui.min.js</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Internal version: 0.7.9</span></span><br><span class="line">  <span class="comment"># See: https://faisalman.github.io/ua-parser-js/</span></span><br><span class="line">  <span class="attr">ua_parser:</span> <span class="string">//cdn.bootcss.com/UAParser.js/0.7.9/ua-parser.min.js</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Internal version: 4.6.2</span></span><br><span class="line">  <span class="comment"># See: http://fontawesome.io/</span></span><br><span class="line">  <span class="attr">fontawesome:</span> <span class="string">//cdn.bootcss.com/font-awesome/4.6.2/css/font-awesome.min.css</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Internal version: 1</span></span><br><span class="line">  <span class="comment"># https://www.algolia.com</span></span><br><span class="line">  <span class="attr">algolia_instant_js:</span></span><br><span class="line">  <span class="attr">algolia_instant_css:</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Internal version: 1.0.2</span></span><br><span class="line">  <span class="comment"># See: https://github.com/HubSpot/pace</span></span><br><span class="line">  <span class="comment"># Or use direct links below:</span></span><br><span class="line">  <span class="comment"># pace: //cdn.bootcss.com/pace/1.0.2/pace.min.js</span></span><br><span class="line">  <span class="comment"># pace_css: //cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-flash.min.css</span></span><br><span class="line">  <span class="attr">pace:</span> <span class="string">//cdn.bootcss.com/pace/1.0.2/pace.min.js</span></span><br><span class="line">  <span class="attr">pace_css:</span> <span class="string">//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-flash.min.css</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Internal version: 1.0.0</span></span><br><span class="line">  <span class="comment"># See: https://github.com/theme-next/theme-next-canvas-nest</span></span><br><span class="line">  <span class="attr">canvas_nest:</span> <span class="string">//cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-nest@1.0.0/canvas-nest.min.js</span></span><br><span class="line">  <span class="attr">canvas_nest_nomobile:</span> <span class="string">//cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-nest@1.0.0/canvas-nest-nomobile.min.js</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Internal version: 1.0.0</span></span><br><span class="line">  <span class="comment"># See: https://github.com/theme-next/theme-next-three</span></span><br><span class="line">  <span class="comment"># three: //cdn.jsdelivr.net/gh/theme-next/theme-next-three@1.0.0/three.min.js</span></span><br><span class="line">  <span class="comment"># three_waves: //cdn.jsdelivr.net/gh/theme-next/theme-next-three@1.0.0/three-waves.min.js</span></span><br><span class="line">  <span class="comment"># canvas_lines: //cdn.jsdelivr.net/gh/theme-next/theme-next-three@1.0.0/canvas_lines.min.js</span></span><br><span class="line">  <span class="comment"># canvas_sphere: //cdn.jsdelivr.net/gh/theme-next/theme-next-three@1.0.0/canvas_sphere.min.js</span></span><br><span class="line">  <span class="attr">three:</span> <span class="string">//cdn.jsdelivr.net/gh/theme-next/theme-next-three@1.0.0/three.min.js</span></span><br><span class="line">  <span class="attr">three_waves:</span> <span class="string">//cdn.jsdelivr.net/gh/theme-next/theme-next-three@1.0.0/three-waves.min.js</span></span><br><span class="line">  <span class="attr">canvas_lines:</span> <span class="string">//cdn.jsdelivr.net/gh/theme-next/theme-next-three@1.0.0/canvas_lines.min.js</span></span><br><span class="line">  <span class="attr">canvas_sphere:</span> <span class="string">//cdn.jsdelivr.net/gh/theme-next/theme-next-three@1.0.0/canvas_sphere.min.js</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Internal version: 1.0.0</span></span><br><span class="line">  <span class="comment"># https://github.com/zproo/canvas-ribbon</span></span><br><span class="line">  <span class="attr">canvas_ribbon:</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Internal version: 3.3.0</span></span><br><span class="line">  <span class="comment"># https://github.com/ethantw/Han</span></span><br><span class="line">  <span class="attr">Han:</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Internal version: 3.3.0</span></span><br><span class="line">  <span class="comment"># https://github.com/vinta/pangu.js</span></span><br><span class="line">  <span class="comment"># Example:</span></span><br><span class="line">  <span class="comment"># pangu: //cdn.jsdelivr.net/npm/pangu@3.3.0/dist/browser/pangu.min.js</span></span><br><span class="line">  <span class="comment"># pangu: //cdnjs.cloudflare.com/ajax/libs/pangu/3.3.0/pangu.min.js</span></span><br><span class="line">  <span class="attr">pangu:</span> <span class="string">//cdn.bootcss.com/pangu/3.3.0/pangu.min.js</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># needMoreShare2</span></span><br><span class="line">  <span class="comment"># https://github.com/revir/need-more-share2</span></span><br><span class="line">  <span class="comment"># Example:</span></span><br><span class="line">  <span class="comment"># needmoreshare2_js: //cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1.0.0/needsharebutton.min.js</span></span><br><span class="line">  <span class="comment"># needmoreshare2_css: //cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1.0.0/needsharebutton.min.css</span></span><br><span class="line">  <span class="attr">needmoreshare2_js:</span> <span class="string">//cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1.0.0/needsharebutton.min.js</span></span><br><span class="line">  <span class="attr">needmoreshare2_css:</span> <span class="string">//cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1.0.0/needsharebutton.min.css</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># bookmark</span></span><br><span class="line">  <span class="comment"># Internal version: 1.0.0</span></span><br><span class="line">  <span class="comment"># https://github.com/theme-next/theme-next-bookmark</span></span><br><span class="line">  <span class="comment"># Example:</span></span><br><span class="line">  <span class="comment"># bookmark: //cdn.jsdelivr.net/gh/theme-next/theme-next-bookmark@1.0.0/bookmark.min.js</span></span><br><span class="line">  <span class="attr">bookmark:</span> <span class="string">//cdn.jsdelivr.net/gh/theme-next/theme-next-bookmark@1.0.0/bookmark.min.js</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># reading_progress</span></span><br><span class="line">  <span class="comment"># Internal version: 1.0</span></span><br><span class="line">  <span class="comment"># https://github.com/theme-next/theme-next-reading-progress</span></span><br><span class="line">  <span class="comment"># Example: https://cdn.jsdelivr.net/gh/theme-next/theme-next-reading-progress@1.1/reading_progress.min.js</span></span><br><span class="line">  <span class="attr">reading_progress:</span> <span class="string">//cdn.jsdelivr.net/gh/theme-next/theme-next-reading-progress@1.1/reading_progress.min.js</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># valine comment</span></span><br><span class="line">  <span class="comment"># Example: https://cdn.jsdelivr.net/npm/valine@1.1.8/dist/Valine.min.js</span></span><br><span class="line">  <span class="attr">valine:</span> <span class="string">//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js</span></span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>建站</category>
+        <category>应用</category>
       </categories>
       <tags>
         <tag>Hexo</tag>
@@ -7778,7 +7785,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <p>好了，到这里，教程算是结束了。OpenSSL 1.1.1 LTS 已经正式发布了，TLS1.3 也已经正式公布。现阶段，Nginx、Apache 等主流 web 服务器还没有官方支持，还需要通过打补丁的方式进行支持。期待 TLS1.3 全面铺开后对网络隐私和抗审查作出的贡献。</p>
 ]]></content>
       <categories>
-        <category>建站</category>
+        <category>技术</category>
       </categories>
       <tags>
         <tag>OpenSSL</tag>
@@ -7803,7 +7810,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <p>将两个开关均打开，重新启动 Nicegram，该账号已经能够正常访问苹果封锁的群组了。</p>
 ]]></content>
       <categories>
-        <category>杂记</category>
+        <category>应用</category>
       </categories>
       <tags>
         <tag>Telegram</tag>
@@ -7832,7 +7839,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">async</span> = <span class="built_in">require</span>(<span class="string">&quot;async&quot;</span>);</span><br><span class="line"><span class="keyword">const</span> sleep = <span class="function">() =&gt;</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">res, rej</span>) =&gt;</span> <span class="built_in">setTimeout</span>(res, <span class="number">1000</span>));</span><br><span class="line"></span><br><span class="line">(<span class="keyword">async</span> () =&gt; &#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">9</span>; i++) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(i);</span><br><span class="line">    <span class="keyword">await</span> sleep();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>编程</category>
+        <category>技术</category>
       </categories>
       <tags>
         <tag>JavaScript</tag>
@@ -7876,7 +7883,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd ~ &amp;&amp; mkdir geoserver_data</span><br><span class="line">docker run -d -p 8080:8080 --name geoserver -v $HOME/geoserver_data:/opt/geoserver/data_dir zvonimirsun/geoserver:2.14.2</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>应用部署</category>
+        <category>应用</category>
       </categories>
       <tags>
         <tag>GIS</tag>
@@ -7943,7 +7950,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <p><img data-src="https://img.iszy.xyz/20190318215950.png" alt=""></p>
 ]]></content>
       <categories>
-        <category>杂记</category>
+        <category>应用</category>
       </categories>
       <tags>
         <tag>ReactOS</tag>
@@ -8010,7 +8017,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <p>阅读 App 是一个相当优秀的阅读软件，省去了大家大量地在网上搜索小说的时间，也让大家免于受到垃圾网站大量广告之苦，这也是我推荐这个应用的原因。但是终究看的还是盗版小说，如果大家喜欢喜欢那本小说，还是最好购买正版支持作者。</p>
 ]]></content>
       <categories>
-        <category>软件</category>
+        <category>工具</category>
       </categories>
       <tags>
         <tag>小说</tag>
@@ -8099,11 +8106,11 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <p>（完）</p>
 ]]></content>
       <categories>
-        <category>编程</category>
+        <category>技术</category>
+        <category>转载</category>
       </categories>
       <tags>
         <tag>JavaScript</tag>
-        <tag>转载</tag>
         <tag>模块化</tag>
       </tags>
   </entry>
@@ -9431,7 +9438,7 @@ V2Club(旧蓝岸)，一家专门提供 v2ray 代理服务的服务商。或许�
 </ul>
 ]]></content>
       <categories>
-        <category>推广</category>
+        <category>其他</category>
       </categories>
       <tags>
         <tag>翻墙</tag>
@@ -9580,7 +9587,7 @@ V2Club(旧蓝岸)，一家专门提供 v2ray 代理服务的服务商。或许�
 </ol>
 ]]></content>
       <categories>
-        <category>软件</category>
+        <category>工具</category>
       </categories>
       <tags>
         <tag>Scoop</tag>
@@ -9778,7 +9785,7 @@ V2Club(旧蓝岸)，一家专门提供 v2ray 代理服务的服务商。或许�
 <p>到此，自建 KMS 到激活都介绍完了，按照本文介绍应该已经正常激活了，享受你的软件吧。如果 KMS 服务器出现问题，180 天应该早就解决了吧。</p>
 ]]></content>
       <categories>
-        <category>应用部署</category>
+        <category>应用</category>
       </categories>
       <tags>
         <tag>Windows</tag>
@@ -9846,7 +9853,7 @@ V2Club(旧蓝岸)，一家专门提供 v2ray 代理服务的服务商。或许�
 <p><img data-src="https://img.iszy.xyz/20190318220031.png" alt=""></p>
 ]]></content>
       <categories>
-        <category>应用部署</category>
+        <category>应用</category>
       </categories>
       <tags>
         <tag>短域名</tag>
@@ -9921,7 +9928,7 @@ V2Club(旧蓝岸)，一家专门提供 v2ray 代理服务的服务商。或许�
 <p>其他高级功能，请看官们自行探索。</p>
 ]]></content>
       <categories>
-        <category>软件</category>
+        <category>工具</category>
       </categories>
       <tags>
         <tag>Chrome</tag>
@@ -10048,7 +10055,7 @@ V2Club(旧蓝岸)，一家专门提供 v2ray 代理服务的服务商。或许�
 </ol>
 ]]></content>
       <categories>
-        <category>应用部署</category>
+        <category>应用</category>
       </categories>
       <tags>
         <tag>Ubuntu</tag>
@@ -10091,8 +10098,12 @@ V2Club(旧蓝岸)，一家专门提供 v2ray 代理服务的服务商。或许�
 <p><span class="exturl" data-url="aHR0cHM6Ly91cmwuaXN6eS54eXovc2h1dHRsZQ==">官网传送门<i class="fa fa-external-link-alt"></i></span></p>
 <p><img data-src="https://img.iszy.xyz/20210409220158.png?x-oss-process=style/big" alt=""></p>
 ]]></content>
+      <categories>
+        <category>其他</category>
+      </categories>
       <tags>
         <tag>科学上网</tag>
+        <tag>测速</tag>
       </tags>
   </entry>
   <entry>
@@ -10155,7 +10166,7 @@ V2Club(旧蓝岸)，一家专门提供 v2ray 代理服务的服务商。或许�
 </ol>
 ]]></content>
       <categories>
-        <category>杂记</category>
+        <category>应用</category>
       </categories>
       <tags>
         <tag>Telegram</tag>
@@ -10222,13 +10233,13 @@ V2Club(旧蓝岸)，一家专门提供 v2ray 代理服务的服务商。或许�
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">location / &#123;</span><br><span class="line">    proxy_pass http://127.0.0.1:3000;</span><br><span class="line">    proxy_http_version 1.1;</span><br><span class="line">    proxy_set_header X_FORWARDED_PROTO https;</span><br><span class="line">    proxy_set_header X-Real-IP $remote_addr;</span><br><span class="line">    proxy_set_header X-Forwarded-For $remote_addr;</span><br><span class="line">    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;</span><br><span class="line">    proxy_set_header Host $host;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>编程</category>
+        <category>应用</category>
       </categories>
       <tags>
         <tag>Docker</tag>
+        <tag>ASF</tag>
         <tag>Node.js</tag>
         <tag>Telegram</tag>
-        <tag>ASF</tag>
       </tags>
   </entry>
   <entry>
@@ -10272,7 +10283,7 @@ V2Club(旧蓝岸)，一家专门提供 v2ray 代理服务的服务商。或许�
 </ol>
 ]]></content>
       <categories>
-        <category>编程</category>
+        <category>技术</category>
       </categories>
       <tags>
         <tag>OpenSSL</tag>
@@ -10308,7 +10319,7 @@ V2Club(旧蓝岸)，一家专门提供 v2ray 代理服务的服务商。或许�
 <p>现在已经成功安装了 Oracle Java 8，尽情使用吧。</p>
 ]]></content>
       <categories>
-        <category>应用部署</category>
+        <category>应用</category>
       </categories>
       <tags>
         <tag>Linux</tag>
@@ -10330,7 +10341,7 @@ V2Club(旧蓝岸)，一家专门提供 v2ray 代理服务的服务商。或许�
 <p>更多需要的扩展，请自行搜索。</p>
 ]]></content>
       <categories>
-        <category>应用部署</category>
+        <category>应用</category>
       </categories>
       <tags>
         <tag>Ubuntu</tag>
@@ -10385,8 +10396,7 @@ V2Club(旧蓝岸)，一家专门提供 v2ray 代理服务的服务商。或许�
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">server</span><br><span class="line">    &#123;</span><br><span class="line">        listen 80;</span><br><span class="line">        #listen [::]:80;</span><br><span class="line">        server_name img.iszy.xyz;</span><br><span class="line">        return 301 https://$host$request_uri;</span><br><span class="line"></span><br><span class="line">        access_log off;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">server</span><br><span class="line">    &#123;</span><br><span class="line">        listen 443 ssl http2;</span><br><span class="line">        #listen [::]:443 ssl http2;</span><br><span class="line">        server_name img.iszy.xyz;</span><br><span class="line"></span><br><span class="line">        include conf.d/iszyxyz-ssl.conf;</span><br><span class="line"></span><br><span class="line">        location ~ ^(.*)/$ &#123;</span><br><span class="line">            add_header Access-Control-Allow-Origin *;</span><br><span class="line">            add_header Access-Control-Allow-Methods &#x27;GET, POST, OPTIONS&#x27;;</span><br><span class="line">            add_header Access-Control-Allow-Headers &#x27;DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization&#x27;;</span><br><span class="line"></span><br><span class="line">            if ($request_method = &#x27;OPTIONS&#x27;) &#123;</span><br><span class="line">                return 204;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        location / &#123;</span><br><span class="line">            proxy_pass https://raw.githubusercontent.com/ZvonimirSun/my-img-hosting/master/;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        access_log off;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>工具与中间件</category>
-        <category>Github</category>
+        <category>应用</category>
       </categories>
       <tags>
         <tag>Github</tag>
@@ -10439,8 +10449,7 @@ V2Club(旧蓝岸)，一家专门提供 v2ray 代理服务的服务商。或许�
 <p>至此，已经完成了 Ubuntu 系统的内核升级和 TCP_BBR 的开启，享受高速网络吧。关于内核提升，虽然编译内核升级的方式也是有效的，但是还是更加推荐通过 APT 的方式升级内核。这既是官方推荐的方式，也是不容易出现问题的方式，还能跟随更新，何乐而不为呢。</p>
 ]]></content>
       <categories>
-        <category>系统</category>
-        <category>Linux</category>
+        <category>应用</category>
       </categories>
       <tags>
         <tag>Ubuntu</tag>
@@ -10493,7 +10502,7 @@ V2Club(旧蓝岸)，一家专门提供 v2ray 代理服务的服务商。或许�
 </ol>
 ]]></content>
       <categories>
-        <category>应用部署</category>
+        <category>应用</category>
       </categories>
       <tags>
         <tag>php</tag>
@@ -10571,8 +10580,7 @@ git 最初的开发动力来自于 BitKeeper 和 Monotone。git 最初只是作�
 </blockquote>
 ]]></content>
       <categories>
-        <category>工具与中间件</category>
-        <category>Git</category>
+        <category>应用</category>
       </categories>
       <tags>
         <tag>Git</tag>
@@ -10620,7 +10628,7 @@ git 最初的开发动力来自于 BitKeeper 和 Monotone。git 最初只是作�
 <p>处理完 conflict 以后，push 到远程仓库，接着在主项目中更新下子项目即可。</p>
 ]]></content>
       <categories>
-        <category>建站</category>
+        <category>应用</category>
       </categories>
       <tags>
         <tag>Hexo</tag>
@@ -10669,7 +10677,7 @@ git 最初的开发动力来自于 BitKeeper 和 Monotone。git 最初只是作�
 <p>由于 Let’s encrypt 的证书有效期为 3 个月，需要续签。我也不懂其他的，就直接用 Crontab 吧，简单直接。我暂时还没有弄，因为我其实是在我一台瞎折腾的服务器上申请的，续签的问题嘛，以后再说吧。</p>
 ]]></content>
       <categories>
-        <category>建站</category>
+        <category>应用</category>
       </categories>
       <tags>
         <tag>SSL</tag>
@@ -10679,7 +10687,7 @@ git 最初的开发动力来自于 BitKeeper 和 Monotone。git 最初只是作�
       </tags>
   </entry>
   <entry>
-    <title>经典压缩软件WinRAR官方中文无广告正式版</title>
+    <title>经典压缩软件WinRAR 6.10官方中文无广告正式版</title>
     <url>/posts/winrar/</url>
     <content><![CDATA[<p>国内代理版本的 WinRAR 无论是否有 key，都有广告，这怎么能忍，尤其是其实有简体中文版本的无广告商业付费 WinRAR 的时候。在这里分享一下简体中文版本的无广告商业付费 WinRAR 的地址。</p>
 <span id="more"></span>
@@ -10688,18 +10696,22 @@ git 最初的开发动力来自于 BitKeeper 和 Monotone。git 最初只是作�
 <p>注意，有下图字样的才是正确的版本。</p>
 <p><img data-src="https://img.iszy.xyz/20190318221343.png" alt=""></p>
 <h2 id="官网下载试用地址">官网下载试用地址</h2>
-<p>最新版本<code>5.71</code>，下载链接已更新。</p>
+<p>最新版本<code>6.10</code>，下载链接已更新。</p>
 <ul>
-<li>简体中文 64 位：<span class="exturl" data-url="aHR0cHM6Ly93d3cud2luLXJhci5jb20vZmlsZWFkbWluL3dpbnJhci12ZXJzaW9ucy9zYzIwMTkwNTA5L3dyci93aW5yYXIteDY0LTU3MXNjLmV4ZQ==">点击下载<i class="fa fa-external-link-alt"></i></span></li>
-<li>简体中文 32 位：<span class="exturl" data-url="aHR0cHM6Ly93d3cud2luLXJhci5jb20vZmlsZWFkbWluL3dpbnJhci12ZXJzaW9ucy9zYzIwMTkwNTA5L3dyci93cmFyNTcxc2MuZXhl">点击下载<i class="fa fa-external-link-alt"></i></span></li>
+<li>简体中文 64 位：<span class="exturl" data-url="aHR0cHM6Ly93d3cud2luLXJhci5jb20vZmlsZWFkbWluL3dpbnJhci12ZXJzaW9ucy9zYy9zYzIwMjIwMTI3L3dyci93aW5yYXIteDY0LTYxMHNjLmV4ZQ==">点击下载<i class="fa fa-external-link-alt"></i></span></li>
+<li>简体中文 32 位：<span class="exturl" data-url="aHR0cHM6Ly93d3cud2luLXJhci5jb20vZmlsZWFkbWluL3dpbnJhci12ZXJzaW9ucy9zYy9zYzIwMjIwMTI3L3dyci93aW5yYXIteDMyLTYxMHNjLmV4ZQ==">点击下载<i class="fa fa-external-link-alt"></i></span></li>
 </ul>
 <h2 id="支持正版">支持正版</h2>
 <p>WinRAR 一路走来，陪伴了我们那么久，也是受盗版侵害非常严重的软件之一。本站不提供破解版和补丁，想要用盗版的，我相信一定有办法找到的，网络上的注册机、破解补丁到现在的最新版本都还是适用的。</p>
 <p>如果有能力，还是希望大家能够购买正版支持一下自己一路用下来的软件。</p>
 ]]></content>
       <categories>
-        <category>软件</category>
+        <category>工具</category>
       </categories>
+      <tags>
+        <tag>WinRAR</tag>
+        <tag>无广告</tag>
+      </tags>
   </entry>
   <entry>
     <title>ElasticSearch使用text类型字段排序报错</title>
@@ -10730,7 +10742,7 @@ git 最初的开发动力来自于 BitKeeper 和 Monotone。git 最初只是作�
 <p>在这样配置以后，在进行搜索时使用<code>my_field</code>字段，在进行聚合、排序等操作时使用<code>my_field.keyword</code>字段，这样能够比直接启用<code>fielddata</code>获得更好的性能表现。</p>
 ]]></content>
       <categories>
-        <category>编程</category>
+        <category>技术</category>
       </categories>
       <tags>
         <tag>ElasticSearch</tag>
@@ -10747,6 +10759,9 @@ git 最初的开发动力来自于 BitKeeper 和 Monotone。git 最初只是作�
 <h2 id="订阅情况">订阅情况</h2>
 <p>已经人齐啦，快乐~</p>
 ]]></content>
+      <categories>
+        <category>其他</category>
+      </categories>
       <tags>
         <tag>Office</tag>
         <tag>共享</tag>

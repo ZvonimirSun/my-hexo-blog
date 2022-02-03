@@ -2,10 +2,29 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.iszy.cc/posts/1/</loc>
+    
+    <lastmod>2022-02-03</lastmod>
+    
+    
+  </url>
+  
+  <url>
     <loc>https://www.iszy.cc/posts/c/</loc>
     
     <lastmod>2022-02-03</lastmod>
     
+    
+  </url>
+  
+  <url>
+    <loc>https://www.iszy.cc/page/cmynetwork/</loc>
+    
+    <lastmod>2022-02-03</lastmod>
+    
+    
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
     
   </url>
   
@@ -18,35 +37,32 @@
   </url>
   
   <url>
-    <loc>https://www.iszy.cc/page/bgfw/</loc>
-    
-    <lastmod>2022-01-30</lastmod>
-    
-    
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.iszy.cc/page/cmynetwork/</loc>
-    
-    <lastmod>2022-01-28</lastmod>
-    
-    
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-    
-  </url>
-  
-  <url>
     <loc>https://www.iszy.cc/page/freewhale/</loc>
     
-    <lastmod>2022-01-28</lastmod>
+    <lastmod>2022-02-03</lastmod>
     
     
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.iszy.cc/page/bgfw/</loc>
+    
+    <lastmod>2022-02-03</lastmod>
+    
+    
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.iszy.cc/posts/winrar/</loc>
+    
+    <lastmod>2022-02-03</lastmod>
+    
     
   </url>
   
@@ -201,14 +217,6 @@
     <loc>https://www.iszy.cc/posts/2/</loc>
     
     <lastmod>2021-05-10</lastmod>
-    
-    
-  </url>
-  
-  <url>
-    <loc>https://www.iszy.cc/posts/1/</loc>
-    
-    <lastmod>2021-04-16</lastmod>
     
     
   </url>
@@ -449,14 +457,6 @@
     <loc>https://www.iszy.cc/posts/scoop/</loc>
     
     <lastmod>2019-06-12</lastmod>
-    
-    
-  </url>
-  
-  <url>
-    <loc>https://www.iszy.cc/posts/winrar/</loc>
-    
-    <lastmod>2019-05-20</lastmod>
     
     
   </url>

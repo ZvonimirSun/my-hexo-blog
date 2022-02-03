@@ -107,8 +107,8 @@
 <nav class="site-nav">
   <ul class="main-menu menu">
         <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
-        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">155</span></a></li>
-        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">15</span></a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">161</span></a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">6</span></a></li>
         <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">111</span></a></li>
         <li class="menu-item menu-item-友链&留言"><a href="/links/" rel="section"><i class="fa fa-comments fa-fw"></i>友链&留言</a></li>
         <li class="menu-item menu-item-优质机场推荐"><a href="/page/bgfw/" rel="section"><i class="fa fa-globe-asia fa-fw"></i>优质机场推荐</a></li>
@@ -189,12 +189,12 @@
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">15</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">155</span>
+        <span class="site-state-item-count">161</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -268,7 +268,7 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" itemprop="url" rel="index"><span itemprop="name">数据库</span></a>
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
         </span>
     </span>
 
@@ -323,7 +323,7 @@
 <span id="more"></span>
 <h2 id="WHILE-LOOP-语法">WHILE-LOOP 语法</h2>
 <p>当<strong>条件为真</strong>时，执行语句。</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">WHILE <span class="keyword">condition</span> LOOP</span><br><span class="line">	some_statements;</span><br><span class="line"><span class="keyword">END</span> LOOP;</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">WHILE <span class="keyword">condition</span> LOOP</span><br><span class="line">    some_statements;</span><br><span class="line"><span class="keyword">END</span> LOOP;</span><br></pre></td></tr></table></figure>
 <h2 id="实例">实例</h2>
 <h3 id="题目">题目</h3>
 <p>给出一个 Power 表(表 1)的数据如下：</p>
@@ -339,7 +339,7 @@
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> <span class="built_in">power</span>(mon <span class="type">int</span>,<span class="keyword">day</span> <span class="type">int</span>,fee <span class="type">int</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> power <span class="keyword">values</span>(<span class="number">6</span>,<span class="number">1</span>,<span class="number">60</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> power <span class="keyword">values</span>(<span class="number">6</span>,<span class="number">2</span>,<span class="number">34</span>);</span><br></pre></td></tr></table></figure>
 <p><img data-src="https://img.iszy.xyz/20190318215323.png" alt=""></p>
 <h4 id="计算整月的电费">计算整月的电费</h4>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">declare</span></span><br><span class="line">	a number;</span><br><span class="line">	b number;</span><br><span class="line">	x number;</span><br><span class="line">	y number;</span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line">	a:<span class="operator">=</span><span class="number">1</span>;</span><br><span class="line">	b:<span class="operator">=</span><span class="number">2</span>;</span><br><span class="line">	while (b<span class="operator">&lt;=</span><span class="number">29</span>) loop</span><br><span class="line">		<span class="keyword">select</span> fee</span><br><span class="line">		<span class="keyword">into</span> x</span><br><span class="line">		<span class="keyword">from</span> power</span><br><span class="line">		<span class="keyword">where</span> <span class="keyword">day</span><span class="operator">=</span>a;</span><br><span class="line">		<span class="keyword">select</span> fee</span><br><span class="line">		<span class="keyword">into</span> y</span><br><span class="line">		<span class="keyword">from</span> power</span><br><span class="line">		<span class="keyword">where</span> <span class="keyword">day</span><span class="operator">=</span>b;</span><br><span class="line">		<span class="keyword">insert</span> <span class="keyword">into</span> power <span class="keyword">values</span>(<span class="number">6</span>,a<span class="operator">+</span><span class="number">2</span>,x<span class="operator">+</span>y);</span><br><span class="line">		a:<span class="operator">=</span>a<span class="operator">+</span><span class="number">1</span>;</span><br><span class="line">		b:<span class="operator">=</span>b<span class="operator">+</span><span class="number">1</span>;</span><br><span class="line">	<span class="keyword">end</span> loop;</span><br><span class="line"><span class="keyword">end</span>;</span><br><span class="line"><span class="operator">/</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">declare</span></span><br><span class="line">    a number;</span><br><span class="line">    b number;</span><br><span class="line">    x number;</span><br><span class="line">    y number;</span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line">    a:<span class="operator">=</span><span class="number">1</span>;</span><br><span class="line">    b:<span class="operator">=</span><span class="number">2</span>;</span><br><span class="line">    while (b<span class="operator">&lt;=</span><span class="number">29</span>) loop</span><br><span class="line">        <span class="keyword">select</span> fee</span><br><span class="line">        <span class="keyword">into</span> x</span><br><span class="line">        <span class="keyword">from</span> power</span><br><span class="line">        <span class="keyword">where</span> <span class="keyword">day</span><span class="operator">=</span>a;</span><br><span class="line">        <span class="keyword">select</span> fee</span><br><span class="line">        <span class="keyword">into</span> y</span><br><span class="line">        <span class="keyword">from</span> power</span><br><span class="line">        <span class="keyword">where</span> <span class="keyword">day</span><span class="operator">=</span>b;</span><br><span class="line">        <span class="keyword">insert</span> <span class="keyword">into</span> power <span class="keyword">values</span>(<span class="number">6</span>,a<span class="operator">+</span><span class="number">2</span>,x<span class="operator">+</span>y);</span><br><span class="line">        a:<span class="operator">=</span>a<span class="operator">+</span><span class="number">1</span>;</span><br><span class="line">        b:<span class="operator">=</span>b<span class="operator">+</span><span class="number">1</span>;</span><br><span class="line">    <span class="keyword">end</span> loop;</span><br><span class="line"><span class="keyword">end</span>;</span><br><span class="line"><span class="operator">/</span></span><br></pre></td></tr></table></figure>
 <p><img data-src="https://img.iszy.xyz/20190318215335.png" alt=""></p>
 <h4 id="显示结果">显示结果</h4>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> power;</span><br></pre></td></tr></table></figure>
