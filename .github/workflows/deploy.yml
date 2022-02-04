@@ -23,6 +23,7 @@ jobs:
           path: |
             ~/.npm
             ./node_modules
+            /usr/local/lib/node_modules
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-build-${{ env.cache-name }}-
@@ -30,8 +31,6 @@ jobs:
             ${{ runner.os }}-
       - name: Install hexo 🔧
         run: npm install hexo-cli -g
-      - name: test
-        run: which hexo && ls -l $(which hexo)
       - name: Install dependencies 🔧
         run: yarn install --frozen-lockfile
   build:
@@ -54,11 +53,14 @@ jobs:
           path: |
             ~/.npm
             ./node_modules
+            /usr/local/lib/node_modules
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
             ${{ runner.os }}-
+      - name: Restore hexo 🔧
+        run: ln -s /usr/local/lib/node_modules/hexo-cli/bin/hexo /usr/local/bin/hexo
       - name: Build app 🔧
         run: hexo g
       - name: Deploy 🚀
