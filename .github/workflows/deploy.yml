@@ -28,6 +28,10 @@ jobs:
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
             ${{ runner.os }}-
+      - name: Install hexo 🔧
+        run: npm install hexo-cli -g
+      - name: test
+        run: which hexo && ls -l $(which hexo)
       - name: Install dependencies 🔧
         run: yarn install --frozen-lockfile
   build:
@@ -55,8 +59,6 @@ jobs:
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
             ${{ runner.os }}-
-      - name: Install hexo 🔧
-        run: npm install hexo-cli -g
       - name: Build app 🔧
         run: hexo g
       - name: Deploy 🚀
