@@ -4,9 +4,8 @@ on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
+    paths-ignore:
+      - '.github/**'
   workflow_dispatch:
 
 jobs:
@@ -15,13 +14,22 @@ jobs:
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v2
-      - name: Restore cached ./node_modules
+      - name: Cache node modules
         uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules
         with:
-          path: ./node_modules
-          key: ${{ runner.os }}-yarn-lock-${{ hashFiles('./yarn.lock') }}
+          # npm cache files are stored in `~/.npm` on Linux/macOS
+          path: |
+            ~/.npm
+            ./node_modules
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
-            ${{ runner.os }}-yarn-lock-
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+      - name: Install hexo 🔧
+        run: npm install hexo-cli -g
       - name: Install dependencies 🔧
         run: yarn install --frozen-lockfile
   build:
@@ -42,8 +50,6 @@ jobs:
           key: ${{ runner.os }}-yarn-lock-${{ hashFiles('./yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-yarn-lock-
-      - name: Install hexo 🔧
-        run: npm install hexo-cli -g
       - name: Build app 🔧
         run: hexo g
       - name: Deploy 🚀
