@@ -59,6 +59,8 @@ jobs:
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
             ${{ runner.os }}-
+      - name: Restore hexo
+        run: ln -s /usr/lib/node_modules/hexo-cli/bin/hexo /usr/bin
       - name: Build app 🔧
         run: hexo g
       - name: Deploy 🚀
