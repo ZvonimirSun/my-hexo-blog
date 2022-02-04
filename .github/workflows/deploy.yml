@@ -23,6 +23,7 @@ jobs:
           path: |
             ~/.npm
             ./node_modules
+            /usr/lib/node_modules
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-build-${{ env.cache-name }}-
