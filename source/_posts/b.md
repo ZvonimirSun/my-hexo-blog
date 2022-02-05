@@ -6,10 +6,7 @@ categories:
   - 技术
 tags:
   - Babel
-  - Vue-cli
-  - vue
-  - Webpack
-  - 分块
+  - Vue
 ---
 
 本文记录下使用 vue-cli 的 babel 插件导致动态 import 代码拆分失败的问题。

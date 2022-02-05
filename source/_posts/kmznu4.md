@@ -3,10 +3,7 @@ title: 直接修改和替换Jar包中文件的几种方式
 categories:
   - 技术
 tags:
-  - Linux
   - Java
-  - Windows
-keywords: "修改jar包,重新打包jar包"
 date: 2020-05-18 00:24:52
 updated: 2020-05-18 00:24:52
 ---

@@ -6,7 +6,7 @@ categories:
   - 工具
 tags:
   - Chrome
-keywords: 双击关闭,chrome,shuax,greenchrome
+  - Chrome插件
 ---
 
 今天来分享一下一个超好用的 chrome 浏览器增强插件，让 chrome 更加符合国人的使用习惯。

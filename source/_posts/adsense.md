@@ -7,7 +7,6 @@ categories:
 tags:
   - 广告
   - Google
-  - AdSence
 ---
 
 在我博客改版后第一次尝试申请 Google AdSense，这次希望可以成功。

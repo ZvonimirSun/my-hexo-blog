@@ -5,7 +5,6 @@ updated: 2018-08-26 23:17:48
 categories:
   - 其他
 tags:
-  - 建站
   - Hexo
   - AMP
 keywords: hexo-generator-amp,amp,hexo,启用amp

@@ -7,7 +7,7 @@ categories:
 tags:
   - Hadoop
   - Spark
-  - 集群
+  - Linux
   - Ubuntu
 ---
 

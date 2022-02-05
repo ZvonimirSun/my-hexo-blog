@@ -7,7 +7,6 @@ categories:
 tags:
   - Node.js
   - JavaScript
-keywords: async, sleep, nodejs, javascript
 ---
 
 最近用 Node.js 的 request 调用我的一个 web api，循环访问速度太快，请求就会被丢弃。查找了一下 Node.js 中的 sleep 功能的实现方法，下面的这个方法，用起来效果很好，在此记录一下。

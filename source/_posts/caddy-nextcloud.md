@@ -7,10 +7,11 @@ categories:
   - [工具]
 tags:
   - Caddy
-  - Nextcloud
+  - Linux
+  - Ubuntu
+  - NextCloud
   - 文件管理
   - php
-keywords: NextCloud,Caddy
 ---
 
 今天准备做一个完整的采用 Caddy Web Server 部署 NextCloud 的教程。本教程除 Web 服务器配置，部分参考橙叶博客文章——[VPS 快速完美部署 ownCloud/Nextcloud 全过程](https://www.orgleaf.com/2203.html)。有什么问题，欢迎在评论区留言或者联系我，我一定会及时回复的。

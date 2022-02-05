@@ -8,7 +8,6 @@ tags:
   - JavaScript
   - JQuery
   - LayUI
-keywords: layui icon, iconfont, 扩展, layui
 ---
 
 layui 的所有图标全部采用字体形式，取材于阿里巴巴矢量图标库（iconfont）。不过 layui 自带的图标太少了，可以说连够用都算不上，所以今天就要用 iconfont 上的图标扩展一下。

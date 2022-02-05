@@ -7,8 +7,6 @@ categories:
 tags:
   - LNMP
   - php
-  - 建站
-keywords: lnmp,lnmp.org,php,扩展,extension,一键包
 ---
 
 我站上的 LNMP 用的是军哥的 LNMP 一键安装包，其中的软件都是通过编译安装的，我发现直接通过`apt install`的方法安装 php 扩展并不会生效，其实有更好的安装方法。

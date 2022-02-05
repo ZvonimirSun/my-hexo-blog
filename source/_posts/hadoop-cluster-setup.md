@@ -7,6 +7,7 @@ categories:
 tags:
   - Hadoop
   - 集群
+  - Linux
   - Ubuntu
 ---
 

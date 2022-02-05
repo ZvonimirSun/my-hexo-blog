@@ -8,7 +8,6 @@ tags:
   - JavaScript
   - JQuery
   - LayUI
-keywords: layui, laydate, change
 ---
 
 最近在写个小网页的时候用到了 Layui 的日期控件——layDate，期间遇到了一些小问题，在此记录一下。

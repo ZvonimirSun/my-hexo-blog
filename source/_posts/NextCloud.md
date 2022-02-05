@@ -5,9 +5,9 @@ updated: 2017-12-18 12:00:00
 categories:
   - 应用
 tags:
-  - Nextcloud
+  - NextCloud
   - 宝塔面板
-  - 文件存储
+  - 文件管理
 keywords: NextCloud
 ---
 

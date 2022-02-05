@@ -7,7 +7,6 @@ categories:
 tags:
   - 微信
   - Telegram
-  - EH Forwarder Bot
   - Python
 ---
 

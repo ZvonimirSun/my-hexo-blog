@@ -7,8 +7,6 @@ categories:
 tags:
   - Scoop
   - PowerShell
-  - 包管理器
-keywords: scoop, win, 包管理器
 ---
 
 用过 Linux 的都知道包管理器吧，不像 Windows 上装软件需要找官网下安装包安装、在控制面板中卸载，包管理器能够提供一种非常简洁的软件管理体验，一句命令安装、升级、卸载等，完全不需要操心。Scoop 作为一个包管理器，个人使用体验相当不错，在此推荐一下。

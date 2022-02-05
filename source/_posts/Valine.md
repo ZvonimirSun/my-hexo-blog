@@ -7,7 +7,6 @@ categories:
 tags:
   - Valine
   - 评论系统
-keywords: Valine, 评论系统, 无后端
 ---
 
 今天我来介绍一下，我现在正在使用的评论系统——[Valine](https://valine.js.org/)，一个可以完全自主掌控数据的超好用无后端极简评论系统。我之前使用的评论系统是 Remarkbox，感兴趣的可以看一下我之前的文章，我会在文章末尾放上链接。

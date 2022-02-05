@@ -7,7 +7,7 @@ categories:
 tags:
   - Oracle
   - SQL
-keywords: Oracle, while-loop, 循环, PL/SQL
+  - 数据库
 ---
 
 用 while loop 语句进行循环计算的一个实例。最近做题遇到，在此记录。

@@ -5,10 +5,7 @@ updated: 2019-04-02 23:41:00
 categories:
   - 应用
 tags:
-  - LNMP
-  - 建站
   - Docker
-keywords: docker,lnmp,dnmp,部署,建站
 ---
 
 之前一段时间，我已经把服务器上的应用全部 Docker 化了。我把我服务器上的 LNMP 配置，提取出来，来写一下如何用 Docker 部署一个最简单的 LNMP。

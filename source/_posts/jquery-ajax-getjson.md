@@ -7,7 +7,6 @@ categories:
 tags:
   - JavaScript
   - JQuery
-keywords: ajax,getjson,jquery,对比
 ---
 
 在项目中使用到了 `$.ajax` 与 `$.getJSON` 两种从后台获取 json 的方式，在此进行简单的对比，用以记录学习。

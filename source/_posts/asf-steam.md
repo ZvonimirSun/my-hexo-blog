@@ -6,9 +6,7 @@ categories:
   - 应用
 tags:
   - Steam
-  - ArchiSteamFarm
   - ASF
-  - 挂卡
   - Ubuntu
   - Linux
 ---

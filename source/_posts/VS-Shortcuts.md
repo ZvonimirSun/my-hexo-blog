@@ -6,8 +6,6 @@ categories:
   - 工具
 tags:
   - Visual Studio
-  - 快捷键
-keywords: VS, shortcuts, 快捷键
 ---
 
 在 VS 的日常使用中，一些快捷键的辅助会有效地提高你的效率，在这里，我总结一点我使用中使用的快捷键。（VS2017 中确认可以使用）

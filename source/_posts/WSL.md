@@ -9,7 +9,6 @@ tags:
   - Ubuntu
   - Windows
   - Linux
-keywords: WSL,Linux,Ubuntu,win10
 ---
 
 有的工作在 Linux 环境中会比在 Windows 环境中更加方便，但我的主要使用环境还是 Windows，所以不能直接装 Linux 系统。我过去的解决方案是装了一个 Ubuntu 的虚拟机，但是这样还是不太方便，尤其是在文件访问上。现在 Win10 中有了 Linux 子系统，简称 WSL，很好地解决了我的问题。

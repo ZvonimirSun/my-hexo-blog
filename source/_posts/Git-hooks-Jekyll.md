@@ -7,8 +7,6 @@ categories:
 tags:
   - Jekyll
   - Git
-  - Gem
-keywords: Jekyll, Git, hooks
 ---
 
 其实这项工作我已经完成了几天了，现在在此记录一下。主要就是整理一下在自己的服务器上配置 Jekyll 环境，并利用 git hooks 自动化编译的过程，配置好后就能实现和 Github Pages 上类似的环境。

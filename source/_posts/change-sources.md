@@ -5,9 +5,8 @@ updated: 2018-05-05 12:00:00
 categories:
   - 技术
 tags:
+  - Linux
   - Ubuntu
-  - 软件源
-keywords: 更改,软件源,Ubuntu,WSL,Linux
 ---
 
 由于国内的特殊环境，Linux 系统如果不更换软件源，软件的下载安装将会速度奇慢。总不能下载软件也全走代理吧，更换软件源才是正道。本文是在 Win10 子系统 Ubuntu 中完成的，在原版 Ubuntu 中同样适用。

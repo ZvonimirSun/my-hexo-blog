@@ -6,7 +6,7 @@ categories:
   - 应用
 tags:
   - 域名
-  - 301
+  - SEO
 keywords: 域名,更换,301,重定向
 ---
 

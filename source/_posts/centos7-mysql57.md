@@ -6,6 +6,7 @@ categories:
   - 应用
 tags:
   - MySQL
+  - Linux
   - CentOS
 keywords: mysql,centos,部署
 ---

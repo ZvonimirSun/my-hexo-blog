@@ -6,8 +6,8 @@ categories:
   - 应用
 tags:
   - KMS
-  - Windows
-  - Office
+  - Linux
+  - Docker
 ---
 
 今天来简单介绍一下如何自建 KMS 激活 Windows 以及 Office。不想自己部署的也可以直接跳到[激活](#激活)，我提供了自建的 KMS 地址，大家可以使用。

@@ -7,7 +7,6 @@ categories:
 tags:
   - Scoop
   - PowerShell
-  - oh-my-posh
 ---
 
 为什么想到干这个事呢？这两天装了 WSL，但是 PowerShell 的配色实在让我无法忍受，有时候甚至到了看不清字的程度。经过一番谷歌，我发现 PowerShell 也是可以变得很好看的。下面我就记录一下我这次美化的过程。

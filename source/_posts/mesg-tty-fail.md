@@ -5,7 +5,6 @@ updated: 2018-08-11 09:41:17
 categories:
   - 技术
 tags:
-  - 终端
   - Linux
 ---
 

@@ -7,7 +7,7 @@ categories:
   - [转载]
 tags:
   - JavaScript
-  - 模块化
+  - AMD
 author: 阮一峰
 copyright: false
 ---

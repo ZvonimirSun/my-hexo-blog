@@ -7,10 +7,8 @@ categories:
 tags:
   - Docker
   - Steam
-  - Ubuntu
   - 挂卡
-  - ArchiSteamFarm
-keywords: docker,asf,ArchiSteamFarm,挂卡,steam
+  - ASF
 ---
 
 今天来介绍一下超简单的使用 Docker 部署 ASF 的方法。在部署上，相对一般的部署，使用 Docker 会简单许多，今天我就来介绍一下如何使用 Docker 部署 ASF。

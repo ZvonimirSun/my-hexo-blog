@@ -7,6 +7,7 @@ categories:
 tags:
   - SQL
   - 数据库
+  - Oracle
 keywords: SQL
 ---
 

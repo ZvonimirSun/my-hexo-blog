@@ -7,7 +7,6 @@ categories:
 tags:
   - Adobe
   - Arcobat
-keywords: Acrobat,图标,异常
 ---
 
 在 WIN 10 上，Acrobat 的快捷方式图标总是出现异常，令人十分困扰。今天终于找到了解决的方法，在此记录一下。

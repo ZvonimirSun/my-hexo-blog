@@ -8,7 +8,6 @@ tags:
   - GIS
   - Csharp
   - 算法
-keywords: 道格拉斯—普克法, C#,GIS算法
 ---
 
 ## 算法描述

@@ -7,7 +7,7 @@ categories:
 tags:
   - Oracle
   - SQL
-keywords: 笔记, Oracle, break on, SQL*Plus
+  - 数据库
 ---
 
 使用 BREAK ON 语句进行排列的实例

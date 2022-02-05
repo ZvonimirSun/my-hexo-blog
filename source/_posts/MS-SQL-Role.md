@@ -7,7 +7,6 @@ categories:
 tags:
   - SQL Server
   - 数据库
-keywords: 数据库角色, SQL Server
 ---
 
 本文总结了 SQL Server 数据库的自带角色成员身份权限。

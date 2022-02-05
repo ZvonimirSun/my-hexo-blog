@@ -8,7 +8,6 @@ tags:
   - GIS
   - Csharp
   - 算法
-keywords: C#,GIS算法,平面多边形,面积
 ---
 
 ## 算法描述

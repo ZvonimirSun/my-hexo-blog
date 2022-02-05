@@ -8,6 +8,7 @@ categories:
 tags:
   - Linux
   - CVE
+  - 知识笔记
 author: 诸子流
 mathjax: true
 copyright: false

@@ -4,7 +4,6 @@ categories:
   - 技术
 tags:
   - Nginx
-  - Brotli
   - Docker
 date: 2022-02-05 01:49:02
 ---

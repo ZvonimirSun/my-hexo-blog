@@ -9,7 +9,6 @@ tags:
   - OpenSSL
   - TLS
   - SSL
-keywords: nginx,tls1.3,draft28,draft26,draft23,final,openssl1.1.1
 ---
 
 早就听说有 TLS1.3 了，一直心痒痒，想折腾折腾试试。以前浏览器支持的不多，网上也没太多人试过，不太敢趟雷。现在有一些大型网站网站已经弄上了 TLS1.3，也有不少博主给自己的博客升级了 TLS1.3 了，留下了宝贵的经验。我也忍不住了，今天就来折腾一下看看。Openssl 1.1.1 LTS 已经发布，更新一下 TLS1.3 正式版。

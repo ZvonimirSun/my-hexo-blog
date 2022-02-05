@@ -7,7 +7,6 @@ categories:
 tags:
   - Valine
   - 评论系统
-keywords: Valine, Valine-Admin
 ---
 
 在[上一篇文章](https://www.iszy.cc/2018/04/01/Valine/)中，我讲了怎样安装 Valine 评论系统。Valine 评论系统现在自带的邮件通知功能有很大缺陷，这就要轮到我今天要讲的 Valine-Admin 了。由 [@云淡风轻](https://ioliu.cn/) 大神开发的 Valine-Admin 实现了基于 leancloud 云引擎的邮件通知、垃圾评论识别和评论管理面板，[@赵俊](http://www.zhaojun.im/hexo-valine-admin/)大佬修改优化了一波，能够提供良好的评论通知体验。

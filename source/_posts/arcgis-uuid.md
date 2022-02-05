@@ -7,7 +7,6 @@ categories:
 tags:
   - ArcGIS
   - Python
-  - UUID
 ---
 
 最近需要将一批数据添加唯一 ID，UUID 作为一个具有唯一性的通用编号方案，正适合承担这个任务。

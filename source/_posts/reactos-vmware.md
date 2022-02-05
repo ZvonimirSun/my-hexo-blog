@@ -6,9 +6,7 @@ categories:
   - 应用
 tags:
   - ReactOS
-  - 开源
   - VMWare
-keywords: reactos,vmware,install,安装,虚拟机
 ---
 
 ReactOS 是一个适用于 x86/x64 平台的免费、开源的操作系统暨项目，旨在提供 Windows 平台下的程序与驱动的二进制兼容性，简直可以说是开源版的 Windows。借由逆向工程等手段，其以净室设计的方法进行开发。为确保操作系统没有任何一部分是看过泄漏出来的微软 Windows 源码的人所写，或者逆向工程的过程达不到净室设计标准，一个全盘的源码审查由 ReactOS 主要开发者下令展开。此审查目前已经结束。这篇文章将演示如何在 VMWare 虚拟机上体验 ReactOS。

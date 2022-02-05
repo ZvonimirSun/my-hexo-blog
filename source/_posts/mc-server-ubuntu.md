@@ -8,7 +8,6 @@ tags:
   - Linux
   - Minecraft
   - Ubuntu
-keywords: minecraft,server,ubuntu
 ---
 
 在此记录在 Ubuntu 16.04 搭建 Minecraft 服务器 1.13 的全过程。
