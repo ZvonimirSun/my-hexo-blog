@@ -36,7 +36,7 @@ permalink: /page/bgfw/
 
 | 机场名称（点击了解更多）                  | 类别                  | 关键词                           | 操作                                                                                                                                                                |
 | ----------------------------------------- | --------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [FreeWhale 自由鲸 ⭐](/page/freewhale/)   | SSR(隧道、专线)/V2Ray | 性价比高，超多线路，稳定老站     | [官网传送门](https://url.iszy.xyz/freewhale) / [测速](https://www.iszy.cc/page/speed-test-collection/#FreeWhale-%E8%87%AA%E7%94%B1%E9%B2%B8)(2021-12-17)            |
+| [FreeWhale 自由鲸 ⭐](/page/freewhale/)   | SSR(隧道、专线)/V2Ray | 性价比高，超多线路，稳定老站     | [官网传送门](https://url.iszy.xyz/freewhale) / [测速](https://www.iszy.cc/page/speed-test-collection/#FreeWhale-%E8%87%AA%E7%94%B1%E9%B2%B8)(2022-02-09)            |
 | [CMYNetwork 红莓网络](/page/cmynetwork/)  | SSR(专线)/Trojan      | 稳定平价，超多专线，小众地区线路 | [官网传送门](https://url.iszy.xyz/cmynetwork) / [测速](https://www.iszy.cc/page/speed-test-collection/#CMYNetwork-%E7%BA%A2%E8%8E%93%E7%BD%91%E7%BB%9C)(2021-12-18) |
 | [MEET](#三、MEET)                         | SSR                   | 专注按量付费，高速稳定           | [官网传送门](https://url.iszy.xyz/fspeed) / [测速](https://www.iszy.cc/page/speed-test-collection/#MEET)(2022-02-09)                                                |
 | [DuangCloud](#四、DuangCloud)【春节特惠】 | SS(全专线)            | 平价灵活                         | [官网传送门](https://url.iszy.xyz/duangcloud) / [测速](https://www.iszy.cc/page/speed-test-collection/#DuangCloud)                                                  |
@@ -55,7 +55,7 @@ permalink: /page/bgfw/
 
 邀请码: `iszy`
 
-[⭐⭐ 测速 ⭐⭐](https://www.iszy.cc/page/speed-test-collection/#FreeWhale-自由鲸) (2021-12-17)
+[⭐⭐ 测速 ⭐⭐](https://www.iszy.cc/page/speed-test-collection/#FreeWhale-自由鲸) (2022-02-09)
 
 [⭐ 更多详细介绍 ⭐](https://www.iszy.cc/page/freewhale/)
 

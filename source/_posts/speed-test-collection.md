@@ -20,9 +20,9 @@ permalink: /page/speed-test-collection/
 
 **SSR 线路测速**（建议使用）
 
-2021-12-17
+2022-02-09
 
-![SSR线路](https://img.iszy.xyz/1639673724521.png?x-oss-process=style/big)
+![SSR线路](https://img.iszy.xyz/1644422177121.png?x-oss-process=style/big)
 
 ## CMYNetwork 红莓网络
 
