@@ -1,7 +1,6 @@
 ---
 title: 机场测速集合
 date: 2019-03-02 14:20:52
-updated: 2021-12-18 11:20:52
 categories:
   - 其他
 tags:
@@ -14,9 +13,11 @@ permalink: /page/speed-test-collection/
 
 <!--more-->
 
+**注：**冬奥会期间，可能会有网络不稳定的情况，属于正常情况，商家会尽力减小影响。
+
 ## FreeWhale 自由鲸
 
-[官网传送门](https://t.xinjie.eu.org/iszy)
+[官网传送门](https://url.iszy.xyz/freewhale)
 
 **SSR 线路测速**（建议使用）
 
@@ -28,9 +29,9 @@ permalink: /page/speed-test-collection/
 
 [官网传送门](https://url.iszy.xyz/cmynetwork)
 
-2021-12-18
+2022-02-10
 
-![](https://img.iszy.xyz/1639801389357.png?x-oss-process=style/big)
+![](https://img.iszy.xyz/1644451579496.png?x-oss-process=style/big)
 
 ## MEET
 

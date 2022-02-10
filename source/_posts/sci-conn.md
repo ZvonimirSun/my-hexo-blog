@@ -32,12 +32,14 @@ permalink: /page/bgfw/
 
 <!--more-->
 
+**注：**冬奥会期间，可能会有网络不稳定的情况，属于正常情况，商家会尽力减小影响。
+
 ## 目录
 
 | 机场名称（点击了解更多）                  | 类别                  | 关键词                           | 操作                                                                                                                                                                |
 | ----------------------------------------- | --------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [FreeWhale 自由鲸 ⭐](/page/freewhale/)   | SSR(隧道、专线)/V2Ray | 性价比高，超多线路，稳定老站     | [官网传送门](https://url.iszy.xyz/freewhale) / [测速](https://www.iszy.cc/page/speed-test-collection/#FreeWhale-%E8%87%AA%E7%94%B1%E9%B2%B8)(2022-02-09)            |
-| [CMYNetwork 红莓网络](/page/cmynetwork/)  | SSR(专线)/Trojan      | 稳定平价，超多专线，小众地区线路 | [官网传送门](https://url.iszy.xyz/cmynetwork) / [测速](https://www.iszy.cc/page/speed-test-collection/#CMYNetwork-%E7%BA%A2%E8%8E%93%E7%BD%91%E7%BB%9C)(2021-12-18) |
+| [CMYNetwork 红莓网络](/page/cmynetwork/)  | SSR(专线)/Trojan      | 稳定平价，超多专线，小众地区线路 | [官网传送门](https://url.iszy.xyz/cmynetwork) / [测速](https://www.iszy.cc/page/speed-test-collection/#CMYNetwork-%E7%BA%A2%E8%8E%93%E7%BD%91%E7%BB%9C)(2022-02-10) |
 | [MEET](#三、MEET)                         | SSR                   | 专注按量付费，高速稳定           | [官网传送门](https://url.iszy.xyz/fspeed) / [测速](https://www.iszy.cc/page/speed-test-collection/#MEET)(2022-02-09)                                                |
 | [DuangCloud](#四、DuangCloud)【春节特惠】 | SS(全专线)            | 平价灵活                         | [官网传送门](https://url.iszy.xyz/duangcloud) / [测速](https://www.iszy.cc/page/speed-test-collection/#DuangCloud)                                                  |
 | [ByWave](#五、ByWave)                     | V2Ray                 | 高质高端，服务稳定               | [官网传送门](https://url.iszy.xyz/bywave) / [测速](https://www.iszy.cc/page/speed-test-collection/#ByWave)                                                          |
@@ -51,7 +53,7 @@ permalink: /page/bgfw/
 
 ## 一、FreeWhale 自由鲸
 
-[官网传送门](https://t.xinjie.eu.org/iszy)
+[官网传送门](https://url.iszy.xyz/freewhale)
 
 邀请码: `iszy`
 
@@ -105,7 +107,7 @@ permalink: /page/bgfw/
 
 [官网传送门](https://url.iszy.xyz/cmynetwork)
 
-[⭐⭐ 测速 ⭐⭐](https://www.iszy.cc/page/speed-test-collection/#CMYNetwork-红莓网络)(2021-12-18)
+[⭐⭐ 测速 ⭐⭐](https://www.iszy.cc/page/speed-test-collection/#CMYNetwork-红莓网络) (2022-02-10)
 
 [⭐ 更多详细介绍 ⭐](https://www.iszy.cc/page/cmynetwork/)
 

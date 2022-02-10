@@ -40,7 +40,7 @@ permalink: /page/freewhale/
 
 ### 相关链接
 
-[官网传送门](https://t.xinjie.eu.org/iszy)
+[官网传送门](https://url.iszy.xyz/freewhale)
 
 如果需要邀请码，可以使用我的邀请码: `iszy`
 
