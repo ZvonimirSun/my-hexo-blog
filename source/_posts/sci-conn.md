@@ -1,5 +1,5 @@
 ---
-title: 【评测2022】优质SS/SSR/Trojan/V2Ray机场推荐【春节特惠】
+title: 【评测2022】优质SS/SSR/Trojan/V2Ray机场推荐
 date: 2019-01-03 03:11:50
 categories:
   - 其他
@@ -36,17 +36,17 @@ permalink: /page/bgfw/
 
 ## 目录
 
-| 机场名称（点击了解更多）                  | 类别                  | 关键词                           | 操作                                                                                                                                                                |
-| ----------------------------------------- | --------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [FreeWhale 自由鲸 ⭐](/page/freewhale/)   | SSR(隧道、专线)/V2Ray | 性价比高，超多线路，稳定老站     | [官网传送门](https://url.iszy.xyz/freewhale) / [测速](https://www.iszy.cc/page/speed-test-collection/#FreeWhale-%E8%87%AA%E7%94%B1%E9%B2%B8)(2022-02-09)            |
-| [CMYNetwork 红莓网络](/page/cmynetwork/)  | SSR(专线)/Trojan      | 稳定平价，超多专线，小众地区线路 | [官网传送门](https://url.iszy.xyz/cmynetwork) / [测速](https://www.iszy.cc/page/speed-test-collection/#CMYNetwork-%E7%BA%A2%E8%8E%93%E7%BD%91%E7%BB%9C)(2022-02-10) |
-| [MEET](#三、MEET)                         | SSR                   | 专注按量付费，高速稳定           | [官网传送门](https://url.iszy.xyz/fspeed) / [测速](https://www.iszy.cc/page/speed-test-collection/#MEET)(2022-02-09)                                                |
-| [DuangCloud](#四、DuangCloud)【春节特惠】 | SS(全专线)            | 平价灵活                         | [官网传送门](https://url.iszy.xyz/duangcloud) / [测速](https://www.iszy.cc/page/speed-test-collection/#DuangCloud)                                                  |
-| [ByWave](#五、ByWave)                     | V2Ray                 | 高质高端，服务稳定               | [官网传送门](https://url.iszy.xyz/bywave) / [测速](https://www.iszy.cc/page/speed-test-collection/#ByWave)                                                          |
-| [Blinkload](#六、Blinkload)               | SS(全专线)            | 稳定全能，超多专线               | [官网传送门](https://url.iszy.xyz/blinkload) / [测速](https://www.iszy.cc/page/speed-test-collection/#Blinkload)                                                    |
-| [Shuttle](#七、Shuttle) 【春节特惠】      | V2ray                 | 平价新站，另含超多小众地区线路   | [官网传送门](https://url.iszy.xyz/shuttle) / [测速](https://www.iszy.cc/page/speed-test-collection/#Shuttle)                                                        |
-
-> 本页机场均在上次网络大波动中提供了稳定的服务，还会持续观察未来表现
+| 机场名称（点击了解更多）                 | 关键词                                                     | 操作                                                                                                                                                                |
+| ---------------------------------------- | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [FreeWhale 自由鲸 ⭐](/page/freewhale/)  | 性价比，主流节点超多，小众节点                             | [官网传送门](https://url.iszy.xyz/freewhale) / [测速](https://www.iszy.cc/page/speed-test-collection/#FreeWhale-%E8%87%AA%E7%94%B1%E9%B2%B8)(2022-02-09)            |
+| [CMYNetwork 红莓网络](/page/cmynetwork/) | IEPL/IPLC 专线，Trojan，主流节点多，小众节点，福利共享账号 | [官网传送门](https://url.iszy.xyz/cmynetwork) / [测速](https://www.iszy.cc/page/speed-test-collection/#CMYNetwork-%E7%BA%A2%E8%8E%93%E7%BD%91%E7%BB%9C)(2022-02-10) |
+| [MEET](#三、MEET)                        | 性价比，主流节点，超小流量套餐                             | [官网传送门](https://url.iszy.xyz/fspeed) / [测速](https://www.iszy.cc/page/speed-test-collection/#MEET)(2022-02-09)                                                |
+| [DuangCloud](#四、DuangCloud)            | 性价比，专线，主流节点                                     | [官网传送门](https://url.iszy.xyz/duangcloud) / [测速](https://www.iszy.cc/page/speed-test-collection/#DuangCloud)                                                  |
+| [ByWave](#五、ByWave)                    | IPLC 专线，流媒体                                          | [官网传送门](https://url.iszy.xyz/bywave) / [测速](https://www.iszy.cc/page/speed-test-collection/#ByWave)                                                          |
+| [Blinkload](#六、Blinkload)              | 主流节点多，流媒体                                         | [官网传送门](https://url.iszy.xyz/blinkload) / [测速](https://www.iszy.cc/page/speed-test-collection/#Blinkload)                                                    |
+| [Shuttle](#七、Shuttle)                  | 性价比，IPLC 专线，主流节点，小众节点多，流媒体            | [官网传送门](https://url.iszy.xyz/shuttle) / [测速](https://www.iszy.cc/page/speed-test-collection/#Shuttle)                                                        |
+| [WavesLink](#八、WavesLink)(原 后浪云)   | IEPL 专线，主流节点多，流媒体                              | [官网传送门](https://url.iszy.xyz/waveslink) / [测速](https://www.iszy.cc/page/speed-test-collection/#WavesLink)                                                    |
+| [BESTIEPL](#九、BESTIEPL)(原 Electry)    | IEPL 专线，流媒体                                          | [官网传送门](https://url.iszy.xyz/electry) / [测速](https://www.iszy.cc/page/speed-test-collection/#BESTIEPL)                                                       |
 
 点击前往查看测速: **[机场测速集合](https://www.iszy.cc/page/speed-test-collection/)**
 
@@ -66,7 +66,7 @@ permalink: /page/bgfw/
 
 **￥ 115** 及以上套餐可用
 
-**95 折**礼遇码：`Catcat`
+**95 折**礼遇码：`dearmarch`
 
 ### （二）简介
 
@@ -566,171 +566,6 @@ permalink: /page/bgfw/
 - 售前售后[Telegram 官方交流群](https://t.me/thessrgroup)(Telegram 需挂代理)
 - 若有任何问题可联系官网右下角的**网页客服(推荐)**或**Telegram 管理员(推荐)**或发送工单。
 
-<!--
-
-## 八、Electry
-
-[官网传送门](https://url.iszy.xyz/electry)
-
-[⭐⭐ 测速 ⭐⭐](https://www.iszy.cc/page/speed-test-collection/#Electry) (2021-08-07)
-
-### （一）简介
-
-**Electry**，同样隶属于 `Blinkload Technology Co.，Ltd Hong Kong`，是一家线路高端稳定的 V2ray 机场，线路丰富，高端 IEPL 专线中继。
-
-- 系统自动检测用户地理位置及运营商，分配对应最近入口，减少延迟；
-- 全 BGP 入口中转节点，无视封锁
-- 线路优质，高速稳定，不限速套餐经千兆网络测速可跑满
-- 所有资源均为机房自有资源，使用 HGC / Cloudn / Hinet / Choopa /CodecCloud 线路
-- 支持 Windows/mac OS/Android/iOS
-- 解锁 Netflix / HBO / Hulu 等所有流媒体区域限制
-- 支付支持支付宝/微信/信用卡
-- 全部线路流量消耗均为正常 1 倍率，无高倍率套路
-
-### （二）套餐
-
-所有套餐线路是一样的，均为 IEPL & CN2 中继线路，只有流量和速率的区别。
-
-| 套餐          | 价格          | 流量      | 可用设备 | 最高速率 |
-| ------------- | ------------- | --------- | -------- | -------- |
-| Air Plan      | 78 元/**季**  | 50GB/月   | 3        | 100Mbps  |
-| Lite Plan     | 128 元/**季** | 200GB/月  | 3        | 100Mbps  |
-| Standard Plan | 588/年        | 400GB/月  | 4        | 150Mbps  |
-| Advanced Plan | 788/年        | 800GB/月  | 5        | 200Mbps  |
-| Premium Plan  | 1288/年       | 1000GB/月 | 5        | 不限速   |
-
--->
-<!--
-
-## 九、V2Club
-
-[官网传送门](https://url.iszy.xyz/lanan)
-
-邀请码：`EBtdO6hX`
-
-[⭐⭐ 测速 ⭐⭐](https://www.iszy.cc/page/speed-test-collection/#V2Club)
-
-### （一）简介
-
-V2Club(旧蓝岸)，一家专门提供 v2ray 代理服务的服务商。或许是 V2Ray 的关系，节点一直都挺稳定的，也做了挺长时间了，规模已经蛮大了。经我试验，品质可靠。为了保证服务质量，现在只提供年费套餐了，不过还是可以放心买啦。
-
-**高端稳定的线路**
-
-- 高达 **500Mbps+** 速率可用
-- 满足**YouTube 的 4K 视频**流畅播放，国外网游流畅游玩
-- 高级**IEPL 专线**接入
-- 40+全球落地节点
-- 针对国内网络优化的全球极速 CN2 GIA HKT HKBN WTT，让您的网络如虎添翼
-- 低延迟，以香港为例，多线路实测 PIN 值均在 10-50ms 范围内
-
-**流媒体解锁**
-
-- 所有套餐均有解锁**Netflix/TVB/DMM** 等特殊在线视频服务
-
-**多平台订阅**
-
-- 提供支持 Win/Mac/Android/iOS 多平台客户端
-- 定制的傻瓜式一键 MAC/WIN 客户端
-
-**更好的体验**
-
-- 允许**多设备同时在线**（PC 端/移动端/路由器），若是团队使用购买，**分摊成本**
-- IEPL 无审查 + ss 协议，提供更广泛的支持
-- 工单系统，有问题可以及时得到解决
-- 支持支付宝支付
-
-### （二）套餐
-
-以下价格均为折扣前价格，数量有限欲购从速。
-
-<table>
-<tr><th>套餐</th><th>流量</th><th>价格</th><th>备注</th></tr>
-<tr>
-  <td>Lanan #Lite</td>
-  <td>25G/月</td>
-  <td>199元/年</td>
-  <td rowspan="2">个人+日常网页为主</td>
-</tr>
-<tr>
-  <td>Lanan #Bronze</td>
-  <td>60G/月</td>
-  <td>299元/年</td>
-</tr>
-<tr>
-  <td>Lanan #Silver</td>
-  <td>120G/月</td>
-  <td>499元/年</td>
-  <td>个人+日常浏览网页+少许视频</td>
-</tr>
-<tr>
-  <td>Lanan #Gold</td>
-  <td>240G/月</td>
-  <td>899元/年</td>
-  <td rowspan="2">个人+日常浏览网页+视频</td>
-</tr>
-<tr>
-  <td>Lanan #Platinum</td>
-  <td>360G/月</td>
-  <td>1199元/年</td>
-</tr>
-<tr>
-  <td>Lanan #Diamond</td>
-  <td>600G/月</td>
-  <td>1299/年</td>
-  <td>朋友间共享+日常网页+视频</td>
-</tr>
-<tr>
-  <td>Lanan #Master</td>
-  <td>1200G/月</td>
-  <td>1999元/年</td>
-  <td>企业套餐+多员工使用</td>
-</tr>
-</table>
-
-> **TIPs**<br>选购推荐，轻度用户（浏览网页/查询/社交等轻度流量消耗）建议购买按量付费的套餐；重度用户及长期用户（视频等流量大户）建议购买年付套餐(折扣多流量够)<br>购买时，建议通过本站链接进入，使用优惠码享受折扣优惠。
-
-### （三）其他说明
-
-- 客户端教程和下载
-  - [网站](https://url.iszy.xyz/lanan)右上角点击**客户端&教程**即可获取客户端和教程。
-  - **注：近期力度加强，为保安全，请挂代理后方可访问**）
-- 官方联系
-  - 网站提供在线咨询服务
-  - [telegram 官方群组](https://t.me/niuniandaji)
-
--->
-
-<!-- ## 七、闲鱼网络
-
-[官网传送门](https://url.iszy.xyz/dinastio)
-
-邀请码：`vXd43WA0`
-
-[⭐⭐ 测速 ⭐⭐](https://www.iszy.cc/page/speed-test-collection/#闲鱼网络)(2021-12-18)
-
-### （一）简介
-
-这是一家比较新的 SS 机场，在 clash 客户端的加持下，简单易用效果好。经过测试，线路体验不错，也有部分解锁流媒体的线路，足够日常使用了。定价较为激进，非常适合价格敏感型用户使用，属于买不了吃亏，买不了上当的类型。
-
-> 风险提示: 由于此家价格特别低，线路质量一般，在“网络波动”时期，可能会遇到访问问题。平常时候用用体验还行。
-
-### （二）套餐
-
-> 中转隧道线路，部分 BGP 线路。
-
-| 订阅     | 流量    | 价格         |
-| -------- | ------- | ------------ |
-| 迷你订阅 | 30G/月  | **20 元/年** |
-| 基础订阅 | 100G/月 | 22 元/季度   |
-| 入门订阅 | 200G/月 | 16 元/月     |
-
-### （三）其他说明
-
-- 客户端教程和下载
-  - 进入[网站](https://url.iszy.xyz/dinastio)，左侧列表就有使用说明，各平台说明较全。
-- 官方联系
-  - 暂时好像只看到工单系统一种方式 -->
-
 ## 七、Shuttle
 
 [官网传送门](https://url.iszy.xyz/shuttle)
@@ -817,226 +652,73 @@ V2Club(旧蓝岸)，一家专门提供 v2ray 代理服务的服务商。或许�
   - 在官网可以使用工单、在线客服两种方式
   - 还提供了官方 tg 群组，可以随时交流，购买套餐后可在套餐页看到进群链接
 
-<!-- ## 九、BoomCloud
+## 八、WavesLink
 
-[官网传送门](https://url.iszy.xyz/boomcloud)
+[官网传送门](https://url.iszy.xyz/waveslink)
+
+[⭐⭐ 测速 ⭐⭐](https://www.iszy.cc/page/speed-test-collection/#WavesLink) (2022-03-10)
 
 ### （一）优惠
 
-> 官方优惠
+> 本站专属优惠
 
-选择年付可享**9 折**优惠
+- 优惠码: `随遇而安`
+- 优惠力度: 年付八折优惠
+
+> 转官网优惠公告
+
+- 活动时间: **2022/03/10-2022/04/10**
+- 优惠码: `WavesLink-1Th`
+- 优惠力度: 八折优惠
 
 ### （二）简介
 
-**BoomCloud**是一家采用**SS/SSR/V2ray**技术提供国际网络加速服务的香港公司。这家机场的服务经过一段时间的试用下来，较为稳定，速度理想。节点采用**全部中继，含 IPLC**。值得一提的是，这家机场的**年付套餐**赠送的**附加服务**十分超值。
+**WavesLink**，原后浪云 BackWavesCloud，重新升级线路，规范节点命名，是一家专做稳定高端的全 IEPL 专线机场，拥有较全的主流地区节点覆盖。
 
-**优质高速的线路**
-
-- 香港、日本、新加坡、美国等，50+中继高速线路
-- 节点全内网中专，拥有 IPLC 线路
-
-**多平台协议支持**
-
-- 同时支持 SS/SSR/V2ray 协议连接
-- 领先加密技术，隐私保护，数据传输全加密
-- Windows/Mac/Android/iOS 全平台通用
-- 支持 UDP，支持 TCP
-
-**流媒体解锁**
-
-- Netflix、TVB、BBC、HBO 支持
-
-**丰厚附加服务赠送**
-
-购买部分年付套餐的用户，可前往【附加服务】，免费领取附加服务订阅，目前支持的附加服务有：
-
-1. G Suite 账户：
-   - Google Apps 账户，使用包括 Google 云端硬盘、Gmail 在内的多种服务。同时，Boomcloud G Suite 账户提供无限容量的 Google 云端硬盘
-   - 需要注意的是，其提供的是独立账号，而非把服务提供到个人账号，属团体订阅
-2. Office 365 ProPlus 订阅：
-   - Boomcloud 提供的终生 Office 365 订阅（在 Boomcloud 产品有效期内）
-   - 包含 OneDrive for Business 和桌面版 Office（最多用于 5 台设备）
-   - 需要注意的是，其提供的是独立账号，而非把服务提供到个人账号，属团体订阅
+1. 线路：全中转线路
+   NORMAL 为广州移动公网中转
+   MASTER 为移动入口的广港专线或深港专线中转。
+2. 落地：香港 Akari、HKT、HKBN、HGC、Nathosts，日本 FDCServer、G-Core，台湾 Hinet，美国 BLinkload，英国 GTHost。
+3. 流媒体解锁：”保证解锁港区流媒体“。
+4. 将升级为自有专线和 AS 落地。
 
 ### （三）套餐
 
-> 注:<br>由于香港公司的支付货币为港币，套餐定价为人民币，实际支付价格可能会因当日汇率波动而收到影响，购买时需注意。<br>除无限流量套餐外，其他套餐默认可同时登录终端的数量为 5 个，可通过在购买时选择增加到 8 个或无限终端数量（需加价，一般用户不太需要）。
+| 套餐               | 价格      | 流量     | 可用设备 |
+| ------------------ | --------- | -------- | -------- |
+| Normal-輕量後浪-V1 | 30 元/月  | 100GB/月 | 5        |
+| Pro-高級後浪-V2    | 60 元/月  | 200GB/月 | 5        |
+| Master-至尊後浪-V3 | 120 元/月 | 500GB/月 | 5        |
 
-#### 包年包月服务
+## 九、BESTIEPL
 
-<table>
-<tr><th>套餐</th><th>每月流量(G)</th><th>付费周期</th><th>价格(元)</th><th>折合每月每G价格(元)</th></tr>
-<tr>
-  <td rowspan="4">Silver</td>
-  <td rowspan="4">60</td>
-  <td>半年</td>
-  <td>158</td>
-  <td>0.4389</td>
-</tr>
-<tr>
-  <td>每年</td>
-  <td>298</td>
-  <td>0.4139</td>
-</tr>
-<tr>
-  <td>两年</td>
-  <td>588</td>
-  <td>0.4083</td>
-</tr>
-<tr>
-  <td>三年</td>
-  <td>848</td>
-  <td>0.3926</td>
-</tr>
-<tr>
-  <td rowspan="12">Gold</td>
-  <td rowspan="6">120</td>
-  <td>每月</td>
-  <td>38</td>
-  <td>0.3167</td>
-</tr>
-<tr>
-  <td>每季</td>
-  <td>112</td>
-  <td>0.3111</td>
-</tr>
-<tr>
-  <td>半年</td>
-  <td>216</td>
-  <td>0.3</td>
-</tr>
-<tr>
-  <td>每年</td>
-  <td>408</td>
-  <td>0.2833</td>
-</tr>
-<tr>
-  <td>两年</td>
-  <td>800</td>
-  <td>0.2778</td>
-</tr>
-<tr>
-  <td>三年</td>
-  <td>1188</td>
-  <td>0.275</td>
-</tr>
-<tr>
-  <td rowspan="6">200</td>
-  <td>每月</td>
-  <td>50</td>
-  <td>0.25</td>
-</tr>
-<tr>
-  <td>每季</td>
-  <td>148</td>
-  <td>0.2467</td>
-</tr>
-<tr>
-  <td>半年</td>
-  <td>288</td>
-  <td>0.24</td>
-</tr>
-<tr>
-  <td>每年</td>
-  <td>552</td>
-  <td>0.23</td>
-</tr>
-<tr>
-  <td>两年</td>
-  <td>1088</td>
-  <td>0.2267</td>
-</tr>
-<tr>
-  <td>三年</td>
-  <td>1288</td>
-  <td>0.1789</td>
-</tr>
-<tr>
-  <td rowspan="6">Platinum</td>
-  <td rowspan="6">300</td>
-  <td>每月</td>
-  <td>58</td>
-  <td>0.1933</td>
-</tr>
-<tr>
-  <td>每季</td>
-  <td>172</td>
-  <td>0.1911</td>
-</tr>
-<tr>
-  <td>半年</td>
-  <td>330</td>
-  <td>0.1833</td>
-</tr>
-<tr>
-  <td>每年</td>
-  <td>588</td>
-  <td>0.1633</td>
-</tr>
-<tr>
-  <td>两年</td>
-  <td>1108</td>
-  <td>0.1539</td>
-</tr>
-<tr>
-  <td>三年</td>
-  <td>1688</td>
-  <td>0.1563</td>
-</tr>
-<tr>
-  <td rowspan="2">Team</td>
-  <td rowspan="2">不限量</td>
-  <td>每季</td>
-  <td>3699</td>
-  <td rowspan="2">NAN</td>
-</tr>
-<tr>
-  <td>每年</td>
-  <td>11888</td>
-</tr>
-</table>
+[官网传送门](https://url.iszy.xyz/electry)
 
-#### 弹性套餐（固定流量）
+[⭐⭐ 测速 ⭐⭐](https://www.iszy.cc/page/speed-test-collection/#BESTIEPL) (2022-03-10)
 
-| 弹性套餐   | 总流量 | 有效期 | 线路 | 价格(元) | 折合每 G 价格 |
-| ---------- | ------ | ------ | ---- | -------- | ------------- |
-| 基础流量包 | 30G    | 365 天 | 15+  | 45       | 1.5 元/G      |
-| 飞享流量包 | 120G   | 365 天 | 25+  | 120      | 1 元/G        |
-| 自由流量包 | 200G   | 365 天 | 25+  | 160      | 0.8 元/G      |
+### （一）简介
 
-#### 企业定制套餐
+**BESTIEPL**(原 Electry)，拥有高端 IEPL 专线中继，暂时只有香港台湾节点，但近期会增加更多落地节点。
 
-- 标准单线 + 高级单线接入点
-- 100Mbps~500Mbps 速率保障
-- 持 TCP 先进加速技术
-- 支持多种扩展连接协议
-- 可选流量范围：3TiB
-- 支持级别：标准支持 + 有限商业支持
-- 支持响应：8 小时（工作时间）
+- 系统自动检测用户地理位置及运营商，分配对应最近入口，减少延迟；
+- 全 BGP 入口中转节点，无视封锁
+- 线路优质，高速稳定，不限速套餐
+- 支持 Windows/mac OS/Android/iOS
+- 解锁流媒体区域限制
+- 支付支持支付宝/微信/信用卡
+- 全部线路流量消耗均为正常 1 倍率，无高倍率套路
 
-| 数据中心分布   | 每月价格(元) | 每年价格(元) |
-| -------------- | ------------ | ------------ |
-| 香港数据中心   | 2180         | 22300        |
-| 美国数据中心   | 1280         | 20800        |
-| 日本数据中心   | 2080         | 20300        |
-| 新加坡数据中心 | 1280         | 14800        |
-| 德国数据中心   | 1280         | 14800        |
-| 英国数据中心   | 1280         | 14800        |
+### （二）套餐
 
-### （四）其他说明
+所有套餐线路是一样的，均为 IEPL & CN2 中继线路，只有流量区别。
 
-- [BoomCloud Wiki Center](https://boomcloud-hk.github.io/wiki/#/)，提供 BoomCloud 服务相关教程指引及进阶教程
-- 售后 BoomCloud 售后仅支持服务单，因为这能最直白看到你的账号及套餐使用情况，更快的帮助寻找问题所在
-- 服务单服务时间介绍
-
-  | 周期     | 响应时间  | 其他              |
-  | -------- | --------- | ----------------- |
-  | 工作日   | 8 小时内  | Telegram 紧急反馈 |
-  | 节假日   | 48 小时内 | Telegram 紧急反馈 |
-  | AFF 提现 | 24 小时内 | 工单跟进          |
-
-- BoomCloud 售后服务单仅在网站个人中心后台的服务单回复，邮件仅作为提醒作用，直接回复无效。 -->
+| 套餐          | 价格      | 流量      | 可用设备 |
+| ------------- | --------- | --------- | -------- |
+| Air Plan      | 38 元/月  | 50GB/月   | 3        |
+| Lite Plan     | 48 元/月  | 200GB/月  | 3        |
+| Standard Plan | 88 元/月  | 400GB/月  | 4        |
+| Advanced Plan | 158 元/月 | 800GB/月  | 5        |
+| Premium Plan  | 208 元/月 | 1000GB/月 | 5        |
 
 ---
 

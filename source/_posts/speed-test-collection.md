@@ -73,3 +73,19 @@ permalink: /page/speed-test-collection/
 [官网传送门](https://url.iszy.xyz/shuttle)
 
 ![](https://img.iszy.xyz/20210409220158.png?x-oss-process=style/big)
+
+## WavesLink
+
+[官网传送门](https://url.iszy.xyz/waveslink)
+
+2022-03-10
+
+![](https://img.iszy.xyz/1646909047894.png?x-oss-process=style/big)
+
+## BESTIEPL
+
+[官网传送门](https://url.iszy.xyz/electry)
+
+2022-03-10
+
+![](https://img.iszy.xyz/1646910975056.png?x-oss-process=style/big)

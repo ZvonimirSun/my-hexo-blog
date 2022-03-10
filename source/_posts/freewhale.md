@@ -54,7 +54,7 @@ permalink: /page/freewhale/
 
 **￥ 115** 及以上套餐可用
 
-**95 折**礼遇码：`Catcat`
+**95 折**礼遇码：`dearmarch`
 
 ## 自由鲸 FreeWhale 简介
 
@@ -70,11 +70,11 @@ permalink: /page/freewhale/
 
 如果需要邀请码，可以使用我的邀请码: `iszy`
 
-也可以直接点击我的[邀请链接](https://t.xinjie.eu.org/iszy)，进入注册。
+也可以直接点击我的[邀请链接](https://url.iszy.xyz/freewhale)，进入注册。
 
 **长期折扣优惠**
 
-[购买套餐](https://t.xinjie.eu.org/iszy)时使用优惠码，可享受折扣优惠，优惠码不可叠加使用。
+[购买套餐](https://url.iszy.xyz/freewhale)时使用优惠码，可享受折扣优惠，优惠码不可叠加使用。
 
 **实时服务监控**
 
