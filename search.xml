@@ -4104,6 +4104,44 @@
       </tags>
   </entry>
   <entry>
+    <title>Oracle PL/SQL while loop循环实例</title>
+    <url>/posts/Oracle-PL-SQL-while-loop/</url>
+    <content><![CDATA[<p>用 while loop 语句进行循环计算的一个实例。最近做题遇到，在此记录。</p>
+<span id="more"></span>
+<h2 id="WHILE-LOOP-语法">WHILE-LOOP 语法</h2>
+<p>当<strong>条件为真</strong>时，执行语句。</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">WHILE <span class="keyword">condition</span> LOOP</span><br><span class="line">    some_statements;</span><br><span class="line"><span class="keyword">END</span> LOOP;</span><br></pre></td></tr></table></figure>
+<h2 id="实例">实例</h2>
+<h3 id="题目">题目</h3>
+<p>给出一个 Power 表(表 1)的数据如下：</p>
+<p><img data-src="https://img.iszy.xyz/20190318215310.png" alt=""></p>
+<ol>
+<li>3 日的电费=1 日+2 日</li>
+<li>4 日的电费=2 日+3 日</li>
+</ol>
+<p><strong>要求:</strong></p>
+<p>编写 SQL 语句，最终显示出六月所有电费。</p>
+<h3 id="答题">答题</h3>
+<h4 id="创建表，存入初始数据">创建表，存入初始数据</h4>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> <span class="built_in">power</span>(mon <span class="type">int</span>,<span class="keyword">day</span> <span class="type">int</span>,fee <span class="type">int</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> power <span class="keyword">values</span>(<span class="number">6</span>,<span class="number">1</span>,<span class="number">60</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> power <span class="keyword">values</span>(<span class="number">6</span>,<span class="number">2</span>,<span class="number">34</span>);</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://img.iszy.xyz/20190318215323.png" alt=""></p>
+<h4 id="计算整月的电费">计算整月的电费</h4>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">declare</span></span><br><span class="line">    a number;</span><br><span class="line">    b number;</span><br><span class="line">    x number;</span><br><span class="line">    y number;</span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line">    a:<span class="operator">=</span><span class="number">1</span>;</span><br><span class="line">    b:<span class="operator">=</span><span class="number">2</span>;</span><br><span class="line">    while (b<span class="operator">&lt;=</span><span class="number">29</span>) loop</span><br><span class="line">        <span class="keyword">select</span> fee</span><br><span class="line">        <span class="keyword">into</span> x</span><br><span class="line">        <span class="keyword">from</span> power</span><br><span class="line">        <span class="keyword">where</span> <span class="keyword">day</span><span class="operator">=</span>a;</span><br><span class="line">        <span class="keyword">select</span> fee</span><br><span class="line">        <span class="keyword">into</span> y</span><br><span class="line">        <span class="keyword">from</span> power</span><br><span class="line">        <span class="keyword">where</span> <span class="keyword">day</span><span class="operator">=</span>b;</span><br><span class="line">        <span class="keyword">insert</span> <span class="keyword">into</span> power <span class="keyword">values</span>(<span class="number">6</span>,a<span class="operator">+</span><span class="number">2</span>,x<span class="operator">+</span>y);</span><br><span class="line">        a:<span class="operator">=</span>a<span class="operator">+</span><span class="number">1</span>;</span><br><span class="line">        b:<span class="operator">=</span>b<span class="operator">+</span><span class="number">1</span>;</span><br><span class="line">    <span class="keyword">end</span> loop;</span><br><span class="line"><span class="keyword">end</span>;</span><br><span class="line"><span class="operator">/</span></span><br></pre></td></tr></table></figure>
+<p><img data-src="https://img.iszy.xyz/20190318215335.png" alt=""></p>
+<h4 id="显示结果">显示结果</h4>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> power;</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://img.iszy.xyz/20190318215348.png" alt=""></p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>数据库</tag>
+        <tag>Oracle</tag>
+        <tag>SQL</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>使用remarkbox评论插件</title>
     <url>/posts/Remarkbox/</url>
     <content><![CDATA[<p>刚刚做博客，感觉还是需要个评论区的，虽然我也知道不会有谁来评论啦，估计也就我自己评论一下了。刚刚看到 Remarkbox，十分简洁，感觉很适合我。现已更换成<a href="https://www.iszy.cc/2018/04/01/Valine/">Valine 评论系统</a>，推荐一下。</p>
@@ -4158,44 +4196,6 @@
       </categories>
       <tags>
         <tag>评论系统</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Oracle PL/SQL while loop循环实例</title>
-    <url>/posts/Oracle-PL-SQL-while-loop/</url>
-    <content><![CDATA[<p>用 while loop 语句进行循环计算的一个实例。最近做题遇到，在此记录。</p>
-<span id="more"></span>
-<h2 id="WHILE-LOOP-语法">WHILE-LOOP 语法</h2>
-<p>当<strong>条件为真</strong>时，执行语句。</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">WHILE <span class="keyword">condition</span> LOOP</span><br><span class="line">    some_statements;</span><br><span class="line"><span class="keyword">END</span> LOOP;</span><br></pre></td></tr></table></figure>
-<h2 id="实例">实例</h2>
-<h3 id="题目">题目</h3>
-<p>给出一个 Power 表(表 1)的数据如下：</p>
-<p><img data-src="https://img.iszy.xyz/20190318215310.png" alt=""></p>
-<ol>
-<li>3 日的电费=1 日+2 日</li>
-<li>4 日的电费=2 日+3 日</li>
-</ol>
-<p><strong>要求:</strong></p>
-<p>编写 SQL 语句，最终显示出六月所有电费。</p>
-<h3 id="答题">答题</h3>
-<h4 id="创建表，存入初始数据">创建表，存入初始数据</h4>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> <span class="built_in">power</span>(mon <span class="type">int</span>,<span class="keyword">day</span> <span class="type">int</span>,fee <span class="type">int</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> power <span class="keyword">values</span>(<span class="number">6</span>,<span class="number">1</span>,<span class="number">60</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> power <span class="keyword">values</span>(<span class="number">6</span>,<span class="number">2</span>,<span class="number">34</span>);</span><br></pre></td></tr></table></figure>
-<p><img data-src="https://img.iszy.xyz/20190318215323.png" alt=""></p>
-<h4 id="计算整月的电费">计算整月的电费</h4>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">declare</span></span><br><span class="line">    a number;</span><br><span class="line">    b number;</span><br><span class="line">    x number;</span><br><span class="line">    y number;</span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line">    a:<span class="operator">=</span><span class="number">1</span>;</span><br><span class="line">    b:<span class="operator">=</span><span class="number">2</span>;</span><br><span class="line">    while (b<span class="operator">&lt;=</span><span class="number">29</span>) loop</span><br><span class="line">        <span class="keyword">select</span> fee</span><br><span class="line">        <span class="keyword">into</span> x</span><br><span class="line">        <span class="keyword">from</span> power</span><br><span class="line">        <span class="keyword">where</span> <span class="keyword">day</span><span class="operator">=</span>a;</span><br><span class="line">        <span class="keyword">select</span> fee</span><br><span class="line">        <span class="keyword">into</span> y</span><br><span class="line">        <span class="keyword">from</span> power</span><br><span class="line">        <span class="keyword">where</span> <span class="keyword">day</span><span class="operator">=</span>b;</span><br><span class="line">        <span class="keyword">insert</span> <span class="keyword">into</span> power <span class="keyword">values</span>(<span class="number">6</span>,a<span class="operator">+</span><span class="number">2</span>,x<span class="operator">+</span>y);</span><br><span class="line">        a:<span class="operator">=</span>a<span class="operator">+</span><span class="number">1</span>;</span><br><span class="line">        b:<span class="operator">=</span>b<span class="operator">+</span><span class="number">1</span>;</span><br><span class="line">    <span class="keyword">end</span> loop;</span><br><span class="line"><span class="keyword">end</span>;</span><br><span class="line"><span class="operator">/</span></span><br></pre></td></tr></table></figure>
-<p><img data-src="https://img.iszy.xyz/20190318215335.png" alt=""></p>
-<h4 id="显示结果">显示结果</h4>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> power;</span><br></pre></td></tr></table></figure>
-<p><img data-src="https://img.iszy.xyz/20190318215348.png" alt=""></p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>数据库</tag>
-        <tag>Oracle</tag>
-        <tag>SQL</tag>
       </tags>
   </entry>
   <entry>
@@ -8192,9 +8192,9 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <td><span class="exturl" data-url="aHR0cHM6Ly91cmwuaXN6eS54eXovZWxlY3RyeQ==">官网传送门<i class="fa fa-external-link-alt"></i></span> / <a href="https://www.iszy.cc/page/speed-test-collection/#BESTIEPL">测速</a></td>
 </tr>
 <tr>
-<td><a href="#%E5%85%AB%E3%80%81Shuttle">Shuttle</a></td>
+<td><a href="#%E5%85%AB%E3%80%81Gatern">Gatern</a>(原Shuttle)</td>
 <td>性价比，IPLC 专线，主流节点，小众节点多，流媒体</td>
-<td><span class="exturl" data-url="aHR0cHM6Ly91cmwuaXN6eS54eXovc2h1dHRsZQ==">官网传送门<i class="fa fa-external-link-alt"></i></span> / <a href="https://www.iszy.cc/page/speed-test-collection/#Shuttle">测速</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly91cmwuaXN6eS54eXovZ2F0ZXJu">官网传送门<i class="fa fa-external-link-alt"></i></span> / <a href="https://www.iszy.cc/page/speed-test-collection/#Shuttle">测速</a></td>
 </tr>
 <tr>
 <td><a href="#%E4%B9%9D%E3%80%81ByWave">ByWave</a></td>
@@ -8867,9 +8867,9 @@ MASTER 为移动入口的广港专线或深港专线中转。</li>
 </tr>
 </tbody>
 </table>
-<h2 id="八、Shuttle">八、Shuttle</h2>
-<p><span class="exturl" data-url="aHR0cHM6Ly91cmwuaXN6eS54eXovc2h1dHRsZQ==">官网传送门<i class="fa fa-external-link-alt"></i></span></p>
-<p><a href="https://www.iszy.cc/page/speed-test-collection/#Shuttle">⭐⭐ 测速 ⭐⭐</a></p>
+<h2 id="八、Gatern">八、Gatern</h2>
+<p><span class="exturl" data-url="aHR0cHM6Ly91cmwuaXN6eS54eXovZ2F0ZXJu">官网传送门<i class="fa fa-external-link-alt"></i></span></p>
+<p><a href="https://www.iszy.cc/page/speed-test-collection/#Gatern">⭐⭐ 测速 ⭐⭐</a></p>
 <h3 id="（一）优惠-6">（一）优惠</h3>
 <blockquote>
 <p>本站专属优惠</p>
@@ -9831,8 +9831,8 @@ MASTER 为移动入口的广港专线或深港专线中转。</li>
 2021-12-18
 
 ![](https://img.iszy.xyz/1639797582174.png?x-oss-process=style/big) -->
-<h2 id="Shuttle">Shuttle</h2>
-<p><span class="exturl" data-url="aHR0cHM6Ly91cmwuaXN6eS54eXovc2h1dHRsZQ==">官网传送门<i class="fa fa-external-link-alt"></i></span></p>
+<h2 id="Gatern">Gatern</h2>
+<p><span class="exturl" data-url="aHR0cHM6Ly91cmwuaXN6eS54eXovZ2F0ZXJu">官网传送门<i class="fa fa-external-link-alt"></i></span></p>
 <p><img data-src="https://img.iszy.xyz/20210409220158.png?x-oss-process=style/big" alt=""></p>
 <h2 id="WavesLink">WavesLink</h2>
 <p><span class="exturl" data-url="aHR0cHM6Ly91cmwuaXN6eS54eXovd2F2ZXNsaW5r">官网传送门<i class="fa fa-external-link-alt"></i></span></p>
