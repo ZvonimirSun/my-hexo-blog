@@ -45,7 +45,7 @@ permalink: /page/bgfw/
 | [Blinkload](#五、Blinkload)              | 主流节点多，流媒体                                         | [官网传送门](https://url.iszy.xyz/blinkload) / [测速](https://www.iszy.cc/page/speed-test-collection/#Blinkload)                                                    |
 | [WavesLink](#六、WavesLink)(原 后浪云)   | IEPL 专线，主流节点多，流媒体                              | [官网传送门](https://url.iszy.xyz/waveslink) / [测速](https://www.iszy.cc/page/speed-test-collection/#WavesLink)                                                    |
 | [BESTIEPL](#七、BESTIEPL)(原 Electry)    | IEPL 专线，流媒体                                          | [官网传送门](https://url.iszy.xyz/electry) / [测速](https://www.iszy.cc/page/speed-test-collection/#BESTIEPL)                                                       |
-| [Shuttle](#八、Shuttle)                  | 性价比，IPLC 专线，主流节点，小众节点多，流媒体            | [官网传送门](https://url.iszy.xyz/shuttle) / [测速](https://www.iszy.cc/page/speed-test-collection/#Shuttle)                                                        |
+| [Gatern](#八、Gatern)(原Shuttle)                  | 性价比，IPLC 专线，主流节点，小众节点多，流媒体            | [官网传送门](https://url.iszy.xyz/gatern) / [测速](https://www.iszy.cc/page/speed-test-collection/#Shuttle)                                                        |
 | [ByWave](#九、ByWave)                    | IPLC 专线，流媒体                                          | [官网传送门](https://url.iszy.xyz/bywave) / [测速](https://www.iszy.cc/page/speed-test-collection/#ByWave)                                                          |
 
 点击前往查看测速: **[机场测速集合](https://www.iszy.cc/page/speed-test-collection/)**
@@ -560,11 +560,11 @@ permalink: /page/bgfw/
 | Advanced Plan | 158 元/月 | 800GB/月  | 5        |
 | Premium Plan  | 208 元/月 | 1000GB/月 | 5        |
 
-## 八、Shuttle
+## 八、Gatern
 
-[官网传送门](https://url.iszy.xyz/shuttle)
+[官网传送门](https://url.iszy.xyz/gatern)
 
-[⭐⭐ 测速 ⭐⭐](https://www.iszy.cc/page/speed-test-collection/#Shuttle)
+[⭐⭐ 测速 ⭐⭐](https://www.iszy.cc/page/speed-test-collection/#Gatern)
 
 ### （一）优惠
 

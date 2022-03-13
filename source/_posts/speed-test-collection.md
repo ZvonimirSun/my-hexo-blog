@@ -68,9 +68,9 @@ permalink: /page/speed-test-collection/
 
 ![](https://img.iszy.xyz/1639797582174.png?x-oss-process=style/big) -->
 
-## Shuttle
+## Gatern
 
-[官网传送门](https://url.iszy.xyz/shuttle)
+[官网传送门](https://url.iszy.xyz/gatern)
 
 ![](https://img.iszy.xyz/20210409220158.png?x-oss-process=style/big)
 
