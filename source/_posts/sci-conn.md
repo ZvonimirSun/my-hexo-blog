@@ -45,7 +45,7 @@ permalink: /page/bgfw/
 | [Blinkload](#五、Blinkload)              | 主流节点多，流媒体                                         | [官网传送门](https://url.iszy.xyz/blinkload) / [测速](https://www.iszy.cc/page/speed-test-collection/#Blinkload)                                                    |
 | [WavesLink](#六、WavesLink)(原 后浪云)   | IEPL 专线，主流节点多，流媒体                              | [官网传送门](https://url.iszy.xyz/waveslink) / [测速](https://www.iszy.cc/page/speed-test-collection/#WavesLink)                                                    |
 | [BESTIEPL](#七、BESTIEPL)(原 Electry)    | IEPL 专线，流媒体                                          | [官网传送门](https://url.iszy.xyz/electry) / [测速](https://www.iszy.cc/page/speed-test-collection/#BESTIEPL)                                                       |
-| [Gatern](#八、Gatern)(原 Shuttle)        | 性价比，IPLC 专线，主流节点，小众节点多，流媒体            | [官网传送门](https://url.iszy.xyz/gatern) / [测速](https://www.iszy.cc/page/speed-test-collection/#Shuttle)                                                         |
+| [Gatern](#八、Gatern)(原 Shuttle)        | 性价比，IPLC 专线，主流节点，小众节点多，流媒体            | [官网传送门](https://url.iszy.xyz/gatern) / [测速](https://www.iszy.cc/page/speed-test-collection/#Gatern)(2022-03-14)                                              |
 | [ByWave](#九、ByWave)                    | IPLC 专线，流媒体                                          | [官网传送门](https://url.iszy.xyz/bywave) / [测速](https://www.iszy.cc/page/speed-test-collection/#ByWave)                                                          |
 
 点击前往查看测速: **[机场测速集合](https://www.iszy.cc/page/speed-test-collection/)**
@@ -564,7 +564,7 @@ permalink: /page/bgfw/
 
 [官网传送门](https://url.iszy.xyz/gatern)
 
-[⭐⭐ 测速 ⭐⭐](https://www.iszy.cc/page/speed-test-collection/#Gatern)
+[⭐⭐ 测速 ⭐⭐](https://www.iszy.cc/page/speed-test-collection/#Gatern)(2022-03-14)
 
 ### （一）优惠
 
