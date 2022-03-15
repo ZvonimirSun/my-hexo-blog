@@ -151,7 +151,7 @@
     <content><![CDATA[<p>前段时间写了一个通过 Github Actions 配合 Webhooks 实现项目自动化部署，但是服务器上由于并没有后端服务，所以实现的方式不太优雅。今天我将完全抛弃 Webhook，完全通过 Github Actions 来实现项目的自动化部署。</p>
 <span id="more"></span>
 <h2 id="改进">改进</h2>
-<p>如果还没看过上一篇的，可以移步这里看一下<a href="https://www.iszy.cc/posts/10/">Github Actions + Webhooks 实现项目自动化部署</a>。</p>
+<p>如果还没看过上一篇的，可以移步这里看一下<a href="/posts/10/">Github Actions + Webhooks 实现项目自动化部署</a>。</p>
 <p>这次的主要改进就是移除了 Webhooks 的依赖，不需要在服务器上进行监听。</p>
 <p>其实很简单，就是通过 Github Actions 主动登录服务器，执行自定义脚本，完成 git pull 操作。</p>
 <h2 id="Gihub-Actions-脚本">Gihub Actions 脚本</h2>
@@ -4144,7 +4144,7 @@
   <entry>
     <title>使用remarkbox评论插件</title>
     <url>/posts/Remarkbox/</url>
-    <content><![CDATA[<p>刚刚做博客，感觉还是需要个评论区的，虽然我也知道不会有谁来评论啦，估计也就我自己评论一下了。刚刚看到 Remarkbox，十分简洁，感觉很适合我。现已更换成<a href="https://www.iszy.cc/2018/04/01/Valine/">Valine 评论系统</a>，推荐一下。</p>
+    <content><![CDATA[<p>刚刚做博客，感觉还是需要个评论区的，虽然我也知道不会有谁来评论啦，估计也就我自己评论一下了。刚刚看到 Remarkbox，十分简洁，感觉很适合我。现已更换成<a href="/2018/04/01/Valine/">Valine 评论系统</a>，推荐一下。</p>
 <span id="more"></span>
 <h2 id="Remarkbox">Remarkbox</h2>
 <p>这是一个个人提供的评论系统，界面相当的简洁，很符合我的审美啊。大家可以在<span class="exturl" data-url="aHR0cHM6Ly93d3cucmVtYXJrYm94LmNvbS8=">官方网站<i class="fa fa-external-link-alt"></i></span>上进行试用。最为惊艳的地方在于，这个评论插件居然支持 markdown 语法，你可以用 markdown 语句发表格式工整的评论。在官网的试用评论区，还有人发代码的，真是因缺思厅。</p>
@@ -4494,7 +4494,7 @@
   <entry>
     <title>配合 Valine 使用的 Valine-Admin</title>
     <url>/posts/Valine-Admin/</url>
-    <content><![CDATA[<p>在<a href="https://www.iszy.cc/2018/04/01/Valine/">上一篇文章</a>中，我讲了怎样安装 Valine 评论系统。Valine 评论系统现在自带的邮件通知功能有很大缺陷，这就要轮到我今天要讲的 Valine-Admin 了。由 <span class="exturl" data-url="aHR0cHM6Ly9pb2xpdS5jbi8=">@云淡风轻<i class="fa fa-external-link-alt"></i></span> 大神开发的 Valine-Admin 实现了基于 leancloud 云引擎的邮件通知、垃圾评论识别和评论管理面板，<span class="exturl" data-url="aHR0cDovL3d3dy56aGFvanVuLmltL2hleG8tdmFsaW5lLWFkbWluLw==">@赵俊<i class="fa fa-external-link-alt"></i></span>大佬修改优化了一波，能够提供良好的评论通知体验。</p>
+    <content><![CDATA[<p>在<a href="/2018/04/01/Valine/">上一篇文章</a>中，我讲了怎样安装 Valine 评论系统。Valine 评论系统现在自带的邮件通知功能有很大缺陷，这就要轮到我今天要讲的 Valine-Admin 了。由 <span class="exturl" data-url="aHR0cHM6Ly9pb2xpdS5jbi8=">@云淡风轻<i class="fa fa-external-link-alt"></i></span> 大神开发的 Valine-Admin 实现了基于 leancloud 云引擎的邮件通知、垃圾评论识别和评论管理面板，<span class="exturl" data-url="aHR0cDovL3d3dy56aGFvanVuLmltL2hleG8tdmFsaW5lLWFkbWluLw==">@赵俊<i class="fa fa-external-link-alt"></i></span>大佬修改优化了一波，能够提供良好的评论通知体验。</p>
 <span id="more"></span>
 <h2 id="说明">说明</h2>
 <p>本文内容已弃用，本人的库针对我的个人需求做了一些修改，不再适用于一般用户。因为后续原始的 Valine-Admin 开始适配修改版的 Valine，所以建议使用<span class="exturl" data-url="aHR0cDovL3d3dy56aGFvanVuLmltL2hleG8tdmFsaW5lLWFkbWluLw==">@赵俊<i class="fa fa-external-link-alt"></i></span>大佬的版本。</p>
@@ -4576,7 +4576,7 @@
 <p>我之前说过，不推荐使用 Valine 提供的邮件通知功能。由于 leancloud 自身邮件系统的限制，无法传递足够的参数，所以通知邮件中的链接无法直接跳转到文章页，不能够满足使用。</p>
 <p>大神 <span class="exturl" data-url="aHR0cHM6Ly9wYW5qdW53ZW4uY29t">@Deserts<i class="fa fa-external-link-alt"></i></span> 基于 leancloud 云引擎做了一个邮件通知功能，顺便还实现了评论管理面板，Github：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3Bhbmp1bndlbi9WYWxpbmUtQWRtaW4=">Valine-Admin<i class="fa fa-external-link-alt"></i></span>。</p>
 <p>由于 Valine 的版本更新，原本的功能除了管理面板已经基本不能使用了，包括邮件通知、垃圾评论识别。我对此进行了一点简单的改动，恢复了邮件通知的内容，垃圾评论识别不会搞，我就给删掉了，Github：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1p2b25pbWlyU3VuL1ZhbGluZS1BZG1pbg==">Valine-Admin<i class="fa fa-external-link-alt"></i></span>。</p>
-<p><a href="https://www.iszy.cc/2018/04/01/Valine-Admin/">下一篇文章</a>，我将写一下这个 Valine-Admin 的配置。同样是十分简单的。</p>
+<p><a href="/2018/04/01/Valine-Admin/">下一篇文章</a>，我将写一下这个 Valine-Admin 的配置。同样是十分简单的。</p>
 ]]></content>
       <categories>
         <category>应用</category>
@@ -5135,9 +5135,9 @@ SWIFT 代码：CIBKCNBJ100<br>
 <p>原文链接: <span class="exturl" data-url="aHR0cDovL3d3dy5ydWFueWlmZW5nLmNvbS9ibG9nLzIwMTIvMTAvYXN5bmNocm9ub3VzX21vZHVsZV9kZWZpbml0aW9uLmh0bWw=">Javascript 模块化编程（二）：AMD 规范<i class="fa fa-external-link-alt"></i></span> —— 阮一峰</p>
 </blockquote>
 <span id="more"></span>
-<p>这个系列的<a href="https://www.iszy.cc/2019/08/14/javascript_module/">第一部分</a>介绍了 Javascript 模块的基本写法，今天介绍如何规范地使用模块。</p>
+<p>这个系列的<a href="/2019/08/14/javascript_module/">第一部分</a>介绍了 Javascript 模块的基本写法，今天介绍如何规范地使用模块。</p>
 <p><img data-src="https://img.iszy.xyz/20190814100700.png" alt=""></p>
-<p>（接<a href="https://www.iszy.cc/2019/08/14/javascript_module/">上文</a>）</p>
+<p>（接<a href="/2019/08/14/javascript_module/">上文</a>）</p>
 <h2 id="模块的规范">模块的规范</h2>
 <p>先想一想，为什么模块很重要？</p>
 <p>因为有了模块，我们就可以更方便地使用别人的代码，想要什么功能，就加载什么模块。</p>
@@ -5576,7 +5576,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <li>数据库用户名为之前创建的 <code>nextcloud</code>，密码为你设定的密码</li>
 <li>数据库地址要加端口，如 <code>localhost:3306</code></li>
 </ul>
-<p>配图为我前一次<a href="https://www.iszy.cc/2017/12/18/NextCloud/">使用宝塔面板进行安装</a>时的截图。</p>
+<p>配图为我前一次<a href="/2017/12/18/NextCloud/">使用宝塔面板进行安装</a>时的截图。</p>
 <p><img data-src="https://img.iszy.xyz/20190318212151.png" alt=""></p>
 <h2 id="更多问题">更多问题</h2>
 <p>安装完成后登录，进入<code>设置</code>—<code>管理</code>—<code>基本设置</code>，还有一些问题需要解决。我们下篇文章继续说明。</p>
@@ -5664,7 +5664,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <span id="more"></span>
 <h2 id="网站改版">网站改版</h2>
 <p>首先呢，我的网站是通过 jekyll 编译的，一些编译的内容和域名是关联在一起的。我也讲不清楚，就是如果域名不完全匹配，即使是 http 和 https 的区别，网站的一些图标就不能正常显示。所以我需要更改配置后，重新编译网站。其他的网站可能不会遇到我这个问题。</p>
-<p>另外，由于我是全站 https 的，更换域名也就需要重新申请一个新域名的 ssl 证书。正好 Let’s Encrypt 的泛域名证书已经正式推出了，我也就顺势申请了泛域名证书，现在已经用上了。关于泛域名证书获取的过程可以看我的<a href="https://www.iszy.cc/2018/03/18/wild-card/">上一篇文章</a>。</p>
+<p>另外，由于我是全站 https 的，更换域名也就需要重新申请一个新域名的 ssl 证书。正好 Let’s Encrypt 的泛域名证书已经正式推出了，我也就顺势申请了泛域名证书，现在已经用上了。关于泛域名证书获取的过程可以看我的<a href="/2018/03/18/wild-card/">上一篇文章</a>。</p>
 <h2 id="对旧网站做-301-跳转">对旧网站做 301 跳转</h2>
 <p>为了保证搜索引擎的正常抓取和索引，并尽量减少网站的正常改版过程中的流量损失，要对旧网站做 301 跳转。</p>
 <p>网上的教程应该很多吧，无论是针对 Apache 的，还是 Nginx 的，连针对微软的 IIS 的教程都有。我还特别去看过，讲道理还挺简单的，在此我就不赘述了。如果真有人需要，在评论里说一声，我在这里做整理。</p>
@@ -5763,7 +5763,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <h2 id="一、前言">一、前言</h2>
 <h3 id="相关链接">相关链接</h3>
 <p><span class="exturl" data-url="aHR0cHM6Ly91cmwuaXN6eS54eXovY215bmV0d29yaw==">官网传送门<i class="fa fa-external-link-alt"></i></span></p>
-<p><a href="https://www.iszy.cc/page/speed-test-collection/#CMYNetwork-%E7%BA%A2%E8%8E%93%E7%BD%91%E7%BB%9C">⭐⭐CMY Network 测速 ⭐⭐</a> 2022-02-10</p>
+<p><a href="/page/speed-test-collection/#CMYNetwork-%E7%BA%A2%E8%8E%93%E7%BD%91%E7%BB%9C">⭐⭐CMY Network 测速 ⭐⭐</a> 2022-02-10</p>
 <h3 id="优惠">优惠</h3>
 <blockquote>
 <p>本站专属优惠</p>
@@ -6200,7 +6200,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
     <content><![CDATA[<p>今天来介绍一下超简单的使用 Docker 部署 ASF 的方法。在部署上，相对一般的部署，使用 Docker 会简单许多，今天我就来介绍一下如何使用 Docker 部署 ASF。</p>
 <span id="more"></span>
 <h2 id="ArchiSteamFarm">ArchiSteamFarm</h2>
-<p>这个软件就是用来 Steam 挂卡的，相信查到这篇文章的人应该都知道 Steam 挂卡是什么吧。在之前的一篇文章——<a href="https://www.iszy.cc/2018/08/08/asf-steam/">在 Ubuntu 16.04 环境下使用 ASF(v3) 实现云挂卡</a>里，我已经介绍了部署 ArchiSteamFarm 的一般流程，以及 ASF 的两步验证、IPC、在 Telegram 中管理 ASF 等内容，感兴趣的可以了解一下。</p>
+<p>这个软件就是用来 Steam 挂卡的，相信查到这篇文章的人应该都知道 Steam 挂卡是什么吧。在之前的一篇文章——<a href="/2018/08/08/asf-steam/">在 Ubuntu 16.04 环境下使用 ASF(v3) 实现云挂卡</a>里，我已经介绍了部署 ArchiSteamFarm 的一般流程，以及 ASF 的两步验证、IPC、在 Telegram 中管理 ASF 等内容，感兴趣的可以了解一下。</p>
 <h2 id="为什么使用-Docker">为什么使用 Docker</h2>
 <p>我也不想多介绍 Docker，大家可以自己去搜索一下。为什么要用 Docker 呢，那就是简单。</p>
 <p>由于 Docker 确保了执行环境的一致性，不用在意系统环境，你只需要运行做好的 Docker 镜像，部署就完成了，又快又好。</p>
@@ -6649,7 +6649,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <p><span class="exturl" data-url="aHR0cHM6Ly91cmwuaXN6eS54eXovZnJlZXdoYWxl">官网传送门<i class="fa fa-external-link-alt"></i></span></p>
 <p>如果需要邀请码，可以使用我的邀请码: <code>iszy</code></p>
 <p>机场测速在这里提供下，仅供参考。考虑到测速会占用大量服务器带宽，尤其是在高峰期，或许会影响其他用户的正常使用，在此不会频繁更新测速记录，仅在出现重大情况或是用户要求更新时更新测速。测速时间会在速度图的底部留有记录。</p>
-<p><a href="https://www.iszy.cc/page/speed-test-collection/#FreeWhale-%E8%87%AA%E7%94%B1%E9%B2%B8">⭐⭐ FreeWhale 自由鲸 测速 ⭐⭐</a> (2022-03-15)</p>
+<p><a href="/page/speed-test-collection/#FreeWhale-%E8%87%AA%E7%94%B1%E9%B2%B8">⭐⭐ FreeWhale 自由鲸 测速 ⭐⭐</a> (2022-03-15)</p>
 <h3 id="优惠">优惠</h3>
 <blockquote>
 <p>官方长期优惠</p>
@@ -7508,7 +7508,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
     <content><![CDATA[<p>在此记录在 Ubuntu 16.04 搭建 Minecraft 服务器 1.13 的全过程。</p>
 <span id="more"></span>
 <h2 id="安装-Java-运行库">安装 Java 运行库</h2>
-<p>在前一篇文章——<a href="https://www.iszy.cc/2018/08/05/ubuntu-oracle-java/">在 Ubuntu 16.04 中安装 Oracle Java 8</a>中已经有了详细讲述。</p>
+<p>在前一篇文章——<a href="/2018/08/05/ubuntu-oracle-java/">在 Ubuntu 16.04 中安装 Oracle Java 8</a>中已经有了详细讲述。</p>
 <h2 id="创建新用户和组">创建新用户和组</h2>
 <h3 id="创建用户和组">创建用户和组</h3>
 <p>创建用户和组 minecraft，用以运行 minecraft 服务端</p>
@@ -8053,7 +8053,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <p>原文链接: <span class="exturl" data-url="aHR0cDovL3d3dy5ydWFueWlmZW5nLmNvbS9ibG9nLzIwMTIvMTEvcmVxdWlyZV9qcy5odG1s">Javascript 模块化编程（三）：require.js 的用法<i class="fa fa-external-link-alt"></i></span> —— 阮一峰</p>
 </blockquote>
 <span id="more"></span>
-<p>这个系列的<a href="https://www.iszy.cc/2019/08/14/javascript_module/">第一部分</a>和<a href="https://www.iszy.cc/2019/08/14/asynchronous_module_definition/">第二部分</a>，介绍了 Javascript 模块原型和理论概念，今天介绍如何将它们用于实战。</p>
+<p>这个系列的<a href="/2019/08/14/javascript_module/">第一部分</a>和<a href="/2019/08/14/asynchronous_module_definition/">第二部分</a>，介绍了 Javascript 模块原型和理论概念，今天介绍如何将它们用于实战。</p>
 <p>我采用的是一个非常流行的库<span class="exturl" data-url="aHR0cDovL3JlcXVpcmVqcy5vcmcv">require.js<i class="fa fa-external-link-alt"></i></span>。</p>
 <p><img data-src="https://img.iszy.xyz/20190814101519.png" alt=""></p>
 <h2 id="为什么要用-require-js？">为什么要用 require.js？</h2>
@@ -8159,56 +8159,56 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <tr>
 <td><a href="/page/freewhale/">FreeWhale 自由鲸 ⭐</a></td>
 <td>性价比，主流节点超多，小众节点</td>
-<td><span class="exturl" data-url="aHR0cHM6Ly91cmwuaXN6eS54eXovZnJlZXdoYWxl">官网传送门<i class="fa fa-external-link-alt"></i></span> / <a href="https://www.iszy.cc/page/speed-test-collection/#FreeWhale-%E8%87%AA%E7%94%B1%E9%B2%B8">测速</a>(2022-03-15)</td>
+<td><span class="exturl" data-url="aHR0cHM6Ly91cmwuaXN6eS54eXovZnJlZXdoYWxl">官网传送门<i class="fa fa-external-link-alt"></i></span> / <a href="/page/speed-test-collection/#FreeWhale-%E8%87%AA%E7%94%B1%E9%B2%B8">测速</a>(2022-03-15)</td>
 </tr>
 <tr>
 <td><a href="/page/cmynetwork/">CMYNetwork 红莓网络</a></td>
 <td>IEPL/IPLC 专线，Trojan，主流节点多，小众节点，福利共享账号</td>
-<td><span class="exturl" data-url="aHR0cHM6Ly91cmwuaXN6eS54eXovY215bmV0d29yaw==">官网传送门<i class="fa fa-external-link-alt"></i></span> / <a href="https://www.iszy.cc/page/speed-test-collection/#CMYNetwork-%E7%BA%A2%E8%8E%93%E7%BD%91%E7%BB%9C">测速</a>(2022-02-10)</td>
+<td><span class="exturl" data-url="aHR0cHM6Ly91cmwuaXN6eS54eXovY215bmV0d29yaw==">官网传送门<i class="fa fa-external-link-alt"></i></span> / <a href="/page/speed-test-collection/#CMYNetwork-%E7%BA%A2%E8%8E%93%E7%BD%91%E7%BB%9C">测速</a>(2022-02-10)</td>
 </tr>
 <tr>
 <td><a href="#%E4%B8%89%E3%80%81MEET">MEET</a></td>
 <td>性价比，主流节点，超小流量套餐</td>
-<td><span class="exturl" data-url="aHR0cHM6Ly91cmwuaXN6eS54eXovZnNwZWVk">官网传送门<i class="fa fa-external-link-alt"></i></span> / <a href="https://www.iszy.cc/page/speed-test-collection/#MEET">测速</a>(2022-02-09)</td>
+<td><span class="exturl" data-url="aHR0cHM6Ly91cmwuaXN6eS54eXovZnNwZWVk">官网传送门<i class="fa fa-external-link-alt"></i></span> / <a href="/page/speed-test-collection/#MEET">测速</a>(2022-02-09)</td>
 </tr>
 <tr>
 <td><a href="#%E5%9B%9B%E3%80%81DuangCloud">DuangCloud</a></td>
 <td>性价比，专线，主流节点</td>
-<td><span class="exturl" data-url="aHR0cHM6Ly91cmwuaXN6eS54eXovZHVhbmdjbG91ZA==">官网传送门<i class="fa fa-external-link-alt"></i></span> / <a href="https://www.iszy.cc/page/speed-test-collection/#DuangCloud">测速</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly91cmwuaXN6eS54eXovZHVhbmdjbG91ZA==">官网传送门<i class="fa fa-external-link-alt"></i></span> / <a href="/page/speed-test-collection/#DuangCloud">测速</a></td>
 </tr>
 <tr>
 <td><a href="#%E4%BA%94%E3%80%81Blinkload">Blinkload</a></td>
 <td>主流节点多，流媒体</td>
-<td><span class="exturl" data-url="aHR0cHM6Ly91cmwuaXN6eS54eXovYmxpbmtsb2Fk">官网传送门<i class="fa fa-external-link-alt"></i></span> / <a href="https://www.iszy.cc/page/speed-test-collection/#Blinkload">测速</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly91cmwuaXN6eS54eXovYmxpbmtsb2Fk">官网传送门<i class="fa fa-external-link-alt"></i></span> / <a href="/page/speed-test-collection/#Blinkload">测速</a></td>
 </tr>
 <tr>
 <td><a href="#%E5%85%AD%E3%80%81WavesLink">WavesLink</a>(原 后浪云)</td>
 <td>IEPL 专线，主流节点多，流媒体</td>
-<td><span class="exturl" data-url="aHR0cHM6Ly91cmwuaXN6eS54eXovd2F2ZXNsaW5r">官网传送门<i class="fa fa-external-link-alt"></i></span> / <a href="https://www.iszy.cc/page/speed-test-collection/#WavesLink">测速</a>(2022-03-10)</td>
+<td><span class="exturl" data-url="aHR0cHM6Ly91cmwuaXN6eS54eXovd2F2ZXNsaW5r">官网传送门<i class="fa fa-external-link-alt"></i></span> / <a href="/page/speed-test-collection/#WavesLink">测速</a>(2022-03-10)</td>
 </tr>
 <tr>
 <td><a href="#%E4%B8%83%E3%80%81BESTIEPL">BESTIEPL</a>(原 Electry)</td>
 <td>IEPL 专线，流媒体</td>
-<td><span class="exturl" data-url="aHR0cHM6Ly91cmwuaXN6eS54eXovZWxlY3RyeQ==">官网传送门<i class="fa fa-external-link-alt"></i></span> / <a href="https://www.iszy.cc/page/speed-test-collection/#BESTIEPL">测速</a>(2022-03-10)</td>
+<td><span class="exturl" data-url="aHR0cHM6Ly91cmwuaXN6eS54eXovZWxlY3RyeQ==">官网传送门<i class="fa fa-external-link-alt"></i></span> / <a href="/page/speed-test-collection/#BESTIEPL">测速</a>(2022-03-10)</td>
 </tr>
 <tr>
 <td><a href="#%E5%85%AB%E3%80%81Gatern">Gatern</a>(原 Shuttle)</td>
 <td>性价比，IPLC 专线，主流节点，小众节点多，流媒体</td>
-<td><span class="exturl" data-url="aHR0cHM6Ly91cmwuaXN6eS54eXovZ2F0ZXJu">官网传送门<i class="fa fa-external-link-alt"></i></span> / <a href="https://www.iszy.cc/page/speed-test-collection/#Gatern">测速</a>(2022-03-14)</td>
+<td><span class="exturl" data-url="aHR0cHM6Ly91cmwuaXN6eS54eXovZ2F0ZXJu">官网传送门<i class="fa fa-external-link-alt"></i></span> / <a href="/page/speed-test-collection/#Gatern">测速</a>(2022-03-14)</td>
 </tr>
 <tr>
 <td><a href="#%E4%B9%9D%E3%80%81ByWave">ByWave</a></td>
 <td>IPLC 专线，流媒体</td>
-<td><span class="exturl" data-url="aHR0cHM6Ly91cmwuaXN6eS54eXovYnl3YXZl">官网传送门<i class="fa fa-external-link-alt"></i></span> / <a href="https://www.iszy.cc/page/speed-test-collection/#ByWave">测速</a></td>
+<td><span class="exturl" data-url="aHR0cHM6Ly91cmwuaXN6eS54eXovYnl3YXZl">官网传送门<i class="fa fa-external-link-alt"></i></span> / <a href="/page/speed-test-collection/#ByWave">测速</a></td>
 </tr>
 </tbody>
 </table>
-<p>点击前往查看测速: <strong><a href="https://www.iszy.cc/page/speed-test-collection/">机场测速集合</a></strong></p>
+<p>点击前往查看测速: <strong><a href="/page/speed-test-collection/">机场测速集合</a></strong></p>
 <h2 id="一、FreeWhale-自由鲸">一、FreeWhale 自由鲸</h2>
 <p><span class="exturl" data-url="aHR0cHM6Ly91cmwuaXN6eS54eXovZnJlZXdoYWxl">官网传送门<i class="fa fa-external-link-alt"></i></span></p>
 <p>邀请码: <code>iszy</code></p>
-<p><a href="https://www.iszy.cc/page/speed-test-collection/#FreeWhale-%E8%87%AA%E7%94%B1%E9%B2%B8">⭐⭐ 测速 ⭐⭐</a> (2022-03-15)</p>
-<p><a href="https://www.iszy.cc/page/freewhale/">⭐ 更多详细介绍 ⭐</a></p>
+<p><a href="/page/speed-test-collection/#FreeWhale-%E8%87%AA%E7%94%B1%E9%B2%B8">⭐⭐ 测速 ⭐⭐</a> (2022-03-15)</p>
+<p><a href="/page/freewhale/">⭐ 更多详细介绍 ⭐</a></p>
 <h3 id="（一）优惠">（一）优惠</h3>
 <blockquote>
 <p>官方长期优惠</p>
@@ -8325,8 +8325,8 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 </table>
 <h2 id="二、CMYNetwork-红莓网络">二、CMYNetwork 红莓网络</h2>
 <p><span class="exturl" data-url="aHR0cHM6Ly91cmwuaXN6eS54eXovY215bmV0d29yaw==">官网传送门<i class="fa fa-external-link-alt"></i></span></p>
-<p><a href="https://www.iszy.cc/page/speed-test-collection/#CMYNetwork-%E7%BA%A2%E8%8E%93%E7%BD%91%E7%BB%9C">⭐⭐ 测速 ⭐⭐</a> (2022-02-10)</p>
-<p><a href="https://www.iszy.cc/page/cmynetwork/">⭐ 更多详细介绍 ⭐</a></p>
+<p><a href="/page/speed-test-collection/#CMYNetwork-%E7%BA%A2%E8%8E%93%E7%BD%91%E7%BB%9C">⭐⭐ 测速 ⭐⭐</a> (2022-02-10)</p>
+<p><a href="/page/cmynetwork/">⭐ 更多详细介绍 ⭐</a></p>
 <h3 id="（一）优惠-2">（一）优惠</h3>
 <blockquote>
 <p>本站专属优惠</p>
@@ -8421,7 +8421,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 </table>
 <h2 id="三、MEET">三、MEET</h2>
 <p><span class="exturl" data-url="aHR0cHM6Ly91cmwuaXN6eS54eXovZnNwZWVk">官网传送门<i class="fa fa-external-link-alt"></i></span></p>
-<p><a href="https://www.iszy.cc/page/speed-test-collection/#MEET">⭐⭐ 测速 ⭐⭐</a> (2022-02-09)</p>
+<p><a href="/page/speed-test-collection/#MEET">⭐⭐ 测速 ⭐⭐</a> (2022-02-09)</p>
 <h3 id="（一）简介">（一）简介</h3>
 <p><strong>MEET</strong> 是一家专做按量付费套餐的商家，推荐中低流量用户选择。可以了解一下，买个最便宜的套餐试试看。</p>
 <ul>
@@ -8472,7 +8472,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 </table>
 <h2 id="四、DuangCloud">四、DuangCloud</h2>
 <p><span class="exturl" data-url="aHR0cHM6Ly91cmwuaXN6eS54eXovZHVhbmdjbG91ZA==">官网传送门<i class="fa fa-external-link-alt"></i></span></p>
-<p><a href="https://www.iszy.cc/page/speed-test-collection/#DuangCloud">⭐⭐ 测速 ⭐⭐</a></p>
+<p><a href="/page/speed-test-collection/#DuangCloud">⭐⭐ 测速 ⭐⭐</a></p>
 <h3 id="（一）优惠-3">（一）优惠</h3>
 <blockquote>
 <p>转官网优惠公告</p>
@@ -8570,7 +8570,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 </ul>
 <h2 id="五、Blinkload">五、Blinkload</h2>
 <p><span class="exturl" data-url="aHR0cHM6Ly91cmwuaXN6eS54eXovYmxpbmtsb2Fk">官网传送门<i class="fa fa-external-link-alt"></i></span></p>
-<p><a href="https://www.iszy.cc/page/speed-test-collection/#Blinkload">⭐⭐ 测速 ⭐⭐</a></p>
+<p><a href="/page/speed-test-collection/#Blinkload">⭐⭐ 测速 ⭐⭐</a></p>
 <h3 id="（一）优惠-4">（一）优惠</h3>
 <blockquote>
 <p>专属优惠</p>
@@ -8751,7 +8751,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 </ul>
 <h2 id="六、WavesLink">六、WavesLink</h2>
 <p><span class="exturl" data-url="aHR0cHM6Ly91cmwuaXN6eS54eXovd2F2ZXNsaW5r">官网传送门<i class="fa fa-external-link-alt"></i></span></p>
-<p><a href="https://www.iszy.cc/page/speed-test-collection/#WavesLink">⭐⭐ 测速 ⭐⭐</a> (2022-03-10)</p>
+<p><a href="/page/speed-test-collection/#WavesLink">⭐⭐ 测速 ⭐⭐</a> (2022-03-10)</p>
 <h3 id="（一）优惠-5">（一）优惠</h3>
 <blockquote>
 <p>本站专属优惠</p>
@@ -8811,7 +8811,7 @@ MASTER 为移动入口的广港专线或深港专线中转。</li>
 </table>
 <h2 id="七、BESTIEPL">七、BESTIEPL</h2>
 <p><span class="exturl" data-url="aHR0cHM6Ly91cmwuaXN6eS54eXovZWxlY3RyeQ==">官网传送门<i class="fa fa-external-link-alt"></i></span></p>
-<p><a href="https://www.iszy.cc/page/speed-test-collection/#BESTIEPL">⭐⭐ 测速 ⭐⭐</a> (2022-03-10)</p>
+<p><a href="/page/speed-test-collection/#BESTIEPL">⭐⭐ 测速 ⭐⭐</a> (2022-03-10)</p>
 <h3 id="（一）简介-2">（一）简介</h3>
 <p><strong>BESTIEPL</strong>(原 Electry)，拥有高端 IEPL 专线中继，暂时只有香港台湾节点，但近期会增加更多落地节点。</p>
 <ul>
@@ -8869,7 +8869,7 @@ MASTER 为移动入口的广港专线或深港专线中转。</li>
 </table>
 <h2 id="八、Gatern">八、Gatern</h2>
 <p><span class="exturl" data-url="aHR0cHM6Ly91cmwuaXN6eS54eXovZ2F0ZXJu">官网传送门<i class="fa fa-external-link-alt"></i></span></p>
-<p><a href="https://www.iszy.cc/page/speed-test-collection/#Gatern">⭐⭐ 测速 ⭐⭐</a>(2022-03-14)</p>
+<p><a href="/page/speed-test-collection/#Gatern">⭐⭐ 测速 ⭐⭐</a>(2022-03-14)</p>
 <h3 id="（一）优惠-6">（一）优惠</h3>
 <blockquote>
 <p>本站专属优惠</p>
@@ -8910,7 +8910,7 @@ MASTER 为移动入口的广港专线或深港专线中转。</li>
 <li>除了用户集中的香港有三台服务器节点，也就是六条线路外，其他地区均只有一台服务器节点，也就是两条线路，不过速度上经过测试绝对满足需求。</li>
 <li>地区上，除香港外的地区有，美国、台湾、日本、韩国、新加坡、印度、菲律宾、加拿大、阿根廷、英国、法国、德国、荷兰、澳大利亚、俄罗斯、土耳其、埃及</li>
 </ul>
-<p>使用人数很少的小众地区节点性能不会特别高，有 BGP 中转和 IPLC 专线加持，我觉得应当是够用的，大家可以参考参考<a href="https://www.iszy.cc/page/speed-test-collection/#Shuttle">⭐⭐ 测速 ⭐⭐</a>。</p>
+<p>使用人数很少的小众地区节点性能不会特别高，有 BGP 中转和 IPLC 专线加持，我觉得应当是够用的，大家可以参考参考<a href="/page/speed-test-collection/#Shuttle">⭐⭐ 测速 ⭐⭐</a>。</p>
 <h3 id="（三）套餐-6">（三）套餐</h3>
 <blockquote>
 <p>套餐间线路没有区别，请按需选购。<br>
@@ -9002,7 +9002,7 @@ MASTER 为移动入口的广港专线或深港专线中转。</li>
 </ul>
 <h2 id="九、ByWave">九、ByWave</h2>
 <p><span class="exturl" data-url="aHR0cHM6Ly91cmwuaXN6eS54eXovYnl3YXZl">官网传送门<i class="fa fa-external-link-alt"></i></span></p>
-<p><a href="https://www.iszy.cc/page/speed-test-collection/#ByWave">⭐⭐ 测速 ⭐⭐</a></p>
+<p><a href="/page/speed-test-collection/#ByWave">⭐⭐ 测速 ⭐⭐</a></p>
 <h3 id="（一）优惠-7">（一）优惠</h3>
 <blockquote>
 <p>本站专属优惠</p>
@@ -9557,7 +9557,7 @@ MASTER 为移动入口的广港专线或深港专线中转。</li>
 <h3 id="LNMP">LNMP</h3>
 <p>我使用的是军哥的 LNMP 一键脚本，点击<span class="exturl" data-url="aHR0cHM6Ly9sbm1wLm9yZy8=">这里<i class="fa fa-external-link-alt"></i></span>前往官网。</p>
 <h3 id="Composer">Composer</h3>
-<p>Composer 的安装，我在之前的文章已经叙述过了。请参考：<a href="https://www.iszy.cc/2018/08/09/use-composer/">Ubuntu 安装使用 Composer</a>。</p>
+<p>Composer 的安装，我在之前的文章已经叙述过了。请参考：<a href="/2018/08/09/use-composer/">Ubuntu 安装使用 Composer</a>。</p>
 <h2 id="下载源代码">下载源代码</h2>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo su #使用 root 权限</span><br><span class="line">cd /home/wwwroot</span><br><span class="line">git clone https://github.com/cydrobolt/polr.git --depth=1</span><br><span class="line">chmod -R 755 polr</span><br><span class="line">chown -R www:www polr</span><br></pre></td></tr></table></figure>
 <h2 id="通过-composer-安装依赖">通过 composer 安装依赖</h2>

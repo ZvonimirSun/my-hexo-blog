@@ -247,7 +247,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          完全通过 Github Actions 实现项目的自动化部署<span class="exturl post-edit-link" data-url="aHR0cHM6Ly9naXRodWIuY29tL1p2b25pbWlyU3VuL215LWhleG8tYmxvZy90cmVlL21haW4vc291cmNlL19wb3N0cy8xMS5tZA==" title="编辑"><i class="fa fa-pen-nib"></i></span>
+          完全通过 Github Actions 实现项目的自动化部署
         </h1>
 
         <div class="post-meta-container">
@@ -320,7 +320,7 @@
         <p>前段时间写了一个通过 Github Actions 配合 Webhooks 实现项目自动化部署，但是服务器上由于并没有后端服务，所以实现的方式不太优雅。今天我将完全抛弃 Webhook，完全通过 Github Actions 来实现项目的自动化部署。</p>
 <span id="more"></span>
 <h2 id="改进">改进</h2>
-<p>如果还没看过上一篇的，可以移步这里看一下<a href="https://www.iszy.cc/posts/10/">Github Actions + Webhooks 实现项目自动化部署</a>。</p>
+<p>如果还没看过上一篇的，可以移步这里看一下<a href="/posts/10/">Github Actions + Webhooks 实现项目自动化部署</a>。</p>
 <p>这次的主要改进就是移除了 Webhooks 的依赖，不需要在服务器上进行监听。</p>
 <p>其实很简单，就是通过 Github Actions 主动登录服务器，执行自定义脚本，完成 git pull 操作。</p>
 <h2 id="Gihub-Actions-脚本">Gihub Actions 脚本</h2>
