@@ -19,11 +19,9 @@ permalink: /page/speed-test-collection/
 
 [官网传送门](https://url.iszy.xyz/freewhale)
 
-**SSR 线路测速**（建议使用）
+2022-03-15
 
-2022-02-09
-
-![SSR线路](https://img.iszy.xyz/1644422177121.png?x-oss-process=style/big)
+![](https://img.iszy.xyz/1647350473118.png?x-oss-process=style/big)
 
 ## CMYNetwork 红莓网络
 
