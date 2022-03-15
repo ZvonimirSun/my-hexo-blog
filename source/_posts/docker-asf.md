@@ -17,7 +17,7 @@ tags:
 
 ## ArchiSteamFarm
 
-这个软件就是用来 Steam 挂卡的，相信查到这篇文章的人应该都知道 Steam 挂卡是什么吧。在之前的一篇文章——[在 Ubuntu 16.04 环境下使用 ASF(v3) 实现云挂卡](https://www.iszy.cc/2018/08/08/asf-steam/)里，我已经介绍了部署 ArchiSteamFarm 的一般流程，以及 ASF 的两步验证、IPC、在 Telegram 中管理 ASF 等内容，感兴趣的可以了解一下。
+这个软件就是用来 Steam 挂卡的，相信查到这篇文章的人应该都知道 Steam 挂卡是什么吧。在之前的一篇文章——[在 Ubuntu 16.04 环境下使用 ASF(v3) 实现云挂卡](/2018/08/08/asf-steam/)里，我已经介绍了部署 ArchiSteamFarm 的一般流程，以及 ASF 的两步验证、IPC、在 Telegram 中管理 ASF 等内容，感兴趣的可以了解一下。
 
 ## 为什么使用 Docker
 

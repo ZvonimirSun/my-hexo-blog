@@ -45,7 +45,7 @@ tags:
 
 ### Composer
 
-Composer 的安装，我在之前的文章已经叙述过了。请参考：[Ubuntu 安装使用 Composer](https://www.iszy.cc/2018/08/09/use-composer/)。
+Composer 的安装，我在之前的文章已经叙述过了。请参考：[Ubuntu 安装使用 Composer](/2018/08/09/use-composer/)。
 
 ## 下载源代码
 

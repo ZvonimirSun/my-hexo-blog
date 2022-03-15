@@ -16,7 +16,7 @@ copyright: false
 
 <!--more-->
 
-这个系列的[第一部分](https://www.iszy.cc/2019/08/14/javascript_module/)和[第二部分](https://www.iszy.cc/2019/08/14/asynchronous_module_definition/)，介绍了 Javascript 模块原型和理论概念，今天介绍如何将它们用于实战。
+这个系列的[第一部分](/2019/08/14/javascript_module/)和[第二部分](/2019/08/14/asynchronous_module_definition/)，介绍了 Javascript 模块原型和理论概念，今天介绍如何将它们用于实战。
 
 我采用的是一个非常流行的库[require.js](http://requirejs.org/)。
 

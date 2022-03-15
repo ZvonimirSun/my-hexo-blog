@@ -36,19 +36,19 @@ permalink: /page/bgfw/
 
 ## 目录
 
-| 机场名称（点击了解更多）                 | 关键词                                                     | 操作                                                                                                                                                                |
-| ---------------------------------------- | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [FreeWhale 自由鲸 ⭐](/page/freewhale/)  | 性价比，主流节点超多，小众节点                             | [官网传送门](https://url.iszy.xyz/freewhale) / [测速](https://www.iszy.cc/page/speed-test-collection/#FreeWhale-%E8%87%AA%E7%94%B1%E9%B2%B8)(2022-03-15)            |
-| [CMYNetwork 红莓网络](/page/cmynetwork/) | IEPL/IPLC 专线，Trojan，主流节点多，小众节点，福利共享账号 | [官网传送门](https://url.iszy.xyz/cmynetwork) / [测速](https://www.iszy.cc/page/speed-test-collection/#CMYNetwork-%E7%BA%A2%E8%8E%93%E7%BD%91%E7%BB%9C)(2022-02-10) |
-| [MEET](#三、MEET)                        | 性价比，主流节点，超小流量套餐                             | [官网传送门](https://url.iszy.xyz/fspeed) / [测速](https://www.iszy.cc/page/speed-test-collection/#MEET)(2022-02-09)                                                |
-| [DuangCloud](#四、DuangCloud)            | 性价比，专线，主流节点                                     | [官网传送门](https://url.iszy.xyz/duangcloud) / [测速](https://www.iszy.cc/page/speed-test-collection/#DuangCloud)                                                  |
-| [Blinkload](#五、Blinkload)              | 主流节点多，流媒体                                         | [官网传送门](https://url.iszy.xyz/blinkload) / [测速](https://www.iszy.cc/page/speed-test-collection/#Blinkload)                                                    |
-| [WavesLink](#六、WavesLink)(原 后浪云)   | IEPL 专线，主流节点多，流媒体                              | [官网传送门](https://url.iszy.xyz/waveslink) / [测速](https://www.iszy.cc/page/speed-test-collection/#WavesLink)(2022-03-10)                                        |
-| [BESTIEPL](#七、BESTIEPL)(原 Electry)    | IEPL 专线，流媒体                                          | [官网传送门](https://url.iszy.xyz/electry) / [测速](https://www.iszy.cc/page/speed-test-collection/#BESTIEPL)(2022-03-10)                                           |
-| [Gatern](#八、Gatern)(原 Shuttle)        | 性价比，IPLC 专线，主流节点，小众节点多，流媒体            | [官网传送门](https://url.iszy.xyz/gatern) / [测速](https://www.iszy.cc/page/speed-test-collection/#Gatern)(2022-03-14)                                              |
-| [ByWave](#九、ByWave)                    | IPLC 专线，流媒体                                          | [官网传送门](https://url.iszy.xyz/bywave) / [测速](https://www.iszy.cc/page/speed-test-collection/#ByWave)                                                          |
+| 机场名称（点击了解更多）                 | 关键词                                                     | 操作                                                                                                                                             |
+| ---------------------------------------- | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [FreeWhale 自由鲸 ⭐](/page/freewhale/)  | 性价比，主流节点超多，小众节点                             | [官网传送门](https://url.iszy.xyz/freewhale) / [测速](/page/speed-test-collection/#FreeWhale-%E8%87%AA%E7%94%B1%E9%B2%B8)(2022-03-15)            |
+| [CMYNetwork 红莓网络](/page/cmynetwork/) | IEPL/IPLC 专线，Trojan，主流节点多，小众节点，福利共享账号 | [官网传送门](https://url.iszy.xyz/cmynetwork) / [测速](/page/speed-test-collection/#CMYNetwork-%E7%BA%A2%E8%8E%93%E7%BD%91%E7%BB%9C)(2022-02-10) |
+| [MEET](#三、MEET)                        | 性价比，主流节点，超小流量套餐                             | [官网传送门](https://url.iszy.xyz/fspeed) / [测速](/page/speed-test-collection/#MEET)(2022-02-09)                                                |
+| [DuangCloud](#四、DuangCloud)            | 性价比，专线，主流节点                                     | [官网传送门](https://url.iszy.xyz/duangcloud) / [测速](/page/speed-test-collection/#DuangCloud)                                                  |
+| [Blinkload](#五、Blinkload)              | 主流节点多，流媒体                                         | [官网传送门](https://url.iszy.xyz/blinkload) / [测速](/page/speed-test-collection/#Blinkload)                                                    |
+| [WavesLink](#六、WavesLink)(原 后浪云)   | IEPL 专线，主流节点多，流媒体                              | [官网传送门](https://url.iszy.xyz/waveslink) / [测速](/page/speed-test-collection/#WavesLink)(2022-03-10)                                        |
+| [BESTIEPL](#七、BESTIEPL)(原 Electry)    | IEPL 专线，流媒体                                          | [官网传送门](https://url.iszy.xyz/electry) / [测速](/page/speed-test-collection/#BESTIEPL)(2022-03-10)                                           |
+| [Gatern](#八、Gatern)(原 Shuttle)        | 性价比，IPLC 专线，主流节点，小众节点多，流媒体            | [官网传送门](https://url.iszy.xyz/gatern) / [测速](/page/speed-test-collection/#Gatern)(2022-03-14)                                              |
+| [ByWave](#九、ByWave)                    | IPLC 专线，流媒体                                          | [官网传送门](https://url.iszy.xyz/bywave) / [测速](/page/speed-test-collection/#ByWave)                                                          |
 
-点击前往查看测速: **[机场测速集合](https://www.iszy.cc/page/speed-test-collection/)**
+点击前往查看测速: **[机场测速集合](/page/speed-test-collection/)**
 
 ## 一、FreeWhale 自由鲸
 
@@ -56,9 +56,9 @@ permalink: /page/bgfw/
 
 邀请码: `iszy`
 
-[⭐⭐ 测速 ⭐⭐](https://www.iszy.cc/page/speed-test-collection/#FreeWhale-自由鲸) (2022-03-15)
+[⭐⭐ 测速 ⭐⭐](/page/speed-test-collection/#FreeWhale-自由鲸) (2022-03-15)
 
-[⭐ 更多详细介绍 ⭐](https://www.iszy.cc/page/freewhale/)
+[⭐ 更多详细介绍 ⭐](/page/freewhale/)
 
 ### （一）优惠
 
@@ -106,9 +106,9 @@ permalink: /page/bgfw/
 
 [官网传送门](https://url.iszy.xyz/cmynetwork)
 
-[⭐⭐ 测速 ⭐⭐](https://www.iszy.cc/page/speed-test-collection/#CMYNetwork-红莓网络) (2022-02-10)
+[⭐⭐ 测速 ⭐⭐](/page/speed-test-collection/#CMYNetwork-红莓网络) (2022-02-10)
 
-[⭐ 更多详细介绍 ⭐](https://www.iszy.cc/page/cmynetwork/)
+[⭐ 更多详细介绍 ⭐](/page/cmynetwork/)
 
 ### （一）优惠
 
@@ -210,7 +210,7 @@ permalink: /page/bgfw/
 
 [官网传送门](https://url.iszy.xyz/fspeed)
 
-[⭐⭐ 测速 ⭐⭐](https://www.iszy.cc/page/speed-test-collection/#MEET) (2022-02-09)
+[⭐⭐ 测速 ⭐⭐](/page/speed-test-collection/#MEET) (2022-02-09)
 
 ### （一）简介
 
@@ -236,7 +236,7 @@ permalink: /page/bgfw/
 
 [官网传送门](https://url.iszy.xyz/duangcloud)
 
-[⭐⭐ 测速 ⭐⭐](https://www.iszy.cc/page/speed-test-collection/#DuangCloud)
+[⭐⭐ 测速 ⭐⭐](/page/speed-test-collection/#DuangCloud)
 
 ### （一）优惠
 
@@ -301,7 +301,7 @@ permalink: /page/bgfw/
 
 [官网传送门](https://url.iszy.xyz/blinkload)
 
-[⭐⭐ 测速 ⭐⭐](https://www.iszy.cc/page/speed-test-collection/#Blinkload)
+[⭐⭐ 测速 ⭐⭐](/page/speed-test-collection/#Blinkload)
 
 ### （一）优惠
 
@@ -496,7 +496,7 @@ permalink: /page/bgfw/
 
 [官网传送门](https://url.iszy.xyz/waveslink)
 
-[⭐⭐ 测速 ⭐⭐](https://www.iszy.cc/page/speed-test-collection/#WavesLink) (2022-03-10)
+[⭐⭐ 测速 ⭐⭐](/page/speed-test-collection/#WavesLink) (2022-03-10)
 
 ### （一）优惠
 
@@ -534,7 +534,7 @@ permalink: /page/bgfw/
 
 [官网传送门](https://url.iszy.xyz/electry)
 
-[⭐⭐ 测速 ⭐⭐](https://www.iszy.cc/page/speed-test-collection/#BESTIEPL) (2022-03-10)
+[⭐⭐ 测速 ⭐⭐](/page/speed-test-collection/#BESTIEPL) (2022-03-10)
 
 ### （一）简介
 
@@ -564,7 +564,7 @@ permalink: /page/bgfw/
 
 [官网传送门](https://url.iszy.xyz/gatern)
 
-[⭐⭐ 测速 ⭐⭐](https://www.iszy.cc/page/speed-test-collection/#Gatern)(2022-03-14)
+[⭐⭐ 测速 ⭐⭐](/page/speed-test-collection/#Gatern)(2022-03-14)
 
 ### （一）优惠
 
@@ -612,7 +612,7 @@ permalink: /page/bgfw/
 - 除了用户集中的香港有三台服务器节点，也就是六条线路外，其他地区均只有一台服务器节点，也就是两条线路，不过速度上经过测试绝对满足需求。
 - 地区上，除香港外的地区有，美国、台湾、日本、韩国、新加坡、印度、菲律宾、加拿大、阿根廷、英国、法国、德国、荷兰、澳大利亚、俄罗斯、土耳其、埃及
 
-使用人数很少的小众地区节点性能不会特别高，有 BGP 中转和 IPLC 专线加持，我觉得应当是够用的，大家可以参考参考[⭐⭐ 测速 ⭐⭐](https://www.iszy.cc/page/speed-test-collection/#Shuttle)。
+使用人数很少的小众地区节点性能不会特别高，有 BGP 中转和 IPLC 专线加持，我觉得应当是够用的，大家可以参考参考[⭐⭐ 测速 ⭐⭐](/page/speed-test-collection/#Shuttle)。
 
 ### （三）套餐
 
@@ -651,7 +651,7 @@ permalink: /page/bgfw/
 
 [官网传送门](https://url.iszy.xyz/bywave)
 
-[⭐⭐ 测速 ⭐⭐](https://www.iszy.cc/page/speed-test-collection/#ByWave)
+[⭐⭐ 测速 ⭐⭐](/page/speed-test-collection/#ByWave)
 
 ### （一）优惠
 

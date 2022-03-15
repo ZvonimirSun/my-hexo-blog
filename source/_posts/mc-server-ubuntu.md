@@ -16,7 +16,7 @@ tags:
 
 ## 安装 Java 运行库
 
-在前一篇文章——[在 Ubuntu 16.04 中安装 Oracle Java 8](https://www.iszy.cc/2018/08/05/ubuntu-oracle-java/)中已经有了详细讲述。
+在前一篇文章——[在 Ubuntu 16.04 中安装 Oracle Java 8](/2018/08/05/ubuntu-oracle-java/)中已经有了详细讲述。
 
 ## 创建新用户和组
 

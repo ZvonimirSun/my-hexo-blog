@@ -16,11 +16,11 @@ copyright: false
 
 <!--more-->
 
-这个系列的[第一部分](https://www.iszy.cc/2019/08/14/javascript_module/)介绍了 Javascript 模块的基本写法，今天介绍如何规范地使用模块。
+这个系列的[第一部分](/2019/08/14/javascript_module/)介绍了 Javascript 模块的基本写法，今天介绍如何规范地使用模块。
 
 ![](https://img.iszy.xyz/20190814100700.png)
 
-（接[上文](https://www.iszy.cc/2019/08/14/javascript_module/)）
+（接[上文](/2019/08/14/javascript_module/)）
 
 ## 模块的规范
 

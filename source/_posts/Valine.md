@@ -85,4 +85,4 @@ Valine 官方文档：[文档](https://valine.js.org/quickstart/)
 
 由于 Valine 的版本更新，原本的功能除了管理面板已经基本不能使用了，包括邮件通知、垃圾评论识别。我对此进行了一点简单的改动，恢复了邮件通知的内容，垃圾评论识别不会搞，我就给删掉了，Github：[Valine-Admin](https://github.com/ZvonimirSun/Valine-Admin)。
 
-[下一篇文章](https://www.iszy.cc/2018/04/01/Valine-Admin/)，我将写一下这个 Valine-Admin 的配置。同样是十分简单的。
+[下一篇文章](/2018/04/01/Valine-Admin/)，我将写一下这个 Valine-Admin 的配置。同样是十分简单的。

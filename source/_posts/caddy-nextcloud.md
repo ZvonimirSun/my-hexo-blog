@@ -379,7 +379,7 @@ service caddy restart
 - 数据库用户名为之前创建的 `nextcloud`，密码为你设定的密码
 - 数据库地址要加端口，如 `localhost:3306`
 
-配图为我前一次[使用宝塔面板进行安装](https://www.iszy.cc/2017/12/18/NextCloud/)时的截图。
+配图为我前一次[使用宝塔面板进行安装](/2017/12/18/NextCloud/)时的截图。
 
 ![](https://img.iszy.xyz/20190318212151.png)
 
