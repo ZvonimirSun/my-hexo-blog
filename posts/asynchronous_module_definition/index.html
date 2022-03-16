@@ -4,8 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)">
-<meta name="generator" content="Hexo 5.4.1">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.1.0">
 
 <link rel="preconnect" href="https://fonts.cdn.iszy.xyz" crossorigin>
 <link rel="preconnect" href="jsdelivr.cdn.iszy.xyz" crossorigin>
@@ -23,13 +22,14 @@
 
 <link rel="stylesheet" href="https://fonts.cdn.iszy.xyz/css?family=EB+Garamond:300,300italic,400,400italic,700,700italic%7C'Noto+Serif+SC':300,300italic,400,400italic,700,700italic%7CCinzel+Decorative:300,300italic,400,400italic,700,700italic%7CJetBrains+Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
-<link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" integrity="sha256-jTIdiMuX/e3DGJUGwl3pKSxuc6YOuqtJYkM0bGQESA4=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"www.iszy.cc","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.9.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.9.0/source/js/config.min.js"></script>
-<meta name="description" content="原文链接: Javascript 模块化编程（二）：AMD 规范 —— 阮一峰">
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.iszy.cc","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.10.1","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/config.min.js"></script>
+
+    <meta name="description" content="原文链接: Javascript 模块化编程（二）：AMD 规范 —— 阮一峰">
 <meta property="og:type" content="article">
 <meta property="og:title" content="(转载)Javascript模块化编程（二）：AMD规范">
 <meta property="og:url" content="https://www.iszy.cc/posts/asynchronous_module_definition/">
@@ -58,7 +58,8 @@
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-E60YKKHF8Y"></script>
   <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-E60YKKHF8Y","only_pageview":false}</script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.9.0/source/js/third-party/analytics/google-analytics.min.js"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/third-party/analytics/google-analytics.min.js"></script>
+
 
 
 
@@ -239,11 +240,16 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
       <meta itemprop="name" content="Dirge">
-      <meta itemprop="description" content="生活吐槽 & 学习记录">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="随遇而安">
+      <meta itemprop="description" content="生活吐槽 & 学习记录">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="(转载)Javascript模块化编程（二）：AMD规范 | 随遇而安">
+      <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -340,21 +346,21 @@
 <p>node.js 的<span class="exturl" data-url="aHR0cDovL25vZGVqcy5vcmcvZG9jcy9sYXRlc3QvYXBpL21vZHVsZXMuaHRtbA==">模块系统<i class="fa fa-external-link-alt"></i></span>，就是参照 <span class="exturl" data-url="aHR0cDovL3dpa2kuY29tbW9uanMub3JnL3dpa2kvTW9kdWxlcy8xLjE=">CommonJS<i class="fa fa-external-link-alt"></i></span> 规范实现的。在 CommonJS 中，有一个全局性方法 require()，用于加载模块。假定有一个数学模块 math.js，就可以像下面这样加载。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> math = <span class="built_in">require</span>(<span class="string">&quot;math&quot;</span>);</span><br></pre></td></tr></table></figure>
 <p>然后，就可以调用模块提供的方法：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> math = <span class="built_in">require</span>(<span class="string">&quot;math&quot;</span>);</span><br><span class="line"></span><br><span class="line">math.add(<span class="number">2</span>, <span class="number">3</span>); <span class="comment">// 5</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> math = <span class="built_in">require</span>(<span class="string">&quot;math&quot;</span>);</span><br><span class="line"></span><br><span class="line">math.<span class="title function_">add</span>(<span class="number">2</span>, <span class="number">3</span>); <span class="comment">// 5</span></span><br></pre></td></tr></table></figure>
 <p>因为这个系列主要针对浏览器编程，不涉及 node.js，所以对 CommonJS 就不多做介绍了。我们在这里只要知道，require()用于加载模块就行了。</p>
 <h2 id="浏览器环境">浏览器环境</h2>
 <p>有了服务器端模块以后，很自然地，大家就想要客户端模块。而且最好两者能够兼容，一个模块不用修改，在服务器和浏览器都可以运行。</p>
 <p>但是，由于一个重大的局限，使得 CommonJS 规范不适用于浏览器环境。还是上一节的代码，如果在浏览器中运行，会有一个很大的问题，你能看出来吗？</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> math = <span class="built_in">require</span>(<span class="string">&quot;math&quot;</span>);</span><br><span class="line"></span><br><span class="line">math.add(<span class="number">2</span>, <span class="number">3</span>);</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> math = <span class="built_in">require</span>(<span class="string">&quot;math&quot;</span>);</span><br><span class="line"></span><br><span class="line">math.<span class="title function_">add</span>(<span class="number">2</span>, <span class="number">3</span>);</span><br></pre></td></tr></table></figure>
 <p>第二行 math.add(2, 3)，在第一行 require(‘math’)之后运行，因此必须等 math.js 加载完成。也就是说，如果加载时间很长，整个应用就会停在那里等。</p>
 <p>这对服务器端不是一个问题，因为所有的模块都存放在本地硬盘，可以同步加载完成，等待时间就是硬盘的读取时间。但是，对于浏览器，这却是一个大问题，因为模块都放在服务器端，等待时间取决于网速的快慢，可能要等很长时间，浏览器处于&quot;假死&quot;状态。</p>
 <p>因此，浏览器端的模块，不能采用&quot;同步加载&quot;（synchronous），只能采用&quot;异步加载&quot;（asynchronous）。这就是 AMD 规范诞生的背景。</p>
 <h2 id="AMD">AMD</h2>
 <p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZGpzL2FtZGpzLWFwaS93aWtpL0FNRA==">AMD<i class="fa fa-external-link-alt"></i></span>是&quot;Asynchronous Module Definition&quot;的缩写，意思就是&quot;异步模块定义&quot;。它采用异步方式加载模块，模块的加载不影响它后面语句的运行。所有依赖这个模块的语句，都定义在一个回调函数中，等到加载完成之后，这个回调函数才会运行。</p>
 <p>AMD 也采用 require()语句加载模块，但是不同于 CommonJS，它要求两个参数：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">require</span>([<span class="built_in">module</span>], callback);</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">require</span>([<span class="variable language_">module</span>], callback);</span><br></pre></td></tr></table></figure>
 <p>第一个参数[module]，是一个数组，里面的成员就是要加载的模块；第二个参数 callback，则是加载成功之后的回调函数。如果将前面的代码改写成 AMD 形式，就是下面这样：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">require</span>([<span class="string">&quot;math&quot;</span>], <span class="function"><span class="keyword">function</span> (<span class="params">math</span>) </span>&#123;</span><br><span class="line">  math.add(<span class="number">2</span>, <span class="number">3</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">require</span>([<span class="string">&quot;math&quot;</span>], <span class="keyword">function</span> (<span class="params">math</span>) &#123;</span><br><span class="line">  math.<span class="title function_">add</span>(<span class="number">2</span>, <span class="number">3</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <p>math.add()与 math 模块加载不是同步的，浏览器不会发生假死。所以很显然，AMD 比较适合浏览器环境。</p>
 <p>目前，主要有两个 Javascript 库实现了 AMD 规范：<span class="exturl" data-url="aHR0cDovL3JlcXVpcmVqcy5vcmcv">require.js<i class="fa fa-external-link-alt"></i></span> 和 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2N1am9qcy9jdXJs">curl.js<i class="fa fa-external-link-alt"></i></span>。本系列的第三部分，将通过介绍 require.js，进一步讲解 AMD 的用法，以及如何将模块化编程投入实战。</p>
 <p>（完）</p>
@@ -365,24 +371,6 @@
     
     
       
-  <div class="popular-posts-header">相关文章</div>
-  <ul class="popular-posts">
-    <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/posts/javascript_module/" rel="bookmark">(转载)Javascript模块化编程（一）：模块的写法</a></div>
-    </li>
-    <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/posts/require_js/" rel="bookmark">(转载)Javascript模块化编程（三）：require.js的用法</a></div>
-    </li>
-    <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/posts/1/" rel="bookmark">多次提前还贷计算器及PMT 函数</a></div>
-    </li>
-    <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/posts/2/" rel="bookmark">哔哩哔哩AV号、BV号转换</a></div>
-    </li>
-    <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/posts/3/" rel="bookmark">在Vue中使用CodeMirror实现编写JSON编辑器</a></div>
-    </li>
-  </ul>
 
 
     <footer class="post-footer">
@@ -457,34 +445,34 @@
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
-<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.9.0/source/js/comments.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.9.0/source/js/utils.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.9.0/source/js/next-boot.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.9.0/source/js/pjax.min.js"></script>
+<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/comments.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/utils.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/next-boot.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/pjax.min.js"></script>
 
   
 <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
-<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.9.0/source/js/third-party/search/local-search.min.js"></script>
+<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/third-party/search/local-search.min.js"></script>
 
 
 
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.9.0/source/js/third-party/fancybox.min.js"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/third-party/fancybox.min.js"></script>
 
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.9.0/source/js/third-party/pace.min.js"></script>
-
-  
-
-
-
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/third-party/pace.min.js"></script>
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.1/dist/katex.min.css" integrity="sha256-9/mhQQwkpU5okPfM5l0v3LnP9xtc6JK8dKW0/WlGaUc=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.1/dist/contrib/copy-tex.min.css" integrity="sha256-+oItviPaTmqjDhk4y4fLLUIMgRQYDV/ZyrRNvQiebWM=" crossorigin="anonymous">
-  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.1/dist/contrib/copy-tex.min.js","integrity":"sha256-etSqbSVF4+Lwe8MGk/Vanc1sR+mWv+qOG73fxWw9p94="}}</script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.9.0/source/js/third-party/math/katex.min.js"></script>
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.2/dist/katex.min.css" integrity="sha256-94CNZ/bJtwrBYZrXhCOBvpB4rZUzBnvAsirFv31TMGo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.2/dist/contrib/copy-tex.min.css" integrity="sha256-+oItviPaTmqjDhk4y4fLLUIMgRQYDV/ZyrRNvQiebWM=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.2/dist/contrib/copy-tex.min.js","integrity":"sha256-etSqbSVF4+Lwe8MGk/Vanc1sR+mWv+qOG73fxWw9p94="}}</script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/third-party/math/katex.min.js"></script>
 
 
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
   <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":false,"delay":true,"timeout":3000,"priority":true,"url":"https://www.iszy.cc/posts/asynchronous_module_definition/"}</script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.9.0/source/js/third-party/quicklink.min.js"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/third-party/quicklink.min.js"></script>
 <script class="next-config" data-name="waline" type="application/json">{"lang":"zh-CN","enable":true,"serverURL":"https://wl.iszy.xyz","placeholder":"Just go go","avatar":null,"pageSize":10,"visitor":true,"comment_count":true,"requiredFields":[],"locale":{"placeholder":"本站支持匿名评论，无需登录~(●'◡'●)\n与文章无关的留言请前往本站留言板，谢谢配合~"},"avatarCDN":"https://gravatar.cdn.iszy.xyz/avatar/","meta":["nick","mail","link"],"requiredMeta":["nick","mail"],"libUrl":"https://jsdelivr.cdn.iszy.xyz/npm/@waline/client/dist/Waline.min.js","dark":"auto","emoji":["https://jsdelivr.cdn.iszy.xyz/gh/zvonimirsun/emojis@1.0.2/bilibili-xhl"],"el":"#waline-comments","path":"/posts/asynchronous_module_definition/"}</script>
 <script>
 document.addEventListener('page:loaded', () => {

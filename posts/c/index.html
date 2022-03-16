@@ -4,8 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)">
-<meta name="generator" content="Hexo 5.4.1">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.1.0">
 
 <link rel="preconnect" href="https://fonts.cdn.iszy.xyz" crossorigin>
 <link rel="preconnect" href="jsdelivr.cdn.iszy.xyz" crossorigin>
@@ -23,13 +22,14 @@
 
 <link rel="stylesheet" href="https://fonts.cdn.iszy.xyz/css?family=EB+Garamond:300,300italic,400,400italic,700,700italic%7C'Noto+Serif+SC':300,300italic,400,400italic,700,700italic%7CCinzel+Decorative:300,300italic,400,400italic,700,700italic%7CJetBrains+Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
-<link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" integrity="sha256-jTIdiMuX/e3DGJUGwl3pKSxuc6YOuqtJYkM0bGQESA4=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"www.iszy.cc","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.9.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.9.0/source/js/config.min.js"></script>
-<meta name="description" content="记录下 JavaScript 实现 UTF-8 下的 Base64 编解码。">
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.iszy.cc","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.10.1","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/config.min.js"></script>
+
+    <meta name="description" content="记录下 JavaScript 实现 UTF-8 下的 Base64 编解码。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JS实现UTF-8下的Base64编解码">
 <meta property="og:url" content="https://www.iszy.cc/posts/c/">
@@ -57,7 +57,8 @@
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-E60YKKHF8Y"></script>
   <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-E60YKKHF8Y","only_pageview":false}</script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.9.0/source/js/third-party/analytics/google-analytics.min.js"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/third-party/analytics/google-analytics.min.js"></script>
+
 
 
 
@@ -238,11 +239,16 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
       <meta itemprop="name" content="Dirge">
-      <meta itemprop="description" content="生活吐槽 & 学习记录">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="随遇而安">
+      <meta itemprop="description" content="生活吐槽 & 学习记录">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="JS实现UTF-8下的Base64编解码 | 随遇而安">
+      <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -345,19 +351,19 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <p>如上面的描述所言，<code>btoa</code>和<code>atob</code>都只支持 ASCII 字符，并不支持 Unicode 字符。在大多数浏览器中对 Unicode 字符串调用将会报<code>Character Out Of Range</code>错误，因为字符超出了 ASCII 的范围。</p>
 <h3 id="解决方法">解决方法</h3>
 <p>我们可以将字符串转义过后再进行编码，解码时将解码结果重新转义为 Unicode 字符串。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">utf8_to_b64</span>(<span class="params">str</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> btoa(<span class="built_in">unescape</span>(<span class="built_in">encodeURIComponent</span>(str)));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">b64_to_utf8</span>(<span class="params">str</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">decodeURIComponent</span>(<span class="built_in">escape</span>(atob(str)));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 用例:</span></span><br><span class="line">utf8_to_b64(<span class="string">&quot;测试&quot;</span>); <span class="comment">// &quot;5rWL6K+V&quot;</span></span><br><span class="line">b64_to_utf8(<span class="string">&quot;5rWL6K+V&quot;</span>); <span class="comment">// &quot;测试&quot;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">utf8_to_b64</span>(<span class="params">str</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="title function_">btoa</span>(<span class="built_in">unescape</span>(<span class="built_in">encodeURIComponent</span>(str)));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">b64_to_utf8</span>(<span class="params">str</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">decodeURIComponent</span>(<span class="built_in">escape</span>(<span class="title function_">atob</span>(str)));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 用例:</span></span><br><span class="line"><span class="title function_">utf8_to_b64</span>(<span class="string">&quot;测试&quot;</span>); <span class="comment">// &quot;5rWL6K+V&quot;</span></span><br><span class="line"><span class="title function_">b64_to_utf8</span>(<span class="string">&quot;5rWL6K+V&quot;</span>); <span class="comment">// &quot;测试&quot;</span></span><br></pre></td></tr></table></figure>
 <h3 id="解析">解析</h3>
 <p>这中间看起来比较神奇，发生了个什么事呢？</p>
 <p>主要呢就是利用了<code>encodeURIComponent</code>、<code>decodeURIComponent</code>会把接受到的字符串参数当作 UTF-8 字符串来进行处理。</p>
 <h4 id="utf8-to-b64">utf8_to_b64</h4>
 <p>先看<code>utf8_to_b64</code>方法。</p>
 <p>这里由于<code>encodeURIComponent</code>方法接受的是 UTF-8 字符串，可以先用<code>encodeURIComponent</code>方法将 UTF-8 字符串转成了形如<code>%XX%XX</code>的十六进制符号。然后使用<code>unescape</code>方法将十六进制翻译为了 ASCII 中对应的内容，这样就变成了<code>btoa</code>方法能够接受的 ASCII 字符串。最后直接使用<code>btoa</code>方法编码为 Base64 字符串。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">encodeURIComponent</span>(<span class="string">&quot;测试&quot;</span>); <span class="comment">// &quot;%E6%B5%8B%E8%AF%95&quot;</span></span><br><span class="line"><span class="built_in">unescape</span>(<span class="string">&quot;%E6%B5%8B%E8%AF%95&quot;</span>); <span class="comment">// &quot;æµ\x8Bè¯\x95&quot;</span></span><br><span class="line">btoa(<span class="string">&quot;æµ\x8Bè¯\x95&quot;</span>); <span class="comment">// &quot;5rWL6K+V&quot;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">encodeURIComponent</span>(<span class="string">&quot;测试&quot;</span>); <span class="comment">// &quot;%E6%B5%8B%E8%AF%95&quot;</span></span><br><span class="line"><span class="built_in">unescape</span>(<span class="string">&quot;%E6%B5%8B%E8%AF%95&quot;</span>); <span class="comment">// &quot;æµ\x8Bè¯\x95&quot;</span></span><br><span class="line"><span class="title function_">btoa</span>(<span class="string">&quot;æµ\x8Bè¯\x95&quot;</span>); <span class="comment">// &quot;5rWL6K+V&quot;</span></span><br></pre></td></tr></table></figure>
 <p>总的来说就是一个将 UTF-8 字符串转为 ASCII 字符串再编码的一个过程。</p>
 <h4 id="b64-to-utf8">b64_to_utf8</h4>
 <p>再看<code>b64_to_utf8</code>方法。</p>
 <p>其实就是反过来，先将 Base64 字符串通过<code>atob</code>方法解码为 ASCII 字符串，然后通过<code>escape</code>方法将 ASCII 字符串转为十六进制符号，最后将十六进制符号通过<code>decodeURIComponent</code>方法解析为 UTF-8。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">atob(<span class="string">&quot;5rWL6K+V&quot;</span>); <span class="comment">// &quot;æµ\x8Bè¯\x95&quot;</span></span><br><span class="line"><span class="built_in">escape</span>(<span class="string">&quot;æµ\x8Bè¯\x95&quot;</span>); <span class="comment">// &quot;%E6%B5%8B%E8%AF%95&quot;</span></span><br><span class="line"><span class="built_in">decodeURIComponent</span>(<span class="string">&quot;%E6%B5%8B%E8%AF%95&quot;</span>); <span class="comment">// &quot;测试&quot;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">atob</span>(<span class="string">&quot;5rWL6K+V&quot;</span>); <span class="comment">// &quot;æµ\x8Bè¯\x95&quot;</span></span><br><span class="line"><span class="built_in">escape</span>(<span class="string">&quot;æµ\x8Bè¯\x95&quot;</span>); <span class="comment">// &quot;%E6%B5%8B%E8%AF%95&quot;</span></span><br><span class="line"><span class="built_in">decodeURIComponent</span>(<span class="string">&quot;%E6%B5%8B%E8%AF%95&quot;</span>); <span class="comment">// &quot;测试&quot;</span></span><br></pre></td></tr></table></figure>
 <h3 id="弃用unescape和escape方法">弃用<code>unescape</code>和<code>escape</code>方法</h3>
 <h4 id="原由">原由</h4>
 <blockquote>
@@ -372,11 +378,11 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <p>所以<code>escape</code>是对百分号编码的非标准实现，所以被废弃实属正常。</p>
 <h4 id="解决方法-2">解决方法</h4>
 <p>虽说<code>escape</code>是对百分号编码的非标准实现，但是在上面的方法中我们实际上利用了<code>escape</code>的这种特性，这边提供了不使用<code>unescape</code>和<code>escape</code>方法后的实现。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">utf8_to_b64</span>(<span class="params">str</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> btoa(</span><br><span class="line">    <span class="built_in">encodeURIComponent</span>(str).replace(<span class="regexp">/%([0-9A-F]&#123;2&#125;)/g</span>, <span class="function"><span class="keyword">function</span> (<span class="params">match, p1</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="built_in">String</span>.fromCharCode(<span class="string">&quot;0x&quot;</span> + p1);</span><br><span class="line">    &#125;)</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">b64_to_utf8</span>(<span class="params">str</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">decodeURIComponent</span>(</span><br><span class="line">    atob(str)</span><br><span class="line">      .split(<span class="string">&quot;&quot;</span>)</span><br><span class="line">      .map(<span class="function"><span class="keyword">function</span> (<span class="params">c</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;%&quot;</span> + (<span class="string">&quot;00&quot;</span> + c.charCodeAt(<span class="number">0</span>).toString(<span class="number">16</span>)).slice(-<span class="number">2</span>);</span><br><span class="line">      &#125;)</span><br><span class="line">      .join(<span class="string">&quot;&quot;</span>)</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 用例:</span></span><br><span class="line">utf8_to_b64(<span class="string">&quot;测试&quot;</span>); <span class="comment">// &quot;5rWL6K+V&quot;</span></span><br><span class="line">b64_to_utf8(<span class="string">&quot;5rWL6K+V&quot;</span>); <span class="comment">// &quot;测试&quot;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">utf8_to_b64</span>(<span class="params">str</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="title function_">btoa</span>(</span><br><span class="line">    <span class="built_in">encodeURIComponent</span>(str).<span class="title function_">replace</span>(<span class="regexp">/%([0-9A-F]&#123;2&#125;)/g</span>, <span class="keyword">function</span> (<span class="params">match, p1</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="title class_">String</span>.<span class="title function_">fromCharCode</span>(<span class="string">&quot;0x&quot;</span> + p1);</span><br><span class="line">    &#125;)</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">b64_to_utf8</span>(<span class="params">str</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">decodeURIComponent</span>(</span><br><span class="line">    <span class="title function_">atob</span>(str)</span><br><span class="line">      .<span class="title function_">split</span>(<span class="string">&quot;&quot;</span>)</span><br><span class="line">      .<span class="title function_">map</span>(<span class="keyword">function</span> (<span class="params">c</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;%&quot;</span> + (<span class="string">&quot;00&quot;</span> + c.<span class="title function_">charCodeAt</span>(<span class="number">0</span>).<span class="title function_">toString</span>(<span class="number">16</span>)).<span class="title function_">slice</span>(-<span class="number">2</span>);</span><br><span class="line">      &#125;)</span><br><span class="line">      .<span class="title function_">join</span>(<span class="string">&quot;&quot;</span>)</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 用例:</span></span><br><span class="line"><span class="title function_">utf8_to_b64</span>(<span class="string">&quot;测试&quot;</span>); <span class="comment">// &quot;5rWL6K+V&quot;</span></span><br><span class="line"><span class="title function_">b64_to_utf8</span>(<span class="string">&quot;5rWL6K+V&quot;</span>); <span class="comment">// &quot;测试&quot;</span></span><br></pre></td></tr></table></figure>
 <h2 id="Node-js-下的-Base64-编解码">Node.js 下的 Base64 编解码</h2>
 <p>在 Node.js 中使用上面的方法，你可能会发现，<code>btoa</code>和<code>atob</code>方法，由于只支持 ASCII 方法也已经被标记为废弃了，那么在 Node.js 中用什么方法呢？</p>
 <p>Node.js 中提供了一个更加简便的方法，那就是利用<code>Buffer</code>，除了支持字符串，也支持其他数据。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">utf8_to_b64</span>(<span class="params">str</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> Buffer.from(str).toString(<span class="string">&quot;base64&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">b64_to_utf8</span>(<span class="params">str</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> Buffer.from(str, <span class="string">&quot;base64&quot;</span>).toString(<span class="string">&quot;utf8&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">utf8_to_b64</span>(<span class="params">str</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="title class_">Buffer</span>.<span class="title function_">from</span>(str).<span class="title function_">toString</span>(<span class="string">&quot;base64&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">b64_to_utf8</span>(<span class="params">str</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="title class_">Buffer</span>.<span class="title function_">from</span>(str, <span class="string">&quot;base64&quot;</span>).<span class="title function_">toString</span>(<span class="string">&quot;utf8&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -384,24 +390,6 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
     
     
       
-  <div class="popular-posts-header">相关文章</div>
-  <ul class="popular-posts">
-    <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/posts/nodejs-async-sleep/" rel="bookmark">Node.js利用async实现sleep功能</a></div>
-    </li>
-    <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/posts/1/" rel="bookmark">多次提前还贷计算器及PMT 函数</a></div>
-    </li>
-    <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/posts/2/" rel="bookmark">哔哩哔哩AV号、BV号转换</a></div>
-    </li>
-    <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/posts/3/" rel="bookmark">在Vue中使用CodeMirror实现编写JSON编辑器</a></div>
-    </li>
-    <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/posts/4/" rel="bookmark">Vuex数据持久化</a></div>
-    </li>
-  </ul>
 
 
     <footer class="post-footer">
@@ -493,34 +481,34 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
-<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.9.0/source/js/comments.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.9.0/source/js/utils.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.9.0/source/js/next-boot.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.9.0/source/js/pjax.min.js"></script>
+<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/comments.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/utils.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/next-boot.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/pjax.min.js"></script>
 
   
 <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
-<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.9.0/source/js/third-party/search/local-search.min.js"></script>
+<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/third-party/search/local-search.min.js"></script>
 
 
 
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.9.0/source/js/third-party/fancybox.min.js"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/third-party/fancybox.min.js"></script>
 
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.9.0/source/js/third-party/pace.min.js"></script>
-
-  
-
-
-
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/third-party/pace.min.js"></script>
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">true</script><link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.1/dist/katex.min.css" integrity="sha256-9/mhQQwkpU5okPfM5l0v3LnP9xtc6JK8dKW0/WlGaUc=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.1/dist/contrib/copy-tex.min.css" integrity="sha256-+oItviPaTmqjDhk4y4fLLUIMgRQYDV/ZyrRNvQiebWM=" crossorigin="anonymous">
-  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.1/dist/contrib/copy-tex.min.js","integrity":"sha256-etSqbSVF4+Lwe8MGk/Vanc1sR+mWv+qOG73fxWw9p94="}}</script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.9.0/source/js/third-party/math/katex.min.js"></script>
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.2/dist/katex.min.css" integrity="sha256-94CNZ/bJtwrBYZrXhCOBvpB4rZUzBnvAsirFv31TMGo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.2/dist/contrib/copy-tex.min.css" integrity="sha256-+oItviPaTmqjDhk4y4fLLUIMgRQYDV/ZyrRNvQiebWM=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.2/dist/contrib/copy-tex.min.js","integrity":"sha256-etSqbSVF4+Lwe8MGk/Vanc1sR+mWv+qOG73fxWw9p94="}}</script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/third-party/math/katex.min.js"></script>
 
 
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
   <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":false,"delay":true,"timeout":3000,"priority":true,"url":"https://www.iszy.cc/posts/c/"}</script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.9.0/source/js/third-party/quicklink.min.js"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/third-party/quicklink.min.js"></script>
 <script class="next-config" data-name="waline" type="application/json">{"lang":"zh-CN","enable":true,"serverURL":"https://wl.iszy.xyz","placeholder":"Just go go","avatar":null,"pageSize":10,"visitor":true,"comment_count":true,"requiredFields":[],"locale":{"placeholder":"本站支持匿名评论，无需登录~(●'◡'●)\n与文章无关的留言请前往本站留言板，谢谢配合~"},"avatarCDN":"https://gravatar.cdn.iszy.xyz/avatar/","meta":["nick","mail","link"],"requiredMeta":["nick","mail"],"libUrl":"https://jsdelivr.cdn.iszy.xyz/npm/@waline/client/dist/Waline.min.js","dark":"auto","emoji":["https://jsdelivr.cdn.iszy.xyz/gh/zvonimirsun/emojis@1.0.2/bilibili-xhl"],"el":"#waline-comments","path":"/posts/c/"}</script>
 <script>
 document.addEventListener('page:loaded', () => {

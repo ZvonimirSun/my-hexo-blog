@@ -4,8 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)">
-<meta name="generator" content="Hexo 5.4.1">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.1.0">
 
 <link rel="preconnect" href="https://fonts.cdn.iszy.xyz" crossorigin>
 <link rel="preconnect" href="jsdelivr.cdn.iszy.xyz" crossorigin>
@@ -23,13 +22,14 @@
 
 <link rel="stylesheet" href="https://fonts.cdn.iszy.xyz/css?family=EB+Garamond:300,300italic,400,400italic,700,700italic%7C'Noto+Serif+SC':300,300italic,400,400italic,700,700italic%7CCinzel+Decorative:300,300italic,400,400italic,700,700italic%7CJetBrains+Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
-<link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" integrity="sha256-jTIdiMuX/e3DGJUGwl3pKSxuc6YOuqtJYkM0bGQESA4=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"www.iszy.cc","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.9.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.9.0/source/js/config.min.js"></script>
-<meta name="description" content="为什么想到干这个事呢？这两天装了 WSL，但是 PowerShell 的配色实在让我无法忍受，有时候甚至到了看不清字的程度。经过一番谷歌，我发现 PowerShell 也是可以变得很好看的。下面我就记录一下我这次美化的过程。">
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.iszy.cc","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.10.1","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/config.min.js"></script>
+
+    <meta name="description" content="为什么想到干这个事呢？这两天装了 WSL，但是 PowerShell 的配色实在让我无法忍受，有时候甚至到了看不清字的程度。经过一番谷歌，我发现 PowerShell 也是可以变得很好看的。下面我就记录一下我这次美化的过程。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Powershell 美化——oh-my-posh">
 <meta property="og:url" content="https://www.iszy.cc/posts/beautify-powershell/">
@@ -57,7 +57,8 @@
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-E60YKKHF8Y"></script>
   <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-E60YKKHF8Y","only_pageview":false}</script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.9.0/source/js/third-party/analytics/google-analytics.min.js"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/third-party/analytics/google-analytics.min.js"></script>
+
 
 
 
@@ -238,11 +239,16 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
       <meta itemprop="name" content="Dirge">
-      <meta itemprop="description" content="生活吐槽 & 学习记录">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="随遇而安">
+      <meta itemprop="description" content="生活吐槽 & 学习记录">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Powershell 美化——oh-my-posh | 随遇而安">
+      <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -349,7 +355,7 @@
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scoop install posh<span class="literal">-git</span></span><br></pre></td></tr></table></figure>
 <h3 id="安装oh-my-posh">安装<code>oh-my-posh</code></h3>
 <p><code>oh-my-posh</code>在<code>scoop</code>的主包中，直接安装即可。这个软件能够让你的<code>PowerShell</code>有着接近<code>Linux</code>中<code>Oh-my-zsh</code>的效果。</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scoop install <span class="built_in">oh</span><span class="literal">-my</span><span class="literal">-posh</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scoop install <span class="built_in">oh</span><span class="literal">-my-posh</span></span><br></pre></td></tr></table></figure>
 <h2 id="添加字体">添加字体</h2>
 <h3 id="下载并安装字体">下载并安装字体</h3>
 <p>系统中默认的字体缺失了一些<code>oh-my-posh</code>需要用到的字符，所以需要安装一个可以支持的字体。</p>
@@ -360,16 +366,16 @@
 <p>在 <code>HKEY_LOCAL_MACHINE &gt;&gt; SOFTWARE &gt;&gt; Microsoft &gt;&gt; Windows NT &gt;&gt; CurrentVersion &gt;&gt; Console &gt;&gt; TrueTypeFont</code> 路径下新增一个字符串项目，名称任意，内容为 <code>Sarasa Term SC</code>。</p>
 <h2 id="应用配置">应用配置</h2>
 <p>新建一个 <code>1.json</code> 文件，键入如下内容，也可以根据自身需求自行修改。</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;cursor_size&quot;</span>: <span class="string">&quot;small&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;command_history_length&quot;</span>: <span class="number">500</span>,</span><br><span class="line">  <span class="attr">&quot;num_history_buffers&quot;</span>: <span class="number">4</span>,</span><br><span class="line">  <span class="attr">&quot;command_history_no_duplication&quot;</span>: <span class="literal">false</span>,</span><br><span class="line">  <span class="attr">&quot;quick_edit&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">&quot;insert_mode&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">&quot;load_console_IME&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">&quot;font_face&quot;</span>: <span class="string">&quot;Sarasa Term SC&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;font_true_type&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">&quot;font_size&quot;</span>: <span class="string">&quot;0x18&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;font_weight&quot;</span>: <span class="number">0</span>,</span><br><span class="line">  <span class="attr">&quot;screen_buffer_size&quot;</span>: <span class="string">&quot;120x30000&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;window_size&quot;</span>: <span class="string">&quot;120x30&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;fullscreen&quot;</span>: <span class="literal">false</span>,</span><br><span class="line">  <span class="attr">&quot;popup_colors&quot;</span>: <span class="string">&quot;cyan,white&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;screen_colors&quot;</span>: <span class="string">&quot;white,black&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;black&quot;</span>: <span class="string">&quot;#1E1E1E&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;dark_blue&quot;</span>: <span class="string">&quot;#2472C8&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;dark_green&quot;</span>: <span class="string">&quot;#0DBC79&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;dark_cyan&quot;</span>: <span class="string">&quot;#11A8CD&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;dark_red&quot;</span>: <span class="string">&quot;#CD3131&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;dark_magenta&quot;</span>: <span class="string">&quot;#BC3FBC&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;dark_yellow&quot;</span>: <span class="string">&quot;#E5E510&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;gray&quot;</span>: <span class="string">&quot;#E5E5E5&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;dark_gray&quot;</span>: <span class="string">&quot;#666666&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;blue&quot;</span>: <span class="string">&quot;#3B8EEA&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;green&quot;</span>: <span class="string">&quot;#23D18B&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;cyan&quot;</span>: <span class="string">&quot;#29B8DB&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;red&quot;</span>: <span class="string">&quot;#F14C4C&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;magenta&quot;</span>: <span class="string">&quot;#D670D6&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;yellow&quot;</span>: <span class="string">&quot;#F5F543&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;white&quot;</span>: <span class="string">&quot;#E5E5E5&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;cursor_size&quot;</span><span class="punctuation">:</span> <span class="string">&quot;small&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;command_history_length&quot;</span><span class="punctuation">:</span> <span class="number">500</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;num_history_buffers&quot;</span><span class="punctuation">:</span> <span class="number">4</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;command_history_no_duplication&quot;</span><span class="punctuation">:</span> <span class="keyword">false</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;quick_edit&quot;</span><span class="punctuation">:</span> <span class="keyword">true</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;insert_mode&quot;</span><span class="punctuation">:</span> <span class="keyword">true</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;load_console_IME&quot;</span><span class="punctuation">:</span> <span class="keyword">true</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;font_face&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Sarasa Term SC&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;font_true_type&quot;</span><span class="punctuation">:</span> <span class="keyword">true</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;font_size&quot;</span><span class="punctuation">:</span> <span class="string">&quot;0x18&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;font_weight&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;screen_buffer_size&quot;</span><span class="punctuation">:</span> <span class="string">&quot;120x30000&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;window_size&quot;</span><span class="punctuation">:</span> <span class="string">&quot;120x30&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;fullscreen&quot;</span><span class="punctuation">:</span> <span class="keyword">false</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;popup_colors&quot;</span><span class="punctuation">:</span> <span class="string">&quot;cyan,white&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;screen_colors&quot;</span><span class="punctuation">:</span> <span class="string">&quot;white,black&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;black&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#1E1E1E&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;dark_blue&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#2472C8&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;dark_green&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#0DBC79&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;dark_cyan&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#11A8CD&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;dark_red&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#CD3131&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;dark_magenta&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#BC3FBC&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;dark_yellow&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#E5E510&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;gray&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#E5E5E5&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;dark_gray&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#666666&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;blue&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#3B8EEA&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;green&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#23D18B&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;cyan&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#29B8DB&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;red&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#F14C4C&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;magenta&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#D670D6&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;yellow&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#F5F543&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;white&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#E5E5E5&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
 <p>在所在文件夹处打开 <code>PowerShell</code>，输入 <code>concfg import 1.json -n</code> 后开启新 <code>PowerShell</code> 窗口可以看到显示效果已经改变。</p>
 <p>**注：**使用过程中发现，更新<code>git</code>后，字体会出现问题，不知道是什么原因。出现这个问题也不用担心，只需要重新执行一遍上面这个应用配置的过程即可。</p>
 <h2 id="启用oh-my-posh">启用<code>oh-my-posh</code></h2>
 <p>启用<code>oh-my-posh</code></p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Import-Module</span> <span class="built_in">oh</span><span class="literal">-my</span><span class="literal">-posh</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Import-Module</span> <span class="built_in">oh</span><span class="literal">-my-posh</span></span><br></pre></td></tr></table></figure>
 <p>但这还只是手动启用，所以我们需要设置<code>profile</code>文件让它自动启用。</p>
 <p>敲<code>$profile</code>可以让 PowerShell 告诉我们这个文件的路径是什么。</p>
 <p>编辑该文件，如果不存在则手动创建，再其中输入</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Import-Module</span> <span class="built_in">oh</span><span class="literal">-my</span><span class="literal">-posh</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Import-Module</span> <span class="built_in">oh</span><span class="literal">-my-posh</span></span><br></pre></td></tr></table></figure>
 <p>以后，都将会自动启用 <code>oh-my-posh</code>。</p>
 <h3 id="设置主题">设置主题</h3>
 <p>我选择了 <code>Agnoster</code> 主题。</p>
@@ -389,12 +395,6 @@
     
     
       
-  <div class="popular-posts-header">相关文章</div>
-  <ul class="popular-posts">
-    <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/posts/scoop/" rel="bookmark">用Scoop包管理器管理你的Windows软件</a></div>
-    </li>
-  </ul>
 
 
     <footer class="post-footer">
@@ -486,34 +486,34 @@
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
-<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.9.0/source/js/comments.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.9.0/source/js/utils.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.9.0/source/js/next-boot.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.9.0/source/js/pjax.min.js"></script>
+<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/comments.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/utils.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/next-boot.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/pjax.min.js"></script>
 
   
 <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
-<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.9.0/source/js/third-party/search/local-search.min.js"></script>
+<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/third-party/search/local-search.min.js"></script>
 
 
 
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.9.0/source/js/third-party/fancybox.min.js"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/third-party/fancybox.min.js"></script>
 
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.9.0/source/js/third-party/pace.min.js"></script>
-
-  
-
-
-
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/third-party/pace.min.js"></script>
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.1/dist/katex.min.css" integrity="sha256-9/mhQQwkpU5okPfM5l0v3LnP9xtc6JK8dKW0/WlGaUc=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.1/dist/contrib/copy-tex.min.css" integrity="sha256-+oItviPaTmqjDhk4y4fLLUIMgRQYDV/ZyrRNvQiebWM=" crossorigin="anonymous">
-  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.1/dist/contrib/copy-tex.min.js","integrity":"sha256-etSqbSVF4+Lwe8MGk/Vanc1sR+mWv+qOG73fxWw9p94="}}</script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.9.0/source/js/third-party/math/katex.min.js"></script>
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.2/dist/katex.min.css" integrity="sha256-94CNZ/bJtwrBYZrXhCOBvpB4rZUzBnvAsirFv31TMGo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.2/dist/contrib/copy-tex.min.css" integrity="sha256-+oItviPaTmqjDhk4y4fLLUIMgRQYDV/ZyrRNvQiebWM=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.2/dist/contrib/copy-tex.min.js","integrity":"sha256-etSqbSVF4+Lwe8MGk/Vanc1sR+mWv+qOG73fxWw9p94="}}</script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/third-party/math/katex.min.js"></script>
 
 
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
   <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":false,"delay":true,"timeout":3000,"priority":true,"url":"https://www.iszy.cc/posts/beautify-powershell/"}</script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.9.0/source/js/third-party/quicklink.min.js"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/third-party/quicklink.min.js"></script>
 <script class="next-config" data-name="waline" type="application/json">{"lang":"zh-CN","enable":true,"serverURL":"https://wl.iszy.xyz","placeholder":"Just go go","avatar":null,"pageSize":10,"visitor":true,"comment_count":true,"requiredFields":[],"locale":{"placeholder":"本站支持匿名评论，无需登录~(●'◡'●)\n与文章无关的留言请前往本站留言板，谢谢配合~"},"avatarCDN":"https://gravatar.cdn.iszy.xyz/avatar/","meta":["nick","mail","link"],"requiredMeta":["nick","mail"],"libUrl":"https://jsdelivr.cdn.iszy.xyz/npm/@waline/client/dist/Waline.min.js","dark":"auto","emoji":["https://jsdelivr.cdn.iszy.xyz/gh/zvonimirsun/emojis@1.0.2/bilibili-xhl"],"el":"#waline-comments","path":"/posts/beautify-powershell/"}</script>
 <script>
 document.addEventListener('page:loaded', () => {

@@ -4,8 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)">
-<meta name="generator" content="Hexo 5.4.1">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.1.0">
 
 <link rel="preconnect" href="https://fonts.cdn.iszy.xyz" crossorigin>
 <link rel="preconnect" href="jsdelivr.cdn.iszy.xyz" crossorigin>
@@ -23,13 +22,14 @@
 
 <link rel="stylesheet" href="https://fonts.cdn.iszy.xyz/css?family=EB+Garamond:300,300italic,400,400italic,700,700italic%7C'Noto+Serif+SC':300,300italic,400,400italic,700,700italic%7CCinzel+Decorative:300,300italic,400,400italic,700,700italic%7CJetBrains+Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
-<link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" integrity="sha256-jTIdiMuX/e3DGJUGwl3pKSxuc6YOuqtJYkM0bGQESA4=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"www.iszy.cc","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.9.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.9.0/source/js/config.min.js"></script>
-<meta name="description" content="最近折腾了一波 JanusGraph 图数据库的部署，采用 JanusGraph + HBase + ElasticSearch 架构，在此记录下过程。">
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.iszy.cc","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.10.1","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/config.min.js"></script>
+
+    <meta name="description" content="最近折腾了一波 JanusGraph 图数据库的部署，采用 JanusGraph + HBase + ElasticSearch 架构，在此记录下过程。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JanusGraph 图数据库搭建">
 <meta property="og:url" content="https://www.iszy.cc/posts/janusgraph/">
@@ -57,7 +57,8 @@
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-E60YKKHF8Y"></script>
   <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-E60YKKHF8Y","only_pageview":false}</script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.9.0/source/js/third-party/analytics/google-analytics.min.js"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/third-party/analytics/google-analytics.min.js"></script>
+
 
 
 
@@ -238,11 +239,16 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
       <meta itemprop="name" content="Dirge">
-      <meta itemprop="description" content="生活吐槽 & 学习记录">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="随遇而安">
+      <meta itemprop="description" content="生活吐槽 & 学习记录">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="JanusGraph 图数据库搭建 | 随遇而安">
+      <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -338,7 +344,7 @@
 <p>项目地址: <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0phbnVzR3JhcGgvamFudXNncmFwaA==">JanusGraph/janusgraph<i class="fa fa-external-link-alt"></i></span></p>
 </blockquote>
 <p>在 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0phbnVzR3JhcGgvamFudXNncmFwaC9yZWxlYXNlcw==">Github release 页面<i class="fa fa-external-link-alt"></i></span>上下载我们所需要的文件，形如<code>janusgraph-&#123;VERSION&#125;-hadoop2.zip</code>，在这里我们下载最新版 <code>0.3.2</code> 版本: <a target="_blank" rel="noopener" href="https://github.com/JanusGraph/janusgraph/releases/download/v0.3.2/janusgraph-0.3.2-hadoop2.zip"><code>janusgraph-0.3.2-hadoop2.zip</code></a>，并解压出来。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line">wget https://github.com/JanusGraph/janusgraph/releases/download/v0.3.2/janusgraph-0.3.2-hadoop2.zip -cO janusgraph-0.3.2-hadoop2.zip</span><br><span class="line">unzip janusgraph-0.3.2-hadoop2.zip</span><br><span class="line">mv janusgraph-0.3.2-hadoop2 janusgraph</span><br><span class="line"><span class="built_in">cd</span> janusgraph</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line">wget https://github.com/JanusGraph/janusgraph/releases/download/v0.3.2/janusgraph-0.3.2-hadoop2.zip -cO janusgraph-0.3.2-hadoop2.zip</span><br><span class="line">unzip janusgraph-0.3.2-hadoop2.zip</span><br><span class="line"><span class="built_in">mv</span> janusgraph-0.3.2-hadoop2 janusgraph</span><br><span class="line"><span class="built_in">cd</span> janusgraph</span><br></pre></td></tr></table></figure>
 <p>接下来的操作大部分在此文件夹内进行，即<code>~/janusgraph</code>文件夹内。</p>
 <h3 id="调整-Gremlin-Server-配置">调整 Gremlin Server 配置</h3>
 <p>通过<code>vi conf/gremlin-server/gremlin-server.yaml</code>打开，有以下部分配置需要改动。</p>
@@ -362,7 +368,7 @@
 <p>在此以 systemd 为例进行配置，可以参考一下，注意替换文件路径。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vi /etc/systemd/system/janusgraph.service</span><br></pre></td></tr></table></figure>
 <p>输入以下内容并保存:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description=JanusGraph Server</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line"><span class="comment"># Environment=&quot;PATH=yourpath&quot;</span></span><br><span class="line">ExecStart=/root/janusgraph/bin/gremlin-server.sh /root/janusgraph/conf/gremlin-server/gremlin-server.yaml</span><br><span class="line">ExecReload=/bin/<span class="built_in">kill</span> -HUP <span class="variable">$MAINPID</span></span><br><span class="line">Type=simple</span><br><span class="line">User=root</span><br><span class="line">Group=root</span><br><span class="line">Restart=always</span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description=JanusGraph Server</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line"><span class="comment"># Environment=&quot;PATH=yourpath&quot;</span></span><br><span class="line">ExecStart=/root/janusgraph/bin/gremlin-server.sh /root/janusgraph/conf/gremlin-server/gremlin-server.yaml</span><br><span class="line">ExecReload=/bin/kill -HUP <span class="variable">$MAINPID</span></span><br><span class="line">Type=simple</span><br><span class="line">User=root</span><br><span class="line">Group=root</span><br><span class="line">Restart=always</span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure>
 <p>可能会遇到错误，显示<code>java: command not found</code>，请把上面的备注取消掉，替换上自己的系统环境变量。</p>
 <h4 id="常用命令">常用命令</h4>
 <ul>
@@ -380,9 +386,9 @@
 <p>如能正常响应，则表示部署成功。</p>
 <h3 id="测试-Http">测试 Http</h3>
 <p>运行如下命令测试 http 能否正常响应。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -XPOST -Hcontent-type:application/json -d <span class="string">&#x27;&#123;&quot;gremlin&quot;:&quot;g.V().count()&quot;&#125;&#x27;</span> http://localhost:8182</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -XPOST -Hcontent-<span class="built_in">type</span>:application/json -d <span class="string">&#x27;&#123;&quot;gremlin&quot;:&quot;g.V().count()&quot;&#125;&#x27;</span> http://localhost:8182</span><br></pre></td></tr></table></figure>
 <p>应有类似如下返回内容，则为正常。</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;requestId&quot;</span>: <span class="string">&quot;47608dd1-275d-4708-acf7-fa1e6355328b&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;status&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;message&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;code&quot;</span>: <span class="number">200</span>,</span><br><span class="line">    <span class="attr">&quot;attributes&quot;</span>: &#123; <span class="attr">&quot;@type&quot;</span>: <span class="string">&quot;g:Map&quot;</span>, <span class="attr">&quot;@value&quot;</span>: [] &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">&quot;result&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;data&quot;</span>: &#123;</span><br><span class="line">      <span class="attr">&quot;@type&quot;</span>: <span class="string">&quot;g:List&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;@value&quot;</span>: [&#123; <span class="attr">&quot;@type&quot;</span>: <span class="string">&quot;g:Int64&quot;</span>, <span class="attr">&quot;@value&quot;</span>: <span class="number">0</span> &#125;]</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">&quot;meta&quot;</span>: &#123; <span class="attr">&quot;@type&quot;</span>: <span class="string">&quot;g:Map&quot;</span>, <span class="attr">&quot;@value&quot;</span>: [] &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;requestId&quot;</span><span class="punctuation">:</span> <span class="string">&quot;47608dd1-275d-4708-acf7-fa1e6355328b&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;status&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;message&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;code&quot;</span><span class="punctuation">:</span> <span class="number">200</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;attributes&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span> <span class="attr">&quot;@type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;g:Map&quot;</span><span class="punctuation">,</span> <span class="attr">&quot;@value&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="punctuation">]</span> <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;result&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;data&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;@type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;g:List&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;@value&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="punctuation">&#123;</span> <span class="attr">&quot;@type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;g:Int64&quot;</span><span class="punctuation">,</span> <span class="attr">&quot;@value&quot;</span><span class="punctuation">:</span> <span class="number">0</span> <span class="punctuation">&#125;</span><span class="punctuation">]</span></span><br><span class="line">    <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;meta&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span> <span class="attr">&quot;@type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;g:Map&quot;</span><span class="punctuation">,</span> <span class="attr">&quot;@value&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="punctuation">]</span> <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
 <h2 id="可能遇到的坑">可能遇到的坑</h2>
 <p>别问我怎么知道的</p>
 <ol>
@@ -398,18 +404,6 @@
     
     
       
-  <div class="popular-posts-header">相关文章</div>
-  <ul class="popular-posts">
-    <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/posts/6x5bzj/" rel="bookmark">解决ElasticSearch查询记录超过10000时的异常</a></div>
-    </li>
-    <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/posts/imue92/" rel="bookmark">Elasticsearch 节点磁盘使用率过高，导致ES索引无法写入</a></div>
-    </li>
-    <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/posts/wn3g9x/" rel="bookmark">ElasticSearch使用text类型字段排序报错</a></div>
-    </li>
-  </ul>
 
 
     <footer class="post-footer">
@@ -503,34 +497,34 @@
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
-<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.9.0/source/js/comments.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.9.0/source/js/utils.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.9.0/source/js/next-boot.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.9.0/source/js/pjax.min.js"></script>
+<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/comments.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/utils.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/next-boot.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/pjax.min.js"></script>
 
   
 <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
-<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.9.0/source/js/third-party/search/local-search.min.js"></script>
+<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/third-party/search/local-search.min.js"></script>
 
 
 
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.9.0/source/js/third-party/fancybox.min.js"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/third-party/fancybox.min.js"></script>
 
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.9.0/source/js/third-party/pace.min.js"></script>
-
-  
-
-
-
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/third-party/pace.min.js"></script>
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.1/dist/katex.min.css" integrity="sha256-9/mhQQwkpU5okPfM5l0v3LnP9xtc6JK8dKW0/WlGaUc=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.1/dist/contrib/copy-tex.min.css" integrity="sha256-+oItviPaTmqjDhk4y4fLLUIMgRQYDV/ZyrRNvQiebWM=" crossorigin="anonymous">
-  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.1/dist/contrib/copy-tex.min.js","integrity":"sha256-etSqbSVF4+Lwe8MGk/Vanc1sR+mWv+qOG73fxWw9p94="}}</script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.9.0/source/js/third-party/math/katex.min.js"></script>
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.2/dist/katex.min.css" integrity="sha256-94CNZ/bJtwrBYZrXhCOBvpB4rZUzBnvAsirFv31TMGo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.2/dist/contrib/copy-tex.min.css" integrity="sha256-+oItviPaTmqjDhk4y4fLLUIMgRQYDV/ZyrRNvQiebWM=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.2/dist/contrib/copy-tex.min.js","integrity":"sha256-etSqbSVF4+Lwe8MGk/Vanc1sR+mWv+qOG73fxWw9p94="}}</script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/third-party/math/katex.min.js"></script>
 
 
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
   <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":false,"delay":true,"timeout":3000,"priority":true,"url":"https://www.iszy.cc/posts/janusgraph/"}</script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.9.0/source/js/third-party/quicklink.min.js"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/third-party/quicklink.min.js"></script>
 <script class="next-config" data-name="waline" type="application/json">{"lang":"zh-CN","enable":true,"serverURL":"https://wl.iszy.xyz","placeholder":"Just go go","avatar":null,"pageSize":10,"visitor":true,"comment_count":true,"requiredFields":[],"locale":{"placeholder":"本站支持匿名评论，无需登录~(●'◡'●)\n与文章无关的留言请前往本站留言板，谢谢配合~"},"avatarCDN":"https://gravatar.cdn.iszy.xyz/avatar/","meta":["nick","mail","link"],"requiredMeta":["nick","mail"],"libUrl":"https://jsdelivr.cdn.iszy.xyz/npm/@waline/client/dist/Waline.min.js","dark":"auto","emoji":["https://jsdelivr.cdn.iszy.xyz/gh/zvonimirsun/emojis@1.0.2/bilibili-xhl"],"el":"#waline-comments","path":"/posts/janusgraph/"}</script>
 <script>
 document.addEventListener('page:loaded', () => {
