@@ -167,7 +167,7 @@
 <p>点击项目的<code>Settings</code>-<code>Secrets</code>-<code>New repository secret</code>即可创建。Secret 名称就是环境变量名，内容则是具体的值。</p>
 <p>接着调用<code>appleboy/ssh-action@master</code>脚本，将登录参数指定为对应的环境变量，然后配置一组需要执行的脚本，这边可以根据个人的实际情况进行配置，自由度很高了。既然都能登陆服务器，那自然是想做什么都可以了。</p>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">build:</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Checkout</span> <span class="string">🛎️</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/checkout@v2</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Restore</span> <span class="string">cached</span> <span class="string">./node_modules</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/cache@v2</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">path:</span> <span class="string">./node_modules</span></span><br><span class="line">          <span class="attr">key:</span> <span class="string">$&#123;&#123;</span> <span class="string">runner.os</span> <span class="string">&#125;&#125;-yarn-lock-$&#123;&#123;</span> <span class="string">hashFiles(&#x27;./yarn.lock&#x27;)</span> <span class="string">&#125;&#125;</span></span><br><span class="line">          <span class="attr">restore-keys:</span> <span class="string">|</span></span><br><span class="line"><span class="string">            $&#123;&#123; runner.os &#125;&#125;-yarn-lock-</span></span><br><span class="line"><span class="string"></span>      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Install</span> <span class="string">hexo</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">npm</span> <span class="string">install</span> <span class="string">hexo-cli</span> <span class="string">-g</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Install</span> <span class="string">dependencies</span> <span class="string">🔧</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">yarn</span> <span class="string">install</span> <span class="string">--frozen-lockfile</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Build</span> <span class="string">app</span> <span class="string">🔧</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">hexo</span> <span class="string">g</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Deploy</span> <span class="string">🚀</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">JamesIves/github-pages-deploy-action@4.1.0</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">branch:</span> <span class="string">gh-pages</span></span><br><span class="line">          <span class="attr">folder:</span> <span class="string">public</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Deploy</span> <span class="string">to</span> <span class="string">server</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">appleboy/ssh-action@master</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">host:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.HOST</span> <span class="string">&#125;&#125;</span></span><br><span class="line">          <span class="attr">username:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.USERNAME</span> <span class="string">&#125;&#125;</span></span><br><span class="line">          <span class="attr">port:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.PORT</span> <span class="string">&#125;&#125;</span></span><br><span class="line">          <span class="attr">key:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.KEY</span> <span class="string">&#125;&#125;</span></span><br><span class="line">          <span class="attr">script:</span> <span class="string">|</span></span><br><span class="line"><span class="string">            cd /your/path</span></span><br><span class="line"><span class="string">            git pull --rebase</span></span><br><span class="line"><span class="string">            ls -al</span></span><br></pre></td></tr></table></figure>
-<h2 id="使用体验">使用体验</h2>
+<h2 id="使用体验-2">使用体验</h2>
 <p>这次的体验很好，基本上不用浪费自己服务器的性能，也可以通过自定义的脚本将服务器上自己关心的内容输出到日志中。我暂时认为这就是现阶段通过 Github Actions 完成自动化部署的最佳方案了。希望对大家有所帮助。</p>
 ]]></content>
       <categories>
@@ -265,7 +265,7 @@
     <url>/posts/14/</url>
     <content><![CDATA[<p>今天记录一下利用 Nexus OSS 建立 Docker 镜像代理的过程。</p>
 <span id="more"></span>
-<h2 id="前言">前言</h2>
+<h2 id="前言-2">前言</h2>
 <p>众所周知，在国内直接使用 docker 的官方镜像速度是很慢的，一般都需要使用镜像代理。不过，国内的代理一般采用定时同步的方式，镜像的版本更新不够及时，而且像 Github (<span class="exturl" data-url="aHR0cDovL2doY3IuaW8=">ghcr.io<i class="fa fa-external-link-alt"></i></span>)，Google (<span class="exturl" data-url="aHR0cDovL2djci5pbw==">gcr.io<i class="fa fa-external-link-alt"></i></span>)等第三方库一般都是没有代理的，这就需要自行搭建镜像代理。除此之外，一些公司需要私有仓库上传一些内部的镜像，也可以用 nexus 实现。</p>
 <h2 id="搭建">搭建</h2>
 <p>这边我准备使用 docker 容器的方式搭建 nexus，不容易出现问题。</p>
@@ -3208,7 +3208,7 @@
     <url>/posts/2/</url>
     <content><![CDATA[<p>哔哩哔哩把以前 <code>av</code> + 数字的稿件地址格式更换为 <code>BV</code> + 字母数字的格式，类似 Youtube 的稿件编码方式已经有一段时间了。最近闲来无聊，搜了下，发现大佬们已经破解了转换的方法，并给出了 Python 测试代码。正好最近在写小工具合集，写着玩，就用 js 写了一个，留作备用。</p>
 <span id="more"></span>
-<h2 id="前言">前言</h2>
+<h2 id="前言-3">前言</h2>
 <p><span class="exturl" data-url="aHR0cHM6Ly90b29scy5pc3p5Lnh5ei9hbmltZS9iaWxpYmlsaUJ2MmF2">哔哩哔哩 AV、BV 号转换<i class="fa fa-external-link-alt"></i></span></p>
 <p>网上应该已经有了类似工具，不过还是喜欢用自己写的，有问题也好改。有需要的可以用一下。</p>
 <h2 id="原文-来自知乎mcfx-的答案">原文(来自知乎<span class="exturl" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3F1ZXN0aW9uLzM4MTc4NDM3Ny9hbnN3ZXIvMTA5OTQzODc4NA==">mcfx 的答案<i class="fa fa-external-link-alt"></i></span></h2>
@@ -3309,7 +3309,7 @@
 <li>在页面初始化 state 时，读取 localStorage 值，重新转为 JSON 后，合并进当前 state。</li>
 <li>这种方法只是一个简单的实现，只适用于简单对象，对复杂对象来说，重新转为 JSON 可能会失去对应的事件和方法，后面可以考虑以其他方式存储。</li>
 </ol>
-<h2 id="代码">代码</h2>
+<h2 id="代码-2">代码</h2>
 <p>插件：</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> (options = &#123;&#125;) =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> storage = options.<span class="property">storage</span> || (<span class="variable language_">window</span> &amp;&amp; <span class="variable language_">window</span>.<span class="property">localStorage</span>);</span><br><span class="line">  <span class="keyword">const</span> key = options.<span class="property">key</span> || <span class="string">&quot;vuex&quot;</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 获取state的值</span></span><br><span class="line">  <span class="keyword">const</span> <span class="title function_">getState</span> = (<span class="params">key, storage</span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">const</span> value = storage.<span class="title function_">getItem</span>(key);</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">typeof</span> value !== <span class="string">&quot;undefined&quot;</span> ? <span class="title class_">JSON</span>.<span class="title function_">parse</span>(value) : <span class="literal">undefined</span>;</span><br><span class="line">    &#125; <span class="keyword">catch</span> (err) &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">warn</span>(err);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">undefined</span>;</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 设置state的值</span></span><br><span class="line">  <span class="keyword">const</span> <span class="title function_">setState</span> = (<span class="params">key, state, storage</span>) =&gt;</span><br><span class="line">    storage.<span class="title function_">setItem</span>(key, <span class="title class_">JSON</span>.<span class="title function_">stringify</span>(state));</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="function">(<span class="params">store</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 初始化时获取数据，如果有的话，把原来的vuex的state替换掉</span></span><br><span class="line">    <span class="keyword">const</span> data = <span class="title class_">Object</span>.<span class="title function_">assign</span>(store.<span class="property">state</span>, <span class="title function_">getState</span>(key, storage));</span><br><span class="line">    <span class="keyword">if</span> (data) &#123;</span><br><span class="line">      store.<span class="title function_">replaceState</span>(data);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 订阅 store 的 mutation。handler 会在每个 mutation 完成后调用，接收 mutation 和经过 mutation 后的状态作为参数</span></span><br><span class="line">    store.<span class="title function_">subscribe</span>(<span class="function">(<span class="params">mutation, state</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="title function_">setState</span>(key, state, storage);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <p>调用方式：</p>
@@ -3328,11 +3328,11 @@
     <url>/posts/5/</url>
     <content><![CDATA[<p>最近尝试在 Vue 中实现奥利奥生成器的效果，遇到使用 Canvas 的 drawImage 方法绘制图片不显示的问题，在此记录下解决过程。</p>
 <span id="more"></span>
-<h2 id="前言">前言</h2>
+<h2 id="前言-4">前言</h2>
 <p>欢迎体验</p>
 <p><span class="exturl" data-url="aHR0cHM6Ly90b29scy5pc3p5Lnh5ei9vdGhlcnMvb3Jlb29v">奥利奥生成器<i class="fa fa-external-link-alt"></i></span></p>
 <p><img data-src="https://img.iszy.xyz/20210523144733.png" alt=""><img data-src="https://img.iszy.xyz/20210523144706.png" alt=""></p>
-<h2 id="实现思路">实现思路</h2>
+<h2 id="实现思路-2">实现思路</h2>
 <p>奥利奥的原理，就是根据不同的字符串组合，对应不同的图片，然后按顺序将图片绘制到 canvas 上，最终生成图片。</p>
 <p>canvas 的 drawImage 有几种用法。</p>
 <ul>
@@ -3417,13 +3417,13 @@
     <url>/posts/6/</url>
     <content><![CDATA[<p>今天使用<code>for...in</code>方法的时候发现枚举到了意料之外的<code>prototype</code>内的方法，发现是没有正确为数组原型对象添加方法，在此记录。</p>
 <span id="more"></span>
-<h2 id="问题">问题</h2>
+<h2 id="问题-2">问题</h2>
 <p>一般我们如何给一个数组原型对象添加方法呢，比如我们添加一个去重方法。</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="title class_">Array</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">unique</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">var</span> n = &#123;&#125;,</span><br><span class="line">    r = [];</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="variable language_">this</span>.<span class="property">length</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (!n[<span class="variable language_">this</span>[i]]) &#123;</span><br><span class="line">      n[<span class="variable language_">this</span>[i]] = <span class="literal">true</span>;</span><br><span class="line">      r.<span class="title function_">push</span>(<span class="variable language_">this</span>[i]);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> r;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <p>我看不少文章里这样就好了，这就会出现我刚刚说到的问题。在你使用<code>for...in</code>方法遍历数组时就会拿到<code>unique</code>这个 key 值，这个是不符合我们预期的。</p>
 <p>其实出现这样的情况是因为<code>Array.prototype</code>对象的<code>unique</code>属性的描述值<code>enumerable</code>为<code>true</code>，也就是可枚举，在枚举对象属性时会被枚举到（<code>for...in</code>或<code>Object.keys</code>方法）。</p>
 <p>根据<span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvSmF2YVNjcmlwdC9FbnVtZXJhYmlsaXR5X2FuZF9vd25lcnNoaXBfb2ZfcHJvcGVydGllcw==">MDN Web Docs<i class="fa fa-external-link-alt"></i></span>说明，可枚举属性是指那些内部 <code>可枚举</code> 标志设置为 <code>true</code> 的属性，对于通过直接的赋值和属性初始化的属性，该标识值默认为即为 <code>true</code>，对于通过 <code>Object.defineProperty</code> 等定义的属性，该标识值默认为 <code>false</code>。可枚举的属性可以通过 <code>for...in</code> 循环进行遍历（除非该属性名是一个 <code>Symbol</code>）。</p>
-<h2 id="解决">解决</h2>
+<h2 id="解决-2">解决</h2>
 <p>正确的方法如下，忽略方法内容。</p>
 <h3 id="方法一">方法一</h3>
 <p>先添加方法，再通过 <code>Object.defineProperty</code> 设置为不可枚举。</p>
@@ -3647,11 +3647,11 @@
     <url>/posts/9/</url>
     <content><![CDATA[<p>我有个朋友有经纬度定位的需求，正好前几天做了个 GeoJSON 工具给自己用，部分内容可以直接用上，就准备自己做一个，应该能比网上的界面更加清爽舒服一些。</p>
 <span id="more"></span>
-<h2 id="成果">成果</h2>
+<h2 id="成果-2">成果</h2>
 <p>欢迎体验</p>
 <p><span class="exturl" data-url="aHR0cHM6Ly90b29scy5pc3p5Lnh5ei9naXMvbGF0TG5n">经纬度查询-ISZY 工具集合<i class="fa fa-external-link-alt"></i></span></p>
 <p><img data-src="https://img.iszy.xyz/20210903134509.png?x-oss-process=style/big" alt="经纬度查询-ISZY 工具集合"></p>
-<h2 id="功能">功能</h2>
+<h2 id="功能-2">功能</h2>
 <ul>
 <li>界面由 Leaflet 地图窗口和 JSON 编辑器组成</li>
 <li>底图，默认使用高德街道底图，天地图个人 token 每日访问次数有限
@@ -3692,7 +3692,7 @@
     <content><![CDATA[<h2 id="算法描述">算法描述</h2>
 <p>道格拉斯-普克算法(Douglas–Peucker algorithm，亦称为拉默-道格拉斯-普克算法、迭代适应点算法、分裂与合并算法)是将曲线近似表示为一系列点，并减少点的数量的一种算法。它的优点是具有平移和旋转不变性，给定曲线与阈值后，抽样结果一定。</p>
 <span id="more"></span>
-<h2 id="思路">思路</h2>
+<h2 id="思路-2">思路</h2>
 <ul>
 <li>首先，将一条曲线首末点连一条直线</li>
 <li>求出其余各点到该直线的距离</li>
@@ -3710,7 +3710,7 @@
 <li>屏幕绘图显示压缩前后的地图数据</li>
 <li>数据压缩率为 50%</li>
 </ol>
-<h2 id="代码">代码</h2>
+<h2 id="代码-3">代码</h2>
 <p>Github 库地址:<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1p2b25pbWlyU3VuL0RvdWdsYXNQZXVja2Vy">https://github.com/ZvonimirSun/DouglasPeucker<i class="fa fa-external-link-alt"></i></span></p>
 <figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.Windows.Forms;</span><br><span class="line"><span class="keyword">using</span> System.IO;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> 道格拉斯_普克法</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">partial</span> <span class="keyword">class</span> <span class="title">DouglasPeucker</span> : <span class="title">Form</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">DouglasPeucker</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            InitializeComponent();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">struct</span> Point</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">public</span> <span class="built_in">double</span> x &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line">            <span class="keyword">public</span> <span class="built_in">double</span> y &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line">            <span class="keyword">public</span> <span class="built_in">bool</span> existance &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 道格拉斯普拉格压缩算法</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Compress</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">public</span> List&lt;Point[]&gt; lineList = <span class="keyword">new</span> List&lt;Point[]&gt;();</span><br><span class="line">            <span class="keyword">private</span> <span class="built_in">double</span> e;<span class="comment">// 误差限制</span></span><br><span class="line"></span><br><span class="line">            <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">            <span class="comment"><span class="doctag">///</span> 运行算法</span></span><br><span class="line">            <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">            <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;filePath&quot;&gt;</span>文档路径<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">            <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;outPath&quot;&gt;</span>输出路径<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="title">Compress</span>(<span class="params"><span class="built_in">string</span> filePath, <span class="built_in">string</span> outPath, <span class="built_in">double</span> e</span>)</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">this</span>.e = e;</span><br><span class="line">                readFile(filePath);</span><br><span class="line">                <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; lineList.Count; i++)</span><br><span class="line">                &#123;</span><br><span class="line">                    compressFile(<span class="number">1</span>, (<span class="built_in">int</span>)lineList[i][<span class="number">0</span>].x, i);</span><br><span class="line">                &#125;</span><br><span class="line">                writeFile(outPath);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">            <span class="comment"><span class="doctag">///</span> 读取文档</span></span><br><span class="line">            <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">            <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;P&quot;&gt;</span>文档所在路径<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">            <span class="function"><span class="keyword">void</span> <span class="title">readFile</span>(<span class="params"><span class="built_in">string</span> P</span>)</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">try</span></span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="comment">//</span></span><br><span class="line">                    <span class="built_in">int</span> flag = <span class="number">0</span>;</span><br><span class="line">                    StreamReader sr = <span class="keyword">new</span> StreamReader(P);</span><br><span class="line">                    Point[] pointList = <span class="keyword">new</span> Point[<span class="number">1000</span>];</span><br><span class="line">                    <span class="built_in">int</span> count = <span class="number">0</span>;</span><br><span class="line">                    <span class="keyword">while</span> (!sr.EndOfStream)</span><br><span class="line">                    &#123;</span><br><span class="line">                        <span class="comment">// 按行读取文件</span></span><br><span class="line">                        <span class="built_in">string</span> line = sr.ReadLine();</span><br><span class="line"></span><br><span class="line">                        <span class="comment">// 判断是否为线的开始</span></span><br><span class="line">                        <span class="built_in">int</span> temp;</span><br><span class="line">                        <span class="keyword">if</span> (<span class="built_in">int</span>.TryParse(line, <span class="keyword">out</span> temp))</span><br><span class="line">                        &#123;</span><br><span class="line">                            pointList = <span class="keyword">new</span> Point[<span class="number">1000</span>];</span><br><span class="line">                            count = <span class="number">0</span>;</span><br><span class="line">                            flag = <span class="number">1</span>;</span><br><span class="line">                            <span class="keyword">continue</span>;</span><br><span class="line">                        &#125;</span><br><span class="line"></span><br><span class="line">                        <span class="comment">// 判断结尾</span></span><br><span class="line">                        <span class="keyword">if</span> (line == <span class="string">&quot;END&quot;</span>)</span><br><span class="line">                        &#123;</span><br><span class="line">                            <span class="comment">// 线的结束</span></span><br><span class="line">                            <span class="keyword">if</span> (flag == <span class="number">1</span>)</span><br><span class="line">                            &#123;</span><br><span class="line">                                pointList[<span class="number">0</span>].x = count;</span><br><span class="line"></span><br><span class="line">                                lineList.Add(pointList);</span><br><span class="line">                                flag = <span class="number">0</span>;</span><br><span class="line">                                <span class="keyword">continue</span>;</span><br><span class="line">                            &#125;</span><br><span class="line">                            <span class="keyword">if</span> (flag == <span class="number">0</span>)</span><br><span class="line">                            &#123;</span><br><span class="line">                                <span class="keyword">break</span>;</span><br><span class="line">                            &#125;</span><br><span class="line">                        &#125;</span><br><span class="line"></span><br><span class="line">                        <span class="comment">// 如果不是开头或结尾，则读取点</span></span><br><span class="line">                        <span class="built_in">string</span>[] p = line.Split(<span class="string">&#x27;,&#x27;</span>);</span><br><span class="line"></span><br><span class="line">                        count++;</span><br><span class="line">                        pointList[count].x = <span class="built_in">double</span>.Parse(p[<span class="number">0</span>]);</span><br><span class="line">                        pointList[count].y = <span class="built_in">double</span>.Parse(p[<span class="number">1</span>]);</span><br><span class="line">                        pointList[count].existance = <span class="literal">true</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">catch</span></span><br><span class="line">                &#123;</span><br><span class="line">                    MessageBox.Show(<span class="string">&quot;Error!&quot;</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">            <span class="comment"><span class="doctag">///</span> 压缩算法</span></span><br><span class="line">            <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">            <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;FirstPoint&quot;&gt;</span>线的开始节点<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">            <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;LastPoint&quot;&gt;</span>线的结束节点<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">            <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;index&quot;&gt;</span>线的索引<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">            <span class="function"><span class="keyword">void</span> <span class="title">compressFile</span>(<span class="params"><span class="built_in">int</span> FirstPoint, <span class="built_in">int</span> LastPoint, <span class="built_in">int</span> index</span>)</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="built_in">double</span> max = <span class="number">0</span>;<span class="comment">// 记录最大距离</span></span><br><span class="line">                <span class="built_in">int</span> FarthestPoint = <span class="number">0</span>;<span class="comment">// 记录最远节点</span></span><br><span class="line"></span><br><span class="line">                <span class="comment">// 如果只剩两个节点则退出</span></span><br><span class="line">                <span class="keyword">if</span> ((LastPoint - FirstPoint) &gt; <span class="number">1</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="comment">// 判断是否为环路</span></span><br><span class="line">                    <span class="keyword">if</span> (lineList[index][FirstPoint].x == lineList[index][LastPoint].x &amp;&amp; lineList[index][FirstPoint].y == lineList[index][LastPoint].y)</span><br><span class="line">                    &#123;</span><br><span class="line">                        <span class="built_in">int</span> mid = (<span class="built_in">int</span>)((FirstPoint + LastPoint) / <span class="number">2</span>);<span class="comment">// 拆分环路</span></span><br><span class="line">                        compressFile(FirstPoint, mid, index);</span><br><span class="line">                        compressFile(mid, LastPoint, index);</span><br><span class="line">                    &#125;</span><br><span class="line"></span><br><span class="line">                    <span class="comment">// 寻找最大距离</span></span><br><span class="line">                    <span class="keyword">for</span> (<span class="built_in">int</span> i = FirstPoint + <span class="number">1</span>; i &lt; LastPoint; i++)</span><br><span class="line">                    &#123;</span><br><span class="line">                        <span class="built_in">double</span> temp = pointToLineDistance(lineList[index][FirstPoint], lineList[index][LastPoint], lineList[index][i]);</span><br><span class="line">                        <span class="keyword">if</span> (temp &gt; max)</span><br><span class="line">                        &#123;</span><br><span class="line">                            max = temp;</span><br><span class="line">                            FarthestPoint = i;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line"></span><br><span class="line">                    <span class="comment">// 根据界限判断是否压缩</span></span><br><span class="line">                    <span class="keyword">if</span> (max &lt;= e)</span><br><span class="line">                    &#123;</span><br><span class="line">                        <span class="keyword">for</span> (<span class="built_in">int</span> i = FirstPoint + <span class="number">1</span>; i &lt; LastPoint; i++)</span><br><span class="line">                        &#123;</span><br><span class="line">                            lineList[index][i].existance = <span class="literal">false</span>;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">else</span></span><br><span class="line">                    &#123;</span><br><span class="line">                        compressFile(FirstPoint, FarthestPoint, index);</span><br><span class="line">                        compressFile(FarthestPoint, LastPoint, index);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">            <span class="comment"><span class="doctag">///</span> 输出压缩后的文件</span></span><br><span class="line">            <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">            <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;P&quot;&gt;</span>输出路径<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">            <span class="function"><span class="keyword">void</span> <span class="title">writeFile</span>(<span class="params"><span class="built_in">string</span> P</span>)</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">try</span></span><br><span class="line">                &#123;</span><br><span class="line">                    StreamWriter sw = <span class="keyword">new</span> StreamWriter(File.Open(P, FileMode.Create));</span><br><span class="line">                    <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; lineList.Count; i++)</span><br><span class="line">                    &#123;</span><br><span class="line">                        sw.WriteLine(i + <span class="number">1</span>);</span><br><span class="line">                        <span class="keyword">for</span> (<span class="built_in">int</span> j = <span class="number">1</span>; j &lt;= lineList[i][<span class="number">0</span>].x; j++)</span><br><span class="line">                        &#123;</span><br><span class="line">                            <span class="keyword">if</span> (lineList[i][j].existance)</span><br><span class="line">                            &#123;</span><br><span class="line">                                sw.Write(<span class="string">&quot;&#123;0&#125;,&#123;1&#125;&quot;</span>, lineList[i][j].x, lineList[i][j].y);</span><br><span class="line">                                sw.WriteLine();</span><br><span class="line">                            &#125;</span><br><span class="line">                        &#125;</span><br><span class="line">                        sw.WriteLine(<span class="string">&quot;END&quot;</span>);</span><br><span class="line">                    &#125;</span><br><span class="line">                    sw.WriteLine(<span class="string">&quot;END&quot;</span>);</span><br><span class="line">                    sw.Close();</span><br><span class="line">                    MessageBox.Show(<span class="string">&quot;Success!&quot;</span>);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">catch</span></span><br><span class="line">                &#123;</span><br><span class="line">                    MessageBox.Show(<span class="string">&quot;Error!&quot;</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">            <span class="comment"><span class="doctag">///</span> 计算点到线的距离</span></span><br><span class="line">            <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">            <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;A&quot;&gt;</span>直线的一个端点<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">            <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;B&quot;&gt;</span>直线的另一个端点<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">            <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;P&quot;&gt;</span>需要计算距离的点<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">            <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;returns&gt;</span>返回距离<span class="doctag">&lt;/returns&gt;</span></span></span><br><span class="line">            <span class="function"><span class="built_in">double</span> <span class="title">pointToLineDistance</span>(<span class="params">Point A, Point B, Point P</span>)</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="built_in">double</span> normalLength = Math.Sqrt((B.x - A.x) * (B.x - A.x) + (B.y - A.y) * (B.y - A.y));</span><br><span class="line">                <span class="keyword">return</span> Math.Abs((P.x - A.x) * (B.y - A.y) - (P.y - A.y) * (B.x - A.x)) / normalLength;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 打开文件</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">btnOpen_Click</span>(<span class="params"><span class="built_in">object</span> sender, EventArgs e</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">using</span> (OpenFileDialog OpenFD = <span class="keyword">new</span> OpenFileDialog())     <span class="comment">//实例化一个 OpenFileDialog 的对象</span></span><br><span class="line">            &#123;</span><br><span class="line">                OpenFD.Filter = <span class="string">&quot;Generate Files (*.gen)|*.gen|&quot;</span> + <span class="string">&quot;All files (*.*)|*.*&quot;</span>;</span><br><span class="line">                <span class="comment">//定义打开的默认文件夹位置</span></span><br><span class="line">                OpenFD.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);</span><br><span class="line">                <span class="keyword">if</span> (OpenFD.ShowDialog() == DialogResult.OK)                            <span class="comment">//显示打开本地文件的窗体</span></span><br><span class="line">                &#123;</span><br><span class="line">                    txtFile.Text = OpenFD.FileName;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 压缩文件并输出</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;sender&quot;&gt;</span><span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;e&quot;&gt;</span><span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">btnCompress_Click</span>(<span class="params"><span class="built_in">object</span> sender, EventArgs e</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (txtFile.Text != <span class="string">&quot;&quot;</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span> (txtE.Text != <span class="string">&quot;&quot;</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="built_in">double</span> temp;</span><br><span class="line">                    <span class="keyword">if</span> (<span class="built_in">double</span>.TryParse(txtE.Text, <span class="keyword">out</span> temp))</span><br><span class="line">                    &#123;</span><br><span class="line">                        SaveFileDialog sfd = <span class="keyword">new</span> SaveFileDialog();</span><br><span class="line">                        sfd.Filter = <span class="string">&quot;Generate Files (*.gen)|*.gen|&quot;</span> + <span class="string">&quot;All files (*.*)|*.*&quot;</span>;</span><br><span class="line">                        sfd.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);</span><br><span class="line">                        <span class="keyword">if</span> (sfd.ShowDialog() == DialogResult.OK)</span><br><span class="line">                        &#123;</span><br><span class="line">                            Compress c = <span class="keyword">new</span> Compress(txtFile.Text, sfd.FileName, temp);</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">else</span></span><br><span class="line">                    &#123;</span><br><span class="line">                        MessageBox.Show(<span class="string">&quot;请输入数字！&quot;</span>);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                &#123;</span><br><span class="line">                    MessageBox.Show(<span class="string">&quot;请输入数字！&quot;</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                MessageBox.Show(<span class="string">&quot;请选择文件！&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p><strong>代码如果存在问题，请一定帮我指正!大神，谢谢了!</strong></p>
@@ -3727,13 +3727,13 @@
   <entry>
     <title>平面多边形面积计算</title>
     <url>/posts/Flat-Polygon-Area/</url>
-    <content><![CDATA[<h2 id="算法描述">算法描述</h2>
+    <content><![CDATA[<h2 id="算法描述-2">算法描述</h2>
 <p>在这里实现了对任意平面多边形的面积计算，不适用于有重叠或边互相交叉的情况。</p>
 <span id="more"></span>
-<h2 id="实现">实现</h2>
+<h2 id="实现-2">实现</h2>
 <h3 id="窗体设计">窗体设计</h3>
 <p><img data-src="https://img.iszy.xyz/20190318213117.png" alt=""></p>
-<h3 id="代码">代码</h3>
+<h3 id="代码-4">代码</h3>
 <figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.Drawing;</span><br><span class="line"><span class="keyword">using</span> System.Windows.Forms;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">area</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">partial</span> <span class="keyword">class</span> <span class="title">Main</span> : <span class="title">Form</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">private</span> List&lt;Point&gt; list = <span class="keyword">new</span> List&lt;Point&gt;();</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">Main</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            InitializeComponent();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">btnAdd_Click</span>(<span class="params"><span class="built_in">object</span> sender, EventArgs e</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (txtX.Text != <span class="string">&quot;&quot;</span> &amp;&amp; txtY.Text != <span class="string">&quot;&quot;</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">//插入点</span></span><br><span class="line">                <span class="keyword">if</span> (Int32.TryParse(txtX.Text, <span class="keyword">out</span> <span class="built_in">int</span> x) &amp;&amp; Int32.TryParse(txtY.Text, <span class="keyword">out</span> <span class="built_in">int</span> y))</span><br><span class="line">                &#123;</span><br><span class="line">                    listPoint.BeginUpdate();</span><br><span class="line">                    Point point = <span class="keyword">new</span> Point(x, y);</span><br><span class="line">                    list.Add(point);</span><br><span class="line">                    listPoint.Items.Add(point);</span><br><span class="line">                    listPoint.EndUpdate();</span><br><span class="line"></span><br><span class="line">                    txtX.Text = <span class="string">&quot;&quot;</span>;</span><br><span class="line">                    txtY.Text = <span class="string">&quot;&quot;</span>;</span><br><span class="line">                    txtX.Focus();</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                &#123;</span><br><span class="line">                    MessageBox.Show(<span class="string">&quot;请输入数字！&quot;</span>);</span><br><span class="line">                    txtX.Text = <span class="string">&quot;&quot;</span>;</span><br><span class="line">                    txtY.Text = <span class="string">&quot;&quot;</span>;</span><br><span class="line">                    txtX.Focus();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">btnCalcu_Click</span>(<span class="params"><span class="built_in">object</span> sender, EventArgs e</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (list.Count &gt;= <span class="number">3</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">//将线首加入列表，保证多边形闭合</span></span><br><span class="line">                list.Add(list[<span class="number">0</span>]);</span><br><span class="line"></span><br><span class="line">                <span class="comment">//计算面积</span></span><br><span class="line">                <span class="built_in">double</span> area = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">                <span class="comment">//根据公式进行计算</span></span><br><span class="line">                <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; list.Count - <span class="number">1</span>; i++)</span><br><span class="line">                &#123;</span><br><span class="line">                    area += (list[i].X +list[i+<span class="number">1</span>].X) * (list[i + <span class="number">1</span>].Y - list[i].Y);</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                <span class="comment">//保证面积为正</span></span><br><span class="line">                area = Math.Abs(area / <span class="number">2</span>);</span><br><span class="line">                txtResult.Text = <span class="string">&quot;面积：&quot;</span> + area.ToString(<span class="string">&quot;0.0&quot;</span>);</span><br><span class="line">                btnAdd.Enabled = <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                MessageBox.Show(<span class="string">&quot;请添加至少3个点！&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">btnClear_Click</span>(<span class="params"><span class="built_in">object</span> sender, EventArgs e</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">//清空所有点</span></span><br><span class="line">            list.Clear();</span><br><span class="line">            listPoint.Items.Clear();</span><br><span class="line">            txtX.Text = <span class="string">&quot;&quot;</span>;</span><br><span class="line">            txtY.Text = <span class="string">&quot;&quot;</span>;</span><br><span class="line">            txtResult.Text = <span class="string">&quot;面积：&quot;</span>;</span><br><span class="line">            btnAdd.Enabled = <span class="literal">true</span>;</span><br><span class="line">            txtX.Focus();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
@@ -3755,7 +3755,7 @@
 <p>最开始，我的博客是放在 Github Pages 上的，但是由于 Github 屏蔽了百度的爬虫，所以挂在 Github Pages 上的博客并不能被百度搜索到，对于一个中文博客来说还是蛮蛋疼的。当然国内的 Coding Pages 也能提供类似的服务，但是最近开始插广告了，于是就不在我的考虑范围内了。</p>
 <p>前段时间，我把网站挂在虚拟主机上，但是许多东西都不能自定义，不能完全按照我的心意来，我还是不太满意。后来，我找到了一家价格较为便宜的美西 VPS 服务商，用起来感觉还比较稳定，我记得好像是国人开的，有中文的界面，等我有空写篇推广。</p>
 <p>用自己的 VPS 后，我仍然采用和虚拟主机一样的流程，利用免费的宝塔 Linux 面板来管理网站。写完文章后的一般流程就是，先用我本地的 Ubuntu 虚拟机编译网站，然后将生成的站点打包上传到我的服务器上解压出来。但是，我都已经有了自己的 VPS 了，同样是 Linux 系统，我何不直接在服务器上自动编译呢？这样就跟 Github Pages 差不多了，我认为还是相当不错的。正好还有 git hooks 这么有意思的东西，可以帮助我完成这件事情。</p>
-<h2 id="步骤">步骤</h2>
+<h2 id="步骤-2">步骤</h2>
 <h3 id="配置-Jekyll-环境">配置 Jekyll 环境</h3>
 <h4 id="首先我使用-RVM-来安装-ruby">首先我使用 RVM 来安装 ruby</h4>
 <p><strong>安装 RVM</strong></p>
@@ -3784,7 +3784,7 @@
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git remote add blog ssh://username@ip:port/root/blog.git</span><br></pre></td></tr></table></figure>
 <p>将<code>commit</code>推送到远程仓库。</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git push blog master</span><br></pre></td></tr></table></figure>
-<h2 id="后话">后话</h2>
+<h2 id="后话-2">后话</h2>
 <p>其实吧，我觉得现在这个情况还不够令人满意，我还需要在本地编辑完了，进行推送。我的理想情况是这样，最好能在我的 VPS 上做一个 panel，能够在线编辑我服务器上的 markdown 文件，然后通过自动化脚本对 Jekyll 进行编译。暂时还不知道怎样实现这个方案，我觉得是可行的，未来如果实现了，我再来补充。</p>
 ]]></content>
       <categories>
@@ -3807,7 +3807,7 @@
 <li>到达目标后，打印路径</li>
 <li>进行回溯，继续寻找路径</li>
 </ol>
-<h2 id="代码">代码</h2>
+<h2 id="代码-5">代码</h2>
 <p>Github 库地址：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1p2b25pbWlyU3VuL0hvcnNlSnVtcA==">https://github.com/ZvonimirSun/HorseJump<i class="fa fa-external-link-alt"></i></span></p>
 <figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> 跳马</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Horse</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//记录路径数</span></span><br><span class="line">        <span class="keyword">public</span> <span class="built_in">int</span> num &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">int</span> x0, y0, cx, cy;</span><br><span class="line">        <span class="built_in">int</span>[,] dir = &#123; &#123; <span class="number">1</span>, <span class="number">2</span> &#125;, &#123; <span class="number">2</span>, <span class="number">1</span> &#125;, &#123; <span class="number">2</span>, <span class="number">-1</span> &#125;, &#123; <span class="number">1</span>, <span class="number">-2</span> &#125;, &#123; <span class="number">-1</span>, <span class="number">-2</span> &#125;, &#123; <span class="number">-2</span>, <span class="number">-1</span> &#125;, &#123; <span class="number">-2</span>, <span class="number">1</span> &#125;, &#123; <span class="number">-1</span>, <span class="number">2</span> &#125; &#125;;           <span class="comment">//方位矩阵</span></span><br><span class="line">        <span class="built_in">int</span>[,] path = <span class="keyword">new</span> <span class="built_in">int</span>[<span class="number">100</span>, <span class="number">2</span>];         <span class="comment">//记录路径</span></span><br><span class="line">        <span class="built_in">int</span>[,] result = <span class="keyword">new</span> <span class="built_in">int</span>[<span class="number">20</span>, <span class="number">20</span>];          <span class="comment">//记录结果</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 通过构造函数获得初始位置，棋盘大小等信息，</span></span><br><span class="line">        <span class="comment">// 并运行计算</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">Horse</span>(<span class="params"><span class="built_in">int</span> x0, <span class="built_in">int</span> y0, <span class="built_in">int</span> cx, <span class="built_in">int</span> cy</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            path[<span class="number">0</span>, <span class="number">0</span>] = <span class="keyword">this</span>.x0 = x0;</span><br><span class="line">            path[<span class="number">0</span>, <span class="number">1</span>] = <span class="keyword">this</span>.y0 = y0;</span><br><span class="line">            <span class="keyword">this</span>.cx = cx;</span><br><span class="line">            <span class="keyword">this</span>.cy = cy;</span><br><span class="line">            num = <span class="number">0</span>;</span><br><span class="line">            Move(x0, y0, <span class="number">0</span>, <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//计算路径</span></span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">Move</span>(<span class="params"><span class="built_in">int</span> x, <span class="built_in">int</span> y, <span class="built_in">int</span> m, <span class="built_in">int</span> step</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">int</span> x1, y1;<span class="comment">//记录棋子当前位置</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="built_in">int</span> i = m; i &lt; <span class="number">8</span>; i++)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="built_in">int</span> flag = <span class="number">0</span>;<span class="comment">//用作标记</span></span><br><span class="line"></span><br><span class="line">                <span class="comment">//朝某一方向前进一步</span></span><br><span class="line">                x1 = x + dir[i, <span class="number">0</span>];</span><br><span class="line">                y1 = y + dir[i, <span class="number">1</span>];</span><br><span class="line"></span><br><span class="line">                <span class="comment">//如果超出棋盘，回退</span></span><br><span class="line">                <span class="keyword">if</span> (x1 &lt; <span class="number">1</span> || x1 &gt; cx || y1 &lt; <span class="number">1</span> || y1 &gt; cy)</span><br><span class="line">                &#123;</span><br><span class="line">                    x1 -= dir[i, <span class="number">0</span>];</span><br><span class="line">                    y1 -= dir[i, <span class="number">1</span>];</span><br><span class="line">                    <span class="keyword">continue</span>;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                <span class="comment">//判断是否走过，走过回退</span></span><br><span class="line">                <span class="keyword">for</span> (<span class="built_in">int</span> j = <span class="number">1</span>; j &lt;= step; j++)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">if</span> (x1 == path[j, <span class="number">0</span>] &amp;&amp; y1 == path[j, <span class="number">1</span>])</span><br><span class="line">                    &#123;</span><br><span class="line">                        flag = <span class="number">1</span>;</span><br><span class="line">                        <span class="keyword">break</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span> (flag == <span class="number">1</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    x1 -= dir[i, <span class="number">0</span>];</span><br><span class="line">                    y1 -= dir[i, <span class="number">1</span>];</span><br><span class="line">                    <span class="keyword">continue</span>;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                <span class="comment">//符合要求，计入路径</span></span><br><span class="line">                path[step, <span class="number">0</span>] = x1;</span><br><span class="line">                path[step, <span class="number">1</span>] = y1;</span><br><span class="line"></span><br><span class="line">                <span class="comment">//判断是否回到原点</span></span><br><span class="line">                <span class="keyword">if</span> (x1 == x0 &amp;&amp; y1 == y0)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="comment">//如果回到原点，判断是否已经到达过棋盘边缘，初始不算</span></span><br><span class="line">                    <span class="keyword">for</span> (<span class="built_in">int</span> j = <span class="number">1</span>; j &lt;= step; j++)</span><br><span class="line">                    &#123;</span><br><span class="line">                        <span class="keyword">if</span> (path[j, <span class="number">0</span>] == <span class="number">1</span> || path[j, <span class="number">0</span>] == cx || path[j, <span class="number">1</span>] == <span class="number">1</span> || path[j, <span class="number">1</span>] == cy)</span><br><span class="line">                        &#123;</span><br><span class="line">                            flag = <span class="number">1</span>;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line"></span><br><span class="line">                    <span class="comment">//如果到过棋盘边缘，说明路径符合要求，存入路径数组</span></span><br><span class="line">                    <span class="keyword">if</span> (flag == <span class="number">1</span>)</span><br><span class="line">                    &#123;</span><br><span class="line">                        num++;<span class="comment">//路径数加一</span></span><br><span class="line"></span><br><span class="line">                        <span class="comment">//打印路径</span></span><br><span class="line">                        Console.Write(<span class="string">&quot;方案&#123;0&#125;：&quot;</span>, num);</span><br><span class="line">                        <span class="keyword">for</span> (<span class="built_in">int</span> j = <span class="number">0</span>; j &lt;= step; j++)</span><br><span class="line">                        &#123;</span><br><span class="line">                            Console.Write(<span class="string">&quot;(&#123;0&#125;,&#123;1&#125;)&quot;</span>, path[j, <span class="number">0</span>], path[j, <span class="number">1</span>]);</span><br><span class="line">                        &#125;</span><br><span class="line">                        Console.WriteLine();</span><br><span class="line"></span><br><span class="line">                        path[step, <span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">                        path[step, <span class="number">1</span>] = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">                        <span class="comment">//回退并继续寻找其他方案</span></span><br><span class="line">                        step--;</span><br><span class="line">                        i++;</span><br><span class="line"></span><br><span class="line">                        Move(path[step,<span class="number">0</span>], path[step,<span class="number">1</span>], i, step + <span class="number">1</span>);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="comment">//未到过边缘，不符合要求，继续寻找路径</span></span><br><span class="line">                    Move(x1, y1, <span class="number">1</span>, step + <span class="number">1</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="built_in">string</span>[] args</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">int</span> x0, y0, cx, cy;</span><br><span class="line"></span><br><span class="line">            <span class="comment">//获取数据</span></span><br><span class="line">            Console.Write(<span class="string">&quot;请输入棋盘宽度(3≤cx≤20)：&quot;</span>);</span><br><span class="line">            cx = <span class="built_in">int</span>.Parse(Console.ReadLine());</span><br><span class="line">            Console.Write(<span class="string">&quot;请输入棋盘长度(3≤cy≤20)：&quot;</span>);</span><br><span class="line">            cy = <span class="built_in">int</span>.Parse(Console.ReadLine());</span><br><span class="line">            Console.Write(<span class="string">&quot;请输入起始位置(1≤x0≤cx)：&quot;</span>);</span><br><span class="line">            x0 = <span class="built_in">int</span>.Parse(Console.ReadLine());</span><br><span class="line">            Console.Write(<span class="string">&quot;请输入起始位置(1≤y0≤cy)：&quot;</span>);</span><br><span class="line">            y0 = <span class="built_in">int</span>.Parse(Console.ReadLine());</span><br><span class="line"></span><br><span class="line">            <span class="comment">//进行计算并打印</span></span><br><span class="line">            Horse horse = <span class="keyword">new</span> Horse(x0, y0, cx, cy);</span><br><span class="line">            Console.WriteLine(<span class="string">&quot;总方案数：&#123;0&#125;&quot;</span>, horse.num);</span><br><span class="line"></span><br><span class="line">            Console.ReadKey(<span class="literal">true</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="操作示意">操作示意</h2>
@@ -3828,17 +3828,17 @@
     <url>/posts/JobSequenceProblem/</url>
     <content><![CDATA[<p>有 N 件工作，输入每件工作的费时、最后完成的期限及工作的价值，试求可能的一个完成工作序列，使价值和最大。</p>
 <span id="more"></span>
-<h2 id="原理">原理</h2>
+<h2 id="原理-2">原理</h2>
 <ol>
 <li>按照最后期限越短越先，其次价值越高越先，再次费时越短越先的标准对所有任务进行排序。</li>
 <li>将综合排序最高的加入背包</li>
 <li>计算是否超出期限</li>
 <li>重复前面的步骤，知道所有任务完成</li>
 </ol>
-<h2 id="代码">代码</h2>
+<h2 id="代码-6">代码</h2>
 <p>Github 库地址：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1p2b25pbWlyU3VuL0pvYlNlcXVlbmNlUHJvYmxlbQ==">https://github.com/ZvonimirSun/JobSequenceProblem<i class="fa fa-external-link-alt"></i></span></p>
 <figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Program to find the maximum profit job sequence from a given array</span></span><br><span class="line"><span class="comment">// of jobs with deadlines and profits</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> 最佳工作序列</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//任务结构</span></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">struct</span> Job</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">public</span> <span class="built_in">int</span> id &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line">            <span class="keyword">public</span> <span class="built_in">int</span> time &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line">            <span class="keyword">public</span> <span class="built_in">int</span> ddl &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line">            <span class="keyword">public</span> <span class="built_in">int</span> profit &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Work</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">//选出价值较大的</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="built_in">bool</span> <span class="title">compare</span>(<span class="params">Job a, Job b</span>)</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">return</span> (a.profit &gt; b.profit);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="comment">//选出较小值</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="built_in">int</span> <span class="title">min</span>(<span class="params"><span class="built_in">int</span> a, <span class="built_in">int</span> b</span>)</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span> (a &lt;= b)</span><br><span class="line">                    <span class="keyword">return</span> a;</span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                    <span class="keyword">return</span> b;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="comment">//选出较大值</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="built_in">int</span> <span class="title">max</span>(<span class="params"><span class="built_in">int</span> a, <span class="built_in">int</span> b</span>)</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span> (a &gt;= b)</span><br><span class="line">                    <span class="keyword">return</span> a;</span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                    <span class="keyword">return</span> b;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="comment">//冒泡排序算法</span></span><br><span class="line">            <span class="function"><span class="keyword">void</span> <span class="title">Sort</span>(<span class="params">Job[] arr</span>)</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; arr.Length - <span class="number">1</span>; i++)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">for</span> (<span class="built_in">int</span> j = <span class="number">0</span>; j &lt; arr.Length - i - <span class="number">1</span>; j++)</span><br><span class="line">                    &#123;</span><br><span class="line">                        <span class="keyword">if</span> (compare(arr[j + <span class="number">1</span>], arr[j]))</span><br><span class="line">                        &#123;</span><br><span class="line">                            Job tem = arr[j];</span><br><span class="line">                            arr[j] = arr[j + <span class="number">1</span>];</span><br><span class="line">                            arr[j + <span class="number">1</span>] = tem;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="comment">//计算最佳工作序列</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">printJobScheduling</span>(<span class="params">Job[] arr, <span class="built_in">int</span> n</span>)</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">//对所有工作进行排序</span></span><br><span class="line">                Sort(arr);</span><br><span class="line"></span><br><span class="line">                <span class="comment">//统计最大期限</span></span><br><span class="line">                <span class="built_in">int</span> T = <span class="number">0</span>;</span><br><span class="line">                <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">                &#123;</span><br><span class="line">                    T = max(T, arr[i].ddl);</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                <span class="built_in">int</span>[] result = <span class="keyword">new</span> <span class="built_in">int</span>[n]; <span class="comment">//存储队列</span></span><br><span class="line">                <span class="built_in">int</span>[] slot = <span class="keyword">new</span> <span class="built_in">int</span>[T];  <span class="comment">//监控时间间隙</span></span><br><span class="line"></span><br><span class="line">                <span class="built_in">int</span> t = <span class="number">0</span>;<span class="comment">//工作序列耗时</span></span><br><span class="line">                <span class="built_in">int</span> worth = <span class="number">0</span>;<span class="comment">//工作序列总价值</span></span><br><span class="line"></span><br><span class="line">                <span class="comment">//初始化时间数组为-1</span></span><br><span class="line">                <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; T; i++)</span><br><span class="line">                    slot[i] = <span class="number">-1</span>;</span><br><span class="line"></span><br><span class="line">                <span class="comment">//计算最佳序列</span></span><br><span class="line">                <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="comment">//查找期限中是否有时间空位</span></span><br><span class="line">                    <span class="keyword">for</span> (<span class="built_in">int</span> j = arr[i].ddl - <span class="number">1</span>; j &gt;= <span class="number">0</span>; j--)</span><br><span class="line">                    &#123;</span><br><span class="line">                        <span class="comment">//如果有空位，判断是否有足够费时的时长空隙</span></span><br><span class="line">                        <span class="keyword">if</span> (slot[j] == <span class="number">-1</span>)</span><br><span class="line">                        &#123;</span><br><span class="line">                            <span class="comment">//标记</span></span><br><span class="line">                            <span class="built_in">int</span> flag = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">                            <span class="comment">//如果空位少于费时，标记为1，并退出</span></span><br><span class="line">                            <span class="keyword">for</span> (<span class="built_in">int</span> k = j; k &gt;= j - arr[i].time + <span class="number">1</span>; k--)</span><br><span class="line">                            &#123;</span><br><span class="line">                                <span class="keyword">if</span> (j - arr[i].time + <span class="number">1</span> &lt; <span class="number">0</span>)</span><br><span class="line">                                &#123;</span><br><span class="line">                                    flag = <span class="number">1</span>;</span><br><span class="line">                                    <span class="keyword">break</span>;</span><br><span class="line">                                &#125;</span><br><span class="line">                                <span class="keyword">if</span> (slot[k] != <span class="number">-1</span>) flag = <span class="number">1</span>;</span><br><span class="line">                            &#125;</span><br><span class="line"></span><br><span class="line">                            <span class="comment">//当有足够时间，将时间数组命名为任务引导号</span></span><br><span class="line">                            <span class="keyword">if</span> (flag == <span class="number">0</span>)</span><br><span class="line">                            &#123;</span><br><span class="line">                                <span class="keyword">for</span> (<span class="built_in">int</span> k = j; k &gt;= j - arr[i].time + <span class="number">1</span>; k--)</span><br><span class="line">                                    slot[k] = i;</span><br><span class="line">                                <span class="keyword">break</span>;</span><br><span class="line">                            &#125;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                <span class="comment">//录入结果</span></span><br><span class="line">                <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">                &#123;</span><br><span class="line">                    result[i] = <span class="number">-1</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>, j = <span class="number">0</span>; i &lt; n &amp;&amp; j &lt; T; j++)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">if</span> (j == <span class="number">0</span>)</span><br><span class="line">                    &#123;</span><br><span class="line">                        <span class="keyword">if</span> (slot[j] != <span class="number">-1</span>)</span><br><span class="line">                        &#123;</span><br><span class="line">                            result[i] = arr[slot[j]].id;</span><br><span class="line">                            t += arr[slot[j]].time;</span><br><span class="line">                            worth += arr[slot[j]].profit;</span><br><span class="line">                            i++;</span><br><span class="line">                            <span class="keyword">continue</span>;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">if</span> (slot[j] == <span class="number">-1</span>)</span><br><span class="line">                        <span class="keyword">continue</span>;</span><br><span class="line">                    <span class="keyword">else</span> <span class="keyword">if</span> (slot[j] != slot[j - <span class="number">1</span>])</span><br><span class="line">                    &#123;</span><br><span class="line">                        result[i] = slot[j];</span><br><span class="line">                        t += arr[slot[j]].time;</span><br><span class="line">                        worth += arr[slot[j]].profit;</span><br><span class="line">                        i++;</span><br><span class="line">                        <span class="keyword">continue</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                <span class="comment">//打印结果</span></span><br><span class="line">                <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">if</span> (result[i] != <span class="number">-1</span>)</span><br><span class="line">                        Console.Write(<span class="string">&quot;&#123;0&#125;&quot;</span>, arr[result[i]].id);</span><br><span class="line">                &#125;</span><br><span class="line">                Console.WriteLine();</span><br><span class="line"></span><br><span class="line">                <span class="comment">//打印时间序列</span></span><br><span class="line">                Console.Write(<span class="string">&quot;时间序列:&quot;</span>);</span><br><span class="line">                <span class="keyword">for</span>(<span class="built_in">int</span> i=<span class="number">0</span>;i&lt;T;i++)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">if</span> (slot[i] == <span class="number">-1</span>)</span><br><span class="line">                        Console.Write(<span class="string">&quot;0&quot;</span>);</span><br><span class="line">                    <span class="keyword">else</span></span><br><span class="line">                        Console.Write(<span class="string">&quot;&#123;0&#125;&quot;</span>, arr[slot[i]].id);</span><br><span class="line">                &#125;</span><br><span class="line">                Console.WriteLine();</span><br><span class="line"></span><br><span class="line">                Console.WriteLine(<span class="string">&quot;总耗时为:&#123;0&#125;&quot;</span>, t);</span><br><span class="line">                Console.WriteLine(<span class="string">&quot;总价值为:&#123;0&#125;&quot;</span>, worth);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="built_in">string</span>[] args</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            Work work = <span class="keyword">new</span> Work();</span><br><span class="line">            Console.Write(<span class="string">&quot;请输入任务个数:&quot;</span>);</span><br><span class="line">            <span class="built_in">int</span> n = <span class="built_in">int</span>.Parse(Console.ReadLine());<span class="comment">//记录信息个数</span></span><br><span class="line"></span><br><span class="line">            <span class="comment">//输入任务信息</span></span><br><span class="line">            Job[] arr = <span class="keyword">new</span> Job[n];</span><br><span class="line">            <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">            &#123;</span><br><span class="line">                arr[i].id = i + <span class="number">1</span>;</span><br><span class="line">                Console.Write(<span class="string">&quot;请输入任务&#123;0&#125;的费时:&quot;</span>, i + <span class="number">1</span>);</span><br><span class="line">                arr[i].time = <span class="built_in">int</span>.Parse(Console.ReadLine());</span><br><span class="line">                Console.Write(<span class="string">&quot;请输入任务&#123;0&#125;的最后期限:&quot;</span>, i + <span class="number">1</span>);</span><br><span class="line">                arr[i].ddl = <span class="built_in">int</span>.Parse(Console.ReadLine());</span><br><span class="line">                Console.Write(<span class="string">&quot;请输入任务&#123;0&#125;的价值:&quot;</span>, i + <span class="number">1</span>);</span><br><span class="line">                arr[i].profit = <span class="built_in">int</span>.Parse(Console.ReadLine());</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="comment">//打印任务表</span></span><br><span class="line">            Console.WriteLine();</span><br><span class="line">            Console.WriteLine(<span class="string">&quot;ID\t费时\t期限\t价值&quot;</span>);</span><br><span class="line">            <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">            &#123;</span><br><span class="line">                Console.WriteLine(<span class="string">&quot;&#123;0&#125;\t&#123;1&#125;\t&#123;2&#125;\t&#123;3&#125;&quot;</span>, arr[i].id, arr[i].time, arr[i].ddl, arr[i].profit);</span><br><span class="line">            &#125;</span><br><span class="line">            Console.WriteLine();</span><br><span class="line"></span><br><span class="line">            Console.WriteLine(<span class="string">&quot;下面即为最佳工作序列&quot;</span>);</span><br><span class="line">            work.printJobScheduling(arr, n);</span><br><span class="line">            Console.ReadKey(<span class="literal">true</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="操作示意">操作示意</h2>
+<h2 id="操作示意-2">操作示意</h2>
 <p><img data-src="https://img.iszy.xyz/20190318213542.png" alt=""></p>
 <p><strong>代码如果存在问题，请一定帮我指正!大神，谢谢了!</strong></p>
 <hr>
@@ -4111,8 +4111,8 @@
 <h2 id="WHILE-LOOP-语法">WHILE-LOOP 语法</h2>
 <p>当<strong>条件为真</strong>时，执行语句。</p>
 <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">WHILE <span class="keyword">condition</span> LOOP</span><br><span class="line">    some_statements;</span><br><span class="line"><span class="keyword">END</span> LOOP;</span><br></pre></td></tr></table></figure>
-<h2 id="实例">实例</h2>
-<h3 id="题目">题目</h3>
+<h2 id="实例-2">实例</h2>
+<h3 id="题目-2">题目</h3>
 <p>给出一个 Power 表(表 1)的数据如下：</p>
 <p><img data-src="https://img.iszy.xyz/20190318215310.png" alt=""></p>
 <ol>
@@ -4121,7 +4121,7 @@
 </ol>
 <p><strong>要求:</strong></p>
 <p>编写 SQL 语句，最终显示出六月所有电费。</p>
-<h3 id="答题">答题</h3>
+<h3 id="答题-2">答题</h3>
 <h4 id="创建表，存入初始数据">创建表，存入初始数据</h4>
 <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> <span class="built_in">power</span>(mon <span class="type">int</span>,<span class="keyword">day</span> <span class="type">int</span>,fee <span class="type">int</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> power <span class="keyword">values</span>(<span class="number">6</span>,<span class="number">1</span>,<span class="number">60</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> power <span class="keyword">values</span>(<span class="number">6</span>,<span class="number">2</span>,<span class="number">34</span>);</span><br></pre></td></tr></table></figure>
 <p><img data-src="https://img.iszy.xyz/20190318215323.png" alt=""></p>
@@ -4593,7 +4593,7 @@
 <span id="more"></span>
 <h2 id="WSL-简介">WSL 简介</h2>
 <p><strong>适用于 Linux 的 Windows 子系统</strong>（英语：Windows Subsystem for Linux，简称<strong>WSL</strong>）是一个为在 Windows 10 上能够原生运行 Linux 二进制可执行文件（ELF 格式）的兼容层。它是由微软与 Canonical 公司合作开发，目标是使纯正的 Ubuntu 14.04 “Trusty Tahr” 映像能下载和解压到用户的本地计算机，并且映像内的工具和实用工具能在此子系统上原生运行。</p>
-<h2 id="安装步骤">安装步骤</h2>
+<h2 id="安装步骤-2">安装步骤</h2>
 <p>本文以 Ubuntu 子系统为例。</p>
 <h3 id="开启开发人员模式">开启开发人员模式</h3>
 <p><img data-src="https://img.iszy.xyz/20190318221442.png" alt=""></p>
@@ -4619,7 +4619,7 @@
 <h2 id="内核版本和发行版本号">内核版本和发行版本号</h2>
 <p><img data-src="https://img.iszy.xyz/20190318221636.png" alt=""></p>
 <p>在这里我们可以看到内核版本为 4.4.0，发行版本为 Ubuntu 16.04.3 LTS。</p>
-<h2 id="后话">后话</h2>
+<h2 id="后话-3">后话</h2>
 <p>WSL 最初在 Win 10 Insider Preview build 14316 开始可用，现在正式版已经升级到 1803 版，内部版本号为 17134，功能已经完善了太多。除了受限于 Windows 文件系统，文件操作较慢，其他已经和原版 Ubuntu，不相上下，完全可以替代虚拟机，完成我的工作了，我感觉非常满意。</p>
 ]]></content>
       <categories>
@@ -4781,7 +4781,7 @@
 <p>Font family names that happen to be the same as keyword value (‘inherit’, ‘serif’, etc.) must be quoted to prevent confusion with the keywords with the same names.</p>
 </blockquote>
 <p>另，关键字都是不区分大小写的。</p>
-<h4 id="总结">总结</h4>
+<h4 id="总结-2">总结</h4>
 <p>所以问题也就明晰了，之前不加引号，<code>Noto Serif SC</code>字体应用有问题，就是因为这个字体族名称中有<code>Serif</code>关键字，被解析成了<code>serif</code>并使用了浏览器默认配置的<code>serif</code>字体。</p>
 <p>所以就能把配置进一步优化成我的最终配置。</p>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">global:</span></span><br><span class="line">  <span class="attr">external:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">family:</span> <span class="string">&quot;EB Garamond, &#x27;Noto Serif SC&#x27;&quot;</span></span><br><span class="line">  <span class="attr">size:</span></span><br></pre></td></tr></table></figure>
@@ -4803,7 +4803,7 @@
 <span id="more"></span>
 <h2 id="问题概述">问题概述</h2>
 <p>Acrobat 的图标异常问题，究其原因是 WIN 10 系统自带的照片 APP 并不能很好地支持 ico 文件。而照片 APP 一般会被设置为系统默认图片查看器，有时就会出现图标显示异常的问题。如果有其他的图标出现显示异常，也有可能是这个原因。</p>
-<h2 id="解决办法">解决办法</h2>
+<h2 id="解决办法-2">解决办法</h2>
 <p>知道了问题，那解决起来就非常简单了。那就是把<code>.ico</code>类型文件的关联程序设置为<code>画图</code>。</p>
 <p>设置关联程序的办法有如下几个。</p>
 <ol>
@@ -4963,7 +4963,7 @@ SWIFT 代码：CIBKCNBJ100<br>
 </tr>
 </tbody>
 </table>
-<h2 id="解决方案">解决方案</h2>
+<h2 id="解决方案-2">解决方案</h2>
 <p>通过上面的介绍，我们可以看出来，为了保证全局的唯一性，我们将使用 uuid1 方法来完成这项工作。</p>
 <p>我们用 ArcGIS 打开我们需要创建唯一字段的矢量数据属性表，创建一个类型为 text 的新字段，打开字段编辑器(Field Calculator)。Parser 选择<code>Python</code>，勾选<code>Show Codeblock</code>，分别输入以下内容。</p>
 <ul>
@@ -5115,7 +5115,7 @@ SWIFT 代码：CIBKCNBJ100<br>
 <p>激活 steam 密钥命令：<code>redeem &lt;key&gt;</code></p>
 <p><img data-src="https://img.iszy.xyz/20190318211831.png" alt=""></p>
 <p>更多命令，请参<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0p1c3RBcmNoaS9BcmNoaVN0ZWFtRmFybS93aWtpL0NvbW1hbmRz">官方 WIKI<i class="fa fa-external-link-alt"></i></span>。</p>
-<h2 id="后话">后话</h2>
+<h2 id="后话-4">后话</h2>
 <p>现在你已经成功搭建了云挂卡平台，尽情挂卡吧。</p>
 ]]></content>
       <categories>
@@ -5183,7 +5183,7 @@ SWIFT 代码：CIBKCNBJ100<br>
     <url>/posts/at8r9g/</url>
     <content><![CDATA[<p>这篇文章是为了解决 Java 使用 SSL 过程中出现<code>PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target</code>的问题。</p>
 <span id="more"></span>
-<h2 id="问题">问题</h2>
+<h2 id="问题-3">问题</h2>
 <p>今天在给微服务添加自签名证书后，微服务间使用 SSL 验证权限时出现了如下错误。</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target</span><br><span class="line">    at sun.security.ssl.Alerts.getSSLException(Alerts.java:192)</span><br><span class="line">    at sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1949)</span><br><span class="line">    at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:302)</span><br><span class="line">    at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:296)</span><br><span class="line">...</span><br><span class="line">Caused by: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target</span><br><span class="line">    at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:387)</span><br><span class="line">    at sun.security.validator.PKIXValidator.engineValidate(PKIXValidator.java:292)</span><br><span class="line">    at sun.security.validator.Validator.validate(Validator.java:260)</span><br><span class="line">    at sun.security.ssl.X509TrustManagerImpl.validate(X509TrustManagerImpl.java:324)</span><br><span class="line">    at sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:229)</span><br></pre></td></tr></table></figure>
 <p>这是因为自签名证书不被 Java 信任导致 SSL 握手失败。我看网上有不少是通过代码忽略证书验证来解决的，但是我觉得不能一刀切忽略验证，而是应该将特定证书添加到服务器的 Java 证书信任库中。</p>
@@ -5229,7 +5229,7 @@ SWIFT 代码：CIBKCNBJ100<br>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="title function_">import</span>(<span class="string">&quot;./moduleA&quot;</span>).<span class="title function_">then</span>(<span class="comment">/* do stuff */</span>);</span><br></pre></td></tr></table></figure>
 <p>转换后的代码</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="title class_">Promise</span>.<span class="title function_">resolve</span>()</span><br><span class="line">  .<span class="title function_">then</span>(<span class="function">() =&gt;</span> <span class="built_in">require</span>(<span class="string">&quot;./moduleA&quot;</span>))</span><br><span class="line">  .<span class="title function_">then</span>(<span class="comment">/* do stuff */</span>);</span><br></pre></td></tr></table></figure>
-<h2 id="解决">解决</h2>
+<h2 id="解决-3">解决</h2>
 <p>既然问题已经清晰了，解决方法就比较明了了，就是要禁用<code>@babel/plugin-proposal-dynamic-import</code>插件。</p>
 <h3 id="选项一（推荐）">选项一（推荐）</h3>
 <p>比较直截了当的方法就是将这个插件直接排除掉。可以通过修改 babel 配置，通过 exclude 选项，将插件直接排除。</p>
@@ -5324,7 +5324,7 @@ SWIFT 代码：CIBKCNBJ100<br>
 <p>其他可选主题有 <code>Agnoster</code>、<code>Avit</code>、<code>Darkblood</code>、<code>Fish</code>、<code>Honukai</code>、<code>Paradox</code>、<code>Sorin</code>、<code>tehrob</code>，可自行选择。</p>
 <p>不知为何，这个主题设置并没有自动保存。</p>
 <p>可以通过把<code>Set-Theme Agnoster</code>这样的命令添加到之前的<code>profile</code>最后来永久保留。</p>
-<h2 id="后话">后话</h2>
+<h2 id="后话-5">后话</h2>
 <p>至此，美化完成，相比之前的蓝底 PowerShell，我自认为已经好看了很多。我在 WSL 里也安装了 oh-my-zsh 可以说是完美衔接了。</p>
 ]]></content>
       <categories>
@@ -5466,7 +5466,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <h2 id="DNS-解析">DNS 解析</h2>
 <p>Caddy Web Server 会自动申请 ssl 证书，全站 https，但是需要提前将域名解析到所在 VPS，否则 Caddy 会启动失败。不需要 ssl 的或想要 IP 访问的请自行调整 Caddy 配置。</p>
 <p><img data-src="https://img.iszy.xyz/20190318212135.png?x-oss-process=style/big" alt=""></p>
-<h2 id="环境配置">环境配置</h2>
+<h2 id="环境配置-2">环境配置</h2>
 <p>ssh 登录 VPS 后，在 root 用户下继续执行下面的操作。</p>
 <h3 id="更新软件源">更新软件源</h3>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">apt update</span><br></pre></td></tr></table></figure>
@@ -5488,7 +5488,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <h3 id="安装">安装</h3>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">apt install mysql-server</span><br></pre></td></tr></table></figure>
 <p>将会有图形界面用以设定 root 密码，根据提示进行操作即可。</p>
-<h3 id="配置">配置</h3>
+<h3 id="配置-2">配置</h3>
 <p>这里采用 SQL 命令配置数据库</p>
 <ol>
 <li>
@@ -5690,7 +5690,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 </ol>
 <h3 id="新网站管理">新网站管理</h3>
 <p>不多说，和你旧网站的管理一致，可能需要等到迁移完成。</p>
-<h2 id="后话">后话</h2>
+<h2 id="后话-6">后话</h2>
 <p>反正我网站的流量也不多，也不用来赚钱，域名换了也就换了。如果你的网站比较大的话，还是要慎重选择是否要进行网站的改版，会对网站造成很大的影响。</p>
 ]]></content>
       <categories>
@@ -5940,11 +5940,11 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
     <url>/posts/compare-stirng-in-java/</url>
     <content><![CDATA[<p>记录一下，最近在 JAVA 中比较两个 String 对象遇到的一个小坑。</p>
 <span id="more"></span>
-<h2 id="问题">问题</h2>
+<h2 id="问题-4">问题</h2>
 <p>最近写程序的时候，遇到了需要比较两个 String 对象是否相等的情况，我习惯性的写了形如<code>if(a == &quot;a&quot;)&#123;&#125;</code>的语句，IDEA 跳出警告，内容如下:</p>
 <figure class="highlight text"><table><tr><td class="code"><pre><span class="line">String values are compared using &#x27;==&#x27;, not &#x27;equals()&#x27;.</span><br></pre></td></tr></table></figure>
 <p>也就是说我刚刚那句话应该写成<code>if(a.equals(&quot;a&quot;))&#123;&#125;</code>才对，果然不再标红了。</p>
-<h2 id="说明">说明</h2>
+<h2 id="说明-2">说明</h2>
 <p>那么，为什么会这样呢？<code>==</code>和<code>equals()</code>分别是什么效果呢？</p>
 <p>对于基本数据类型<code>byte</code>(字节型)、<code>short</code>(短整型)、<code>int</code>(整型)、<code>long</code>(长整型)、<code>float</code>(单精度浮点型)、<code>double</code>(双精度浮点型)、<code>boolean</code>(布尔型)、<code>char</code>(字符型)，<code>==</code>比较的就是他们的值，也不存在<code>equals()</code>方法。</p>
 <p>而对于<code>String</code>这样的引用数据类型，<code>==</code>比较的是两个对象的<strong>引用地址</strong>即内存地址是否相同，如果内存地址相同，自然就是同一个对象了，同一个对象之间有啥好比的。</p>
@@ -6042,7 +6042,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <h2 id="项目地址">项目地址</h2>
 <p>写了 docker-compose，放在了 Github 上，还有些简单的配置文件。</p>
 <p>Github 项目地址: <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1p2b25pbWlyU3VuL2RubXA=">https://github.com/ZvonimirSun/dnmp<i class="fa fa-external-link-alt"></i></span></p>
-<h3 id="简介">简介</h3>
+<h3 id="简介-2">简介</h3>
 <p>通过 Docker 一键部署 LNMP。包含以下内容：</p>
 <ul>
 <li><code>nginx:alpine</code>:
@@ -6084,7 +6084,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 </ul>
 </li>
 </ul>
-<h3 id="安装">安装</h3>
+<h3 id="安装-3">安装</h3>
 <ul>
 <li>请确保已经安装<code>docker</code>和<code>docker-compose</code>。</li>
 <li>将项目 clone 到本地</li>
@@ -6150,7 +6150,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
     <url>/posts/docker-acme-sh/</url>
     <content><![CDATA[<p>本文介绍一下如何通过 Docker 部署 <span class="exturl" data-url="aHR0cDovL2FjbWUuc2g=">acme.sh<i class="fa fa-external-link-alt"></i></span> 申请证书，并添加 crontab 任务自动更新证书。</p>
 <span id="more"></span>
-<h2 id="前言">前言</h2>
+<h2 id="前言-5">前言</h2>
 <p>最近觉得这个 <code>Docker</code> 超好用啊，<code>docker-compose</code> 也是个神器，折腾了半天，把服务器上跑的所有应用都 docker 化了，用一个 <code>docker-compose.yml</code> 统一管理，怎一个爽字了得。</p>
 <p>今天才把 <span class="exturl" data-url="aHR0cDovL2FjbWUuc2g=">acme.sh<i class="fa fa-external-link-alt"></i></span> 替换成 docker，在此记录一下。</p>
 <h2 id="安装环境">安装环境</h2>
@@ -6181,7 +6181,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <p>运行<code>crontab -e</code>来编辑 crontab 文件，添加如下内容，保存即可。</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">0 0 * * * docker exec acme.sh --cron</span><br></pre></td></tr></table></figure>
 <p>可以运行<code>crontab -e</code>来查看已经添加的 crontab 任务。</p>
-<h2 id="后话">后话</h2>
+<h2 id="后话-7">后话</h2>
 <p>所以，这就部署好了，还是很方便的，尤其是在你的 VPS 上有不少 docker，并统一使用 docker-compose 进行管理的时候。有兴趣的可以这么折腾一下啦。</p>
 ]]></content>
       <categories>
@@ -6204,7 +6204,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <h2 id="为什么使用-Docker">为什么使用 Docker</h2>
 <p>我也不想多介绍 Docker，大家可以自己去搜索一下。为什么要用 Docker 呢，那就是简单。</p>
 <p>由于 Docker 确保了执行环境的一致性，不用在意系统环境，你只需要运行做好的 Docker 镜像，部署就完成了，又快又好。</p>
-<h2 id="步骤">步骤</h2>
+<h2 id="步骤-3">步骤</h2>
 <h3 id="安装-Docker">安装 Docker</h3>
 <p>我是用一键脚本进行安装的，非常简便。</p>
 <p>Ubuntu 系统使用以下脚本：</p>
@@ -6282,7 +6282,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <p>阿里云流程结束后，将会等待 namecheap 释放域名，你将会收到一封由 namecheap 发送的验证邮件。</p>
 <p><img data-src="https://img.iszy.xyz/20190318212747.png?x-oss-process=style/big" alt=""></p>
 <p>邮件上说，你如果要取消转移，才去点那个链接，需要等 5 天没有收到消息，namecheap 才会释放域名。其实，经过我的验证，点击那个链接，将会有<code>approve</code>和<code>reject</code>两个选项。点击<code>approve</code>以后，namecheap 就会直接通过验证，释放域名，几秒后，就会收到阿里云域名转移成功的通知。</p>
-<h2 id="后话">后话</h2>
+<h2 id="后话-8">后话</h2>
 <p>至此，域名转移成功，再等一段时间，阿里云会自己修改域名信息、实名认证等，过后就能正常操作域名了。</p>
 ]]></content>
       <categories>
@@ -6354,12 +6354,12 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <li>由于是基于网页版微信，手机上的微信还不能关，但是由于微信支持在网页版微信登录的时候关闭手机上通知，所以还行吧。</li>
 <li>需要自行将消息分类，不然会所有消息堆在一起。</li>
 </ol>
-<h2 id="安装依赖">安装依赖</h2>
+<h2 id="安装依赖-2">安装依赖</h2>
 <h3 id="安装-python3-pip3">安装 python3 &amp; pip3</h3>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">apt install python3-pip python3-dev python3-setuptools libtiff5-dev libjpeg8-dev zlib1g-dev libfreetype6-dev liblcms2-dev libwebp-dev tcl8.5-dev tk8.5-dev libmagic-dev ffmpeg -y</span><br></pre></td></tr></table></figure>
 <h3 id="安装-EH-Forwarder-Bot">安装 EH Forwarder Bot</h3>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pip3 install ehforwarderbot</span><br><span class="line">pip3 install efb-telegram-master</span><br><span class="line">pip3 install efb-wechat-slave</span><br></pre></td></tr></table></figure>
-<h2 id="配置">配置</h2>
+<h2 id="配置-3">配置</h2>
 <h3 id="配置-telegram">配置 telegram</h3>
 <h4 id="创建-bot">创建 bot</h4>
 <p>搜索<code>botfather</code>，注意是图中圈出的，不要找错了。</p>
@@ -6386,7 +6386,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <p><img data-src="https://img.iszy.xyz/20190318213029.png" alt=""></p>
 <h3 id="配置-EH-Forwarder-Bot">配置 EH Forwarder Bot</h3>
 <p>2.0 版本的 EH Forwarder Bot 需要自行创建配置文件。</p>
-<h4 id="创建配置文件">创建配置文件</h4>
+<h4 id="创建配置文件-3">创建配置文件</h4>
 <p>输入以下命令创建并编辑配置文件，路径可能不存在，需要另外创建。</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vi ~/.ehforwarderbot/profiles/default/config.yaml</span><br></pre></td></tr></table></figure>
 <p>输入以下内容并保存。</p>
@@ -6396,7 +6396,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vi ~/.ehforwarderbot/profiles/default/blueset.telegram/config.yaml</span><br></pre></td></tr></table></figure>
 <p>输入以下内容并保存，<code>token</code>后替换为之前在<code>botfather</code>处获得的 http api，<code>admins</code>后面替换成<code>get_id_bot</code>处查询到的个人 id。</p>
 <figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">token:</span> <span class="string">&quot;88888888:dGDe890Pml9lmp9PO9j9pJ9Pn9NMPO0nnki&quot;</span></span><br><span class="line"><span class="attr">admins:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="number">88888888</span></span><br></pre></td></tr></table></figure>
-<h2 id="运行">运行</h2>
+<h2 id="运行-2">运行</h2>
 <h3 id="二维码扫描登录">二维码扫描登录</h3>
 <p>首先需要登录一次，以得到相关文件。输入以下内容启动：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ehforwarderbot</span><br></pre></td></tr></table></figure>
@@ -6415,7 +6415,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <li><code>service ehforwarderbot status</code>: 查看状态</li>
 <li><code>service ehforwarderbot stop</code>: 停止</li>
 </ul>
-<h2 id="使用">使用</h2>
+<h2 id="使用-2">使用</h2>
 <h3 id="添加-bot">添加 bot</h3>
 <p>添加刚刚创建的 bot，这个应该都明白吧。</p>
 <h3 id="常见命令">常见命令</h3>
@@ -6461,7 +6461,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <li><code>Telegram Inline Bot</code>生成的（已兼容格式的）内容可以直接发送到微信。</li>
 <li>手机微信上的未读数不会自动减少。</li>
 </ol>
-<h2 id="后话">后话</h2>
+<h2 id="后话-9">后话</h2>
 <p>我使用微信频率不高，一般也就看看公众号，觉得用着还是非常舒适的，请看官们自行斟酌自己的使用情况。喜欢折腾的也可以自己配置着玩玩，挺有意思的。有点期待，未来会不会也能用 tg 来收发 QQ 消息呢？</p>
 ]]></content>
       <categories>
@@ -6490,13 +6490,13 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <li>个性化界面</li>
 </ul>
 <h2 id="安装及配置">安装及配置</h2>
-<h3 id="安装-Docker">安装 Docker</h3>
+<h3 id="安装-Docker-2">安装 Docker</h3>
 <p>Docker 的安装很简单，教程很多，在这里只列举一下，Ubuntu 和 CentOS 的安装脚本。</p>
 <ul>
 <li>Ubuntu: <code>wget -qO- https://get.docker.com/ | sudo sh</code></li>
 <li>CentOS: <code>curl -fsSL https://get.docker.com -o get-docker.sh &amp;&amp; sudo sh get-docker.sh</code></li>
 </ul>
-<h3 id="创建配置文件">创建配置文件</h3>
+<h3 id="创建配置文件-4">创建配置文件</h3>
 <p>如果要自定义设置的话，那就要创建一个配置文件，注意配置文件中的路径都是 Docker 容器中的虚拟路径。</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vi filebrowser.json</span><br></pre></td></tr></table></figure>
 <p>我的配置文件内容如下</p>
@@ -6525,7 +6525,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo iptables -A INPUT -p tcp --dport 8888 -j ACCEPT</span><br><span class="line">sudo iptables -A OUTPUT -p tcp --sport 8888 -j ACCEPT</span><br></pre></td></tr></table></figure>
 <h4 id="ufw">ufw</h4>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo ufw allow 8888</span><br></pre></td></tr></table></figure>
-<h2 id="后话">后话</h2>
+<h2 id="后话-10">后话</h2>
 <p>好了，以上就是通过 Docker 在 Linux 系统上安装以及使用 File Browser 的方法。既然是 Docker，那么在其他支持 Docker 的平台也是可以用的，Docker 部分的操作是一致的。</p>
 <p>有更多问题，欢迎在评论区留言。</p>
 ]]></content>
@@ -6561,7 +6561,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <li>运行如下命令，刷入并重启到 TWRP Recovery。</li>
 </ol>
 <figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">fastboot.exe flash recovery twrp.img</span><br><span class="line">fastboot.exe boot twrp.img</span><br></pre></td></tr></table></figure>
-<h2 id="安装">安装</h2>
+<h2 id="安装-4">安装</h2>
 <h3 id="下载系统">下载系统</h3>
 <p>在这里我直接提供一下，我下载的版本的下载链接。</p>
 <p>点击下载: <span class="exturl" data-url="aHR0cHM6Ly9qYWlzdC5kbC5zb3VyY2Vmb3JnZS5uZXQvcHJvamVjdC94aWFvbWktZXUtbXVsdGlsYW5nLW1pdWktcm9tcy94aWFvbWkuZXUvTUlVSS1XRUVLTFktUkVMRUFTRVMvOS4yLjIxL3hpYW9taS5ldV9tdWx0aV9NSTZfOS4yLjIxX3YxMC04LjAuemlw">xiaomi.eu_multi_MI6_9.2.21_v10-8.0.zip<i class="fa fa-external-link-alt"></i></span></p>
@@ -6643,14 +6643,14 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <p>本文来介绍一家性价比超高的 SSR/V2Ray 机场，名叫自由鲸 FreeWhale，可满足多种需求。经过长期使用，稳定性和速度上都很不错，推荐一下。</p>
 <span id="more"></span>
 <p><img data-src="https://img.iszy.xyz/20210905234122.png?x-oss-process=style/big" alt=""></p>
-<h2 id="前言">前言</h2>
+<h2 id="前言-6">前言</h2>
 <p>或许不少人已经对自由鲸 FreeWhale 有了不少了解了，在此先提供一下相关的链接和优惠信息。我会尽量保证此处的官网传送门可用。</p>
-<h3 id="相关链接">相关链接</h3>
+<h3 id="相关链接-2">相关链接</h3>
 <p><span class="exturl" data-url="aHR0cHM6Ly91cmwuaXN6eS54eXovZnJlZXdoYWxl">官网传送门<i class="fa fa-external-link-alt"></i></span></p>
 <p>如果需要邀请码，可以使用我的邀请码: <code>iszy</code></p>
 <p>机场测速在这里提供下，仅供参考。考虑到测速会占用大量服务器带宽，尤其是在高峰期，或许会影响其他用户的正常使用，在此不会频繁更新测速记录，仅在出现重大情况或是用户要求更新时更新测速。测速时间会在速度图的底部留有记录。</p>
 <p><a href="/page/speed-test-collection/#FreeWhale-%E8%87%AA%E7%94%B1%E9%B2%B8">⭐⭐ FreeWhale 自由鲸 测速 ⭐⭐</a> (2022-03-15)</p>
-<h3 id="优惠">优惠</h3>
+<h3 id="优惠-2">优惠</h3>
 <blockquote>
 <p>官方长期优惠</p>
 </blockquote>
@@ -6659,7 +6659,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <h2 id="自由鲸-FreeWhale-简介">自由鲸 FreeWhale 简介</h2>
 <p><strong>自由鲸 FreeWhale</strong>是一家长期走中高端路线的 <strong>ShadowsocksR(SSR)</strong> 机场，也提供部分 V2Ray 线路，已经稳定运行多年。实际对比下来，它的性价比还是相当高的，线路又多，提供的流量也十分充足，主要推荐的套餐充分考虑了当前主流用户能够接受的价位，可以说是无可挑剔。现阶段包含大量优质 V2Ray 线路和更多的 SSR 线路，<strong>Lv.2</strong> 节点采用 <strong>SSR 隧道加密</strong>和 V2ray 技术，配合国内 <strong>6Gbps</strong> 机器和负载均衡技术，保证全时段稳定性。用了很久，稳定通过了“多次网络波动”时期，体验极佳，可以放心使用。</p>
 <p>和自由鲸 FreeWhale 接触时间也比较久了，一步步看着自由鲸 FreeWhale 成长到现在这样，也是比较感慨。几年前，自由鲸 FreeWhale 曾经比较惨，一度觉得快要跑路了，没想到硬是撑过了困难时期，到现在线路质量越来越好，回购用户越来越多，可以说和商家负责任的态度有很大关系。我觉得吧，姑且还是可以信任的，可以放心购买。</p>
-<h3 id="特点">特点</h3>
+<h3 id="特点-2">特点</h3>
 <p><strong>封闭邀请机制</strong></p>
 <p>自由鲸 FreeWhale 需要邀请码才能注册成功，这样的注册机制一定程度确保了服务的稳定性。</p>
 <p>如果需要邀请码，可以使用我的邀请码: <code>iszy</code></p>
@@ -6914,7 +6914,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
     <url>/posts/hadoop-cluster-setup/</url>
     <content><![CDATA[<p>今天记录一下，部署 Hadoop 集群的过程。</p>
 <span id="more"></span>
-<h2 id="前期准备">前期准备</h2>
+<h2 id="前期准备-2">前期准备</h2>
 <h3 id="系统及软件版本说明">系统及软件版本说明</h3>
 <p>本章操作中所使用的相关操作系统及软件版本如下：</p>
 <table>
@@ -6976,7 +6976,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 </li>
 </ol>
 <h2 id="Hadoop-集群部署">Hadoop 集群部署</h2>
-<h3 id="安装及配置">安装及配置</h3>
+<h3 id="安装及配置-2">安装及配置</h3>
 <ol>
 <li>
 <p>上传<code>hadoop-2.7.3.tar.gz</code>到<code>/opt</code>目录并解压</p>
@@ -7138,7 +7138,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 (Dynamic) Controls the flood stage watermark, which defaults to 95%. Elasticsearch enforces a read-only index block () on every index that has one or more shards allocated on the node, and that has at least one disk exceeding the flood stage. This setting is a last resort to prevent nodes from running out of disk space. The index block is automatically released when the disk utilization falls below the high watermark.index.blocks.read_only_allow_delete</li>
 </ul>
 </blockquote>
-<h2 id="解决方法">解决方法</h2>
+<h2 id="解决方法-3">解决方法</h2>
 <h3 id="调整物理环境">调整物理环境</h3>
 <p>扩大磁盘，或者删除部分数据来空出一些磁盘，这个没什么好多说的。</p>
 <h3 id="调整-es-配置">调整 es 配置</h3>
@@ -7175,7 +7175,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
     <url>/posts/janusgraph/</url>
     <content><![CDATA[<p>最近折腾了一波 JanusGraph 图数据库的部署，采用 <code>JanusGraph</code> + <code>HBase</code> + <code>ElasticSearch</code> 架构，在此记录下过程。</p>
 <span id="more"></span>
-<h2 id="搭建">搭建</h2>
+<h2 id="搭建-2">搭建</h2>
 <h3 id="搭建准备">搭建准备</h3>
 <p>本文主要记录 JanusGraph 图数据库的部署，需要另行搭建 HBase 和 ElasticSearch，本文以本地已经部署好 HBase 和 ElasticSearch 为例。</p>
 <ul>
@@ -7207,8 +7207,8 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">bin/gremlin-server.sh</span><br></pre></td></tr></table></figure>
 <p>当屏幕上出现如下内容时，则代表服务已经开启完成。</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[gremlin-server-boss-1] INFO  org.apache.tinkerpop.gremlin.server.GremlinServer  - Channel started at port 8182.</span><br></pre></td></tr></table></figure>
-<h3 id="守护进程">守护进程</h3>
-<h4 id="配置">配置</h4>
+<h3 id="守护进程-2">守护进程</h3>
+<h4 id="配置-4">配置</h4>
 <p>在此以 systemd 为例进行配置，可以参考一下，注意替换文件路径。</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo vi /etc/systemd/system/janusgraph.service</span><br></pre></td></tr></table></figure>
 <p>输入以下内容并保存:</p>
@@ -7453,9 +7453,9 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <span id="more"></span>
 <h2 id="前提">前提</h2>
 <p>这里讲的方法适用于使用军哥 LNMP 一键安装包的情况。LNMP 一键安装包官网，请点击<span class="exturl" data-url="aHR0cHM6Ly9sbm1wLm9yZy8=">这里<i class="fa fa-external-link-alt"></i></span>。</p>
-<h2 id="环境">环境</h2>
+<h2 id="环境-2">环境</h2>
 <p>我使用的 LNMP 一键安装包 1.5 版本，默认 php 安装了 php7.0。</p>
-<h2 id="步骤">步骤</h2>
+<h2 id="步骤-4">步骤</h2>
 <p>在这里以安装 zip 扩展为例。</p>
 <h3 id="解压-php-安装包">解压 php 安装包</h3>
 <p>先进入 lnmp 安装包目录，我放在了 root 文件夹中。</p>
@@ -7547,7 +7547,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <p>还可以使用如下语句</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">service minecraft stop #停止 Minecraft 服务</span><br><span class="line">service minecraft status # 查看 Minecraft 服务运行状态</span><br></pre></td></tr></table></figure>
 <p><img data-src="https://img.iszy.xyz/20190318214300.png?x-oss-process=style/big" alt=""></p>
-<h2 id="后话">后话</h2>
+<h2 id="后话-11">后话</h2>
 <p>至此，已经成功在 Ubuntu 16.04 搭建了 Minecraft 服务器 1.13，可以尽情玩耍了。当然，需要获得更好的体验，还有更多调整需要进行。</p>
 ]]></content>
       <categories>
@@ -7569,7 +7569,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">mesg n || true</span><br></pre></td></tr></table></figure>
 <p>这是什么呢？这是为了防止像<code>talk</code>之类的程序写入你的控制台，这在你通过文本会话登录 root 账户时尤为重要。<code>|| true</code>是为了防止在请求 tty 失败时的错误导致 shell 脚本中止。</p>
 <p>把这句话放在<code>.profile</code>文件中，能够让每次运行 bash 的时候，执行这句话。当你从没有 tty 设备的绘画中运行时，你就能看到报错，并且这不会影响其他程序的运行，只是显示一条消息。</p>
-<h2 id="解决方案">解决方案</h2>
+<h2 id="解决方案-3">解决方案</h2>
 <p>虽说这个消息无害，但是总是看到报错消息还是不太舒服，那就把它去掉吧。</p>
 <p>将<code>/root/.profile</code>文件中的<code>mesg n || true</code>改为如下内容。</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">tty -s &amp;&amp; mesg n || true</span><br></pre></td></tr></table></figure>
@@ -7768,8 +7768,8 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <li>Nginx: nginx-1.15.4</li>
 <li>OpenSSL: openssl-1.1.1(LTS)</li>
 </ul>
-<h2 id="教程">教程</h2>
-<h3 id="安装依赖">安装依赖</h3>
+<h2 id="教程-2">教程</h2>
+<h3 id="安装依赖-3">安装依赖</h3>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt install -y build-essential libpcre3 libpcre3-dev zlib1g-dev liblua5.1-dev libluajit-5.1-dev libgeoip-dev google-perftools libgoogle-perftools-dev</span><br></pre></td></tr></table></figure>
 <h3 id="下载并解压所需软件">下载并解压所需软件</h3>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wget https://nginx.org/download/nginx-1.15.4.tar.gz</span><br><span class="line">tar zxf nginx-1.15.4.tar.gz</span><br><span class="line">wget https://www.openssl.org/source/openssl-1.1.1.tar.gz</span><br><span class="line">tar zxf openssl-1.1.1.tar.gz</span><br></pre></td></tr></table></figure>
@@ -7808,7 +7808,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <p>The “ssl” directive is deprecated; the “ssl” parameter of the “listen” directive should be used instead.</p>
 </blockquote>
 <p>解决方案很简单，只需要删除配置文件中的<code>ssl on</code>语句，采用<code>listen</code>语句替代，如<code>listen 443 ssl</code>。原本就使用<code>listen 443 ssl</code>语句的就更简单了，直接删除<code>ssl on</code>语句即可。</p>
-<h2 id="后话">后话</h2>
+<h2 id="后话-12">后话</h2>
 <p>好了，到这里，教程算是结束了。OpenSSL 1.1.1 LTS 已经正式发布了，TLS1.3 也已经正式公布。现阶段，Nginx、Apache 等主流 web 服务器还没有官方支持，还需要通过打补丁的方式进行支持。期待 TLS1.3 全面铺开后对网络隐私和抗审查作出的贡献。</p>
 ]]></content>
       <categories>
@@ -7826,10 +7826,10 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
     <url>/posts/nicegram-debug/</url>
     <content><![CDATA[<p>记录一下最新的开启<code>Nicegram Debug</code>的方式，帮助有需要的人。官方 Telegram 已支持解锁，建议使用官方客户端。</p>
 <span id="more"></span>
-<h2 id="说明">说明</h2>
+<h2 id="说明-3">说明</h2>
 <p>Nicegram 曾在<code>5.11(57)</code>版本中移除了 <code>NG Debug</code>，大家都开始采用回退版本的方法来开启<code>NG Debug</code>，在之后的版本中此方法失效。我看了下测试版的更新说明，可以在<code>5.11(59)</code>版本的更新说明中看到，<code>Nicegram Debug</code>已经回归，采用了全新的开启方式，不能再从 Nicegram App 中开启，而是采用 Web 或 Telegram bot 的方式开启。</p>
 <p><img data-src="https://img.iszy.xyz/20191015145457.png" alt="更新说明"></p>
-<h2 id="方法">方法</h2>
+<h2 id="方法-2">方法</h2>
 <p>访问<span class="exturl" data-url="aHR0cHM6Ly9teS5uaWNlZ3JhbS5hcHA=">my.nicegram.app<i class="fa fa-external-link-alt"></i></span>，通过 Telegram 登录你需要开启<code>Nicegram Debug</code>的账户。注意是 Telegram，不是 Nicegram。</p>
 <p><img data-src="https://img.iszy.xyz/20191015141146.png" alt="my.nicegram.app"></p>
 <p>然后将看到开启开关。</p>
@@ -7861,7 +7861,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <h3 id="调用-sleep">调用 sleep</h3>
 <p>在<code>async</code>方法中才能使用<code>await</code>。</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">(<span class="keyword">async</span> () =&gt; &#123;</span><br><span class="line">  <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="comment">//some function</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">await</span> <span class="title function_">sleep</span>();</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
-<h2 id="示例">示例</h2>
+<h2 id="示例-2">示例</h2>
 <p>随便写个示例，可以类比着来。把 sleep 放在你需要暂停的位置上，外面要套上 async。</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">async</span> = <span class="built_in">require</span>(<span class="string">&quot;async&quot;</span>);</span><br><span class="line"><span class="keyword">const</span> <span class="title function_">sleep</span> = (<span class="params"></span>) =&gt; <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">res, rej</span>) =&gt;</span> <span class="built_in">setTimeout</span>(res, <span class="number">1000</span>));</span><br><span class="line"></span><br><span class="line">(<span class="keyword">async</span> () =&gt; &#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">9</span>; i++) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(i);</span><br><span class="line">    <span class="keyword">await</span> <span class="title function_">sleep</span>();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
 ]]></content>
@@ -7878,7 +7878,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
     <url>/posts/postgres-geoserver-setup-docker/</url>
     <content><![CDATA[<p>本文介绍一下如何通过 Docker 部署 <code>Postgresql</code> + <code>PostGIS</code> + <code>Geoserver</code> 环境。本文操作在 Ubuntu 18.04 中完成，理论上适用于其他可用 Docker 的系统环境。</p>
 <span id="more"></span>
-<h2 id="安装-Docker">安装 Docker</h2>
+<h2 id="安装-Docker-3">安装 Docker</h2>
 <p>Docker 的安装很简单，教程很多，在这里只列举一下，Ubuntu 和 CentOS 的安装脚本。</p>
 <ul>
 <li>Ubuntu: <code>wget -qO- https://get.docker.com/ | sudo sh</code></li>
@@ -7928,7 +7928,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <p>前往 ReactOS 官网<span class="exturl" data-url="aHR0cHM6Ly93d3cucmVhY3Rvcy5vcmcvZG93bmxvYWQ=">下载系统镜像<i class="fa fa-external-link-alt"></i></span>。</p>
 <p><img data-src="https://img.iszy.xyz/20190318215607.png?x-oss-process=style/big" alt=""></p>
 <p>将会得到一个 zip 压缩包，解压后是 ReactOS 的安装镜像。</p>
-<h2 id="安装">安装</h2>
+<h2 id="安装-5">安装</h2>
 <p>首先你要安装有 VMware Workstation Pro(或 Player 版)，这部分安装不再赘述。</p>
 <h3 id="创建虚拟机">创建虚拟机</h3>
 <h4 id="新建虚拟机">新建虚拟机</h4>
@@ -7957,7 +7957,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <p><img data-src="https://img.iszy.xyz/20190318215803.png?x-oss-process=style/big" alt=""></p>
 <p>在此，我调整了分辨率为<code>1280x1024x32</code>。</p>
 <p><img data-src="https://img.iszy.xyz/20190318215814.png?x-oss-process=style/big" alt=""></p>
-<h4 id="安装-2">安装</h4>
+<h4 id="安装-6">安装</h4>
 <p>一路回车进行安装，到如下界面。在虚拟机右下角断开 CD 连接后回车重启。</p>
 <p><img data-src="https://img.iszy.xyz/20190318215825.png?x-oss-process=style/big" alt=""></p>
 <h2 id="设置">设置</h2>
@@ -7971,7 +7971,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <p><img data-src="https://img.iszy.xyz/20190318215922.png" alt=""></p>
 <p>一路下一步完成安装，重启后即可进入系统。自动安装驱动可以取消，反正也没有可以支持的内容。</p>
 <p><img data-src="https://img.iszy.xyz/20190318215937.png" alt=""></p>
-<h2 id="后话">后话</h2>
+<h2 id="后话-13">后话</h2>
 <p>ReactOS 完成度已经很高了，经网友测试已经可以兼容许多 Windows 下的程序，完全没有使用 Windows 的代码，可以说是非常了不起了。现在 ReactOS 仍在积极开发，提供了许多新的功能，看官大可以体验一下，说不定未来这个系统真的能够代理 Windows 呢。</p>
 <p>在此我就体验了一下 ReactOS 自带的扫雷游戏，更多功能留给看官自行探索。</p>
 <p><img data-src="https://img.iszy.xyz/20190318215950.png" alt=""></p>
@@ -7992,7 +7992,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <blockquote>
 <p>参考链接: <span class="exturl" data-url="aHR0cHM6Ly93d3cuaG9zdGZhbnMuY24vMjE2Mi5odG1s">无广告追书神器 APP-阅读<i class="fa fa-external-link-alt"></i></span></p>
 </blockquote>
-<h2 id="原理">原理</h2>
+<h2 id="原理-3">原理</h2>
 <p>当您搜索一本书的时，阅读会将该书的书名以关键词的形式提交到各个第三方网络文学网站进行搜索，并通过自定义书源的格式进行解析，方便阅读。</p>
 <h2 id="应用界面">应用界面</h2>
 <p><img data-src="https://img.iszy.xyz/20190318220006.png?x-oss-process=style/big" alt=""></p>
@@ -8039,7 +8039,7 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <p>点击前往<span class="exturl" data-url="aHR0cHM6Ly93d3cuaG9zdGZhbnMuY24vbWFrZS1jb3Vyc2U=">书源制作教程<i class="fa fa-external-link-alt"></i></span>。</p>
 <h2 id="阅读-App-爱好者博客">阅读 App 爱好者博客</h2>
 <p>上面的教程都来自这个<span class="exturl" data-url="aHR0cHM6Ly93d3cuaG9zdGZhbnMuY24v">阅读 App 爱好者博客<i class="fa fa-external-link-alt"></i></span>，大家可以前往查看更多内容。</p>
-<h2 id="后话">后话</h2>
+<h2 id="后话-14">后话</h2>
 <p>阅读 App 是一个相当优秀的阅读软件，省去了大家大量地在网上搜索小说的时间，也让大家免于受到垃圾网站大量广告之苦，这也是我推荐这个应用的原因。但是终究看的还是盗版小说，如果大家喜欢喜欢那本小说，还是最好购买正版支持作者。</p>
 ]]></content>
       <categories>
@@ -9221,7 +9221,7 @@ MASTER 为移动入口的广港专线或深港专线中转。</li>
 <p>会返回类似如下字样，值大于 5.0 即可。</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Version</span><br><span class="line">-------</span><br><span class="line">5.1.18362.145</span><br></pre></td></tr></table></figure>
 <p>在 Win 10 和 Windows Server 2016 中已经安装了 PowerShell 5.1，如果在使用 Win 7、Windows Server 2008 R2 或 Windows Server 2012 则需要升级，官方提供了升级安装包，<span class="exturl" data-url="aHR0cHM6Ly9kb2NzLm1pY3Jvc29mdC5jb20vZW4tdXMvcG93ZXJzaGVsbC9zY3JpcHRpbmcvaW5zdGFsbC9pbnN0YWxsaW5nLXdpbmRvd3MtcG93ZXJzaGVsbD92aWV3PXBvd2Vyc2hlbGwtNg==">点击此处查看<i class="fa fa-external-link-alt"></i></span>。</p>
-<h3 id="安装">安装</h3>
+<h3 id="安装-7">安装</h3>
 <p>下面输入如下语句进行安装，来自 Scoop 官网。</p>
 <p>运行如下语句允许本地脚本运行。</p>
 <figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">set-executionpolicy</span> remotesigned <span class="literal">-scope</span> currentuser</span><br></pre></td></tr></table></figure>
@@ -9337,7 +9337,7 @@ MASTER 为移动入口的广港专线或深港专线中转。</li>
 <p>vlmcsd 是完全与 Microsoft 兼容的 KMS 服务器，是 KMS 服务器的一个独立开源实现，可供所有人使用。可为客户端提供产品激活服务，是 Microsoft KMS 服务器的直接替代品。可以在 Windows 和 Linux 上运行。可以运行在大多数嵌入式系统上，如路由器，NAS，移动电话，平板电脑，电视，机顶盒等。相对于 Microsoft KMS 服务器仅激活客户已支付的产品，vlmcsd 从不拒绝激活。</p>
 <p>虽然 vlmcsd 既不需要激活密钥也不需要付费，但它并不是宣扬盗版 Windows。 其目的是确保合法副本的所有者可以无限制地使用他们的软件。例如，如果购买新计算机或主板，由于硬件更改，密钥将无法从 Microsoft 服务器激活，这种情况下可以通过使用 vlmcsd 激活来继续使用。</p>
 <p>项目地址：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1dpbmQ0L3ZsbWNzZA==">Wind4/vlmcsd<i class="fa fa-external-link-alt"></i></span></p>
-<h3 id="安装-Docker">安装 Docker</h3>
+<h3 id="安装-Docker-4">安装 Docker</h3>
 <p>为了避免系统环境不同引发未知问题，在这里使用 Docker。</p>
 <p>Ubuntu 安装脚本：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget -qO- https://get.docker.com/ | sh</span><br></pre></td></tr></table></figure>
@@ -9349,7 +9349,7 @@ MASTER 为移动入口的广港专线或深港专线中转。</li>
 <p>需要打开 1688 端口供 vlmcsd 使用。在这里举两个常用的。</p>
 <h4 id="UFW">UFW</h4>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ufw allow 1688</span><br></pre></td></tr></table></figure>
-<h4 id="iptables">iptables</h4>
+<h4 id="iptables-2">iptables</h4>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">iptables -A INPUT -p tcp --dport 1688 -j ACCEPT</span><br><span class="line">iptables -A OUTPUT -p tcp --sport 1688 -j ACCEPT</span><br></pre></td></tr></table></figure>
 <h2 id="激活">激活</h2>
 <p>在此我提供一下我个人使用的 KMS 服务器，不想自行安装的可以使用以下服务器。</p>
@@ -9510,7 +9510,7 @@ MASTER 为移动入口的广港专线或深港专线中转。</li>
 <p>等一会儿会显示激活成功。</p>
 <p>可以输入以下命令查看激活状态，一般是 180 天或 45 天的有效期。过期后，如果 KMS 服务器还在，会自动续期的。</p>
 <figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">cscript ospp.vbs /dstatus</span><br></pre></td></tr></table></figure>
-<h2 id="后话">后话</h2>
+<h2 id="后话-15">后话</h2>
 <p>到此，自建 KMS 到激活都介绍完了，按照本文介绍应该已经正常激活了，享受你的软件吧。如果 KMS 服务器出现问题，180 天应该早就解决了吧。</p>
 ]]></content>
       <categories>
@@ -9553,7 +9553,7 @@ MASTER 为移动入口的广港专线或深港专线中转。</li>
 <li>Mysql 8.0.11</li>
 <li>Composer 1.7.1</li>
 </ul>
-<h2 id="环境安装">环境安装</h2>
+<h2 id="环境安装-2">环境安装</h2>
 <h3 id="LNMP">LNMP</h3>
 <p>我使用的是军哥的 LNMP 一键脚本，点击<span class="exturl" data-url="aHR0cHM6Ly9sbm1wLm9yZy8=">这里<i class="fa fa-external-link-alt"></i></span>前往官网。</p>
 <h3 id="Composer">Composer</h3>
@@ -9599,19 +9599,19 @@ MASTER 为移动入口的广港专线或深港专线中转。</li>
 <p>许多朋友都喜欢 chrome 的简洁、纯净，没有国产套壳浏览器的杂乱、流氓。但是 chrome 的纯净又带来了另一个问题，缺失了许多适应国人使用习惯的常见功能，需要通过扩展插件来实现。而且其实也不太容易找到一个优秀的扩展插件，毕竟在谷歌被 404 的情况下，国人大多还是在使用国内 chromium 内核的浏览器，没有这样的需求。</p>
 <p>我一直以来都是使用 chrome 浏览器的，毕竟有条件直接使用谷歌的情况下，chrome 套件用着还是非常舒服的，但是 chrome 没有双击关闭浏览器标签和关闭最后一个标签直接关闭浏览器不太符合我的使用习惯，一直不是很让我满意。你可以说这些都是没有必要的，适应一下就行。比如，可以使用鼠标中键关闭标签这个所有浏览器通用的方法，但是我鼠标中键比较硬，用起来就是没有双击关闭舒服。</p>
 <p>当然，我也是不愿意为了这些妥协去用国内的那些流氓浏览器，现在有能够给 chrome 加上这些功能的简单方法，那自然是极好的。</p>
-<h2 id="简介">简介</h2>
+<h2 id="简介-3">简介</h2>
 <p>这是一个超好用的 chrome 浏览器增强插件，让 chrome 更加符合国人的使用习惯。</p>
 <p>官网链接：<span class="exturl" data-url="aHR0cHM6Ly9zaHVheC5jb20vcG9ydGZvbGlvL2dyZWVuY2hyb21lLw==">点击访问<i class="fa fa-external-link-alt"></i></span></p>
 <p>GreenChrome 插件直接下载地址：<span class="exturl" data-url="aHR0cHM6Ly9zaHVheC5jb20vZ2M=">点击下载<i class="fa fa-external-link-alt"></i></span></p>
 <p><img data-src="https://img.iszy.xyz/20190318220055.png" alt=""></p>
-<h3 id="安装">安装</h3>
+<h3 id="安装-8">安装</h3>
 <p>只需要将下载下来的压缩包解压，将其中对应版本的 dll 放置在<code>chrome.exe</code>同目录下即可。再次打开就已经安装成功。</p>
 <h3 id="如何判断是否安装成功">如何判断是否安装成功</h3>
 <p>如果安装成功，打开设置页面的侧边栏，可以看到<code>设置GreenChrome</code>选项。</p>
 <p><img data-src="https://img.iszy.xyz/20190318220120.png" alt=""></p>
 <p>在关于页面，也应该能够看到 GreenChrome 的标记。</p>
 <p><img data-src="https://img.iszy.xyz/20190318220132.png" alt=""></p>
-<h2 id="功能">功能</h2>
+<h2 id="功能-3">功能</h2>
 <p>以下功能均可在设置页面自行开关，一般情况下，默认即可。</p>
 <h3 id="界面增强">界面增强</h3>
 <ul>
@@ -9634,14 +9634,14 @@ MASTER 为移动入口的广港专线或深港专线中转。</li>
 <li>丰富的设置</li>
 <li>灵敏度可调节</li>
 </ul>
-<h3 id="更多功能">更多功能</h3>
+<h3 id="更多功能-2">更多功能</h3>
 <ul>
 <li>便携化绿色版</li>
 <li>内置 hosts</li>
 <li>完美支持 32 位，64 位</li>
 <li>按键转换</li>
 </ul>
-<h2 id="设置">设置</h2>
+<h2 id="设置-2">设置</h2>
 <h3 id="进入设置">进入设置</h3>
 <p>可以通过如下位置进入设置。</p>
 <p><img data-src="https://img.iszy.xyz/20190318220144.png" alt=""></p>
@@ -9671,8 +9671,8 @@ MASTER 为移动入口的广港专线或深港专线中转。</li>
     <url>/posts/spark-cluster-setup/</url>
     <content><![CDATA[<p>今天记录一下，在 Ubuntu 14.04 上部署 Spark 集群的过程。</p>
 <span id="more"></span>
-<h2 id="前期准备">前期准备</h2>
-<h3 id="系统及软件版本说明">系统及软件版本说明</h3>
+<h2 id="前期准备-3">前期准备</h2>
+<h3 id="系统及软件版本说明-2">系统及软件版本说明</h3>
 <p>本章操作中所使用的相关操作系统及软件版本如下：</p>
 <table>
 <thead>
@@ -9700,7 +9700,7 @@ MASTER 为移动入口的广港专线或深港专线中转。</li>
 </tr>
 </tbody>
 </table>
-<h3 id="JDK-安装">JDK 安装</h3>
+<h3 id="JDK-安装-2">JDK 安装</h3>
 <p>集群中每台机器都需要安装 JDK，步骤如下：</p>
 <ol>
 <li>
@@ -9712,11 +9712,11 @@ MASTER 为移动入口的广港专线或深港专线中转。</li>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;export JAVA_HOME=/opt/jdk1.8.0_191&#x27;</span> &gt;&gt; /etc/profile</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;export JRE_HOME=/opt/jdk1.8.0_191/jre&#x27;</span> &gt;&gt; /etc/profile</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;export CLASSPATH=$JAVA_HOME/lib:$JRE_HOME/lib&#x27;</span> &gt;&gt; /etc/profile</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;export PATH=$JAVA_HOME/bin:$PATH&#x27;</span> &gt;&gt; /etc/profile</span><br><span class="line"><span class="built_in">source</span> /etc/profile</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<h3 id="网络配置">网络配置</h3>
+<h3 id="网络配置-2">网络配置</h3>
 <p>如有三台机器，分别命名为 master、slave1、slave2。那么我们就分别修改各自机器上<code>/etc/hostname</code>文件中的机器名为上述名称。<br>
 修改每台机器的/etc/hosts 文件，添加上述三对网络 IP 和机器名的对应：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">127.0.0.1       localhost</span><br><span class="line">192.168.1.2     master</span><br><span class="line">192.168.1.3     slave1</span><br><span class="line">192.168.1.4     slave2</span><br></pre></td></tr></table></figure>
-<h3 id="SSH-免密登录配置">SSH 免密登录配置</h3>
+<h3 id="SSH-免密登录配置-2">SSH 免密登录配置</h3>
 <p>该操作是要让 master 节点可以无密码 SSH 登陆到各个 slave 节点上。</p>
 <ol>
 <li>
@@ -9736,10 +9736,10 @@ MASTER 为移动入口的广港专线或深港专线中转。</li>
 <p>这样，在 master 节点上就可以无密码 ssh 登录到各个 slave 节点了，在 master 节点上执行 <code>ssh slave1</code> 和 <code>ssh slave2</code> 命令进行检验。</p>
 </li>
 </ol>
-<h2 id="Hadoop-集群部署">Hadoop 集群部署</h2>
+<h2 id="Hadoop-集群部署-2">Hadoop 集群部署</h2>
 <p>Spark 配置前需要部署 Hadoop 集群，这个在<a href="/2019/12/01/hadoop-cluster-setup/">上一篇文章</a>里讲过，可以前往查看。</p>
 <h2 id="Spark-集群部署">Spark 集群部署</h2>
-<h3 id="安装及配置">安装及配置</h3>
+<h3 id="安装及配置-3">安装及配置</h3>
 <ol>
 <li>
 <p>上传 <code>spark-2.2.0-bin-hadoop2.7.tgz</code> 到 <code>/opt</code> 目录并解压。</p>
@@ -9774,7 +9774,7 @@ MASTER 为移动入口的广港专线或深港专线中转。</li>
 <p>分别登录 slave1 和 slave2 执行<code>source /etc/profile</code></p>
 </li>
 </ol>
-<h3 id="启动及验证">启动及验证</h3>
+<h3 id="启动及验证-2">启动及验证</h3>
 <ol>
 <li>
 <p>启动 Spark</p>
@@ -9857,13 +9857,13 @@ MASTER 为移动入口的广港专线或深港专线中转。</li>
     <url>/posts/telegram-sensitive-content/</url>
     <content><![CDATA[<p>分享一下最新的官方 Telegram 关闭敏感内容过滤的方法。</p>
 <span id="more"></span>
-<h2 id="原由">原由</h2>
+<h2 id="原由-2">原由</h2>
 <p>为啥在 iOS 上的 Telegram 会有这种敏感内容过滤呢，自然是苹果喜欢多管闲事，限制在苹果设备上的社交 App 中的敏感内容。本来吧，这也是件好事，不过吧，一来，除了 iOS 其他设备都不存在过滤，用户用着就不平衡了；二来，这个 Telegram 的判定机制和申诉的途径比较坑爹，Telegram 中又有一堆喜欢在各种群里面发广告，奇怪图片的机器人，害得一群讨论正常内容的群组在 iOS 上无法进入，且是否能够解封全凭运气，体验极差。</p>
 <p>现在 Telegram 官方曲线救国，在其他客户端，比如桌面端，提供了关闭敏感内容过滤的开关。</p>
 <blockquote>
 <p>想要无障碍地体验流畅不卡顿的 Telegram，可以了解一下优质的网络加速服务。【<a href="/page/bgfw/">优质机场(SS/SSR/Trojan/V2Ray/专线)推荐</a>】</p>
 </blockquote>
-<h2 id="方法">方法</h2>
+<h2 id="方法-3">方法</h2>
 <p>首先呢，开关在移动端的 App 里是看不到的，可以在网页端或桌面端进行关闭。</p>
 <p>如果根据步骤找不到开关，建议检查下 Telegram 版本。</p>
 <h3 id="网页端">网页端</h3>
@@ -9942,7 +9942,7 @@ MASTER 为移动入口的广港专线或深港专线中转。</li>
 <h2 id="下载文件">下载文件</h2>
 <p>项目地址: <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1p2b25pbWlyU3VuL25vZGUtYXNmLWJvdA==">node-asf-bot<i class="fa fa-external-link-alt"></i></span></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/ZvonimirSun/node-asf-bot.git</span><br><span class="line"><span class="built_in">cd</span> node-asf-bot</span><br></pre></td></tr></table></figure>
-<h2 id="运行">运行</h2>
+<h2 id="运行-3">运行</h2>
 <h3 id="直接运行">直接运行</h3>
 <h4 id="依赖">依赖</h4>
 <ul>
@@ -9993,7 +9993,7 @@ MASTER 为移动入口的广港专线或深港专线中转。</li>
     <url>/posts/u62i8r/</url>
     <content><![CDATA[<p>今天需要生成一个自签名证书，记录下。</p>
 <span id="more"></span>
-<h2 id="需求">需求</h2>
+<h2 id="需求-2">需求</h2>
 <p>今天，我需要给微服务统一添加一个自签名证书，按照最简单的方式生成了一个证书。不过现在这个证书在验证时会报<code>No subject alternative names present</code>错误，虽然可以通过代码绕过，但是正式环境不太推荐，所以还是在创建证书的环节解决。</p>
 <p>我们查看一个一般的网站证书，可以看到现在的证书都有使用者可选名称，而使用 OpenSSL 的默认参数生成的自签名证书是没有这一条的，而 SSL 验证较为严格的地方就会报上面的错误。</p>
 <p><img data-src="https://img.iszy.xyz/20210309172353.png" alt=""></p>
@@ -10061,7 +10061,7 @@ MASTER 为移动入口的广港专线或深港专线中转。</li>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">source /etc/environment</span><br></pre></td></tr></table></figure>
 <p>可以通过如下语句确认环境变量是否配置成功</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">echo $JAVA_HOME</span><br></pre></td></tr></table></figure>
-<h2 id="后话">后话</h2>
+<h2 id="后话-16">后话</h2>
 <p>现在已经成功安装了 Oracle Java 8，尽情使用吧。</p>
 ]]></content>
       <categories>
@@ -10100,7 +10100,7 @@ MASTER 为移动入口的广港专线或深港专线中转。</li>
     <url>/posts/ufjg58/</url>
     <content><![CDATA[<p>本文我来简单讲一下利用 Github 自建图床的几种方式，希望能对大家有些帮助。</p>
 <span id="more"></span>
-<h2 id="前言">前言</h2>
+<h2 id="前言-7">前言</h2>
 <p>本来我是在自己服务器上搭的图床，套上 cdn，使用体验挺好。为什么想到用 Github 来自建图床呢，主要是考虑到以下几个方面。</p>
 <ol>
 <li>首先，Github 有着免费的存储空间，不用占据自己的硬盘。当然，虽然官方对 repo 没有磁盘限制，但是推荐在 1GB 以下，超过 1GB 会有邮件通知。上传超过 50M 的单个文件会 warning，无法上传超过 100M 的单个文件。不过，对于我这样用于博客图床的，图片容量不会很大，其实已经很够用了。</li>
@@ -10191,7 +10191,7 @@ MASTER 为移动入口的广港专线或深港专线中转。</li>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">echo &quot;net.core.default_qdisc=fq&quot; | sudo tee -a /etc/sysctl.conf</span><br><span class="line">echo &quot;net.ipv4.tcp_congestion_control=bbr&quot; | sudo tee -a /etc/sysctl.conf</span><br><span class="line">sudo sysctl -p</span><br></pre></td></tr></table></figure>
 <p>此时，BBR 已经启用完成，通过<code>sysctl net.ipv4.tcp_congestion_control</code>验证一下，可以看到现在使用的拥塞算法已经是 BBR 了，如图所示。</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">net.ipv4.tcp_congestion_control = bbr</span><br></pre></td></tr></table></figure>
-<h2 id="后话">后话</h2>
+<h2 id="后话-17">后话</h2>
 <p>至此，已经完成了 Ubuntu 系统的内核升级和 TCP_BBR 的开启，享受高速网络吧。关于内核提升，虽然编译内核升级的方式也是有效的，但是还是更加推荐通过 APT 的方式升级内核。这既是官方推荐的方式，也是不容易出现问题的方式，还能跟随更新，何乐而不为呢。</p>
 ]]></content>
       <categories>
@@ -10211,7 +10211,7 @@ MASTER 为移动入口的广港专线或深港专线中转。</li>
 <h2 id="安装-Composer">安装 Composer</h2>
 <p>我选择使用<code>Composer 中国全量镜像</code>，这个是由 Laravel China 社区联合又拍云与优帆远扬共同合作推出的公益项目，旨在为广大 PHP 用户提供稳定和高速的 Composer 国内镜像服务。</p>
 <p>虽然我是腾讯云的香港主机啦，但不知道为什么使用 Composer 官网极慢，所以也选择了使用国内镜像。</p>
-<h3 id="安装">安装</h3>
+<h3 id="安装-9">安装</h3>
 <p>使用如下命令安装，如遇权限不足，可添加 sudo。</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wget https://dl.laravel-china.org/composer.phar -O /usr/local/bin/composer</span><br><span class="line">chmod a+x /usr/local/bin/composer</span><br></pre></td></tr></table></figure>
 <h3 id="查看当前版本">查看当前版本</h3>
@@ -10225,7 +10225,7 @@ MASTER 为移动入口的广港专线或深港专线中转。</li>
 <h3 id="单独使用">单独使用</h3>
 <p>如果仅限当前工程使用镜像，去掉 -g 即可。</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">composer config repo.packagist composer https://packagist.laravel-china.org</span><br></pre></td></tr></table></figure>
-<h2 id="问题">问题</h2>
+<h2 id="问题-5">问题</h2>
 <ol>
 <li>
 <p>已存在 composer.lock 文件，先删除，再运行 composer install 重新生成。</p>
@@ -10268,7 +10268,7 @@ git 最初的开发动力来自于 BitKeeper 和 Monotone。git 最初只是作�
 </blockquote>
 <h2 id="Git-下载地址">Git 下载地址</h2>
 <p><span class="exturl" data-url="aHR0cHM6Ly9naXQtc2NtLmNvbS9kb3dubG9hZA==">https://git-scm.com/download<i class="fa fa-external-link-alt"></i></span></p>
-<h2 id="前期准备">前期准备</h2>
+<h2 id="前期准备-4">前期准备</h2>
 <ol>
 <li>
 <p>既然我们的标题说了是要配合 GitHub 使用的，那么在 GitHub 上建一个库是有必要的。具体的建库过程在这里就不细说了，相信大家不会在这里被难住。</p>
@@ -10301,7 +10301,7 @@ git 最初的开发动力来自于 BitKeeper 和 Monotone。git 最初只是作�
 <p><img data-src="https://img.iszy.xyz/20190318220908.png" alt=""></p>
 <h3 id="新建代码库">新建代码库</h3>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 在当前目录新建一个Git代码库</span><br><span class="line">$ git init</span><br><span class="line"></span><br><span class="line"># 新建一个目录，将其初始化为Git代码库</span><br><span class="line">$ git init [project-name]</span><br><span class="line"></span><br><span class="line"># 下载一个项目和它的整个代码历史</span><br><span class="line">$ git clone [url]</span><br></pre></td></tr></table></figure>
-<h3 id="配置">配置</h3>
+<h3 id="配置-5">配置</h3>
 <p>Git 的设置文件为<code>.gitconfig</code>，它可以在用户主目录下（全局配置），也可以在项目目录下（项目配置）。</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 显示当前的Git配置</span><br><span class="line">$ git config --list</span><br><span class="line"></span><br><span class="line"># 编辑Git配置文件</span><br><span class="line">$ git config -e [--global]</span><br><span class="line"></span><br><span class="line"># 设置提交代码时的用户信息</span><br><span class="line">$ git config [--global] user.name &quot;[name]&quot;</span><br><span class="line">$ git config [--global] user.email &quot;[email address]&quot;</span><br></pre></td></tr></table></figure>
 <h3 id="增加-删除文件">增加/删除文件</h3>
@@ -10318,7 +10318,7 @@ git 最初的开发动力来自于 BitKeeper 和 Monotone。git 最初只是作�
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 下载远程仓库的所有变动</span><br><span class="line">$ git fetch [remote]</span><br><span class="line"></span><br><span class="line"># 显示所有远程仓库</span><br><span class="line">$ git remote -v</span><br><span class="line"></span><br><span class="line"># 显示某个远程仓库的信息</span><br><span class="line">$ git remote show [remote]</span><br><span class="line"></span><br><span class="line"># 增加一个新的远程仓库，并命名</span><br><span class="line">$ git remote add [shortname] [url]</span><br><span class="line"></span><br><span class="line"># 取回远程仓库的变化，并与本地分支合并</span><br><span class="line">$ git pull [remote] [branch]</span><br><span class="line"></span><br><span class="line"># 上传本地指定分支到远程仓库</span><br><span class="line">$ git push [remote] [branch]</span><br><span class="line"></span><br><span class="line"># 强行推送当前分支到远程仓库，即使有冲突</span><br><span class="line">$ git push [remote] --force</span><br><span class="line"></span><br><span class="line"># 推送所有分支到远程仓库</span><br><span class="line">$ git push [remote] --all</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <h3 id="撤销">撤销</h3>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 恢复暂存区的指定文件到工作区</span><br><span class="line">$ git checkout [file]</span><br><span class="line"></span><br><span class="line"># 恢复某个commit的指定文件到暂存区和工作区</span><br><span class="line">$ git checkout [commit] [file]</span><br><span class="line"></span><br><span class="line"># 恢复暂存区的所有文件到工作区</span><br><span class="line">$ git checkout .</span><br><span class="line"></span><br><span class="line"># 重置暂存区的指定文件，与上一次commit保持一致，但工作区不变</span><br><span class="line">$ git reset [file]</span><br><span class="line"></span><br><span class="line"># 重置暂存区与工作区，与上一次commit保持一致</span><br><span class="line">$ git reset --hard</span><br><span class="line"></span><br><span class="line"># 重置当前分支的指针为指定commit，同时重置暂存区，但工作区不变</span><br><span class="line">$ git reset [commit]</span><br><span class="line"></span><br><span class="line"># 重置当前分支的HEAD为指定commit，同时重置暂存区和工作区，与指定commit一致</span><br><span class="line">$ git reset --hard [commit]</span><br><span class="line"></span><br><span class="line"># 重置当前HEAD为指定commit，但保持暂存区和工作区不变</span><br><span class="line">$ git reset --keep [commit]</span><br><span class="line"></span><br><span class="line"># 新建一个commit，用来撤销指定commit</span><br><span class="line"># 后者的所有变化都将被前者抵消，并且应用到当前分支</span><br><span class="line">$ git revert [commit]</span><br><span class="line"></span><br><span class="line"># 暂时将未提交的变化移除，稍后再移入</span><br><span class="line">$ git stash</span><br><span class="line">$ git stash pop</span><br></pre></td></tr></table></figure>
-<h3 id="其他">其他</h3>
+<h3 id="其他-2">其他</h3>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 生成一个可供发布的压缩包</span><br><span class="line">$ git archive</span><br></pre></td></tr></table></figure>
 <h4 id="参考链接">参考链接</h4>
 <blockquote>
@@ -10340,7 +10340,7 @@ git 最初的开发动力来自于 BitKeeper 和 Monotone。git 最初只是作�
 <span id="more"></span>
 <h2 id="方案">方案</h2>
 <p>通过<code>fork + subtree</code>的方案来解决 hexo 主题配置同步的问题。</p>
-<h2 id="步骤">步骤</h2>
+<h2 id="步骤-5">步骤</h2>
 <h3 id="Fork-主题项目并拉取到本地">Fork 主题项目并拉取到本地</h3>
 <p>首先呢就是 fork 了，fork 一下主题项目，然后你就获得了一个同名的，完全由你控制的主题项目。</p>
 <p>比如说这个<code>NexT</code>，先访问<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RoZW1lLW5leHQvaGV4by10aGVtZS1uZXh0">theme-next<i class="fa fa-external-link-alt"></i></span>页面，然后点下右上角的 Fork，这步就算完成了。然后把 Fork 出来的项目给拉取到本地，以备修改。</p>
@@ -10387,7 +10387,7 @@ git 最初的开发动力来自于 BitKeeper 和 Monotone。git 最初只是作�
     <url>/posts/wild-card/</url>
     <content><![CDATA[<p>既然已经可以通过 Let’s encrypt 申请免费泛域名证书了，本着生命不息，折腾不止的态度，我自然是要试试的。可以看到本站已经用上了 Let’s encrypt 的泛域名证书，本文就对我这次申请过程做一个记录。</p>
 <span id="more"></span>
-<h2 id="前言">前言</h2>
+<h2 id="前言-8">前言</h2>
 <p>关注 Let’s Encrypt 的免费泛域名证书也有一段时间了。毕竟像我这种穷学生使用不起高大上的付费 wildcard 的，之前一直是每个子域名申请一个 ssl 证书。但是由于我老是折腾，也没怎么注意备份证书，就老是在申请，可太麻烦了。这次申请 Let’s Encrypt 的免费泛域名证书，我特意备份好了，以后每个子域名都能用这个证书就方便多了。</p>
 <p>Let’s Encrypt 推出 ACME V2 和泛域名证书的支持也是一波三折，一月多本来就要推出了，因为技术原因，数次推迟，终于在本月 14 号正式宣布上线。由于是刚刚发布，暂时还没有多少一键申请的支持。好在 <span class="exturl" data-url="aHR0cDovL2FjbWUuc2g=">acme.sh<i class="fa fa-external-link-alt"></i></span> 已经可以支持，虽然由于 DNS API 的需要，仅支持有限的解析商，但已经足够方便了。</p>
 <p>下面上官方公告的截取，让人十分激动。</p>
@@ -10400,7 +10400,7 @@ git 最初的开发动力来自于 BitKeeper 和 Monotone。git 最初只是作�
 <li>你要将你的域名在支持的解析商处解析。 - 可以点击<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL05laWxwYW5nL2FjbWUuc2gvYmxvYi9tYXN0ZXIvZG5zYXBpL1JFQURNRS5tZA==">这里<i class="fa fa-external-link-alt"></i></span>查看支持的解析商，没有被列出来即不支持。 - 我注册域名所在的 Namecheap 就不在支持的列表内。</li>
 <li>然后你需要有一台运行 Linux 系统的 VPS 来执行命令。虚拟机或许也行？没有试过。</li>
 </ul>
-<h2 id="步骤">步骤</h2>
+<h2 id="步骤-6">步骤</h2>
 <p>本文以在 CloudXNS 解析的 <span class="exturl" data-url="aHR0cDovL2lzenkubWU=">iszy.me<i class="fa fa-external-link-alt"></i></span> 为例，其他域名参考<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL05laWxwYW5nL2FjbWUuc2gvYmxvYi9tYXN0ZXIvZG5zYXBpL1JFQURNRS5tZA==">这里<i class="fa fa-external-link-alt"></i></span>。我本次系统环境为 Ubuntu 16.04，其他系统可以类比完成。</p>
 <h3 id="首先安装依赖环境">首先安装依赖环境</h3>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt-get update &amp;&amp;  apt-get install curl -y &amp;&amp; apt-get install cron -y &amp;&amp; apt-get install socat -y</span><br></pre></td></tr></table></figure>
@@ -10416,7 +10416,7 @@ git 最初的开发动力来自于 BitKeeper 和 Monotone。git 最初只是作�
 <p><img data-src="https://img.iszy.xyz/20190318221329.png" alt=""></p>
 <h3 id="输入环境参数">输入环境参数</h3>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> CX_Key=<span class="string">&quot;your api key&quot;</span></span><br><span class="line"><span class="built_in">export</span> CX_Secret=<span class="string">&quot;your secret key&quot;</span></span><br></pre></td></tr></table></figure>
-<h3 id="申请证书">申请证书</h3>
+<h3 id="申请证书-2">申请证书</h3>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">~/.acme.sh/acme.sh --issue --dns dns_cx -d iszy.me -d *.iszy.me</span><br></pre></td></tr></table></figure>
 <p>你的证书将会被保存在<code>~/.acme.sh/iszy.me/</code>路径下。包含文件<code>ca.cer</code>、<code>fullchain.cer</code>、<code>iszy.me.cer</code>、<code>iszy.me.conf</code>、<code>iszy.me.csr</code>、<code>iszy.me.csr.conf</code>、<code>iszy.me.key</code>，一般使用<code>fullchain.cer</code>和<code>iszy.me.key</code>就可以了。</p>
 <p>**注意：**第一个<code>-d</code>后面不能直接写泛域名，一定要写普通域名，像我这样，后面的<code>-d</code>就支持写泛域名了。</p>
@@ -10438,7 +10438,7 @@ git 最初的开发动力来自于 BitKeeper 和 Monotone。git 最初只是作�
     <url>/posts/winrar/</url>
     <content><![CDATA[<p>国内代理版本的 WinRAR 无论是否有 key，都有广告，这怎么能忍，尤其是其实有简体中文版本的无广告商业付费 WinRAR 的时候。在这里分享一下简体中文版本的无广告商业付费 WinRAR 的地址。</p>
 <span id="more"></span>
-<h2 id="说明">说明</h2>
+<h2 id="说明-4">说明</h2>
 <p>这个不是中国官网上代理的所谓个人免费版本，无论是否有 key 文件，都会有广告，实在是无法忍受。直接去 WinRAR 官网下载的简体中文版本也是国内代理的版本，也是不对的。</p>
 <p>注意，有下图字样的才是正确的版本。</p>
 <p><img data-src="https://img.iszy.xyz/20190318221343.png" alt=""></p>

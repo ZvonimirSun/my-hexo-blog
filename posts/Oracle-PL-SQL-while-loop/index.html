@@ -170,7 +170,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#WHILE-LOOP-%E8%AF%AD%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text">WHILE-LOOP 语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E4%BE%8B"><span class="nav-number">2.</span> <span class="nav-text">实例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE"><span class="nav-number">2.1.</span> <span class="nav-text">题目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AD%94%E9%A2%98"><span class="nav-number">2.2.</span> <span class="nav-text">答题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E8%A1%A8%EF%BC%8C%E5%AD%98%E5%85%A5%E5%88%9D%E5%A7%8B%E6%95%B0%E6%8D%AE"><span class="nav-number">2.2.1.</span> <span class="nav-text">创建表，存入初始数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E6%95%B4%E6%9C%88%E7%9A%84%E7%94%B5%E8%B4%B9"><span class="nav-number">2.2.2.</span> <span class="nav-text">计算整月的电费</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%98%BE%E7%A4%BA%E7%BB%93%E6%9E%9C"><span class="nav-number">2.2.3.</span> <span class="nav-text">显示结果</span></a></li></ol></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#WHILE-LOOP-%E8%AF%AD%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text">WHILE-LOOP 语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E4%BE%8B-2"><span class="nav-number">2.</span> <span class="nav-text">实例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE-2"><span class="nav-number">2.1.</span> <span class="nav-text">题目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AD%94%E9%A2%98-2"><span class="nav-number">2.2.</span> <span class="nav-text">答题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E8%A1%A8%EF%BC%8C%E5%AD%98%E5%85%A5%E5%88%9D%E5%A7%8B%E6%95%B0%E6%8D%AE"><span class="nav-number">2.2.1.</span> <span class="nav-text">创建表，存入初始数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E6%95%B4%E6%9C%88%E7%9A%84%E7%94%B5%E8%B4%B9"><span class="nav-number">2.2.2.</span> <span class="nav-text">计算整月的电费</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%98%BE%E7%A4%BA%E7%BB%93%E6%9E%9C"><span class="nav-number">2.2.3.</span> <span class="nav-text">显示结果</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -331,8 +331,8 @@
 <h2 id="WHILE-LOOP-语法">WHILE-LOOP 语法</h2>
 <p>当<strong>条件为真</strong>时，执行语句。</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">WHILE <span class="keyword">condition</span> LOOP</span><br><span class="line">    some_statements;</span><br><span class="line"><span class="keyword">END</span> LOOP;</span><br></pre></td></tr></table></figure>
-<h2 id="实例">实例</h2>
-<h3 id="题目">题目</h3>
+<h2 id="实例-2">实例</h2>
+<h3 id="题目-2">题目</h3>
 <p>给出一个 Power 表(表 1)的数据如下：</p>
 <p><img data-src="https://img.iszy.xyz/20190318215310.png" alt=""></p>
 <ol>
@@ -341,7 +341,7 @@
 </ol>
 <p><strong>要求:</strong></p>
 <p>编写 SQL 语句，最终显示出六月所有电费。</p>
-<h3 id="答题">答题</h3>
+<h3 id="答题-2">答题</h3>
 <h4 id="创建表，存入初始数据">创建表，存入初始数据</h4>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> <span class="built_in">power</span>(mon <span class="type">int</span>,<span class="keyword">day</span> <span class="type">int</span>,fee <span class="type">int</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> power <span class="keyword">values</span>(<span class="number">6</span>,<span class="number">1</span>,<span class="number">60</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> power <span class="keyword">values</span>(<span class="number">6</span>,<span class="number">2</span>,<span class="number">34</span>);</span><br></pre></td></tr></table></figure>
 <p><img data-src="https://img.iszy.xyz/20190318215323.png" alt=""></p>

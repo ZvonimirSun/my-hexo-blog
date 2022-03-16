@@ -164,7 +164,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E6%83%85%E6%8F%90%E8%A6%81"><span class="nav-number">1.</span> <span class="nav-text">前情提要</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3"><span class="nav-number">2.</span> <span class="nav-text">解决</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%89%E9%A1%B9%E4%B8%80%EF%BC%88%E6%8E%A8%E8%8D%90%EF%BC%89"><span class="nav-number">2.1.</span> <span class="nav-text">选项一（推荐）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%89%E9%A1%B9%E4%BA%8C"><span class="nav-number">2.2.</span> <span class="nav-text">选项二</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E6%83%85%E6%8F%90%E8%A6%81"><span class="nav-number">1.</span> <span class="nav-text">前情提要</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3-3"><span class="nav-number">2.</span> <span class="nav-text">解决</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%89%E9%A1%B9%E4%B8%80%EF%BC%88%E6%8E%A8%E8%8D%90%EF%BC%89"><span class="nav-number">2.1.</span> <span class="nav-text">选项一（推荐）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%89%E9%A1%B9%E4%BA%8C"><span class="nav-number">2.2.</span> <span class="nav-text">选项二</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -336,7 +336,7 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">import</span>(<span class="string">&quot;./moduleA&quot;</span>).<span class="title function_">then</span>(<span class="comment">/* do stuff */</span>);</span><br></pre></td></tr></table></figure>
 <p>转换后的代码</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Promise</span>.<span class="title function_">resolve</span>()</span><br><span class="line">  .<span class="title function_">then</span>(<span class="function">() =&gt;</span> <span class="built_in">require</span>(<span class="string">&quot;./moduleA&quot;</span>))</span><br><span class="line">  .<span class="title function_">then</span>(<span class="comment">/* do stuff */</span>);</span><br></pre></td></tr></table></figure>
-<h2 id="解决">解决</h2>
+<h2 id="解决-3">解决</h2>
 <p>既然问题已经清晰了，解决方法就比较明了了，就是要禁用<code>@babel/plugin-proposal-dynamic-import</code>插件。</p>
 <h3 id="选项一（推荐）">选项一（推荐）</h3>
 <p>比较直截了当的方法就是将这个插件直接排除掉。可以通过修改 babel 配置，通过 exclude 选项，将插件直接排除。</p>

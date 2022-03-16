@@ -169,7 +169,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9C%80%E6%B1%82"><span class="nav-number">1.</span> <span class="nav-text">需求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%A4%E5%8F%A5%E8%AF%9D%E7%94%9F%E6%88%90%E8%87%AA%E7%AD%BE%E5%90%8D%E8%AF%81%E4%B9%A6"><span class="nav-number">2.</span> <span class="nav-text">两句话生成自签名证书</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9C%80%E6%B1%82-2"><span class="nav-number">1.</span> <span class="nav-text">需求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%A4%E5%8F%A5%E8%AF%9D%E7%94%9F%E6%88%90%E8%87%AA%E7%AD%BE%E5%90%8D%E8%AF%81%E4%B9%A6"><span class="nav-number">2.</span> <span class="nav-text">两句话生成自签名证书</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -327,7 +327,7 @@
     <div class="post-body" itemprop="articleBody">
         <p>今天需要生成一个自签名证书，记录下。</p>
 <span id="more"></span>
-<h2 id="需求">需求</h2>
+<h2 id="需求-2">需求</h2>
 <p>今天，我需要给微服务统一添加一个自签名证书，按照最简单的方式生成了一个证书。不过现在这个证书在验证时会报<code>No subject alternative names present</code>错误，虽然可以通过代码绕过，但是正式环境不太推荐，所以还是在创建证书的环节解决。</p>
 <p>我们查看一个一般的网站证书，可以看到现在的证书都有使用者可选名称，而使用 OpenSSL 的默认参数生成的自签名证书是没有这一条的，而 SSL 验证较为严格的地方就会报上面的错误。</p>
 <p><img data-src="https://img.iszy.xyz/20210309172353.png" alt=""></p>
