@@ -641,7 +641,7 @@ permalink: /page/bgfw/
 ### （四）其他说明
 
 - 客户端教程和下载
-  - 进入[帮助中心](https://shuttle.onl/index.php?rp=/knowledgebase)，说明比较完善。
+  - 进入[帮助中心](https://gatern.com/index.php?rp=/knowledgebase)，说明比较完善。
 - 官方联系
   - 在官网可以使用工单、在线客服两种方式
   - 还提供了官方 tg 群组，可以随时交流，购买套餐后可在套餐页看到进群链接
