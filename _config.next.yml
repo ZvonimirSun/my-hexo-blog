@@ -653,7 +653,7 @@ waline:
     placeholder: |-
       本站支持匿名评论，无需登录~(●'◡'●)
       与文章无关的留言请前往本站留言板，谢谢配合~
-  avatar: # Gravatar style
+  avatar: mp # Gravatar style
   avatarCDN: https://gravatar.cdn.iszy.xyz/avatar/
   meta: [nick, mail, link] # Custom comment header
   pageSize: 10 # Pagination size
