@@ -663,7 +663,7 @@ waline:
   libUrl: https://jsdelivr.cdn.iszy.xyz/npm/@waline/client/dist/Waline.min.js
   dark: "auto"
   emoji:
-    - https://jsdelivr.cdn.iszy.xyz/gh/zvonimirsun/emojis@1.0.2/bilibili-xhl
+    - https://jsdelivr.cdn.iszy.xyz/gh/zvonimirsun/emojis@1.0.3/bilibili-xhl
 #     - https://cdn.jsdelivr.net/gh/zvonimirsun/emojis@1.0.2/qq
 #     - https://cdn.jsdelivr.net/gh/zvonimirsun/emojis@1.0.2/bilibili
 #     - https://cdn.jsdelivr.net/gh/zvonimirsun/emojis@1.0.2/alus
