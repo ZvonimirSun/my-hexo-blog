@@ -8,6 +8,7 @@ tags:
   - LeetCode
   - 力扣
   - JavaScript
+mathjax: true
 ---
 
 <!--more-->
@@ -48,9 +49,9 @@ tags:
 
 **提示：**
 
-- `2 <= nums.length <= 104`
-- `-109 <= nums[i] <= 109`
-- `-109 <= target <= 109`
+- $2 \leq nums.length \leq 10^4$
+- $-109 \leq nums[i] \leq 10^9$
+- $-109 \leq target \leq 10^9$
 - **只会存在一个有效答案**
 
 **进阶：**你可以想出一个时间复杂度小于`O(n2)`的算法吗？
