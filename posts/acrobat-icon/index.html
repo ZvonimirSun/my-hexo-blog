@@ -164,7 +164,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E6%A6%82%E8%BF%B0"><span class="nav-number">1.</span> <span class="nav-text">问题概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95"><span class="nav-number">2.</span> <span class="nav-text">解决办法</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E6%A6%82%E8%BF%B0"><span class="nav-number">1.</span> <span class="nav-text">问题概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95-2"><span class="nav-number">2.</span> <span class="nav-text">解决办法</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -324,10 +324,10 @@
 <span id="more"></span>
 <h2 id="问题概述">问题概述</h2>
 <p>Acrobat 的图标异常问题，究其原因是 WIN 10 系统自带的照片 APP 并不能很好地支持 ico 文件。而照片 APP 一般会被设置为系统默认图片查看器，有时就会出现图标显示异常的问题。如果有其他的图标出现显示异常，也有可能是这个原因。</p>
-<h2 id="解决办法">解决办法</h2>
+<h2 id="解决办法-2">解决办法</h2>
 <p>知道了问题，那解决起来就非常简单了。那就是把<code>.ico</code>类型文件的关联程序设置为<code>画图</code>。</p>
 <p>设置关联程序的办法有如下几个。</p>
-<ol type="1">
+<ol>
 <li>找到任意 ico 文件，或将任意文件改为<code>.ico</code>后缀。右键点击该文件，在打开方式中把默认程序设置为画图。</li>
 <li>在<code>设置</code>-<code>应用</code>-<code>默认应用</code>-<code>按文件类型指定默认应用</code>中找到<code>.ico</code>，将默认程序设置为画图。</li>
 <li>在控制面板中也能找到。在<code>控制面板</code>-<code>程序</code>-<code>默认程序</code>-<code>将文件类型或协议与程序关联</code>中，选择<code>.ico</code>类型进行设置即可。不过最新的 WIN 10，在这里会跳回设置，按照上一种进行设置即可。</li>
@@ -414,7 +414,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">7:25</span>
+    <span title="站点阅读时长">7:26</span>
   </span>
 </div>
   <div class="powered-by">由 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZw==">NexT.Gemini</span> 强力驱动
@@ -449,8 +449,10 @@
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
-<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/third-party/math/mathjax.min.js"></script>
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.2/dist/katex.min.css" integrity="sha256-94CNZ/bJtwrBYZrXhCOBvpB4rZUzBnvAsirFv31TMGo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.2/dist/contrib/copy-tex.min.css" integrity="sha256-+oItviPaTmqjDhk4y4fLLUIMgRQYDV/ZyrRNvQiebWM=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.2/dist/contrib/copy-tex.min.js","integrity":"sha256-etSqbSVF4+Lwe8MGk/Vanc1sR+mWv+qOG73fxWw9p94="}}</script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/third-party/math/katex.min.js"></script>
 
 
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>

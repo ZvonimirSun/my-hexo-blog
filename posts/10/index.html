@@ -168,7 +168,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF"><span class="nav-number">1.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#github-actions-%E8%84%9A%E6%9C%AC"><span class="nav-number">2.</span> <span class="nav-text">Github Actions 脚本</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8C%87%E5%AE%9A%E8%A7%A6%E5%8F%91-action-%E7%9A%84%E4%BA%8B%E4%BB%B6"><span class="nav-number">2.1.</span> <span class="nav-text">指定触发 Action 的事件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE-action-%E8%A6%81%E6%89%A7%E8%A1%8C%E7%9A%84%E5%91%BD%E4%BB%A4"><span class="nav-number">2.2.</span> <span class="nav-text">设置 Action 要执行的命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE-webhook"><span class="nav-number">2.3.</span> <span class="nav-text">配置 Webhook</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C"><span class="nav-number">3.</span> <span class="nav-text">使用体验</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF"><span class="nav-number">1.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Github-Actions-%E8%84%9A%E6%9C%AC"><span class="nav-number">2.</span> <span class="nav-text">Github Actions 脚本</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8C%87%E5%AE%9A%E8%A7%A6%E5%8F%91-Action-%E7%9A%84%E4%BA%8B%E4%BB%B6"><span class="nav-number">2.1.</span> <span class="nav-text">指定触发 Action 的事件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE-Action-%E8%A6%81%E6%89%A7%E8%A1%8C%E7%9A%84%E5%91%BD%E4%BB%A4"><span class="nav-number">2.2.</span> <span class="nav-text">设置 Action 要执行的命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE-Webhook"><span class="nav-number">2.3.</span> <span class="nav-text">配置 Webhook</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C"><span class="nav-number">3.</span> <span class="nav-text">使用体验</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -328,29 +328,35 @@
 <span id="more"></span>
 <h2 id="思路">思路</h2>
 <p>初步的想法是通过 Github Actions 编译项目，然后将编译完成的输出推送到 deploy 或者 gh-pages 分支，然后通过 Webhook 通知服务器，最终通过脚本进入部署目录将文件 pull 下来完成整个部署流程。</p>
-<h2 id="github-actions-脚本">Github Actions 脚本</h2>
+<h2 id="Github-Actions-脚本">Github Actions 脚本</h2>
 <p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1p2b25pbWlyU3VuL215LWhleG8tYmxvZy9ibG9iLzljYWMxNWFhNTIyYTQ2ZWQ2NmE3MDdjMzM4ZWQyMjlkMjBkYWRjMTkvLmdpdGh1Yi93b3JrZmxvd3MvZGVwbG95LnltbA==">完整脚本<i class="fa fa-external-link-alt"></i></span></p>
-<h3 id="指定触发-action-的事件">指定触发 Action 的事件</h3>
+<h3 id="指定触发-Action-的事件">指定触发 Action 的事件</h3>
 <p>首先要指定触发部署的事件，在这里我将事件指定为 main 分支的推送事件，main 分支的 pull_request 事件，以及允许手动启动部署操作以防万一。</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="attr">push:</span></span><br><span class="line">    <span class="attr">branches:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">main</span></span><br><span class="line">  <span class="attr">pull_request:</span></span><br><span class="line">    <span class="attr">branches:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">main</span></span><br><span class="line">  <span class="attr">workflow_dispatch:</span></span><br></pre></td></tr></table></figure>
-<h3 id="设置-action-要执行的命令">设置 Action 要执行的命令</h3>
+<h3 id="设置-Action-要执行的命令">设置 Action 要执行的命令</h3>
 <p>一个 Action 里可以配置多个 job，可以通过 <code>runs-on</code> 设置 job 执行的环境，这里我选择了 <code>ubuntu-latest</code>。</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">build:</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br></pre></td></tr></table></figure>
 <p>每个 job 由多个 step 组成，这里可以选择别人封装好的 action 脚本，也可以选择执行自定义的脚本。</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">build:</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Checkout</span> <span class="string">🛎️</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/checkout@v2</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Use</span> <span class="string">Node.js</span> <span class="number">12</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/setup-node@v1</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">node-version:</span> <span class="number">12.</span><span class="string">x</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Install</span> <span class="string">hexo</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">npm</span> <span class="string">install</span> <span class="string">hexo-cli</span> <span class="string">-g</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Install</span> <span class="string">dependencies</span> <span class="string">🔧</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">yarn</span> <span class="string">install</span> <span class="string">--frozen-lockfile</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Build</span> <span class="string">app</span> <span class="string">🔧</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">hexo</span> <span class="string">g</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Deploy</span> <span class="string">🚀</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">JamesIves/github-pages-deploy-action@4.1.0</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">branch:</span> <span class="string">gh-pages</span></span><br><span class="line">          <span class="attr">folder:</span> <span class="string">public</span></span><br></pre></td></tr></table></figure>
-<ol type="1">
-<li><p>首先使用官方提供的<code>actions/checkout@v2</code>切换到需要执行的分支。如果像我这样没有指定任何配置，那将会默认切换到触发 Action 的分支。</p></li>
-<li><p>使用 <code>actions/setup-node@v1</code> 切换 Node.js 版本。一般环境中都是预装了 Node.js 和 yarn 的，可以直接使用，如果不需要指定到 Node.js 的旧版本，则可以跳过这一步。<code>node-version</code>参数可以像我这样，指定一个版本，也可以配置成一个数组，那么接下来的操作会自动在每一个指定的 Node.js 版本下执行，比较适合测试兼容性这样的使用场景。</p></li>
-<li><p>接下来直接用 <code>run</code> 参数执行自定义的编译脚本，运行默认都是在项目所在的根目录下执行的。</p></li>
-<li><p>最终使用了第三方的 Action <code>JamesIves/github-pages-deploy-action@4.1.0</code>将指定目录(public)下的文件推送到对应的分支(gh-pages)，接下来只需要去服务器上把文件 pull 下来即可。</p></li>
+<ol>
+<li>
+<p>首先使用官方提供的<code>actions/checkout@v2</code>切换到需要执行的分支。如果像我这样没有指定任何配置，那将会默认切换到触发 Action 的分支。</p>
+</li>
+<li>
+<p>使用 <code>actions/setup-node@v1</code> 切换 Node.js 版本。一般环境中都是预装了 Node.js 和 yarn 的，可以直接使用，如果不需要指定到 Node.js 的旧版本，则可以跳过这一步。<code>node-version</code>参数可以像我这样，指定一个版本，也可以配置成一个数组，那么接下来的操作会自动在每一个指定的 Node.js 版本下执行，比较适合测试兼容性这样的使用场景。</p>
+</li>
+<li>
+<p>接下来直接用 <code>run</code> 参数执行自定义的编译脚本，运行默认都是在项目所在的根目录下执行的。</p>
+</li>
+<li>
+<p>最终使用了第三方的 Action <code>JamesIves/github-pages-deploy-action@4.1.0</code>将指定目录(public)下的文件推送到对应的分支(gh-pages)，接下来只需要去服务器上把文件 pull 下来即可。</p>
+</li>
 </ol>
-<h3 id="配置-webhook">配置 Webhook</h3>
+<h3 id="配置-Webhook">配置 Webhook</h3>
 <p>由于是纯静态博客，所以我的服务器上也是没有后端的，所以我找了一个变通的方式来实现。</p>
 <p>在网站的 deploy 路径下放了一个静态的 json 文件，配置允许通过任何请求方式请求，将此文件的请求日志写入系统目录。然后通过一个脚本监听此文件，当有新内容时，进入文件部署目录执行 <code>git pull</code>。</p>
 <p>然后将此路径配置到项目的 Webhook 配置中，如图所示。这样当触发 push 操作时，github 就会发送一个 post 请求到此路径，也就能触发我服务器上的部署脚本了。</p>
-<figure>
-<img data-src="https://img.iszy.xyz/20210923132313.png?x-oss-process=style/big" alt="" /><figcaption>Webhook</figcaption>
-</figure>
+<p><img data-src="https://img.iszy.xyz/20210923132313.png?x-oss-process=style/big" alt="Webhook"></p>
 <h2 id="使用体验">使用体验</h2>
 <p>基本能够在我提交代码后，很好的完成整套部署流程，不再需要去服务器上进行操作，方便了很多。不过感觉通过循环监听文件的方法不是很优雅，效率也不是很高，后面我会考虑是否能有更好的替代方案。</p>
 
@@ -437,7 +443,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">7:25</span>
+    <span title="站点阅读时长">7:26</span>
   </span>
 </div>
   <div class="powered-by">由 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZw==">NexT.Gemini</span> 强力驱动
@@ -472,8 +478,10 @@
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
-<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/third-party/math/mathjax.min.js"></script>
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.2/dist/katex.min.css" integrity="sha256-94CNZ/bJtwrBYZrXhCOBvpB4rZUzBnvAsirFv31TMGo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.2/dist/contrib/copy-tex.min.css" integrity="sha256-+oItviPaTmqjDhk4y4fLLUIMgRQYDV/ZyrRNvQiebWM=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.2/dist/contrib/copy-tex.min.js","integrity":"sha256-etSqbSVF4+Lwe8MGk/Vanc1sR+mWv+qOG73fxWw9p94="}}</script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/third-party/math/katex.min.js"></script>
 
 
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>

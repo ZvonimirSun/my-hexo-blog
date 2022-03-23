@@ -334,7 +334,7 @@
 <li>只能前进，不允许后退。</li>
 </ul>
 <h2 id="步骤">步骤</h2>
-<ol type="1">
+<ol>
 <li>初始状态存入 open 表</li>
 <li>若 open 表为空，则无解</li>
 <li>若 open 表不为空，open 表头移入 close 表</li>
@@ -351,7 +351,7 @@
 <h3 id="主函数">主函数</h3>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> d[<span class="number">9</span>] = &#123; <span class="number">2</span>,<span class="number">8</span>,<span class="number">3</span>,<span class="number">1</span>,<span class="number">6</span>,<span class="number">4</span>,<span class="number">7</span>,<span class="number">0</span>,<span class="number">5</span> &#125;;<span class="comment">//初始状态</span></span><br><span class="line">    <span class="type">int</span> success = <span class="number">0</span>;<span class="comment">//结果标志</span></span><br><span class="line">    Node* f = <span class="keyword">new</span> <span class="built_in">Node</span>(<span class="number">8</span>, <span class="number">-1</span>, d);<span class="comment">//建立初始节点</span></span><br><span class="line">    Queue table;<span class="comment">//新建链表</span></span><br><span class="line">    table.<span class="built_in">EnQueue</span>(f);<span class="comment">//将起始节点放入open表</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//当open表不为空，则继续运算</span></span><br><span class="line">    <span class="keyword">while</span> (!table.<span class="built_in">IsEnd</span>()) &#123;</span><br><span class="line">        success = table.<span class="built_in">DeQueue</span>();</span><br><span class="line">        <span class="keyword">if</span> (success == <span class="number">-1</span>) <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">if</span> (success == <span class="number">1</span>) <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (success == <span class="number">1</span>) table.<span class="built_in">PrintResult</span>();<span class="comment">//打印节点</span></span><br><span class="line">    <span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">&quot;No result!&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);<span class="comment">//按任意键退出</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="实现效果">实现效果</h3>
-<p><img data-src="https://img.iszy.xyz/20190318211228.png" /></p>
+<p><img data-src="https://img.iszy.xyz/20190318211228.png" alt=""></p>
 <h2 id="后话">后话</h2>
 <p>程序不太好看，仅仅满足实现，欢迎指正。</p>
 
@@ -436,7 +436,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">7:25</span>
+    <span title="站点阅读时长">7:26</span>
   </span>
 </div>
   <div class="powered-by">由 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZw==">NexT.Gemini</span> 强力驱动
@@ -471,8 +471,10 @@
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
-<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/third-party/math/mathjax.min.js"></script>
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.2/dist/katex.min.css" integrity="sha256-94CNZ/bJtwrBYZrXhCOBvpB4rZUzBnvAsirFv31TMGo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.2/dist/contrib/copy-tex.min.css" integrity="sha256-+oItviPaTmqjDhk4y4fLLUIMgRQYDV/ZyrRNvQiebWM=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.2/dist/contrib/copy-tex.min.js","integrity":"sha256-etSqbSVF4+Lwe8MGk/Vanc1sR+mWv+qOG73fxWw9p94="}}</script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/third-party/math/katex.min.js"></script>
 
 
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>

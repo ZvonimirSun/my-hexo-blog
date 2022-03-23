@@ -166,7 +166,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E6%9C%9F%E5%87%86%E5%A4%87"><span class="nav-number">1.</span> <span class="nav-text">前期准备</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%89%88%E6%9C%AC%E8%AF%B4%E6%98%8E"><span class="nav-number">1.1.</span> <span class="nav-text">系统及软件版本说明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jdk-%E5%AE%89%E8%A3%85"><span class="nav-number">1.2.</span> <span class="nav-text">JDK 安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE"><span class="nav-number">1.3.</span> <span class="nav-text">网络配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ssh-%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95%E9%85%8D%E7%BD%AE"><span class="nav-number">1.4.</span> <span class="nav-text">SSH 免密登录配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hadoop-%E9%9B%86%E7%BE%A4%E9%83%A8%E7%BD%B2"><span class="nav-number">2.</span> <span class="nav-text">Hadoop 集群部署</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE"><span class="nav-number">2.1.</span> <span class="nav-text">安装及配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%AF%E5%8A%A8%E5%8F%8A%E9%AA%8C%E8%AF%81"><span class="nav-number">2.2.</span> <span class="nav-text">启动及验证</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E6%9C%9F%E5%87%86%E5%A4%87-2"><span class="nav-number">1.</span> <span class="nav-text">前期准备</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E5%8F%8A%E8%BD%AF%E4%BB%B6%E7%89%88%E6%9C%AC%E8%AF%B4%E6%98%8E"><span class="nav-number">1.1.</span> <span class="nav-text">系统及软件版本说明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JDK-%E5%AE%89%E8%A3%85"><span class="nav-number">1.2.</span> <span class="nav-text">JDK 安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE"><span class="nav-number">1.3.</span> <span class="nav-text">网络配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SSH-%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95%E9%85%8D%E7%BD%AE"><span class="nav-number">1.4.</span> <span class="nav-text">SSH 免密登录配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hadoop-%E9%9B%86%E7%BE%A4%E9%83%A8%E7%BD%B2"><span class="nav-number">2.</span> <span class="nav-text">Hadoop 集群部署</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE-2"><span class="nav-number">2.1.</span> <span class="nav-text">安装及配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%AF%E5%8A%A8%E5%8F%8A%E9%AA%8C%E8%AF%81"><span class="nav-number">2.2.</span> <span class="nav-text">启动及验证</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -324,49 +324,57 @@
     <div class="post-body" itemprop="articleBody">
         <p>今天记录一下，部署 Hadoop 集群的过程。</p>
 <span id="more"></span>
-<h2 id="前期准备">前期准备</h2>
+<h2 id="前期准备-2">前期准备</h2>
 <h3 id="系统及软件版本说明">系统及软件版本说明</h3>
 <p>本章操作中所使用的相关操作系统及软件版本如下：</p>
 <table>
 <thead>
-<tr class="header">
+<tr>
 <th>软件</th>
 <th>版本</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>操作系统</td>
 <td>Ubuntu 14.04.1</td>
 </tr>
-<tr class="even">
+<tr>
 <td>JDK</td>
 <td>1.8.0</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>Hadoop</td>
 <td>2.7.3</td>
 </tr>
 </tbody>
 </table>
-<h3 id="jdk-安装">JDK 安装</h3>
+<h3 id="JDK-安装">JDK 安装</h3>
 <p>集群中每台机器都需要安装 JDK，步骤如下：</p>
-<ol type="1">
-<li><p>上传<code>jdk-8u191-linux-x64.tar.gz</code>到<code>/opt</code>目录并解压</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf jdk-8u191-linux-x64.tar.gz</span><br></pre></td></tr></table></figure></li>
-<li><p>将 JDK 环境变量配置到/etc/profile 中</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;export JAVA_HOME=/opt/jdk1.8.0_191&#x27;</span> &gt;&gt; /etc/profile</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;export JRE_HOME=/opt/jdk1.8.0_191/jre&#x27;</span> &gt;&gt; /etc/profile</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;export CLASSPATH=$JAVA_HOME/lib:$JRE_HOME/lib&#x27;</span> &gt;&gt; /etc/profile</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;export PATH=$JAVA_HOME/bin:$PATH&#x27;</span> &gt;&gt; /etc/profile</span><br><span class="line"><span class="built_in">source</span> /etc/profile</span><br></pre></td></tr></table></figure></li>
+<ol>
+<li>
+<p>上传<code>jdk-8u191-linux-x64.tar.gz</code>到<code>/opt</code>目录并解压</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf jdk-8u191-linux-x64.tar.gz</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>将 JDK 环境变量配置到/etc/profile 中</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;export JAVA_HOME=/opt/jdk1.8.0_191&#x27;</span> &gt;&gt; /etc/profile</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;export JRE_HOME=/opt/jdk1.8.0_191/jre&#x27;</span> &gt;&gt; /etc/profile</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;export CLASSPATH=$JAVA_HOME/lib:$JRE_HOME/lib&#x27;</span> &gt;&gt; /etc/profile</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;export PATH=$JAVA_HOME/bin:$PATH&#x27;</span> &gt;&gt; /etc/profile</span><br><span class="line"><span class="built_in">source</span> /etc/profile</span><br></pre></td></tr></table></figure>
+</li>
 </ol>
 <h3 id="网络配置">网络配置</h3>
-<p>如有三台机器，分别命名为 master、slave1、slave2。那么我们就分别修改各自机器上<code>/etc/hostname</code>文件中的机器名为上述名称。 修改每台机器的/etc/hosts 文件，添加上述三对网络 IP 和机器名的对应：</p>
+<p>如有三台机器，分别命名为 master、slave1、slave2。那么我们就分别修改各自机器上<code>/etc/hostname</code>文件中的机器名为上述名称。<br>
+修改每台机器的/etc/hosts 文件，添加上述三对网络 IP 和机器名的对应：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1       localhost</span><br><span class="line">192.168.1.2     master</span><br><span class="line">192.168.1.3     slave1</span><br><span class="line">192.168.1.4     slave2</span><br></pre></td></tr></table></figure>
-<h3 id="ssh-免密登录配置">SSH 免密登录配置</h3>
+<h3 id="SSH-免密登录配置">SSH 免密登录配置</h3>
 <p>该操作是要让 master 节点可以无密码 SSH 登陆到各个 slave 节点上。</p>
-<ol type="1">
-<li><p>首先生成 master 节点的公钥，在 master 节点的终端中执行</p>
+<ol>
+<li>
+<p>首先生成 master 节点的公钥，在 master 节点的终端中执行</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> -p ~/.ssh</span><br><span class="line"><span class="built_in">cd</span> ~/.ssh</span><br><span class="line">ssh-keygen -t rsa</span><br></pre></td></tr></table></figure>
-<p>多次回车完成 ssh 密钥对创建</p></li>
-<li><p>在各节点上将该公钥加入授权</p>
+<p>多次回车完成 ssh 密钥对创建</p>
+</li>
+<li>
+<p>在各节点上将该公钥加入授权</p>
 <p>将公钥加入 master 本机授权，master 节点上执行命令：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> ~/.ssh/id_rsa.pub &gt;&gt; ~/.ssh/authorized_keys</span><br></pre></td></tr></table></figure>
 <p>完成后执行 <code>ssh master</code> 验证一下（可能需要输入 <code>yes</code>，成功后执行 <code>exit</code> 返回原来的终端）</p>
@@ -374,67 +382,100 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">scp ~/.ssh/id_rsa.pub root@slave1:/root</span><br><span class="line">scp ~/.ssh/id_rsa.pub root@slave2:/root</span><br></pre></td></tr></table></figure>
 <p>接着分别在 slave1 和 slave2 节点上，将 ssh 公匙加入授权：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> -p ~/.ssh</span><br><span class="line"><span class="built_in">cat</span> ~/id_rsa.pub &gt;&gt; ~/.ssh/authorized_keys</span><br></pre></td></tr></table></figure>
-<p>这样，在 master 节点上就可以无密码 ssh 登录到各个 slave 节点了，在 master 节点上执行 <code>ssh slave1</code> 和 <code>ssh slave2</code> 命令进行检验。</p></li>
+<p>这样，在 master 节点上就可以无密码 ssh 登录到各个 slave 节点了，在 master 节点上执行 <code>ssh slave1</code> 和 <code>ssh slave2</code> 命令进行检验。</p>
+</li>
 </ol>
-<h2 id="hadoop-集群部署">Hadoop 集群部署</h2>
-<h3 id="安装及配置">安装及配置</h3>
-<ol type="1">
-<li><p>上传<code>hadoop-2.7.3.tar.gz</code>到<code>/opt</code>目录并解压</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf hadoop-2.7.3.tar.gz</span><br></pre></td></tr></table></figure></li>
-<li><p>在 hadoop 目录上创建 tmp、dfs、dfs/name、 dfs/data 文件夹</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /opt/hadoop-2.7.3</span><br><span class="line"><span class="built_in">mkdir</span> -p tmp dfs dfs/name dfs/data</span><br></pre></td></tr></table></figure></li>
-<li><p>配置环境变量</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;export HADOOP_HOME=/opt/hadoop-2.7.3&#x27;</span> &gt;&gt; /etc/profile</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native&#x27;</span> &gt;&gt; /etc/profile</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;export HADOOP_OPTS=&quot;-Djava.library.path=$HADOOP_HOME/lib&quot;&#x27;</span> &gt;&gt; /etc/profile</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;export PATH=$HADOOP_HOME/bin:$PATH&#x27;</span> &gt;&gt; /etc/profile</span><br><span class="line"><span class="built_in">source</span> /etc/profile</span><br></pre></td></tr></table></figure></li>
-<li><p>修改配置文件</p>
+<h2 id="Hadoop-集群部署">Hadoop 集群部署</h2>
+<h3 id="安装及配置-2">安装及配置</h3>
+<ol>
+<li>
+<p>上传<code>hadoop-2.7.3.tar.gz</code>到<code>/opt</code>目录并解压</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf hadoop-2.7.3.tar.gz</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>在 hadoop 目录上创建 tmp、dfs、dfs/name、 dfs/data 文件夹</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /opt/hadoop-2.7.3</span><br><span class="line"><span class="built_in">mkdir</span> -p tmp dfs dfs/name dfs/data</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>配置环境变量</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;export HADOOP_HOME=/opt/hadoop-2.7.3&#x27;</span> &gt;&gt; /etc/profile</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native&#x27;</span> &gt;&gt; /etc/profile</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;export HADOOP_OPTS=&quot;-Djava.library.path=$HADOOP_HOME/lib&quot;&#x27;</span> &gt;&gt; /etc/profile</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;export PATH=$HADOOP_HOME/bin:$PATH&#x27;</span> &gt;&gt; /etc/profile</span><br><span class="line"><span class="built_in">source</span> /etc/profile</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>修改配置文件</p>
 <p>切换到<code>/opt/hadoop-2.7.3/etc/hadoop</code>目录下修改配置文件。</p>
-<ol type="1">
-<li><p>编辑 <code>hadoop-env.sh</code> 文件，将 <code>JAVA_HOME</code>(25 行)配置项为 <code>JDK</code> 安装目录</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> JAVA_HOME=/opt/jdk1.8.0_191</span><br></pre></td></tr></table></figure></li>
-<li><p>编辑 <code>core-site.xml</code> 文件，添加以下内容，其中 <code>master</code> 为计算机名，<code>/opt/hadoop-2.7.3/tmp</code> 为手动创建的目录。</p>
+<ol>
+<li>
+<p>编辑 <code>hadoop-env.sh</code> 文件，将 <code>JAVA_HOME</code>(25 行)配置项为 <code>JDK</code> 安装目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> JAVA_HOME=/opt/jdk1.8.0_191</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>编辑 <code>core-site.xml</code> 文件，添加以下内容，其中 <code>master</code> 为计算机名，<code>/opt/hadoop-2.7.3/tmp</code> 为手动创建的目录。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /opt/hadoop-2.7.3/etc/hadoop/core-site.xml</span><br></pre></td></tr></table></figure>
 <p>内容：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">name</span>&gt;</span>fs.default.name<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">value</span>&gt;</span>hdfs://master:9000<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">name</span>&gt;</span>hadoop.tmp.dir<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">value</span>&gt;</span>file:/opt/hadoop-2.7.3/tmp<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">description</span>&gt;</span>Abasefor other temporary directories.<span class="tag">&lt;/<span class="name">description</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
-<li><p>编辑 <code>hdfs-site.xml</code> 文件，添加以下内容，其中<code>/opt/hadoop-2.7.3/dfs/name</code> 和 <code>/opt/hadoop-2.7.3/dfs/data</code> 为手动创建目录</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">name</span>&gt;</span>fs.default.name<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">value</span>&gt;</span>hdfs://master:9000<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">name</span>&gt;</span>hadoop.tmp.dir<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">value</span>&gt;</span>file:/opt/hadoop-2.7.3/tmp<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">description</span>&gt;</span>Abasefor other temporary directories.<span class="tag">&lt;/<span class="name">description</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>编辑 <code>hdfs-site.xml</code> 文件，添加以下内容，其中<code>/opt/hadoop-2.7.3/dfs/name</code> 和 <code>/opt/hadoop-2.7.3/dfs/data</code> 为手动创建目录</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /opt/hadoop-2.7.3/etc/hadoop/hdfs-site.xml</span><br></pre></td></tr></table></figure>
 <p>内容：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>dfs.name.dir<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">value</span>&gt;</span>/opt/hadoop-2.7.3/dfs/name<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">description</span>&gt;</span>Path on the local filesystem where theNameNode stores the namespace and transactions logs persistently.<span class="tag">&lt;/<span class="name">description</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>dfs.data.dir<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">value</span>&gt;</span>/opt/hadoop-2.7.3/dfs/data<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">description</span>&gt;</span>Comma separated list of paths on the localfilesystem of a DataNode where it should store its blocks.<span class="tag">&lt;/<span class="name">description</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>dfs.replication<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">value</span>&gt;</span>2<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>dfs.namenode.secondary.http-address<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">value</span>&gt;</span>slave1:50090<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>dfs.permissions<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">value</span>&gt;</span>false<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">description</span>&gt;</span>need not permissions<span class="tag">&lt;/<span class="name">description</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
-<li><p>修改 <code>mapred-site.xml</code></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>dfs.name.dir<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">value</span>&gt;</span>/opt/hadoop-2.7.3/dfs/name<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">description</span>&gt;</span>Path on the local filesystem where theNameNode stores the namespace and transactions logs persistently.<span class="tag">&lt;/<span class="name">description</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>dfs.data.dir<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">value</span>&gt;</span>/opt/hadoop-2.7.3/dfs/data<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">description</span>&gt;</span>Comma separated list of paths on the localfilesystem of a DataNode where it should store its blocks.<span class="tag">&lt;/<span class="name">description</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>dfs.replication<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">value</span>&gt;</span>2<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>dfs.namenode.secondary.http-address<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">value</span>&gt;</span>slave1:50090<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>dfs.permissions<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">value</span>&gt;</span>false<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">description</span>&gt;</span>need not permissions<span class="tag">&lt;/<span class="name">description</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>修改 <code>mapred-site.xml</code></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /opt/hadoop-2.7.3/etc/hadoop/mapred-site.xml</span><br></pre></td></tr></table></figure>
 <p>内容：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>mapred.job.tracker<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">value</span>&gt;</span>master:9001<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>mapred.local.dir<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">value</span>&gt;</span>/opt/hadoop-2.7.3/var<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>mapreduce.framework.name<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">value</span>&gt;</span>yarn<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
-<li><p>修改 <code>yarn-env.sh</code></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>mapred.job.tracker<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">value</span>&gt;</span>master:9001<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>mapred.local.dir<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">value</span>&gt;</span>/opt/hadoop-2.7.3/var<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>mapreduce.framework.name<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">value</span>&gt;</span>yarn<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>修改 <code>yarn-env.sh</code></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /opt/hadoop-2.7.3/etc/hadoop/yarn-env.sh</span><br></pre></td></tr></table></figure>
 <p>内容：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> JAVA_HOME=/opt/jdk1.8.0_191</span><br></pre></td></tr></table></figure></li>
-<li><p>修改 <code>yarn-site.xml</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> JAVA_HOME=/opt/jdk1.8.0_191</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>修改 <code>yarn-site.xml</code></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /opt/hadoop-2.7.3/etc/hadoop/yarn-env.xml</span><br></pre></td></tr></table></figure>
 <p>内容：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- reducer获取数据的方式 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>yarn.nodemanager.aux-services<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">value</span>&gt;</span>mapreduce_shuffle<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- 指定YARN的ResourceManager的地址 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>yarn.resourcemanager.hostname<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">value</span>&gt;</span>slave1<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
-<li><p>修改 <code>slaves</code></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- reducer获取数据的方式 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>yarn.nodemanager.aux-services<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">value</span>&gt;</span>mapreduce_shuffle<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- 指定YARN的ResourceManager的地址 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>yarn.resourcemanager.hostname<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">value</span>&gt;</span>slave1<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>修改 <code>slaves</code></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /opt/hadoop-2.7.3/etc/hadoop/slaves</span><br></pre></td></tr></table></figure>
 <p>内容：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">master</span><br><span class="line">slave1</span><br><span class="line">slave2</span><br></pre></td></tr></table></figure></li>
-</ol></li>
-<li><p>文件配置分发</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">master</span><br><span class="line">slave1</span><br><span class="line">slave2</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li>
+<p>文件配置分发</p>
 <p>至此，master 上的 hadoop 配置已经结束，需将<code>/etc/profile</code>、<code>/opt/hadoop-2.7.3</code>通过 scp 分发至至 slave1、slave2，重新编译 <code>/etc/profile</code> 使生效。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">scp /etc/profile root@slave1:/etc/profile</span><br><span class="line">scp /etc/profile root@slave2:/etc/profile</span><br><span class="line">scp -r /opt/hadoop-2.7.3 root@slave1:/opt/hadoop-2.7.3</span><br><span class="line">scp -r /opt/hadoop-2.7.3 root@slave2:/opt/hadoop-2.7.3</span><br></pre></td></tr></table></figure>
-<p>分别登录 slave1 和 slave2 执行<code>source /etc/profile</code></p></li>
+<p>分别登录 slave1 和 slave2 执行<code>source /etc/profile</code></p>
+</li>
 </ol>
 <h3 id="启动及验证">启动及验证</h3>
-<ol type="1">
-<li><p>第一次启动初始化</p>
+<ol>
+<li>
+<p>第一次启动初始化</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/opt/hadoop-2.7.3/bin/hadoop namenode -format</span><br></pre></td></tr></table></figure>
-<p>初始化成功后，可以在 <code>/opt/hadoop-2.7.3/dfs/name</code> 目录下看到新增了一个 current 目录以及一些文件。</p></li>
-<li><p>Hadoop 启动</p>
-<ol type="1">
-<li><p>启动 hdfs</p>
+<p>初始化成功后，可以在 <code>/opt/hadoop-2.7.3/dfs/name</code> 目录下看到新增了一个 current 目录以及一些文件。</p>
+</li>
+<li>
+<p>Hadoop 启动</p>
+<ol>
+<li>
+<p>启动 hdfs</p>
 <p>在 master 节点执行</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/opt/hadoop-2.7.3/sbin/start-dfs.sh</span><br></pre></td></tr></table></figure></li>
-<li><p>启动 yarn</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/opt/hadoop-2.7.3/sbin/start-dfs.sh</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>启动 yarn</p>
 <p>在 slave1 节点执行</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/opt/hadoop-2.7.3/sbin/start-yarn.sh</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/opt/hadoop-2.7.3/sbin/start-yarn.sh</span><br></pre></td></tr></table></figure>
+</li>
 </ol>
-<p>浏览器输入访问 <span class="exturl" data-url="aHR0cDovL21hc3Rlcjo1MDA3MA==">http://master:50070<i class="fa fa-external-link-alt"></i></span> (替换 master 节点 IP)验证部署成功。</p></li>
+<p>浏览器输入访问 <span class="exturl" data-url="aHR0cDovL21hc3Rlcjo1MDA3MA==">http://master:50070<i class="fa fa-external-link-alt"></i></span> (替换 master 节点 IP)验证部署成功。</p>
+</li>
 </ol>
 
     </div>
@@ -520,7 +561,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">7:25</span>
+    <span title="站点阅读时长">7:26</span>
   </span>
 </div>
   <div class="powered-by">由 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZw==">NexT.Gemini</span> 强力驱动
@@ -555,8 +596,10 @@
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
-<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/third-party/math/mathjax.min.js"></script>
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.2/dist/katex.min.css" integrity="sha256-94CNZ/bJtwrBYZrXhCOBvpB4rZUzBnvAsirFv31TMGo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.2/dist/contrib/copy-tex.min.css" integrity="sha256-+oItviPaTmqjDhk4y4fLLUIMgRQYDV/ZyrRNvQiebWM=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.2/dist/contrib/copy-tex.min.js","integrity":"sha256-etSqbSVF4+Lwe8MGk/Vanc1sR+mWv+qOG73fxWw9p94="}}</script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/third-party/math/katex.min.js"></script>
 
 
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>

@@ -165,7 +165,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E5%8E%9F%E5%9B%A0"><span class="nav-number">1.</span> <span class="nav-text">问题原因</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="nav-number">2.</span> <span class="nav-text">解决方案</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E5%8E%9F%E5%9B%A0"><span class="nav-number">1.</span> <span class="nav-text">问题原因</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88-3"><span class="nav-number">2.</span> <span class="nav-text">解决方案</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -328,12 +328,12 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mesg n || true</span><br></pre></td></tr></table></figure>
 <p>这是什么呢？这是为了防止像<code>talk</code>之类的程序写入你的控制台，这在你通过文本会话登录 root 账户时尤为重要。<code>|| true</code>是为了防止在请求 tty 失败时的错误导致 shell 脚本中止。</p>
 <p>把这句话放在<code>.profile</code>文件中，能够让每次运行 bash 的时候，执行这句话。当你从没有 tty 设备的绘画中运行时，你就能看到报错，并且这不会影响其他程序的运行，只是显示一条消息。</p>
-<h2 id="解决方案">解决方案</h2>
+<h2 id="解决方案-3">解决方案</h2>
 <p>虽说这个消息无害，但是总是看到报错消息还是不太舒服，那就把它去掉吧。</p>
 <p>将<code>/root/.profile</code>文件中的<code>mesg n || true</code>改为如下内容。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tty -s &amp;&amp; mesg n || true</span><br></pre></td></tr></table></figure>
 <p>这就能让<code>mesg</code>在没有 tty 时，不发送消息，而在有 tty 时继续调用。现在你可以不用再看到<code>ttyname failed: Inappropriate ioctl for device</code>了。</p>
-<p><img data-src="https://img.iszy.xyz/20190318214328.png" /></p>
+<p><img data-src="https://img.iszy.xyz/20190318214328.png" alt=""></p>
 
     </div>
 
@@ -415,7 +415,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">7:25</span>
+    <span title="站点阅读时长">7:26</span>
   </span>
 </div>
   <div class="powered-by">由 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZw==">NexT.Gemini</span> 强力驱动
@@ -450,8 +450,10 @@
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
-<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/third-party/math/mathjax.min.js"></script>
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.2/dist/katex.min.css" integrity="sha256-94CNZ/bJtwrBYZrXhCOBvpB4rZUzBnvAsirFv31TMGo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.2/dist/contrib/copy-tex.min.css" integrity="sha256-+oItviPaTmqjDhk4y4fLLUIMgRQYDV/ZyrRNvQiebWM=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.2/dist/contrib/copy-tex.min.js","integrity":"sha256-etSqbSVF4+Lwe8MGk/Vanc1sR+mWv+qOG73fxWw9p94="}}</script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/third-party/math/katex.min.js"></script>
 
 
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>

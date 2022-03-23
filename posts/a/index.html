@@ -330,26 +330,38 @@
 <p>原文链接: <span class="exturl" data-url="aHR0cHM6Ly93d3cuY25ibG9ncy5jb20vbHNkYi9wLzgyMDQ1NzguaHRtbA==">低微漏洞处理办法记录<i class="fa fa-external-link-alt"></i></span> —— 诸子流</p>
 </blockquote>
 <span id="more"></span>
-<ol type="1">
-<li><p>允许 Traceroute 探测</p>
+<ol>
+<li>
+<p>允许 Traceroute 探测</p>
 <p>描述：本插件使用 Traceroute 探测来获取扫描器与远程主机之间的路由信息。攻击者也可以利用这些信息来了解目标网络的网络拓扑。</p>
 <p>处理：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">iptables -I INPUT -p icmp --icmp-type 11 -m comment --comment <span class="string">&quot;deny traceroute&quot;</span> -j DROP</span><br></pre></td></tr></table></figure></li>
-<li><p>ICMP timestamp 请求响应漏洞</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">iptables -I INPUT -p icmp --icmp-type 11 -m comment --comment <span class="string">&quot;deny traceroute&quot;</span> -j DROP</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>ICMP timestamp 请求响应漏洞</p>
 <p>描述：远程主机会回复 ICMP_TIMESTAMP 查询并返回它们系统的当前时间。 这可能允许攻击者攻击一些基于时间认证的协议。</p>
 <p>处理：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">iptables -I INPUT -p ICMP --icmp-type timestamp-request -m comment --comment <span class="string">&quot;deny ICMP timestamp&quot;</span> -j DROP</span><br><span class="line">iptables -I INPUT -p ICMP --icmp-type timestamp-reply -m comment --comment <span class="string">&quot;deny ICMP timestamp&quot;</span> -j DROP</span><br></pre></td></tr></table></figure></li>
-<li><p>探测到 SSH 服务器支持的算法 描述：本插件用来获取 SSH 服务器支持的算法列表</p>
-<p>处理：无法处理。ssh 协议协商过程就是服务端要返回其支持的算法列表。</p></li>
-<li><p>SSH 版本信息可被获取</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">iptables -I INPUT -p ICMP --icmp-type timestamp-request -m comment --comment <span class="string">&quot;deny ICMP timestamp&quot;</span> -j DROP</span><br><span class="line">iptables -I INPUT -p ICMP --icmp-type timestamp-reply -m comment --comment <span class="string">&quot;deny ICMP timestamp&quot;</span> -j DROP</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>探测到 SSH 服务器支持的算法<br>
+描述：本插件用来获取 SSH 服务器支持的算法列表</p>
+<p>处理：无法处理。ssh 协议协商过程就是服务端要返回其支持的算法列表。</p>
+</li>
+<li>
+<p>SSH 版本信息可被获取</p>
 <p>描述：SSH 服务允许远程攻击者获得 ssh 的具体信息，如版本号等等。这可能为攻击者发动进一步攻击提供帮助。</p>
-<p>处理：无法处理。sshd_config 中的 Banner 项只是 ssh 主机前输出的信息，源码处理机制就是 telnet 其端口就会返回版本信息。</p></li>
-<li><p>OpenSSH CBC 模式信息泄露漏洞(CVE-2008-5161)【原理扫描】</p>
-<p>描述：OpenSSH 是一种开放源码的 SSH 协议的实现，初始版本用于 OpenBSD 平台，现在已经被移植到多种 Unix/Linux 类操作系统下。 如果配置为 CBC 模式的话，OpenSSH 没有正确地处理分组密码算法加密的 SSH 会话中所出现的错误，导致可能泄露密文中任意块最多 32 位纯文本。在以标准配置使用 OpenSSH 时，攻击者恢复 32 位纯文本的成功概率为 <span class="math inline">\(2^{-18}\)</span>，此外另一种攻击变种恢复 14 位纯文本的成功概率为 <span class="math inline">\(2^{-14}\)</span>。</p>
+<p>处理：无法处理。sshd_config 中的 Banner 项只是 ssh 主机前输出的信息，源码处理机制就是 telnet 其端口就会返回版本信息。</p>
+</li>
+<li>
+<p>OpenSSH CBC 模式信息泄露漏洞(CVE-2008-5161)【原理扫描】</p>
+<p>描述：OpenSSH 是一种开放源码的 SSH 协议的实现，初始版本用于 OpenBSD 平台，现在已经被移植到多种 Unix/Linux 类操作系统下。<br>
+如果配置为 CBC 模式的话，OpenSSH 没有正确地处理分组密码算法加密的 SSH 会话中所出现的错误，导致可能泄露密文中任意块最多 32 位纯文本。在以标准配置使用 OpenSSH 时，攻击者恢复 32 位纯文本的成功概率为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>2</mn><mrow><mo>−</mo><mn>1</mn><mn>8</mn></mrow></msup></mrow><annotation encoding="application/x-tex">2^{-18}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathrm">2</span><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord scriptstyle uncramped"><span class="mord">−</span><span class="mord mathrm">1</span><span class="mord mathrm">8</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>，此外另一种攻击变种恢复 14 位纯文本的成功概率为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>2</mn><mrow><mo>−</mo><mn>1</mn><mn>4</mn></mrow></msup></mrow><annotation encoding="application/x-tex">2^{-14}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathrm">2</span><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord scriptstyle uncramped"><span class="mord">−</span><span class="mord mathrm">1</span><span class="mord mathrm">4</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>。</p>
 <p>处理：使用 man sshd_config 查看 Ciphers 项可以看到 sshd 支持的算法（如下图所示）</p>
-<p><img data-src="https://img.iszy.xyz/1641952164668.png" /></p>
+<p><img data-src="https://img.iszy.xyz/1641952164668.png" alt=""></p>
 <p>处理办法是在 sshd_config 中配置 Ciphers 项，并去除所有包含 cbc 字眼的算法然后重启 sshd 即可。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Ciphers aes128-ctr,aes192-ctr,aes256-ctr,arcfour256,arcfour128,arcfour</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Ciphers aes128-ctr,aes192-ctr,aes256-ctr,arcfour256,arcfour128,arcfour</span><br></pre></td></tr></table></figure>
+</li>
 </ol>
 
     </div>
@@ -417,7 +429,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">7:25</span>
+    <span title="站点阅读时长">7:26</span>
   </span>
 </div>
   <div class="powered-by">由 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZw==">NexT.Gemini</span> 强力驱动
@@ -452,8 +464,10 @@
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
-<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/third-party/math/mathjax.min.js"></script>
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.2/dist/katex.min.css" integrity="sha256-94CNZ/bJtwrBYZrXhCOBvpB4rZUzBnvAsirFv31TMGo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.2/dist/contrib/copy-tex.min.css" integrity="sha256-+oItviPaTmqjDhk4y4fLLUIMgRQYDV/ZyrRNvQiebWM=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.2/dist/contrib/copy-tex.min.js","integrity":"sha256-etSqbSVF4+Lwe8MGk/Vanc1sR+mWv+qOG73fxWw9p94="}}</script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/third-party/math/katex.min.js"></script>
 
 
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>

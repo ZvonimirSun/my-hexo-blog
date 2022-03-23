@@ -169,7 +169,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#break-on-%E8%AF%AD%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text">BREAK ON 语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%8B%B1%E6%96%87%E5%8E%9F%E6%96%87"><span class="nav-number">1.1.</span> <span class="nav-text">英文原文</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E5%8F%82%E6%95%B0"><span class="nav-number">1.2.</span> <span class="nav-text">命令参数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E4%BE%8B"><span class="nav-number">2.</span> <span class="nav-text">实例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE"><span class="nav-number">2.1.</span> <span class="nav-text">题目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AD%94%E9%A2%98"><span class="nav-number">2.2.</span> <span class="nav-text">答题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%83%A8%E5%88%86%E7%BB%93%E6%9E%9C"><span class="nav-number">2.3.</span> <span class="nav-text">部分结果</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#BREAK-ON-%E8%AF%AD%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text">BREAK ON 语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%8B%B1%E6%96%87%E5%8E%9F%E6%96%87"><span class="nav-number">1.1.</span> <span class="nav-text">英文原文</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E5%8F%82%E6%95%B0"><span class="nav-number">1.2.</span> <span class="nav-text">命令参数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E4%BE%8B"><span class="nav-number">2.</span> <span class="nav-text">实例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE"><span class="nav-number">2.1.</span> <span class="nav-text">题目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AD%94%E9%A2%98"><span class="nav-number">2.2.</span> <span class="nav-text">答题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%83%A8%E5%88%86%E7%BB%93%E6%9E%9C"><span class="nav-number">2.3.</span> <span class="nav-text">部分结果</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -327,21 +327,33 @@
     <div class="post-body" itemprop="articleBody">
         <p>使用 BREAK ON 语句进行排列的实例</p>
 <span id="more"></span>
-<h2 id="break-on-语法">BREAK ON 语法</h2>
-<ol type="1">
-<li><p><code>BRE[AK][ON report_element [action [action]]] ...</code></p>
+<h2 id="BREAK-ON-语法">BREAK ON 语法</h2>
+<ol>
+<li>
+<p><code>BRE[AK][ON report_element [action [action]]] ...</code></p>
 <ul>
-<li><p>report_element 的语法为<code>&#123;column|expr|ROW|REPORT&#125;</code></p></li>
-<li><p>action 的语法为<code>[SKI[P] n|[SKI[P]] PAGE][NODUP[LICATES]|DUP[LICATES]]</code></p></li>
-</ul></li>
-<li><p>指定报告中发生更改的位置以及要执行的格式化操作，比如：</p>
+<li>
+<p>report_element 的语法为<code>&#123;column|expr|ROW|REPORT&#125;</code></p>
+</li>
+<li>
+<p>action 的语法为<code>[SKI[P] n|[SKI[P]] PAGE][NODUP[LICATES]|DUP[LICATES]]</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p>指定报告中发生更改的位置以及要执行的格式化操作，比如：</p>
 <ul>
 <li>抑制显示给定列的重复值。</li>
 <li>每次给定列值更改时跳过一行。</li>
 <li>每次给定列值发生变化或在报告结束时打印计算的数字。</li>
-</ul></li>
-<li><p>不带参数直接输入 BREAK 来查看当前的 BREAK 定义。</p></li>
-<li><p>此语句经常和 Compute 命令配合使用。</p></li>
+</ul>
+</li>
+<li>
+<p>不带参数直接输入 BREAK 来查看当前的 BREAK 定义。</p>
+</li>
+<li>
+<p>此语句经常和 Compute 命令配合使用。</p>
+</li>
 </ol>
 <h3 id="英文原文">英文原文</h3>
 <p><code>BRE[AK][ON report_element [action [action]]] ...</code></p>
@@ -349,48 +361,54 @@
 <p>and action has the syntax <code>[SKI[P] n|[SKI[P]] PAGE][NODUP[LICATES]|DUP[LICATES]]</code></p>
 <p>Specifies where changes occur in a report and the formatting action to perform, such as:</p>
 <ul>
-<li><p>suppressing display of duplicate values for a given column</p></li>
-<li><p>skipping a line each time a given column value changes</p></li>
-<li><p>printing computed figures each time a given column value changes or at the end of the report.</p></li>
+<li>
+<p>suppressing display of duplicate values for a given column</p>
+</li>
+<li>
+<p>skipping a line each time a given column value changes</p>
+</li>
+<li>
+<p>printing computed figures each time a given column value changes or at the end of the report.</p>
+</li>
 </ul>
 <p>See the <span class="exturl" data-url="aHR0cHM6Ly9kb2NzLm9yYWNsZS5jb20vY2QvRTExODgyXzAxL3NlcnZlci4xMTIvZTE2NjA0L2NoX3R3ZWx2ZTAxNC5odG0jaTI2OTcyNTc=">COMPUTE<i class="fa fa-external-link-alt"></i></span> command.</p>
 <p>Enter BREAK with no clauses to list the current BREAK definition.</p>
 <h3 id="命令参数">命令参数</h3>
 <table>
 <thead>
-<tr class="header">
-<th style="text-align: left;">语句</th>
-<th style="text-align: left;">含义</th>
+<tr>
+<th style="text-align:left">语句</th>
+<th style="text-align:left">含义</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td style="text-align: left;">clear breaks</td>
-<td style="text-align: left;">清除所有的 break 定义</td>
+<tr>
+<td style="text-align:left">clear breaks</td>
+<td style="text-align:left">清除所有的 break 定义</td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">break on column</td>
-<td style="text-align: left;">在该列上中断</td>
+<tr>
+<td style="text-align:left">break on column</td>
+<td style="text-align:left">在该列上中断</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">break on row</td>
-<td style="text-align: left;">在每一行上中断</td>
+<tr>
+<td style="text-align:left">break on row</td>
+<td style="text-align:left">在每一行上中断</td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">break on Page</td>
-<td style="text-align: left;">在每一页上中断</td>
+<tr>
+<td style="text-align:left">break on Page</td>
+<td style="text-align:left">在每一页上中断</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">break on report</td>
-<td style="text-align: left;">在每一报告上中断</td>
+<tr>
+<td style="text-align:left">break on report</td>
+<td style="text-align:left">在每一报告上中断</td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">skip n</td>
-<td style="text-align: left;">跳过 n 行</td>
+<tr>
+<td style="text-align:left">skip n</td>
+<td style="text-align:left">跳过 n 行</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">skip page</td>
-<td style="text-align: left;">跳过未用完的页</td>
+<tr>
+<td style="text-align:left">skip page</td>
+<td style="text-align:left">跳过未用完的页</td>
 </tr>
 </tbody>
 </table>
@@ -398,7 +416,7 @@
 <h3 id="题目">题目</h3>
 <p><strong>基于 Oracle 11g 下 hr 用户进行计算。</strong></p>
 <p>显示所有部门的部门编号、名称、员工数和平均薪金，同时显示在每个部门中工作的员工的姓名、薪金和职务。</p>
-<p><img data-src="https://img.iszy.xyz/20190318215229.png" /></p>
+<p><img data-src="https://img.iszy.xyz/20190318215229.png" alt=""></p>
 <h3 id="答题">答题</h3>
 <ul>
 <li>指定 break 参数</li>
@@ -413,8 +431,8 @@
 </ul>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">clear breaks</span><br></pre></td></tr></table></figure>
 <h3 id="部分结果">部分结果</h3>
-<p><img data-src="https://img.iszy.xyz/20190318215243.png" /></p>
-<p><img data-src="https://img.iszy.xyz/20190318215256.png" /></p>
+<p><img data-src="https://img.iszy.xyz/20190318215243.png" alt=""></p>
+<p><img data-src="https://img.iszy.xyz/20190318215256.png" alt=""></p>
 
     </div>
 
@@ -498,7 +516,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">7:25</span>
+    <span title="站点阅读时长">7:26</span>
   </span>
 </div>
   <div class="powered-by">由 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZw==">NexT.Gemini</span> 强力驱动
@@ -533,8 +551,10 @@
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
-<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/third-party/math/mathjax.min.js"></script>
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.2/dist/katex.min.css" integrity="sha256-94CNZ/bJtwrBYZrXhCOBvpB4rZUzBnvAsirFv31TMGo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.2/dist/contrib/copy-tex.min.css" integrity="sha256-+oItviPaTmqjDhk4y4fLLUIMgRQYDV/ZyrRNvQiebWM=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.2/dist/contrib/copy-tex.min.js","integrity":"sha256-etSqbSVF4+Lwe8MGk/Vanc1sR+mWv+qOG73fxWw9p94="}}</script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/third-party/math/katex.min.js"></script>
 
 
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>

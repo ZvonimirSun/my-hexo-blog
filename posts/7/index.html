@@ -348,18 +348,18 @@
 <p>运行如下命令创建项目，<code>nest-cli</code>会根据参数初始化项目文件。接着会让你选择想用的包管理器，<code>npm</code>或<code>yarn</code>，我选择了<code>yarn</code>，因为我感觉国内即使换了源，<code>yarn</code> 似乎也更快一些。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nest new project-name</span><br></pre></td></tr></table></figure>
 <p>完成安装后就会显示如下信息。</p>
-<p><img data-src="https://img.iszy.xyz/20210724195818.png" /></p>
+<p><img data-src="https://img.iszy.xyz/20210724195818.png" alt=""></p>
 <p>目录结构可以参考 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL25lc3Rqcy90eXBlc2NyaXB0LXN0YXJ0ZXI=">Nest framework TypeScript starter repository<i class="fa fa-external-link-alt"></i></span>，项目就是基于这个创建的。我们可以看到这个模板使用了 TypeScript 语言，NestJS 也是可以基于 JavaScript 运行的，创建时加上参数配置如下所示即可。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nest new project-name -l JavaScript</span><br></pre></td></tr></table></figure>
 <p>更多参数可以参考 cli 的帮助，<code>nest new --help</code>。</p>
-<p><img data-src="https://img.iszy.xyz/20210724201411.png" /></p>
+<p><img data-src="https://img.iszy.xyz/20210724201411.png" alt=""></p>
 <p>运行<code>yarn start</code>后，NestJS 就会开始运行，当显示<code>Nest application successfully started</code>时，即表示启动完成。</p>
-<p><img data-src="https://img.iszy.xyz/20210724201050.png" /></p>
+<p><img data-src="https://img.iszy.xyz/20210724201050.png" alt=""></p>
 <p>此时可以访问 <span class="exturl" data-url="aHR0cDovL2xvY2FsaG9zdDozMDAw">http://localhost:3000<i class="fa fa-external-link-alt"></i></span>，就能看到默认返回的 <code>Hello World!</code> 了。</p>
-<p><img data-src="https://img.iszy.xyz/20210724201226.png" /></p>
+<p><img data-src="https://img.iszy.xyz/20210724201226.png" alt=""></p>
 <h2 id="项目结构">项目结构</h2>
 <p>初始项目结构如下，我们主要关注 <code>src</code> 目录</p>
-<p><img data-src="https://img.iszy.xyz/20210725123352.png" /></p>
+<p><img data-src="https://img.iszy.xyz/20210725123352.png" alt=""></p>
 <p>初始内容由一个入口文件 <code>main.ts</code>、用于定义路由的 controller 文件<code>app.controller.ts</code>、用于具体方法实现的 provider 文件 <code>app.service.ts</code>、以及一个将 controller 和 service 文件关联在一起的 module 文件组成。</p>
 <p>打开入口文件<code>src/main.ts</code>，内容如下。</p>
 <figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// main.ts</span></span><br><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">NestFactory</span> &#125; <span class="keyword">from</span> <span class="string">&quot;@nestjs/core&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">AppModule</span> &#125; <span class="keyword">from</span> <span class="string">&quot;./app.module&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">bootstrap</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> app = <span class="keyword">await</span> <span class="title class_">NestFactory</span>.<span class="title function_">create</span>(<span class="title class_">AppModule</span>);</span><br><span class="line">  <span class="keyword">await</span> app.<span class="title function_">listen</span>(<span class="number">3000</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">bootstrap</span>();</span><br></pre></td></tr></table></figure>
@@ -459,7 +459,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">7:25</span>
+    <span title="站点阅读时长">7:26</span>
   </span>
 </div>
   <div class="powered-by">由 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZw==">NexT.Gemini</span> 强力驱动
@@ -494,8 +494,10 @@
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
-<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/third-party/math/mathjax.min.js"></script>
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.2/dist/katex.min.css" integrity="sha256-94CNZ/bJtwrBYZrXhCOBvpB4rZUzBnvAsirFv31TMGo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.2/dist/contrib/copy-tex.min.css" integrity="sha256-+oItviPaTmqjDhk4y4fLLUIMgRQYDV/ZyrRNvQiebWM=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.2/dist/contrib/copy-tex.min.js","integrity":"sha256-etSqbSVF4+Lwe8MGk/Vanc1sR+mWv+qOG73fxWw9p94="}}</script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/third-party/math/katex.min.js"></script>
 
 
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
