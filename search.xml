@@ -6474,6 +6474,44 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
       </tags>
   </entry>
   <entry>
+    <title>JavaScript LeetCode 1.两数之和</title>
+    <url>/posts/f/</url>
+    <content><![CDATA[<span id="more"></span>
+<h2 id="题目-3">题目</h2>
+<blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvdHdvLXN1bS8=">两数之和 - 力扣<i class="fa fa-external-link-alt"></i></span></p>
+</blockquote>
+<p>给定一个整数数组<code>nums</code>和一个整数目标值<code>target</code>，请你在该数组中找出<strong>和为目标值</strong><code>target</code>的那<strong>两个</strong>整数，并返回它们的数组下标。</p>
+<p>你可以假设每种输入只会对应一个答案。但是，数组中同一个元素在答案里不能重复出现。</p>
+<p>你可以按任意顺序返回答案。</p>
+<p>示例 1：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：nums = [2,7,11,15], target = 9</span><br><span class="line">输出：[0,1]</span><br><span class="line">解释：因为 nums[0] + nums[1] == 9 ，返回 [0, 1] 。</span><br></pre></td></tr></table></figure>
+<p>示例 2：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：nums = [3,2,4], target = 6</span><br><span class="line">输出：[1,2]</span><br></pre></td></tr></table></figure>
+<p>示例 3：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：nums = [3,3], target = 6</span><br><span class="line">输出：[0,1]</span><br></pre></td></tr></table></figure>
+<p>提示：</p>
+<ul>
+<li><code>2 &lt;= nums.length &lt;= 104</code></li>
+<li><code>-109 &lt;= nums[i] &lt;= 109</code></li>
+<li><code>-109 &lt;= target &lt;= 109</code></li>
+<li><strong>只会存在一个有效答案</strong></li>
+</ul>
+<p>**进阶：**你可以想出一个时间复杂度小于<code>O(n2)</code>的算法吗？</p>
+<h2 id="解答">解答</h2>
+<p>通过一个对象存储<strong>值</strong>对应的<strong>索引值</strong>，当<strong>与当前值的和</strong>等于<strong>目标值</strong>的数字可以在对象中找到，即返回该数字索引和当前索引。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number[]</span>&#125; <span class="variable">nums</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number</span>&#125; <span class="variable">target</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">number[]</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> twoSum = <span class="keyword">function</span> (<span class="params">nums, target</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> map = &#123;&#125;;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">const</span> i <span class="keyword">in</span> nums) &#123;</span><br><span class="line">    <span class="keyword">if</span> (map[target - nums[i]]) &#123;</span><br><span class="line">      <span class="keyword">return</span> [i, map[target - nums[i]]];</span><br><span class="line">    &#125;</span><br><span class="line">    map[nums[i]] = i;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+        <tag>LeetCode</tag>
+        <tag>力扣</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>通过Docker快速部署FileBrowser 2.0</title>
     <url>/posts/filebrowser2-setup-docker/</url>
     <content><![CDATA[<p>File Browser 作为一款远端文件浏览器，可以把你的服务器轻松地变为私人网盘。今天我就来简单介绍一下，如何通过 Docker 轻松部署 File Browser 2.0。</p>
