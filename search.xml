@@ -6481,16 +6481,17 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
 <blockquote>
 <p><span class="exturl" data-url="aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvdHdvLXN1bS8=">两数之和 - 力扣<i class="fa fa-external-link-alt"></i></span></p>
 </blockquote>
+<p><strong>难度简单</strong></p>
 <p>给定一个整数数组<code>nums</code>和一个整数目标值<code>target</code>，请你在该数组中找出<strong>和为目标值</strong><code>target</code>的那<strong>两个</strong>整数，并返回它们的数组下标。</p>
 <p>你可以假设每种输入只会对应一个答案。但是，数组中同一个元素在答案里不能重复出现。</p>
 <p>你可以按任意顺序返回答案。</p>
-<p>示例 1：</p>
+<p><strong>示例 1：</strong></p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：nums = [2,7,11,15], target = 9</span><br><span class="line">输出：[0,1]</span><br><span class="line">解释：因为 nums[0] + nums[1] == 9 ，返回 [0, 1] 。</span><br></pre></td></tr></table></figure>
-<p>示例 2：</p>
+<p><strong>示例 2：</strong></p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：nums = [3,2,4], target = 6</span><br><span class="line">输出：[1,2]</span><br></pre></td></tr></table></figure>
-<p>示例 3：</p>
+<p><strong>示例 3：</strong></p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：nums = [3,3], target = 6</span><br><span class="line">输出：[0,1]</span><br></pre></td></tr></table></figure>
-<p>提示：</p>
+<p><strong>提示：</strong></p>
 <ul>
 <li><code>2 &lt;= nums.length &lt;= 104</code></li>
 <li><code>-109 &lt;= nums[i] &lt;= 109</code></li>
@@ -6876,6 +6877,43 @@ Base64 常用于在通常处理文本数据的场合，表示、传输、存储�
         <tag>加速</tag>
         <tag>V2Ray机场</tag>
         <tag>ssr/v2ray</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JavaScript LeetCode 2.两数相加</title>
+    <url>/posts/g/</url>
+    <content><![CDATA[<span id="more"></span>
+<h2 id="题目-4">题目</h2>
+<blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvYWRkLXR3by1udW1iZXJz">两数相加 - 力扣<i class="fa fa-external-link-alt"></i></span></p>
+</blockquote>
+<p><strong>难度中等</strong></p>
+<p>给你两个<strong>非空</strong>的链表，表示两个非负的整数。它们每位数字都是按照<strong>逆序</strong>的方式存储的，并且每个节点只能存储<strong>一位</strong>数字。</p>
+<p>请你将两个数相加，并以相同形式返回一个表示和的链表。</p>
+<p>你可以假设除了数字 0 之外，这两个数都不会以 0  开头。</p>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：l1 = [2,4,3], l2 = [5,6,4]</span><br><span class="line">输出：[7,0,8]</span><br><span class="line">解释：342 + 465 = 807.</span><br></pre></td></tr></table></figure>
+<p><strong>示例 2：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：l1 = [0], l2 = [0]</span><br><span class="line">输出：[0]</span><br></pre></td></tr></table></figure>
+<p><strong>示例 3：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：l1 = [9,9,9,9,9,9,9], l2 = [9,9,9,9]</span><br><span class="line">输出：[8,9,9,9,0,0,0,1]</span><br></pre></td></tr></table></figure>
+<p><strong>提示：</strong></p>
+<ul>
+<li>每个链表中的节点数在范围 <code>[1, 100]</code> 内</li>
+<li><code>0 &lt;= Node.val &lt;= 9</code></li>
+<li>题目数据保证列表表示的数字不含前导零</li>
+</ul>
+<h2 id="解答-2">解答</h2>
+<p>总的来说就是模拟一个相加的过程，满 10 进位。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * function ListNode(val, next) &#123;</span></span><br><span class="line"><span class="comment"> *     this.val = (val===undefined ? 0 : val)</span></span><br><span class="line"><span class="comment"> *     this.next = (next===undefined ? null : next)</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">ListNode</span>&#125; <span class="variable">l1</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">ListNode</span>&#125; <span class="variable">l2</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">ListNode</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> addTwoNumbers = <span class="keyword">function</span> (<span class="params">l1, l2</span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> head = <span class="literal">null</span>,</span><br><span class="line">    tail = <span class="literal">null</span>;</span><br><span class="line">  <span class="keyword">let</span> add = <span class="literal">false</span>;</span><br><span class="line">  <span class="keyword">while</span> (l1 || l2) &#123;</span><br><span class="line">    <span class="keyword">const</span> sum = (l1 ? l1.<span class="property">val</span> : <span class="number">0</span>) + (l2 ? l2.<span class="property">val</span> : <span class="number">0</span>) + (add ? <span class="number">1</span> : <span class="number">0</span>);</span><br><span class="line">    <span class="keyword">if</span> (!head) &#123;</span><br><span class="line">      head = tail = <span class="keyword">new</span> <span class="title class_">ListNode</span>(sum % <span class="number">10</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      tail.<span class="property">next</span> = <span class="keyword">new</span> <span class="title class_">ListNode</span>(sum % <span class="number">10</span>);</span><br><span class="line">      tail = tail.<span class="property">next</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (sum &gt; <span class="number">9</span>) &#123;</span><br><span class="line">      add = <span class="literal">true</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      add = <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (l1) &#123;</span><br><span class="line">      l1 = l1.<span class="property">next</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (l2) &#123;</span><br><span class="line">      l2 = l2.<span class="property">next</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span> (add) &#123;</span><br><span class="line">    tail.<span class="property">next</span> = <span class="keyword">new</span> <span class="title class_">ListNode</span>(<span class="number">1</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> head;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+        <tag>LeetCode</tag>
+        <tag>力扣</tag>
       </tags>
   </entry>
   <entry>
