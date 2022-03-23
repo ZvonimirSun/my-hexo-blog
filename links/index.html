@@ -29,38 +29,20 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"www.iszy.cc","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.10.1","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/config.min.js"></script>
 
-    <meta name="description" content="友谊是人生的调味品，也是人生的止痛药。  友情链接                                                                                                              随遇而安                                  生活吐槽 &amp; 学习记录">
+    <meta name="description" content="友谊是人生的调味品，也是人生的止痛药。  友情链接  &lt;div class&#x3D;&quot;links-content&quot;&gt;     &lt;div class&#x3D;&quot;link-navigation&quot;&gt;     &amp;#123;% for link in site.data.links %&amp;#125;">
 <meta property="og:type" content="website">
 <meta property="og:title" content="友情链接">
 <meta property="og:url" content="https://www.iszy.cc/links/">
 <meta property="og:site_name" content="随遇而安">
-<meta property="og:description" content="友谊是人生的调味品，也是人生的止痛药。  友情链接                                                                                                              随遇而安                                  生活吐槽 &amp; 学习记录">
+<meta property="og:description" content="友谊是人生的调味品，也是人生的止痛药。  友情链接  &lt;div class&#x3D;&quot;links-content&quot;&gt;     &lt;div class&#x3D;&quot;link-navigation&quot;&gt;     &amp;#123;% for link in site.data.links %&amp;#125;">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://www.iszy.cc/images/avatar.png">
-<meta property="og:image" content="https://img.iszy.xyz/logos/3nice.cc.svg">
-<meta property="og:image" content="https://img.iszy.xyz/logos/www.hurbai.com.ico">
-<meta property="og:image" content="https://img.iszy.xyz/logos/vel.life.gif">
-<meta property="og:image" content="https://img.iszy.xyz/logos/www.xxwhite.com.jpg">
-<meta property="og:image" content="https://img.iszy.xyz/logos/lala.im.ico">
-<meta property="og:image" content="https://img.iszy.xyz/logos/www.finen.top.png">
-<meta property="og:image" content="https://img.iszy.xyz/logos/blog.jimmyho.net.jpg">
-<meta property="og:image" content="https://img.iszy.xyz/logos/crosschannel.cc.ico">
-<meta property="og:image" content="https://img.iszy.xyz/logos/www.zjhuiwan.cn.png">
-<meta property="og:image" content="https://img.iszy.xyz/logos/pengrl.com.jpeg">
-<meta property="og:image" content="https://img.iszy.xyz/logos/jianger.space.jpeg">
-<meta property="og:image" content="https://img.iszy.xyz/logos/www.wenxuands.com.ico">
-<meta property="og:image" content="https://img.iszy.xyz/logos/hkublog.top.jpg">
-<meta property="og:image" content="https://img.iszy.xyz/logos/blog.hofaeair.net.ico">
-<meta property="og:image" content="https://img.iszy.xyz/logos/finisky.github.io.png">
-<meta property="og:image" content="https://img.iszy.xyz/1644659059598.png">
-<meta property="og:image" content="https://img.iszy.xyz/1644659180128.png">
-<meta property="og:image" content="https://img.iszy.xyz/1648013691501.png">
+<meta property="og:image" content="https://www.iszy.cc/links/&#123;&#123;%20link.avatar%20&#125;&#125;">
 <meta property="article:published_time" content="2018-12-19T02:11:00.000Z">
 <meta property="article:modified_time" content="2019-11-15T00:11:00.000Z">
 <meta property="article:author" content="Dirge">
 <meta property="article:tag" content="随遇而安, Dirge, iszy">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://www.iszy.cc/images/avatar.png">
+<meta name="twitter:image" content="https://www.iszy.cc/links/&#123;&#123;%20link.avatar%20&#125;&#125;">
 
 
 <link rel="canonical" href="https://www.iszy.cc/links/">
@@ -267,232 +249,31 @@
 </blockquote>
 <h2 id="友情链接">友情链接</h2>
 <div id="links">
-    <div class="links-content">
-        <div class="link-navigation">
-        
+<pre><code>&lt;div class=&quot;links-content&quot;&gt;
+    &lt;div class=&quot;link-navigation&quot;&gt;
+    &#123;% for link in site.data.links %&#125;
         <div class="card">
-            <a href="https://www.iszy.cc/" target="_blank">
-            <img class="ava" data-src="https://www.iszy.cc/images/avatar.png"/></a>
+            <a href="&#123;&#123; link.site &#125;&#125;" target="_blank">
+            <img class="ava" data-src="&#123;&#123; link.avatar &#125;&#125;"/></a>
             <div class="card-header">
                 <div>
-                    <a href="https://www.iszy.cc/" target="_blank">随遇而安</a>
+                    <a href="&#123;&#123; link.site &#125;&#125;" target="_blank">&#123;&#123; link.name &#125;&#125;</a>
                 </div>
-                <div class="info" title="生活吐槽 & 学习记录">生活吐槽 & 学习记录</div>
+                <div class="info" title="&#123;&#123; link.info &#125;&#125;">&#123;&#123; link.info &#125;&#125;</div>
             </div>
         </div>
-        
-        <div class="card">
-            <a href="https://3nice.cc/" target="_blank">
-            <img class="ava" data-src="https://img.iszy.xyz/logos/3nice.cc.svg"/></a>
-            <div class="card-header">
-                <div>
-                    <span class="exturl" data-url="aHR0cHM6Ly8zbmljZS5jYy8=">3NICE<i class="fa fa-external-link-alt"></i></span>
-                </div>
-                <div class="info" title="老汪，一个不务正业的 GISer">老汪，一个不务正业的 GISer</div>
-            </div>
-        </div>
-        
-        <div class="card">
-            <a href="https://www.hurbai.com/link" target="_blank">
-            <img class="ava" data-src="https://img.iszy.xyz/logos/www.hurbai.com.ico"/></a>
-            <div class="card-header">
-                <div>
-                    <span class="exturl" data-url="aHR0cHM6Ly93d3cuaHVyYmFpLmNvbS9saW5r">大灰hurbai<i class="fa fa-external-link-alt"></i></span>
-                </div>
-                <div class="info" title="各种资源分享">各种资源分享</div>
-            </div>
-        </div>
-        
-        <div class="card">
-            <a href="https://vel.life/link/" target="_blank">
-            <img class="ava" data-src="https://img.iszy.xyz/logos/vel.life.gif"/></a>
-            <div class="card-header">
-                <div>
-                    <span class="exturl" data-url="aHR0cHM6Ly92ZWwubGlmZS9saW5rLw==">思维之海<i class="fa fa-external-link-alt"></i></span>
-                </div>
-                <div class="info" title="在云端，寻找我的星匙">在云端，寻找我的星匙</div>
-            </div>
-        </div>
-        
-        <div class="card">
-            <a href="https://www.xxwhite.com/" target="_blank">
-            <img class="ava" data-src="https://img.iszy.xyz/logos/www.xxwhite.com.jpg"/></a>
-            <div class="card-header">
-                <div>
-                    <span class="exturl" data-url="aHR0cHM6Ly93d3cueHh3aGl0ZS5jb20v">叉叉白<i class="fa fa-external-link-alt"></i></span>
-                </div>
-                <div class="info" title="一个小白搞机的记事本">一个小白搞机的记事本</div>
-            </div>
-        </div>
-        
-        <div class="card">
-            <a href="https://lala.im/" target="_blank">
-            <img class="ava" data-src="https://img.iszy.xyz/logos/lala.im.ico"/></a>
-            <div class="card-header">
-                <div>
-                    <span class="exturl" data-url="aHR0cHM6Ly9sYWxhLmltLw==">荒岛<i class="fa fa-external-link-alt"></i></span>
-                </div>
-                <div class="info" title="暂无介绍~">暂无介绍~</div>
-            </div>
-        </div>
-        
-        <div class="card">
-            <a href="https://www.finen.top/friends/" target="_blank">
-            <img class="ava" data-src="https://img.iszy.xyz/logos/www.finen.top.png"/></a>
-            <div class="card-header">
-                <div>
-                    <span class="exturl" data-url="aHR0cHM6Ly93d3cuZmluZW4udG9wL2ZyaWVuZHMv">Finen<i class="fa fa-external-link-alt"></i></span>
-                </div>
-                <div class="info" title="Stay Hungry! Stay Foolish!">Stay Hungry! Stay Foolish!</div>
-            </div>
-        </div>
-        
-        <div class="card">
-            <a href="https://blog.jimmyho.net/links.html" target="_blank">
-            <img class="ava" data-src="https://img.iszy.xyz/logos/blog.jimmyho.net.jpg"/></a>
-            <div class="card-header">
-                <div>
-                    <span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmppbW15aG8ubmV0L2xpbmtzLmh0bWw=">Jimmy's Blog<i class="fa fa-external-link-alt"></i></span>
-                </div>
-                <div class="info" title="永远相信美好的事情即将发生">永远相信美好的事情即将发生</div>
-            </div>
-        </div>
-        
-        <div class="card">
-            <a href="https://crosschannel.cc/links.html" target="_blank">
-            <img class="ava" data-src="https://img.iszy.xyz/logos/crosschannel.cc.ico"/></a>
-            <div class="card-header">
-                <div>
-                    <span class="exturl" data-url="aHR0cHM6Ly9jcm9zc2NoYW5uZWwuY2MvbGlua3MuaHRtbA==">宅日记<i class="fa fa-external-link-alt"></i></span>
-                </div>
-                <div class="info" title="一个不知名懒肥宅的自留地">一个不知名懒肥宅的自留地</div>
-            </div>
-        </div>
-        
-        <div class="card">
-            <a href="https://www.zjhuiwan.cn/" target="_blank">
-            <img class="ava" data-src="https://img.iszy.xyz/logos/www.zjhuiwan.cn.png"/></a>
-            <div class="card-header">
-                <div>
-                    <span class="exturl" data-url="aHR0cHM6Ly93d3cuempodWl3YW4uY24v">ZJBLOG<i class="fa fa-external-link-alt"></i></span>
-                </div>
-                <div class="info" title="记录生活·分享技术">记录生活·分享技术</div>
-            </div>
-        </div>
-        
-        <div class="card">
-            <a href="https://pengrl.com/link/" target="_blank">
-            <img class="ava" data-src="https://img.iszy.xyz/logos/pengrl.com.jpeg"/></a>
-            <div class="card-header">
-                <div>
-                    <span class="exturl" data-url="aHR0cHM6Ly9wZW5ncmwuY29tL2xpbmsv">yoko blog<i class="fa fa-external-link-alt"></i></span>
-                </div>
-                <div class="info" title="非常程序员">非常程序员</div>
-            </div>
-        </div>
-        
-        <div class="card">
-            <a href="https://jianger.space/links/" target="_blank">
-            <img class="ava" data-src="https://img.iszy.xyz/logos/jianger.space.jpeg"/></a>
-            <div class="card-header">
-                <div>
-                    <span class="exturl" data-url="aHR0cHM6Ly9qaWFuZ2VyLnNwYWNlL2xpbmtzLw==">Jianger’s Blog<i class="fa fa-external-link-alt"></i></span>
-                </div>
-                <div class="info" title="热爱生活｜分享技术｜鼓捣科技">热爱生活｜分享技术｜鼓捣科技</div>
-            </div>
-        </div>
-        
-        <div class="card">
-            <a href="http://www.wenxuands.com" target="_blank">
-            <img class="ava" data-src="https://img.iszy.xyz/logos/www.wenxuands.com.ico"/></a>
-            <div class="card-header">
-                <div>
-                    <span class="exturl" data-url="aHR0cDovL3d3dy53ZW54dWFuZHMuY29t">文轩设计之路<i class="fa fa-external-link-alt"></i></span>
-                </div>
-                <div class="info" title="一个 80 后从事于网站前端设计和平面设计的站长之路。">一个 80 后从事于网站前端设计和平面设计的站长之路。</div>
-            </div>
-        </div>
-        
-        <div class="card">
-            <a href="https://www.younglee.cn/" target="_blank">
-            <img class="ava" data-src="https://img.iszy.xyz/logos/hkublog.top.jpg"/></a>
-            <div class="card-header">
-                <div>
-                    <span class="exturl" data-url="aHR0cHM6Ly93d3cueW91bmdsZWUuY24v">Young Lee's Blog<i class="fa fa-external-link-alt"></i></span>
-                </div>
-                <div class="info" title="各种教程分享，鸡汤喝饱">各种教程分享，鸡汤喝饱</div>
-            </div>
-        </div>
-        
-        <div class="card">
-            <a href="https://blog.hofaeair.net/" target="_blank">
-            <img class="ava" data-src="https://img.iszy.xyz/logos/blog.hofaeair.net.ico"/></a>
-            <div class="card-header">
-                <div>
-                    <span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmhvZmFlYWlyLm5ldC8=">浩方<i class="fa fa-external-link-alt"></i></span>
-                </div>
-                <div class="info" title="hofaeair 的动力源泉">hofaeair 的动力源泉</div>
-            </div>
-        </div>
-        
-        <div class="card">
-            <a href="https://finisky.github.io/" target="_blank">
-            <img class="ava" data-src="https://img.iszy.xyz/logos/finisky.github.io.png"/></a>
-            <div class="card-header">
-                <div>
-                    <span class="exturl" data-url="aHR0cHM6Ly9maW5pc2t5LmdpdGh1Yi5pby8=">Finisky Garden<i class="fa fa-external-link-alt"></i></span>
-                </div>
-                <div class="info" title="Easy doesn’t enter into grown-up life.">Easy doesn’t enter into grown-up life.</div>
-            </div>
-        </div>
-        
-        <div class="card">
-            <a href="https://blog.tmen.top" target="_blank">
-            <img class="ava" data-src="https://img.iszy.xyz/1644659059598.png"/></a>
-            <div class="card-header">
-                <div>
-                    <span class="exturl" data-url="aHR0cHM6Ly9ibG9nLnRtZW4udG9w">Tmenの博客<i class="fa fa-external-link-alt"></i></span>
-                </div>
-                <div class="info" title="菜鸟的成长">菜鸟的成长</div>
-            </div>
-        </div>
-        
-        <div class="card">
-            <a href="https://core.dpangzi.com" target="_blank">
-            <img class="ava" data-src="https://img.iszy.xyz/1644659180128.png"/></a>
-            <div class="card-header">
-                <div>
-                    <span class="exturl" data-url="aHR0cHM6Ly9jb3JlLmRwYW5nemkuY29t">叫我阿胖<i class="fa fa-external-link-alt"></i></span>
-                </div>
-                <div class="info" title="追赶大佬脚步的阿胖">追赶大佬脚步的阿胖</div>
-            </div>
-        </div>
-        
-        <div class="card">
-            <a href="https://yongtaiq.github.io/" target="_blank">
-            <img class="ava" data-src="https://img.iszy.xyz/1648013691501.png"/></a>
-            <div class="card-header">
-                <div>
-                    <span class="exturl" data-url="aHR0cHM6Ly95b25ndGFpcS5naXRodWIuaW8v">闲话茶楼<i class="fa fa-external-link-alt"></i></span>
-                </div>
-                <div class="info" title="欢迎来找我随便聊点什么哦">欢迎来找我随便聊点什么哦</div>
-            </div>
-        </div>
-        
-        </div>
-    </div>
+        &#123;% endfor %&#125;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
 </div>
 <p>友链排名不分先后~</p>
 <h2 id="友链交换">友链交换</h2>
 <p><strong>本站信息</strong></p>
 <blockquote>
-<p>名称: 随遇而安<br>
-地址: <a href="https://www.iszy.cc/links/">https://www.iszy.cc/links/</a><br>
-简介: 生活吐槽 &amp; 学习记录<br>
-头像: <a href="https://www.iszy.cc/images/avatar.png">https://www.iszy.cc/images/avatar.png</a></p>
+<p>名称: 随遇而安 地址: <a href="https://www.iszy.cc/links/">https://www.iszy.cc/links/</a> 简介: 生活吐槽 &amp; 学习记录 头像: <a href="https://www.iszy.cc/images/avatar.png">https://www.iszy.cc/images/avatar.png</a></p>
 </blockquote>
 <p>交换友链要求:</p>
-<ol>
+<ol type="1">
 <li>想要交换友链，根据上面的信息，把本站添加到您的网站中，然后在下方评论区中贴出您的网站信息，建议填写邮箱一栏以便及时收到回复通知</li>
 <li>原创内容的博客或网站优先，站点主题内容是互联网资讯、技术、资源等等</li>
 </ol>
@@ -536,7 +317,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">7:26</span>
+    <span title="站点阅读时长">7:25</span>
   </span>
 </div>
   <div class="powered-by">由 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZw==">NexT.Gemini</span> 强力驱动
@@ -571,10 +352,8 @@
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.2/dist/katex.min.css" integrity="sha256-94CNZ/bJtwrBYZrXhCOBvpB4rZUzBnvAsirFv31TMGo=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.2/dist/contrib/copy-tex.min.css" integrity="sha256-+oItviPaTmqjDhk4y4fLLUIMgRQYDV/ZyrRNvQiebWM=" crossorigin="anonymous">
-  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.2/dist/contrib/copy-tex.min.js","integrity":"sha256-etSqbSVF4+Lwe8MGk/Vanc1sR+mWv+qOG73fxWw9p94="}}</script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/third-party/math/katex.min.js"></script>
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
+<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/third-party/math/mathjax.min.js"></script>
 
 
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>

@@ -163,7 +163,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A1%B9%E7%9B%AE%E5%9C%B0%E5%9D%80"><span class="nav-number">1.</span> <span class="nav-text">项目地址</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%80%E4%BB%8B-2"><span class="nav-number">1.1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-3"><span class="nav-number">1.2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="nav-number">1.3.</span> <span class="nav-text">常见问题</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A1%B9%E7%9B%AE%E5%9C%B0%E5%9D%80"><span class="nav-number">1.</span> <span class="nav-text">项目地址</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%80%E4%BB%8B"><span class="nav-number">1.1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">1.2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="nav-number">1.3.</span> <span class="nav-text">常见问题</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -331,7 +331,7 @@
 <h2 id="项目地址">项目地址</h2>
 <p>写了 docker-compose，放在了 Github 上，还有些简单的配置文件。</p>
 <p>Github 项目地址: <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1p2b25pbWlyU3VuL2RubXA=">https://github.com/ZvonimirSun/dnmp<i class="fa fa-external-link-alt"></i></span></p>
-<h3 id="简介-2">简介</h3>
+<h3 id="简介">简介</h3>
 <p>通过 Docker 一键部署 LNMP。包含以下内容：</p>
 <ul>
 <li><code>nginx:alpine</code>:
@@ -339,41 +339,34 @@
 <li>说明
 <ul>
 <li>已支持<code>TLS 1.3</code></li>
-</ul>
-</li>
+</ul></li>
 <li>网站目录: <code>./nginx/html</code>(docker 内<code>/usr/share/nginx/html</code>)</li>
 <li>虚拟主机配置目录: <code>./nginx/conf.d</code>(docker 内<code>/etc/nginx/conf.d</code>)</li>
-</ul>
-</li>
+</ul></li>
 <li><code>mysql:5</code>
 <ul>
 <li>数据库目录: <code>./mysql</code></li>
-</ul>
-</li>
+</ul></li>
 <li><code>php:7-fpm-alpine</code>:
 <ul>
 <li>说明
 <ul>
 <li>基于初始镜像额外安装了<code>pdo_mysql</code>、<code>mysqli</code>、<code>gd</code>插件。</li>
 <li>若想安装其他插件，请自行修改<code>Dockerfile</code>。</li>
-</ul>
-</li>
+</ul></li>
 <li><code>php.ini</code>目录: <code>./php-fpm</code></li>
-</ul>
-</li>
-<li><span class="exturl" data-url="aHR0cDovL2FjbWUuc2g=">acme.sh<i class="fa fa-external-link-alt"></i></span>:
+</ul></li>
+<li>acme.sh:
 <ul>
 <li>说明:
 <ul>
 <li>用于申请 ssl 证书。</li>
 <li>使用方法: 参考<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL05laWxwYW5nL2FjbWUuc2g=">官方文档<i class="fa fa-external-link-alt"></i></span></li>
-</ul>
-</li>
+</ul></li>
 <li>证书存储目录: <code>./ssl</code></li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<h3 id="安装-3">安装</h3>
+<h3 id="安装">安装</h3>
 <ul>
 <li>请确保已经安装<code>docker</code>和<code>docker-compose</code>。</li>
 <li>将项目 clone 到本地</li>
@@ -386,20 +379,17 @@
 <li>检查 Nginx 配置:
 <ul>
 <li><code>docker exec nginx nginx -t</code></li>
-</ul>
-</li>
+</ul></li>
 <li>Nginx 重载配置:
 <ul>
 <li><code>docker exec nginx nginx -s reload</code></li>
-</ul>
-</li>
+</ul></li>
 <li>配置:
 <ul>
 <li>启用<code>php</code>: <code>include enable-php.conf</code></li>
 <li>启用带<code>pathinfo</code>的<code>php</code>: <code>include enable-php-pathinfo.conf</code></li>
-<li>启用<code>HSTS</code>: <code>add_header Strict-Transport-Security &quot;max-age=63072000; includeSubDomains; preload&quot; always;</code>(此句可根据需要适当调整)</li>
-</ul>
-</li>
+<li>启用<code>HSTS</code>: <code>add_header Strict-Transport-Security "max-age=63072000; includeSubDomains; preload" always;</code>(此句可根据需要适当调整)</li>
+</ul></li>
 </ul>
 <p>php:</p>
 <ul>
@@ -407,13 +397,11 @@
 <ul>
 <li><code>docker exec php docker-php-ext-install pdo_mysql</code></li>
 <li>最好修改<code>Dockerfile</code>实现，否则无法保留</li>
-</ul>
-</li>
+</ul></li>
 <li>访问地址:
 <ul>
 <li><code>docker</code>中访问<code>php</code>: <code>http://php:9000</code></li>
-</ul>
-</li>
+</ul></li>
 </ul>
 <p>mysql:</p>
 <ul>
@@ -421,8 +409,7 @@
 <ul>
 <li><code>docker</code>中访问<code>mysql</code>地址: <code>http://mysql:3306</code></li>
 <li>宿主机访问<code>mysql</code>地址: <code>http://localhost:3306</code></li>
-</ul>
-</li>
+</ul></li>
 <li>如需外部访问 mysql，请自行修改 mysql 的端口映射为<code>3306:3306</code>，并放开防火墙。</li>
 <li>连接数据库: <code>docker-compose exec mysql mysql -u root -p</code></li>
 </ul>
@@ -507,7 +494,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">7:26</span>
+    <span title="站点阅读时长">7:25</span>
   </span>
 </div>
   <div class="powered-by">由 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZw==">NexT.Gemini</span> 强力驱动
@@ -542,10 +529,8 @@
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.2/dist/katex.min.css" integrity="sha256-94CNZ/bJtwrBYZrXhCOBvpB4rZUzBnvAsirFv31TMGo=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.2/dist/contrib/copy-tex.min.css" integrity="sha256-+oItviPaTmqjDhk4y4fLLUIMgRQYDV/ZyrRNvQiebWM=" crossorigin="anonymous">
-  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.2/dist/contrib/copy-tex.min.js","integrity":"sha256-etSqbSVF4+Lwe8MGk/Vanc1sR+mWv+qOG73fxWw9p94="}}</script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/third-party/math/katex.min.js"></script>
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
+<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/third-party/math/mathjax.min.js"></script>
 
 
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>

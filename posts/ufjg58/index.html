@@ -168,7 +168,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80-7"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%86%E5%A4%87%E6%9D%A1%E4%BB%B6"><span class="nav-number">2.</span> <span class="nav-text">准备条件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BB%BA%E7%AB%8B-Repo"><span class="nav-number">2.1.</span> <span class="nav-text">建立 Repo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8A%E4%BC%A0%E5%B7%A5%E5%85%B7"><span class="nav-number">2.2.</span> <span class="nav-text">上传工具</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96%E5%9B%BE%E7%89%87%E9%93%BE%E6%8E%A5%E6%96%B9%E6%A1%88"><span class="nav-number">3.</span> <span class="nav-text">获取图片链接方案</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%B4%E8%BF%9E%E6%96%B9%E6%A1%88"><span class="nav-number">3.1.</span> <span class="nav-text">直连方案</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%AC%E7%94%A8-CDN-%E6%96%B9%E6%A1%88"><span class="nav-number">3.2.</span> <span class="nav-text">公用 CDN 方案</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Nginx-%E5%8F%8D%E4%BB%A3-CDN"><span class="nav-number">3.3.</span> <span class="nav-text">Nginx 反代+CDN</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%86%E5%A4%87%E6%9D%A1%E4%BB%B6"><span class="nav-number">2.</span> <span class="nav-text">准备条件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BB%BA%E7%AB%8B-repo"><span class="nav-number">2.1.</span> <span class="nav-text">建立 Repo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8A%E4%BC%A0%E5%B7%A5%E5%85%B7"><span class="nav-number">2.2.</span> <span class="nav-text">上传工具</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96%E5%9B%BE%E7%89%87%E9%93%BE%E6%8E%A5%E6%96%B9%E6%A1%88"><span class="nav-number">3.</span> <span class="nav-text">获取图片链接方案</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%B4%E8%BF%9E%E6%96%B9%E6%A1%88"><span class="nav-number">3.1.</span> <span class="nav-text">直连方案</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%AC%E7%94%A8-cdn-%E6%96%B9%E6%A1%88"><span class="nav-number">3.2.</span> <span class="nav-text">公用 CDN 方案</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nginx-%E5%8F%8D%E4%BB%A3cdn"><span class="nav-number">3.3.</span> <span class="nav-text">Nginx 反代+CDN</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -326,26 +326,26 @@
     <div class="post-body" itemprop="articleBody">
         <p>本文我来简单讲一下利用 Github 自建图床的几种方式，希望能对大家有些帮助。</p>
 <span id="more"></span>
-<h2 id="前言-7">前言</h2>
+<h2 id="前言">前言</h2>
 <p>本来我是在自己服务器上搭的图床，套上 cdn，使用体验挺好。为什么想到用 Github 来自建图床呢，主要是考虑到以下几个方面。</p>
-<ol>
+<ol type="1">
 <li>首先，Github 有着免费的存储空间，不用占据自己的硬盘。当然，虽然官方对 repo 没有磁盘限制，但是推荐在 1GB 以下，超过 1GB 会有邮件通知。上传超过 50M 的单个文件会 warning，无法上传超过 100M 的单个文件。不过，对于我这样用于博客图床的，图片容量不会很大，其实已经很够用了。</li>
 <li>其次，我使用 Github 主要是出于版本管理和迁移成本的考虑。由于图片放在 Github 上，当我想要迁移到其他地方，只需要简单的 git clone 以下即可，想要回退版本，防止误操作也很方便。</li>
 <li>此外，Github 使用人数很多，所以各种基于 Github 的工具和使用案例很多，不会给自己增添麻烦。比如 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL01vbHVuZXJmaW5uL1BpY0dv">PicGo<i class="fa fa-external-link-alt"></i></span>，一个用于快速上传图片并获取图片 URL 链接的工具，其中就支持 Github，也可以自定义链接，很好用。</li>
 </ol>
 <p>这么来看，Github 是一个很好的图床承载工具。</p>
 <h2 id="准备条件">准备条件</h2>
-<h3 id="建立-Repo">建立 Repo</h3>
+<h3 id="建立-repo">建立 Repo</h3>
 <p>我们要用 Github 做图床，首先建个 Repo 应该不难理解吧，这个就是你用来存储图片的仓库了。<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL25ldw==">点击前往<i class="fa fa-external-link-alt"></i></span></p>
-<p><img data-src="https://img.iszy.xyz/20200505113214.png?x-oss-process=style/big" alt=""></p>
+<p><img data-src="https://img.iszy.xyz/20200505113214.png?x-oss-process=style/big" /></p>
 <p>点击 Create repository，这个仓库就建好了。</p>
-<p><img data-src="https://img.iszy.xyz/20200505113547.png?x-oss-process=style/big" alt=""></p>
+<p><img data-src="https://img.iszy.xyz/20200505113547.png?x-oss-process=style/big" /></p>
 <p>比如我这里建立了一个名为 img-hosting 的仓库作为示例，链接形如</p>
 <p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1p2b25pbWlyU3VuL2ltZy1ob3N0aW5n">https://github.com/ZvonimirSun/img-hosting<i class="fa fa-external-link-alt"></i></span></p>
 <h3 id="上传工具">上传工具</h3>
 <p>既然要用 GitHub 作为图床，如果没有一个方便的上传图片的方式，用起来就很难受了。这边推荐下我主要在用的工具，也就是我前面提到的 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL01vbHVuZXJmaW5uL1BpY0dv">PicGo<i class="fa fa-external-link-alt"></i></span>，文档比较完善，我这边就不再细说，大家可以直接看下官方说明，配置很简单的。</p>
 <p><span class="exturl" data-url="aHR0cHM6Ly9waWNnby5naXRodWIuaW8vUGljR28tRG9jL3poL2d1aWRlL2NvbmZpZy5odG1sI2dpdGh1YiVFNSU5QiVCRSVFNSVCQSU4QQ==">传送门<i class="fa fa-external-link-alt"></i></span></p>
-<p><img data-src="https://img.iszy.xyz/20200505114811.png" alt=""></p>
+<p><img data-src="https://img.iszy.xyz/20200505114811.png" /></p>
 <p>通过设定自定义域名，就可以每次自动获取你需要的链接格式。</p>
 <h2 id="获取图片链接方案">获取图片链接方案</h2>
 <h3 id="直连方案">直连方案</h3>
@@ -354,7 +354,7 @@
 <p>只要把链接里的 GitHub 用户名，和你的 repo 名替换即可。master 是分支名，一般没有特别设置都是这个，不用改动。最后跟上你的图片目录即可。</p>
 <p>PicGo 中可以把自定义域名配置为<code>https://raw.githubusercontent.com/ZvonimirSun/my-img-hosting/master</code></p>
 <p>有些人说要使用用 Github Pages，我是觉得没有必要的。一是因为 GitHub Pages 有 1GB 容量限制，二是因为 GitHub Pages 渲染页面比较容易失败，徒增麻烦。不过 Github Pages 可以配置自定义域名，有这个需求的可以尝试，在此我就不推荐了。</p>
-<h3 id="公用-CDN-方案">公用 CDN 方案</h3>
+<h3 id="公用-cdn-方案">公用 CDN 方案</h3>
 <p>众所周知，GitHub 在国内因为某些不可描述之事使用体验不佳，用户在加载图片的时候会十分缓慢，这时候一个 CDN 就帮助很大了。</p>
 <p>这不就巧了吗，jsDelivr 为开发者提供了免费公共 CDN 加速服务，其中就对 Github 进行了加速，只要通过 jsDelivr 的链接引用你的资源，就能获得 jsDelivr 全球 CDN 的加速效果。鉴于 jsDelivr 是在国内有节点的，使用体验就很好了。</p>
 <p>使用方法很简单，jsDelivr 加速 GitHub 文件的链接格式如下。</p>
@@ -362,7 +362,7 @@
 <p>上面的示例就改成这样即可。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://cdn.jsdelivr.net/gh/ZvonimirSun/my-img-hosting@master/20190317184116.png</span><br></pre></td></tr></table></figure>
 <p>PicGo 中可以把自定义域名配置为<code>https://cdn.jsdelivr.net/gh/ZvonimirSun/my-img-hosting@master</code></p>
-<h3 id="Nginx-反代-CDN">Nginx 反代+CDN</h3>
+<h3 id="nginx-反代cdn">Nginx 反代+CDN</h3>
 <p>这个方案吧，感觉稍微有点憨。就是我想用自己的域名，正好我的 VPS 不缺流量，还有个百度云加速 CDN 可以用。于是我采用了 Nginx 反代 GitHub 直链，然后给我的域名套 CDN 的方式。</p>
 <p>这是我的 Nginx 配置，大家可以参考下。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">server</span><br><span class="line">    &#123;</span><br><span class="line">        listen 80;</span><br><span class="line">        #listen [::]:80;</span><br><span class="line">        server_name img.iszy.xyz;</span><br><span class="line">        return 301 https://$host$request_uri;</span><br><span class="line"></span><br><span class="line">        access_log off;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">server</span><br><span class="line">    &#123;</span><br><span class="line">        listen 443 ssl http2;</span><br><span class="line">        #listen [::]:443 ssl http2;</span><br><span class="line">        server_name img.iszy.xyz;</span><br><span class="line"></span><br><span class="line">        include conf.d/iszyxyz-ssl.conf;</span><br><span class="line"></span><br><span class="line">        location ~ ^(.*)/$ &#123;</span><br><span class="line">            add_header Access-Control-Allow-Origin *;</span><br><span class="line">            add_header Access-Control-Allow-Methods &#x27;GET, POST, OPTIONS&#x27;;</span><br><span class="line">            add_header Access-Control-Allow-Headers &#x27;DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization&#x27;;</span><br><span class="line"></span><br><span class="line">            if ($request_method = &#x27;OPTIONS&#x27;) &#123;</span><br><span class="line">                return 204;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        location / &#123;</span><br><span class="line">            proxy_pass https://raw.githubusercontent.com/ZvonimirSun/my-img-hosting/master/;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        access_log off;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
@@ -448,7 +448,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">7:26</span>
+    <span title="站点阅读时长">7:25</span>
   </span>
 </div>
   <div class="powered-by">由 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZw==">NexT.Gemini</span> 强力驱动
@@ -483,10 +483,8 @@
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.2/dist/katex.min.css" integrity="sha256-94CNZ/bJtwrBYZrXhCOBvpB4rZUzBnvAsirFv31TMGo=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.2/dist/contrib/copy-tex.min.css" integrity="sha256-+oItviPaTmqjDhk4y4fLLUIMgRQYDV/ZyrRNvQiebWM=" crossorigin="anonymous">
-  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.2/dist/contrib/copy-tex.min.js","integrity":"sha256-etSqbSVF4+Lwe8MGk/Vanc1sR+mWv+qOG73fxWw9p94="}}</script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/third-party/math/katex.min.js"></script>
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
+<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/third-party/math/mathjax.min.js"></script>
 
 
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>

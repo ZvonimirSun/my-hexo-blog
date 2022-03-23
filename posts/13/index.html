@@ -164,7 +164,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%83%8C%E6%99%AF%E8%AF%B4%E6%98%8E"><span class="nav-number">1.</span> <span class="nav-text">背景说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0%E6%96%B9%E6%B3%95"><span class="nav-number">2.</span> <span class="nav-text">实现方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E4%B8%AA%E6%96%87%E4%BB%B6%E5%A4%B9%E5%A4%8D%E5%88%B6%EF%BC%8C%E6%8C%87%E5%AE%9A%E7%9B%AE%E6%A0%87%E7%9B%AE%E5%BD%95"><span class="nav-number">2.1.</span> <span class="nav-text">单个文件夹复制，指定目标目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%94%BE%E5%88%B0%E5%8F%A6%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%AD%E7%BB%9F%E4%B8%80%E5%A4%8D%E5%88%B6"><span class="nav-number">2.2.</span> <span class="nav-text">放到另一个文件夹中统一复制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A9%E7%94%A8-dockerignore-%E6%96%87%E4%BB%B6"><span class="nav-number">2.3.</span> <span class="nav-text">利用 .dockerignore 文件</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%83%8C%E6%99%AF%E8%AF%B4%E6%98%8E"><span class="nav-number">1.</span> <span class="nav-text">背景说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0%E6%96%B9%E6%B3%95"><span class="nav-number">2.</span> <span class="nav-text">实现方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E4%B8%AA%E6%96%87%E4%BB%B6%E5%A4%B9%E5%A4%8D%E5%88%B6%E6%8C%87%E5%AE%9A%E7%9B%AE%E6%A0%87%E7%9B%AE%E5%BD%95"><span class="nav-number">2.1.</span> <span class="nav-text">单个文件夹复制，指定目标目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%94%BE%E5%88%B0%E5%8F%A6%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%AD%E7%BB%9F%E4%B8%80%E5%A4%8D%E5%88%B6"><span class="nav-number">2.2.</span> <span class="nav-text">放到另一个文件夹中统一复制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A9%E7%94%A8-.dockerignore-%E6%96%87%E4%BB%B6"><span class="nav-number">2.3.</span> <span class="nav-text">利用 .dockerignore 文件</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -337,7 +337,7 @@
 <p>我发现在六年前就已经有人问过类似的问题了，看来也没啥要改的意思。</p>
 <h2 id="实现方法">实现方法</h2>
 <p>下面列举几个事项方式，大家可以参考着使用。</p>
-<h3 id="单个文件夹复制，指定目标目录">单个文件夹复制，指定目标目录</h3>
+<h3 id="单个文件夹复制指定目标目录">单个文件夹复制，指定目标目录</h3>
 <p>一种方法就是一次复制一个文件夹，然后 COPY 的时候要指定到镜像中的具体目录，比如把上面的 dockerfile 改成这样：</p>
 <figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span> node:alpine</span><br><span class="line"><span class="keyword">WORKDIR</span><span class="language-bash"> /usr/src/app</span></span><br><span class="line"><span class="keyword">COPY</span><span class="language-bash"> dist ./dist</span></span><br><span class="line"><span class="keyword">COPY</span><span class="language-bash"> node_modules ./node_modules</span></span><br><span class="line"><span class="keyword">COPY</span><span class="language-bash"> package.json ./</span></span><br><span class="line"><span class="keyword">EXPOSE</span> <span class="number">3000</span></span><br><span class="line"><span class="keyword">CMD</span><span class="language-bash"> [<span class="string">&quot;yarn&quot;</span>, <span class="string">&quot;start:prod&quot;</span>]</span></span><br></pre></td></tr></table></figure>
 <h3 id="放到另一个文件夹中统一复制">放到另一个文件夹中统一复制</h3>
@@ -345,7 +345,7 @@
 <p>就是将需要拷贝的文件夹都放到一个统一的文件夹中，然后在 dockerfile 中拷贝这个文件夹，文件夹下的目录结构就能够得到保持。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> dockerPackages &amp;&amp; <span class="built_in">mv</span> dist node_modules dockerPackages</span><br></pre></td></tr></table></figure>
 <figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span> node:alpine</span><br><span class="line"><span class="keyword">WORKDIR</span><span class="language-bash"> /usr/src/app</span></span><br><span class="line"><span class="keyword">COPY</span><span class="language-bash"> dockerPackages package.json ./</span></span><br><span class="line"><span class="keyword">EXPOSE</span> <span class="number">3000</span></span><br><span class="line"><span class="keyword">CMD</span><span class="language-bash"> [<span class="string">&quot;yarn&quot;</span>, <span class="string">&quot;start:prod&quot;</span>]</span></span><br></pre></td></tr></table></figure>
-<h3 id="利用-dockerignore-文件">利用 .dockerignore 文件</h3>
+<h3 id="利用-.dockerignore-文件">利用 .dockerignore 文件</h3>
 <p>我们上面的写法其实就是像完成一件事，那就是仅把部分内容拷贝进镜像，然后忽略其他内容。这样，我们就可以利用 <code>.dockerignore</code> 文件，来更加优雅地实现。先忽略所有文件，然后将我们需要拷贝的文件排除。</p>
 <p><code>.dockerignore</code>:</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">*</span><br><span class="line">!dist</span><br><span class="line">!node_modules</span><br><span class="line">!package.json</span><br></pre></td></tr></table></figure>
@@ -432,7 +432,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">7:26</span>
+    <span title="站点阅读时长">7:25</span>
   </span>
 </div>
   <div class="powered-by">由 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZw==">NexT.Gemini</span> 强力驱动
@@ -467,10 +467,8 @@
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.2/dist/katex.min.css" integrity="sha256-94CNZ/bJtwrBYZrXhCOBvpB4rZUzBnvAsirFv31TMGo=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.2/dist/contrib/copy-tex.min.css" integrity="sha256-+oItviPaTmqjDhk4y4fLLUIMgRQYDV/ZyrRNvQiebWM=" crossorigin="anonymous">
-  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.2/dist/contrib/copy-tex.min.js","integrity":"sha256-etSqbSVF4+Lwe8MGk/Vanc1sR+mWv+qOG73fxWw9p94="}}</script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/third-party/math/katex.min.js"></script>
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
+<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/third-party/math/mathjax.min.js"></script>
 
 
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>

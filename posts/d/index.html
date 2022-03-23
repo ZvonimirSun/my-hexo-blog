@@ -330,57 +330,57 @@
 <span id="more"></span>
 <table>
 <thead>
-<tr>
+<tr class="header">
 <th>状态码</th>
 <th>说明</th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>O</td>
 <td>远程节点状态良好，未阻塞本客户端</td>
 </tr>
-<tr>
+<tr class="even">
 <td>D</td>
 <td>正在从远程节点下载</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>d</td>
 <td>如果远程节点允许，本客户端将会从该节点下载</td>
 </tr>
-<tr>
+<tr class="even">
 <td>U</td>
 <td>正在上传到远程节点</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>u</td>
 <td>如果远程节点请求，本客户端将会向该节点上传</td>
 </tr>
-<tr>
+<tr class="even">
 <td>K</td>
 <td>远程节点未阻塞，但本客户端对远程节点提供的数据不感兴趣</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>?</td>
 <td>本客户端未阻塞远程节点，但远程节点对本客户端提供的数据不感兴趣</td>
 </tr>
-<tr>
+<tr class="even">
 <td>E</td>
 <td>加密连接</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>H</td>
 <td>远程节点是通过 DHT 网络发现的</td>
 </tr>
-<tr>
+<tr class="even">
 <td>X</td>
 <td>远程节点是通过节点间交换发现的(PEX)</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>I</td>
 <td>该节点是一个传入节点</td>
 </tr>
-<tr>
+<tr class="even">
 <td>T</td>
 <td>正在通过 uTP 连接该节点</td>
 </tr>
@@ -468,7 +468,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">7:26</span>
+    <span title="站点阅读时长">7:25</span>
   </span>
 </div>
   <div class="powered-by">由 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZw==">NexT.Gemini</span> 强力驱动
@@ -503,10 +503,8 @@
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.2/dist/katex.min.css" integrity="sha256-94CNZ/bJtwrBYZrXhCOBvpB4rZUzBnvAsirFv31TMGo=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.2/dist/contrib/copy-tex.min.css" integrity="sha256-+oItviPaTmqjDhk4y4fLLUIMgRQYDV/ZyrRNvQiebWM=" crossorigin="anonymous">
-  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.2/dist/contrib/copy-tex.min.js","integrity":"sha256-etSqbSVF4+Lwe8MGk/Vanc1sR+mWv+qOG73fxWw9p94="}}</script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/third-party/math/katex.min.js"></script>
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
+<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/third-party/math/mathjax.min.js"></script>
 
 
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>

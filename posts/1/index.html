@@ -167,7 +167,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0"><span class="nav-number">2.</span> <span class="nav-text">实现</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA"><span class="nav-number">2.1.</span> <span class="nav-text">输入输出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%88%E6%98%8E%E7%BB%86%E8%AE%A1%E7%AE%97"><span class="nav-number">2.2.</span> <span class="nav-text">月明细计算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PMT-%E5%87%BD%E6%95%B0"><span class="nav-number">2.3.</span> <span class="nav-text">PMT 函数</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0"><span class="nav-number">2.</span> <span class="nav-text">实现</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA"><span class="nav-number">2.1.</span> <span class="nav-text">输入输出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%88%E6%98%8E%E7%BB%86%E8%AE%A1%E7%AE%97"><span class="nav-number">2.2.</span> <span class="nav-text">月明细计算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pmt-%E5%87%BD%E6%95%B0"><span class="nav-number">2.3.</span> <span class="nav-text">PMT 函数</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -340,7 +340,7 @@
 <p><span class="exturl" data-url="aHR0cHM6Ly90b29scy5pc3p5Lnh5ei9tb25leS9tdHFMb2Fucw==">多次提前还贷计算器<i class="fa fa-external-link-alt"></i></span></p>
 <p>网上这样的工具其实不少，不过用起来不是很得劲。比如有的还款时间只能写到月份，有的限制了多次提前还款的次数，不是很自由。</p>
 <p>所以我就用 vue 自己写了一个，自认为还挺好用的吧，没有设置什么限制，不过精度问题还需要继续优化。</p>
-<p><img data-src="https://img.iszy.xyz/20210416175915.png" alt=""></p>
+<p><img data-src="https://img.iszy.xyz/20210416175915.png" /></p>
 <h2 id="实现">实现</h2>
 <h3 id="输入输出">输入输出</h3>
 <p>输入:</p>
@@ -356,8 +356,7 @@
 <li>还款时间</li>
 <li>调整期数</li>
 <li>调整利率</li>
-</ul>
-</li>
+</ul></li>
 </ul>
 <p>输出:</p>
 <ul>
@@ -370,25 +369,19 @@
 </ul>
 <h3 id="月明细计算">月明细计算</h3>
 <ul>
-<li>
-<p><strong>每月利息</strong>: <code>本月剩余本金 * 年利率 / 12</code></p>
-</li>
-<li>
-<p><strong>每月还款额</strong>:</p>
+<li><p><strong>每月利息</strong>: <code>本月剩余本金 * 年利率 / 12</code></p></li>
+<li><p><strong>每月还款额</strong>:</p>
 <ul>
 <li>等额本息: 用 <code>PMT 函数</code>计算</li>
 <li>等额本金: <code>本月偿还本金 + 本月利息</code></li>
-</ul>
-</li>
-<li>
-<p><strong>每月偿还本金</strong>:</p>
+</ul></li>
+<li><p><strong>每月偿还本金</strong>:</p>
 <ul>
 <li>等额本息: <code>本月还款额 - 本月利息</code></li>
 <li>等额本金: <code>本月剩余本金 / 剩余期数</code></li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<h3 id="PMT-函数">PMT 函数</h3>
+<h3 id="pmt-函数">PMT 函数</h3>
 <p>这个函数本是 Excel 里的，不过 Excel 不开源，只好另外用 js 来实现。这里使用的是网上的大佬实现的版本。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Copy of Excel&#x27;s PMT function.</span></span><br><span class="line"><span class="comment"> * Credit: http://stackoverflow.com/questions/2094967/excel-pmt-function-in-js</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> ratePerPeriod       The interest rate for the loan.</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> numberOfPayments    The total number of payments for the loan in months.</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> presentValue        The present value, or the total amount that a series of future payments is worth now;</span></span><br><span class="line"><span class="comment"> *                            Also known as the principal.</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> futureValue         The future value, or a cash balance you want to attain after the last payment is made.</span></span><br><span class="line"><span class="comment"> *                            If fv is omitted, it is assumed to be 0 (zero), that is, the future value of a loan is 0.</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> type                Optional, defaults to 0. The number 0 (zero) or 1 and indicates when payments are due.</span></span><br><span class="line"><span class="comment"> *                              0 = At the end of period</span></span><br><span class="line"><span class="comment"> *                              1 = At the beginning of the period</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@returns</span> &#123;<span class="type">number</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">pmt</span>(<span class="params">ratePerPeriod, numberOfPayments, presentValue, futureValue, type</span>) &#123;</span><br><span class="line">  futureValue = <span class="keyword">typeof</span> futureValue !== <span class="string">&quot;undefined&quot;</span> ? futureValue : <span class="number">0</span>;</span><br><span class="line">  type = <span class="keyword">typeof</span> type !== <span class="string">&quot;undefined&quot;</span> ? type : <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (ratePerPeriod !== <span class="number">0.0</span>) &#123;</span><br><span class="line">    <span class="comment">// Interest rate exists</span></span><br><span class="line">    <span class="keyword">const</span> q = <span class="title class_">Math</span>.<span class="title function_">pow</span>(<span class="number">1</span> + ratePerPeriod, numberOfPayments);</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      -(ratePerPeriod * (futureValue + q * presentValue)) /</span><br><span class="line">      ((-<span class="number">1</span> + q) * (<span class="number">1</span> + ratePerPeriod * type))</span><br><span class="line">    );</span><br><span class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (numberOfPayments !== <span class="number">0.0</span>) &#123;</span><br><span class="line">    <span class="comment">// No interest rate, but number of payments exists</span></span><br><span class="line">    <span class="keyword">return</span> -(futureValue + presentValue) / numberOfPayments;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -474,7 +467,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">7:26</span>
+    <span title="站点阅读时长">7:25</span>
   </span>
 </div>
   <div class="powered-by">由 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZw==">NexT.Gemini</span> 强力驱动
@@ -509,10 +502,8 @@
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.2/dist/katex.min.css" integrity="sha256-94CNZ/bJtwrBYZrXhCOBvpB4rZUzBnvAsirFv31TMGo=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.2/dist/contrib/copy-tex.min.css" integrity="sha256-+oItviPaTmqjDhk4y4fLLUIMgRQYDV/ZyrRNvQiebWM=" crossorigin="anonymous">
-  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.2/dist/contrib/copy-tex.min.js","integrity":"sha256-etSqbSVF4+Lwe8MGk/Vanc1sR+mWv+qOG73fxWw9p94="}}</script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/third-party/math/katex.min.js"></script>
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
+<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/third-party/math/mathjax.min.js"></script>
 
 
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>

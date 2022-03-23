@@ -167,7 +167,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A8%A1%E5%9D%97%E7%9A%84%E8%A7%84%E8%8C%83"><span class="nav-number">1.</span> <span class="nav-text">模块的规范</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CommonJS"><span class="nav-number">2.</span> <span class="nav-text">CommonJS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E7%8E%AF%E5%A2%83"><span class="nav-number">3.</span> <span class="nav-text">浏览器环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AMD"><span class="nav-number">4.</span> <span class="nav-text">AMD</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A8%A1%E5%9D%97%E7%9A%84%E8%A7%84%E8%8C%83"><span class="nav-number">1.</span> <span class="nav-text">模块的规范</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#commonjs"><span class="nav-number">2.</span> <span class="nav-text">CommonJS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E7%8E%AF%E5%A2%83"><span class="nav-number">3.</span> <span class="nav-text">浏览器环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#amd"><span class="nav-number">4.</span> <span class="nav-text">AMD</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -309,7 +309,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.8k</span>
+      <span>1.7k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -332,17 +332,17 @@
 </blockquote>
 <span id="more"></span>
 <p>这个系列的<a href="/2019/08/14/javascript_module/">第一部分</a>介绍了 Javascript 模块的基本写法，今天介绍如何规范地使用模块。</p>
-<p><img data-src="https://img.iszy.xyz/20190814100700.png" alt=""></p>
+<p><img data-src="https://img.iszy.xyz/20190814100700.png" /></p>
 <p>（接<a href="/2019/08/14/javascript_module/">上文</a>）</p>
 <h2 id="模块的规范">模块的规范</h2>
 <p>先想一想，为什么模块很重要？</p>
 <p>因为有了模块，我们就可以更方便地使用别人的代码，想要什么功能，就加载什么模块。</p>
 <p>但是，这样做有一个前提，那就是大家必须以同样的方式编写模块，否则你有你的写法，我有我的写法，岂不是乱了套！考虑到 Javascript 模块现在还没有官方规范，这一点就更重要了。</p>
 <p>目前，通行的 Javascript 模块规范共有两种：<span class="exturl" data-url="aHR0cDovL3dpa2kuY29tbW9uanMub3JnL3dpa2kvTW9kdWxlcy8xLjE=">CommonJS<i class="fa fa-external-link-alt"></i></span> 和 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZGpzL2FtZGpzLWFwaS93aWtpL0FNRA==">AMD<i class="fa fa-external-link-alt"></i></span>。我主要介绍 AMD，但是要先从 CommonJS 讲起。</p>
-<h2 id="CommonJS">CommonJS</h2>
+<h2 id="commonjs">CommonJS</h2>
 <p>2009 年，美国程序员 Ryan Dahl 创造了<span class="exturl" data-url="aHR0cDovL25vZGVqcy5vcmcv">node.js<i class="fa fa-external-link-alt"></i></span>项目，将 javascript 语言用于服务器端编程。</p>
-<p><img data-src="https://img.iszy.xyz/20190814100903.png" alt=""></p>
-<p>这标志&quot;Javascript 模块化编程&quot;正式诞生。因为老实说，在浏览器环境下，没有模块也不是特别大的问题，毕竟网页程序的复杂性有限；但是在服务器端，一定要有模块，与操作系统和其他应用程序互动，否则根本没法编程。</p>
+<p><img data-src="https://img.iszy.xyz/20190814100903.png" /></p>
+<p>这标志"Javascript 模块化编程"正式诞生。因为老实说，在浏览器环境下，没有模块也不是特别大的问题，毕竟网页程序的复杂性有限；但是在服务器端，一定要有模块，与操作系统和其他应用程序互动，否则根本没法编程。</p>
 <p>node.js 的<span class="exturl" data-url="aHR0cDovL25vZGVqcy5vcmcvZG9jcy9sYXRlc3QvYXBpL21vZHVsZXMuaHRtbA==">模块系统<i class="fa fa-external-link-alt"></i></span>，就是参照 <span class="exturl" data-url="aHR0cDovL3dpa2kuY29tbW9uanMub3JnL3dpa2kvTW9kdWxlcy8xLjE=">CommonJS<i class="fa fa-external-link-alt"></i></span> 规范实现的。在 CommonJS 中，有一个全局性方法 require()，用于加载模块。假定有一个数学模块 math.js，就可以像下面这样加载。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> math = <span class="built_in">require</span>(<span class="string">&quot;math&quot;</span>);</span><br></pre></td></tr></table></figure>
 <p>然后，就可以调用模块提供的方法：</p>
@@ -352,11 +352,11 @@
 <p>有了服务器端模块以后，很自然地，大家就想要客户端模块。而且最好两者能够兼容，一个模块不用修改，在服务器和浏览器都可以运行。</p>
 <p>但是，由于一个重大的局限，使得 CommonJS 规范不适用于浏览器环境。还是上一节的代码，如果在浏览器中运行，会有一个很大的问题，你能看出来吗？</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> math = <span class="built_in">require</span>(<span class="string">&quot;math&quot;</span>);</span><br><span class="line"></span><br><span class="line">math.<span class="title function_">add</span>(<span class="number">2</span>, <span class="number">3</span>);</span><br></pre></td></tr></table></figure>
-<p>第二行 math.add(2, 3)，在第一行 require(‘math’)之后运行，因此必须等 math.js 加载完成。也就是说，如果加载时间很长，整个应用就会停在那里等。</p>
-<p>这对服务器端不是一个问题，因为所有的模块都存放在本地硬盘，可以同步加载完成，等待时间就是硬盘的读取时间。但是，对于浏览器，这却是一个大问题，因为模块都放在服务器端，等待时间取决于网速的快慢，可能要等很长时间，浏览器处于&quot;假死&quot;状态。</p>
-<p>因此，浏览器端的模块，不能采用&quot;同步加载&quot;（synchronous），只能采用&quot;异步加载&quot;（asynchronous）。这就是 AMD 规范诞生的背景。</p>
-<h2 id="AMD">AMD</h2>
-<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZGpzL2FtZGpzLWFwaS93aWtpL0FNRA==">AMD<i class="fa fa-external-link-alt"></i></span>是&quot;Asynchronous Module Definition&quot;的缩写，意思就是&quot;异步模块定义&quot;。它采用异步方式加载模块，模块的加载不影响它后面语句的运行。所有依赖这个模块的语句，都定义在一个回调函数中，等到加载完成之后，这个回调函数才会运行。</p>
+<p>第二行 math.add(2, 3)，在第一行 require('math')之后运行，因此必须等 math.js 加载完成。也就是说，如果加载时间很长，整个应用就会停在那里等。</p>
+<p>这对服务器端不是一个问题，因为所有的模块都存放在本地硬盘，可以同步加载完成，等待时间就是硬盘的读取时间。但是，对于浏览器，这却是一个大问题，因为模块都放在服务器端，等待时间取决于网速的快慢，可能要等很长时间，浏览器处于"假死"状态。</p>
+<p>因此，浏览器端的模块，不能采用"同步加载"（synchronous），只能采用"异步加载"（asynchronous）。这就是 AMD 规范诞生的背景。</p>
+<h2 id="amd">AMD</h2>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZGpzL2FtZGpzLWFwaS93aWtpL0FNRA==">AMD<i class="fa fa-external-link-alt"></i></span>是"Asynchronous Module Definition"的缩写，意思就是"异步模块定义"。它采用异步方式加载模块，模块的加载不影响它后面语句的运行。所有依赖这个模块的语句，都定义在一个回调函数中，等到加载完成之后，这个回调函数才会运行。</p>
 <p>AMD 也采用 require()语句加载模块，但是不同于 CommonJS，它要求两个参数：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">require</span>([<span class="variable language_">module</span>], callback);</span><br></pre></td></tr></table></figure>
 <p>第一个参数[module]，是一个数组，里面的成员就是要加载的模块；第二个参数 callback，则是加载成功之后的回调函数。如果将前面的代码改写成 AMD 形式，就是下面这样：</p>
@@ -429,7 +429,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">7:26</span>
+    <span title="站点阅读时长">7:25</span>
   </span>
 </div>
   <div class="powered-by">由 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZw==">NexT.Gemini</span> 强力驱动
@@ -464,10 +464,8 @@
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.2/dist/katex.min.css" integrity="sha256-94CNZ/bJtwrBYZrXhCOBvpB4rZUzBnvAsirFv31TMGo=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.2/dist/contrib/copy-tex.min.css" integrity="sha256-+oItviPaTmqjDhk4y4fLLUIMgRQYDV/ZyrRNvQiebWM=" crossorigin="anonymous">
-  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.2/dist/contrib/copy-tex.min.js","integrity":"sha256-etSqbSVF4+Lwe8MGk/Vanc1sR+mWv+qOG73fxWw9p94="}}</script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/third-party/math/katex.min.js"></script>
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
+<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/third-party/math/mathjax.min.js"></script>
 
 
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>

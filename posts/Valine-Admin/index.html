@@ -29,12 +29,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"www.iszy.cc","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.10.1","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/config.min.js"></script>
 
-    <meta name="description" content="在上一篇文章中，我讲了怎样安装 Valine 评论系统。Valine 评论系统现在自带的邮件通知功能有很大缺陷，这就要轮到我今天要讲的 Valine-Admin 了。由 @云淡风轻 大神开发的 Valine-Admin 实现了基于 leancloud 云引擎的邮件通知、垃圾评论识别和评论管理面板，@赵俊大佬修改优化了一波，能够提供良好的评论通知体验。">
+    <meta name="description" content="在上一篇文章中，我讲了怎样安装 Valine 评论系统。Valine 评论系统现在自带的邮件通知功能有很大缺陷，这就要轮到我今天要讲的 Valine-Admin 了。由 [@云淡风轻](https:&#x2F;&#x2F;ioliu.cn&#x2F;) 大神开发的 Valine-Admin 实现了基于 leancloud 云引擎的邮件通知、垃圾评论识别和评论管理面板，[@赵俊](http:&#x2F;&#x2F;www.zhaojun.im&#x2F;he">
 <meta property="og:type" content="article">
 <meta property="og:title" content="配合 Valine 使用的 Valine-Admin">
 <meta property="og:url" content="https://www.iszy.cc/posts/Valine-Admin/">
 <meta property="og:site_name" content="随遇而安">
-<meta property="og:description" content="在上一篇文章中，我讲了怎样安装 Valine 评论系统。Valine 评论系统现在自带的邮件通知功能有很大缺陷，这就要轮到我今天要讲的 Valine-Admin 了。由 @云淡风轻 大神开发的 Valine-Admin 实现了基于 leancloud 云引擎的邮件通知、垃圾评论识别和评论管理面板，@赵俊大佬修改优化了一波，能够提供良好的评论通知体验。">
+<meta property="og:description" content="在上一篇文章中，我讲了怎样安装 Valine 评论系统。Valine 评论系统现在自带的邮件通知功能有很大缺陷，这就要轮到我今天要讲的 Valine-Admin 了。由 [@云淡风轻](https:&#x2F;&#x2F;ioliu.cn&#x2F;) 大神开发的 Valine-Admin 实现了基于 leancloud 云引擎的邮件通知、垃圾评论识别和评论管理面板，[@赵俊](http:&#x2F;&#x2F;www.zhaojun.im&#x2F;he">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://img.iszy.xyz/20190318221112.png">
 <meta property="og:image" content="https://img.iszy.xyz/20190318221123.png">
@@ -315,7 +315,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>926</span>
+      <span>1k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -333,13 +333,13 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>在<a href="/2018/04/01/Valine/">上一篇文章</a>中，我讲了怎样安装 Valine 评论系统。Valine 评论系统现在自带的邮件通知功能有很大缺陷，这就要轮到我今天要讲的 Valine-Admin 了。由 <span class="exturl" data-url="aHR0cHM6Ly9pb2xpdS5jbi8=">@云淡风轻<i class="fa fa-external-link-alt"></i></span> 大神开发的 Valine-Admin 实现了基于 leancloud 云引擎的邮件通知、垃圾评论识别和评论管理面板，<span class="exturl" data-url="aHR0cDovL3d3dy56aGFvanVuLmltL2hleG8tdmFsaW5lLWFkbWluLw==">@赵俊<i class="fa fa-external-link-alt"></i></span>大佬修改优化了一波，能够提供良好的评论通知体验。</p>
+        <p>在<a href="/2018/04/01/Valine/">上一篇文章</a>中，我讲了怎样安装 Valine 评论系统。Valine 评论系统现在自带的邮件通知功能有很大缺陷，这就要轮到我今天要讲的 Valine-Admin 了。由 <span class="citation" data-cites="云淡风轻">[@云淡风轻]</span>(https://ioliu.cn/) 大神开发的 Valine-Admin 实现了基于 leancloud 云引擎的邮件通知、垃圾评论识别和评论管理面板，<span class="citation" data-cites="赵俊">[@赵俊]</span>(http://www.zhaojun.im/hexo-valine-admin/)大佬修改优化了一波，能够提供良好的评论通知体验。</p>
 <span id="more"></span>
 <h2 id="说明">说明</h2>
-<p>本文内容已弃用，本人的库针对我的个人需求做了一些修改，不再适用于一般用户。因为后续原始的 Valine-Admin 开始适配修改版的 Valine，所以建议使用<span class="exturl" data-url="aHR0cDovL3d3dy56aGFvanVuLmltL2hleG8tdmFsaW5lLWFkbWluLw==">@赵俊<i class="fa fa-external-link-alt"></i></span>大佬的版本。</p>
-<p>赵俊大神的原始链接：<span class="exturl" data-url="aHR0cDovL3d3dy56aGFvanVuLmltL2hleG8tdmFsaW5lLWFkbWluLw==">Hexo 优化 — Valine 扩展之邮件通知<i class="fa fa-external-link-alt"></i></span></p>
+<p>本文内容已弃用，本人的库针对我的个人需求做了一些修改，不再适用于一般用户。因为后续原始的 Valine-Admin 开始适配修改版的 Valine，所以建议使用<span class="citation" data-cites="赵俊">[@赵俊]</span>(http://www.zhaojun.im/hexo-valine-admin/)大佬的版本。</p>
+<p>赵俊大神的原始链接：<span class="exturl" data-url="aHR0cDovL3d3dy56aGFvanVuLmltL2hleG8tdmFsaW5lLWFkbWluLw==">Hexo 优化 --- Valine 扩展之邮件通知<i class="fa fa-external-link-alt"></i></span></p>
 <details>
-  <summary>原始文章</summary>
+<p><summary>原始文章</summary></p>
 <h2 id="问题与改动">问题与改动</h2>
 <p>由于 Valine 的更新，以前的一些功能已经无法继续使用。</p>
 <ul>
@@ -354,17 +354,17 @@
 <h3 id="源码部署">源码部署</h3>
 <p>进入博客应用的云引擎的设置，在代码库中填入以下内容并点击保存。已改用 zhaojun1998 的 Valine-Admin，与教程暂不符合，<strong>请勿继续使用以下教程</strong>。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/ZvonimirSun/Valine-Admin.git</span><br></pre></td></tr></table></figure>
-<p><img data-src="https://img.iszy.xyz/20190318221112.png" alt=""></p>
+<p><img data-src="https://img.iszy.xyz/20190318221112.png" /></p>
 <p>接下来在云引擎的部署页，选择部署目标为<code>生产环境</code>，分支或版本号填入<code>master</code>，勾选平滑部署，点击部署。</p>
-<p><img data-src="https://img.iszy.xyz/20190318221123.png" alt=""></p>
+<p><img data-src="https://img.iszy.xyz/20190318221123.png" /></p>
 <h3 id="设置自定义环境变量">设置自定义环境变量</h3>
 <p>此外，还需要设置云引擎的环境变量以支持运行，如图所示。</p>
-<p><img data-src="https://img.iszy.xyz/20190318221132.png" alt=""></p>
+<p><img data-src="https://img.iszy.xyz/20190318221132.png" /></p>
 <p>SMTP 信息需要准确填写，用于发送通知邮件，部分邮箱如 QQ 邮箱需要使用授权码（密码）。注意我们使用 SSL 发件，所以端口别填错了。</p>
 <h3 id="评论管理后台">评论管理后台</h3>
-<p><img data-src="https://img.iszy.xyz/20190318221144.png" alt=""></p>
+<p><img data-src="https://img.iszy.xyz/20190318221144.png" /></p>
 <p>在云引擎的设置界面设置 Web 主机域名，便可以通过这个地址访问评论的管理界面。用 _User 表中的用户登录即可，注意要手动设置密码，才能登录，不能空密码。</p>
-<p><img data-src="https://img.iszy.xyz/20190318221157.png" alt=""></p>
+<p><img data-src="https://img.iszy.xyz/20190318221157.png" /></p>
 <p>至此已经可以顺利使用了。由于云引擎的免费实例有每天的强制休眠，可以用定时脚本唤醒，但是大多数人应该不需要用到 24 小时，所以影响不大。</p>
 </details>
 
@@ -449,7 +449,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">7:26</span>
+    <span title="站点阅读时长">7:25</span>
   </span>
 </div>
   <div class="powered-by">由 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZw==">NexT.Gemini</span> 强力驱动
@@ -484,10 +484,8 @@
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.2/dist/katex.min.css" integrity="sha256-94CNZ/bJtwrBYZrXhCOBvpB4rZUzBnvAsirFv31TMGo=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.2/dist/contrib/copy-tex.min.css" integrity="sha256-+oItviPaTmqjDhk4y4fLLUIMgRQYDV/ZyrRNvQiebWM=" crossorigin="anonymous">
-  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/katex@0.15.2/dist/contrib/copy-tex.min.js","integrity":"sha256-etSqbSVF4+Lwe8MGk/Vanc1sR+mWv+qOG73fxWw9p94="}}</script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/third-party/math/katex.min.js"></script>
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
+<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.10.1/source/js/third-party/math/mathjax.min.js"></script>
 
 
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
