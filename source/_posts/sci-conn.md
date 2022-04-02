@@ -36,17 +36,17 @@ permalink: /page/bgfw/
 
 ## 目录
 
-| 机场名称（点击了解更多）                 | 关键词                                                     | 操作                                                                                                                                             |
-| ---------------------------------------- | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [FreeWhale 自由鲸 ⭐](/page/freewhale/)  | 性价比，主流节点超多，小众节点                             | [官网传送门](https://url.iszy.xyz/freewhale) / [测速](/page/speed-test-collection/#FreeWhale-%E8%87%AA%E7%94%B1%E9%B2%B8)(2022-03-15)            |
-| [CMYNetwork 红莓网络](/page/cmynetwork/) | IEPL/IPLC 专线，Trojan，主流节点多，小众节点，福利共享账号 | [官网传送门](https://url.iszy.xyz/cmynetwork) / [测速](/page/speed-test-collection/#CMYNetwork-%E7%BA%A2%E8%8E%93%E7%BD%91%E7%BB%9C)(2022-03-22) |
-| [MEET](#三、MEET)                        | 性价比，主流节点，超小流量套餐                             | [官网传送门](https://url.iszy.xyz/fspeed) / [测速](/page/speed-test-collection/#MEET)(2022-02-09)                                                |
-| [DuangCloud](#四、DuangCloud)            | 性价比，专线，主流节点                                     | [官网传送门](https://url.iszy.xyz/duangcloud) / [测速](/page/speed-test-collection/#DuangCloud)                                                  |
-| [Blinkload](#五、Blinkload)              | 主流节点多，流媒体                                         | [官网传送门](https://url.iszy.xyz/blinkload) / [测速](/page/speed-test-collection/#Blinkload)                                                    |
-| [WavesLink](#六、WavesLink)(原 后浪云)   | IEPL 专线，主流节点多，流媒体                              | [官网传送门](https://url.iszy.xyz/waveslink) / [测速](/page/speed-test-collection/#WavesLink)(2022-03-10)                                        |
-| [BESTIEPL](#七、BESTIEPL)(原 Electry)    | IEPL 专线，流媒体                                          | [官网传送门](https://url.iszy.xyz/electry) / [测速](/page/speed-test-collection/#BESTIEPL)(2022-03-10)                                           |
-| [Gatern](#八、Gatern)(原 Shuttle)        | 性价比，IPLC 专线，主流节点，小众节点多，流媒体            | [官网传送门](https://url.iszy.xyz/gatern) / [测速](/page/speed-test-collection/#Gatern)(2022-03-14)                                              |
-| [ByWave](#九、ByWave)                    | IPLC 专线，流媒体                                          | [官网传送门](https://url.iszy.xyz/bywave) / [测速](/page/speed-test-collection/#ByWave)                                                          |
+| 机场名称（点击了解更多）                                 | 关键词                                                     | 操作                                                                                                                                             |
+| -------------------------------------------------------- | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [FreeWhale 自由鲸 ⭐](/page/freewhale/)【长期优惠】      | 性价比，主流节点超多，小众节点                             | [官网传送门](https://url.iszy.xyz/freewhale) / [测速](/page/speed-test-collection/#FreeWhale-%E8%87%AA%E7%94%B1%E9%B2%B8)(2022-03-15)            |
+| [CMYNetwork 红莓网络](/page/cmynetwork/)【本站专属优惠】 | IEPL/IPLC 专线，Trojan，主流节点多，小众节点，福利共享账号 | [官网传送门](https://url.iszy.xyz/cmynetwork) / [测速](/page/speed-test-collection/#CMYNetwork-%E7%BA%A2%E8%8E%93%E7%BD%91%E7%BB%9C)(2022-03-22) |
+| [MEET](#三、MEET)                                        | 性价比，主流节点，超小流量套餐                             | [官网传送门](https://url.iszy.xyz/fspeed) / [测速](/page/speed-test-collection/#MEET)(2022-02-09)                                                |
+| [DuangCloud](#四、DuangCloud)【本站专属优惠】            | 性价比，专线，主流节点                                     | [官网传送门](https://url.iszy.xyz/duangcloud) / [测速](/page/speed-test-collection/#DuangCloud)                                                  |
+| [Blinkload](#五、Blinkload)【本站专属优惠】              | 主流节点多，流媒体                                         | [官网传送门](https://url.iszy.xyz/blinkload) / [测速](/page/speed-test-collection/#Blinkload)                                                    |
+| [WavesLink](#六、WavesLink)(原 后浪云)【限时优惠】       | IEPL 专线，主流节点多，流媒体                              | [官网传送门](https://url.iszy.xyz/waveslink) / [测速](/page/speed-test-collection/#WavesLink)(2022-03-10)                                        |
+| [Gatern](#七、Gatern)(原 Shuttle)【限时优惠】            | 性价比，IPLC 专线，主流节点，小众节点多，流媒体            | [官网传送门](https://url.iszy.xyz/gatern) / [测速](/page/speed-test-collection/#Gatern)(2022-03-14)                                              |
+| [ByWave](#八、ByWave)【专属优惠】                        | IPLC 专线，流媒体                                          | [官网传送门](https://url.iszy.xyz/bywave) / [测速](/page/speed-test-collection/#ByWave)                                                          |
+| [BESTIEPL](#九、BESTIEPL)(原 Electry)                    | IEPL 专线，流媒体                                          | [官网传送门](https://url.iszy.xyz/electry) / [测速](/page/speed-test-collection/#BESTIEPL)(2022-03-10)                                           |
 
 点击前往查看测速: **[机场测速集合](/page/speed-test-collection/)**
 
@@ -240,24 +240,6 @@ permalink: /page/bgfw/
 
 ### （一）优惠
 
-> 转官网优惠公告
-
-**春节特惠**
-
-祝大家新年快乐~
-
-活动时间：即日起至 **2 月 15 日**
-
-使用范围：不循环，推荐年付，续费也可用
-
-- 九折优惠码：`Bye2021`
-- 八折优惠码，不含月付：`Happy2022`
-
-**注:**
-
-- 一次性订阅等不参与活动
-- 数量有限！！！用完为止！！！
-
 > 专属优惠
 
 除 light 套餐外，都能使用以下优惠码获取 9 折优惠，走过路过不要错过。
@@ -313,18 +295,6 @@ permalink: /page/bgfw/
 - **年付**专属**85 折**优惠码: `iszyyear`
 
 本站优惠码一个账户仅可享受一次
-
-> 官方优惠
-
-**冬季优惠**
-
-购买时输入优惠码 `WINTER2021`，即享 **92 折**优惠（仅半年付及以上可用）
-
-**拼团下单**享更多优惠:
-
-- 2 人: 94 折
-- 3 人: 88 折
-- 4 人: 8 折
 
 ### （二）简介
 
@@ -530,37 +500,7 @@ permalink: /page/bgfw/
 | Pro-高級後浪-V2    | 60 元/月  | 200GB/月 | 5        |
 | Master-至尊後浪-V3 | 120 元/月 | 500GB/月 | 5        |
 
-## 七、BESTIEPL
-
-[官网传送门](https://url.iszy.xyz/electry)
-
-[⭐⭐ 测速 ⭐⭐](/page/speed-test-collection/#BESTIEPL) (2022-03-10)
-
-### （一）简介
-
-**BESTIEPL**(原 Electry)，拥有高端 IEPL 专线中继，暂时只有香港台湾节点，但近期会增加更多落地节点。
-
-- 系统自动检测用户地理位置及运营商，分配对应最近入口，减少延迟；
-- 全 BGP 入口中转节点，无视封锁
-- 线路优质，高速稳定，不限速套餐
-- 支持 Windows/mac OS/Android/iOS
-- 解锁流媒体区域限制
-- 支付支持支付宝/微信/信用卡
-- 全部线路流量消耗均为正常 1 倍率，无高倍率套路
-
-### （二）套餐
-
-所有套餐线路是一样的，均为 IEPL & CN2 中继线路，只有流量区别。
-
-| 套餐          | 价格      | 流量      | 可用设备 |
-| ------------- | --------- | --------- | -------- |
-| Air Plan      | 38 元/月  | 50GB/月   | 3        |
-| Lite Plan     | 48 元/月  | 200GB/月  | 3        |
-| Standard Plan | 88 元/月  | 400GB/月  | 4        |
-| Advanced Plan | 158 元/月 | 800GB/月  | 5        |
-| Premium Plan  | 208 元/月 | 1000GB/月 | 5        |
-
-## 八、Gatern
+## 七、Gatern
 
 [官网传送门](https://url.iszy.xyz/gatern)
 
@@ -580,7 +520,7 @@ permalink: /page/bgfw/
 
 以下优惠码均可在续费或新购时使用。
 
-失效日期 **2022 年 03 月 31 日**
+失效日期 **2022 年 04 月 30 日**
 
 - 优惠代码 A：`KFO93Q4AZJ`
 
@@ -604,39 +544,40 @@ permalink: /page/bgfw/
 
 ### （二）简介
 
-这是最近找到的一家 V2ray 机场，价格合适，流量给的也不少，提供 BGP 中转线路和两倍率的 IPLC 专线线路。经过最近一段时间的使用，可以说是非常稳定，速度给力，主流客户端都能够支持的比较好，可以推荐一下。
+这是最近找到的一家 V2ray 机场，价格合适，流量给的也不少，提供纯 IPLC 专线线路。经过最近一段时间的使用，可以说是非常稳定，速度给力，主流客户端都能够支持的比较好，可以推荐一下。
 
 另外，我发现不少用户其实有小众国家线路的需求，因为使用人数不多，大多数机场一般不提供这些服务。这家机场应用户需求，提供了不少小众国家线路，有此类需求的用户可以考虑一下。
 
-- 线路上，所有节点都提供了一条 BGP 中转和一条两倍率的 IPLC 线路。
-- 除了用户集中的香港有三台服务器节点，也就是六条线路外，其他地区均只有一台服务器节点，也就是两条线路，不过速度上经过测试绝对满足需求。
-- 地区上，除香港外的地区有，美国、台湾、日本、韩国、新加坡、印度、菲律宾、加拿大、阿根廷、英国、法国、德国、荷兰、澳大利亚、俄罗斯、土耳其、埃及
+- 提供超多客户端订阅支持
+- 全线 IPLC 线路，常规节点均没有倍率，个别小众节点，如巴基斯坦、以色列等地区会有多倍率
+- 除了用户集中的香港有三台服务器节点，其他地区先均有一到两台服务器节点，速度上经过测试绝对满足需求。商家会经常根据节点使用负载考虑扩容节点，不用担心卡顿问题。
+- 地区上，除香港外的地区有，台湾、日本、韩国、新加坡、印度、菲律宾、巴基斯坦、以色列、阿联酋、美国、加拿大、阿根廷、巴西、英国、法国、德国、意大利、荷兰、瑞典、俄罗斯、土耳其、波兰、丹麦、立陶宛、拉脱维亚、瑞士、罗马尼亚、澳大利亚、新西兰、埃及、南非，后续可能会有调整
 
 使用人数很少的小众地区节点性能不会特别高，有 BGP 中转和 IPLC 专线加持，我觉得应当是够用的，大家可以参考参考[⭐⭐ 测速 ⭐⭐](/page/speed-test-collection/#Shuttle)。
 
 ### （三）套餐
 
-> 套餐间线路没有区别，请按需选购。
+> 套餐间线路没有区别，均为 IPLC 专线中转，请按需选购。
 > 按季度、年度等购买套餐有更多优惠哦。
 
 订阅服务
 
-| 套餐       | 流量     | 价格      |
-| ---------- | -------- | --------- |
-| **Nano⭐** | 200G/月  | 20 元/月  |
-| Micro      | 360G/月  | 36 元/月  |
-| Small      | 520G/月  | 52 元/月  |
-| Medium     | 1000G/月 | 100 元/月 |
-| Large      | 1640G/月 | 164 元/月 |
+| 套餐       | 流量    | 价格      |
+| ---------- | ------- | --------- |
+| **Nano⭐** | 120G/月 | 20 元/月  |
+| Micro      | 216G/月 | 36 元/月  |
+| Small      | 312G/月 | 52 元/月  |
+| Medium     | 600G/月 | 100 元/月 |
+| Large      | 984G/月 | 164 元/月 |
 
 不限时流量包
 
 | 套餐    | 流量  | 价格   |
 | ------- | ----- | ------ |
-| Special | 160G  | 80 元  |
-| Lite    | 340G  | 170 元 |
-| Pro     | 700G  | 350 元 |
-| Ultra   | 1420G | 710 元 |
+| Special | 144G  | 80 元  |
+| Lite    | 306G  | 170 元 |
+| Pro     | 630G  | 350 元 |
+| Ultra   | 1278G | 710 元 |
 
 ### （四）其他说明
 
@@ -647,7 +588,7 @@ permalink: /page/bgfw/
   - 还提供了官方 tg 群组，可以随时交流，购买套餐后可在套餐页看到进群链接
 - [域名发布页](https://shuttlehub.github.io)，防止失联
 
-## 九、ByWave
+## 八、ByWave
 
 [官网传送门](https://url.iszy.xyz/bywave)
 
@@ -720,6 +661,36 @@ permalink: /page/bgfw/
   - 如果时间准确无法使用的话请检查浏览器是否有 SwitchOmega 或者代理相关的插件，如果有的话请先关闭这些插件。
   - 如果还是无法使用的话，请在连接后截图客户端中的日志界面发送到在线客服。
 - 建议采用官网在线客服的方式解决问题
+
+## 九、BESTIEPL
+
+[官网传送门](https://url.iszy.xyz/electry)
+
+[⭐⭐ 测速 ⭐⭐](/page/speed-test-collection/#BESTIEPL) (2022-03-10)
+
+### （一）简介
+
+**BESTIEPL**(原 Electry)，拥有高端 IEPL 专线中继，暂时只有香港台湾节点，但近期会增加更多落地节点。
+
+- 系统自动检测用户地理位置及运营商，分配对应最近入口，减少延迟；
+- 全 BGP 入口中转节点，无视封锁
+- 线路优质，高速稳定，不限速套餐
+- 支持 Windows/mac OS/Android/iOS
+- 解锁流媒体区域限制
+- 支付支持支付宝/微信/信用卡
+- 全部线路流量消耗均为正常 1 倍率，无高倍率套路
+
+### （二）套餐
+
+所有套餐线路是一样的，均为 IEPL & CN2 中继线路，只有流量区别。
+
+| 套餐          | 价格      | 流量      | 可用设备 |
+| ------------- | --------- | --------- | -------- |
+| Air Plan      | 38 元/月  | 50GB/月   | 3        |
+| Lite Plan     | 48 元/月  | 200GB/月  | 3        |
+| Standard Plan | 88 元/月  | 400GB/月  | 4        |
+| Advanced Plan | 158 元/月 | 800GB/月  | 5        |
+| Premium Plan  | 208 元/月 | 1000GB/月 | 5        |
 
 ---
 
