@@ -6,7 +6,7 @@
   <link href="https://www.iszy.cc/atom.xml" rel="self"/>
   
   <link href="https://www.iszy.cc/"/>
-  <updated>2022-04-07T07:30:04.000Z</updated>
+  <updated>2022-04-07T07:38:59.000Z</updated>
   <id>https://www.iszy.cc/</id>
   
   <author>
@@ -21,18 +21,12 @@
     <link href="https://www.iszy.cc/posts/tc-light-hk-server-benchmark-20220407/"/>
     <id>https://www.iszy.cc/posts/tc-light-hk-server-benchmark-20220407/</id>
     <published>2022-04-07T07:30:01.000Z</published>
-    <updated>2022-04-07T07:30:04.000Z</updated>
+    <updated>2022-04-07T07:38:59.000Z</updated>
     
-    <content type="html"><![CDATA[<p>新整了个腾讯云香港轻量应用服务器测一下。</p><h2 id="网络">网络</h2><p>后悔以前 CN2 线路的时候没留一台，现在是 163 线路，体验上其实还可以，至少不像阿里轻量到处绕。</p><p><img data-src="https://img.iszy.xyz/1649315971476.png?x-oss-process=style/big" alt=""></p><h2 id="Benchmark">Benchmark</h2><p>用老鬼大佬的脚本跑了下，还是挺满意的。<span class="exturl" data-url="aHR0cDovL0Zhc3QuY29t">Fast.com<i class="fa fa-external-link-alt"></i></span> 不知道为啥不通。</p><p><img data-src="https://img.iszy.xyz/1649315021461.png?x-oss-process=style/big" alt=""></p><h2 id="媒体解锁和性能测试">媒体解锁和性能测试</h2><p><img data-src="https://img.iszy.xyz/1649316516160.png?x-oss-process=style/big" alt=""></p>]]></content>
+    <content type="html"><![CDATA[<p>新整了个腾讯云香港轻量应用服务器测一下。</p><span id="more"></span><h2 id="网络">网络</h2><p>后悔以前 CN2 线路的时候没留一台，现在是 163 线路，体验上其实还可以，至少不像阿里轻量到处绕。</p><p><img data-src="https://img.iszy.xyz/1649315971476.png?x-oss-process=style/big" alt=""></p><h2 id="Benchmark">Benchmark</h2><p>用老鬼大佬的脚本跑了下，还是挺满意的。<span class="exturl" data-url="aHR0cDovL0Zhc3QuY29t">Fast.com<i class="fa fa-external-link-alt"></i></span> 不知道为啥不通。</p><p><img data-src="https://img.iszy.xyz/1649315021461.png?x-oss-process=style/big" alt=""></p><h2 id="媒体解锁和性能测试">媒体解锁和性能测试</h2><p><img data-src="https://img.iszy.xyz/1649316516160.png?x-oss-process=style/big" alt=""></p>]]></content>
     
     
-      
-      
-    <summary type="html">&lt;p&gt;新整了个腾讯云香港轻量应用服务器测一下。&lt;/p&gt;
-&lt;h2 id=&quot;网络&quot;&gt;网络&lt;/h2&gt;
-&lt;p&gt;后悔以前 CN2 线路的时候没留一台，现在是 163 线路，体验上其实还可以，至少不像阿里轻量到处绕。&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&quot;https://img.isz</summary>
-      
+    <summary type="html">&lt;p&gt;新整了个腾讯云香港轻量应用服务器测一下。&lt;/p&gt;</summary>
     
     
     
