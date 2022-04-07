@@ -6,7 +6,7 @@
   <link href="https://www.iszy.cc/atom.xml" rel="self"/>
   
   <link href="https://www.iszy.cc/"/>
-  <updated>2022-04-07T04:26:58.000Z</updated>
+  <updated>2022-04-07T06:30:19.000Z</updated>
   <id>https://www.iszy.cc/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>zsh (anon):12: character not in range</title>
+    <link href="https://www.iszy.cc/posts/zsh-character-not-in-range/"/>
+    <id>https://www.iszy.cc/posts/zsh-character-not-in-range/</id>
+    <published>2022-04-07T06:30:15.000Z</published>
+    <updated>2022-04-07T06:30:19.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>运行<code>source ~/.zshrc</code>，报错<code>zsh (anon):12: character not in range</code></p><span id="more"></span><p>这是由于环境变量 LC_ALL 和 LANG 未设置的缘故。</p><p>只需要在<code>~/.zshrc</code>文件前面加入</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> LC_ALL=C.UTF-8</span><br><span class="line"><span class="built_in">export</span> LANG=C.UTF-8</span><br></pre></td></tr></table></figure><p>然后运行<code>source ~/.zshrc</code>即可。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;运行&lt;code&gt;source ~/.zshrc&lt;/code&gt;，报错&lt;code&gt;zsh (anon):12: character not in range&lt;/code&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Wiki" scheme="https://www.iszy.cc/categories/Wiki/"/>
+    
+    <category term="Linux" scheme="https://www.iszy.cc/categories/Wiki/Linux/"/>
+    
+    <category term="Shell" scheme="https://www.iszy.cc/categories/Wiki/Linux/Shell/"/>
+    
+    
+    <category term="Linux" scheme="https://www.iszy.cc/tags/Linux/"/>
+    
+    <category term="Zsh" scheme="https://www.iszy.cc/tags/Zsh/"/>
+    
+    <category term="Locale" scheme="https://www.iszy.cc/tags/Locale/"/>
+    
+  </entry>
   
   <entry>
     <title>将 Blob 数据保存到剪贴板</title>
@@ -495,33 +524,6 @@
     <category term="NestJS" scheme="https://www.iszy.cc/tags/NestJS/"/>
     
     <category term="TypeScript" scheme="https://www.iszy.cc/tags/TypeScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>给数组原型对象添加方法</title>
-    <link href="https://www.iszy.cc/posts/6/"/>
-    <id>https://www.iszy.cc/posts/6/</id>
-    <published>2021-06-15T02:24:35.000Z</published>
-    <updated>2021-06-15T02:24:35.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>今天使用<code>for...in</code>方法的时候发现枚举到了意料之外的<code>prototype</code>内的方法，发现是没有正确为数组原型对象添加方法，在此记录。</p><span id="more"></span><h2 id="问题-2">问题</h2><p>一般我们如何给一个数组原型对象添加方法呢，比如我们添加一个去重方法。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Array</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">unique</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">var</span> n = &#123;&#125;,</span><br><span class="line">    r = [];</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="variable language_">this</span>.<span class="property">length</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (!n[<span class="variable language_">this</span>[i]]) &#123;</span><br><span class="line">      n[<span class="variable language_">this</span>[i]] = <span class="literal">true</span>;</span><br><span class="line">      r.<span class="title function_">push</span>(<span class="variable language_">this</span>[i]);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> r;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p>我看不少文章里这样就好了，这就会出现我刚刚说到的问题。在你使用<code>for...in</code>方法遍历数组时就会拿到<code>unique</code>这个 key 值，这个是不符合我们预期的。</p><p>其实出现这样的情况是因为<code>Array.prototype</code>对象的<code>unique</code>属性的描述值<code>enumerable</code>为<code>true</code>，也就是可枚举，在枚举对象属性时会被枚举到（<code>for...in</code>或<code>Object.keys</code>方法）。</p><p>根据<span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvSmF2YVNjcmlwdC9FbnVtZXJhYmlsaXR5X2FuZF9vd25lcnNoaXBfb2ZfcHJvcGVydGllcw==">MDN Web Docs<i class="fa fa-external-link-alt"></i></span>说明，可枚举属性是指那些内部 <code>可枚举</code> 标志设置为 <code>true</code> 的属性，对于通过直接的赋值和属性初始化的属性，该标识值默认为即为 <code>true</code>，对于通过 <code>Object.defineProperty</code> 等定义的属性，该标识值默认为 <code>false</code>。可枚举的属性可以通过 <code>for...in</code> 循环进行遍历（除非该属性名是一个 <code>Symbol</code>）。</p><h2 id="解决-2">解决</h2><p>正确的方法如下，忽略方法内容。</p><h3 id="方法一">方法一</h3><p>先添加方法，再通过 <code>Object.defineProperty</code> 设置为不可枚举。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Array</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">unique</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;&#125;;</span><br><span class="line"><span class="title class_">Object</span>.<span class="title function_">defineProperty</span>(<span class="title class_">Array</span>.<span class="property"><span class="keyword">prototype</span></span>, <span class="string">&quot;unique&quot;</span>, &#123;</span><br><span class="line">  <span class="attr">enumerable</span>: <span class="literal">false</span>,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><h3 id="方法二">方法二</h3><p>或者直接通过 <code>Object.defineProperty</code> 方法添加。此时<code>enumerable</code>默认为<code>false</code>，不用特别指定。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Object</span>.<span class="title function_">defineProperty</span>(<span class="title class_">Array</span>.<span class="property"><span class="keyword">prototype</span></span>, <span class="string">&quot;unique&quot;</span>, &#123;</span><br><span class="line">  <span class="attr">value</span>: <span class="keyword">function</span> (<span class="params"></span>) &#123;&#125;,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;今天使用&lt;code&gt;for...in&lt;/code&gt;方法的时候发现枚举到了意料之外的&lt;code&gt;prototype&lt;/code&gt;内的方法，发现是没有正确为数组原型对象添加方法，在此记录。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Wiki" scheme="https://www.iszy.cc/categories/Wiki/"/>
-    
-    <category term="JavaScript" scheme="https://www.iszy.cc/categories/Wiki/JavaScript/"/>
-    
-    <category term="Browser" scheme="https://www.iszy.cc/categories/Wiki/JavaScript/Browser/"/>
-    
-    
-    <category term="JavaScript" scheme="https://www.iszy.cc/tags/JavaScript/"/>
-    
-    <category term="数组" scheme="https://www.iszy.cc/tags/%E6%95%B0%E7%BB%84/"/>
     
   </entry>
   
