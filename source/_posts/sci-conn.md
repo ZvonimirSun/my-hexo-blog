@@ -45,7 +45,7 @@ permalink: /page/bgfw/
 | [Blinkload](#五、Blinkload)【本站专属优惠】              | 主流节点多，流媒体                                         | [官网传送门](https://url.iszy.xyz/blinkload) / [测速](/page/speed-test-collection/#Blinkload)                                                    |
 | [WavesLink](#六、WavesLink)(原 后浪云)【限时优惠】       | IEPL 专线，主流节点多，流媒体                              | [官网传送门](https://url.iszy.xyz/waveslink) / [测速](/page/speed-test-collection/#WavesLink)(2022-03-10)                                        |
 | [Gatern](#七、Gatern)(原 Shuttle)【限时优惠】            | 性价比，IPLC 专线，主流节点，小众节点多，流媒体            | [官网传送门](https://url.iszy.xyz/gatern) / [测速](/page/speed-test-collection/#Gatern)(2022-03-14)                                              |
-| [ByWave](#八、ByWave)【专属优惠】                        | IPLC 专线，流媒体                                          | [官网传送门](https://url.iszy.xyz/bywave) / [测速](/page/speed-test-collection/#ByWave)                                                          |
+| [ByWave](#八、ByWave)【限时优惠】                        | IPLC 专线，流媒体                                          | [官网传送门](https://url.iszy.xyz/bywave) / [测速](/page/speed-test-collection/#ByWave)                                                          |
 | [BESTIEPL](#九、BESTIEPL)(原 Electry)                    | IEPL 专线，流媒体                                          | [官网传送门](https://url.iszy.xyz/electry) / [测速](/page/speed-test-collection/#BESTIEPL)(2022-03-10)                                           |
 
 点击前往查看测速: **[机场测速集合](/page/speed-test-collection/)**
@@ -603,6 +603,12 @@ permalink: /page/bgfw/
 优惠码: `iszy`
 
 > 转官方优惠公告
+
+使用 `AHI6NA97XR` 可在**年付及以上**付款周期获得 **30%off**
+
+使用 `RYLD55ESKQ` 可在**任何**付款周期获得 **20%off** 循环优惠
+
+以上优惠均可在续费时使用
 
 **充值获得赠送金**
 
