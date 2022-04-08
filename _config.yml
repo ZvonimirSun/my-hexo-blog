@@ -143,12 +143,12 @@ algolia:
   indexName: "iszy_blog"
   chunkSize: 5000
   fields:
-    - title
-    - tags
-    - categories
-    - slug
-    - photos
+    - content:strip
+    - excerpt:strip
     - gallery
     - permalink
-    - excerpt:strip
-    - content:strip
+    - photos
+    - slug
+    - tags
+    - categories
+    - title
