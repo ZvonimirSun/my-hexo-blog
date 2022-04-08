@@ -147,4 +147,5 @@ algolia:
     - photos
     - slug
     - tags
+    - categories
     - title
