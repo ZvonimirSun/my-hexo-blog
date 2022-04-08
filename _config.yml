@@ -138,6 +138,9 @@ markdown:
     - markdown-it-katex
 
 algolia:
+  appId: "1UJ2W38EIN"
+  apiKey: "c0cf4d0a9659a45dd3a38becbe6b6f73"
+  indexName: "iszy_blog"
   chunkSize: 5000
   fields:
     - content:strip
