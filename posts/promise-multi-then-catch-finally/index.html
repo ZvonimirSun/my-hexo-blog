@@ -43,7 +43,7 @@
 <meta property="og:image" content="https://img.iszy.xyz/1649350721994.png">
 <meta property="og:image" content="https://img.iszy.xyz/1649351186185.png">
 <meta property="article:published_time" content="2022-04-07T15:42:28.000Z">
-<meta property="article:modified_time" content="2022-04-07T17:34:51.000Z">
+<meta property="article:modified_time" content="2022-04-08T00:46:33.000Z">
 <meta property="article:author" content="Dirge">
 <meta property="article:tag" content="JavaScript">
 <meta property="article:tag" content="Promise">
@@ -275,7 +275,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-04-08 01:34:51" itemprop="dateModified" datetime="2022-04-08T01:34:51+08:00">2022-04-08</time>
+      <time title="修改时间：2022-04-08 08:46:33" itemprop="dateModified" datetime="2022-04-08T08:46:33+08:00">2022-04-08</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -404,14 +404,14 @@
 <h2 id="总结-3">总结</h2>
 <p>为了方便，以下内容中“三个方法”指 then、catch、finally 方法</p>
 <ol>
-<li>一个 Promise 中，resolve 和 reject <strong>只会执行最先触发的一个</strong></li>
-<li>Promise 对象的三个方法都会返回一个<strong>新的 Promise 对象</strong></li>
-<li>因为三个方法都会返回 Promise 对象，且返回值和错误都会<strong>向后传递</strong>，所以可以<strong>链式调用</strong>。比如 Promise 链靠前的方法中抛出错误，会被后续 Promise 对象的 catch 方法捕获。</li>
-<li>在三个方法中 <strong>return</strong> 值，会作为<strong>后续的第一个 then 方法</strong>的参数</li>
-<li>在三个方法中 <strong>throw</strong> 值，会被<strong>后续的第一个 catch 方法</strong>捕获。如果在这个 catch 方法中没有继续抛出错误，则不会被后续的 catch 方法捕获</li>
-<li>在同一个 Promise 对象上，<strong>多次添加</strong>then、finally 方法，<strong>均会被执行</strong>，且会<strong>按照添加顺序依次执行</strong></li>
-<li>在同一个 Promise 对象上，<strong>多次添加</strong>catch 方法，仅会被<strong>第一个</strong>添加的 catch 方法捕获</li>
-<li>在 Promise 对象的三个方法<strong>返回的 Promise 对象</strong>上添加的三个方法，必然会<strong>在原 Promise 对象</strong>上添加的三个方法<strong>之后执行</strong></li>
+<li>一个 Promise 中，resolve 和 reject <strong><em>只会执行最先触发的一个</em></strong></li>
+<li>Promise 对象的三个方法都会返回一个**<em>新的 Promise 对象</em>**</li>
+<li>因为三个方法都会返回 Promise 对象，且返回值和错误都会**<em>向后传递</em><strong>，所以可以</strong><em>链式调用</em>**。比如 Promise 链靠前的方法中抛出错误，会被后续 Promise 对象的 catch 方法捕获。</li>
+<li>在三个方法中 <strong><em>return</em></strong> 值，会作为**<em>后续的第一个 then 方法</em>**的参数</li>
+<li>在三个方法中 <strong><em>throw</em></strong> 值，会被**<em>后续的第一个 catch 方法</em>**捕获。如果在这个 catch 方法中没有继续抛出错误，则不会被后续的 catch 方法捕获</li>
+<li>在同一个 Promise 对象上，<strong><em>多次添加</em><strong>then、finally 方法，</strong><em>均会被执行</em></strong>，且会**<em>按照添加顺序依次执行</em>**</li>
+<li>在同一个 Promise 对象上，**<em>多次添加</em><strong>catch 方法，仅会被</strong><em>第一个</em>**添加的 catch 方法捕获</li>
+<li>在 Promise 对象的三个方法**<em>返回的 Promise 对象</em><strong>上添加的三个方法，必然会</strong><em>在原 Promise 对象</em><strong>上添加的三个方法</strong><em>之后执行</em>**</li>
 <li>在一个 Promise 链上，多次添加 then、catch、finally 也会按照添加顺序依次执行。</li>
 </ol>
 
