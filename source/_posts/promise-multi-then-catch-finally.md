@@ -313,12 +313,12 @@ testPromise();
 
 为了方便，以下内容中“三个方法”指 then、catch、finally 方法
 
-1. 一个 Promise 中，resolve 和 reject **_只会执行最先触发的一个_**
-2. Promise 对象的三个方法都会返回一个**_新的 Promise 对象_**
-3. 因为三个方法都会返回 Promise 对象，且返回值和错误都会**_向后传递_**，所以可以**_链式调用_**。比如 Promise 链靠前的方法中抛出错误，会被后续 Promise 对象的 catch 方法捕获。
-4. 在三个方法中 **_return_** 值，会作为**_后续的第一个 then 方法_**的参数
-5. 在三个方法中 **_throw_** 值，会被**_后续的第一个 catch 方法_**捕获。如果在这个 catch 方法中没有继续抛出错误，则不会被后续的 catch 方法捕获
-6. 在同一个 Promise 对象上，**_多次添加_**then、finally 方法，**_均会被执行_**，且会**_按照添加顺序依次执行_**
-7. 在同一个 Promise 对象上，**_多次添加_**catch 方法，仅会被**_第一个_**添加的 catch 方法捕获
-8. 在 Promise 对象的三个方法**_返回的 Promise 对象_**上添加的三个方法，必然会**_在原 Promise 对象_**上添加的三个方法**_之后执行_**
+1. 一个 Promise 中，resolve 和 reject _只会执行最先触发的一个_
+2. Promise 对象的三个方法都会返回一个 _新的 Promise 对象_
+3. 因为三个方法都会返回 Promise 对象，且返回值和错误都会*向后传递*，所以可以*链式调用*。比如 Promise 链靠前的方法中抛出错误，会被后续 Promise 对象的 catch 方法捕获。
+4. 在三个方法中 _return_ 值，会作为*后续的第一个 then 方法*的参数
+5. 在三个方法中 _throw_ 值，会被*后续的第一个 catch 方法*捕获。如果在这个 catch 方法中没有继续抛出错误，则不会被后续的 catch 方法捕获
+6. 在同一个 Promise 对象上，_多次添加_ then、finally 方法，_均会被执行_，且会 _按照添加顺序依次执行_
+7. 在同一个 Promise 对象上，_多次添加_ catch 方法，仅会被*第一个*添加的 catch 方法捕获
+8. 在 Promise 对象的三个方法 _返回的 Promise 对象_ 上添加的三个方法，必然会 _在原 Promise 对象_ 上添加的三个方法 _之后执行_
 9. 在一个 Promise 链上，多次添加 then、catch、finally 也会按照添加顺序依次执行。
