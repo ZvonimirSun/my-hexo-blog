@@ -86,8 +86,7 @@ jobs:
           port: ${{ secrets.PORT }}
           key: ${{ secrets.KEY }}
           script: |
-            whoami
-            cd /root/docker/nginx/html/www.iszy.cc
+            cd ${{ secrets.PATH }}
             git fetch -p origin;
             git pull --rebase
             ls -al
