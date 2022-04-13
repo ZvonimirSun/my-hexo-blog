@@ -6,7 +6,7 @@
   <link href="https://www.iszy.cc/atom.xml" rel="self"/>
   
   <link href="https://www.iszy.cc/"/>
-  <updated>2022-04-08T00:54:07.000Z</updated>
+  <updated>2022-04-13T02:42:49.000Z</updated>
   <id>https://www.iszy.cc/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux 安装 docker compose v2</title>
+    <link href="https://www.iszy.cc/posts/linux-install-docker-compose-v2/"/>
+    <id>https://www.iszy.cc/posts/linux-install-docker-compose-v2/</id>
+    <published>2022-04-13T02:42:38.000Z</published>
+    <updated>2022-04-13T02:42:49.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近换个新服务器，准备装下 docker，才发现 docker compose 已经出 v2 版本一段时间了。安装和使用上和 v1 有一些差别，在此记录。</p><span id="more"></span><h2 id="介绍">介绍</h2><p>目前 Docker 官方用 GO 语言 重写 了 Docker Compose，并将其作为了 docker cli 的子命令，称为 Compose V2。</p><h2 id="安装-5">安装</h2><p>首先要先安装 docker，再进行接下来的安装。</p><h3 id="仅为当前用户安装">仅为当前用户安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">mkdir</span> -p <span class="variable">$HOME</span>/.docker/cli-plugins</span><br><span class="line">$ curl -L https://github.com/docker/compose/releases/latest/download/docker-compose-`<span class="built_in">uname</span> -s`-`<span class="built_in">uname</span> -m` &gt; <span class="variable">$HOME</span>/.docker/cli-plugins/docker-compose</span><br><span class="line">$ <span class="built_in">chmod</span> +x <span class="variable">$HOME</span>/.docker/cli-plugins/docker-compose</span><br></pre></td></tr></table></figure><h3 id="安装到全局">安装到全局</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ curl -L https://github.com/docker/compose/releases/latest/download/docker-compose-`<span class="built_in">uname</span> -s`-`<span class="built_in">uname</span> -m` &gt; docker-compose</span><br><span class="line">$ sudo <span class="built_in">mv</span> docker-compose /usr/libexec/docker/cli-plugins</span><br><span class="line">$ sudo <span class="built_in">chmod</span> +x /usr/libexec/docker/cli-plugins/docker-compose</span><br><span class="line">$ sudo <span class="built_in">chown</span> root:root /usr/libexec/docker/cli-plugins/docker-compose</span><br></pre></td></tr></table></figure><h2 id="验证和使用">验证和使用</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ docker compose version</span><br><span class="line"></span><br><span class="line">Docker Compose version v2.4.1</span><br></pre></td></tr></table></figure><p>如果能正常返回，说明已经可以正常使用。只要将熟悉的 docker-compose 命令替换为 docker compose，即可使用 Docker Compose。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;最近换个新服务器，准备装下 docker，才发现 docker compose 已经出 v2 版本一段时间了。安装和使用上和 v1 有一些差别，在此记录。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Wiki" scheme="https://www.iszy.cc/categories/Wiki/"/>
+    
+    <category term="Docker" scheme="https://www.iszy.cc/categories/Wiki/Docker/"/>
+    
+    
+    <category term="Docker" scheme="https://www.iszy.cc/tags/Docker/"/>
+    
+    <category term="Linux" scheme="https://www.iszy.cc/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>Promise多个then、catch、finally的测试与总结</title>
@@ -497,33 +522,6 @@
     <category term="Github Actions" scheme="https://www.iszy.cc/tags/Github-Actions/"/>
     
     <category term="自动化部署" scheme="https://www.iszy.cc/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>经纬度定位工具</title>
-    <link href="https://www.iszy.cc/posts/9/"/>
-    <id>https://www.iszy.cc/posts/9/</id>
-    <published>2021-09-01T04:20:04.000Z</published>
-    <updated>2021-09-01T04:20:04.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>我有个朋友有经纬度定位的需求，正好前几天做了个 GeoJSON 工具给自己用，部分内容可以直接用上，就准备自己做一个，应该能比网上的界面更加清爽舒服一些。</p><span id="more"></span><h2 id="成果-2">成果</h2><p>欢迎体验</p><p><span class="exturl" data-url="aHR0cHM6Ly90b29scy5pc3p5Lnh5ei9naXMvbGF0TG5n">经纬度查询-ISZY 工具集合<i class="fa fa-external-link-alt"></i></span></p><p><img data-src="https://img.iszy.xyz/20210903134509.png?x-oss-process=style/big" alt="经纬度查询-ISZY 工具集合"></p><h2 id="功能-2">功能</h2><ul><li>界面由 Leaflet 地图窗口和 JSON 编辑器组成</li><li>底图，默认使用高德街道底图，天地图个人 token 每日访问次数有限<ul><li>高德街道底图</li><li>高德影像底图</li><li>天地图街道底图</li><li>天地图影像底图</li><li>天地图地形底图</li><li>OpenStreetMap 街道底图</li></ul></li><li>默认定位到 <code>105N , 35E</code> 感觉地图展示起来好看点，中心点默认弹窗展示中心经纬度。经纬度随着移动地图会实时更新。</li><li>如果允许定位，初始会尝试定位到设备所在位置。坐标经过高德接口转换成高德地图所用的火星坐标系</li><li>点击地图，会展示点击位置的经纬度。</li><li>通过直接输入经纬度，将会在地图进行定位，并调用高德接口查询标准地址。</li><li>可以输入结构化地址，查找目标定位。</li></ul><h2 id="后续">后续</h2><ol><li>考虑支持切换坐标系，火星坐标系和 WGS84 坐标系</li><li>考虑将高德瓦片做偏移，矫正到 WGS84 坐标系</li></ol>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;我有个朋友有经纬度定位的需求，正好前几天做了个 GeoJSON 工具给自己用，部分内容可以直接用上，就准备自己做一个，应该能比网上的界面更加清爽舒服一些。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="应用" scheme="https://www.iszy.cc/categories/%E5%BA%94%E7%94%A8/"/>
-    
-    
-    <category term="小工具" scheme="https://www.iszy.cc/tags/%E5%B0%8F%E5%B7%A5%E5%85%B7/"/>
-    
-    <category term="JavaScript" scheme="https://www.iszy.cc/tags/JavaScript/"/>
-    
-    <category term="Vue" scheme="https://www.iszy.cc/tags/Vue/"/>
-    
-    <category term="GIS" scheme="https://www.iszy.cc/tags/GIS/"/>
     
   </entry>
   
