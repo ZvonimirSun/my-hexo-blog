@@ -427,7 +427,7 @@ font:
   enable: true
 
   # Uri of fonts host, e.g. https://fonts.googleapis.com (Default).
-  host: https://fonts.cdn.iszy.xyz
+  host: https://fonts.cdn.iszy.cc
 
   # Font options:
   # `external: true` will load this font family from `host` above.
@@ -660,10 +660,10 @@ waline:
   visitor: true # Article reading statistic
   comment_count: true # If false, comment count will only be displayed in post page, not in home page
   requiredMeta: [nick, mail] # Set required fields: [nick] | [nick, mail]
-  libUrl: https://jsdelivr.cdn.iszy.xyz/npm/@waline/client/dist/Waline.min.js
+  libUrl: https://jsdelivr.cdn.iszy.cc/npm/@waline/client/dist/Waline.min.js
   dark: "auto"
   emoji:
-    - https://jsdelivr.cdn.iszy.xyz/gh/zvonimirsun/emojis@1.0.3/bilibili-xhl
+    - https://jsdelivr.cdn.iszy.cc/gh/zvonimirsun/emojis@1.0.3/bilibili-xhl
 #     - https://cdn.jsdelivr.net/gh/zvonimirsun/emojis@1.0.2/qq
 #     - https://cdn.jsdelivr.net/gh/zvonimirsun/emojis@1.0.2/bilibili
 #     - https://cdn.jsdelivr.net/gh/zvonimirsun/emojis@1.0.2/alus
@@ -905,7 +905,7 @@ vendors:
   # For example:
   # custom_cdn_url: https://cdn.jsdelivr.net/npm/${npm_name}@${version}/${minified}
   # custom_cdn_url: https://cdnjs.cloudflare.com/ajax/libs/${cdnjs_name}/${version}/${cdnjs_file}
-  custom_cdn_url: https://jsdelivr.cdn.iszy.xyz/npm/${npm_name}@${version}/${minified}
+  custom_cdn_url: https://jsdelivr.cdn.iszy.cc/npm/${npm_name}@${version}/${minified}
 
 # Assets
 # Accelerate delivery of static files using a CDN
