@@ -2,6 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.iszy.cc/page/bgfw/</loc>
+    
+    <lastmod>2022-04-27</lastmod>
+    
+    
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    
+  </url>
+  
+  <url>
     <loc>https://www.iszy.cc/posts/maven-add-timestamp-to-static-files/</loc>
     
     <lastmod>2022-04-18</lastmod>
@@ -22,17 +33,6 @@
     
     <lastmod>2022-04-08</lastmod>
     
-    
-  </url>
-  
-  <url>
-    <loc>https://www.iszy.cc/page/bgfw/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
-    
-    
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
     
   </url>
   
@@ -1000,7 +1000,7 @@
 
   <url>
     <loc>https://www.iszy.cc/</loc>
-    <lastmod>2022-04-19</lastmod>
+    <lastmod>2022-04-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
