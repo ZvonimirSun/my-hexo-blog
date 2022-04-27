@@ -1,5 +1,5 @@
 ---
-title: 【评测2022】优质SS/SSR/Trojan/V2Ray机场推荐
+title: 【评测2022】优质SS/SSR/Trojan/V2Ray机场推荐【劳动节优惠】
 date: 2019-01-03 03:11:50
 categories:
   - 其他
@@ -7,22 +7,12 @@ tags:
   - 翻墙
   - 科学上网
   - V2Ray
-  - ssr
-  - 机场
+  - SSR
   - SS
   - Trojan
   - 网络加速
   - 代理推荐
-  - 酸酸乳
-  - ssr机场
   - 机场推荐
-  - 机场评测
-  - V2Ray推荐
-  - 代理
-  - 推荐
-  - 加速
-  - V2Ray机场
-  - ssr/v2ray
 permalink: /page/bgfw/
 ---
 
@@ -45,7 +35,7 @@ permalink: /page/bgfw/
 | [Blinkload](#五、Blinkload)【本站专属优惠】              | 主流节点多，流媒体                                         | [官网传送门](https://url.iszy.xyz/blinkload) / [测速](/page/speed-test-collection/#Blinkload)                                                    |
 | [WavesLink](#六、WavesLink)(原 后浪云)【限时优惠】       | IEPL 专线，主流节点多，流媒体                              | [官网传送门](https://url.iszy.xyz/waveslink) / [测速](/page/speed-test-collection/#WavesLink)(2022-03-10)                                        |
 | [Gatern](#七、Gatern)(原 Shuttle)【限时优惠】            | 性价比，IPLC 专线，主流节点，小众节点多，流媒体            | [官网传送门](https://url.iszy.xyz/gatern) / [测速](/page/speed-test-collection/#Gatern)(2022-03-14)                                              |
-| [ByWave](#八、ByWave)【限时优惠】                        | IPLC 专线，流媒体                                          | [官网传送门](https://url.iszy.xyz/bywave) / [测速](/page/speed-test-collection/#ByWave)                                                          |
+| [ByWave](#八、ByWave)【劳动节优惠】                      | IPLC 专线，流媒体                                          | [官网传送门](https://url.iszy.xyz/bywave) / [测速](/page/speed-test-collection/#ByWave)                                                          |
 | [BESTIEPL](#九、BESTIEPL)(原 Electry)                    | IEPL 专线，流媒体                                          | [官网传送门](https://url.iszy.xyz/electry) / [测速](/page/speed-test-collection/#BESTIEPL)(2022-03-10)                                           |
 
 点击前往查看测速: **[机场测速集合](/page/speed-test-collection/)**
@@ -604,9 +594,9 @@ permalink: /page/bgfw/
 
 > 转官方优惠公告
 
-使用 `AHI6NA97XR` 可在**年付及以上**付款周期获得 **30%off**
+使用 `20220501` 可在**年付及以上**付款周期获得**30%off**
 
-使用 `RYLD55ESKQ` 可在**任何**付款周期获得 **20%off** 循环优惠
+使用 `嗨害嗨` 可在**任何**付款周期获得**20%off 循环优惠**
 
 以上优惠均可在续费时使用
 
