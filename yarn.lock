@@ -114,10 +114,10 @@
     hexo-util "2.5.0"
     js-yaml "4.1.0"
 
-"@waline/hexo-next@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@waline/hexo-next/-/hexo-next-3.0.0.tgz#587647f1b920ec2bc3ac37b610e6c1849317163b"
-  integrity sha512-v24pRdqUhek1QO7MZIlv0a46irFf2EokcEUL5qfjE0oTPPkh6dG+FvvhePg7MokDPyFebBOWqHY18diULZ2QCQ==
+"@waline/hexo-next@^3.0.1":
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@waline/hexo-next/-/hexo-next-3.0.1.tgz#9a5c7f161f81fa3805e86c9591aa7f26f8d00656"
+  integrity sha512-a6LUBTePKR9J38GEveahRKqWl6+Oou7dc4WnFJL3OK2I0immKeEtwXr3VvGO3j3KjHafbcAn3U2w+1Vci4WX5A==
   dependencies:
     "@next-theme/utils" "^1.3.0"
 
