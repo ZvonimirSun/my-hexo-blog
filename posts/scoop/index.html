@@ -277,19 +277,11 @@
     </span>
     <span class="post-meta-item-text">Waline：</span>
   
-    <a title="waline" href="/posts/scoop/#waline-comments" itemprop="discussionUrl">
-      <span class="post-comments-count waline-comment-count" id="/posts/scoop/" data-xid="/posts/scoop/" itemprop="commentCount"></span>
+    <a title="waline" href="/posts/scoop/#waline" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" data-path="/posts/scoop/" itemprop="commentCount"></span>
     </a>
   </span>
   
-  
-    <span id="/posts/scoop/" class="post-meta-item leancloud_visitors" data-flag-title="用Scoop包管理器管理你的Windows软件" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
   
     <span class="post-meta-break"></span>
     <span class="post-meta-item" title="本文字数">
@@ -489,7 +481,7 @@
 
 
 
-    <div class="comments" id="waline-comments"></div>
+    <div class="comments" id="waline"></div>
 </div>
   </main>
 
@@ -560,15 +552,17 @@
   <script src="https://jsdelivr.cdn.iszy.cc/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
   <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":false,"delay":true,"timeout":3000,"priority":true,"url":"https://www.iszy.cc/posts/scoop/"}</script>
   <script src="https://jsdelivr.cdn.iszy.cc/npm/hexo-theme-next@8.11.0/source/js/third-party/quicklink.min.js"></script>
-<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn","enable":true,"serverURL":"https://wl.iszy.xyz","placeholder":"Just go go","avatar":"mm","pageSize":10,"visitor":true,"comment_count":true,"requiredFields":[],"locale":{"placeholder":"本站支持匿名评论，无需登录~(●'◡'●)\n与文章无关的留言请前往本站留言板，谢谢配合~"},"meta":["nick","mail","link"],"requiredMeta":["nick","mail"],"libUrl":"https://jsdelivr.cdn.iszy.cc/npm/@waline/client/dist/Waline.min.js","dark":"auto","emoji":["https://jsdelivr.cdn.iszy.cc/gh/zvonimirsun/emojis@1.0.3/bilibili-xhl"],"el":"#waline-comments","path":"/posts/scoop/"}</script>
+<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn","enable":true,"serverURL":"https://wl.iszy.xyz","cssUrl":"//unpkg.com/@waline/client@v2/dist/waline.css","locale":{"placeholder":"本站支持匿名评论，无需登录~(●'◡'●)\n与文章无关的留言请前往本站留言板，谢谢配合~"},"emoji":["//unpkg.com/@waline/emojis@1.0.1/weibo","https://jsdelivr.cdn.iszy.cc/gh/zvonimirsun/emojis@1.0.3/bilibili-xhl"],"commentCount":true,"pageview":false,"meta":["nick","mail","link"],"pageSize":10,"visitor":true,"comment_count":true,"requiredMeta":["nick","mail"],"libUrl":"https://jsdelivr.cdn.iszy.cc/npm/@waline/client/dist/Waline.min.js","dark":"auto","el":"#waline","comment":true,"path":"/posts/scoop/"}</script>
+<link rel="stylesheet" href="//unpkg.com/@waline/client@v2/dist/waline.css">
 <script>
 document.addEventListener('page:loaded', () => {
-  NexT.utils.loadComments(CONFIG.waline.el).then(() => 
+  NexT.utils.loadComments(CONFIG.waline.el).then(() =>
     NexT.utils.getScript(CONFIG.waline.libUrl, { condition: window.Waline })
-  ).then(() => {
-    new Waline(CONFIG.waline);
-  });
+  ).then(() => 
+    Waline.init(Object.assign({}, CONFIG.waline,{ el: document.querySelector(CONFIG.waline.el) }))
+  );
 });
 </script>
+
 </body>
 </html>
