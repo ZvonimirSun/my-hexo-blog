@@ -29,9 +29,9 @@ permalink: /page/bgfw/
 | 机场名称（点击了解更多）                                 | 关键词                                                     | 操作                                                                                                                                             |
 | -------------------------------------------------------- | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [FreeWhale 自由鲸 ⭐](/page/freewhale/)【长期优惠】      | 性价比，主流节点超多，小众节点                             | [官网传送门](https://url.iszy.xyz/freewhale) / [测速](/page/speed-test-collection/#FreeWhale-%E8%87%AA%E7%94%B1%E9%B2%B8)(2022-03-15)            |
-| [CMYNetwork 红莓网络](/page/cmynetwork/)【本站专属优惠】 | IEPL/IPLC 专线，Trojan，主流节点多，小众节点，福利共享账号 | [官网传送门](https://url.iszy.xyz/cmynetwork) / [测速](/page/speed-test-collection/#CMYNetwork-%E7%BA%A2%E8%8E%93%E7%BD%91%E7%BB%9C)(2022-03-22) |
+| [DuangCloud](#二、DuangCloud)【本站专属优惠】            | 性价比，专线，主流节点                                     | [官网传送门](https://url.iszy.xyz/duangcloud) / [测速](/page/speed-test-collection/#DuangCloud)                                                  |
 | [MEET](#三、MEET)                                        | 性价比，主流节点，超小流量套餐                             | [官网传送门](https://url.iszy.xyz/fspeed) / [测速](/page/speed-test-collection/#MEET)(2022-02-09)                                                |
-| [DuangCloud](#四、DuangCloud)【本站专属优惠】            | 性价比，专线，主流节点                                     | [官网传送门](https://url.iszy.xyz/duangcloud) / [测速](/page/speed-test-collection/#DuangCloud)                                                  |
+| [CMYNetwork 红莓网络](/page/cmynetwork/)【本站专属优惠】 | IEPL/IPLC 专线，Trojan，主流节点多，小众节点，福利共享账号 | [官网传送门](https://url.iszy.xyz/cmynetwork) / [测速](/page/speed-test-collection/#CMYNetwork-%E7%BA%A2%E8%8E%93%E7%BD%91%E7%BB%9C)(2022-03-22) |
 | [Blinkload](#五、Blinkload)【本站专属优惠】              | 主流节点多，流媒体                                         | [官网传送门](https://url.iszy.xyz/blinkload) / [测速](/page/speed-test-collection/#Blinkload)                                                    |
 | [WavesLink](#六、WavesLink)(原 后浪云)【限时优惠】       | IEPL 专线，主流节点多，流媒体                              | [官网传送门](https://url.iszy.xyz/waveslink) / [测速](/page/speed-test-collection/#WavesLink)(2022-03-10)                                        |
 | [Gatern](#七、Gatern)(原 Shuttle)【限时优惠】            | 性价比，IPLC 专线，主流节点，小众节点多，流媒体            | [官网传送门](https://url.iszy.xyz/gatern) / [测速](/page/speed-test-collection/#Gatern)(2022-03-14)                                              |
@@ -92,7 +92,80 @@ permalink: /page/bgfw/
 | <strong>全年 2T 重度【全节点/尊享】★</strong>     | 2048G/360 天 | 375 元 | 2        | 年付     | 15         |
 | 全年畅享套餐【全节点/团队】                       | 6666G/360 天 | 996 元 | 2        | 年付     | 20         |
 
-## 二、CMYNetwork 红莓网络
+## 二、DuangCloud
+
+[官网传送门](https://url.iszy.xyz/duangcloud)
+
+[⭐⭐ 测速 ⭐⭐](/page/speed-test-collection/#DuangCloud)
+
+### （一）优惠
+
+> 专属优惠
+
+除 light 套餐外，都能使用以下优惠码获取 9 折优惠，走过路过不要错过。
+
+- **9 折**优惠码: `iszy.cc`
+
+本站优惠码一个账户仅可享受一次
+
+### （二）简介
+
+这是一家稳定运行半年多的纯 SS 机场，口碑还不错，不过线路确实稳定且质量不错，已经是全 IEPL 专线，价格比较合理，可以推荐。
+
+- IEPL 专线线路接入
+- 拥有香港、台湾、日本、美国、新加坡节点
+- 1.5G 最高可用速率，满足绝大部分需求
+- 原生 IP 流媒体解锁
+- 无设备数量限制，可多人使用
+- 支持支付宝/微信支付
+
+### （三）套餐
+
+可选半年、全年缴费周期。
+
+| 套餐     | 流量    | 价格                    | 流量均价   |
+| -------- | ------- | ----------------------- | ---------- |
+| Mini     | 50G/月  | 20 元/月 或 200 元/年   | 0.4 元/G   |
+| Basic    | 150G/月 | 35 元/月 或 350 元/年   | 0.23 元/G  |
+| Pro      | 300G/月 | 55 元/月 或 550 元/年   | 0.18 元/G  |
+| Gold     | 500G/月 | 75 元/月 或 750 元/年   | 0.15 元/G  |
+| Business | 800G/月 | 100 元/月 或 1000 元/年 | 0.125 元/G |
+| Light    | 100G/年 | 100 元/年               | 1 元/G     |
+
+### （四）其他说明
+
+- [Duang Cloud 使用文档](https://docs.duangcloud.club/)，敬请查阅
+- 官方联系方式，有问题可以联系
+  - 工单方式
+  - tg 群：[DuangCloud 客户群](https://t.me/duangcloud)
+
+## 三、MEET
+
+[官网传送门](https://url.iszy.xyz/fspeed)
+
+[⭐⭐ 测速 ⭐⭐](/page/speed-test-collection/#MEET) (2022-02-09)
+
+### （一）简介
+
+**MEET** 是一家专做按量付费套餐的商家，推荐中低流量用户选择。可以了解一下，买个最便宜的套餐试试看。
+
+- 主打按量付费，套餐有效期长，为中低流量用户准备
+- 主流客户端 SSR 订阅支持
+- 节点高速稳定
+- 不限制设备数，但仅限个人使用，禁止滥用
+
+### （二）套餐
+
+> 套餐不能叠加使用，请根据自己的使用情况进行选择。
+
+| 套餐         | 有效期 | 流量 | 价格   |
+| ------------ | ------ | ---- | ------ |
+| 一年套餐     | 360 天 | 800G | 239 元 |
+| 半年套餐     | 180 天 | 300G | 109 元 |
+| 季度套餐     | 90 天  | 100G | 49 元  |
+| 10G 流量月包 | 30 天  | 10G  | 5 元   |
+
+## 四、CMYNetwork 红莓网络
 
 [官网传送门](https://url.iszy.xyz/cmynetwork)
 
@@ -195,79 +268,6 @@ permalink: /page/bgfw/
   <td colspan="4">此为定制方案，可动态根据需求优化，具体详情请咨询客服</td>
 </tr>
 </table>
-
-## 三、MEET
-
-[官网传送门](https://url.iszy.xyz/fspeed)
-
-[⭐⭐ 测速 ⭐⭐](/page/speed-test-collection/#MEET) (2022-02-09)
-
-### （一）简介
-
-**MEET** 是一家专做按量付费套餐的商家，推荐中低流量用户选择。可以了解一下，买个最便宜的套餐试试看。
-
-- 主打按量付费，套餐有效期长，为中低流量用户准备
-- 主流客户端 SSR 订阅支持
-- 节点高速稳定
-- 不限制设备数，但仅限个人使用，禁止滥用
-
-### （二）套餐
-
-> 套餐不能叠加使用，请根据自己的使用情况进行选择。
-
-| 套餐         | 有效期 | 流量 | 价格   |
-| ------------ | ------ | ---- | ------ |
-| 一年套餐     | 360 天 | 800G | 239 元 |
-| 半年套餐     | 180 天 | 300G | 109 元 |
-| 季度套餐     | 90 天  | 100G | 49 元  |
-| 10G 流量月包 | 30 天  | 10G  | 5 元   |
-
-## 四、DuangCloud
-
-[官网传送门](https://url.iszy.xyz/duangcloud)
-
-[⭐⭐ 测速 ⭐⭐](/page/speed-test-collection/#DuangCloud)
-
-### （一）优惠
-
-> 专属优惠
-
-除 light 套餐外，都能使用以下优惠码获取 9 折优惠，走过路过不要错过。
-
-- **9 折**优惠码: `iszy.cc`
-
-本站优惠码一个账户仅可享受一次
-
-### （二）简介
-
-这是一家稳定运行半年多的纯 SS 机场，口碑还不错，不过线路确实稳定且质量不错，已经是全 IEPL 专线，价格比较合理，可以推荐。
-
-- IEPL 专线线路接入
-- 拥有香港、台湾、日本、美国、新加坡节点
-- 1.5G 最高可用速率，满足绝大部分需求
-- 原生 IP 流媒体解锁
-- 无设备数量限制，可多人使用
-- 支持支付宝/微信支付
-
-### （三）套餐
-
-可选半年、全年缴费周期。
-
-| 套餐     | 流量    | 价格                    | 流量均价   |
-| -------- | ------- | ----------------------- | ---------- |
-| Mini     | 50G/月  | 20 元/月 或 200 元/年   | 0.4 元/G   |
-| Basic    | 150G/月 | 35 元/月 或 350 元/年   | 0.23 元/G  |
-| Pro      | 300G/月 | 55 元/月 或 550 元/年   | 0.18 元/G  |
-| Gold     | 500G/月 | 75 元/月 或 750 元/年   | 0.15 元/G  |
-| Business | 800G/月 | 100 元/月 或 1000 元/年 | 0.125 元/G |
-| Light    | 100G/年 | 100 元/年               | 1 元/G     |
-
-### （四）其他说明
-
-- [Duang Cloud 使用文档](https://docs.duangcloud.club/)，敬请查阅
-- 官方联系方式，有问题可以联系
-  - 工单方式
-  - tg 群：[DuangCloud 客户群](https://t.me/duangcloud)
 
 ## 五、Blinkload
 
