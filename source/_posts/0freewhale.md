@@ -54,7 +54,7 @@ permalink: /page/freewhale/
 
 **￥ 115** 及以上套餐可用
 
-**95 折**礼遇码：`MayMay`
+**95 折**礼遇码：`JuneJoJo`
 
 ## 自由鲸 FreeWhale 简介
 
