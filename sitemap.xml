@@ -2,20 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.iszy.cc/page/bgfw/</loc>
-    
-    <lastmod>2022-06-01</lastmod>
-    
-    
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-    
-  </url>
-  
-  <url>
     <loc>https://www.iszy.cc/page/cmynetwork/</loc>
     
-    <lastmod>2022-05-28</lastmod>
+    <lastmod>2022-06-13</lastmod>
     
     
     <changefreq>daily</changefreq>
@@ -26,7 +15,29 @@
   <url>
     <loc>https://www.iszy.cc/page/freewhale/</loc>
     
-    <lastmod>2022-05-28</lastmod>
+    <lastmod>2022-06-13</lastmod>
+    
+    
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.iszy.cc/page/bgfw/</loc>
+    
+    <lastmod>2022-06-13</lastmod>
+    
+    
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.iszy.cc/page/speed-test-collection/</loc>
+    
+    <lastmod>2022-06-13</lastmod>
     
     
     <changefreq>daily</changefreq>
@@ -111,17 +122,6 @@
     
     <lastmod>2022-03-25</lastmod>
     
-    
-  </url>
-  
-  <url>
-    <loc>https://www.iszy.cc/page/speed-test-collection/</loc>
-    
-    <lastmod>2022-03-22</lastmod>
-    
-    
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
     
   </url>
   
@@ -1016,7 +1016,7 @@
 
   <url>
     <loc>https://www.iszy.cc/</loc>
-    <lastmod>2022-06-01</lastmod>
+    <lastmod>2022-06-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
