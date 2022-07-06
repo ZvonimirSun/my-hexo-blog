@@ -779,10 +779,10 @@ hexo-server@^3.0.0:
     picocolors "^1.0.0"
     serve-static "^1.14.1"
 
-hexo-theme-next@^8.11.1:
-  version "8.11.1"
-  resolved "https://registry.npmmirror.com/hexo-theme-next/-/hexo-theme-next-8.11.1.tgz#f9f8ac8cf2f0c77f71ac4dc77fc07c47753cadec"
-  integrity sha512-ZnpQU+Rj6piXAruC015fdGaWteN3hEUYoCUOCvTbo64iPq9EXfQia1kUdF8mwp+KibdxV8MdTVm/5kllcDf8eQ==
+hexo-theme-next@^8.12.2:
+  version "8.12.2"
+  resolved "https://registry.yarnpkg.com/hexo-theme-next/-/hexo-theme-next-8.12.2.tgz#bebf6ca7d0725f11f07b6d672debcc4daf06f115"
+  integrity sha512-SeJjy9xxZWyAEyiBFToQGMNynmiz/aFkHEbfHDL+2RLoTIlqGrHiebSWR3mmcBzImHhdl9TH94MMHah+xwvePQ==
 
 hexo-util@2.4.0:
   version "2.4.0"
