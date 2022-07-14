@@ -80,9 +80,9 @@ permalink: /page/speed-test-collection/
 
 [官网传送门](https://url.iszy.xyz/waveslink)
 
-2022-03-10
+2022-03-17
 
-![](https://img.iszy.xyz/1646909047894.png?x-oss-process=style/big)
+![](https://img.iszy.xyz/1657762227551.png?x-oss-process=style/big)
 
 ## BESTIEPL
 

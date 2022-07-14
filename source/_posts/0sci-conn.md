@@ -33,7 +33,7 @@ permalink: /page/bgfw/
 | [MEET](#三、MEET)                                        | 性价比，主流节点，超小流量套餐                             | [官网传送门](https://url.iszy.xyz/fspeed) / [测速](/page/speed-test-collection/#MEET)(2022-02-09)                                                |
 | [CMYNetwork 红莓网络](/page/cmynetwork/)【本站专属优惠】 | IEPL/IPLC 专线，Trojan，主流节点多，小众节点，福利共享账号 | [官网传送门](https://url.iszy.xyz/cmynetwork) / [测速](/page/speed-test-collection/#CMYNetwork-%E7%BA%A2%E8%8E%93%E7%BD%91%E7%BB%9C)(2022-03-22) |
 | [Blinkload](#五、Blinkload)【本站专属优惠】              | 主流节点多，流媒体                                         | [官网传送门](https://url.iszy.xyz/blinkload) / [测速](/page/speed-test-collection/#Blinkload)                                                    |
-| [WavesLink](#六、WavesLink)(原 后浪云)【本站专属优惠】   | IEPL 专线，主流节点多，流媒体                              | [官网传送门](https://url.iszy.xyz/waveslink) / [测速](/page/speed-test-collection/#WavesLink)(2022-03-10)                                        |
+| [WavesLink](#六、WavesLink)(原 后浪云)【本站专属优惠】   | IEPL 专线，主流节点多，流媒体                              | [官网传送门](https://url.iszy.xyz/waveslink) / [测速](/page/speed-test-collection/#WavesLink)(2022-03-17)                                        |
 | [Gatern](#七、Gatern)(原 Shuttle)【限时优惠】            | 性价比，IPLC 专线，主流节点，小众节点多，流媒体            | [官网传送门](https://url.iszy.xyz/gatern) / [测速](/page/speed-test-collection/#Gatern)(2022-03-14)                                              |
 | [ByWave](#八、ByWave)【测试暂停推荐】                    | IPLC 专线，流媒体                                          | ~~[官网传送门](https://url.iszy.xyz/bywave) / [测速](/page/speed-test-collection/#ByWave)~~                                                      |
 | [BESTIEPL](#九、BESTIEPL)(原 Electry)                    | IEPL 专线，流媒体                                          | [官网传送门](https://url.iszy.xyz/electry) / [测速](/page/speed-test-collection/#BESTIEPL)(2022-03-10)                                           |
@@ -456,7 +456,7 @@ permalink: /page/bgfw/
 
 [官网传送门](https://url.iszy.xyz/waveslink)
 
-[⭐⭐ 测速 ⭐⭐](/page/speed-test-collection/#WavesLink) (2022-03-10)
+[⭐⭐ 测速 ⭐⭐](/page/speed-test-collection/#WavesLink) (2022-03-17)
 
 ### （一）优惠
 
