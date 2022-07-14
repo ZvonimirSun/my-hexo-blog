@@ -1,5 +1,5 @@
 ---
-title: 【评测2022】优质SS/SSR/Trojan/V2Ray机场推荐【618】
+title: 【评测2022】优质SS/SSR/Trojan/V2Ray机场推荐
 date: 2019-01-03 03:11:50
 categories:
   - 其他
@@ -31,11 +31,11 @@ permalink: /page/bgfw/
 | [FreeWhale 自由鲸 ⭐](/page/freewhale/)【长期优惠】      | 性价比，主流节点超多，小众节点                             | [官网传送门](https://url.iszy.xyz/freewhale) / [测速](/page/speed-test-collection/#FreeWhale-%E8%87%AA%E7%94%B1%E9%B2%B8)(2022-03-15)            |
 | [DuangCloud](#二、DuangCloud)【本站专属优惠】            | 性价比，专线，主流节点                                     | [官网传送门](https://url.iszy.xyz/duangcloud) / [测速](/page/speed-test-collection/#DuangCloud)                                                  |
 | [MEET](#三、MEET)                                        | 性价比，主流节点，超小流量套餐                             | [官网传送门](https://url.iszy.xyz/fspeed) / [测速](/page/speed-test-collection/#MEET)(2022-02-09)                                                |
-| [CMYNetwork 红莓网络](/page/cmynetwork/)【618 限时特惠】 | IEPL/IPLC 专线，Trojan，主流节点多，小众节点，福利共享账号 | [官网传送门](https://url.iszy.xyz/cmynetwork) / [测速](/page/speed-test-collection/#CMYNetwork-%E7%BA%A2%E8%8E%93%E7%BD%91%E7%BB%9C)(2022-03-22) |
-| [Blinkload](#五、Blinkload)【儿童节活动】                | 主流节点多，流媒体                                         | [官网传送门](https://url.iszy.xyz/blinkload) / [测速](/page/speed-test-collection/#Blinkload)                                                    |
+| [CMYNetwork 红莓网络](/page/cmynetwork/)【本站专属优惠】 | IEPL/IPLC 专线，Trojan，主流节点多，小众节点，福利共享账号 | [官网传送门](https://url.iszy.xyz/cmynetwork) / [测速](/page/speed-test-collection/#CMYNetwork-%E7%BA%A2%E8%8E%93%E7%BD%91%E7%BB%9C)(2022-03-22) |
+| [Blinkload](#五、Blinkload)【本站专属优惠】              | 主流节点多，流媒体                                         | [官网传送门](https://url.iszy.xyz/blinkload) / [测速](/page/speed-test-collection/#Blinkload)                                                    |
 | [WavesLink](#六、WavesLink)(原 后浪云)【本站专属优惠】   | IEPL 专线，主流节点多，流媒体                              | [官网传送门](https://url.iszy.xyz/waveslink) / [测速](/page/speed-test-collection/#WavesLink)(2022-03-10)                                        |
-| [Gatern](#七、Gatern)(原 Shuttle)【本站专属优惠】        | 性价比，IPLC 专线，主流节点，小众节点多，流媒体            | [官网传送门](https://url.iszy.xyz/gatern) / [测速](/page/speed-test-collection/#Gatern)(2022-03-14)                                              |
-| [ByWave](#八、ByWave)【年中特惠】                        | IPLC 专线，流媒体                                          | [官网传送门](https://url.iszy.xyz/bywave) / [测速](/page/speed-test-collection/#ByWave)                                                          |
+| [Gatern](#七、Gatern)(原 Shuttle)【限时优惠】            | 性价比，IPLC 专线，主流节点，小众节点多，流媒体            | [官网传送门](https://url.iszy.xyz/gatern) / [测速](/page/speed-test-collection/#Gatern)(2022-03-14)                                              |
+| [ByWave](#八、ByWave)【测试暂停推荐】                    | IPLC 专线，流媒体                                          | ~~[官网传送门](https://url.iszy.xyz/bywave) / [测速](/page/speed-test-collection/#ByWave)~~                                                      |
 | [BESTIEPL](#九、BESTIEPL)(原 Electry)                    | IEPL 专线，流媒体                                          | [官网传送门](https://url.iszy.xyz/electry) / [测速](/page/speed-test-collection/#BESTIEPL)(2022-03-10)                                           |
 
 点击前往查看测速: **[机场测速集合](/page/speed-test-collection/)**
@@ -56,7 +56,7 @@ permalink: /page/bgfw/
 
 **￥ 115** 及以上套餐可用
 
-**95 折**礼遇码：`JuneJoJo`
+**95 折**礼遇码：`TOOHOT`
 
 ### （二）简介
 
@@ -175,10 +175,6 @@ permalink: /page/bgfw/
 
 ### （一）优惠
 
-> 转官方优惠公告
-
-在 5 月 1 日到 6 月 19 日期间，购买任意年费套餐，可享受高额折扣，并在折扣的基础上加送 1 个月套餐时间！若同时邀请小伙伴拼团，享受折上折中折哦。
-
 > 本站专属优惠
 
 使用我的邀请码注册可以获得 **5 元**网站余额红包，可用于购买套餐。此优惠仅可使用一次，同 IP 下多次注册，视为相同账户。
@@ -281,21 +277,7 @@ permalink: /page/bgfw/
 
 ### （一）优惠
 
-> 转官方优惠公告
-
-儿童节活动现在开启啦！
-
-活动时间
-
-6 月 1 日 - 6 月 15 日
-
-活动内容
-
-- 活动期间每天 GMT +8 04:00 a.m. – 02:00 p.m. 时间段除 Premium 以外所有节点，倍率调整为 0.5 倍。即在此时间段内可用流量翻倍，该活动将会视情况决定是否常态化执行；（流量翻倍活动 6/2 4AM 开始）
-- 活动期间我们将抽取 61 位幸运的老用户，随机放出 61 折优惠码、Netflix 会员账号、Disney+ 会员账号、Stash 兑换码 等权益；用户可在官网仪表盘处点击按钮参加抽奖；
-- 儿童节 **92 折** 优惠码：`Happy Children’s Day`
-
-> 专属优惠
+> 本站专属优惠
 
 通过努力，和机场主的协商后争取到了本站专属优惠码，凡通过[本站链接](https://url.iszy.xyz/blinkload)注册用户，购买套餐时输入优惠码，可享受不同程度优惠.
 
@@ -520,6 +502,16 @@ permalink: /page/bgfw/
 
 > 转官方优惠
 
+以下优惠码均可在续费或新购时使用。
+
+失效日期 2022 年 07 月 31 日
+
+优惠代码：YF34IWQKL0
+
+额度： 75 折一次性优惠
+
+适用范围：所有产品
+
 充值获取赠金:
 
 - 充 100 到账 110
@@ -574,7 +566,7 @@ permalink: /page/bgfw/
   - 还提供了官方 tg 群组，可以随时交流，购买套餐后可在套餐页看到进群链接
 - [域名发布页](https://shuttlehub.github.io)，防止失联
 
-## 八、ByWave
+<!-- ## 八、ByWave
 
 [官网传送门](https://url.iszy.xyz/bywave)
 
@@ -658,7 +650,7 @@ permalink: /page/bgfw/
 - 无法使用问题排查
   - 如果无法使用的话请检查浏览器是否有 SwitchOmega 或者代理相关的插件，如果有的话请先关闭这些插件。
   - 如果还是无法使用的话，请在连接后截图客户端中的日志界面发送到在线客服。
-- 建议采用官网在线客服的方式解决问题
+- 建议采用官网在线客服的方式解决问题 -->
 
 ## 九、BESTIEPL
 

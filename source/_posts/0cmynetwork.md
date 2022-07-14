@@ -1,5 +1,5 @@
 ---
-title: CMY Network--高端专线SSR/Trojan机场推荐【618特惠】
+title: CMY Network--高端专线SSR/Trojan机场推荐
 date: 2019-04-11 11:47:31
 categories:
   - 其他
@@ -43,10 +43,6 @@ permalink: /page/cmynetwork/
 [⭐⭐CMY Network 测速 ⭐⭐](/page/speed-test-collection/#CMYNetwork-红莓网络) 2022-03-22
 
 ### 优惠
-
-> 转官方优惠公告
-
-在 5 月 1 日到 6 月 19 日期间，购买任意年费套餐，可享受高额折扣，并在折扣的基础上加送 1 个月套餐时间！若同时邀请小伙伴拼团，享受折上折中折哦。
 
 > 本站专属优惠
 
