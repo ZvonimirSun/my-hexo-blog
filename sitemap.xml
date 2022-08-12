@@ -2,6 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.iszy.cc/posts/force-delete-k8s-namespace/</loc>
+    
+    <lastmod>2022-08-12</lastmod>
+    
+    
+  </url>
+  
+  <url>
     <loc>https://www.iszy.cc/posts/old-chromium-download/</loc>
     
     <lastmod>2022-07-14</lastmod>
@@ -1024,7 +1032,7 @@
 
   <url>
     <loc>https://www.iszy.cc/</loc>
-    <lastmod>2022-07-14</lastmod>
+    <lastmod>2022-08-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
