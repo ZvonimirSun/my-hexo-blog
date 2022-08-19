@@ -54,7 +54,7 @@ permalink: /page/freewhale/
 
 **￥ 115** 及以上套餐可用
 
-**95 折**礼遇码：`TOOHOT`
+**95 折**礼遇码：`IceCream`
 
 ## 自由鲸 FreeWhale 简介
 

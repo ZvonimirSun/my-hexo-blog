@@ -29,13 +29,13 @@ permalink: /page/bgfw/
 | 机场名称（点击了解更多）                                 | 关键词                                                     | 操作                                                                                                                                             |
 | -------------------------------------------------------- | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [FreeWhale 自由鲸 ⭐](/page/freewhale/)【长期优惠】      | 性价比，主流节点超多，小众节点                             | [官网传送门](https://url.iszy.xyz/freewhale) / [测速](/page/speed-test-collection/#FreeWhale-%E8%87%AA%E7%94%B1%E9%B2%B8)(2022-03-15)            |
-| [DuangCloud](#二、DuangCloud)【本站专属优惠】            | 性价比，专线，主流节点                                     | [官网传送门](https://url.iszy.xyz/duangcloud) / [测速](/page/speed-test-collection/#DuangCloud)(2022-02-28)                                      |
+| [DuangCloud](#二、DuangCloud)【本站专属优惠】            | 性价比，专线，主流节点                                     | [官网传送门](https://url.iszy.xyz/duangcloud) / [测速](/page/speed-test-collection/#DuangCloud)(2022-08-11)                                      |
 | [MEET](#三、MEET)                                        | 性价比，主流节点，超小流量套餐                             | [官网传送门](https://url.iszy.xyz/fspeed) / [测速](/page/speed-test-collection/#MEET)(2022-02-09)                                                |
 | [CMYNetwork 红莓网络](/page/cmynetwork/)【本站专属优惠】 | IEPL/IPLC 专线，Trojan，主流节点多，小众节点，福利共享账号 | [官网传送门](https://url.iszy.xyz/cmynetwork) / [测速](/page/speed-test-collection/#CMYNetwork-%E7%BA%A2%E8%8E%93%E7%BD%91%E7%BB%9C)(2022-03-22) |
-| [Blinkload](#五、Blinkload)【本站专属优惠】【夏季抽奖】  | 主流节点多，流媒体                                         | [官网传送门](https://url.iszy.xyz/blinkload) / [测速](/page/speed-test-collection/#Blinkload)                                                    |
+| [Blinkload](#五、Blinkload)【本站专属优惠】              | 主流节点多，流媒体                                         | [官网传送门](https://url.iszy.xyz/blinkload) / [测速](/page/speed-test-collection/#Blinkload)                                                    |
 | [WavesLink](#六、WavesLink)(原 后浪云)【本站专属优惠】   | IEPL 专线，主流节点多，流媒体                              | [官网传送门](https://url.iszy.xyz/waveslink) / [测速](/page/speed-test-collection/#WavesLink)(2022-03-17)                                        |
-| [Gatern](#七、Gatern)(原 Shuttle)【限时优惠】            | 性价比，IPLC 专线，主流节点，小众节点多，流媒体            | [官网传送门](https://url.iszy.xyz/gatern) / [测速](/page/speed-test-collection/#Gatern)(2022-03-14)                                              |
-| [ByWave](#八、ByWave)【测试暂停推荐】                    | IPLC 专线，流媒体                                          | ~~[官网传送门](https://url.iszy.xyz/bywave) / [测速](/page/speed-test-collection/#ByWave)~~                                                      |
+| [Gatern](#七、Gatern)(原 Shuttle)【本站专属优惠】        | 性价比，IPLC 专线，主流节点，小众节点多，流媒体            | [官网传送门](https://url.iszy.xyz/gatern) / [测速](/page/speed-test-collection/#Gatern)(2022-03-14)                                              |
+| [ByWave](#八、ByWave)【暂停推荐】                        | IPLC 专线，流媒体                                          | ~~[官网传送门](https://url.iszy.xyz/bywave) / [测速](/page/speed-test-collection/#ByWave)~~                                                      |
 | [BESTIEPL](#九、BESTIEPL)(原 Electry)                    | IEPL 专线，流媒体                                          | [官网传送门](https://url.iszy.xyz/electry) / [测速](/page/speed-test-collection/#BESTIEPL)(2022-03-10)                                           |
 
 点击前往查看测速: **[机场测速集合](/page/speed-test-collection/)**
@@ -56,7 +56,7 @@ permalink: /page/bgfw/
 
 **￥ 115** 及以上套餐可用
 
-**95 折**礼遇码：`TOOHOT`
+**95 折**礼遇码：`IceCream`
 
 ### （二）简介
 
@@ -96,7 +96,7 @@ permalink: /page/bgfw/
 
 [官网传送门](https://url.iszy.xyz/duangcloud)
 
-[⭐⭐ 测速 ⭐⭐](/page/speed-test-collection/#DuangCloud)(2022-02-28)
+[⭐⭐ 测速 ⭐⭐](/page/speed-test-collection/#DuangCloud)(2022-08-11)
 
 ### （一）优惠
 
@@ -276,17 +276,6 @@ permalink: /page/bgfw/
 [⭐⭐ 测速 ⭐⭐](/page/speed-test-collection/#Blinkload)
 
 ### （一）优惠
-
-> 转官方优惠公告
-
-[ 夏季抽奖活动现已开启 ]
-
-- 活动日期: 即日起 - **7 月 31 日**
-- 活动内容:
-  - 官网购买套餐页面现已新增抽奖按钮，点击抽奖即可获得 **不同折扣优惠码，Netflix 月账号，Stash 兑换码** 等权益；
-  - 优惠码折扣 **85 折 - 96 折** 不等。
-  - 新用户仅可抽取 **优惠码**
-  - 老用户有一定概率抽取到 **优惠码，Netflix 账号，Stash 兑换码**
 
 > 本站专属优惠
 
@@ -512,13 +501,6 @@ permalink: /page/bgfw/
 (新购续费均可使用 只能用于季付及以上套餐)
 
 > 转官方优惠
-
-以下优惠码均可在**续费**或**新购**时使用。
-
-- 失效日期：**2022 年 07 月 31 日**
-- 优惠代码：`YF34IWQKL0`
-- 额度： **75 折**一次性优惠
-- 适用范围：所有产品
 
 **充值获取赠金**:
 
