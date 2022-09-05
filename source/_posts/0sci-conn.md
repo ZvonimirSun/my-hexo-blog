@@ -22,14 +22,12 @@ permalink: /page/bgfw/
 
 <!--more-->
 
-**注**: 冬奥会期间，可能会有网络不稳定的情况，属于正常情况，商家会尽力减小影响。
-
 ## 目录
 
 | 机场名称（点击了解更多）                                 | 关键词                                                     | 操作                                                                                                                                             |
 | -------------------------------------------------------- | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [FreeWhale 自由鲸 ⭐](/page/freewhale/)【长期优惠】      | 性价比，主流节点超多，小众节点                             | [官网传送门](https://url.iszy.xyz/freewhale) / [测速](/page/speed-test-collection/#FreeWhale-%E8%87%AA%E7%94%B1%E9%B2%B8)(2022-03-15)            |
-| [DuangCloud](#二、DuangCloud)【本站专属优惠】            | 性价比，专线，主流节点                                     | [官网传送门](https://url.iszy.xyz/duangcloud) / [测速](/page/speed-test-collection/#DuangCloud)(2022-08-11)                                      |
+| [DuangCloud](#二、DuangCloud)【双节活动】                | 性价比，专线，主流节点                                     | [官网传送门](https://url.iszy.xyz/duangcloud) / [测速](/page/speed-test-collection/#DuangCloud)(2022-08-11)                                      |
 | [MEET](#三、MEET)                                        | 性价比，主流节点，超小流量套餐                             | [官网传送门](https://url.iszy.xyz/fspeed) / [测速](/page/speed-test-collection/#MEET)(2022-02-09)                                                |
 | [CMYNetwork 红莓网络](/page/cmynetwork/)【本站专属优惠】 | IEPL/IPLC 专线，Trojan，主流节点多，小众节点，福利共享账号 | [官网传送门](https://url.iszy.xyz/cmynetwork) / [测速](/page/speed-test-collection/#CMYNetwork-%E7%BA%A2%E8%8E%93%E7%BD%91%E7%BB%9C)(2022-03-22) |
 | [Blinkload](#五、Blinkload)【本站专属优惠】              | 主流节点多，流媒体                                         | [官网传送门](https://url.iszy.xyz/blinkload) / [测速](/page/speed-test-collection/#Blinkload)                                                    |
@@ -99,6 +97,15 @@ permalink: /page/bgfw/
 [⭐⭐ 测速 ⭐⭐](/page/speed-test-collection/#DuangCloud)(2022-08-11)
 
 ### （一）优惠
+
+> 转官方优惠公告
+
+DuangCloud 双节活动
+
+**8 折**：`happydaydayday`
+
+> 注: **月付** 不可使用
+> **限 999 份**，用完为止！
 
 > 专属优惠
 
