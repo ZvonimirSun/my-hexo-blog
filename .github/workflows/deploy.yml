@@ -62,6 +62,8 @@ jobs:
             ${{ runner.os }}-
       - name: Restore hexo 🔧
         run: ln -s /usr/local/lib/node_modules/hexo-cli/bin/hexo /usr/local/bin/hexo
+      - name: Restore theme
+        run: git clone https://github.com/zvonimirsun/hexo-theme-next themes/next
       - name: Build app 🔧
         run: hexo g
         env:

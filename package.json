@@ -9,7 +9,7 @@
     "server": "hexo server"
   },
   "hexo": {
-    "version": "6.2.0"
+    "version": "6.3.0"
   },
   "devDependencies": {
     "@waline/hexo-next": "^3.0.1",
@@ -27,7 +27,6 @@
     "hexo-renderer-markdown-it": "^6.0.1",
     "hexo-renderer-stylus": "^2.0.1",
     "hexo-server": "^3.0.0",
-    "hexo-theme-next": "^8.11.1",
     "hexo-word-counter": "^0.0.3",
     "markdown-it-katex": "^2.0.3"
   }
