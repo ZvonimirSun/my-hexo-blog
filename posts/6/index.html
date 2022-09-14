@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.2.0">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
 
 <link rel="preconnect" href="https://fonts.cdn.iszy.cc" crossorigin>
 <link rel="preconnect" href="https://jsdelivr.cdn.iszy.cc" crossorigin>
@@ -22,12 +22,12 @@
 
 <link rel="stylesheet" href="https://fonts.cdn.iszy.cc/css?family=EB+Garamond:300,300italic,400,400italic,700,700italic%7C'Noto+Serif+SC':300,300italic,400,400italic,700,700italic%7CCinzel+Decorative:300,300italic,400,400italic,700,700italic%7CJetBrains+Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
-<link rel="stylesheet" href="https://jsdelivr.cdn.iszy.cc/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://jsdelivr.cdn.iszy.cc/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.cc/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.cc/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
   <script src="https://jsdelivr.cdn.iszy.cc/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"www.iszy.cc","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.11.1","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"algolia":{"appID":"1UJ2W38EIN","apiKey":"c0cf4d0a9659a45dd3a38becbe6b6f73","indexName":"iszy_blog","hits":{"per_page":10}}}</script><script src="https://jsdelivr.cdn.iszy.cc/npm/hexo-theme-next@8.11.1/source/js/config.min.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.iszy.cc","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.13.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"algolia":{"appID":"1UJ2W38EIN","apiKey":"c0cf4d0a9659a45dd3a38becbe6b6f73","indexName":"iszy_blog","hits":{"per_page":10}}}</script><script src="https://jsdelivr.cdn.iszy.cc/npm/hexo-theme-next@8.13.0/source/js/config.min.js"></script>
 
     <meta name="description" content="今天使用for...in方法的时候发现枚举到了意料之外的prototype内的方法，发现是没有正确为数组原型对象添加方法，在此记录。">
 <meta property="og:type" content="article">
@@ -55,7 +55,8 @@
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-E60YKKHF8Y"></script>
   <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-E60YKKHF8Y","only_pageview":false}</script>
-  <script src="https://jsdelivr.cdn.iszy.cc/npm/hexo-theme-next@8.11.1/source/js/third-party/analytics/google-analytics.min.js"></script>
+  <script src="https://jsdelivr.cdn.iszy.cc/npm/hexo-theme-next@8.13.0/source/js/third-party/analytics/google-analytics.min.js"></script>
+
 
 
 
@@ -154,7 +155,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98-2"><span class="nav-number">1.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3-2"><span class="nav-number">2.</span> <span class="nav-text">解决</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E4%B8%80"><span class="nav-number">2.1.</span> <span class="nav-text">方法一</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E4%BA%8C"><span class="nav-number">2.2.</span> <span class="nav-text">方法二</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98"><span class="nav-number">1.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3"><span class="nav-number">2.</span> <span class="nav-text">解决</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E4%B8%80"><span class="nav-number">2.1.</span> <span class="nav-text">方法一</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E4%BA%8C"><span class="nav-number">2.2.</span> <span class="nav-text">方法二</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -320,13 +321,13 @@
     <div class="post-body" itemprop="articleBody">
         <p>今天使用<code>for...in</code>方法的时候发现枚举到了意料之外的<code>prototype</code>内的方法，发现是没有正确为数组原型对象添加方法，在此记录。</p>
 <span id="more"></span>
-<h2 id="问题-2">问题</h2>
+<h2 id="问题">问题</h2>
 <p>一般我们如何给一个数组原型对象添加方法呢，比如我们添加一个去重方法。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Array</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">unique</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">var</span> n = &#123;&#125;,</span><br><span class="line">    r = [];</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="variable language_">this</span>.<span class="property">length</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (!n[<span class="variable language_">this</span>[i]]) &#123;</span><br><span class="line">      n[<span class="variable language_">this</span>[i]] = <span class="literal">true</span>;</span><br><span class="line">      r.<span class="title function_">push</span>(<span class="variable language_">this</span>[i]);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> r;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <p>我看不少文章里这样就好了，这就会出现我刚刚说到的问题。在你使用<code>for...in</code>方法遍历数组时就会拿到<code>unique</code>这个 key 值，这个是不符合我们预期的。</p>
 <p>其实出现这样的情况是因为<code>Array.prototype</code>对象的<code>unique</code>属性的描述值<code>enumerable</code>为<code>true</code>，也就是可枚举，在枚举对象属性时会被枚举到（<code>for...in</code>或<code>Object.keys</code>方法）。</p>
 <p>根据<span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvemgtQ04vZG9jcy9XZWIvSmF2YVNjcmlwdC9FbnVtZXJhYmlsaXR5X2FuZF9vd25lcnNoaXBfb2ZfcHJvcGVydGllcw==">MDN Web Docs<i class="fa fa-external-link-alt"></i></span>说明，可枚举属性是指那些内部 <code>可枚举</code> 标志设置为 <code>true</code> 的属性，对于通过直接的赋值和属性初始化的属性，该标识值默认为即为 <code>true</code>，对于通过 <code>Object.defineProperty</code> 等定义的属性，该标识值默认为 <code>false</code>。可枚举的属性可以通过 <code>for...in</code> 循环进行遍历（除非该属性名是一个 <code>Symbol</code>）。</p>
-<h2 id="解决-2">解决</h2>
+<h2 id="解决">解决</h2>
 <p>正确的方法如下，忽略方法内容。</p>
 <h3 id="方法一">方法一</h3>
 <p>先添加方法，再通过 <code>Object.defineProperty</code> 设置为不可枚举。</p>
@@ -428,38 +429,37 @@
   
   <script src="https://jsdelivr.cdn.iszy.cc/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
   <script src="https://jsdelivr.cdn.iszy.cc/npm/@next-theme/pjax@0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
-  <script src="https://jsdelivr.cdn.iszy.cc/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://jsdelivr.cdn.iszy.cc/npm/jquery@3.6.1/dist/jquery.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
   <script src="https://jsdelivr.cdn.iszy.cc/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
   <script src="https://jsdelivr.cdn.iszy.cc/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
   <script src="https://jsdelivr.cdn.iszy.cc/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
-<script src="https://jsdelivr.cdn.iszy.cc/npm/hexo-theme-next@8.11.1/source/js/comments.min.js"></script><script src="https://jsdelivr.cdn.iszy.cc/npm/hexo-theme-next@8.11.1/source/js/utils.min.js"></script><script src="https://jsdelivr.cdn.iszy.cc/npm/hexo-theme-next@8.11.1/source/js/next-boot.min.js"></script><script src="https://jsdelivr.cdn.iszy.cc/npm/hexo-theme-next@8.11.1/source/js/pjax.min.js"></script>
+<script src="https://jsdelivr.cdn.iszy.cc/npm/hexo-theme-next@8.13.0/source/js/comments.min.js"></script><script src="https://jsdelivr.cdn.iszy.cc/npm/hexo-theme-next@8.13.0/source/js/utils.min.js"></script><script src="https://jsdelivr.cdn.iszy.cc/npm/hexo-theme-next@8.13.0/source/js/next-boot.min.js"></script><script src="https://jsdelivr.cdn.iszy.cc/npm/hexo-theme-next@8.13.0/source/js/pjax.min.js"></script>
 
   
-<script src="https://jsdelivr.cdn.iszy.cc/npm/algoliasearch@4.13.0/dist/algoliasearch-lite.umd.js" integrity="sha256-UcrGMMl88PT0z5gvotNiqA7H30f1UJTUL9ZHey6i9jk=" crossorigin="anonymous"></script>
-<script src="https://jsdelivr.cdn.iszy.cc/npm/instantsearch.js@4.40.5/dist/instantsearch.production.min.js" integrity="sha256-CzAaf9BTgvv6RaF+W1nW5duR5M+vXeZ0tofFuEfJ7ms=" crossorigin="anonymous"></script><script src="https://jsdelivr.cdn.iszy.cc/npm/hexo-theme-next@8.11.1/source/js/third-party/search/algolia-search.min.js"></script>
+<script src="https://jsdelivr.cdn.iszy.cc/npm/algoliasearch@4.14.2/dist/algoliasearch-lite.umd.js" integrity="sha256-dImjLPUsG/6p3+i7gVKBiDM8EemJAhQ0VvkRK2pVsQY=" crossorigin="anonymous"></script>
+<script src="https://jsdelivr.cdn.iszy.cc/npm/instantsearch.js@4.45.0/dist/instantsearch.production.min.js" integrity="sha256-356MuKn0s/KnBeNjzWGP1048qENU5M4IiAWc7q9GErU=" crossorigin="anonymous"></script><script src="https://jsdelivr.cdn.iszy.cc/npm/hexo-theme-next@8.13.0/source/js/third-party/search/algolia-search.min.js"></script>
 
 
 
-  <script src="https://jsdelivr.cdn.iszy.cc/npm/hexo-theme-next@8.11.1/source/js/third-party/fancybox.min.js"></script>
+  <script src="https://jsdelivr.cdn.iszy.cc/npm/hexo-theme-next@8.13.0/source/js/third-party/fancybox.min.js"></script>
 
-  <script src="https://jsdelivr.cdn.iszy.cc/npm/hexo-theme-next@8.11.1/source/js/third-party/pace.min.js"></script>
-
-  
-
-
-
+  <script src="https://jsdelivr.cdn.iszy.cc/npm/hexo-theme-next@8.13.0/source/js/third-party/pace.min.js"></script>
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://jsdelivr.cdn.iszy.cc/npm/katex@0.15.3/dist/katex.min.css" integrity="sha256-TThEtR+XalhWKkfF383YLOrI50NGNeIqrzS+q08afrY=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.cc/npm/katex@0.15.3/dist/contrib/copy-tex.min.css" integrity="sha256-Wk20U9mS/kHGcSgkjSiRezW5exqT6wAOKwySOaLotXM=" crossorigin="anonymous">
-  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://jsdelivr.cdn.iszy.cc/npm/katex@0.15.3/dist/contrib/copy-tex.min.js","integrity":"sha256-etSqbSVF4+Lwe8MGk/Vanc1sR+mWv+qOG73fxWw9p94="}}</script>
-  <script src="https://jsdelivr.cdn.iszy.cc/npm/hexo-theme-next@8.11.1/source/js/third-party/math/katex.min.js"></script>
 
 
-  <script src="https://jsdelivr.cdn.iszy.cc/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://jsdelivr.cdn.iszy.cc/npm/katex@0.16.2/dist/katex.min.css" integrity="sha256-oWCabCfPd4Oi21wqZezBSz/anto4VYcJqc9sM9IzQTk=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://jsdelivr.cdn.iszy.cc/npm/katex@0.16.2/dist/contrib/copy-tex.min.js","integrity":"sha256-Us54+rSGDSTvIhKKUs4kygE2ipA0RXpWWh0/zLqw3bs="}}</script>
+  <script src="https://jsdelivr.cdn.iszy.cc/npm/hexo-theme-next@8.13.0/source/js/third-party/math/katex.min.js"></script>
+
+
+  <script src="https://jsdelivr.cdn.iszy.cc/npm/quicklink@2.3.0/dist/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>
   <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":false,"delay":true,"timeout":3000,"priority":true,"url":"https://www.iszy.cc/posts/6/"}</script>
-  <script src="https://jsdelivr.cdn.iszy.cc/npm/hexo-theme-next@8.11.1/source/js/third-party/quicklink.min.js"></script>
+  <script src="https://jsdelivr.cdn.iszy.cc/npm/hexo-theme-next@8.13.0/source/js/third-party/quicklink.min.js"></script>
 <script class="next-config" data-name="waline" type="application/json">{"lang":"zh-CN","enable":true,"serverURL":"https://wl.iszy.xyz","cssUrl":"https://jsdelivr.cdn.iszy.cc/npm/@waline/client@v2/dist/waline.min.css","commentCount":true,"pageview":true,"libUrl":"https://jsdelivr.cdn.iszy.cc/npm/@waline/client@v2/dist/waline.min.js","locale":{"placeholder":"本站支持匿名评论，无需登录~(●'◡'●)\n与文章无关的留言请前往本站留言板，谢谢配合~"},"emoji":["https://jsdelivr.cdn.iszy.cc/gh/zvonimirsun/emojis@1.0.3/bilibili-xhl"],"meta":["nick","mail","link"],"requiredMeta":["nick"],"wordLimit":0,"login":"enable","pageSize":10,"dark":"auto","el":"#waline","comment":true,"path":"/posts/6/"}</script>
 <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.cc/npm/@waline/client@v2/dist/waline.min.css">
 <script>

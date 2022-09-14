@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.2.0">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
 
 <link rel="preconnect" href="https://fonts.cdn.iszy.cc" crossorigin>
 <link rel="preconnect" href="https://jsdelivr.cdn.iszy.cc" crossorigin>
@@ -22,12 +22,12 @@
 
 <link rel="stylesheet" href="https://fonts.cdn.iszy.cc/css?family=EB+Garamond:300,300italic,400,400italic,700,700italic%7C'Noto+Serif+SC':300,300italic,400,400italic,700,700italic%7CCinzel+Decorative:300,300italic,400,400italic,700,700italic%7CJetBrains+Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
-<link rel="stylesheet" href="https://jsdelivr.cdn.iszy.cc/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://jsdelivr.cdn.iszy.cc/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.cc/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.cc/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
   <script src="https://jsdelivr.cdn.iszy.cc/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"www.iszy.cc","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.11.1","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"algolia":{"appID":"1UJ2W38EIN","apiKey":"c0cf4d0a9659a45dd3a38becbe6b6f73","indexName":"iszy_blog","hits":{"per_page":10}}}</script><script src="https://jsdelivr.cdn.iszy.cc/npm/hexo-theme-next@8.11.1/source/js/config.min.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.iszy.cc","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.13.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"algolia":{"appID":"1UJ2W38EIN","apiKey":"c0cf4d0a9659a45dd3a38becbe6b6f73","indexName":"iszy_blog","hits":{"per_page":10}}}</script><script src="https://jsdelivr.cdn.iszy.cc/npm/hexo-theme-next@8.13.0/source/js/config.min.js"></script>
 
     <meta name="description" content="前段时间写了一个通过 Github Actions 配合 Webhooks 实现项目自动化部署，但是服务器上由于并没有后端服务，所以实现的方式不太优雅。今天我将完全抛弃 Webhook，完全通过 Github Actions 来实现项目的自动化部署。">
 <meta property="og:type" content="article">
@@ -58,7 +58,8 @@
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-E60YKKHF8Y"></script>
   <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-E60YKKHF8Y","only_pageview":false}</script>
-  <script src="https://jsdelivr.cdn.iszy.cc/npm/hexo-theme-next@8.11.1/source/js/third-party/analytics/google-analytics.min.js"></script>
+  <script src="https://jsdelivr.cdn.iszy.cc/npm/hexo-theme-next@8.13.0/source/js/third-party/analytics/google-analytics.min.js"></script>
+
 
 
 
@@ -157,7 +158,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%94%B9%E8%BF%9B"><span class="nav-number">1.</span> <span class="nav-text">改进</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Gihub-Actions-%E8%84%9A%E6%9C%AC"><span class="nav-number">2.</span> <span class="nav-text">Gihub Actions 脚本</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A2%9E%E5%8A%A0%E7%BC%93%E5%AD%98"><span class="nav-number">2.1.</span> <span class="nav-text">增加缓存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%99%BB%E5%BD%95%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number">2.2.</span> <span class="nav-text">登录服务器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C-2"><span class="nav-number">3.</span> <span class="nav-text">使用体验</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%94%B9%E8%BF%9B"><span class="nav-number">1.</span> <span class="nav-text">改进</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Gihub-Actions-%E8%84%9A%E6%9C%AC"><span class="nav-number">2.</span> <span class="nav-text">Gihub Actions 脚本</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A2%9E%E5%8A%A0%E7%BC%93%E5%AD%98"><span class="nav-number">2.1.</span> <span class="nav-text">增加缓存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%99%BB%E5%BD%95%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number">2.2.</span> <span class="nav-text">登录服务器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C"><span class="nav-number">3.</span> <span class="nav-text">使用体验</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -332,7 +333,7 @@
 <p>点击项目的<code>Settings</code>-<code>Secrets</code>-<code>New repository secret</code>即可创建。Secret 名称就是环境变量名，内容则是具体的值。</p>
 <p>接着调用<code>appleboy/ssh-action@master</code>脚本，将登录参数指定为对应的环境变量，然后配置一组需要执行的脚本，这边可以根据个人的实际情况进行配置，自由度很高了。既然都能登陆服务器，那自然是想做什么都可以了。</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">build:</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Checkout</span> <span class="string">🛎️</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/checkout@v2</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Restore</span> <span class="string">cached</span> <span class="string">./node_modules</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/cache@v2</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">path:</span> <span class="string">./node_modules</span></span><br><span class="line">          <span class="attr">key:</span> <span class="string">$&#123;&#123;</span> <span class="string">runner.os</span> <span class="string">&#125;&#125;-yarn-lock-$&#123;&#123;</span> <span class="string">hashFiles(&#x27;./yarn.lock&#x27;)</span> <span class="string">&#125;&#125;</span></span><br><span class="line">          <span class="attr">restore-keys:</span> <span class="string">|</span></span><br><span class="line"><span class="string">            $&#123;&#123; runner.os &#125;&#125;-yarn-lock-</span></span><br><span class="line"><span class="string"></span>      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Install</span> <span class="string">hexo</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">npm</span> <span class="string">install</span> <span class="string">hexo-cli</span> <span class="string">-g</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Install</span> <span class="string">dependencies</span> <span class="string">🔧</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">yarn</span> <span class="string">install</span> <span class="string">--frozen-lockfile</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Build</span> <span class="string">app</span> <span class="string">🔧</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">hexo</span> <span class="string">g</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Deploy</span> <span class="string">🚀</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">JamesIves/github-pages-deploy-action@4.1.0</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">branch:</span> <span class="string">gh-pages</span></span><br><span class="line">          <span class="attr">folder:</span> <span class="string">public</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Deploy</span> <span class="string">to</span> <span class="string">server</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">appleboy/ssh-action@master</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">host:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.HOST</span> <span class="string">&#125;&#125;</span></span><br><span class="line">          <span class="attr">username:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.USERNAME</span> <span class="string">&#125;&#125;</span></span><br><span class="line">          <span class="attr">port:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.PORT</span> <span class="string">&#125;&#125;</span></span><br><span class="line">          <span class="attr">key:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.KEY</span> <span class="string">&#125;&#125;</span></span><br><span class="line">          <span class="attr">script:</span> <span class="string">|</span></span><br><span class="line"><span class="string">            cd /your/path</span></span><br><span class="line"><span class="string">            git pull --rebase</span></span><br><span class="line"><span class="string">            ls -al</span></span><br></pre></td></tr></table></figure>
-<h2 id="使用体验-2">使用体验</h2>
+<h2 id="使用体验">使用体验</h2>
 <p>这次的体验很好，基本上不用浪费自己服务器的性能，也可以通过自定义的脚本将服务器上自己关心的内容输出到日志中。我暂时认为这就是现阶段通过 Github Actions 完成自动化部署的最佳方案了。希望对大家有所帮助。</p>
 
     </div>
@@ -345,27 +346,27 @@
   <ul class="popular-posts">
     <li class="popular-posts-item">
         <div class="popular-posts-date">2021-04-06</div>
-      <div class="popular-posts-title"><a href="posts/10/" rel="bookmark">Github Actions + Webhooks 实现项目自动化部署</a></div>
+      <div class="popular-posts-title"><a href="/posts/10/" rel="bookmark">Github Actions + Webhooks 实现项目自动化部署</a></div>
         <div class="popular-posts-excerpt"><p><p>最近 Github 有推出类似 Gitlab ci 的 Github actions，想折腾一下博客的自动部署，在此记录。</p></p></div>
     </li>
     <li class="popular-posts-item">
         <div class="popular-posts-date">2017-12-05</div>
-      <div class="popular-posts-title"><a href="posts/Oracle-Break-On/" rel="bookmark">Oracle PL/SQL BREAK-ON排列实例</a></div>
+      <div class="popular-posts-title"><a href="/posts/Oracle-Break-On/" rel="bookmark">Oracle PL/SQL BREAK-ON排列实例</a></div>
         <div class="popular-posts-excerpt"><p><p>使用 BREAK ON 语句进行排列的实例</p></p></div>
     </li>
     <li class="popular-posts-item">
         <div class="popular-posts-date">2020-05-05</div>
-      <div class="popular-posts-title"><a href="posts/ufjg58/" rel="bookmark">利用Github自建图床的几种方式</a></div>
+      <div class="popular-posts-title"><a href="/posts/ufjg58/" rel="bookmark">利用Github自建图床的几种方式</a></div>
         <div class="popular-posts-excerpt"><p><p>本文我来简单讲一下利用 Github 自建图床的几种方式，希望能对大家有些帮助。</p></p></div>
     </li>
     <li class="popular-posts-item">
         <div class="popular-posts-date">2019-10-05</div>
-      <div class="popular-posts-title"><a href="posts/tgbot-asf/" rel="bookmark">通过Telegram机器人管理ASF</a></div>
+      <div class="popular-posts-title"><a href="/posts/tgbot-asf/" rel="bookmark">通过Telegram机器人管理ASF</a></div>
         <div class="popular-posts-excerpt"><p><p>个人比较喜欢 Node.js，最近用 Node.js 弄了个简单的 Telegram 机器人用于管理 ASF，即 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0p1c3RBcmNoaU5FVC9BcmNoaVN0ZWFtRmFybQ==">ArchiSteamFarm<i class="fa fa-external-link-alt"></i></span>。现在我把代码放 GitHub 上面，有需要的可以尝试一下。</p></p></div>
     </li>
     <li class="popular-posts-item">
         <div class="popular-posts-date">2017-10-27</div>
-      <div class="popular-posts-title"><a href="posts/use-github-with-git/" rel="bookmark">配合GitHub的Git使用</a></div>
+      <div class="popular-posts-title"><a href="/posts/use-github-with-git/" rel="bookmark">配合GitHub的Git使用</a></div>
         <div class="popular-posts-excerpt"><p><p>一直以来我都觉得 GitHub 是一个对于程序员来说极为有助的一个平台。最近在学校老是在编程，我把代码都放在了 GitHub 上，Git 作为一个分布式版本控制软件，就成为了我的电脑和 GitHub 之间的桥梁。十分惭愧，我对 Git 和 GitHub 的使用还只会基本的操作，今天我就来讲一下这些基本操作。</p></p></div>
     </li>
   </ul>
@@ -457,38 +458,37 @@
   
   <script src="https://jsdelivr.cdn.iszy.cc/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
   <script src="https://jsdelivr.cdn.iszy.cc/npm/@next-theme/pjax@0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
-  <script src="https://jsdelivr.cdn.iszy.cc/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://jsdelivr.cdn.iszy.cc/npm/jquery@3.6.1/dist/jquery.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
   <script src="https://jsdelivr.cdn.iszy.cc/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
   <script src="https://jsdelivr.cdn.iszy.cc/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
   <script src="https://jsdelivr.cdn.iszy.cc/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
-<script src="https://jsdelivr.cdn.iszy.cc/npm/hexo-theme-next@8.11.1/source/js/comments.min.js"></script><script src="https://jsdelivr.cdn.iszy.cc/npm/hexo-theme-next@8.11.1/source/js/utils.min.js"></script><script src="https://jsdelivr.cdn.iszy.cc/npm/hexo-theme-next@8.11.1/source/js/next-boot.min.js"></script><script src="https://jsdelivr.cdn.iszy.cc/npm/hexo-theme-next@8.11.1/source/js/pjax.min.js"></script>
+<script src="https://jsdelivr.cdn.iszy.cc/npm/hexo-theme-next@8.13.0/source/js/comments.min.js"></script><script src="https://jsdelivr.cdn.iszy.cc/npm/hexo-theme-next@8.13.0/source/js/utils.min.js"></script><script src="https://jsdelivr.cdn.iszy.cc/npm/hexo-theme-next@8.13.0/source/js/next-boot.min.js"></script><script src="https://jsdelivr.cdn.iszy.cc/npm/hexo-theme-next@8.13.0/source/js/pjax.min.js"></script>
 
   
-<script src="https://jsdelivr.cdn.iszy.cc/npm/algoliasearch@4.13.0/dist/algoliasearch-lite.umd.js" integrity="sha256-UcrGMMl88PT0z5gvotNiqA7H30f1UJTUL9ZHey6i9jk=" crossorigin="anonymous"></script>
-<script src="https://jsdelivr.cdn.iszy.cc/npm/instantsearch.js@4.40.5/dist/instantsearch.production.min.js" integrity="sha256-CzAaf9BTgvv6RaF+W1nW5duR5M+vXeZ0tofFuEfJ7ms=" crossorigin="anonymous"></script><script src="https://jsdelivr.cdn.iszy.cc/npm/hexo-theme-next@8.11.1/source/js/third-party/search/algolia-search.min.js"></script>
+<script src="https://jsdelivr.cdn.iszy.cc/npm/algoliasearch@4.14.2/dist/algoliasearch-lite.umd.js" integrity="sha256-dImjLPUsG/6p3+i7gVKBiDM8EemJAhQ0VvkRK2pVsQY=" crossorigin="anonymous"></script>
+<script src="https://jsdelivr.cdn.iszy.cc/npm/instantsearch.js@4.45.0/dist/instantsearch.production.min.js" integrity="sha256-356MuKn0s/KnBeNjzWGP1048qENU5M4IiAWc7q9GErU=" crossorigin="anonymous"></script><script src="https://jsdelivr.cdn.iszy.cc/npm/hexo-theme-next@8.13.0/source/js/third-party/search/algolia-search.min.js"></script>
 
 
 
-  <script src="https://jsdelivr.cdn.iszy.cc/npm/hexo-theme-next@8.11.1/source/js/third-party/fancybox.min.js"></script>
+  <script src="https://jsdelivr.cdn.iszy.cc/npm/hexo-theme-next@8.13.0/source/js/third-party/fancybox.min.js"></script>
 
-  <script src="https://jsdelivr.cdn.iszy.cc/npm/hexo-theme-next@8.11.1/source/js/third-party/pace.min.js"></script>
-
-  
-
-
-
+  <script src="https://jsdelivr.cdn.iszy.cc/npm/hexo-theme-next@8.13.0/source/js/third-party/pace.min.js"></script>
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://jsdelivr.cdn.iszy.cc/npm/katex@0.15.3/dist/katex.min.css" integrity="sha256-TThEtR+XalhWKkfF383YLOrI50NGNeIqrzS+q08afrY=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.cc/npm/katex@0.15.3/dist/contrib/copy-tex.min.css" integrity="sha256-Wk20U9mS/kHGcSgkjSiRezW5exqT6wAOKwySOaLotXM=" crossorigin="anonymous">
-  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://jsdelivr.cdn.iszy.cc/npm/katex@0.15.3/dist/contrib/copy-tex.min.js","integrity":"sha256-etSqbSVF4+Lwe8MGk/Vanc1sR+mWv+qOG73fxWw9p94="}}</script>
-  <script src="https://jsdelivr.cdn.iszy.cc/npm/hexo-theme-next@8.11.1/source/js/third-party/math/katex.min.js"></script>
 
 
-  <script src="https://jsdelivr.cdn.iszy.cc/npm/quicklink@2.2.0/dist/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://jsdelivr.cdn.iszy.cc/npm/katex@0.16.2/dist/katex.min.css" integrity="sha256-oWCabCfPd4Oi21wqZezBSz/anto4VYcJqc9sM9IzQTk=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://jsdelivr.cdn.iszy.cc/npm/katex@0.16.2/dist/contrib/copy-tex.min.js","integrity":"sha256-Us54+rSGDSTvIhKKUs4kygE2ipA0RXpWWh0/zLqw3bs="}}</script>
+  <script src="https://jsdelivr.cdn.iszy.cc/npm/hexo-theme-next@8.13.0/source/js/third-party/math/katex.min.js"></script>
+
+
+  <script src="https://jsdelivr.cdn.iszy.cc/npm/quicklink@2.3.0/dist/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>
   <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":false,"delay":true,"timeout":3000,"priority":true,"url":"https://www.iszy.cc/posts/11/"}</script>
-  <script src="https://jsdelivr.cdn.iszy.cc/npm/hexo-theme-next@8.11.1/source/js/third-party/quicklink.min.js"></script>
+  <script src="https://jsdelivr.cdn.iszy.cc/npm/hexo-theme-next@8.13.0/source/js/third-party/quicklink.min.js"></script>
 <script class="next-config" data-name="waline" type="application/json">{"lang":"zh-CN","enable":true,"serverURL":"https://wl.iszy.xyz","cssUrl":"https://jsdelivr.cdn.iszy.cc/npm/@waline/client@v2/dist/waline.min.css","commentCount":true,"pageview":true,"libUrl":"https://jsdelivr.cdn.iszy.cc/npm/@waline/client@v2/dist/waline.min.js","locale":{"placeholder":"本站支持匿名评论，无需登录~(●'◡'●)\n与文章无关的留言请前往本站留言板，谢谢配合~"},"emoji":["https://jsdelivr.cdn.iszy.cc/gh/zvonimirsun/emojis@1.0.3/bilibili-xhl"],"meta":["nick","mail","link"],"requiredMeta":["nick"],"wordLimit":0,"login":"enable","pageSize":10,"dark":"auto","el":"#waline","comment":true,"path":"/posts/11/"}</script>
 <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.cc/npm/@waline/client@v2/dist/waline.min.css">
 <script>
