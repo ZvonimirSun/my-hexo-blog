@@ -22,6 +22,8 @@ permalink: /page/bgfw/
 
 <!--more-->
 
+**注**: 冬奥会期间，可能会有网络不稳定的情况，属于正常情况，商家会尽力减小影响。
+
 ## 目录
 
 | 机场名称（点击了解更多）                                 | 关键词                                                     | 操作                                                                                                                                             |
@@ -30,11 +32,10 @@ permalink: /page/bgfw/
 | [DuangCloud](#二、DuangCloud)【双节活动】                | 性价比，专线，主流节点                                     | [官网传送门](https://url.iszy.xyz/duangcloud) / [测速](/page/speed-test-collection/#DuangCloud)(2022-08-11)                                      |
 | [MEET](#三、MEET)                                        | 性价比，主流节点，超小流量套餐                             | [官网传送门](https://url.iszy.xyz/fspeed) / [测速](/page/speed-test-collection/#MEET)(2022-02-09)                                                |
 | [CMYNetwork 红莓网络](/page/cmynetwork/)【本站专属优惠】 | IEPL/IPLC 专线，Trojan，主流节点多，小众节点，福利共享账号 | [官网传送门](https://url.iszy.xyz/cmynetwork) / [测速](/page/speed-test-collection/#CMYNetwork-%E7%BA%A2%E8%8E%93%E7%BD%91%E7%BB%9C)(2022-03-22) |
-| [Blinkload](#五、Blinkload)【本站专属优惠】              | 主流节点多，流媒体                                         | [官网传送门](https://url.iszy.xyz/blinkload) / [测速](/page/speed-test-collection/#Blinkload)                                                    |
-| [WavesLink](#六、WavesLink)(原 后浪云)【本站专属优惠】   | IEPL 专线，主流节点多，流媒体                              | [官网传送门](https://url.iszy.xyz/waveslink) / [测速](/page/speed-test-collection/#WavesLink)(2022-03-17)                                        |
-| [Gatern](#七、Gatern)(原 Shuttle)【本站专属优惠】        | 性价比，IPLC 专线，主流节点，小众节点多，流媒体            | [官网传送门](https://url.iszy.xyz/gatern) / [测速](/page/speed-test-collection/#Gatern)(2022-03-14)                                              |
-| [ByWave](#八、ByWave)【暂停推荐】                        | IPLC 专线，流媒体                                          | ~~[官网传送门](https://url.iszy.xyz/bywave) / [测速](/page/speed-test-collection/#ByWave)~~                                                      |
-| [BESTIEPL](#九、BESTIEPL)(原 Electry)                    | IEPL 专线，流媒体                                          | [官网传送门](https://url.iszy.xyz/electry) / [测速](/page/speed-test-collection/#BESTIEPL)(2022-03-10)                                           |
+| [WavesLink](#五、WavesLink)(原 后浪云)【本站专属优惠】   | IEPL 专线，主流节点多，流媒体                              | [官网传送门](https://url.iszy.xyz/waveslink) / [测速](/page/speed-test-collection/#WavesLink)(2022-03-17)                                        |
+| [Gatern](#六、Gatern)(原 Shuttle)【本站专属优惠】        | 性价比，IPLC 专线，主流节点，小众节点多，流媒体            | [官网传送门](https://url.iszy.xyz/gatern) / [测速](/page/speed-test-collection/#Gatern)(2022-03-14)                                              |
+| [ByWave](#七、ByWave)【暂停推荐】                        | IPLC 专线，流媒体                                          | ~~[官网传送门](https://url.iszy.xyz/bywave) / [测速](/page/speed-test-collection/#ByWave)~~                                                      |
+| [BESTIEPL](#八、BESTIEPL)(原 Electry)                    | IEPL 专线，流媒体                                          | [官网传送门](https://url.iszy.xyz/electry) / [测速](/page/speed-test-collection/#BESTIEPL)(2022-03-10)                                           |
 
 点击前往查看测速: **[机场测速集合](/page/speed-test-collection/)**
 
@@ -97,15 +98,6 @@ permalink: /page/bgfw/
 [⭐⭐ 测速 ⭐⭐](/page/speed-test-collection/#DuangCloud)(2022-08-11)
 
 ### （一）优惠
-
-> 转官方优惠公告
-
-DuangCloud 双节活动
-
-**8 折**：`happydaydayday`
-
-> 注: **月付** 不可使用
-> **限 999 份**，用完为止！
 
 > 专属优惠
 
@@ -276,7 +268,7 @@ DuangCloud 双节活动
 </tr>
 </table>
 
-## 五、Blinkload
+<!-- ## 五、Blinkload
 
 [官网传送门](https://url.iszy.xyz/blinkload)
 
@@ -457,9 +449,9 @@ DuangCloud 双节活动
 - 订阅地址及节点信息请勿截图发到其他地方，请务必打码。
 - 通知公告[Telegram 频道](https://t.me/thessrchannel)(Telegram 需挂代理)
 - 售前售后[Telegram 官方交流群](https://t.me/thessrgroup)(Telegram 需挂代理)
-- 若有任何问题可联系官网右下角的**网页客服(推荐)**或**Telegram 管理员(推荐)**或发送工单。
+- 若有任何问题可联系官网右下角的**网页客服(推荐)**或**Telegram 管理员(推荐)**或发送工单。 -->
 
-## 六、WavesLink
+## 五、WavesLink
 
 [官网传送门](https://url.iszy.xyz/waveslink)
 
@@ -491,7 +483,7 @@ DuangCloud 双节活动
 | Pro-高級後浪-V2    | 60 元/月  | 200GB/月 | 5        |
 | Master-至尊後浪-V3 | 120 元/月 | 500GB/月 | 5        |
 
-## 七、Gatern
+## 六、Gatern
 
 [官网传送门](https://url.iszy.xyz/gatern)
 
@@ -649,7 +641,7 @@ DuangCloud 双节活动
   - 如果还是无法使用的话，请在连接后截图客户端中的日志界面发送到在线客服。
 - 建议采用官网在线客服的方式解决问题 -->
 
-## 九、BESTIEPL
+## 八、BESTIEPL
 
 [官网传送门](https://url.iszy.xyz/electry)
 
