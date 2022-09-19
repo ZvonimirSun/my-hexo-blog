@@ -6,7 +6,7 @@
   <link href="https://www.iszy.cc/atom.xml" rel="self"/>
   
   <link href="https://www.iszy.cc/"/>
-  <updated>2022-09-19T01:39:01.000Z</updated>
+  <updated>2022-09-14T05:00:48.000Z</updated>
   <id>https://www.iszy.cc/</id>
   
   <author>
@@ -15,29 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>Spring Boot 开启压缩</title>
-    <link href="https://www.iszy.cc/posts/springboot-enable-compress/"/>
-    <id>https://www.iszy.cc/posts/springboot-enable-compress/</id>
-    <published>2022-09-19T01:38:50.000Z</published>
-    <updated>2022-09-19T01:39:01.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>公司的部分老项目还没有用上 webpack，前后端不分离，有不少静态资源不压缩的话还是比较大的。这边记录下 Spring Boot 开启压缩的方法。</p><span id="more"></span><h2 id="开启方法">开启方法</h2><ol><li>首先需要在 <code>application.yml</code> 里启用压缩</li><li>因为默认只压缩 <code>text/html</code> 类型，需要添加上其他需要的类型，比如 <code>application/json</code></li><li>如有需要可以配置启用压缩的最小响应大小，默认为 <code>2048 byte</code></li></ol><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">compression:</span></span><br><span class="line">    <span class="attr">enabled:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">mime-types:</span> <span class="string">application/json,application/xml,text/html,text/xml,text/plain</span></span><br><span class="line">    <span class="attr">min-response-size:</span> <span class="number">2048</span></span><br></pre></td></tr></table></figure><h2 id="效果对比">效果对比</h2><p>压缩前</p><p><img data-src="https://img.iszy.xyz/1663551069657.png" alt=""></p><p>压缩后</p><p><img data-src="https://img.iszy.xyz/1663551287356.png" alt=""></p><p>可以看到已经开启了 gzip 压缩</p><p><img data-src="https://img.iszy.xyz/1663551338263.png" alt=""></p><h2 id="常见其他方法">常见其他方法</h2><p>一般如果应用比较多，在每个应用里添加配置还是比较麻烦的。可以考虑使用 Nginx 进行代理，统一添加 gzip 甚至 brotli 压缩，会更加方便。brotli 和 gzip 可以同时开始，压缩效果更好。</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;公司的部分老项目还没有用上 webpack，前后端不分离，有不少静态资源不压缩的话还是比较大的。这边记录下 Spring Boot 开启压缩的方法。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Wiki" scheme="https://www.iszy.cc/categories/Wiki/"/>
-    
-    <category term="Java" scheme="https://www.iszy.cc/categories/Wiki/Java/"/>
-    
-    
-    <category term="Spring Boot" scheme="https://www.iszy.cc/tags/Spring-Boot/"/>
-    
-  </entry>
   
   <entry>
     <title>利用HAR文件查看和诊断网络请求</title>
@@ -61,6 +38,29 @@
     <category term="浏览器" scheme="https://www.iszy.cc/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
     
     <category term="Har" scheme="https://www.iszy.cc/tags/Har/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Spring Boot 开启压缩</title>
+    <link href="https://www.iszy.cc/posts/springboot-enable-compress/"/>
+    <id>https://www.iszy.cc/posts/springboot-enable-compress/</id>
+    <published>2022-09-14T01:38:50.000Z</published>
+    <updated>2022-09-14T01:38:50.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>公司的部分老项目还没有用上 webpack，前后端不分离，有不少静态资源不压缩的话还是比较大的。这边记录下 Spring Boot 开启压缩的方法。</p><span id="more"></span><h2 id="开启方法">开启方法</h2><ol><li>首先需要在 <code>application.yml</code> 里启用压缩</li><li>因为默认只压缩 <code>text/html</code> 类型，需要添加上其他需要的类型，比如 <code>application/json</code></li><li>如有需要可以配置启用压缩的最小响应大小，默认为 <code>2048 byte</code></li></ol><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">compression:</span></span><br><span class="line">    <span class="attr">enabled:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">mime-types:</span> <span class="string">application/json,application/xml,text/html,text/xml,text/plain</span></span><br><span class="line">    <span class="attr">min-response-size:</span> <span class="number">2048</span></span><br></pre></td></tr></table></figure><h2 id="效果对比">效果对比</h2><p>压缩前</p><p><img data-src="https://img.iszy.xyz/1663551069657.png" alt=""></p><p>压缩后</p><p><img data-src="https://img.iszy.xyz/1663551287356.png" alt=""></p><p>可以看到已经开启了 gzip 压缩</p><p><img data-src="https://img.iszy.xyz/1663551338263.png" alt=""></p><h2 id="常见其他方法">常见其他方法</h2><p>一般如果应用比较多，在每个应用里添加配置还是比较麻烦的。可以考虑使用 Nginx 进行代理，统一添加 gzip 甚至 brotli 压缩，会更加方便。brotli 和 gzip 可以同时开始，压缩效果更好。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;公司的部分老项目还没有用上 webpack，前后端不分离，有不少静态资源不压缩的话还是比较大的。这边记录下 Spring Boot 开启压缩的方法。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Wiki" scheme="https://www.iszy.cc/categories/Wiki/"/>
+    
+    <category term="Java" scheme="https://www.iszy.cc/categories/Wiki/Java/"/>
+    
+    
+    <category term="Spring Boot" scheme="https://www.iszy.cc/tags/Spring-Boot/"/>
     
   </entry>
   
