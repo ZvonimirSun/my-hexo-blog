@@ -421,7 +421,7 @@ font:
   enable: true
 
   # Uri of fonts host, e.g. https://fonts.googleapis.com (Default).
-  host: https://fonts.cdn.iszy.cc
+  host: https://fonts.cdn.iszy.xyz
 
   # Font options:
   # `external: true` will load this font family from `host` above.
@@ -650,10 +650,10 @@ waline:
   serverURL: https://wl.iszy.xyz # Waline server address url
 
   # Waline library CDN url, you can set this to your preferred CDN
-  libUrl: https://jsdelivr.cdn.iszy.cc/npm/@waline/client@v2/dist/waline.min.js
+  libUrl: https://jsdelivr.cdn.iszy.xyz/npm/@waline/client@v2/dist/waline.min.js
 
   # Waline CSS styles CDN url, you can set this to your preferred CDN
-  cssUrl: https://jsdelivr.cdn.iszy.cc/npm/@waline/client@v2/dist/waline.min.css
+  cssUrl: https://jsdelivr.cdn.iszy.xyz/npm/@waline/client@v2/dist/waline.min.css
 
   # Waline CSS styles CDN url, you can set this to your preferred CDN
   commentCount: true
@@ -669,7 +669,7 @@ waline:
 
   # Custom emoji
   emoji:
-    - https://jsdelivr.cdn.iszy.cc/gh/zvonimirsun/emojis@1.0.3/bilibili-xhl
+    - https://jsdelivr.cdn.iszy.xyz/gh/zvonimirsun/emojis@1.0.3/bilibili-xhl
   #  - https://cdn.jsdelivr.net/gh/zvonimirsun/emojis@1.0.2/qq
   #  - https://cdn.jsdelivr.net/gh/zvonimirsun/emojis@1.0.2/bilibili
   #  - https://cdn.jsdelivr.net/gh/zvonimirsun/emojis@1.0.2/alus
@@ -942,7 +942,7 @@ vendors:
   # For example:
   # custom_cdn_url: https://cdn.jsdelivr.net/npm/${npm_name}@${version}/${minified}
   # custom_cdn_url: https://cdnjs.cloudflare.com/ajax/libs/${cdnjs_name}/${version}/${cdnjs_file}
-  custom_cdn_url: https://jsdelivr.cdn.iszy.cc/npm/${npm_name}@${version}/${minified}
+  custom_cdn_url: https://jsdelivr.cdn.iszy.xyz/npm/${npm_name}@${version}/${minified}
 
 # Assets
 # Accelerate delivery of static files using a CDN
