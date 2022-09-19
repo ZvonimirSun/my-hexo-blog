@@ -5,9 +5,9 @@ categories:
   - Java
 tags:
   - Spring Boot
-date: 2022-09-19 09:38:50
+date: 2022-09-14 09:38:50
+updated: 2022-09-14 09:38:50
 ---
-
 
 公司的部分老项目还没有用上 webpack，前后端不分离，有不少静态资源不压缩的话还是比较大的。这边记录下 Spring Boot 开启压缩的方法。
 
