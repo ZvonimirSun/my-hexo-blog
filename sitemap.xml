@@ -2,6 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.iszy.cc/posts/springboot-enable-compress/</loc>
+    
+    <lastmod>2022-09-19</lastmod>
+    
+    
+  </url>
+  
+  <url>
     <loc>https://www.iszy.cc/page/bgfw/</loc>
     
     <lastmod>2022-09-17</lastmod>
@@ -1040,7 +1048,7 @@
 
   <url>
     <loc>https://www.iszy.cc/</loc>
-    <lastmod>2022-09-17</lastmod>
+    <lastmod>2022-09-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
