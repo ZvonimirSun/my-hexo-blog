@@ -717,10 +717,10 @@ hexo-pagination@1.0.0:
   resolved "https://registry.npmmirror.com/hexo-pagination/-/hexo-pagination-1.0.0.tgz#c9c0ca3665267b9e9d0a89fc3edcaf3276907dc1"
   integrity sha512-miEVFgxchPr2qNWxw0JWpJ9R/Yaf7HjHBZVjvCCcqfbsLyYtCvIfJDxcEwz1sDOC/fLzYPqNnhUI73uNxBHRSA==
 
-hexo-related-posts@^1.5.0:
-  version "1.5.0"
-  resolved "https://registry.npmmirror.com/hexo-related-posts/-/hexo-related-posts-1.5.0.tgz#e32c4c2aa8de8c42d7d856989326d289992652ec"
-  integrity sha512-MVei1/jGpCdapSPypkhVNVkLAFd/O71QD61sSYLREoZqQsn1eNzYvSwsR4wKGa0O+Ea3GpKYPlLuFNmWpEG/ew==
+hexo-related-posts@^1.5.1:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/hexo-related-posts/-/hexo-related-posts-1.5.1.tgz#c883548ffb1470c1561960031f55e7bae036e9f6"
+  integrity sha512-KeNGQXcfsDKGyP66wiUVlcqguMyBn0n9tsFE5CftxhD9jiOrCmsqCibY1Aq8w/9f92+uxl+NlNkFhkrLezRFVg==
   dependencies:
     natural "^2.1.5"
 
