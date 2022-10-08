@@ -43,9 +43,9 @@ permalink: /page/speed-test-collection/
 
 [官网传送门](https://url.iszy.xyz/duangcloud)
 
-2022-08-11
+2022-10-08
 
-![](https://img.iszy.xyz/1660877837926.png?x-oss-process=style/big)
+![](https://img.iszy.xyz/1665245508155.png?x-oss-process=style/big)
 
 ## ByWave
 
