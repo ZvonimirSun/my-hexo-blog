@@ -30,7 +30,7 @@ permalink: /page/bgfw/
 | -------------------------------------------------------- | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [FreeWhale 自由鲸 ⭐](/page/freewhale/)【长期优惠】      | 性价比，主流节点超多，小众节点                             | [官网传送门](https://url.iszy.xyz/freewhale) / [测速](/page/speed-test-collection/#FreeWhale-%E8%87%AA%E7%94%B1%E9%B2%B8)(2022-03-15)            |
 | [DuangCloud](#二、DuangCloud)【双节活动】                | 性价比，专线，主流节点                                     | [官网传送门](https://url.iszy.xyz/duangcloud) / [测速](/page/speed-test-collection/#DuangCloud)(2022-08-11)                                      |
-| [MEET](#三、MEET)                                        | 性价比，主流节点，超小流量套餐                             | [官网传送门](https://url.iszy.xyz/fspeed) / [测速](/page/speed-test-collection/#MEET)(2022-02-09)                                                |
+| [MEET](#三、MEET)【暂停推荐】                            | 性价比，主流节点，超小流量套餐                             | [官网传送门](https://url.iszy.xyz/fspeed) / [测速](/page/speed-test-collection/#MEET)(2022-10-08)                                                |
 | [CMYNetwork 红莓网络](/page/cmynetwork/)【本站专属优惠】 | IEPL/IPLC 专线，Trojan，主流节点多，小众节点，福利共享账号 | [官网传送门](https://url.iszy.xyz/cmynetwork) / [测速](/page/speed-test-collection/#CMYNetwork-%E7%BA%A2%E8%8E%93%E7%BD%91%E7%BB%9C)(2022-03-22) |
 | [WavesLink](#五、WavesLink)(原 后浪云)【本站专属优惠】   | IEPL 专线，主流节点多，流媒体                              | [官网传送门](https://url.iszy.xyz/waveslink) / [测速](/page/speed-test-collection/#WavesLink)(2022-03-17)                                        |
 | [Gatern](#六、Gatern)(原 Shuttle)【本站专属优惠】        | 性价比，IPLC 专线，主流节点，小众节点多，流媒体            | [官网传送门](https://url.iszy.xyz/gatern) / [测速](/page/speed-test-collection/#Gatern)(2022-03-14)                                              |
@@ -137,11 +137,11 @@ permalink: /page/bgfw/
   - 工单方式
   - tg 群：[DuangCloud 客户群](https://t.me/duangcloud)
 
-## 三、MEET
+<!-- ## 三、MEET
 
 [官网传送门](https://url.iszy.xyz/fspeed)
 
-[⭐⭐ 测速 ⭐⭐](/page/speed-test-collection/#MEET) (2022-02-09)
+[⭐⭐ 测速 ⭐⭐](/page/speed-test-collection/#MEET) (2022-10-08)
 
 ### （一）简介
 
@@ -159,9 +159,9 @@ permalink: /page/bgfw/
 | 套餐         | 有效期 | 流量 | 价格   |
 | ------------ | ------ | ---- | ------ |
 | 一年套餐     | 360 天 | 800G | 239 元 |
-| 半年套餐     | 180 天 | 300G | 109 元 |
-| 季度套餐     | 90 天  | 100G | 49 元  |
-| 10G 流量月包 | 30 天  | 10G  | 5 元   |
+| 半年套餐     | 180 天 | 300G | 119 元 |
+| 季度套餐     | 90 天  | 100G | 55 元  |
+| 10G 流量月包 | 30 天  | 10G  | 6 元   | -->
 
 ## 四、CMYNetwork 红莓网络
 

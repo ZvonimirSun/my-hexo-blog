@@ -35,9 +35,9 @@ permalink: /page/speed-test-collection/
 
 [官网传送门](https://url.iszy.xyz/fspeed)
 
-2022-02-09
+2022-10-08
 
-![](https://img.iszy.xyz/1644413860231.png?x-oss-process=style/big)
+![](https://img.iszy.xyz/1665244049497.png?x-oss-process=style/big)
 
 ## DuangCloud
 
@@ -52,21 +52,6 @@ permalink: /page/speed-test-collection/
 [官网传送门](https://url.iszy.xyz/bywave)
 
 ![](https://img.iszy.xyz/20200815171242.png?x-oss-process=style/big)
-
-## Blinkload
-
-[官网传送门](https://url.iszy.xyz/blinkload)
-
-![](https://img.iszy.xyz/20210112210447.png?x-oss-process=style/big)
-
-<!--
-## 闲鱼网络
-
-[官网传送门](https://url.iszy.xyz/dinastio)
-
-2021-12-18
-
-![](https://img.iszy.xyz/1639797582174.png?x-oss-process=style/big) -->
 
 ## Gatern
 
@@ -83,11 +68,3 @@ permalink: /page/speed-test-collection/
 2022-03-17
 
 ![](https://img.iszy.xyz/1657762227551.png?x-oss-process=style/big)
-
-## BESTIEPL
-
-[官网传送门](https://url.iszy.xyz/electry)
-
-2022-03-10
-
-![](https://img.iszy.xyz/1646910975056.png?x-oss-process=style/big)
