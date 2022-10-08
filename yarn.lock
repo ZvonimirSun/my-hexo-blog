@@ -718,9 +718,9 @@ hexo-pagination@1.0.0:
   integrity sha512-miEVFgxchPr2qNWxw0JWpJ9R/Yaf7HjHBZVjvCCcqfbsLyYtCvIfJDxcEwz1sDOC/fLzYPqNnhUI73uNxBHRSA==
 
 hexo-related-posts@^1.5.0:
-  version "1.5.0"
-  resolved "https://registry.npmmirror.com/hexo-related-posts/-/hexo-related-posts-1.5.0.tgz#e32c4c2aa8de8c42d7d856989326d289992652ec"
-  integrity sha512-MVei1/jGpCdapSPypkhVNVkLAFd/O71QD61sSYLREoZqQsn1eNzYvSwsR4wKGa0O+Ea3GpKYPlLuFNmWpEG/ew==
+  version "1.5.1"
+  resolved "https://registry.npmmirror.com/hexo-related-posts/-/hexo-related-posts-1.5.1.tgz#c883548ffb1470c1561960031f55e7bae036e9f6"
+  integrity sha512-KeNGQXcfsDKGyP66wiUVlcqguMyBn0n9tsFE5CftxhD9jiOrCmsqCibY1Aq8w/9f92+uxl+NlNkFhkrLezRFVg==
   dependencies:
     natural "^2.1.5"
 
@@ -1597,9 +1597,9 @@ uc.micro@^1.0.1, uc.micro@^1.0.5:
   integrity sha512-8Y75pvTYkLJW2hWQHXxoqRgV7qb9B+9vFEtidML+7koHUFapnVJAZ6cKs+Qjz5Aw3aZWHMC6u0wJE3At+nSGwA==
 
 underscore@^1.9.1:
-  version "1.13.4"
-  resolved "https://registry.npmmirror.com/underscore/-/underscore-1.13.4.tgz#7886b46bbdf07f768e0052f1828e1dcab40c0dee"
-  integrity sha512-BQFnUDuAQ4Yf/cYY5LNrK9NCJFKriaRbD9uR1fTeXnBeoa97W0i41qkZfGO9pSo8I5KzjAcSY2XYtdf0oKd7KQ==
+  version "1.13.6"
+  resolved "https://registry.npmmirror.com/underscore/-/underscore-1.13.6.tgz#04786a1f589dc6c09f761fc5f45b89e935136441"
+  integrity sha512-+A5Sja4HP1M08MaXya7p5LvjuM7K6q/2EaC0+iovj/wOcMsTzMvDFbasi/oSapiwOlt252IqsKqPjCl7huKS0A==
 
 unpipe@~1.0.0:
   version "1.0.0"
