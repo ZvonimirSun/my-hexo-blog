@@ -21,6 +21,8 @@ permalink: /page/speed-test-collection/
 
 ![](https://img.iszy.xyz/1665252904491.png?x-oss-process=style/big)
 
+![](https://img.iszy.xyz/1665253726263.png?x-oss-process=style/big)
+
 ## CMYNetwork 红莓网络
 
 [官网传送门](https://url.iszy.xyz/cmynetwork)
