@@ -13,15 +13,13 @@ permalink: /page/speed-test-collection/
 
 <!--more-->
 
-**注**: 冬奥会期间，可能会有网络不稳定的情况，属于正常情况，商家会尽力减小影响。
-
 ## FreeWhale 自由鲸
 
 [官网传送门](https://url.iszy.xyz/freewhale)
 
-2022-03-15
+2022-10-08
 
-![](https://img.iszy.xyz/1647350473118.png?x-oss-process=style/big)
+![](https://img.iszy.xyz/1665252904491.png?x-oss-process=style/big)
 
 ## CMYNetwork 红莓网络
 
