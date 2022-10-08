@@ -34,7 +34,7 @@ permalink: /page/bgfw/
 | [CMYNetwork 红莓网络](/page/cmynetwork/)【本站专属优惠】 | IEPL/IPLC 专线，Trojan，主流节点多，小众节点，福利共享账号 | [官网传送门](https://url.iszy.xyz/cmynetwork) / [测速](/page/speed-test-collection/#CMYNetwork-%E7%BA%A2%E8%8E%93%E7%BD%91%E7%BB%9C)(2022-10-08) | 优秀     |
 | [WavesLink](#五、WavesLink)(原 后浪云)【本站专属优惠】   | IEPL 专线，主流节点多，流媒体                              | [官网传送门](https://url.iszy.xyz/waveslink) / [测速](/page/speed-test-collection/#WavesLink)(2022-03-17)                                        | 待测试   |
 | [Gatern](#六、Gatern)(原 Shuttle)【本站专属优惠】        | 性价比，IPLC 专线，主流节点，小众节点多，流媒体            | [官网传送门](https://url.iszy.xyz/gatern) / [测速](/page/speed-test-collection/#Gatern)(2022-03-14)                                              | 待测试   |
-| [ByWave](#七、ByWave)【暂停推荐】                        | IPLC 专线，流媒体                                          | ~~[官网传送门](https://url.iszy.xyz/bywave) / [测速](/page/speed-test-collection/#ByWave)~~                                                      | 待测试   |
+| [ByWave](#七、ByWave)【本站专属优惠】                    | BGP 专线中转，流媒体，节点较少但带宽大                     | [官网传送门](https://url.iszy.xyz/bywave) / [测速](/page/speed-test-collection/#ByWave)(2022-10-08)                                              | 一般     |
 
 点击前往查看测速: **[机场测速集合](/page/speed-test-collection/)**
 
@@ -371,7 +371,7 @@ permalink: /page/bgfw/
   - 还提供了官方 tg 群组，可以随时交流，购买套餐后可在套餐页看到进群链接
 - [域名发布页](https://shuttlehub.github.io)，防止失联
 
-<!-- ## 八、ByWave
+## 七、ByWave
 
 [官网传送门](https://url.iszy.xyz/bywave)
 
@@ -387,15 +387,6 @@ permalink: /page/bgfw/
 
 > 转官方优惠公告
 
-**ByWave 年中特惠**
-
-- 优惠代码 A: `618618`
-  额度： 7 折一次性优惠
-  适用范围： 年付或以上
-- 优惠代码 B: `SBNIL`
-  额度： 8 折循环优惠
-  适用范围： 所有在售产品
-
 **充值获得赠送金**
 
 注意，仅指定金额可以获得赠款
@@ -409,15 +400,11 @@ permalink: /page/bgfw/
 
 **ByWave**，是一家主打高端的 SS 机场。已使用一段时间，体验良好。这家机场拥有阿里云/WTT/HKT 等线路，且全内网中转节点，更提供有 IPLC 专线（专线套餐）。内网中转线路及 IPLC 专线成本极高，但质量极佳，体验十分稳定，在历次冲击下均无影响。
 
-- 线路**全内网中转节点**
-- **3Gbps** 带宽专线
-- 速度高端，稳定高端，质量高端价格也高端
-- 拥有港深、香港、美国、东京、俄罗斯等节点
+- BGP 跨境专线
+- 拥有香港、台湾、日本、新加坡、美国等节点
 - 支持 **Win/Mac/Android/iOS**，解锁 **Netflix/Disney+/Hulu/DAZN** 等访问
 - 允许 10 个设备在线，商用可以考虑 Business 套餐，可定制独享 IP 数量/区域
 - 支持**支付宝**
-
-> 内网中转线路及 IPLC 专线成本极高，但质量极佳，在抵抗网络冲击和稳定性方面卓有成效。
 
 ### （三）套餐
 
@@ -455,7 +442,7 @@ permalink: /page/bgfw/
 - 无法使用问题排查
   - 如果无法使用的话请检查浏览器是否有 SwitchOmega 或者代理相关的插件，如果有的话请先关闭这些插件。
   - 如果还是无法使用的话，请在连接后截图客户端中的日志界面发送到在线客服。
-- 建议采用官网在线客服的方式解决问题 -->
+- 建议采用官网在线客服的方式解决问题
 
 ---
 

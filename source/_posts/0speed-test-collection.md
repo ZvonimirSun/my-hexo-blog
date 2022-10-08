@@ -51,7 +51,9 @@ permalink: /page/speed-test-collection/
 
 [官网传送门](https://url.iszy.xyz/bywave)
 
-![](https://img.iszy.xyz/20200815171242.png?x-oss-process=style/big)
+2022-10-08
+
+![](https://img.iszy.xyz/1665254136204.png?x-oss-process=style/big)
 
 ## Gatern
 
