@@ -40,7 +40,7 @@ permalink: /page/cmynetwork/
 
 [官网传送门](https://url.iszy.xyz/cmynetwork)
 
-[⭐⭐CMY Network 测速 ⭐⭐](/page/speed-test-collection/#CMYNetwork-红莓网络) 2022-03-22
+[⭐⭐CMY Network 测速 ⭐⭐](/page/speed-test-collection/#CMYNetwork-红莓网络) 2022-10-08
 
 ### 优惠
 

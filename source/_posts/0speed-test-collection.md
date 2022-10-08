@@ -27,9 +27,9 @@ permalink: /page/speed-test-collection/
 
 [官网传送门](https://url.iszy.xyz/cmynetwork)
 
-2022-03-22
+2022-10-08
 
-![](https://img.iszy.xyz/1647915704149.png?x-oss-process=style/big)
+![](https://img.iszy.xyz/1665250207111.png?x-oss-process=style/big)
 
 ## MEET
 
