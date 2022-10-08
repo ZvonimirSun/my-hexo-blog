@@ -26,15 +26,15 @@ permalink: /page/bgfw/
 
 ## 目录
 
-| 机场名称（点击了解更多）                                 | 关键词                                                     | 操作                                                                                                                                             |
-| -------------------------------------------------------- | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [FreeWhale 自由鲸 ⭐](/page/freewhale/)【长期优惠】      | 性价比，主流节点超多，小众节点                             | [官网传送门](https://url.iszy.xyz/freewhale) / [测速](/page/speed-test-collection/#FreeWhale-%E8%87%AA%E7%94%B1%E9%B2%B8)(2022-03-15)            |
-| [DuangCloud](#二、DuangCloud)【本站专属优惠】            | 性价比，专线，主流节点                                     | [官网传送门](https://url.iszy.xyz/duangcloud) / [测速](/page/speed-test-collection/#DuangCloud)(2022-10-08)                                      |
-| [MEET](#三、MEET)【暂停推荐】                            | 性价比，主流节点，超小流量套餐                             | [官网传送门](https://url.iszy.xyz/fspeed) / [测速](/page/speed-test-collection/#MEET)(2022-10-08)                                                |
-| [CMYNetwork 红莓网络](/page/cmynetwork/)【本站专属优惠】 | IEPL/IPLC 专线，Trojan，主流节点多，小众节点，福利共享账号 | [官网传送门](https://url.iszy.xyz/cmynetwork) / [测速](/page/speed-test-collection/#CMYNetwork-%E7%BA%A2%E8%8E%93%E7%BD%91%E7%BB%9C)(2022-03-22) |
-| [WavesLink](#五、WavesLink)(原 后浪云)【本站专属优惠】   | IEPL 专线，主流节点多，流媒体                              | [官网传送门](https://url.iszy.xyz/waveslink) / [测速](/page/speed-test-collection/#WavesLink)(2022-03-17)                                        |
-| [Gatern](#六、Gatern)(原 Shuttle)【本站专属优惠】        | 性价比，IPLC 专线，主流节点，小众节点多，流媒体            | [官网传送门](https://url.iszy.xyz/gatern) / [测速](/page/speed-test-collection/#Gatern)(2022-03-14)                                              |
-| [ByWave](#七、ByWave)【暂停推荐】                        | IPLC 专线，流媒体                                          | ~~[官网传送门](https://url.iszy.xyz/bywave) / [测速](/page/speed-test-collection/#ByWave)~~                                                      |
+| 机场名称（点击了解更多）                                 | 关键词                                                     | 操作                                                                                                                                             | 当前状态 |
+| -------------------------------------------------------- | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | -------- |
+| [FreeWhale 自由鲸 ⭐](/page/freewhale/)【长期优惠】      | 性价比，主流节点超多，小众节点                             | [官网传送门](https://url.iszy.xyz/freewhale) / [测速](/page/speed-test-collection/#FreeWhale-%E8%87%AA%E7%94%B1%E9%B2%B8)(2022-03-15)            | 可用     |
+| [DuangCloud ⭐](#二、DuangCloud)【本站专属优惠】         | 性价比，专线，主流节点                                     | [官网传送门](https://url.iszy.xyz/duangcloud) / [测速](/page/speed-test-collection/#DuangCloud)(2022-10-08)                                      | 优秀     |
+| [MEET](#三、MEET)【暂停推荐】                            | 性价比，主流节点，超小流量套餐                             | [官网传送门](https://url.iszy.xyz/fspeed) / [测速](/page/speed-test-collection/#MEET)(2022-10-08)                                                | 差       |
+| [CMYNetwork 红莓网络](/page/cmynetwork/)【本站专属优惠】 | IEPL/IPLC 专线，Trojan，主流节点多，小众节点，福利共享账号 | [官网传送门](https://url.iszy.xyz/cmynetwork) / [测速](/page/speed-test-collection/#CMYNetwork-%E7%BA%A2%E8%8E%93%E7%BD%91%E7%BB%9C)(2022-03-22) | 未测     |
+| [WavesLink](#五、WavesLink)(原 后浪云)【本站专属优惠】   | IEPL 专线，主流节点多，流媒体                              | [官网传送门](https://url.iszy.xyz/waveslink) / [测速](/page/speed-test-collection/#WavesLink)(2022-03-17)                                        | 未测     |
+| [Gatern](#六、Gatern)(原 Shuttle)【本站专属优惠】        | 性价比，IPLC 专线，主流节点，小众节点多，流媒体            | [官网传送门](https://url.iszy.xyz/gatern) / [测速](/page/speed-test-collection/#Gatern)(2022-03-14)                                              | 未测     |
+| [ByWave](#七、ByWave)【暂停推荐】                        | IPLC 专线，流媒体                                          | ~~[官网传送门](https://url.iszy.xyz/bywave) / [测速](/page/speed-test-collection/#ByWave)~~                                                      | 未测     |
 
 点击前往查看测速: **[机场测速集合](/page/speed-test-collection/)**
 
@@ -94,7 +94,7 @@ permalink: /page/bgfw/
 
 [官网传送门](https://url.iszy.xyz/duangcloud)
 
-[⭐⭐ 测速 ⭐⭐](/page/speed-test-collection/#DuangCloud)(2022-08-11)
+[⭐⭐ 测速 ⭐⭐](/page/speed-test-collection/#DuangCloud)(2022-10-08)
 
 ### （一）优惠
 
