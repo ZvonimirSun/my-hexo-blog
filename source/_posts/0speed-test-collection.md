@@ -59,9 +59,9 @@ permalink: /page/speed-test-collection/
 
 [官网传送门](https://url.iszy.xyz/gatern)
 
-2022-03-14
+2022-10-08
 
-![](https://img.iszy.xyz/1647254945638.png?x-oss-process=style/big)
+![](https://img.iszy.xyz/1665255728656.png?x-oss-process=style/big)
 
 ## WavesLink
 
