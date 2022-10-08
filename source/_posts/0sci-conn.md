@@ -35,7 +35,6 @@ permalink: /page/bgfw/
 | [WavesLink](#五、WavesLink)(原 后浪云)【本站专属优惠】   | IEPL 专线，主流节点多，流媒体                              | [官网传送门](https://url.iszy.xyz/waveslink) / [测速](/page/speed-test-collection/#WavesLink)(2022-03-17)                                        |
 | [Gatern](#六、Gatern)(原 Shuttle)【本站专属优惠】        | 性价比，IPLC 专线，主流节点，小众节点多，流媒体            | [官网传送门](https://url.iszy.xyz/gatern) / [测速](/page/speed-test-collection/#Gatern)(2022-03-14)                                              |
 | [ByWave](#七、ByWave)【暂停推荐】                        | IPLC 专线，流媒体                                          | ~~[官网传送门](https://url.iszy.xyz/bywave) / [测速](/page/speed-test-collection/#ByWave)~~                                                      |
-| [BESTIEPL](#八、BESTIEPL)(原 Electry)                    | IEPL 专线，流媒体                                          | [官网传送门](https://url.iszy.xyz/electry) / [测速](/page/speed-test-collection/#BESTIEPL)(2022-03-10)                                           |
 
 点击前往查看测速: **[机场测速集合](/page/speed-test-collection/)**
 
@@ -457,36 +456,6 @@ permalink: /page/bgfw/
   - 如果无法使用的话请检查浏览器是否有 SwitchOmega 或者代理相关的插件，如果有的话请先关闭这些插件。
   - 如果还是无法使用的话，请在连接后截图客户端中的日志界面发送到在线客服。
 - 建议采用官网在线客服的方式解决问题 -->
-
-## 八、BESTIEPL
-
-[官网传送门](https://url.iszy.xyz/electry)
-
-[⭐⭐ 测速 ⭐⭐](/page/speed-test-collection/#BESTIEPL) (2022-03-10)
-
-### （一）简介
-
-**BESTIEPL**(原 Electry)，拥有高端 IEPL 专线中继，暂时只有香港台湾节点，但近期会增加更多落地节点。
-
-- 系统自动检测用户地理位置及运营商，分配对应最近入口，减少延迟；
-- 全 BGP 入口中转节点，无视封锁
-- 线路优质，高速稳定，不限速套餐
-- 支持 Windows/mac OS/Android/iOS
-- 解锁流媒体区域限制
-- 支付支持支付宝/微信/信用卡
-- 全部线路流量消耗均为正常 1 倍率，无高倍率套路
-
-### （二）套餐
-
-所有套餐线路是一样的，均为 IEPL & CN2 中继线路，只有流量区别。
-
-| 套餐          | 价格      | 流量      | 可用设备 |
-| ------------- | --------- | --------- | -------- |
-| Air Plan      | 38 元/月  | 50GB/月   | 3        |
-| Lite Plan     | 48 元/月  | 200GB/月  | 3        |
-| Standard Plan | 88 元/月  | 400GB/月  | 4        |
-| Advanced Plan | 158 元/月 | 800GB/月  | 5        |
-| Premium Plan  | 208 元/月 | 1000GB/月 | 5        |
 
 ---
 
