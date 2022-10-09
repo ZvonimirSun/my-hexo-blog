@@ -70,7 +70,6 @@ creative_commons:
   # CC licenses are available in 39 languages, you can find the specific and correct abbreviation you need on https://creativecommons.org
   language: deed.zh
 
-
 # Open graph settings
 # See: https://hexo.io/docs/helpers#open-graph
 open_graph:
@@ -650,13 +649,13 @@ waline:
   serverURL: https://wl.iszy.xyz # Waline server address url
 
   # Waline library CDN url, you can set this to your preferred CDN
-  libUrl: https://jsdelivr.cdn.iszy.xyz/npm/@waline/client@v2/dist/waline.min.js
+  libUrl: https://jsdelivr.cdn.iszy.xyz/npm/@waline/client@v2/dist/waline.js
 
   # Waline CSS styles CDN url, you can set this to your preferred CDN
-  cssUrl: https://jsdelivr.cdn.iszy.xyz/npm/@waline/client@v2/dist/waline.min.css
+  cssUrl: https://jsdelivr.cdn.iszy.xyz/npm/@waline/client@v2/dist/waline.css
 
-  # Waline CSS styles CDN url, you can set this to your preferred CDN
-  commentCount: true
+  # If false, comment count will only be displayed in post page, not in home page
+  commentCount: false
 
   # Pageviews count, Note: You should not enable both `waline.pageview` and `leancloud_visitors`.
   pageview: true
@@ -679,7 +678,7 @@ waline:
     - nick
     - mail
     - link
-  
+
   # Set required meta field, e.g.: [nick] | [nick, mail]
   requiredMeta:
     - nick
@@ -707,8 +706,8 @@ waline:
 # To get your ID visit https://widgetpack.com
 rating:
   enable: false
-  id:     # <app_id>
-  color:  "#fc6423"
+  id: # <app_id>
+  color: "#fc6423"
 
 # AddThis Share. See: https://www.addthis.com
 # Go to https://www.addthis.com/dashboard to customize your tools.
