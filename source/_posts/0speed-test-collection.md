@@ -67,6 +67,6 @@ permalink: /page/speed-test-collection/
 
 [官网传送门](https://url.iszy.xyz/waveslink)
 
-2022-03-17
+2022-10-11
 
-![](https://img.iszy.xyz/1657762227551.png?x-oss-process=style/big)
+![](https://img.iszy.xyz/1665500824447.png?x-oss-process=style/big)
