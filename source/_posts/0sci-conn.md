@@ -1,5 +1,5 @@
 ---
-title: 【评测2022】优质SS/SSR/Trojan/V2Ray机场推荐
+title: 【评测2022】优质SS/SSR/Trojan/V2Ray机场推荐【双十一】
 date: 2019-01-03 03:11:50
 categories:
   - 其他
@@ -22,19 +22,17 @@ permalink: /page/bgfw/
 
 <!--more-->
 
-**注**: 两会期间，可能会有网络不稳定的情况，属于正常情况，商家会尽力减小影响。这段时间测速只是暂时的情况，请随时关注官方消息，经常更新订阅。
-
 ## 目录
 
 | 机场名称（点击了解更多）                                 | 关键词                                                     | 操作                                                                                                                                             | 当前状态 |
 | -------------------------------------------------------- | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | -------- |
 | [FreeWhale 自由鲸 ⭐](/page/freewhale/)【长期优惠】      | 性价比，主流节点超多，小众节点                             | [官网传送门](https://url.iszy.xyz/freewhale) / [测速](/page/speed-test-collection/#FreeWhale-%E8%87%AA%E7%94%B1%E9%B2%B8)(2022-10-08)            | 优秀     |
 | [DuangCloud ⭐](#二、DuangCloud)【本站专属优惠】         | 性价比，专线，主流节点                                     | [官网传送门](https://url.iszy.xyz/duangcloud) / [测速](/page/speed-test-collection/#DuangCloud)(2022-10-08)                                      | 优秀     |
-| [MEET](#三、MEET)【暂停推荐】                            | 性价比，主流节点，超小流量套餐                             | [官网传送门](https://url.iszy.xyz/fspeed) / [测速](/page/speed-test-collection/#MEET)(2022-10-08)                                                | 差       |
+| [MEET](#三、MEET)【暂停推荐】                            | 性价比，主流节点，超小流量套餐                             | ~~[官网传送门](https://url.iszy.xyz/fspeed)~~ / [测速](/page/speed-test-collection/#MEET)(2022-10-08)                                            | 差       |
 | [CMYNetwork 红莓网络](/page/cmynetwork/)【本站专属优惠】 | IEPL/IPLC 专线，Trojan，主流节点多，小众节点，福利共享账号 | [官网传送门](https://url.iszy.xyz/cmynetwork) / [测速](/page/speed-test-collection/#CMYNetwork-%E7%BA%A2%E8%8E%93%E7%BD%91%E7%BB%9C)(2022-10-08) | 优秀     |
 | [WavesLink](#五、WavesLink)(原 后浪云)【暂停推荐】       | IEPL 专线，主流节点多，流媒体                              | [官网传送门](https://url.iszy.xyz/waveslink) / [测速](/page/speed-test-collection/#WavesLink)(2022-10-11)                                        | 差       |
-| [Gatern](#六、Gatern)(原 Shuttle)【本站专属优惠】        | 性价比，IPLC 专线，主流节点，小众节点多，流媒体            | [官网传送门](https://url.iszy.xyz/gatern) / [测速](/page/speed-test-collection/#Gatern)(10-08)                                                   | 优秀     |
-| [ByWave](#七、ByWave)【本站专属优惠】                    | BGP 专线中转，流媒体，节点较少但带宽大                     | [官网传送门](https://url.iszy.xyz/bywave) / [测速](/page/speed-test-collection/#ByWave)(2022-10-08)                                              | 良好     |
+| [Gatern](#六、Gatern)(原 Shuttle)【双十一】              | 性价比，IPLC 专线，主流节点，小众节点多，流媒体            | [官网传送门](https://url.iszy.xyz/gatern) / [测速](/page/speed-test-collection/#Gatern)(10-08)                                                   | 优秀     |
+| [ByWave](#七、ByWave)【双十一】                          | BGP 专线中转，流媒体，节点较少但带宽大                     | [官网传送门](https://url.iszy.xyz/bywave) / [测速](/page/speed-test-collection/#ByWave)(2022-10-08)                                              | 良好     |
 
 点击前往查看测速: **[机场测速集合](/page/speed-test-collection/)**
 
@@ -317,6 +315,19 @@ permalink: /page/bgfw/
 
 > 转官方优惠
 
+**双十一优惠**
+
+以下优惠码均可在续费或新购时使用。
+
+失效日期 **2022 年 11 月 20 日**
+
+- 优惠代码 1: `G4D2SXXH5G`
+  额度: **7 折**一次性优惠
+  适用范围: **年付**及以上产品
+- 优惠代码 2: `Y7TYGC5U8Z`
+  额度: **8 折**一次性优惠
+  适用范围: 月付、季度付、半年付及一次性支付产品
+
 **充值获取赠金**:
 
 - 充 100 到账 110，赠 **10** 元，**10%**
@@ -386,6 +397,14 @@ permalink: /page/bgfw/
 优惠码: `iszy`
 
 > 转官方优惠公告
+
+**双 11 大促**
+
+使用 `1111` 可在**年付**及以上付款周期获得 **30% off**
+
+使用 `BFNYLM2T42` 可在任何付款周期获得 **20% off** **循环优惠**
+
+以上优惠均可在续费时使用。
 
 **充值获得赠送金**
 
