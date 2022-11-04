@@ -6,7 +6,7 @@
   <link href="https://www.iszy.cc/atom.xml" rel="self"/>
   
   <link href="https://www.iszy.cc/"/>
-  <updated>2022-09-14T05:00:48.000Z</updated>
+  <updated>2022-11-04T01:56:26.000Z</updated>
   <id>https://www.iszy.cc/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux 使用 du 查看文件占用空间</title>
+    <link href="https://www.iszy.cc/posts/linux-du/"/>
+    <id>https://www.iszy.cc/posts/linux-du/</id>
+    <published>2022-11-04T01:56:06.000Z</published>
+    <updated>2022-11-04T01:56:26.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><code>du</code> 命令是一个标准的 Linux/Unix 命令，允许用户快速获得磁盘使用信息。可以用来显示目录或文件的大小，查找文件和目录的磁盘使用情况的命令。du 命令在与各种选项一起使用时能以多种格式提供结果。</p><span id="more"></span><h2 id="一、常用命令">一、常用命令</h2><h3 id="查看当前目录所占空间">查看当前目录所占空间</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">du -sh</span><br></pre></td></tr></table></figure><p><img data-src="https://img.iszy.xyz/1667525725877.png" alt=""></p><h3 id="查看当前目录所有文件（包括内层文件）所占空间">查看当前目录所有文件（包括内层文件）所占空间</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">du -h</span><br></pre></td></tr></table></figure><p><img data-src="https://img.iszy.xyz/1667525880573.png" alt=""></p><h3 id="查看当前目录所有文件及目录大小">查看当前目录所有文件及目录大小</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">du -sh *</span><br></pre></td></tr></table></figure><p><img data-src="https://img.iszy.xyz/1667525959810.png" alt=""></p><h3 id="查看当前目录所有隐藏文件及目录大小">查看当前目录所有隐藏文件及目录大小</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">du -sh .[!.]*</span><br></pre></td></tr></table></figure><p><img data-src="https://img.iszy.xyz/1667526150032.png" alt=""></p><h3 id="查看当前目录所有文件及目录大小，包含隐藏文件夹">查看当前目录所有文件及目录大小，包含隐藏文件夹</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">du -sh * .[^.]*</span><br></pre></td></tr></table></figure><p><img data-src="https://img.iszy.xyz/1667525678301.png" alt=""></p><h2 id="二、主要参数">二、主要参数</h2><h3 id="h-human-readable">-h , --human-readable</h3><p><code>-h</code> 标志以人类可读的格式打印大小输出。</p><p>默认 du 输出的数值都是以 Bytes 为单位的，可读性不佳。加上<code>-h</code>参数后，可以自动转换为以 KB、MB、GB 的方式展示，更加贴合习惯。</p><h3 id="s-summarize">-s, --summarize</h3><p><code>-s</code> 标志通常和 <code>-h</code> 标志一并使用。默认 du 会展示目录下的所有子级，加上 <code>-s</code> 标志后，则会显示当前目录下文件及目录大小汇总。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;code&gt;du&lt;/code&gt; 命令是一个标准的 Linux/Unix 命令，允许用户快速获得磁盘使用信息。可以用来显示目录或文件的大小，查找文件和目录的磁盘使用情况的命令。du 命令在与各种选项一起使用时能以多种格式提供结果。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Wiki" scheme="https://www.iszy.cc/categories/Wiki/"/>
+    
+    <category term="Linux" scheme="https://www.iszy.cc/categories/Wiki/Linux/"/>
+    
+    
+    <category term="Linux" scheme="https://www.iszy.cc/tags/Linux/"/>
+    
+    <category term="du" scheme="https://www.iszy.cc/tags/du/"/>
+    
+  </entry>
   
   <entry>
     <title>利用HAR文件查看和诊断网络请求</title>
@@ -509,29 +534,6 @@
     <category term="JavaScript" scheme="https://www.iszy.cc/tags/JavaScript/"/>
     
     <category term="Node.js" scheme="https://www.iszy.cc/tags/Node-js/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>解决使用@vue/cli-plugin-babel导致动态import代码拆分失败问题</title>
-    <link href="https://www.iszy.cc/posts/b/"/>
-    <id>https://www.iszy.cc/posts/b/</id>
-    <published>2022-01-18T06:47:53.000Z</published>
-    <updated>2022-01-18T06:47:53.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>本文记录下使用 vue-cli 的 babel 插件导致动态 import 代码拆分失败的问题。</p><span id="more"></span><h2 id="前情提要">前情提要</h2><p>先前在项目中使用了<code>@vue/cli-plugin-babel</code>插件，打包时发现项目被打包成了一个非常大的 js 文件，动态 import 代码拆分失败了。</p><p>经过测试，基本确定就是由于加上了这个 babel 插件导致的，估计是 babel 的配置导致的问题。</p><p>经过查找插件和 babel 的官方文档，可以看到，<code>@vue/cli-plugin-babel</code>默认使用<code>Babel 7</code> + <code>babel-loader</code> + <code>@vue/babel-preset-app</code>，而<code>@vue/babel-preset-app</code>使用了<code>@babel/preset-env</code>，并支持了以下几个 stage 3 特性。</p><ul><li>Dynamic Import Syntax</li><li>Proposal Class Properties</li><li>Proposal Decorators (legacy)</li></ul><p>问题就出在这个<code>@babel/preset-env</code>，其中包含了一个插件叫<code>@babel/plugin-proposal-dynamic-import</code>，这个插件的作用就是将动态 import 转为 Promise 语法，这就导致 webpack 没法再对转换后的代码进行动态拆分。这个<code>@babel/preset-env</code>也是很多人使用的一个预设，所以估计有这个问题的人不在少数，下面的方法也是可以适用的。</p><p>原代码</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">import</span>(<span class="string">&quot;./moduleA&quot;</span>).<span class="title function_">then</span>(<span class="comment">/* do stuff */</span>);</span><br></pre></td></tr></table></figure><p>转换后的代码</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Promise</span>.<span class="title function_">resolve</span>()</span><br><span class="line">  .<span class="title function_">then</span>(<span class="function">() =&gt;</span> <span class="built_in">require</span>(<span class="string">&quot;./moduleA&quot;</span>))</span><br><span class="line">  .<span class="title function_">then</span>(<span class="comment">/* do stuff */</span>);</span><br></pre></td></tr></table></figure><h2 id="解决">解决</h2><p>既然问题已经清晰了，解决方法就比较明了了，就是要禁用<code>@babel/plugin-proposal-dynamic-import</code>插件。</p><h3 id="选项一（推荐）">选项一（推荐）</h3><p>比较直截了当的方法就是将这个插件直接排除掉。可以通过修改 babel 配置，通过 exclude 选项，将插件直接排除。</p><p>使用 <code>@vue/cli-plugin-babel</code> 的情况</p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;presets&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">    <span class="punctuation">[</span><span class="string">&quot;@vue/cli-plugin-babel/preset&quot;</span><span class="punctuation">,</span> <span class="punctuation">&#123;</span> <span class="attr">&quot;exclude&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">&quot;proposal-dynamic-import&quot;</span><span class="punctuation">]</span> <span class="punctuation">&#125;</span><span class="punctuation">]</span></span><br><span class="line">  <span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure><p>直接使用 <code>@babel/preset-env</code> 的情况</p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;presets&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="punctuation">[</span><span class="string">&quot;@babel/preset-env&quot;</span><span class="punctuation">,</span> <span class="punctuation">&#123;</span> <span class="attr">&quot;exclude&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">&quot;proposal-dynamic-import&quot;</span><span class="punctuation">]</span> <span class="punctuation">&#125;</span><span class="punctuation">]</span><span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure><h3 id="选项二">选项二</h3><p>这个其实是<code>@babel/preset-env</code>的配置项，我没有测试过使用<code>@vue/cli-plugin-babel</code>时能否正确将参数传递到后面。</p><p>将 modules 参数设置为 false，则 Babel 将会保留 ES 模组，自然也就不会转换动态 import 语句了。</p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;presets&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="punctuation">[</span><span class="string">&quot;@babel/preset-env&quot;</span><span class="punctuation">,</span> <span class="punctuation">&#123;</span> <span class="attr">&quot;modules&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span> <span class="punctuation">&#125;</span><span class="punctuation">]</span><span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;本文记录下使用 vue-cli 的 babel 插件导致动态 import 代码拆分失败的问题。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="技术" scheme="https://www.iszy.cc/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-    <category term="Vue" scheme="https://www.iszy.cc/tags/Vue/"/>
-    
-    <category term="Babel" scheme="https://www.iszy.cc/tags/Babel/"/>
     
   </entry>
   
