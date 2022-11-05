@@ -1,7 +1,6 @@
 ---
 title: Linux 安装 docker compose v2
 categories:
-  - Wiki
   - Docker
 tags:
   - Docker

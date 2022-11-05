@@ -1,7 +1,6 @@
 ---
-title: 'zsh (anon):12: character not in range'
+title: "zsh (anon):12: character not in range"
 categories:
-  - Wiki
   - Linux
   - Shell
 tags:
@@ -10,7 +9,6 @@ tags:
   - Locale
 date: 2022-04-07 14:30:15
 ---
-
 
 运行`source ~/.zshrc`，报错`zsh (anon):12: character not in range`
 

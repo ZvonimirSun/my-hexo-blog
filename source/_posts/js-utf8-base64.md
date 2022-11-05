@@ -1,7 +1,6 @@
 ---
 title: JS实现UTF-8下的Base64编解码
 categories:
-  - Wiki
   - JavaScript
   - Browser
 tags:

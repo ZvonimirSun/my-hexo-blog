@@ -1,7 +1,6 @@
 ---
 title: Spring Boot 开启压缩
 categories:
-  - Wiki
   - Java
 tags:
   - Spring Boot
