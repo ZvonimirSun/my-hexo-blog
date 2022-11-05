@@ -279,7 +279,7 @@ reward:
 follow_me:
   #Twitter: https://twitter.com/username || fab fa-twitter
   #Telegram: https://t.me/channel_name || fab fa-telegram
-  #WeChat: /images/wechat_channel.jpg || fab fa-weixin
+  #WeChat: /images/wechat_channel.png || fab fa-weixin
   #RSS: /atom.xml || fa fa-rss
 
 # Related popular posts
@@ -331,7 +331,7 @@ calendar:
 # See: https://theme-next.js.org/docs/theme-settings/miscellaneous
 # ---------------------------------------------------------------
 
-# Preconnect CDN for fonts and plugins.
+# Preload styles and preconnect CDN for fonts and plugins.
 # For more information: https://www.w3.org/TR/resource-hints/#preconnect
 preconnect: true
 
@@ -601,6 +601,8 @@ changyan:
   enable: false
   appid:
   appkey:
+  # Show comments count
+  count: true
 
 # LiveRe comments system
 # You can get your uid from https://livere.com/insight/myCode (General web site)
@@ -749,6 +751,20 @@ matomo:
   server_url: # https://www.example.com/
   site_id: # <your site id>
 
+# Umami Analytics
+# See: https://umami.is/
+umami:
+  enable: false
+  script_url: # https://umami.example.com/script.js
+  website_id: # <your website id>
+
+# Plausible Analytics
+# See: https://plausible.io/
+plausible:
+  enable: false
+  script_url: # https://plausible.io/js/script.js
+  site_domain: # www.example.com
+
 # Show number of visitors of each article.
 # You can visit https://www.leancloud.cn to get AppID and AppKey.
 leancloud_visitors:
@@ -804,9 +820,9 @@ local_search:
   # Show top n results per article, show all results by setting to -1
   top_n_per_article: 1
   # Unescape html strings to the readable one.
-  unescape: true
+  unescape: false
   # Preload the search data when the page loads.
-  preload: true
+  preload: false
 
 # ---------------------------------------------------------------
 # Chat Services

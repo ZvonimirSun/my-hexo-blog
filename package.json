@@ -13,6 +13,7 @@
   },
   "devDependencies": {
     "@waline/hexo-next": "^3.0.1",
+    "chalk": "^4.1.0",
     "hexo": "^6.2.0",
     "hexo-algoliasearch": "^1.0.0",
     "hexo-deployer-git": "^3.0.0",
