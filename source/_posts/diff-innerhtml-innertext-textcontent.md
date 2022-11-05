@@ -9,7 +9,6 @@ tags:
 date: 2022-05-16 13:26:50
 ---
 
-
 textContent、innerText 与 innerHTML 三个接口，在我们想要获取或改变一个 DOM 的内容时，经常会用到，有时候会搞混其中的用法，在此做个记录。
 
 <!--more-->
