@@ -48,6 +48,7 @@ jobs:
         run: |
           yarn
           yarn global add hexo-cli
+          hexo clean
           hexo g
           hexo algolia
         env:
