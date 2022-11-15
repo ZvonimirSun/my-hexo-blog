@@ -1,8 +1,7 @@
 ---
 title: textContent、innerText与innerHTML的区别
 categories:
-  - JavaScript
-  - Browser
+  - 技术
 tags:
   - JavaScript
   - DOM

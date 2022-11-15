@@ -6,7 +6,6 @@ categories:
   - 技术
 tags:
   - Java
-  - 知识笔记
 ---
 
 记录一下，最近在 JAVA 中比较两个 String 对象遇到的一个小坑。

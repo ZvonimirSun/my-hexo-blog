@@ -3,7 +3,7 @@ title: 在Ubuntu 16.04中安装Oracle Java 8
 date: 2018-08-05 09:43:19
 updated: 2018-08-05 09:43:19
 categories:
-  - 应用
+  - 技巧
 tags:
   - Linux
   - Java

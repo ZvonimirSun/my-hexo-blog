@@ -1,7 +1,7 @@
 ---
 title: 利用HAR文件查看和诊断网络请求
 categories:
-  - 其他
+  - 技巧
 tags:
   - 浏览器
   - Chrome

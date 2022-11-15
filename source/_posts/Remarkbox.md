@@ -3,7 +3,7 @@ title: 使用remarkbox评论插件
 date: 2017-08-24 12:00:00
 updated: 2018-08-24 22:01:00
 categories:
-  - 工具
+  - 技巧
 tags:
   - 评论系统
 ---

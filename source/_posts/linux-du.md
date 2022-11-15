@@ -1,7 +1,7 @@
 ---
 title: Linux 使用 du 查看文件占用空间
 categories:
-  - Linux
+  - 技巧
 tags:
   - du
   - Linux

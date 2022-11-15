@@ -2,8 +2,7 @@
 title: Promise多个then、catch、finally的测试与总结
 date: 2022-04-07 23:42:28
 categories:
-  - JavaScript
-  - Browser
+  - 技术
 tags:
   - JavaScript
   - Promise

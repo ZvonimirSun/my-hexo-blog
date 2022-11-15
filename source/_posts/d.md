@@ -1,10 +1,9 @@
 ---
 title: BT下载中的Peer状态有什么含义
 categories:
-  - 技术
+  - 其他
 date: 2022-02-03 18:29:02
 tags:
-  - 知识笔记
   - BT
 ---
 

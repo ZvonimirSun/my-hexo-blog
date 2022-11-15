@@ -1,8 +1,7 @@
 ---
 title: Antfu大佬的unplugin-vue-components神器初体验
 categories:
-  - JavaScript
-  - Vite
+  - 技巧
 tags:
   - Vue
   - Vite

@@ -3,7 +3,7 @@ title: 配合 Valine 使用的 Valine-Admin
 date: 2018-04-01 18:00:00
 updated: 2020-07-24 10:00:00
 categories:
-  - 应用
+  - 技巧
 tags:
   - Valine
   - 评论系统

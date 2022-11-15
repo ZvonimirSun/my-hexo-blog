@@ -3,7 +3,7 @@ title: 配合GitHub的Git使用
 date: 2017-10-27 12:00:00
 updated: 2017-10-27 12:00:00
 categories:
-  - 应用
+  - 技巧
 tags:
   - Git
   - Github

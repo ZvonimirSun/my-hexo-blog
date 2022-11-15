@@ -3,7 +3,7 @@ title: ElasticSearch使用text类型字段排序报错
 date: 2021-02-24 04:19:04
 updated: 2021-02-24 04:19:04
 categories:
-  - 技术
+  - 技巧
 tags:
   - ElasticSearch
 ---

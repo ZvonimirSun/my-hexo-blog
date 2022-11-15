@@ -3,7 +3,7 @@ title: Visual Studio快捷键
 date: 2017-12-24 12:00:00
 updated: 2017-12-24 12:00:00
 categories:
-  - 工具
+  - 技巧
 tags:
   - Visual Studio
 ---

@@ -3,7 +3,7 @@ title: Elasticsearch 节点磁盘使用率过高，导致ES索引无法写入
 date: 2020-09-15 18:31:15
 updated: 2021-03-09 18:31:15
 categories:
-  - 技术
+  - 技巧
 tags:
   - ElasticSearch
 ---

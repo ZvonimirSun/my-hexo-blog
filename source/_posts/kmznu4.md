@@ -1,7 +1,7 @@
 ---
 title: 直接修改和替换Jar包中文件的几种方式
 categories:
-  - 技术
+  - 技巧
 tags:
   - Java
 date: 2020-05-18 00:24:52

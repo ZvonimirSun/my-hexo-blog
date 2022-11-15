@@ -1,7 +1,7 @@
 ---
 title: 让一个元素高度随宽度按比例自适应
 categories:
-  - CSS
+  - 技术
 tags:
   - CSS
 date: 2022-11-05 10:04:34
