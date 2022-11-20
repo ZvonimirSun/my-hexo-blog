@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+<link rel="preconnect" href="https://fonts.cdn.iszy.xyz" crossorigin>
+<link rel="preconnect" href="https://jsdelivr.cdn.iszy.xyz" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="google-site-verification" content="NVbOnZWipX7gWLG4NVJzJWVD16F6okyUB1NDN6mNoIo">
+  <meta name="msvalidate.01" content="10AA475F381BF9E4C280F1E2E0B3F280">
+  <meta name="yandex-verification" content="3ec99cb3451ef771">
+  <meta name="baidu-site-verification" content="tV7s6Tu88n">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.cdn.iszy.xyz/css?family=EB+Garamond:300,300italic,400,400italic,700,700italic%7C'Noto+Serif+SC':300,300italic,400,400italic,700,700italic%7CCinzel+Decorative:300,300italic,400,400italic,700,700italic%7CJetBrains+Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.iszy.cc","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.13.2","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"algolia":{"appID":"1UJ2W38EIN","apiKey":"c0cf4d0a9659a45dd3a38becbe6b6f73","indexName":"iszy_blog","hits":{"per_page":10}}}</script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/config.min.js"></script>
+
+    <meta name="description" content="最近折腾 Truenas Scale 一直不是很满意，准备换个 Unraid 试一试。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Unraid初体验">
+<meta property="og:url" content="https://www.iszy.cc/posts/unraid-start/">
+<meta property="og:site_name" content="随遇而安">
+<meta property="og:description" content="最近折腾 Truenas Scale 一直不是很满意，准备换个 Unraid 试一试。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img.iszy.xyz/1668965114372.png">
+<meta property="og:image" content="https://img.iszy.xyz/1668965501519.png">
+<meta property="og:image" content="https://img.iszy.xyz/1668965696359.png">
+<meta property="og:image" content="https://img.iszy.xyz/1668965764119.png">
+<meta property="og:image" content="https://img.iszy.xyz/1668966001368.png">
+<meta property="og:image" content="https://img.iszy.xyz/1668966459094.png">
+<meta property="og:image" content="https://img.iszy.xyz/1668966634982.png">
+<meta property="og:image" content="https://img.iszy.xyz/1668967055987.png?x-oss-process=style/big">
+<meta property="og:image" content="https://img.iszy.xyz/1668967282997.png">
+<meta property="og:image" content="https://img.iszy.xyz/1668967574818.png?x-oss-process=style/big">
+<meta property="og:image" content="https://img.iszy.xyz/1668967669343.png?x-oss-process=style/big">
+<meta property="og:image" content="https://img.iszy.xyz/1668967785490.png?x-oss-process=style/big">
+<meta property="og:image" content="https://img.iszy.xyz/1668967990297.png?x-oss-process=style/big">
+<meta property="og:image" content="https://img.iszy.xyz/1668968076515.png?x-oss-process=style/big">
+<meta property="og:image" content="https://img.iszy.xyz/1668968286999.png?x-oss-process=style/big">
+<meta property="og:image" content="https://img.iszy.xyz/1668968418876.png?x-oss-process=style/big">
+<meta property="og:image" content="https://img.iszy.xyz/1668968571494.png?x-oss-process=style/big">
+<meta property="article:published_time" content="2022-11-20T16:55:47.000Z">
+<meta property="article:modified_time" content="2022-11-20T18:24:05.000Z">
+<meta property="article:author" content="Dirge">
+<meta property="article:tag" content="Unraid">
+<meta property="article:tag" content="Nas">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img.iszy.xyz/1668965114372.png">
+
+
+<link rel="canonical" href="https://www.iszy.cc/posts/unraid-start/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.iszy.cc/posts/unraid-start/","path":"posts/unraid-start/","title":"Unraid初体验"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Unraid初体验 | 随遇而安</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E60YKKHF8Y"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-E60YKKHF8Y","only_pageview":false}</script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/analytics/google-analytics.min.js"></script>
+
+
+
+
+
+
+  <script async defer data-website-id="" src=""></script>
+
+  <script defer data-domain="" src=""></script>
+<link rel="dns-prefetch" href="https://wl.iszy.xyz">
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="随遇而安" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">随遇而安</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">在自由的空气中漂浮</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">167</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">5</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">131</span></a></li><li class="menu-item menu-item-友链&留言"><a href="/links/" rel="section"><i class="fa fa-comments fa-fw"></i>友链&留言</a></li><li class="menu-item menu-item-优质机场推荐"><a href="/page/bgfw/" rel="section"><i class="fa fa-globe-asia fa-fw"></i>优质机场推荐</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container"></div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container">
+  <div class="algolia-stats"><hr></div>
+  <div class="algolia-hits"></div>
+  <div class="algolia-pagination"></div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E6%9C%9F%E8%80%83%E8%99%91"><span class="nav-number">1.</span> <span class="nav-text">前期考虑</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2"><span class="nav-number">2.</span> <span class="nav-text">部署</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96%E9%85%8D%E7%BD%AE"><span class="nav-number">3.</span> <span class="nav-text">初始化配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%B6%E9%97%B4%E8%AE%BE%E7%BD%AE"><span class="nav-number">3.1.</span> <span class="nav-text">时间设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E8%AE%BE%E7%BD%AE"><span class="nav-number">3.2.</span> <span class="nav-text">网络设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E4%B8%AD%E6%96%87%E6%8F%92%E4%BB%B6"><span class="nav-number">3.3.</span> <span class="nav-text">安装中文插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E7%A3%81%E7%9B%98%E9%98%B5%E5%88%97"><span class="nav-number">3.4.</span> <span class="nav-text">添加磁盘阵列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E5%85%B1%E4%BA%AB"><span class="nav-number">3.5.</span> <span class="nav-text">添加共享</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%8E%E8%AE%B0"><span class="nav-number">4.</span> <span class="nav-text">后记</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Dirge"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Dirge</p>
+  <div class="site-description" itemprop="description">生活吐槽 & 学习记录</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">131</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">167</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><img src="https://jsdelivr.cdn.iszy.xyz/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></span>
+  </div>
+
+
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.iszy.cc/posts/unraid-start/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Dirge">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="随遇而安">
+      <meta itemprop="description" content="生活吐槽 & 学习记录">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Unraid初体验 | 随遇而安">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Unraid初体验
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-11-21 00:55:47 / 修改时间：02:24:05" itemprop="dateCreated datePublished" datetime="2022-11-21T00:55:47+08:00">2022-11-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E5%B7%A7/" itemprop="url" rel="index"><span itemprop="name">技巧</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/posts/unraid-start/#waline" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" data-path="/posts/unraid-start/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-item" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="waline-pageview-count" data-path="/posts/unraid-start/"></span>
+    </span>
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.8k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>7 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>最近折腾 Truenas Scale 一直不是很满意，准备换个 Unraid 试一试。</p>
+<span id="more"></span>
+<h2 id="前期考虑">前期考虑</h2>
+<p>可能是我比较菜吧，折腾不来这个 Truenas。虽然搞了万兆交换机，接了万兆网卡，有 32GB 内存，raidz 的速度在硬盘少的情况下仍然不尽如人意。想要加几块硬盘，发现也不是很容易，没法提升原有 raid 的性能，只能横向扩展。而且 Truenas scale 的 docker 上了 k3s 还是稍微有些门槛，对我的应用场景来说也比较重了。以及众所周知的一些网络访问问题，大部分功能我其实也不大用到，使用起来实在比较僵硬。</p>
+<p>于是考虑再三准备上手 Unraid。</p>
+<p>我其实早就想试试 Unraid 了，之前看 LTT 视频，对 Unraid 的印象相当不错。突出一个特点，上手简单，灵活度又高。</p>
+<p>从 Unraid 这个名字也能看出，这个系统的磁盘阵列不搞 raid，扩展起来非常容易。</p>
+<p>而且只需要一块校验盘，只要损失不超过一块硬盘，都可以恢复。即使超过损失超过一块盘，也只会丢失那块盘的数据，不会影响整个阵列。这个数据安全性对于我来说是够了的。看网上的速度测试，在完成奇偶校验的情况下，有没有校验盘对整个阵列的读写速度没有什么影响。</p>
+<p>既然不搞 raid，速度就受限于你的硬盘速度了，不过可以靠添加缓存盘来提升，只要读写不超过缓存盘的存储上限，都不会掉速。像万兆内网，加个 nvme 的硬盘，基本就可以跑满了。</p>
+<p>为啥以前没有用呢，主要是 truenas 免费，而 Unraid 要钱嘛，而且组 nas 的时候偷懒让别人帮忙把系统装好了，懒得换了。Unraid 是按照硬盘数量收费的，不包括启动闪存盘，6 块硬盘需要 59 刀，12 块硬盘需要 89 刀，129 刀则不限硬盘数量。像我现在 7 块硬盘，加一块固态，后面还要加俩 nvme 做缓存，考虑到以后的扩展，应该得买 89 刀的就好。不过 Unraid 是一次性买断的，这样看似乎价格也还行，还有 30 天试用，让你充分考虑，许可也是可以后期升级的。</p>
+<p>这次我先试用一波，没什么问题再上许可。</p>
+<h2 id="部署">部署</h2>
+<p><span class="exturl" data-url="aHR0cHM6Ly91bnJhaWQubmV0L3poLyVFNCVCOCU4QiVFOCVCRCVCRA==">下载 Unraid OS<i class="fa fa-external-link-alt"></i></span></p>
+<p>首先你需要一个 U 盘。</p>
+<ul>
+<li>最小 4GB，最大不超过 32GB，<strong>一定要是 USB 2.0 的，不然系统可能读不到</strong>。</li>
+<li>格式化为 <strong>FAT32 格式</strong>，卷标必须为 <strong>UNRAID</strong> 这六个字母。</li>
+<li>不用在意 U 盘速度，这个 U 盘只会用来装系统和一些配置，启动后整个系统都是直接放到内存里的，只会偶尔读下配置会用到 U 盘。Unraid 现在还不支持通过 sd 卡和硬盘进行启动，所以你的主板必须要支持通过 U 盘启动。</li>
+</ul>
+<p>Unraid 现在提供了一个创建 U 盘启动器的工具，还是比较傻瓜式的。</p>
+<p><img data-src="https://img.iszy.xyz/1668965114372.png" alt=""></p>
+<p>可以选择安装的分支和系统版本，设置一下访问地址、网络 ip 和启动方式。这个 server name 默认叫 Tower，后面启动好后，直接浏览器里输<span class="exturl" data-url="aHR0cDovL3Rvd2VyLmxvY2Fs">http://tower.local<i class="fa fa-external-link-alt"></i></span> 就行，这个后期也可以在设置改。</p>
+<p><img data-src="https://img.iszy.xyz/1668965501519.png" alt=""></p>
+<p>这边是在线下载的系统包，实测下载速度有点慢。可以选择直接在刚刚的下载页面下载 zip 包。</p>
+<p><img data-src="https://img.iszy.xyz/1668965696359.png" alt=""></p>
+<p>这个工具支持直接选择本地宝安装，就是不能设置了。</p>
+<p><img data-src="https://img.iszy.xyz/1668965764119.png" alt=""></p>
+<p>本地包写完盘后是这样的。如果要 LAGENCY 模式启动，就这样就可以了。如果要 UEFI 模式启动，就把 <code>EFI-</code> 重命名为 <code>EFI</code> 就行。这个不是名字写错了嗷，是有用的。</p>
+<p><img data-src="https://img.iszy.xyz/1668966001368.png" alt=""></p>
+<p>现在一块 Unraid 启动盘就做好了，接下来把这个 U 盘插到你的 Nas 主板上，在 Bios 里设置成启动盘启动就好啦。这块盘将会长期作为系统盘留在你的主板上了。需要注意的是，如果你的系统盘坏了，Unraid 是支持重写个系统盘更换的，但是<strong>一年只提供一次迁移许可</strong>，所以最好买一个质量有保证的 U 盘。</p>
+<p>当系统启动好后，访问 <span class="exturl" data-url="aHR0cDovL3Rvd2VyLmxvY2Fs">http://tower.local<i class="fa fa-external-link-alt"></i></span> 即可进入 WebGUI 页面。第一次访问会让你设置 root 用户的密码。</p>
+<p><img data-src="https://img.iszy.xyz/1668966459094.png" alt=""></p>
+<h2 id="初始化配置">初始化配置</h2>
+<h3 id="时间设置">时间设置</h3>
+<p>转到 <code>Settings</code> 选项卡，选择 <code>Date and Time</code></p>
+<p>将时区设置为北京时区，并设置时间同步 ntp 服务器。这里推荐下我用的。点击 Apply 应用。</p>
+<ul>
+<li><span class="exturl" data-url="aHR0cDovL250cC5udHNjLmFjLmNu">ntp.ntsc.ac.cn<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cDovL2NuLm50cC5vcmcuY24=">cn.ntp.org.cn<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cDovL3RpbWUucG9vbC5hbGl5dW4uY29t">time.pool.aliyun.com<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cDovL3RpbWUxLmNsb3VkLnRlbmNlbnQuY29t">time1.cloud.tencent.com<i class="fa fa-external-link-alt"></i></span></li>
+</ul>
+<p><img data-src="https://img.iszy.xyz/1668966634982.png" alt=""></p>
+<h3 id="网络设置">网络设置</h3>
+<p>如果没有设置的话，默认会通过 dhcp 动态分配 ip，虽然我们大部分时候不需要直接使用 Unraid 的 ip，但是推荐设置为一个静态 ip，也可以设置下 dns。Unraid 可以配置端口聚合，我因为只接了一个万兆网口，所以就无所谓了，我也没改。</p>
+<p>转到 <code>Settings</code> 选项卡，选择 <code>Networks</code></p>
+<p>我现在的配置如下。注意要在虚拟机和 docker 关闭的情况下修改。我这边万兆网卡是另外加的，默认网口没接，有个警告。</p>
+<p><img data-src="https://img.iszy.xyz/1668967055987.png?x-oss-process=style/big" alt=""></p>
+<p>使用万兆网卡，最好把 MTU 改为 9000，电脑的万兆网卡也改成 9000，以提升网络性能。</p>
+<p>如何判断应用成功了呢。可以通过 ping 一个大包看看有没有返回，如果 MTU 为 1500，这个命令将无响应。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ping tower.lcoal -l 8962</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://img.iszy.xyz/1668967282997.png" alt=""></p>
+<h3 id="安装中文插件">安装中文插件</h3>
+<p>现在 Unraid 官方提供了中文插件包，可以对用户界面进行完整的汉化。</p>
+<p>转到 <code>Apps</code> 选项卡，点击 install 即可自动安装 <code>Community Applications</code> 插件。在内容更新完成后，这边将展示各种社区应用，在左侧分类菜单里选择 Language，找到 简体中文语言包，点击 install 安装即可。</p>
+<p><img data-src="https://img.iszy.xyz/1668967574818.png?x-oss-process=style/big" alt=""></p>
+<p>接下来转到 <code>Settings</code> 选项卡，选择 <code>Display Settings</code>，此时已经可以选择中文语言了。</p>
+<p><img data-src="https://img.iszy.xyz/1668967669343.png?x-oss-process=style/big" alt=""></p>
+<h3 id="添加磁盘阵列">添加磁盘阵列</h3>
+<p>当然我们做 Nas，没有磁盘阵列可不行。</p>
+<p>可以选择一到两块盘作为校验盘，一般一块就行了，安全要求不高可以不加，要求大于等于其他任意一块的容量，然后把其他盘添加到阵列里。</p>
+<p><img data-src="https://img.iszy.xyz/1668967785490.png?x-oss-process=style/big" alt=""></p>
+<p>有固态可以添加到缓存池里。</p>
+<p><img data-src="https://img.iszy.xyz/1668967990297.png?x-oss-process=style/big" alt=""></p>
+<p>完成后点击应用，点击启动阵列，此时校验盘会开始同步，容量越大，速度越慢。同步期间阵列访问速度也会很慢，推荐等到同步完成后再访问。点击格式化，完成阵列文件系统的格式化，阵列就可以使用了，不用等到同步完成。</p>
+<p><img data-src="https://img.iszy.xyz/1668968076515.png?x-oss-process=style/big" alt=""></p>
+<h3 id="添加共享">添加共享</h3>
+<p>转到 <code>共享</code> 标签页，点击添加共享。</p>
+<p><img data-src="https://img.iszy.xyz/1668968286999.png?x-oss-process=style/big" alt=""></p>
+<p>按需要进行配置，我这边选择开启缓存。</p>
+<p><img data-src="https://img.iszy.xyz/1668968418876.png?x-oss-process=style/big" alt=""></p>
+<p>然后自动开启了 SMB 共享，可以进行设置。</p>
+<p><img data-src="https://img.iszy.xyz/1668968571494.png?x-oss-process=style/big" alt=""></p>
+<h2 id="后记">后记</h2>
+<p>今天先折腾到这里，Nas 的基础功能已经基本可用。后续等我加点缓存再测试测试。</p>
+
+    </div>
+
+    
+    
+    
+      
+  <div class="popular-posts-header">相关文章</div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+        <div class="popular-posts-date">2022-04-13</div>
+      <div class="popular-posts-title"><a href="/posts/linux-install-docker-compose-v2/" rel="bookmark">Linux 安装 docker compose v2</a></div>
+        <div class="popular-posts-excerpt"><p><p>最近换个新服务器，准备装下 docker，才发现 docker compose 已经出 v2 版本一段时间了。安装和使用上和 v1 有一些差别，在此记录。</p></p></div>
+    </li>
+  </ul>
+
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Dirge
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.iszy.cc/posts/unraid-start/" title="Unraid初体验">https://www.iszy.cc/posts/unraid-start/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/Unraid/" rel="tag"><i class="fa fa-tag"></i> Unraid</a>
+              <a href="/tags/Nas/" rel="tag"><i class="fa fa-tag"></i> Nas</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/css-percentagewidth-autoheight/" rel="prev" title="让一个元素高度随宽度按比例自适应">
+                  <i class="fa fa-chevron-left"></i> 让一个元素高度随宽度按比例自适应
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="waline"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2017 – 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Dirge</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">105k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">6:21</span>
+  </span>
+</div>
+  <div class="powered-by">由 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZw==">NexT.Gemini</span> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/@next-theme/pjax@0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/jquery@3.6.1/dist/jquery.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/comments.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/utils.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/next-boot.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/pjax.min.js"></script>
+
+  
+<script src="https://jsdelivr.cdn.iszy.xyz/npm/algoliasearch@4.14.2/dist/algoliasearch-lite.umd.js" integrity="sha256-dImjLPUsG/6p3+i7gVKBiDM8EemJAhQ0VvkRK2pVsQY=" crossorigin="anonymous"></script>
+<script src="https://jsdelivr.cdn.iszy.xyz/npm/instantsearch.js@4.49.0/dist/instantsearch.production.min.js" integrity="sha256-5FvX4v/nWhVAZLvv1sbGwV6w8AY4kdd+R5FpIsXkh9w=" crossorigin="anonymous"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/search/algolia-search.min.js"></script>
+
+
+
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/fancybox.min.js"></script>
+
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/pace.min.js"></script>
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.3/dist/katex.min.css" integrity="sha256-NJNVfEC6jfEt62wQMafLNT2eI6BaWONXbpkSEVAs3+8=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.3/dist/contrib/copy-tex.min.js","integrity":"sha256-Us54+rSGDSTvIhKKUs4kygE2ipA0RXpWWh0/zLqw3bs="}}</script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/math/katex.min.js"></script>
+
+
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/quicklink@2.3.0/dist/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":false,"delay":true,"timeout":3000,"priority":true,"url":"https://www.iszy.cc/posts/unraid-start/"}</script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/quicklink.min.js"></script>
+<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-CN","enable":true,"serverURL":"https://wl.iszy.xyz","cssUrl":"https://jsdelivr.cdn.iszy.xyz/npm/@waline/client@v2/dist/waline.css","commentCount":false,"pageview":true,"libUrl":"https://jsdelivr.cdn.iszy.xyz/npm/@waline/client@v2/dist/waline.js","locale":{"placeholder":"本站支持匿名评论，无需登录~(●'◡'●)\n与文章无关的留言请前往本站留言板，谢谢配合~"},"emoji":["https://jsdelivr.cdn.iszy.xyz/gh/zvonimirsun/emojis@1.0.3/bilibili-xhl"],"meta":["nick","mail","link"],"requiredMeta":["nick"],"wordLimit":0,"login":"enable","pageSize":10,"dark":"auto","el":"#waline","comment":true,"path":"/posts/unraid-start/"}</script>
+<link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/@waline/client@v2/dist/waline.css">
+<script>
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.waline.el).then(() =>
+    NexT.utils.getScript(CONFIG.waline.libUrl, { condition: window.Waline })
+  ).then(() => 
+    Waline.init(Object.assign({}, CONFIG.waline,{ el: document.querySelector(CONFIG.waline.el) }))
+  );
+});
+</script>
+
+</body>
+</html>
