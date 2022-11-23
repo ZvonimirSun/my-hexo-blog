@@ -1,19 +1,19 @@
-name: Deploy
+name: Auto Test
 
 on:
   push:
     branches:
-      - "main"
+      - 'main'
     paths-ignore:
-      - ".github/**"
+      - '.github/**'
   pull_request:
     branches-ignore:
-      - "deploy"
+      - 'deploy'
     paths-ignore:
-      - ".github/**"
+      - '.github/**'
   workflow_dispatch:
     branches-ignore:
-      - "deploy"
+      - 'deploy'
 
 jobs:
   build:
@@ -23,62 +23,28 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - name: 编译结果缓存
-        uses: actions/cache@v3
-        id: build-cache
-        with:
-          path: public
-          key: ${{ runner.os }}-build-${{ github.sha }}
-          restore-keys: |
-            ${{ runner.os }}-build-
       - name: 恢复文件修改时间
-        if: ${{ steps.build-cache.outputs.cache-hit != 'true' }}
         run: |
           git ls-files -z | while read -d '' path; do touch -d "$(git log -1 --format="@%ct" "$path")" "$path"; done
+      - name: 拉取最新主题
+        run: git clone --depth=1 https://github.com/zvonimirsun/hexo-theme-next themes/next
       - name: 设置Node版本和缓存
         uses: actions/setup-node@v3
-        if: ${{ steps.build-cache.outputs.cache-hit != 'true' }}
         with:
           node-version: 18
-      - name: 拉取最新主题
-        if: ${{ steps.build-cache.outputs.cache-hit != 'true' }}
-        run: git clone --depth=1 https://github.com/zvonimirsun/hexo-theme-next themes/next
-      - name: 编译博客
-        if: ${{ steps.build-cache.outputs.cache-hit != 'true' }}
+          cache: 'npm'
+      - name: Install dependencies 🔧
+        run: yarn install --frozen-lockfile --registry=https://registry.npmjs.org/
+      - name: 编译应用 🔧
         run: |
-          yarn
           yarn global add hexo-cli
           hexo clean
           hexo g
           hexo algolia
         env:
           ALGOLIA_ADMIN_API_KEY: ${{ secrets.ALGOLIA_ADMIN_API_KEY }}
-  deploy:
-    if: ${{ github.ref_name == 'main' }}
-    needs: [build]
-    runs-on: ubuntu-latest
-    steps:
-      - name: 切换到当前分支
-        uses: actions/checkout@v3
-      - name: 编译结果缓存
-        uses: actions/cache@v3
-        id: build-cache
-        with:
-          path: public
-          key: ${{ runner.os }}-build-${{ github.sha }}
-          restore-keys: |
-            ${{ runner.os }}-build-
-      - name: 部署结果缓存
-        if: ${{ steps.build-cache.outputs.cache-hit == 'true' }}
-        uses: actions/cache@v3
-        id: deploy-cache
-        with:
-          path: public
-          key: ${{ runner.os }}-deploy-${{ github.sha }}
-          restore-keys: |
-            ${{ runner.os }}-deploy-
-      - name: 部署到 deploy 分支
-        if: ${{ steps.build-cache.outputs.cache-hit == 'true' && steps.deploy-cache.outputs.cache-hit != 'true' }}
+      - name: 部署应用
+        if: ${{ github.ref_name == 'main' }}
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: public
