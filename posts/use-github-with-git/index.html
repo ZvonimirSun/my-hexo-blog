@@ -19,14 +19,14 @@
 
 <link rel="stylesheet" href="/css/main.css">
 
-<link rel="stylesheet" href="https://fonts.cdn.iszy.xyz/css?family=EB+Garamond:300,300italic,400,400italic,700,700italic%7C'Noto+Serif+SC':300,300italic,400,400italic,700,700italic%7CCinzel+Decorative:300,300italic,400,400italic,700,700italic%7CJetBrains+Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="https://fonts.cdn.iszy.xyz/css?family=Lato:300,300italic,400,400italic,700,700italic%7CJetBrains+Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
 <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"www.iszy.cc","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.13.2","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"algolia":{"appID":"1UJ2W38EIN","apiKey":"c0cf4d0a9659a45dd3a38becbe6b6f73","indexName":"iszy_blog","hits":{"per_page":10}}}</script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/config.min.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.iszy.cc","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.13.2","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":true,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"algolia":{"appID":"1UJ2W38EIN","apiKey":"c0cf4d0a9659a45dd3a38becbe6b6f73","indexName":"iszy_blog","hits":{"per_page":10}}}</script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/config.min.js"></script>
 
     <meta name="description" content="一直以来我都觉得 GitHub 是一个对于程序员来说极为有助的一个平台。最近在学校老是在编程，我把代码都放在了 GitHub 上，Git 作为一个分布式版本控制软件，就成为了我的电脑和 GitHub 之间的桥梁。十分惭愧，我对 Git 和 GitHub 的使用还只会基本的操作，今天我就来讲一下这些基本操作。">
 <meta property="og:type" content="article">
@@ -77,8 +77,8 @@
   <div class="headband"></div>
 
   <main class="main">
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="切换导航栏" role="button">
         <span class="toggle-line"></span>
@@ -98,7 +98,7 @@
   </div>
 
   <div class="site-nav-right">
-    <div class="toggle popup-trigger">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
         <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
@@ -136,15 +136,9 @@
     </div>
   </div>
 
-</div>
+</header>
         
   
-  <div class="toggle sidebar-toggle" role="button">
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-  </div>
-
   <aside class="sidebar">
 
     <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
@@ -165,13 +159,13 @@
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="Dirge"
       src="/images/avatar.png">
   <p class="site-author-name" itemprop="name">Dirge</p>
   <div class="site-description" itemprop="description">生活吐槽 & 学习记录</div>
 </div>
-<div class="site-state-wrap site-overview-item animated">
+<div class="site-state-wrap animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
@@ -191,11 +185,9 @@
       </div>
   </nav>
 </div>
-  <div class="cc-license site-overview-item animated" itemprop="license">
+  <div class="cc-license animated" itemprop="license">
     <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><img src="https://jsdelivr.cdn.iszy.xyz/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></span>
   </div>
-
-
 
         </div>
       </div>
@@ -204,18 +196,59 @@
           <span>0%</span>
         </div>
     </div>
-  </aside>
-  <div class="sidebar-dimmer"></div>
-
-
-    </header>
 
     
+        <div class="pjax">
+        <div class="sidebar-inner sidebar-post-related">
+          <div class="animated">
+              <div class="links-of-blogroll-title"><i class="fa fa-signs-post fa-fw"></i>
+    相关文章
+  </div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/posts/ufjg58/" rel="bookmark">
+        <time class="popular-posts-time">2020-05-05</time>
+        <br>
+      利用Github自建图床的几种方式
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/posts/HorseJump/" rel="bookmark">
+        <time class="popular-posts-time">2017-09-26</time>
+        <br>
+      跳马算法
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/posts/11/" rel="bookmark">
+        <time class="popular-posts-time">2021-09-23</time>
+        <br>
+      完全通过 Github Actions 实现项目的自动化部署
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/posts/10/" rel="bookmark">
+        <time class="popular-posts-time">2021-04-06</time>
+        <br>
+      Github Actions + Webhooks 实现项目自动化部署
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/posts/Git-hooks-Jekyll/" rel="bookmark">
+        <time class="popular-posts-time">2018-03-19</time>
+        <br>
+      利用 git hooks 自动编译 Jekyll
+      </a>
+    </li>
+  </ul>
 
-<noscript>
-  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
-</noscript>
+          </div>
+        </div>
+        </div>
+  </aside>
 
+
+    </div>
 
     <div class="main-inner post posts-expand">
 
@@ -388,36 +421,6 @@ git 最初的开发动力来自于 BitKeeper 和 Monotone。git 最初只是作�
     
     
     
-      
-  <div class="popular-posts-header">相关文章</div>
-  <ul class="popular-posts">
-    <li class="popular-posts-item">
-        <div class="popular-posts-date">2020-05-05</div>
-      <div class="popular-posts-title"><a href="/posts/ufjg58/" rel="bookmark">利用Github自建图床的几种方式</a></div>
-        <div class="popular-posts-excerpt"><p><p>本文我来简单讲一下利用 Github 自建图床的几种方式，希望能对大家有些帮助。</p></p></div>
-    </li>
-    <li class="popular-posts-item">
-        <div class="popular-posts-date">2017-09-26</div>
-      <div class="popular-posts-title"><a href="/posts/HorseJump/" rel="bookmark">跳马算法</a></div>
-        <div class="popular-posts-excerpt"><p><p>有一 m * n 的棋盘(即棋盘由 m 行和 n 列)，一马放在棋盘中任意位置，马按中国象棋跳法，从初始位置起跳，跳至边界后返回，求所有能返回初始位置的周游路线。</p></p></div>
-    </li>
-    <li class="popular-posts-item">
-        <div class="popular-posts-date">2021-09-23</div>
-      <div class="popular-posts-title"><a href="/posts/11/" rel="bookmark">完全通过 Github Actions 实现项目的自动化部署</a></div>
-        <div class="popular-posts-excerpt"><p><p>前段时间写了一个通过 Github Actions 配合 Webhooks 实现项目自动化部署，但是服务器上由于并没有后端服务，所以实现的方式不太优雅。今天我将完全抛弃 Webhook，完全通过 Github Actions 来实现项目的自动化部署。</p></p></div>
-    </li>
-    <li class="popular-posts-item">
-        <div class="popular-posts-date">2021-04-06</div>
-      <div class="popular-posts-title"><a href="/posts/10/" rel="bookmark">Github Actions + Webhooks 实现项目自动化部署</a></div>
-        <div class="popular-posts-excerpt"><p><p>最近 Github 有推出类似 Gitlab ci 的 Github actions，想折腾一下博客的自动部署，在此记录。</p></p></div>
-    </li>
-    <li class="popular-posts-item">
-        <div class="popular-posts-date">2018-03-19</div>
-      <div class="popular-posts-title"><a href="/posts/Git-hooks-Jekyll/" rel="bookmark">利用 git hooks 自动编译 Jekyll</a></div>
-        <div class="popular-posts-excerpt"><p><p>其实这项工作我已经完成了几天了，现在在此记录一下。主要就是整理一下在自己的服务器上配置 Jekyll 环境，并利用 git hooks 自动化编译的过程，配置好后就能实现和 Github Pages 上类似的环境。</p></p></div>
-    </li>
-  </ul>
-
 
     <footer class="post-footer">
           
@@ -502,6 +505,13 @@ git 最初的开发动力来自于 BitKeeper 和 Monotone。git 最初只是作�
   </footer>
 
   
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/@next-theme/pjax@0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/jquery@3.6.1/dist/jquery.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
@@ -510,10 +520,11 @@ git 最初的开发动力来自于 BitKeeper 和 Monotone。git 最初只是作�
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
 <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/comments.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/utils.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/next-boot.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/pjax.min.js"></script>
 
-  
-<script src="https://jsdelivr.cdn.iszy.xyz/npm/algoliasearch@4.14.2/dist/algoliasearch-lite.umd.js" integrity="sha256-dImjLPUsG/6p3+i7gVKBiDM8EemJAhQ0VvkRK2pVsQY=" crossorigin="anonymous"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/algoliasearch@4.14.2/dist/algoliasearch-lite.umd.js" integrity="sha256-dImjLPUsG/6p3+i7gVKBiDM8EemJAhQ0VvkRK2pVsQY=" crossorigin="anonymous"></script>
 <script src="https://jsdelivr.cdn.iszy.xyz/npm/instantsearch.js@4.49.0/dist/instantsearch.production.min.js" integrity="sha256-5FvX4v/nWhVAZLvv1sbGwV6w8AY4kdd+R5FpIsXkh9w=" crossorigin="anonymous"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/search/algolia-search.min.js"></script>
 
+  <script class="next-config" data-name="pdf" type="application/json">{"object_url":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/pdfobject@2.2.8/pdfobject.min.js","integrity":"sha256-tu9j5pBilBQrWSDePOOajCUdz6hWsid/lBNzK4KgEPM="},"url":"/lib/pdf/web/viewer"}</script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/tags/pdf.min.js"></script>
 
 
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/fancybox.min.js"></script>
