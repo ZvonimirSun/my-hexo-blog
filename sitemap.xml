@@ -122,6 +122,14 @@
   </url>
   
   <url>
+    <loc>https://www.iszy.cc/posts/git/</loc>
+    
+    <lastmod>2022-11-10</lastmod>
+    
+    
+  </url>
+  
+  <url>
     <loc>https://www.iszy.cc/page/freewhale/</loc>
     
     <lastmod>2022-11-10</lastmod>
@@ -1072,7 +1080,7 @@
 
   <url>
     <loc>https://www.iszy.cc/</loc>
-    <lastmod>2022-11-20</lastmod>
+    <lastmod>2022-11-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>

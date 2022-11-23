@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+<link rel="preconnect" href="https://fonts.cdn.iszy.xyz" crossorigin>
+<link rel="preconnect" href="https://jsdelivr.cdn.iszy.xyz" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="google-site-verification" content="NVbOnZWipX7gWLG4NVJzJWVD16F6okyUB1NDN6mNoIo">
+  <meta name="msvalidate.01" content="10AA475F381BF9E4C280F1E2E0B3F280">
+  <meta name="yandex-verification" content="3ec99cb3451ef771">
+  <meta name="baidu-site-verification" content="tV7s6Tu88n">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.cdn.iszy.xyz/css?family=EB+Garamond:300,300italic,400,400italic,700,700italic%7C'Noto+Serif+SC':300,300italic,400,400italic,700,700italic%7CCinzel+Decorative:300,300italic,400,400italic,700,700italic%7CJetBrains+Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.iszy.cc","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.13.2","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"algolia":{"appID":"1UJ2W38EIN","apiKey":"c0cf4d0a9659a45dd3a38becbe6b6f73","indexName":"iszy_blog","hits":{"per_page":10}}}</script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/config.min.js"></script>
+
+    <meta name="description" content="Git 官方文档: https:&#x2F;&#x2F;git-scm.com&#x2F;docs">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git实用技巧">
+<meta property="og:url" content="https://www.iszy.cc/posts/git/">
+<meta property="og:site_name" content="随遇而安">
+<meta property="og:description" content="Git 官方文档: https:&#x2F;&#x2F;git-scm.com&#x2F;docs">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/25824471/1668061621638-26d0d654-1d11-476e-ad42-779213954d3a.png#averageHue=%231a180e&amp;clientId=ub96d4c89-475b-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;height=255&amp;id=uec3bb9ee&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=255&amp;originWidth=753&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=30677&amp;status=done&amp;style=none&amp;taskId=ub98bd70b-f1c4-45ec-936a-b702c9e56ac&amp;title=&amp;width=753">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/25824471/1668065792022-2f10cc69-8b64-490a-873b-4490d739ac4d.png#averageHue=%23eeebe3&amp;clientId=ub96d4c89-475b-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;height=266&amp;id=ubfc4c1f9&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=266&amp;originWidth=514&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=17056&amp;status=done&amp;style=none&amp;taskId=ub77e1215-ae37-4a2e-bce2-52bbf5a053c&amp;title=&amp;width=514">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/25824471/1668065823355-cc80fe1f-4c0d-458e-9caf-878aa6c4c539.png#averageHue=%23eceae1&amp;clientId=ub96d4c89-475b-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;height=94&amp;id=ub93edee7&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=94&amp;originWidth=306&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=4934&amp;status=done&amp;style=none&amp;taskId=ue0520f5c-7c4b-4726-826f-4f956392cfa&amp;title=&amp;width=306">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/25824471/1668067504751-d1ca6988-90c2-4e6e-8f94-7fae64114897.png#averageHue=%23edebe2&amp;clientId=ub96d4c89-475b-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;height=284&amp;id=u3e18e9e4&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=284&amp;originWidth=460&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=18261&amp;status=done&amp;style=none&amp;taskId=ucf014180-1861-44f3-852a-6ebda6ba773&amp;title=&amp;width=460">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/25824471/1668067736305-2544957f-7920-4ce9-84a9-68b15ec93403.png#averageHue=%23eae8de&amp;clientId=ub96d4c89-475b-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;height=67&amp;id=u6138a8f8&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=67&amp;originWidth=357&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=3886&amp;status=done&amp;style=none&amp;taskId=u72824e74-1f6b-4987-9488-a2e658aad04&amp;title=&amp;width=357">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/25824471/1668067797343-5d90568f-e122-4eb7-90ff-2ad1cfae876c.png#averageHue=%23ebe8df&amp;clientId=ub96d4c89-475b-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;height=169&amp;id=u269b62da&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=169&amp;originWidth=333&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=9114&amp;status=done&amp;style=none&amp;taskId=u90a3dc38-d1f3-4d70-acd4-1e90452beaf&amp;title=&amp;width=333">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/25824471/1668067838780-f1b53130-bb07-4b12-9aad-9b770b0de605.png#averageHue=%23e9e6dc&amp;clientId=ub96d4c89-475b-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;height=62&amp;id=u2370f562&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=62&amp;originWidth=380&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=4233&amp;status=done&amp;style=none&amp;taskId=ub35df9b2-5298-4a87-98aa-2e74d4bbb9b&amp;title=&amp;width=380">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/25824471/1668067914592-6e0fddf1-9985-426d-ae5b-aed6cbe18cd7.png#averageHue=%23ece9e0&amp;clientId=ub96d4c89-475b-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;height=103&amp;id=u20f88793&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=103&amp;originWidth=499&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=7865&amp;status=done&amp;style=none&amp;taskId=ucebc667b-79bb-4312-8ee8-254cd38c9e1&amp;title=&amp;width=499">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/25824471/1668067991503-6e70f673-53ff-4128-ae69-a0bdf5bbfdf9.png#averageHue=%23edece4&amp;clientId=ub96d4c89-475b-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;height=222&amp;id=u4ee59a0c&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=222&amp;originWidth=646&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=10709&amp;status=done&amp;style=none&amp;taskId=u4c7ea403-ed55-41a3-b0b1-4fc2e4c111e&amp;title=&amp;width=646">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/25824471/1668069129425-5e01c21f-729f-46a1-adfb-54124e62e2f0.png#averageHue=%23f4f0f0&amp;clientId=ub96d4c89-475b-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;height=231&amp;id=u0a104ab9&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=231&amp;originWidth=217&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=5265&amp;status=done&amp;style=none&amp;taskId=uf34e2edc-1b3c-4171-a0b7-1415373ec8d&amp;title=&amp;width=217">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/25824471/1668068523745-63687201-d938-4494-befb-57cca24fecfa.png#averageHue=%23ece9e0&amp;clientId=ub96d4c89-475b-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;height=74&amp;id=uc779cfc8&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=74&amp;originWidth=615&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=6674&amp;status=done&amp;style=none&amp;taskId=u31dc2c1c-a0e6-4bc9-8ea0-1c7704aa632&amp;title=&amp;width=615">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/25824471/1668068742518-da3e5415-4ecf-4585-95a1-21883204aaff.png#averageHue=%23ebe8de&amp;clientId=ub96d4c89-475b-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;height=159&amp;id=ua8990786&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=159&amp;originWidth=462&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=10110&amp;status=done&amp;style=none&amp;taskId=ufe9f12fb-96ed-4a25-b4b5-e9a760df4ef&amp;title=&amp;width=462">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/25824471/1668068938744-515203f8-4a6f-43e7-bbc0-522e22a1226e.png#averageHue=%23ebe7de&amp;clientId=ub96d4c89-475b-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;height=63&amp;id=u6c235234&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=63&amp;originWidth=425&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=4153&amp;status=done&amp;style=none&amp;taskId=uf9fe9258-ee38-49f8-b351-99cbff36d71&amp;title=&amp;width=425">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/25824471/1668069378275-7d9723e8-f968-45a1-a935-2f7540fb323e.png#averageHue=%23eceae1&amp;clientId=ub96d4c89-475b-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;height=322&amp;id=ub9527e34&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=322&amp;originWidth=519&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=23325&amp;status=done&amp;style=none&amp;taskId=u0a78b019-d61d-447c-ad99-b92b7162850&amp;title=&amp;width=519">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/25824471/1668069487321-01f9baf6-a5e2-4229-aad7-c4239fd249be.png#averageHue=%23eceae1&amp;clientId=ub96d4c89-475b-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;height=388&amp;id=ua7cbc212&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=388&amp;originWidth=525&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=28749&amp;status=done&amp;style=none&amp;taskId=udadaa4f7-105b-41e0-b8a7-476e313c817&amp;title=&amp;width=525">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/25824471/1668070029923-03a6023a-f289-4a7f-8d97-287b5481d0d5.png#averageHue=%23f7f6f6&amp;clientId=ub96d4c89-475b-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;height=403&amp;id=u5f38a90d&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=403&amp;originWidth=424&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=17070&amp;status=done&amp;style=none&amp;taskId=u6606d6f5-faf6-4398-803d-abf982ae461&amp;title=&amp;width=424">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/25824471/1668070259530-0a9f15b2-6f04-4efc-9178-87b71593348d.png#averageHue=%23ece9e0&amp;clientId=ub96d4c89-475b-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;height=74&amp;id=u95fa0050&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=74&amp;originWidth=623&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=7688&amp;status=done&amp;style=none&amp;taskId=u55f4075a-f7f1-4101-af2e-b2c9c8e3278&amp;title=&amp;width=623">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/25824471/1668070287061-158eab00-07ce-4b3a-986b-82138a35f0d7.png#averageHue=%23f9f8f8&amp;clientId=ub96d4c89-475b-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;height=446&amp;id=u041c3d65&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=446&amp;originWidth=444&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=19422&amp;status=done&amp;style=none&amp;taskId=u66e44180-6621-42e8-bc9e-6962a82f6a8&amp;title=&amp;width=444">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/25824471/1668070393228-757e4a56-6231-42dc-853d-a125b8c72cf3.png#averageHue=%23e9e6dc&amp;clientId=ub96d4c89-475b-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;height=54&amp;id=ufb48917e&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=54&amp;originWidth=364&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=3939&amp;status=done&amp;style=none&amp;taskId=u97acef27-eb9d-4b80-a14e-1e74f9c8462&amp;title=&amp;width=364">
+<meta property="article:published_time" content="2022-11-10T09:28:50.000Z">
+<meta property="article:modified_time" content="2022-11-10T09:28:50.000Z">
+<meta property="article:author" content="Dirge">
+<meta property="article:tag" content="git">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2022/png/25824471/1668061621638-26d0d654-1d11-476e-ad42-779213954d3a.png#averageHue=%231a180e&amp;clientId=ub96d4c89-475b-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;height=255&amp;id=uec3bb9ee&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=255&amp;originWidth=753&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=30677&amp;status=done&amp;style=none&amp;taskId=ub98bd70b-f1c4-45ec-936a-b702c9e56ac&amp;title=&amp;width=753">
+
+
+<link rel="canonical" href="https://www.iszy.cc/posts/git/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.iszy.cc/posts/git/","path":"posts/git/","title":"Git实用技巧"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Git实用技巧 | 随遇而安</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E60YKKHF8Y"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-E60YKKHF8Y","only_pageview":false}</script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/analytics/google-analytics.min.js"></script>
+
+
+
+
+
+
+  <script async defer data-website-id="" src=""></script>
+
+  <script defer data-domain="" src=""></script>
+<link rel="dns-prefetch" href="https://wl.iszy.xyz">
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="随遇而安" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">随遇而安</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">在自由的空气中漂浮</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">168</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">5</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">132</span></a></li><li class="menu-item menu-item-友链&留言"><a href="/links/" rel="section"><i class="fa fa-comments fa-fw"></i>友链&留言</a></li><li class="menu-item menu-item-优质机场推荐"><a href="/page/bgfw/" rel="section"><i class="fa fa-globe-asia fa-fw"></i>优质机场推荐</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container"></div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container">
+  <div class="algolia-stats"><hr></div>
+  <div class="algolia-hits"></div>
+  <div class="algolia-pagination"></div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="nav-number">1.</span> <span class="nav-text">一、基本操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%96%B0%E5%BB%BA-git-%E4%BB%93%E5%BA%93"><span class="nav-number">1.1.</span> <span class="nav-text">1. 新建 git 仓库</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#image-png"><span class="nav-number">2.</span> <span class="nav-text"></span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%85%8B%E9%9A%86%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93"><span class="nav-number">2.1.</span> <span class="nav-text">2. 克隆远程仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E6%8F%90%E4%BA%A4%E4%BB%A3%E7%A0%81"><span class="nav-number">2.2.</span> <span class="nav-text">3. 提交代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E6%9F%A5%E7%9C%8B%E4%BB%93%E5%BA%93%E7%8A%B6%E6%80%81"><span class="nav-number">2.3.</span> <span class="nav-text">4. 查看仓库状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E6%9F%A5%E7%9C%8B%E6%8F%90%E4%BA%A4%E5%8E%86%E5%8F%B2"><span class="nav-number">2.4.</span> <span class="nav-text">5. 查看提交历史</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E6%96%B0%E5%BB%BA%E5%88%86%E6%94%AF"><span class="nav-number">2.5.</span> <span class="nav-text">6. 新建分支</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-%E5%90%88%E5%B9%B6%E5%88%86%E6%94%AF"><span class="nav-number">2.6.</span> <span class="nav-text">7. 合并分支</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-%E5%88%A0%E9%99%A4%E5%88%86%E6%94%AF"><span class="nav-number">2.7.</span> <span class="nav-text">8. 删除分支</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-%E5%90%88%E5%B9%B6%E5%86%B2%E7%AA%81"><span class="nav-number">2.8.</span> <span class="nav-text">9. 合并冲突</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93"><span class="nav-number">2.9.</span> <span class="nav-text">10. 远程仓库</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%B8%B8%E8%A7%81%E6%8A%80%E5%B7%A7"><span class="nav-number">3.</span> <span class="nav-text">二、常见技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E4%B8%B4%E6%97%B6%E4%BF%9D%E5%AD%98%E6%88%90%E6%9E%9C"><span class="nav-number">3.1.</span> <span class="nav-text">1. 临时保存成果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%90%88%E5%B9%B6%E5%88%86%E6%94%AF%E7%81%B5%E6%B4%BB%E9%80%89%E6%8B%A9-rebase-merge"><span class="nav-number">3.2.</span> <span class="nav-text">2. 合并分支灵活选择 rebase&#x2F;merge</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-cherry-pick"><span class="nav-number">3.3.</span> <span class="nav-text">3. cherry-pick</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E4%BF%AE%E6%94%B9%E4%B8%8A%E6%AC%A1%E6%8F%90%E4%BA%A4"><span class="nav-number">3.4.</span> <span class="nav-text">4. 修改上次提交</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E5%8F%96%E6%B6%88%E6%96%87%E4%BB%B6%E4%BF%AE%E6%94%B9"><span class="nav-number">3.5.</span> <span class="nav-text">5. 取消文件修改</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E5%BC%83%E7%94%A8%E6%8F%90%E4%BA%A4"><span class="nav-number">3.6.</span> <span class="nav-text">6. 弃用提交</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-%E8%A1%A5%E4%B8%81%E6%96%87%E4%BB%B6"><span class="nav-number">3.7.</span> <span class="nav-text">7. 补丁文件</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Dirge"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Dirge</p>
+  <div class="site-description" itemprop="description">生活吐槽 & 学习记录</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">132</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">168</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><img src="https://jsdelivr.cdn.iszy.xyz/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></span>
+  </div>
+
+
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.iszy.cc/posts/git/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Dirge">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="随遇而安">
+      <meta itemprop="description" content="生活吐槽 & 学习记录">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Git实用技巧 | 随遇而安">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Git实用技巧
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-11-10 17:28:50" itemprop="dateCreated datePublished" datetime="2022-11-10T17:28:50+08:00">2022-11-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E5%B7%A7/" itemprop="url" rel="index"><span itemprop="name">技巧</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/posts/git/#waline" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" data-path="/posts/git/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-item" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="waline-pageview-count" data-path="/posts/git/"></span>
+    </span>
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>472</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>Git 官方文档: <span class="exturl" data-url="aHR0cHM6Ly9naXQtc2NtLmNvbS9kb2Nz">https://git-scm.com/docs<i class="fa fa-external-link-alt"></i></span></p>
+<span id="more"></span>
+<h2 id="一、基本操作">一、基本操作</h2>
+<h3 id="1-新建-git-仓库">1. 新建 git 仓库</h3>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
+<h2 id="image-png"><img data-src="https://cdn.nlark.com/yuque/0/2022/png/25824471/1668061621638-26d0d654-1d11-476e-ad42-779213954d3a.png#averageHue=%231a180e&amp;clientId=ub96d4c89-475b-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;height=255&amp;id=uec3bb9ee&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=255&amp;originWidth=753&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=30677&amp;status=done&amp;style=none&amp;taskId=ub98bd70b-f1c4-45ec-936a-b702c9e56ac&amp;title=&amp;width=753" alt="image.png"></h2>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init -b main</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global init.defaultBranch main</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -m main</span><br></pre></td></tr></table></figure>
+<h3 id="2-克隆远程仓库">2. 克隆远程仓库</h3>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone http://git.gtmap.cn/sunziyang/test.git</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone http://git.gtmap.cn/sunziyang/test.git test</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone http://git.gtmap.cn/sunziyang/test.git --depth=1 -b main</span><br></pre></td></tr></table></figure>
+<h3 id="3-提交代码">3. 提交代码</h3>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add -a</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add -u</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m &quot;first commit&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -am &quot;first commit&quot;</span><br></pre></td></tr></table></figure>
+<h3 id="4-查看仓库状态">4. 查看仓库状态</h3>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2022/png/25824471/1668065792022-2f10cc69-8b64-490a-873b-4490d739ac4d.png#averageHue=%23eeebe3&amp;clientId=ub96d4c89-475b-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;height=266&amp;id=ubfc4c1f9&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=266&amp;originWidth=514&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=17056&amp;status=done&amp;style=none&amp;taskId=ub77e1215-ae37-4a2e-bce2-52bbf5a053c&amp;title=&amp;width=514" alt="image.png"></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status -s</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2022/png/25824471/1668065823355-cc80fe1f-4c0d-458e-9caf-878aa6c4c539.png#averageHue=%23eceae1&amp;clientId=ub96d4c89-475b-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;height=94&amp;id=ub93edee7&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=94&amp;originWidth=306&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=4934&amp;status=done&amp;style=none&amp;taskId=ue0520f5c-7c4b-4726-826f-4f956392cfa&amp;title=&amp;width=306" alt="image.png"></p>
+<h3 id="5-查看提交历史">5. 查看提交历史</h3>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXQtc2NtLmNvbS9kb2NzL2dpdC1sb2c=">https://git-scm.com/docs/git-log<i class="fa fa-external-link-alt"></i></span></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2022/png/25824471/1668067504751-d1ca6988-90c2-4e6e-8f94-7fae64114897.png#averageHue=%23edebe2&amp;clientId=ub96d4c89-475b-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;height=284&amp;id=u3e18e9e4&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=284&amp;originWidth=460&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=18261&amp;status=done&amp;style=none&amp;taskId=ucf014180-1861-44f3-852a-6ebda6ba773&amp;title=&amp;width=460" alt="image.png"></p>
+<h3 id="6-新建分支">6. 新建分支</h3>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch test</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout test</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b test</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2022/png/25824471/1668067736305-2544957f-7920-4ce9-84a9-68b15ec93403.png#averageHue=%23eae8de&amp;clientId=ub96d4c89-475b-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;height=67&amp;id=u6138a8f8&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=67&amp;originWidth=357&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=3886&amp;status=done&amp;style=none&amp;taskId=u72824e74-1f6b-4987-9488-a2e658aad04&amp;title=&amp;width=357" alt="image.png"></p>
+<h3 id="7-合并分支">7. 合并分支</h3>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git checkout main</span><br><span class="line">git merge test</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2022/png/25824471/1668067797343-5d90568f-e122-4eb7-90ff-2ad1cfae876c.png#averageHue=%23ebe8df&amp;clientId=ub96d4c89-475b-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;height=169&amp;id=u269b62da&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=169&amp;originWidth=333&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=9114&amp;status=done&amp;style=none&amp;taskId=u90a3dc38-d1f3-4d70-acd4-1e90452beaf&amp;title=&amp;width=333" alt="image.png"></p>
+<h3 id="8-删除分支">8. 删除分支</h3>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -d test-not-need</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2022/png/25824471/1668067838780-f1b53130-bb07-4b12-9aad-9b770b0de605.png#averageHue=%23e9e6dc&amp;clientId=ub96d4c89-475b-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;height=62&amp;id=u2370f562&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=62&amp;originWidth=380&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=4233&amp;status=done&amp;style=none&amp;taskId=ub35df9b2-5298-4a87-98aa-2e74d4bbb9b&amp;title=&amp;width=380" alt="image.png"></p>
+<h3 id="9-合并冲突">9. 合并冲突</h3>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2022/png/25824471/1668067914592-6e0fddf1-9985-426d-ae5b-aed6cbe18cd7.png#averageHue=%23ece9e0&amp;clientId=ub96d4c89-475b-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;height=103&amp;id=u20f88793&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=103&amp;originWidth=499&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=7865&amp;status=done&amp;style=none&amp;taskId=ucebc667b-79bb-4312-8ee8-254cd38c9e1&amp;title=&amp;width=499" alt="image.png"><br>
+当两个分支都对同一行进行了修改，git 便会产生冲突，并标记为未合并<br>
+<img data-src="https://cdn.nlark.com/yuque/0/2022/png/25824471/1668067991503-6e70f673-53ff-4128-ae69-a0bdf5bbfdf9.png#averageHue=%23edece4&amp;clientId=ub96d4c89-475b-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;height=222&amp;id=u4ee59a0c&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=222&amp;originWidth=646&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=10709&amp;status=done&amp;style=none&amp;taskId=u4c7ea403-ed55-41a3-b0b1-4fc2e4c111e&amp;title=&amp;width=646" alt="image.png"><br>
+此时将每个文件进行修改，确认最后的内容，使用 git add 方法标记为冲突已解决</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add .\A.txt</span><br></pre></td></tr></table></figure>
+<p>在所有文件的冲突均已解决后，使用 commit 提交此次修改。<br>
+<img data-src="https://cdn.nlark.com/yuque/0/2022/png/25824471/1668069129425-5e01c21f-729f-46a1-adfb-54124e62e2f0.png#averageHue=%23f4f0f0&amp;clientId=ub96d4c89-475b-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;height=231&amp;id=u0a104ab9&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=231&amp;originWidth=217&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=5265&amp;status=done&amp;style=none&amp;taskId=uf34e2edc-1b3c-4171-a0b7-1415373ec8d&amp;title=&amp;width=217" alt="image.png"></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge --abort</span><br></pre></td></tr></table></figure>
+<h3 id="10-远程仓库">10. 远程仓库</h3>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote</span><br></pre></td></tr></table></figure>
+<p>默认应该为空</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin http://git.gtmap.cn/sunziyang/test.git</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2022/png/25824471/1668068523745-63687201-d938-4494-befb-57cca24fecfa.png#averageHue=%23ece9e0&amp;clientId=ub96d4c89-475b-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;height=74&amp;id=uc779cfc8&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=74&amp;originWidth=615&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=6674&amp;status=done&amp;style=none&amp;taskId=u31dc2c1c-a0e6-4bc9-8ea0-1c7704aa632&amp;title=&amp;width=615" alt="image.png"></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin main</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2022/png/25824471/1668068742518-da3e5415-4ecf-4585-95a1-21883204aaff.png#averageHue=%23ebe8de&amp;clientId=ub96d4c89-475b-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;height=159&amp;id=ua8990786&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=159&amp;originWidth=462&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=10110&amp;status=done&amp;style=none&amp;taskId=ufe9f12fb-96ed-4a25-b4b5-e9a760df4ef&amp;title=&amp;width=462" alt="image.png"></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git fetch --all</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git fetch origin</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git branch --set-upstream-to=origin/main main</span><br><span class="line">git branch -u origin/main main</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2022/png/25824471/1668068938744-515203f8-4a6f-43e7-bbc0-522e22a1226e.png#averageHue=%23ebe7de&amp;clientId=ub96d4c89-475b-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;height=63&amp;id=u6c235234&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=63&amp;originWidth=425&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=4153&amp;status=done&amp;style=none&amp;taskId=uf9fe9258-ee38-49f8-b351-99cbff36d71&amp;title=&amp;width=425" alt="image.png"></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push -u origin main</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull origin main</span><br></pre></td></tr></table></figure>
+<h2 id="二、常见技巧">二、常见技巧</h2>
+<h3 id="1-临时保存成果">1. 临时保存成果</h3>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git stash</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2022/png/25824471/1668069378275-7d9723e8-f968-45a1-a935-2f7540fb323e.png#averageHue=%23eceae1&amp;clientId=ub96d4c89-475b-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;height=322&amp;id=ub9527e34&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=322&amp;originWidth=519&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=23325&amp;status=done&amp;style=none&amp;taskId=u0a78b019-d61d-447c-ad99-b92b7162850&amp;title=&amp;width=519" alt="image.png"></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git stash pop</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2022/png/25824471/1668069487321-01f9baf6-a5e2-4229-aad7-c4239fd249be.png#averageHue=%23eceae1&amp;clientId=ub96d4c89-475b-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;height=388&amp;id=ua7cbc212&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=388&amp;originWidth=525&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=28749&amp;status=done&amp;style=none&amp;taskId=udadaa4f7-105b-41e0-b8a7-476e313c817&amp;title=&amp;width=525" alt="image.png"></p>
+<h3 id="2-合并分支灵活选择-rebase-merge">2. 合并分支灵活选择 rebase/merge</h3>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge test</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git rebase test</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2022/png/25824471/1668070029923-03a6023a-f289-4a7f-8d97-287b5481d0d5.png#averageHue=%23f7f6f6&amp;clientId=ub96d4c89-475b-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;height=403&amp;id=u5f38a90d&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=403&amp;originWidth=424&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=17070&amp;status=done&amp;style=none&amp;taskId=u6606d6f5-faf6-4398-803d-abf982ae461&amp;title=&amp;width=424" alt="image.png"></p>
+<h3 id="3-cherry-pick">3. cherry-pick</h3>
+<p>适合 hotfix</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git cherry-pick 12d654f1d701cbf7cd9abb98ce84eeef460a24a7</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2022/png/25824471/1668070259530-0a9f15b2-6f04-4efc-9178-87b71593348d.png#averageHue=%23ece9e0&amp;clientId=ub96d4c89-475b-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;height=74&amp;id=u95fa0050&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=74&amp;originWidth=623&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=7688&amp;status=done&amp;style=none&amp;taskId=u55f4075a-f7f1-4101-af2e-b2c9c8e3278&amp;title=&amp;width=623" alt="image.png"><br>
+<img data-src="https://cdn.nlark.com/yuque/0/2022/png/25824471/1668070287061-158eab00-07ce-4b3a-986b-82138a35f0d7.png#averageHue=%23f9f8f8&amp;clientId=ub96d4c89-475b-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;height=446&amp;id=u041c3d65&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=446&amp;originWidth=444&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=19422&amp;status=done&amp;style=none&amp;taskId=u66e44180-6621-42e8-bc9e-6962a82f6a8&amp;title=&amp;width=444" alt="image.png"></p>
+<h3 id="4-修改上次提交">4. 修改上次提交</h3>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit --amend</span><br></pre></td></tr></table></figure>
+<p>会同时提交暂存的文件</p>
+<h3 id="5-取消文件修改">5. 取消文件修改</h3>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout .\C.txt</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://cdn.nlark.com/yuque/0/2022/png/25824471/1668070393228-757e4a56-6231-42dc-853d-a125b8c72cf3.png#averageHue=%23e9e6dc&amp;clientId=ub96d4c89-475b-4&amp;crop=0&amp;crop=0&amp;crop=1&amp;crop=1&amp;from=paste&amp;height=54&amp;id=ufb48917e&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=54&amp;originWidth=364&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=3939&amp;status=done&amp;style=none&amp;taskId=u97acef27-eb9d-4b80-a14e-1e74f9c8462&amp;title=&amp;width=364" alt="image.png"></p>
+<h3 id="6-弃用提交">6. 弃用提交</h3>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">保留文件</span></span><br><span class="line">git reset --soft 12d654f1d701cbf7cd9abb98ce84eeef460a24a7</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">丢弃修改</span></span><br><span class="line">git reset --hard 12d654f1d701cbf7cd9abb98ce84eeef460a24a7</span><br></pre></td></tr></table></figure>
+<h3 id="7-补丁文件">7. 补丁文件</h3>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git diff [file] &gt; a.patch</span><br><span class="line">git apply a.patch</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+      
+  <div class="popular-posts-header">相关文章</div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+        <div class="popular-posts-date">2021-05-17</div>
+      <div class="popular-posts-title"><a href="/posts/5/" rel="bookmark">奥利奥生成器与Canvas绘制图片不显示问题</a></div>
+        <div class="popular-posts-excerpt"><p><p>最近尝试在 Vue 中实现奥利奥生成器的效果，遇到使用 Canvas 的 drawImage 方法绘制图片不显示的问题，在此记录下解决过程。</p></p></div>
+    </li>
+    <li class="popular-posts-item">
+        <div class="popular-posts-date">2018-07-22</div>
+      <div class="popular-posts-title"><a href="/posts/next-config/" rel="bookmark">NexT 主题配置记录</a></div>
+        <div class="popular-posts-excerpt"><p><p>前段时间将博客模板更改为 NexT 主题了，在此记录一下配置的内容，按照配置文件顺序进行。留做备份，方便升级。很多以前的自定义添加的内容都整合进了主题，只需要在配置文件中简单启用即可。</p></p></div>
+    </li>
+    <li class="popular-posts-item">
+        <div class="popular-posts-date">2019-08-14</div>
+      <div class="popular-posts-title"><a href="/posts/require_js/" rel="bookmark">(转载)Javascript模块化编程（三）：require.js的用法</a></div>
+        <div class="popular-posts-excerpt"><p><blockquote>
+<p>原文链接: <span class="exturl" data-url="aHR0cDovL3d3dy5ydWFueWlmZW5nLmNvbS9ibG9nLzIwMTIvMTEvcmVxdWlyZV9qcy5odG1s">Javascript 模块化编程（三）：require.js 的用法<i class="fa fa-external-link-alt"></i></span> —— 阮一峰</p>
+</blockquote></p></div>
+    </li>
+  </ul>
+
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Dirge
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.iszy.cc/posts/git/" title="Git实用技巧">https://www.iszy.cc/posts/git/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/git/" rel="tag"><i class="fa fa-tag"></i> git</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/css-percentagewidth-autoheight/" rel="prev" title="让一个元素高度随宽度按比例自适应">
+                  <i class="fa fa-chevron-left"></i> 让一个元素高度随宽度按比例自适应
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/unraid-start/" rel="next" title="Unraid初体验">
+                  Unraid初体验 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="waline"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2017 – 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Dirge</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">105k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">6:22</span>
+  </span>
+</div>
+  <div class="powered-by">由 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZw==">NexT.Gemini</span> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/@next-theme/pjax@0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/jquery@3.6.1/dist/jquery.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/comments.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/utils.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/next-boot.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/pjax.min.js"></script>
+
+  
+<script src="https://jsdelivr.cdn.iszy.xyz/npm/algoliasearch@4.14.2/dist/algoliasearch-lite.umd.js" integrity="sha256-dImjLPUsG/6p3+i7gVKBiDM8EemJAhQ0VvkRK2pVsQY=" crossorigin="anonymous"></script>
+<script src="https://jsdelivr.cdn.iszy.xyz/npm/instantsearch.js@4.49.0/dist/instantsearch.production.min.js" integrity="sha256-5FvX4v/nWhVAZLvv1sbGwV6w8AY4kdd+R5FpIsXkh9w=" crossorigin="anonymous"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/search/algolia-search.min.js"></script>
+
+
+
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/fancybox.min.js"></script>
+
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/pace.min.js"></script>
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.3/dist/katex.min.css" integrity="sha256-NJNVfEC6jfEt62wQMafLNT2eI6BaWONXbpkSEVAs3+8=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.3/dist/contrib/copy-tex.min.js","integrity":"sha256-Us54+rSGDSTvIhKKUs4kygE2ipA0RXpWWh0/zLqw3bs="}}</script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/math/katex.min.js"></script>
+
+
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/quicklink@2.3.0/dist/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":false,"delay":true,"timeout":3000,"priority":true,"url":"https://www.iszy.cc/posts/git/"}</script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/quicklink.min.js"></script>
+<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-CN","enable":true,"serverURL":"https://wl.iszy.xyz","cssUrl":"https://jsdelivr.cdn.iszy.xyz/npm/@waline/client@v2/dist/waline.css","commentCount":false,"pageview":true,"libUrl":"https://jsdelivr.cdn.iszy.xyz/npm/@waline/client@v2/dist/waline.js","locale":{"placeholder":"本站支持匿名评论，无需登录~(●'◡'●)\n与文章无关的留言请前往本站留言板，谢谢配合~"},"emoji":["https://jsdelivr.cdn.iszy.xyz/gh/zvonimirsun/emojis@1.0.3/bilibili-xhl"],"meta":["nick","mail","link"],"requiredMeta":["nick"],"wordLimit":0,"login":"enable","pageSize":10,"dark":"auto","el":"#waline","comment":true,"path":"/posts/git/"}</script>
+<link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/@waline/client@v2/dist/waline.css">
+<script>
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.waline.el).then(() =>
+    NexT.utils.getScript(CONFIG.waline.libUrl, { condition: window.Waline })
+  ).then(() => 
+    Waline.init(Object.assign({}, CONFIG.waline,{ el: document.querySelector(CONFIG.waline.el) }))
+  );
+});
+</script>
+
+</body>
+</html>
