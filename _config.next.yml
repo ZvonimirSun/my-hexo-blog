@@ -736,10 +736,10 @@ waline:
   serverURL: https://wl.iszy.xyz # Waline server address url
 
   # Waline library CDN url, you can set this to your preferred CDN
-  libUrl: https://jsdelivr.cdn.iszy.xyz/npm/@waline/client@v2/dist/waline.js
+  libUrl: https://jsdelivr.cdn.iszy.xyz/npm/@waline/client@v2.14.1/dist/waline.min.js
 
   # Waline CSS styles CDN url, you can set this to your preferred CDN
-  cssUrl: https://jsdelivr.cdn.iszy.xyz/npm/@waline/client@v2/dist/waline.css
+  cssUrl: https://jsdelivr.cdn.iszy.xyz/npm/@waline/client@v2.14.1/dist/waline.css
 
   # If false, comment count will only be displayed in post page, not in home page
   commentCount: false
