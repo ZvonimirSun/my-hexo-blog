@@ -26,8 +26,6 @@ jobs:
       - name: 恢复文件修改时间
         run: |
           git ls-files -z | while read -d '' path; do touch -d "$(git log -1 --format="@%ct" "$path")" "$path"; done
-      - name: 拉取最新主题
-        run: git clone --depth=1 https://github.com/zvonimirsun/hexo-theme-next themes/next
       - name: 设置Node版本和缓存
         uses: actions/setup-node@v3
         with:
