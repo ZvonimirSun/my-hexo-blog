@@ -21,12 +21,12 @@
 
 <link rel="stylesheet" href="https://fonts.cdn.iszy.xyz/css?family=Lato:300,300italic,400,400italic,700,700italic%7CJetBrains+Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
-<link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/@fortawesome/fontawesome-free@6.2.1/css/all.min.css" integrity="sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"www.iszy.cc","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.13.2","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":true,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"algolia":{"appID":"1UJ2W38EIN","apiKey":"c0cf4d0a9659a45dd3a38becbe6b6f73","indexName":"iszy_blog","hits":{"per_page":10}}}</script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/config.min.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.iszy.cc","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.14.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":true,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"algolia":{"appID":"1UJ2W38EIN","apiKey":"c0cf4d0a9659a45dd3a38becbe6b6f73","indexName":"iszy_blog","hits":{"per_page":10}}}</script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/config.min.js"></script>
 
     <meta name="description" content="今天在编写 dockerfile 时使用 COPY 拷贝文件夹时遇到了意料之外的情况。在此记录一下正确的使用方法。">
 <meta property="og:type" content="article">
@@ -54,7 +54,7 @@
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-E60YKKHF8Y"></script>
   <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-E60YKKHF8Y","only_pageview":false}</script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/analytics/google-analytics.min.js"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/analytics/google-analytics.min.js"></script>
 
 
 
@@ -152,7 +152,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%83%8C%E6%99%AF%E8%AF%B4%E6%98%8E"><span class="nav-number">1.</span> <span class="nav-text">背景说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0%E6%96%B9%E6%B3%95"><span class="nav-number">2.</span> <span class="nav-text">实现方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E4%B8%AA%E6%96%87%E4%BB%B6%E5%A4%B9%E5%A4%8D%E5%88%B6%EF%BC%8C%E6%8C%87%E5%AE%9A%E7%9B%AE%E6%A0%87%E7%9B%AE%E5%BD%95"><span class="nav-number">2.1.</span> <span class="nav-text">单个文件夹复制，指定目标目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%94%BE%E5%88%B0%E5%8F%A6%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%AD%E7%BB%9F%E4%B8%80%E5%A4%8D%E5%88%B6"><span class="nav-number">2.2.</span> <span class="nav-text">放到另一个文件夹中统一复制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A9%E7%94%A8-dockerignore-%E6%96%87%E4%BB%B6"><span class="nav-number">2.3.</span> <span class="nav-text">利用 .dockerignore 文件</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%83%8C%E6%99%AF%E8%AF%B4%E6%98%8E"><span class="nav-number">1.</span> <span class="nav-text">背景说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0%E6%96%B9%E6%B3%95"><span class="nav-number">2.</span> <span class="nav-text">实现方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E4%B8%AA%E6%96%87%E4%BB%B6%E5%A4%B9%E5%A4%8D%E5%88%B6%E6%8C%87%E5%AE%9A%E7%9B%AE%E6%A0%87%E7%9B%AE%E5%BD%95"><span class="nav-number">2.1.</span> <span class="nav-text">单个文件夹复制，指定目标目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%94%BE%E5%88%B0%E5%8F%A6%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%AD%E7%BB%9F%E4%B8%80%E5%A4%8D%E5%88%B6"><span class="nav-number">2.2.</span> <span class="nav-text">放到另一个文件夹中统一复制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A9%E7%94%A8-.dockerignore-%E6%96%87%E4%BB%B6"><span class="nav-number">2.3.</span> <span class="nav-text">利用 .dockerignore 文件</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -333,33 +333,45 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>今天在编写 dockerfile 时使用 COPY 拷贝文件夹时遇到了意料之外的情况。在此记录一下正确的使用方法。</p>
+        <p>今天在编写 dockerfile 时使用 COPY
+拷贝文件夹时遇到了意料之外的情况。在此记录一下正确的使用方法。</p>
 <span id="more"></span>
 <h2 id="背景说明">背景说明</h2>
-<p>今天在通过 dockerfile 将文件夹拷贝到镜像的时候发现，是把文件夹下的内容拷贝进去了。</p>
+<p>今天在通过 dockerfile
+将文件夹拷贝到镜像的时候发现，是把文件夹下的内容拷贝进去了。</p>
 <p>dockerfile 如下：</p>
 <figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span> node:alpine</span><br><span class="line"><span class="keyword">WORKDIR</span><span class="language-bash"> /usr/src/app</span></span><br><span class="line"><span class="keyword">COPY</span><span class="language-bash"> dist node_modules package.json ./</span></span><br><span class="line"><span class="keyword">EXPOSE</span> <span class="number">3000</span></span><br><span class="line"><span class="keyword">CMD</span><span class="language-bash"> [<span class="string">&quot;yarn&quot;</span>, <span class="string">&quot;start:prod&quot;</span>]</span></span><br></pre></td></tr></table></figure>
-<p>我是想把 dist 和 node_modules 两个文件夹都拷贝到镜像中，又不想用多条 COPY 来分别拷贝，那样会多一个 layer。结果发现 dist 和 node_modules 两个文件夹本身没有被拷贝进镜像，而是把文件夹下的内容分别拷贝进的镜像。</p>
+<p>我是想把 dist 和 node_modules 两个文件夹都拷贝到镜像中，又不想用多条
+COPY 来分别拷贝，那样会多一个 layer。结果发现 dist 和 node_modules
+两个文件夹本身没有被拷贝进镜像，而是把文件夹下的内容分别拷贝进的镜像。</p>
 <p>经过测试发现：</p>
 <ul>
-<li><code>ADD</code> 命令和 <code>COPY</code> 命令在复制文件时行为一致</li>
-<li><code>COPY/ADD</code> 命令的源如果是文件夹，复制的是文件夹的内容而不是其本身</li>
-<li>使用 <code>*</code> 匹配所有文件，如果遇到文件夹也会保持上述逻辑，即仅复制内容</li>
+<li><code>ADD</code> 命令和 <code>COPY</code>
+命令在复制文件时行为一致</li>
+<li><code>COPY/ADD</code>
+命令的源如果是文件夹，复制的是文件夹的内容而不是其本身</li>
+<li>使用 <code>*</code>
+匹配所有文件，如果遇到文件夹也会保持上述逻辑，即仅复制内容</li>
 </ul>
 <p>这个逻辑很诡异，和我们的一般预期不符。</p>
 <p>我发现在六年前就已经有人问过类似的问题了，看来也没啥要改的意思。</p>
 <h2 id="实现方法">实现方法</h2>
 <p>下面列举几个事项方式，大家可以参考着使用。</p>
-<h3 id="单个文件夹复制，指定目标目录">单个文件夹复制，指定目标目录</h3>
-<p>一种方法就是一次复制一个文件夹，然后 COPY 的时候要指定到镜像中的具体目录，比如把上面的 dockerfile 改成这样：</p>
+<h3 id="单个文件夹复制指定目标目录">单个文件夹复制，指定目标目录</h3>
+<p>一种方法就是一次复制一个文件夹，然后 COPY
+的时候要指定到镜像中的具体目录，比如把上面的 dockerfile 改成这样：</p>
 <figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span> node:alpine</span><br><span class="line"><span class="keyword">WORKDIR</span><span class="language-bash"> /usr/src/app</span></span><br><span class="line"><span class="keyword">COPY</span><span class="language-bash"> dist ./dist</span></span><br><span class="line"><span class="keyword">COPY</span><span class="language-bash"> node_modules ./node_modules</span></span><br><span class="line"><span class="keyword">COPY</span><span class="language-bash"> package.json ./</span></span><br><span class="line"><span class="keyword">EXPOSE</span> <span class="number">3000</span></span><br><span class="line"><span class="keyword">CMD</span><span class="language-bash"> [<span class="string">&quot;yarn&quot;</span>, <span class="string">&quot;start:prod&quot;</span>]</span></span><br></pre></td></tr></table></figure>
 <h3 id="放到另一个文件夹中统一复制">放到另一个文件夹中统一复制</h3>
-<p>上面那种写法很麻烦，还会增加 layer 数。这边想了一个变相的方法，不是很优雅。</p>
-<p>就是将需要拷贝的文件夹都放到一个统一的文件夹中，然后在 dockerfile 中拷贝这个文件夹，文件夹下的目录结构就能够得到保持。</p>
+<p>上面那种写法很麻烦，还会增加 layer
+数。这边想了一个变相的方法，不是很优雅。</p>
+<p>就是将需要拷贝的文件夹都放到一个统一的文件夹中，然后在 dockerfile
+中拷贝这个文件夹，文件夹下的目录结构就能够得到保持。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> dockerPackages &amp;&amp; <span class="built_in">mv</span> dist node_modules dockerPackages</span><br></pre></td></tr></table></figure>
 <figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span> node:alpine</span><br><span class="line"><span class="keyword">WORKDIR</span><span class="language-bash"> /usr/src/app</span></span><br><span class="line"><span class="keyword">COPY</span><span class="language-bash"> dockerPackages package.json ./</span></span><br><span class="line"><span class="keyword">EXPOSE</span> <span class="number">3000</span></span><br><span class="line"><span class="keyword">CMD</span><span class="language-bash"> [<span class="string">&quot;yarn&quot;</span>, <span class="string">&quot;start:prod&quot;</span>]</span></span><br></pre></td></tr></table></figure>
-<h3 id="利用-dockerignore-文件">利用 .dockerignore 文件</h3>
-<p>我们上面的写法其实就是像完成一件事，那就是仅把部分内容拷贝进镜像，然后忽略其他内容。这样，我们就可以利用 <code>.dockerignore</code> 文件，来更加优雅地实现。先忽略所有文件，然后将我们需要拷贝的文件排除。</p>
+<h3 id="利用-.dockerignore-文件">利用 .dockerignore 文件</h3>
+<p>我们上面的写法其实就是像完成一件事，那就是仅把部分内容拷贝进镜像，然后忽略其他内容。这样，我们就可以利用
+<code>.dockerignore</code>
+文件，来更加优雅地实现。先忽略所有文件，然后将我们需要拷贝的文件排除。</p>
 <p><code>.dockerignore</code>:</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">*</span><br><span class="line">!dist</span><br><span class="line">!node_modules</span><br><span class="line">!package.json</span><br></pre></td></tr></table></figure>
 <figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">FROM</span> node:alpine</span><br><span class="line"><span class="keyword">WORKDIR</span><span class="language-bash"> /usr/src/app</span></span><br><span class="line"><span class="keyword">COPY</span><span class="language-bash"> . ./</span></span><br><span class="line"><span class="keyword">EXPOSE</span> <span class="number">3000</span></span><br><span class="line"><span class="keyword">CMD</span><span class="language-bash"> [<span class="string">&quot;yarn&quot;</span>, <span class="string">&quot;start:prod&quot;</span>]</span></span><br></pre></td></tr></table></figure>
@@ -461,39 +473,38 @@
 
   
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/@next-theme/pjax@0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/@next-theme/pjax@0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/jquery@3.6.1/dist/jquery.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
-<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/comments.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/utils.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/next-boot.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/pjax.min.js"></script>
+<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/comments.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/utils.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/next-boot.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/pjax.min.js"></script>
 
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/algoliasearch@4.14.2/dist/algoliasearch-lite.umd.js" integrity="sha256-dImjLPUsG/6p3+i7gVKBiDM8EemJAhQ0VvkRK2pVsQY=" crossorigin="anonymous"></script>
-<script src="https://jsdelivr.cdn.iszy.xyz/npm/instantsearch.js@4.49.0/dist/instantsearch.production.min.js" integrity="sha256-5FvX4v/nWhVAZLvv1sbGwV6w8AY4kdd+R5FpIsXkh9w=" crossorigin="anonymous"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/search/algolia-search.min.js"></script>
+<script src="https://jsdelivr.cdn.iszy.xyz/npm/instantsearch.js@4.49.1/dist/instantsearch.production.min.js" integrity="sha256-3s8yn/IU/hV+UjoqczP+9xDS1VXIpMf3QYRUi9XoG0Y=" crossorigin="anonymous"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/search/algolia-search.min.js"></script>
 
   <script class="next-config" data-name="pdf" type="application/json">{"object_url":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/pdfobject@2.2.8/pdfobject.min.js","integrity":"sha256-tu9j5pBilBQrWSDePOOajCUdz6hWsid/lBNzK4KgEPM="},"url":"/lib/pdf/web/viewer"}</script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/tags/pdf.min.js"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/tags/pdf.min.js"></script>
 
 
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/fancybox.min.js"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/fancybox.min.js"></script>
 
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/pace.min.js"></script>
-
-  
-
-
-
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/pace.min.js"></script>
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.3/dist/katex.min.css" integrity="sha256-NJNVfEC6jfEt62wQMafLNT2eI6BaWONXbpkSEVAs3+8=" crossorigin="anonymous">
-  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.3/dist/contrib/copy-tex.min.js","integrity":"sha256-Us54+rSGDSTvIhKKUs4kygE2ipA0RXpWWh0/zLqw3bs="}}</script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/math/katex.min.js"></script>
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/mathjax@3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/math/mathjax.min.js"></script>
 
 
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/quicklink@2.3.0/dist/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>
   <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":false,"delay":true,"timeout":3000,"priority":true,"url":"https://www.iszy.cc/posts/13/"}</script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/quicklink.min.js"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/quicklink.min.js"></script>
 <script class="next-config" data-name="waline" type="application/json">{"lang":"zh-CN","enable":true,"serverURL":"https://wl.iszy.xyz","cssUrl":"https://jsdelivr.cdn.iszy.xyz/npm/@waline/client@v2.14.1/dist/waline.css","commentCount":false,"pageview":true,"libUrl":"https://jsdelivr.cdn.iszy.xyz/npm/@waline/client@v2.14.1/dist/waline.min.js","locale":{"placeholder":"本站支持匿名评论，无需登录~(●'◡'●)\n与文章无关的留言请前往本站留言板，谢谢配合~"},"emoji":["https://jsdelivr.cdn.iszy.xyz/gh/zvonimirsun/emojis@1.0.3/bilibili-xhl"],"meta":["nick","mail","link"],"requiredMeta":["nick"],"wordLimit":0,"login":"enable","pageSize":10,"dark":"auto","el":"#waline","comment":true,"path":"/posts/13/"}</script>
 <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/@waline/client@v2.14.1/dist/waline.css">
 <script>

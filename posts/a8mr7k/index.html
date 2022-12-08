@@ -21,12 +21,12 @@
 
 <link rel="stylesheet" href="https://fonts.cdn.iszy.xyz/css?family=Lato:300,300italic,400,400italic,700,700italic%7CJetBrains+Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
-<link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/@fortawesome/fontawesome-free@6.2.1/css/all.min.css" integrity="sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"www.iszy.cc","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.13.2","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":true,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"algolia":{"appID":"1UJ2W38EIN","apiKey":"c0cf4d0a9659a45dd3a38becbe6b6f73","indexName":"iszy_blog","hits":{"per_page":10}}}</script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/config.min.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.iszy.cc","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.14.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":true,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"algolia":{"appID":"1UJ2W38EIN","apiKey":"c0cf4d0a9659a45dd3a38becbe6b6f73","indexName":"iszy_blog","hits":{"per_page":10}}}</script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/config.min.js"></script>
 
     <meta name="description" content="今天改了一下 NexT 主题的字体配置，发现还是有一些需要注意的地方的，在此记录一下。">
 <meta property="og:type" content="article">
@@ -56,7 +56,7 @@
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-E60YKKHF8Y"></script>
   <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-E60YKKHF8Y","only_pageview":false}</script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/analytics/google-analytics.min.js"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/analytics/google-analytics.min.js"></script>
 
 
 
@@ -342,7 +342,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>今天改了一下 NexT 主题的字体配置，发现还是有一些需要注意的地方的，在此记录一下。</p>
+        <p>今天改了一下 NexT
+主题的字体配置，发现还是有一些需要注意的地方的，在此记录一下。</p>
 <span id="more"></span>
 <h2 id="简要说明">简要说明</h2>
 <p>在此篇文章发布时，我用的是 v8.2.1 版本的<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL25leHQtdGhlbWUvaGV4by10aGVtZS1uZXh0">next-theme/hexo-theme-next<i class="fa fa-external-link-alt"></i></span>，通过<code>npm install hexo-theme-next</code>安装，所以尽量不想改动主题源文件。</p>
@@ -360,81 +361,113 @@
 <p>涉及到的文件有以下几个。</p>
 <ul>
 <li>config.next.yml(主题配置文件)</li>
-<li>node_modules/hexo-theme-next/source/css/_variables/base.styl(主题源文件中关于字体配置的 css 变量)</li>
+<li>node_modules/hexo-theme-next/source/css/_variables/base.styl(主题源文件中关于字体配置的
+css 变量)</li>
 <li>source/_data/styles.styl(自定义样式文件)</li>
 </ul>
 <h3 id="查询资料">查询资料</h3>
 <p>虽说之前就看过主题配置文件中有这个字体配置的地方，姑且还是在网上查了一下其他人是怎么配置的。</p>
-<p>然后我发现完整展示实际配置内容的较少，且基本上每一个类型都只配置了一个 font family，在其中一篇博文中还表示多在 NexT 主题的这个配置下多 font family 的配置是不支持的，这个我还是感觉比较诧异的，应该会有不少人有这样的需求吧。</p>
-<p><img data-src="https://img.iszy.xyz/20210225171504.png" alt=""></p>
+<p>然后我发现完整展示实际配置内容的较少，且基本上每一个类型都只配置了一个
+font family，在其中一篇博文中还表示多在 NexT 主题的这个配置下多 font
+family
+的配置是不支持的，这个我还是感觉比较诧异的，应该会有不少人有这样的需求吧。</p>
+<p><img data-src="https://img.iszy.xyz/20210225171504.png" /></p>
 <p>所以根据网上的说法，就有以下两个方法进行字体配置。</p>
-<ol>
-<li>
-<p>简单配置</p>
-<p>在 NexT 配置中直接进行配置，内容为单个 font-family 值。</p>
-</li>
-<li>
-<p>复杂配置</p>
-<ol>
-<li>
-<p>在主题配置文件中指定自定义样式文件</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">custom_file_path:</span></span><br><span class="line">  <span class="comment">#head: source/_data/head.njk</span></span><br><span class="line">  <span class="comment">#header: source/_data/header.njk</span></span><br><span class="line">  <span class="comment">#sidebar: source/_data/sidebar.njk</span></span><br><span class="line">  <span class="comment">#postMeta: source/_data/post-meta.njk</span></span><br><span class="line">  <span class="comment">#postBodyEnd: source/_data/post-body-end.njk</span></span><br><span class="line">  <span class="comment">#footer: source/_data/footer.njk</span></span><br><span class="line">  <span class="comment">#bodyEnd: source/_data/body-end.njk</span></span><br><span class="line">  <span class="comment">#variable: source/_data/variables.styl</span></span><br><span class="line">  <span class="comment">#mixin: source/_data/mixins.styl</span></span><br><span class="line">  <span class="attr">style:</span> <span class="string">source/_data/styles.styl</span></span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>，在对应路径下创建自定义样式文件，然后在文件中直接对对应的 html 标签编写 css。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span>,</span><br><span class="line"><span class="selector-tag">h1</span>,</span><br><span class="line"><span class="selector-tag">h2</span>,</span><br><span class="line"><span class="selector-tag">h3</span>,</span><br><span class="line"><span class="selector-tag">h4</span>,</span><br><span class="line"><span class="selector-tag">h5</span>,</span><br><span class="line"><span class="selector-tag">h6</span>,</span><br><span class="line"><span class="selector-class">.post-body</span> &#123;</span><br><span class="line">  <span class="attribute">font-family</span>: EB Garamond, <span class="string">&quot;Noto Serif SC&quot;</span>, sans-serif;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.site-title</span> &#123;</span><br><span class="line">  <span class="attribute">font-family</span>: Cinzel Decorative, EB Garamond, <span class="string">&quot;Noto Serif SC&quot;</span>, sans-serif;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">pre,</span><br><span class="line"><span class="selector-tag">code</span> &#123;</span><br><span class="line">  <span class="attribute">font-family</span>: JetBrains Mono, consolas, Menlo, monospace, <span class="string">&quot;Noto Serif SC&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-</li>
+<ol type="1">
+<li><p>简单配置</p>
+<p>在 NexT 配置中直接进行配置，内容为单个 font-family 值。</p></li>
+<li><p>复杂配置</p>
+<ol type="1">
+<li><p>在主题配置文件中指定自定义样式文件</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">custom_file_path:</span></span><br><span class="line">  <span class="comment">#head: source/_data/head.njk</span></span><br><span class="line">  <span class="comment">#header: source/_data/header.njk</span></span><br><span class="line">  <span class="comment">#sidebar: source/_data/sidebar.njk</span></span><br><span class="line">  <span class="comment">#postMeta: source/_data/post-meta.njk</span></span><br><span class="line">  <span class="comment">#postBodyEnd: source/_data/post-body-end.njk</span></span><br><span class="line">  <span class="comment">#footer: source/_data/footer.njk</span></span><br><span class="line">  <span class="comment">#bodyEnd: source/_data/body-end.njk</span></span><br><span class="line">  <span class="comment">#variable: source/_data/variables.styl</span></span><br><span class="line">  <span class="comment">#mixin: source/_data/mixins.styl</span></span><br><span class="line">  <span class="attr">style:</span> <span class="string">source/_data/styles.styl</span></span><br></pre></td></tr></table></figure></li>
+<li><p>，在对应路径下创建自定义样式文件，然后在文件中直接对对应的 html
+标签编写 css。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span>,</span><br><span class="line"><span class="selector-tag">h1</span>,</span><br><span class="line"><span class="selector-tag">h2</span>,</span><br><span class="line"><span class="selector-tag">h3</span>,</span><br><span class="line"><span class="selector-tag">h4</span>,</span><br><span class="line"><span class="selector-tag">h5</span>,</span><br><span class="line"><span class="selector-tag">h6</span>,</span><br><span class="line"><span class="selector-class">.post-body</span> &#123;</span><br><span class="line">  <span class="attribute">font-family</span>: EB Garamond, <span class="string">&quot;Noto Serif SC&quot;</span>, sans-serif;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.site-title</span> &#123;</span><br><span class="line">  <span class="attribute">font-family</span>: Cinzel Decorative, EB Garamond, <span class="string">&quot;Noto Serif SC&quot;</span>, sans-serif;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">pre,</span><br><span class="line"><span class="selector-tag">code</span> &#123;</span><br><span class="line">  <span class="attribute">font-family</span>: JetBrains Mono, consolas, Menlo, monospace, <span class="string">&quot;Noto Serif SC&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol></li>
 </ol>
 <h3 id="探寻方案">探寻方案</h3>
-<p>不过直接加 css 有点不太优雅，万一以后多了什么标签，我还得手动改 css，那就要看看为什么不支持了。</p>
+<p>不过直接加 css 有点不太优雅，万一以后多了什么标签，我还得手动改
+css，那就要看看为什么不支持了。</p>
 <p>在主题的代码中，我们能找到这么一段关于字体的配置。</p>
 <figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">get_font_family</span>(config) &#123;</span><br><span class="line">  <span class="variable">$custom-family</span> = <span class="built_in">hexo-config</span>(&#x27;font.&#x27; + config + &#x27;.family&#x27;);</span><br><span class="line">  return <span class="variable">$custom-family</span> is <span class="selector-tag">a</span> &#x27;string&#x27; ? <span class="built_in">unquote</span>($custom-family) : null;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Font families.</span></span><br><span class="line"><span class="variable">$font-family-chinese</span>      = &#x27;PingFang SC&#x27;, &#x27;Microsoft YaHei&#x27;;</span><br><span class="line"></span><br><span class="line"><span class="variable">$font-family-base</span>         = <span class="variable">$font-family-chinese</span>, sans-serif;</span><br><span class="line"><span class="variable">$font-family-base</span>         = <span class="built_in">get_font_family</span>(&#x27;global&#x27;), <span class="variable">$font-family-chinese</span>, sans-serif if <span class="built_in">get_font_family</span>(&#x27;global&#x27;);</span><br><span class="line"></span><br><span class="line"><span class="variable">$font-family-logo</span>         = <span class="variable">$font-family-base</span>;</span><br><span class="line"><span class="variable">$font-family-logo</span>         = <span class="built_in">get_font_family</span>(&#x27;title&#x27;), <span class="variable">$font-family-base</span> if <span class="built_in">get_font_family</span>(&#x27;title&#x27;);</span><br><span class="line"></span><br><span class="line"><span class="variable">$font-family-headings</span>     = <span class="variable">$font-family-base</span>;</span><br><span class="line"><span class="variable">$font-family-headings</span>     = <span class="built_in">get_font_family</span>(&#x27;headings&#x27;), <span class="variable">$font-family-base</span> if <span class="built_in">get_font_family</span>(&#x27;headings&#x27;);</span><br><span class="line"></span><br><span class="line"><span class="variable">$font-family-posts</span>        = <span class="variable">$font-family-base</span>;</span><br><span class="line"><span class="variable">$font-family-posts</span>        = <span class="built_in">get_font_family</span>(&#x27;posts&#x27;), <span class="variable">$font-family-base</span> if <span class="built_in">get_font_family</span>(&#x27;posts&#x27;);</span><br><span class="line"></span><br><span class="line"><span class="variable">$font-family-monospace</span>    = consolas, Menlo, monospace, <span class="variable">$font-family-chinese</span>;</span><br><span class="line"><span class="variable">$font-family-monospace</span>    = <span class="built_in">get_font_family</span>(&#x27;codes&#x27;), consolas, Menlo, monospace, <span class="variable">$font-family-chinese</span> if <span class="built_in">get_font_family</span>(&#x27;codes&#x27;);</span><br></pre></td></tr></table></figure>
 <p>我们可以看到这边最主要的就是这个<code>get_font_family</code>方法，做的事情就是获取配置文件中对应项的值，如果不为空就去掉一下引号返回，否则返回<code>null</code>。</p>
-<p>从代码上来看，并没有不支持多 font family 配置，所以我就试了以下几个配置看看效果。</p>
+<p>从代码上来看，并没有不支持多 font family
+配置，所以我就试了以下几个配置看看效果。</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">global:</span></span><br><span class="line">  <span class="attr">external:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">family:</span> <span class="string">EB</span> <span class="string">Garamond,</span> <span class="string">Noto</span> <span class="string">Serif</span> <span class="string">SC</span></span><br><span class="line">  <span class="attr">size:</span></span><br></pre></td></tr></table></figure>
-<p>首先这个配置，<code>EB Garamond</code>这个字体是生效了的，但<code>Noto Serif SC</code>没有生效。经过查询，在 css 规范中(<span class="exturl" data-url="aHR0cDovL2ppZ3Nhdy53My5vcmcvY3NzLXZhbGlkYXRvci8=">css 校验器<i class="fa fa-external-link-alt"></i></span>)带空格的 font family 是要加引号的，于是改为了以下配置。</p>
+<p>首先这个配置，<code>EB Garamond</code>这个字体是生效了的，但<code>Noto Serif SC</code>没有生效。经过查询，在
+css 规范中(<span class="exturl" data-url="aHR0cDovL2ppZ3Nhdy53My5vcmcvY3NzLXZhbGlkYXRvci8=">css
+校验器<i class="fa fa-external-link-alt"></i></span>)带空格的 font family 是要加引号的，于是改为了以下配置。</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">global:</span></span><br><span class="line">  <span class="attr">external:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">family:</span> <span class="string">&#x27;EB Garamond&#x27;</span><span class="string">,</span> <span class="string">&#x27;Noto Serif SC&#x27;</span></span><br><span class="line">  <span class="attr">size:</span></span><br></pre></td></tr></table></figure>
-<p>好家伙，这个配置直接在 yaml 结构上就不支持，会报错。应当是被当作 map 解析了，不过结构也不正确，果断跳过。</p>
+<p>好家伙，这个配置直接在 yaml 结构上就不支持，会报错。应当是被当作 map
+解析了，不过结构也不正确，果断跳过。</p>
 <p>经过查询，<code>unquote</code>这个方法，只是去除最外层引号的，而我将整个配置都套进双引号，应当就会被解析为字符串了，所以有了下面的配置。</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">global:</span></span><br><span class="line">  <span class="attr">external:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">family:</span> <span class="string">&quot;&#x27;EB Garamond&#x27;, &#x27;Noto Serif SC&#x27;&quot;</span></span><br><span class="line">  <span class="attr">size:</span></span><br></pre></td></tr></table></figure>
-<p>这个配置其实已经成功了，所有字体都展示得很正常。不过，我们平常确实能看到很多带空格的 font family 是没有加引号的，这又是为什么呢？</p>
+<p>这个配置其实已经成功了，所有字体都展示得很正常。不过，我们平常确实能看到很多带空格的
+font family 是没有加引号的，这又是为什么呢？</p>
 <h3 id="无所谓的优化">无所谓的优化</h3>
-<p>经过进一步的查询，font family 在什么情况下要加引号和转义情况还是比较复杂的，需要先搞清楚 css 字符串和标识符之间的区别。</p>
+<p>经过进一步的查询，font family
+在什么情况下要加引号和转义情况还是比较复杂的，需要先搞清楚 css
+字符串和标识符之间的区别。</p>
 <h4 id="字符串和标识符">字符串和标识符</h4>
-<p>关于<span class="exturl" data-url="aHR0cHM6Ly93d3cudzMub3JnL1RSL0NTUzIvc3luZGF0YS5odG1sI3N0cmluZ3M=">字符串<i class="fa fa-external-link-alt"></i></span>，w3c 表示</p>
+<p>关于<span class="exturl" data-url="aHR0cHM6Ly93d3cudzMub3JnL1RSL0NTUzIvc3luZGF0YS5odG1sI3N0cmluZ3M=">字符串<i class="fa fa-external-link-alt"></i></span>，w3c
+表示</p>
 <blockquote>
 <p>字符串可以放在单引号也可以放在双引号里，引号里面的相同引号需要转义。</p>
-<p>Strings can either be written with double quotes or with single quotes. Double quotes cannot occur inside double quotes, unless escaped (e.g., as ‘&quot;’ or as ‘\22’). Analogously for single quotes (e.g., “'” or “\27”).</p>
+<p>Strings can either be written with double quotes or with single
+quotes. Double quotes cannot occur inside double quotes, unless escaped
+(e.g., as '"' or as '\22'). Analogously for single quotes (e.g., "'" or
+"\27").</p>
 </blockquote>
 <p>而<span class="exturl" data-url="aHR0cHM6Ly93d3cudzMub3JnL1RSL0NTUzIvc3luZGF0YS5odG1sI2NoYXJhY3RlcnM=">标识符<i class="fa fa-external-link-alt"></i></span>的定义如下</p>
 <blockquote>
-<p>在 CSS 里，标识符(包括元素名称，类名，选择器里的 ID)只能包含字符[a-zA-Z0-9]，ISO 10646 里比 U+00A0 大的字符，还有连字符（-）和下划线（_）。标识符不能以数字，两个下划线后者一个下划线后面跟一个数字开头。标识符也能包含转义字符还有 ISO 10646 定义的数字编码。举个例子：<code>B&amp;W?</code>应该写成<code>B\&amp;W\?</code>或者 <code>B\26 W\3F</code>。</p>
-<p>In CSS, identifiers (including element names, classes, and IDs in selectors) can contain only the characters [a-zA-Z0-9] and ISO 10646 characters U+00A0 and higher, plus the hyphen (-) and the underscore (_); they cannot start with a digit, two hyphens, or a hyphen followed by a digit. Identifiers can also contain escaped characters and any ISO 10646 character as a numeric code (see next item). For instance, the identifier “B&amp;W?” may be written as “B&amp;W?” or “B\26 W\3F”.</p>
+<p>在 CSS 里，标识符(包括元素名称，类名，选择器里的
+ID)只能包含字符[a-zA-Z0-9]，ISO 10646 里比 U+00A0
+大的字符，还有连字符（-）和下划线（_）。标识符不能以数字，两个下划线后者一个下划线后面跟一个数字开头。标识符也能包含转义字符还有
+ISO 10646
+定义的数字编码。举个例子：<code>B&amp;W?</code>应该写成<code>B\&amp;W\?</code>或者
+<code>B\26 W\3F</code>。</p>
+<p>In CSS, identifiers (including element names, classes, and IDs in
+selectors) can contain only the characters [a-zA-Z0-9] and ISO 10646
+characters U+00A0 and higher, plus the hyphen (-) and the underscore
+(_); they cannot start with a digit, two hyphens, or a hyphen followed
+by a digit. Identifiers can also contain escaped characters and any ISO
+10646 character as a numeric code (see next item). For instance, the
+identifier "B&amp;W?" may be written as "B&amp;W?" or "B\26 W\3F".</p>
 </blockquote>
 <h4 id="空白字符">空白字符</h4>
-<p><span class="exturl" data-url="aHR0cHM6Ly9kcmFmdHMuY3Nzd2cub3JnL2Nzcy1mb250cy0zLyNmb250LWZhbWlseS1wcm9w">css 规范<i class="fa fa-external-link-alt"></i></span>指出</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9kcmFmdHMuY3Nzd2cub3JnL2Nzcy1mb250cy0zLyNmb250LWZhbWlseS1wcm9w">css
+规范<i class="fa fa-external-link-alt"></i></span>指出</p>
 <blockquote>
 <p>字体族的名字要么作为字符串用引号包含起来，要么作为标识符，不需要引号。这就意味着在没有引号的名称里，开头的大多数标点符号和数字都需要被转义</p>
-<p>Font family names other than generic families must either be given quoted as strings, or unquoted as a sequence of one or more identifiers. This means most punctuation characters and digits at the start of each token must be escaped in unquoted font family names.</p>
+<p>Font family names other than generic families must either be given
+quoted as strings, or unquoted as a sequence of one or more identifiers.
+This means most punctuation characters and digits at the start of each
+token must be escaped in unquoted font family names.</p>
 </blockquote>
 <p>规范里用一个新的段落来说明：</p>
 <blockquote>
-<p>如果 font family 的名字是一系列标识符。那么计算机识别的最终值是单个空格分隔的标识符转换成字符串后的值。</p>
-<p>If <strong>a sequence of identifiers</strong> is given as a font family name, the computed value is the name converted to a string by joining all the identifiers in the sequence by single spaces.</p>
+<p>如果 font family
+的名字是一系列标识符。那么计算机识别的最终值是单个空格分隔的标识符转换成字符串后的值。</p>
+<p>If <strong>a sequence of identifiers</strong> is given as a font
+family name, the computed value is the name converted to a string by
+joining all the identifiers in the sequence by single spaces.</p>
 </blockquote>
-<p>所以<code>Microsoft YaHei</code>表示由多个空格分隔的标识符组成了单一字体族名称，而带引号的<code>'Microsoft YaHei'</code>仅是简单的字符串，都是合法的 CSS。</p>
+<p>所以<code>Microsoft YaHei</code>表示由多个空格分隔的标识符组成了单一字体族名称，而带引号的<code>'Microsoft YaHei'</code>仅是简单的字符串，都是合法的
+CSS。</p>
 <h4 id="字体族关键字">字体族关键字</h4>
 <p>规范定义了一些通用关键字，</p>
 <blockquote>
-<p>通用关键字: serif, sans-serif, cursive, fantasy, 和 monospace.这些关键字可以作为普通的回退机制，以防期望的字体不可以用的时候。</p>
-<p>The following generic family keywords are defined: ‘serif’, ‘sans-serif’, ‘cursive’, ‘fantasy’, and ‘monospace’.</p>
+<p>通用关键字: serif, sans-serif, cursive, fantasy, 和
+monospace.这些关键字可以作为普通的回退机制，以防期望的字体不可以用的时候。</p>
+<p>The following generic family keywords are defined: ‘serif’,
+‘sans-serif’, ‘cursive’, ‘fantasy’, and ‘monospace’.</p>
 </blockquote>
 <p>关于和关键字相同名称的字体族，</p>
 <blockquote>
 <p>当字体族名称恰好和关键字名称一样，那就必须套上引号来防止冲突。</p>
-<p>Font family names that happen to be the same as keyword value (‘inherit’, ‘serif’, etc.) must be quoted to prevent confusion with the keywords with the same names.</p>
+<p>Font family names that happen to be the same as keyword value
+(‘inherit’, ‘serif’, etc.) must be quoted to prevent confusion with the
+keywords with the same names.</p>
 </blockquote>
 <p>另，关键字都是不区分大小写的。</p>
 <h4 id="总结">总结</h4>
@@ -541,39 +574,38 @@
 
   
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/@next-theme/pjax@0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/@next-theme/pjax@0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/jquery@3.6.1/dist/jquery.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
-<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/comments.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/utils.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/next-boot.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/pjax.min.js"></script>
+<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/comments.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/utils.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/next-boot.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/pjax.min.js"></script>
 
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/algoliasearch@4.14.2/dist/algoliasearch-lite.umd.js" integrity="sha256-dImjLPUsG/6p3+i7gVKBiDM8EemJAhQ0VvkRK2pVsQY=" crossorigin="anonymous"></script>
-<script src="https://jsdelivr.cdn.iszy.xyz/npm/instantsearch.js@4.49.0/dist/instantsearch.production.min.js" integrity="sha256-5FvX4v/nWhVAZLvv1sbGwV6w8AY4kdd+R5FpIsXkh9w=" crossorigin="anonymous"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/search/algolia-search.min.js"></script>
+<script src="https://jsdelivr.cdn.iszy.xyz/npm/instantsearch.js@4.49.1/dist/instantsearch.production.min.js" integrity="sha256-3s8yn/IU/hV+UjoqczP+9xDS1VXIpMf3QYRUi9XoG0Y=" crossorigin="anonymous"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/search/algolia-search.min.js"></script>
 
   <script class="next-config" data-name="pdf" type="application/json">{"object_url":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/pdfobject@2.2.8/pdfobject.min.js","integrity":"sha256-tu9j5pBilBQrWSDePOOajCUdz6hWsid/lBNzK4KgEPM="},"url":"/lib/pdf/web/viewer"}</script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/tags/pdf.min.js"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/tags/pdf.min.js"></script>
 
 
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/fancybox.min.js"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/fancybox.min.js"></script>
 
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/pace.min.js"></script>
-
-  
-
-
-
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/pace.min.js"></script>
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.3/dist/katex.min.css" integrity="sha256-NJNVfEC6jfEt62wQMafLNT2eI6BaWONXbpkSEVAs3+8=" crossorigin="anonymous">
-  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.3/dist/contrib/copy-tex.min.js","integrity":"sha256-Us54+rSGDSTvIhKKUs4kygE2ipA0RXpWWh0/zLqw3bs="}}</script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/math/katex.min.js"></script>
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/mathjax@3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/math/mathjax.min.js"></script>
 
 
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/quicklink@2.3.0/dist/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>
   <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":false,"delay":true,"timeout":3000,"priority":true,"url":"https://www.iszy.cc/posts/a8mr7k/"}</script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/quicklink.min.js"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/quicklink.min.js"></script>
 <script class="next-config" data-name="waline" type="application/json">{"lang":"zh-CN","enable":true,"serverURL":"https://wl.iszy.xyz","cssUrl":"https://jsdelivr.cdn.iszy.xyz/npm/@waline/client@v2.14.1/dist/waline.css","commentCount":false,"pageview":true,"libUrl":"https://jsdelivr.cdn.iszy.xyz/npm/@waline/client@v2.14.1/dist/waline.min.js","locale":{"placeholder":"本站支持匿名评论，无需登录~(●'◡'●)\n与文章无关的留言请前往本站留言板，谢谢配合~"},"emoji":["https://jsdelivr.cdn.iszy.xyz/gh/zvonimirsun/emojis@1.0.3/bilibili-xhl"],"meta":["nick","mail","link"],"requiredMeta":["nick"],"wordLimit":0,"login":"enable","pageSize":10,"dark":"auto","el":"#waline","comment":true,"path":"/posts/a8mr7k/"}</script>
 <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/@waline/client@v2.14.1/dist/waline.css">
 <script>

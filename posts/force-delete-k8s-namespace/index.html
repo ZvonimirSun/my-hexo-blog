@@ -21,12 +21,12 @@
 
 <link rel="stylesheet" href="https://fonts.cdn.iszy.xyz/css?family=Lato:300,300italic,400,400italic,700,700italic%7CJetBrains+Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
-<link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/@fortawesome/fontawesome-free@6.2.1/css/all.min.css" integrity="sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"www.iszy.cc","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.13.2","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":true,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"algolia":{"appID":"1UJ2W38EIN","apiKey":"c0cf4d0a9659a45dd3a38becbe6b6f73","indexName":"iszy_blog","hits":{"per_page":10}}}</script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/config.min.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.iszy.cc","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.14.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":true,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"algolia":{"appID":"1UJ2W38EIN","apiKey":"c0cf4d0a9659a45dd3a38becbe6b6f73","indexName":"iszy_blog","hits":{"per_page":10}}}</script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/config.min.js"></script>
 
     <meta name="description" content="记一次 Kubernetes NameSpace 的强制删除。">
 <meta property="og:type" content="article">
@@ -57,7 +57,7 @@
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-E60YKKHF8Y"></script>
   <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-E60YKKHF8Y","only_pageview":false}</script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/analytics/google-analytics.min.js"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/analytics/google-analytics.min.js"></script>
 
 
 
@@ -155,7 +155,9 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%89%8D%E6%83%85"><span class="nav-number">1.</span> <span class="nav-text">一、前情</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E6%AD%A5%E9%AA%A4"><span class="nav-number">2.</span> <span class="nav-text">二、步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%9F%A5%E7%9C%8B%E5%AD%98%E5%9C%A8%E7%9A%84-NameSpace"><span class="nav-number">2.1.</span> <span class="nav-text">1. 查看存在的 NameSpace</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%B0%9D%E8%AF%95%E5%BC%BA%E5%88%B6%E5%88%A0%E9%99%A4-NameSpace"><span class="nav-number">2.2.</span> <span class="nav-text">2. 尝试强制删除 NameSpace</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E8%8E%B7%E5%8F%96%E9%9C%80%E8%A6%81%E5%BC%BA%E5%88%B6%E5%88%A0%E9%99%A4%E7%9A%84-NameSpace-%E4%BF%A1%E6%81%AF"><span class="nav-number">2.3.</span> <span class="nav-text">2. 获取需要强制删除的 NameSpace 信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E5%88%A0%E9%99%A4-finalizers-%E7%9B%B8%E5%85%B3%E5%86%85%E5%AE%B9"><span class="nav-number">2.4.</span> <span class="nav-text">3. 删除 finalizers 相关内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E8%BF%90%E8%A1%8C-kube-proxy"><span class="nav-number">2.5.</span> <span class="nav-text">4. 运行 kube-proxy</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E9%80%9A%E8%BF%87-API-%E5%BC%BA%E5%88%B6%E5%88%A0%E9%99%A4-NameSpace"><span class="nav-number">2.6.</span> <span class="nav-text">5. 通过 API 强制删除 NameSpace</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E5%85%B3%E9%97%AD-kube-proxy-%E5%B9%B6%E7%A1%AE%E8%AE%A4-NameSpace-%E5%B7%B2%E5%88%A0%E9%99%A4"><span class="nav-number">2.7.</span> <span class="nav-text">6. 关闭 kube-proxy 并确认 NameSpace 已删除</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E5%89%8D%E6%83%85"><span class="nav-number">1.</span> <span class="nav-text">一、前情</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E6%AD%A5%E9%AA%A4"><span class="nav-number">2.</span> <span class="nav-text">二、步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E5%AD%98%E5%9C%A8%E7%9A%84-namespace"><span class="nav-number">2.1.</span> <span class="nav-text">1. 查看存在的 NameSpace</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B0%9D%E8%AF%95%E5%BC%BA%E5%88%B6%E5%88%A0%E9%99%A4-namespace"><span class="nav-number">2.2.</span> <span class="nav-text">2. 尝试强制删除 NameSpace</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96%E9%9C%80%E8%A6%81%E5%BC%BA%E5%88%B6%E5%88%A0%E9%99%A4%E7%9A%84-namespace-%E4%BF%A1%E6%81%AF"><span class="nav-number">2.3.</span> <span class="nav-text">2. 获取需要强制删除的
+NameSpace 信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A0%E9%99%A4-finalizers-%E7%9B%B8%E5%85%B3%E5%86%85%E5%AE%B9"><span class="nav-number">2.4.</span> <span class="nav-text">3. 删除 finalizers 相关内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%90%E8%A1%8C-kube-proxy"><span class="nav-number">2.5.</span> <span class="nav-text">4. 运行 kube-proxy</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%9A%E8%BF%87-api-%E5%BC%BA%E5%88%B6%E5%88%A0%E9%99%A4-namespace"><span class="nav-number">2.6.</span> <span class="nav-text">5. 通过 API 强制删除 NameSpace</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E9%97%AD-kube-proxy-%E5%B9%B6%E7%A1%AE%E8%AE%A4-namespace-%E5%B7%B2%E5%88%A0%E9%99%A4"><span class="nav-number">2.7.</span> <span class="nav-text">6. 关闭 kube-proxy
+并确认 NameSpace 已删除</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -338,26 +340,31 @@
     <div class="post-body" itemprop="articleBody">
         <p>记一次 Kubernetes NameSpace 的强制删除。</p>
 <span id="more"></span>
-<h2 id="一、前情">一、前情</h2>
-<p>我在使用 Kubernetes 时，遇到了 Kubernetes NameSpace 无法正常删除的问题。</p>
-<p>NameSpace 状态保持在 Terminating 已经挺久了，我决定强制删除这个 NameSpace。</p>
-<h2 id="二、步骤">二、步骤</h2>
-<h3 id="1-查看存在的-NameSpace">1. 查看存在的 NameSpace</h3>
+<h2 id="一前情">一、前情</h2>
+<p>我在使用 Kubernetes 时，遇到了 Kubernetes NameSpace
+无法正常删除的问题。</p>
+<p>NameSpace 状态保持在 Terminating 已经挺久了，我决定强制删除这个
+NameSpace。</p>
+<h2 id="二步骤">二、步骤</h2>
+<h3 id="查看存在的-namespace">1. 查看存在的 NameSpace</h3>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[root@master ~]<span class="comment"># kubectl get ns</span></span><br><span class="line">NAME                   STATUS        AGE</span><br><span class="line">default                Active        5h46m</span><br><span class="line">istio-system           Terminating   11m</span><br><span class="line">kube-node-lease        Active        5h46m</span><br><span class="line">kube-public            Active        5h46m</span><br><span class="line">kube-system            Active        5h46m</span><br><span class="line">kubernetes-dashboard   Active        5h46m</span><br></pre></td></tr></table></figure>
-<h3 id="2-尝试强制删除-NameSpace">2. 尝试强制删除 NameSpace</h3>
+<h3 id="尝试强制删除-namespace">2. 尝试强制删除 NameSpace</h3>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@master ~]<span class="comment"># kubectl delete ns istio-system --force --grace-period=0</span></span><br><span class="line">warning: Immediate deletion does not <span class="built_in">wait</span> <span class="keyword">for</span> confirmation that the running resource has been terminated. The resource may <span class="built_in">continue</span> to run on the cluster indefinitely.</span><br></pre></td></tr></table></figure>
 <p>卡了挺久也没有效果，看来是删不掉，得强制删了</p>
-<h3 id="2-获取需要强制删除的-NameSpace-信息">2. 获取需要强制删除的 NameSpace 信息</h3>
+<h3 id="获取需要强制删除的-namespace-信息">2. 获取需要强制删除的
+NameSpace 信息</h3>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@master ~]<span class="comment"># kubectl get namespace istio-system -o json &gt; istio-system.json</span></span><br></pre></td></tr></table></figure>
-<h3 id="3-删除-finalizers-相关内容">3. 删除 finalizers 相关内容</h3>
-<p><img data-src="https://img.iszy.xyz/1660293510641.png" alt=""></p>
-<h3 id="4-运行-kube-proxy">4. 运行 kube-proxy</h3>
+<h3 id="删除-finalizers-相关内容">3. 删除 finalizers 相关内容</h3>
+<p><img data-src="https://img.iszy.xyz/1660293510641.png" /></p>
+<h3 id="运行-kube-proxy">4. 运行 kube-proxy</h3>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@master ~]<span class="comment"># kubectl proxy</span></span><br><span class="line">Starting to serve on 127.0.0.1:8001</span><br></pre></td></tr></table></figure>
-<h3 id="5-通过-API-强制删除-NameSpace">5. 通过 API 强制删除 NameSpace</h3>
+<h3 id="通过-api-强制删除-namespace">5. 通过 API 强制删除 NameSpace</h3>
 <p>新运行个终端，调用 API 删除 NameSpace</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@master ~]<span class="comment"># curl -k -H &quot;Content-Type: application/json&quot; -X PUT --data-binary @istio-system.json http://127.0.0.1:8001/api/v1/namespaces/istio-system/finalize</span></span><br></pre></td></tr></table></figure>
-<h3 id="6-关闭-kube-proxy-并确认-NameSpace-已删除">6. 关闭 kube-proxy 并确认 NameSpace 已删除</h3>
-<p>按 <code>CTRL-C</code> 关闭 kube-proxy，然后确认下现在的 NameSpace</p>
+<h3 id="关闭-kube-proxy-并确认-namespace-已删除">6. 关闭 kube-proxy
+并确认 NameSpace 已删除</h3>
+<p>按 <code>CTRL-C</code> 关闭 kube-proxy，然后确认下现在的
+NameSpace</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[root@master ~]<span class="comment"># kubectl get ns</span></span><br><span class="line">NAME                   STATUS        AGE</span><br><span class="line">default                Active        5h48m</span><br><span class="line">kube-node-lease        Active        5h48m</span><br><span class="line">kube-public            Active        5h48m</span><br><span class="line">kube-system            Active        5h48m</span><br><span class="line">kubernetes-dashboard   Active        5h48m</span><br></pre></td></tr></table></figure>
 <p>可以看到 NameSpace 已经被强制删除了。</p>
 
@@ -459,39 +466,38 @@
 
   
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/@next-theme/pjax@0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/@next-theme/pjax@0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/jquery@3.6.1/dist/jquery.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
-<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/comments.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/utils.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/next-boot.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/pjax.min.js"></script>
+<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/comments.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/utils.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/next-boot.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/pjax.min.js"></script>
 
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/algoliasearch@4.14.2/dist/algoliasearch-lite.umd.js" integrity="sha256-dImjLPUsG/6p3+i7gVKBiDM8EemJAhQ0VvkRK2pVsQY=" crossorigin="anonymous"></script>
-<script src="https://jsdelivr.cdn.iszy.xyz/npm/instantsearch.js@4.49.0/dist/instantsearch.production.min.js" integrity="sha256-5FvX4v/nWhVAZLvv1sbGwV6w8AY4kdd+R5FpIsXkh9w=" crossorigin="anonymous"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/search/algolia-search.min.js"></script>
+<script src="https://jsdelivr.cdn.iszy.xyz/npm/instantsearch.js@4.49.1/dist/instantsearch.production.min.js" integrity="sha256-3s8yn/IU/hV+UjoqczP+9xDS1VXIpMf3QYRUi9XoG0Y=" crossorigin="anonymous"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/search/algolia-search.min.js"></script>
 
   <script class="next-config" data-name="pdf" type="application/json">{"object_url":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/pdfobject@2.2.8/pdfobject.min.js","integrity":"sha256-tu9j5pBilBQrWSDePOOajCUdz6hWsid/lBNzK4KgEPM="},"url":"/lib/pdf/web/viewer"}</script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/tags/pdf.min.js"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/tags/pdf.min.js"></script>
 
 
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/fancybox.min.js"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/fancybox.min.js"></script>
 
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/pace.min.js"></script>
-
-  
-
-
-
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/pace.min.js"></script>
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.3/dist/katex.min.css" integrity="sha256-NJNVfEC6jfEt62wQMafLNT2eI6BaWONXbpkSEVAs3+8=" crossorigin="anonymous">
-  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.3/dist/contrib/copy-tex.min.js","integrity":"sha256-Us54+rSGDSTvIhKKUs4kygE2ipA0RXpWWh0/zLqw3bs="}}</script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/math/katex.min.js"></script>
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/mathjax@3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/math/mathjax.min.js"></script>
 
 
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/quicklink@2.3.0/dist/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>
   <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":false,"delay":true,"timeout":3000,"priority":true,"url":"https://www.iszy.cc/posts/force-delete-k8s-namespace/"}</script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/quicklink.min.js"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/quicklink.min.js"></script>
 <script class="next-config" data-name="waline" type="application/json">{"lang":"zh-CN","enable":true,"serverURL":"https://wl.iszy.xyz","cssUrl":"https://jsdelivr.cdn.iszy.xyz/npm/@waline/client@v2.14.1/dist/waline.css","commentCount":false,"pageview":true,"libUrl":"https://jsdelivr.cdn.iszy.xyz/npm/@waline/client@v2.14.1/dist/waline.min.js","locale":{"placeholder":"本站支持匿名评论，无需登录~(●'◡'●)\n与文章无关的留言请前往本站留言板，谢谢配合~"},"emoji":["https://jsdelivr.cdn.iszy.xyz/gh/zvonimirsun/emojis@1.0.3/bilibili-xhl"],"meta":["nick","mail","link"],"requiredMeta":["nick"],"wordLimit":0,"login":"enable","pageSize":10,"dark":"auto","el":"#waline","comment":true,"path":"/posts/force-delete-k8s-namespace/"}</script>
 <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/@waline/client@v2.14.1/dist/waline.css">
 <script>

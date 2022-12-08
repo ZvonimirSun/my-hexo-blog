@@ -21,19 +21,19 @@
 
 <link rel="stylesheet" href="https://fonts.cdn.iszy.xyz/css?family=Lato:300,300italic,400,400italic,700,700italic%7CJetBrains+Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
-<link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/@fortawesome/fontawesome-free@6.2.1/css/all.min.css" integrity="sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"www.iszy.cc","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.13.2","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":true,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"algolia":{"appID":"1UJ2W38EIN","apiKey":"c0cf4d0a9659a45dd3a38becbe6b6f73","indexName":"iszy_blog","hits":{"per_page":10}}}</script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/config.min.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.iszy.cc","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.14.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":true,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"algolia":{"appID":"1UJ2W38EIN","apiKey":"c0cf4d0a9659a45dd3a38becbe6b6f73","indexName":"iszy_blog","hits":{"per_page":10}}}</script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/config.min.js"></script>
 
-    <meta name="description" content="既然已经可以通过 Let’s encrypt 申请免费泛域名证书了，本着生命不息，折腾不止的态度，我自然是要试试的。可以看到本站已经用上了 Let’s encrypt 的泛域名证书，本文就对我这次申请过程做一个记录。">
+    <meta name="description" content="既然已经可以通过 Let&#39;s encrypt 申请免费泛域名证书了，本着生命不息，折腾不止的态度，我自然是要试试的。可以看到本站已经用上了 Let&#39;s encrypt 的泛域名证书，本文就对我这次申请过程做一个记录。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="利用 acme.sh 申请 Let&#39;s Encrypt 免费泛域名证书">
 <meta property="og:url" content="https://www.iszy.cc/posts/wild-card/">
 <meta property="og:site_name" content="随遇而安">
-<meta property="og:description" content="既然已经可以通过 Let’s encrypt 申请免费泛域名证书了，本着生命不息，折腾不止的态度，我自然是要试试的。可以看到本站已经用上了 Let’s encrypt 的泛域名证书，本文就对我这次申请过程做一个记录。">
+<meta property="og:description" content="既然已经可以通过 Let&#39;s encrypt 申请免费泛域名证书了，本着生命不息，折腾不止的态度，我自然是要试试的。可以看到本站已经用上了 Let&#39;s encrypt 的泛域名证书，本文就对我这次申请过程做一个记录。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://img.iszy.xyz/20190318221329.png">
 <meta property="article:published_time" content="2018-03-18T04:00:00.000Z">
@@ -58,7 +58,7 @@
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-E60YKKHF8Y"></script>
   <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-E60YKKHF8Y","only_pageview":false}</script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/analytics/google-analytics.min.js"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/analytics/google-analytics.min.js"></script>
 
 
 
@@ -156,7 +156,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="nav-number">2.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4"><span class="nav-number">3.</span> <span class="nav-text">步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A6%96%E5%85%88%E5%AE%89%E8%A3%85%E4%BE%9D%E8%B5%96%E7%8E%AF%E5%A2%83"><span class="nav-number">3.1.</span> <span class="nav-text">首先安装依赖环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-acme-sh"><span class="nav-number">3.2.</span> <span class="nav-text">安装 acme.sh</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85"><span class="nav-number">3.2.1.</span> <span class="nav-text">在线安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%9A%E8%BF%87-git-%E5%AE%89%E8%A3%85"><span class="nav-number">3.2.2.</span> <span class="nav-text">通过 git 安装</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B-API-Key-%E5%92%8C-Secret"><span class="nav-number">3.3.</span> <span class="nav-text">查看 API Key 和 Secret</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E7%8E%AF%E5%A2%83%E5%8F%82%E6%95%B0"><span class="nav-number">3.4.</span> <span class="nav-text">输入环境参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%B3%E8%AF%B7%E8%AF%81%E4%B9%A6"><span class="nav-number">3.5.</span> <span class="nav-text">申请证书</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%AD%E7%AD%BE"><span class="nav-number">3.6.</span> <span class="nav-text">续签</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="nav-number">2.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4"><span class="nav-number">3.</span> <span class="nav-text">步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A6%96%E5%85%88%E5%AE%89%E8%A3%85%E4%BE%9D%E8%B5%96%E7%8E%AF%E5%A2%83"><span class="nav-number">3.1.</span> <span class="nav-text">首先安装依赖环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-acme.sh"><span class="nav-number">3.2.</span> <span class="nav-text">安装 acme.sh</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85"><span class="nav-number">3.2.1.</span> <span class="nav-text">在线安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%9A%E8%BF%87-git-%E5%AE%89%E8%A3%85"><span class="nav-number">3.2.2.</span> <span class="nav-text">通过 git 安装</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B-api-key-%E5%92%8C-secret"><span class="nav-number">3.3.</span> <span class="nav-text">查看 API Key 和 Secret</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E7%8E%AF%E5%A2%83%E5%8F%82%E6%95%B0"><span class="nav-number">3.4.</span> <span class="nav-text">输入环境参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%B3%E8%AF%B7%E8%AF%81%E4%B9%A6"><span class="nav-number">3.5.</span> <span class="nav-text">申请证书</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%AD%E7%AD%BE"><span class="nav-number">3.6.</span> <span class="nav-text">续签</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -337,43 +337,62 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>既然已经可以通过 Let’s encrypt 申请免费泛域名证书了，本着生命不息，折腾不止的态度，我自然是要试试的。可以看到本站已经用上了 Let’s encrypt 的泛域名证书，本文就对我这次申请过程做一个记录。</p>
+        <p>既然已经可以通过 Let's encrypt
+申请免费泛域名证书了，本着生命不息，折腾不止的态度，我自然是要试试的。可以看到本站已经用上了
+Let's encrypt 的泛域名证书，本文就对我这次申请过程做一个记录。</p>
 <span id="more"></span>
 <h2 id="前言">前言</h2>
-<p>关注 Let’s Encrypt 的免费泛域名证书也有一段时间了。毕竟像我这种穷学生使用不起高大上的付费 wildcard 的，之前一直是每个子域名申请一个 ssl 证书。但是由于我老是折腾，也没怎么注意备份证书，就老是在申请，可太麻烦了。这次申请 Let’s Encrypt 的免费泛域名证书，我特意备份好了，以后每个子域名都能用这个证书就方便多了。</p>
-<p>Let’s Encrypt 推出 ACME V2 和泛域名证书的支持也是一波三折，一月多本来就要推出了，因为技术原因，数次推迟，终于在本月 14 号正式宣布上线。由于是刚刚发布，暂时还没有多少一键申请的支持。好在 <span class="exturl" data-url="aHR0cDovL2FjbWUuc2g=">acme.sh<i class="fa fa-external-link-alt"></i></span> 已经可以支持，虽然由于 DNS API 的需要，仅支持有限的解析商，但已经足够方便了。</p>
+<p>关注 Let's Encrypt
+的免费泛域名证书也有一段时间了。毕竟像我这种穷学生使用不起高大上的付费
+wildcard 的，之前一直是每个子域名申请一个 ssl
+证书。但是由于我老是折腾，也没怎么注意备份证书，就老是在申请，可太麻烦了。这次申请
+Let's Encrypt
+的免费泛域名证书，我特意备份好了，以后每个子域名都能用这个证书就方便多了。</p>
+<p>Let's Encrypt 推出 ACME V2
+和泛域名证书的支持也是一波三折，一月多本来就要推出了，因为技术原因，数次推迟，终于在本月
+14 号正式宣布上线。由于是刚刚发布，暂时还没有多少一键申请的支持。好在
+acme.sh 已经可以支持，虽然由于 DNS API
+的需要，仅支持有限的解析商，但已经足够方便了。</p>
 <p>下面上官方公告的截取，让人十分激动。</p>
 <blockquote>
-<p>We’re pleased to announce that ACMEv2 and wildcard certificate support is live! With today’s new features we’re continuing to break down barriers for HTTPS adoption across the Web by making it even easier for every website to get and manage certificates.</p>
+<p>We’re pleased to announce that ACMEv2 and wildcard certificate
+support is live! With today’s new features we’re continuing to break
+down barriers for HTTPS adoption across the Web by making it even easier
+for every website to get and manage certificates.</p>
 </blockquote>
 <h2 id="准备工作">准备工作</h2>
 <ul>
 <li>首先你需要有一个域名</li>
-<li>你要将你的域名在支持的解析商处解析。 - 可以点击<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL05laWxwYW5nL2FjbWUuc2gvYmxvYi9tYXN0ZXIvZG5zYXBpL1JFQURNRS5tZA==">这里<i class="fa fa-external-link-alt"></i></span>查看支持的解析商，没有被列出来即不支持。 - 我注册域名所在的 Namecheap 就不在支持的列表内。</li>
-<li>然后你需要有一台运行 Linux 系统的 VPS 来执行命令。虚拟机或许也行？没有试过。</li>
+<li>你要将你的域名在支持的解析商处解析。 - 可以点击<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL05laWxwYW5nL2FjbWUuc2gvYmxvYi9tYXN0ZXIvZG5zYXBpL1JFQURNRS5tZA==">这里<i class="fa fa-external-link-alt"></i></span>查看支持的解析商，没有被列出来即不支持。
+- 我注册域名所在的 Namecheap 就不在支持的列表内。</li>
+<li>然后你需要有一台运行 Linux 系统的 VPS
+来执行命令。虚拟机或许也行？没有试过。</li>
 </ul>
 <h2 id="步骤">步骤</h2>
-<p>本文以在 CloudXNS 解析的 <span class="exturl" data-url="aHR0cDovL2lzenkubWU=">iszy.me<i class="fa fa-external-link-alt"></i></span> 为例，其他域名参考<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL05laWxwYW5nL2FjbWUuc2gvYmxvYi9tYXN0ZXIvZG5zYXBpL1JFQURNRS5tZA==">这里<i class="fa fa-external-link-alt"></i></span>。我本次系统环境为 Ubuntu 16.04，其他系统可以类比完成。</p>
+<p>本文以在 CloudXNS 解析的 iszy.me 为例，其他域名参考<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL05laWxwYW5nL2FjbWUuc2gvYmxvYi9tYXN0ZXIvZG5zYXBpL1JFQURNRS5tZA==">这里<i class="fa fa-external-link-alt"></i></span>。我本次系统环境为
+Ubuntu 16.04，其他系统可以类比完成。</p>
 <h3 id="首先安装依赖环境">首先安装依赖环境</h3>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get update &amp;&amp;  apt-get install curl -y &amp;&amp; apt-get install cron -y &amp;&amp; apt-get install socat -y</span><br></pre></td></tr></table></figure>
-<h3 id="安装-acme-sh">安装 <span class="exturl" data-url="aHR0cDovL2FjbWUuc2g=">acme.sh<i class="fa fa-external-link-alt"></i></span></h3>
+<h3 id="安装-acme.sh">安装 acme.sh</h3>
 <h4 id="在线安装">在线安装</h4>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl https://get.acme.sh | sh</span><br></pre></td></tr></table></figure>
 <p>OR</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -O -  https://get.acme.sh | sh</span><br></pre></td></tr></table></figure>
 <h4 id="通过-git-安装">通过 git 安装</h4>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/Neilpang/acme.sh.git</span><br><span class="line"><span class="built_in">cd</span> ./acme.sh</span><br><span class="line">./acme.sh --install</span><br></pre></td></tr></table></figure>
-<h3 id="查看-API-Key-和-Secret">查看 API Key 和 Secret</h3>
+<h3 id="查看-api-key-和-secret">查看 API Key 和 Secret</h3>
 <p>在用户中心查看。</p>
-<p><img data-src="https://img.iszy.xyz/20190318221329.png" alt=""></p>
+<p><img data-src="https://img.iszy.xyz/20190318221329.png" /></p>
 <h3 id="输入环境参数">输入环境参数</h3>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> CX_Key=<span class="string">&quot;your api key&quot;</span></span><br><span class="line"><span class="built_in">export</span> CX_Secret=<span class="string">&quot;your secret key&quot;</span></span><br></pre></td></tr></table></figure>
 <h3 id="申请证书">申请证书</h3>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~/.acme.sh/acme.sh --issue --dns dns_cx -d iszy.me -d *.iszy.me</span><br></pre></td></tr></table></figure>
 <p>你的证书将会被保存在<code>~/.acme.sh/iszy.me/</code>路径下。包含文件<code>ca.cer</code>、<code>fullchain.cer</code>、<code>iszy.me.cer</code>、<code>iszy.me.conf</code>、<code>iszy.me.csr</code>、<code>iszy.me.csr.conf</code>、<code>iszy.me.key</code>，一般使用<code>fullchain.cer</code>和<code>iszy.me.key</code>就可以了。</p>
-<p>**注意：**第一个<code>-d</code>后面不能直接写泛域名，一定要写普通域名，像我这样，后面的<code>-d</code>就支持写泛域名了。</p>
+<p><strong>注意：</strong>第一个<code>-d</code>后面不能直接写泛域名，一定要写普通域名，像我这样，后面的<code>-d</code>就支持写泛域名了。</p>
 <h3 id="续签">续签</h3>
-<p>由于 Let’s encrypt 的证书有效期为 3 个月，需要续签。我也不懂其他的，就直接用 Crontab 吧，简单直接。我暂时还没有弄，因为我其实是在我一台瞎折腾的服务器上申请的，续签的问题嘛，以后再说吧。</p>
+<p>由于 Let's encrypt 的证书有效期为 3
+个月，需要续签。我也不懂其他的，就直接用 Crontab
+吧，简单直接。我暂时还没有弄，因为我其实是在我一台瞎折腾的服务器上申请的，续签的问题嘛，以后再说吧。</p>
 
     </div>
 
@@ -474,39 +493,38 @@
 
   
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/@next-theme/pjax@0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/@next-theme/pjax@0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/jquery@3.6.1/dist/jquery.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
-<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/comments.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/utils.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/next-boot.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/pjax.min.js"></script>
+<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/comments.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/utils.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/next-boot.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/pjax.min.js"></script>
 
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/algoliasearch@4.14.2/dist/algoliasearch-lite.umd.js" integrity="sha256-dImjLPUsG/6p3+i7gVKBiDM8EemJAhQ0VvkRK2pVsQY=" crossorigin="anonymous"></script>
-<script src="https://jsdelivr.cdn.iszy.xyz/npm/instantsearch.js@4.49.0/dist/instantsearch.production.min.js" integrity="sha256-5FvX4v/nWhVAZLvv1sbGwV6w8AY4kdd+R5FpIsXkh9w=" crossorigin="anonymous"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/search/algolia-search.min.js"></script>
+<script src="https://jsdelivr.cdn.iszy.xyz/npm/instantsearch.js@4.49.1/dist/instantsearch.production.min.js" integrity="sha256-3s8yn/IU/hV+UjoqczP+9xDS1VXIpMf3QYRUi9XoG0Y=" crossorigin="anonymous"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/search/algolia-search.min.js"></script>
 
   <script class="next-config" data-name="pdf" type="application/json">{"object_url":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/pdfobject@2.2.8/pdfobject.min.js","integrity":"sha256-tu9j5pBilBQrWSDePOOajCUdz6hWsid/lBNzK4KgEPM="},"url":"/lib/pdf/web/viewer"}</script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/tags/pdf.min.js"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/tags/pdf.min.js"></script>
 
 
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/fancybox.min.js"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/fancybox.min.js"></script>
 
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/pace.min.js"></script>
-
-  
-
-
-
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/pace.min.js"></script>
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.3/dist/katex.min.css" integrity="sha256-NJNVfEC6jfEt62wQMafLNT2eI6BaWONXbpkSEVAs3+8=" crossorigin="anonymous">
-  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.3/dist/contrib/copy-tex.min.js","integrity":"sha256-Us54+rSGDSTvIhKKUs4kygE2ipA0RXpWWh0/zLqw3bs="}}</script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/math/katex.min.js"></script>
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/mathjax@3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/math/mathjax.min.js"></script>
 
 
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/quicklink@2.3.0/dist/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>
   <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":false,"delay":true,"timeout":3000,"priority":true,"url":"https://www.iszy.cc/posts/wild-card/"}</script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/quicklink.min.js"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/quicklink.min.js"></script>
 <script class="next-config" data-name="waline" type="application/json">{"lang":"zh-CN","enable":true,"serverURL":"https://wl.iszy.xyz","cssUrl":"https://jsdelivr.cdn.iszy.xyz/npm/@waline/client@v2.14.1/dist/waline.css","commentCount":false,"pageview":true,"libUrl":"https://jsdelivr.cdn.iszy.xyz/npm/@waline/client@v2.14.1/dist/waline.min.js","locale":{"placeholder":"本站支持匿名评论，无需登录~(●'◡'●)\n与文章无关的留言请前往本站留言板，谢谢配合~"},"emoji":["https://jsdelivr.cdn.iszy.xyz/gh/zvonimirsun/emojis@1.0.3/bilibili-xhl"],"meta":["nick","mail","link"],"requiredMeta":["nick"],"wordLimit":0,"login":"enable","pageSize":10,"dark":"auto","el":"#waline","comment":true,"path":"/posts/wild-card/"}</script>
 <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/@waline/client@v2.14.1/dist/waline.css">
 <script>

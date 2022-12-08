@@ -21,12 +21,12 @@
 
 <link rel="stylesheet" href="https://fonts.cdn.iszy.xyz/css?family=Lato:300,300italic,400,400italic,700,700italic%7CJetBrains+Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
-<link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/@fortawesome/fontawesome-free@6.2.1/css/all.min.css" integrity="sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"www.iszy.cc","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.13.2","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":true,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"algolia":{"appID":"1UJ2W38EIN","apiKey":"c0cf4d0a9659a45dd3a38becbe6b6f73","indexName":"iszy_blog","hits":{"per_page":10}}}</script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/config.min.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.iszy.cc","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.14.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":true,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"algolia":{"appID":"1UJ2W38EIN","apiKey":"c0cf4d0a9659a45dd3a38becbe6b6f73","indexName":"iszy_blog","hits":{"per_page":10}}}</script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/config.min.js"></script>
 
     <meta name="description" content="原文链接: Javascript 模块化编程（三）：require.js 的用法 —— 阮一峰">
 <meta property="og:type" content="article">
@@ -56,7 +56,7 @@
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-E60YKKHF8Y"></script>
   <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-E60YKKHF8Y","only_pageview":false}</script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/analytics/google-analytics.min.js"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/analytics/google-analytics.min.js"></script>
 
 
 
@@ -154,7 +154,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E7%94%A8-require-js%EF%BC%9F"><span class="nav-number">1.</span> <span class="nav-text">为什么要用 require.js？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#require-js-%E7%9A%84%E5%8A%A0%E8%BD%BD"><span class="nav-number">2.</span> <span class="nav-text">require.js 的加载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BB%E6%A8%A1%E5%9D%97%E7%9A%84%E5%86%99%E6%B3%95"><span class="nav-number">3.</span> <span class="nav-text">主模块的写法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A8%A1%E5%9D%97%E7%9A%84%E5%8A%A0%E8%BD%BD"><span class="nav-number">4.</span> <span class="nav-text">模块的加载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AMD-%E6%A8%A1%E5%9D%97%E7%9A%84%E5%86%99%E6%B3%95"><span class="nav-number">5.</span> <span class="nav-text">AMD 模块的写法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A0%E8%BD%BD%E9%9D%9E%E8%A7%84%E8%8C%83%E7%9A%84%E6%A8%A1%E5%9D%97"><span class="nav-number">6.</span> <span class="nav-text">加载非规范的模块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#require-js-%E6%8F%92%E4%BB%B6"><span class="nav-number">7.</span> <span class="nav-text">require.js 插件</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E7%94%A8-require.js"><span class="nav-number">1.</span> <span class="nav-text">为什么要用 require.js？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#require.js-%E7%9A%84%E5%8A%A0%E8%BD%BD"><span class="nav-number">2.</span> <span class="nav-text">require.js 的加载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BB%E6%A8%A1%E5%9D%97%E7%9A%84%E5%86%99%E6%B3%95"><span class="nav-number">3.</span> <span class="nav-text">主模块的写法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A8%A1%E5%9D%97%E7%9A%84%E5%8A%A0%E8%BD%BD"><span class="nav-number">4.</span> <span class="nav-text">模块的加载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#amd-%E6%A8%A1%E5%9D%97%E7%9A%84%E5%86%99%E6%B3%95"><span class="nav-number">5.</span> <span class="nav-text">AMD 模块的写法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A0%E8%BD%BD%E9%9D%9E%E8%A7%84%E8%8C%83%E7%9A%84%E6%A8%A1%E5%9D%97"><span class="nav-number">6.</span> <span class="nav-text">加载非规范的模块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#require.js-%E6%8F%92%E4%BB%B6"><span class="nav-number">7.</span> <span class="nav-text">require.js 插件</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -347,82 +347,130 @@
     
     <div class="post-body" itemprop="articleBody">
         <blockquote>
-<p>原文链接: <span class="exturl" data-url="aHR0cDovL3d3dy5ydWFueWlmZW5nLmNvbS9ibG9nLzIwMTIvMTEvcmVxdWlyZV9qcy5odG1s">Javascript 模块化编程（三）：require.js 的用法<i class="fa fa-external-link-alt"></i></span> —— 阮一峰</p>
+<p>原文链接: <span class="exturl" data-url="aHR0cDovL3d3dy5ydWFueWlmZW5nLmNvbS9ibG9nLzIwMTIvMTEvcmVxdWlyZV9qcy5odG1s">Javascript
+模块化编程（三）：require.js 的用法<i class="fa fa-external-link-alt"></i></span> —— 阮一峰</p>
 </blockquote>
 <span id="more"></span>
-<p>这个系列的<a href="/2019/08/14/javascript_module/">第一部分</a>和<a href="/2019/08/14/asynchronous_module_definition/">第二部分</a>，介绍了 Javascript 模块原型和理论概念，今天介绍如何将它们用于实战。</p>
+<p>这个系列的<a href="/2019/08/14/javascript_module/">第一部分</a>和<a
+href="/2019/08/14/asynchronous_module_definition/">第二部分</a>，介绍了
+Javascript 模块原型和理论概念，今天介绍如何将它们用于实战。</p>
 <p>我采用的是一个非常流行的库<span class="exturl" data-url="aHR0cDovL3JlcXVpcmVqcy5vcmcv">require.js<i class="fa fa-external-link-alt"></i></span>。</p>
-<p><img data-src="https://img.iszy.xyz/20190814101519.png" alt=""></p>
-<h2 id="为什么要用-require-js？">为什么要用 require.js？</h2>
-<p>最早的时候，所有 Javascript 代码都写在一个文件里面，只要加载这一个文件就够了。后来，代码越来越多，一个文件不够了，必须分成多个文件，依次加载。下面的网页代码，相信很多人都见过。</p>
+<p><img data-src="https://img.iszy.xyz/20190814101519.png" /></p>
+<h2 id="为什么要用-require.js">为什么要用 require.js？</h2>
+<p>最早的时候，所有 Javascript
+代码都写在一个文件里面，只要加载这一个文件就够了。后来，代码越来越多，一个文件不够了，必须分成多个文件，依次加载。下面的网页代码，相信很多人都见过。</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;1.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;2.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;3.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;4.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;5.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;6.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>这段代码依次加载多个 js 文件。</p>
-<p>这样的写法有很大的缺点。首先，加载的时候，浏览器会停止网页渲染，加载文件越多，网页失去响应的时间就会越长；其次，由于 js 文件之间存在依赖关系，因此必须严格保证加载顺序（比如上例的 1.js 要在 2.js 的前面），依赖性最大的模块一定要放到最后加载，当依赖关系很复杂的时候，代码的编写和维护都会变得困难。</p>
+<p>这样的写法有很大的缺点。首先，加载的时候，浏览器会停止网页渲染，加载文件越多，网页失去响应的时间就会越长；其次，由于
+js 文件之间存在依赖关系，因此必须严格保证加载顺序（比如上例的 1.js 要在
+2.js
+的前面），依赖性最大的模块一定要放到最后加载，当依赖关系很复杂的时候，代码的编写和维护都会变得困难。</p>
 <p>require.js 的诞生，就是为了解决这两个问题：</p>
 <ul>
 <li>实现 js 文件的异步加载，避免网页失去响应；</li>
 <li>管理模块之间的依赖性，便于代码的编写和维护。</li>
 </ul>
-<h2 id="require-js-的加载">require.js 的加载</h2>
+<h2 id="require.js-的加载">require.js 的加载</h2>
 <p>使用 require.js 的第一步，是先去官方网站<span class="exturl" data-url="aHR0cDovL3JlcXVpcmVqcy5vcmcvZG9jcy9kb3dubG9hZC5odG1s">下载<i class="fa fa-external-link-alt"></i></span>最新版本。</p>
 <p>下载后，假定把它放在 js 子目录下面，就可以加载了。</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;js/require.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>有人可能会想到，加载这个文件，也可能造成网页失去响应。解决办法有两个，一个是把它放在网页底部加载，另一个是写成下面这样：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;js/require.js&quot;</span> <span class="attr">defer</span> <span class="attr">async</span>=<span class="string">&quot;true&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>async 属性表明这个文件需要异步加载，避免网页失去响应。IE 不支持这个属性，只支持 defer，所以把 defer 也写上。</p>
-<p>加载 require.js 以后，下一步就要加载我们自己的代码了。假定我们自己的代码文件是 main.js，也放在 js 目录下面。那么，只需要写成下面这样就行了：</p>
+<p>async 属性表明这个文件需要异步加载，避免网页失去响应。IE
+不支持这个属性，只支持 defer，所以把 defer 也写上。</p>
+<p>加载 require.js
+以后，下一步就要加载我们自己的代码了。假定我们自己的代码文件是
+main.js，也放在 js 目录下面。那么，只需要写成下面这样就行了：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;js/require.js&quot;</span> <span class="attr">data-main</span>=<span class="string">&quot;js/main&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>data-main 属性的作用是，指定网页程序的主模块。在上例中，就是 js 目录下面的 main.js，这个文件会第一个被 require.js 加载。由于 require.js 默认的文件后缀名是 js，所以可以把 main.js 简写成 main。</p>
+<p>data-main 属性的作用是，指定网页程序的主模块。在上例中，就是 js
+目录下面的 main.js，这个文件会第一个被 require.js 加载。由于 require.js
+默认的文件后缀名是 js，所以可以把 main.js 简写成 main。</p>
 <h2 id="主模块的写法">主模块的写法</h2>
-<p>上一节的 main.js，我把它称为&quot;主模块&quot;，意思是整个网页的入口代码。它有点像 C 语言的 main()函数，所有代码都从这儿开始运行。</p>
+<p>上一节的
+main.js，我把它称为"主模块"，意思是整个网页的入口代码。它有点像 C 语言的
+main()函数，所有代码都从这儿开始运行。</p>
 <p>下面就来看，怎么写 main.js。</p>
-<p>如果我们的代码不依赖任何其他模块，那么可以直接写入 javascript 代码。</p>
+<p>如果我们的代码不依赖任何其他模块，那么可以直接写入 javascript
+代码。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// main.js</span></span><br><span class="line"></span><br><span class="line"><span class="title function_">alert</span>(<span class="string">&quot;加载成功！&quot;</span>);</span><br></pre></td></tr></table></figure>
-<p>但这样的话，就没必要使用 require.js 了。真正常见的情况是，主模块依赖于其他模块，这时就要使用 AMD 规范定义的的 require()函数。</p>
+<p>但这样的话，就没必要使用 require.js
+了。真正常见的情况是，主模块依赖于其他模块，这时就要使用 AMD
+规范定义的的 require()函数。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// main.js</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">require</span>([<span class="string">&quot;moduleA&quot;</span>, <span class="string">&quot;moduleB&quot;</span>, <span class="string">&quot;moduleC&quot;</span>], <span class="keyword">function</span> (<span class="params"></span></span><br><span class="line"><span class="params">  moduleA,</span></span><br><span class="line"><span class="params">  moduleB,</span></span><br><span class="line"><span class="params">  moduleC</span></span><br><span class="line"><span class="params"></span>) &#123;</span><br><span class="line">  <span class="comment">// some code here</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p>require()函数接受两个参数。第一个参数是一个数组，表示所依赖的模块，上例就是[‘moduleA’, ‘moduleB’, ‘moduleC’]，即主模块依赖这三个模块；第二个参数是一个回调函数，当前面指定的模块都加载成功后，它将被调用。加载的模块会以参数形式传入该函数，从而在回调函数内部就可以使用这些模块。</p>
-<p>require()异步加载 moduleA，moduleB 和 moduleC，浏览器不会失去响应；它指定的回调函数，只有前面的模块都加载成功后，才会运行，解决了依赖性的问题。</p>
+<p>require()函数接受两个参数。第一个参数是一个数组，表示所依赖的模块，上例就是['moduleA',
+'moduleB',
+'moduleC']，即主模块依赖这三个模块；第二个参数是一个回调函数，当前面指定的模块都加载成功后，它将被调用。加载的模块会以参数形式传入该函数，从而在回调函数内部就可以使用这些模块。</p>
+<p>require()异步加载 moduleA，moduleB 和
+moduleC，浏览器不会失去响应；它指定的回调函数，只有前面的模块都加载成功后，才会运行，解决了依赖性的问题。</p>
 <p>下面，我们看一个实际的例子。</p>
-<p>假定主模块依赖 jquery、underscore 和 backbone 这三个模块，main.js 就可以这样写：</p>
+<p>假定主模块依赖 jquery、underscore 和 backbone 这三个模块，main.js
+就可以这样写：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">require</span>([<span class="string">&quot;jquery&quot;</span>, <span class="string">&quot;underscore&quot;</span>, <span class="string">&quot;backbone&quot;</span>], <span class="keyword">function</span> (<span class="params">$, _, Backbone</span>) &#123;</span><br><span class="line">  <span class="comment">// some code here</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p>require.js 会先加载 jQuery、underscore 和 backbone，然后再运行回调函数。主模块的代码就写在回调函数中。</p>
+<p>require.js 会先加载 jQuery、underscore 和
+backbone，然后再运行回调函数。主模块的代码就写在回调函数中。</p>
 <h2 id="模块的加载">模块的加载</h2>
-<p>上一节最后的示例中，主模块的依赖模块是[‘jquery’, ‘underscore’, ‘backbone’]。默认情况下，require.js 假定这三个模块与 main.js 在同一个目录，文件名分别为 jquery.js，underscore.js 和 backbone.js，然后自动加载。</p>
-<p>使用 require.config()方法，我们可以对模块的加载行为进行自定义。require.config()就写在主模块（main.js）的头部。参数就是一个对象，这个对象的 paths 属性指定各个模块的加载路径。</p>
+<p>上一节最后的示例中，主模块的依赖模块是['jquery', 'underscore',
+'backbone']。默认情况下，require.js 假定这三个模块与 main.js
+在同一个目录，文件名分别为 jquery.js，underscore.js 和
+backbone.js，然后自动加载。</p>
+<p>使用
+require.config()方法，我们可以对模块的加载行为进行自定义。require.config()就写在主模块（main.js）的头部。参数就是一个对象，这个对象的
+paths 属性指定各个模块的加载路径。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">require</span>.<span class="title function_">config</span>(&#123;</span><br><span class="line">  <span class="attr">paths</span>: &#123;</span><br><span class="line">    <span class="attr">jquery</span>: <span class="string">&quot;jquery.min&quot;</span>,</span><br><span class="line">    <span class="attr">underscore</span>: <span class="string">&quot;underscore.min&quot;</span>,</span><br><span class="line">    <span class="attr">backbone</span>: <span class="string">&quot;backbone.min&quot;</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p>上面的代码给出了三个模块的文件名，路径默认与 main.js 在同一个目录（js 子目录）。如果这些模块在其他目录，比如 js/lib 目录，则有两种写法。一种是逐一指定路径。</p>
+<p>上面的代码给出了三个模块的文件名，路径默认与 main.js 在同一个目录（js
+子目录）。如果这些模块在其他目录，比如 js/lib
+目录，则有两种写法。一种是逐一指定路径。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">require</span>.<span class="title function_">config</span>(&#123;</span><br><span class="line">  <span class="attr">paths</span>: &#123;</span><br><span class="line">    <span class="attr">jquery</span>: <span class="string">&quot;lib/jquery.min&quot;</span>,</span><br><span class="line">    <span class="attr">underscore</span>: <span class="string">&quot;lib/underscore.min&quot;</span>,</span><br><span class="line">    <span class="attr">backbone</span>: <span class="string">&quot;lib/backbone.min&quot;</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <p>另一种则是直接改变基目录（baseUrl）。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">require</span>.<span class="title function_">config</span>(&#123;</span><br><span class="line">  <span class="attr">baseUrl</span>: <span class="string">&quot;js/lib&quot;</span>,</span><br><span class="line"></span><br><span class="line">  <span class="attr">paths</span>: &#123;</span><br><span class="line">    <span class="attr">jquery</span>: <span class="string">&quot;jquery.min&quot;</span>,</span><br><span class="line">    <span class="attr">underscore</span>: <span class="string">&quot;underscore.min&quot;</span>,</span><br><span class="line">    <span class="attr">backbone</span>: <span class="string">&quot;backbone.min&quot;</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <p>如果某个模块在另一台主机上，也可以直接指定它的网址，比如：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">require</span>.<span class="title function_">config</span>(&#123;</span><br><span class="line">  <span class="attr">paths</span>: &#123;</span><br><span class="line">    <span class="attr">jquery</span>: <span class="string">&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min&quot;</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p>require.js 要求，每个模块是一个单独的 js 文件。这样的话，如果加载多个模块，就会发出多次 HTTP 请求，会影响网页的加载速度。因此，require.js 提供了一个<span class="exturl" data-url="aHR0cDovL3JlcXVpcmVqcy5vcmcvZG9jcy9vcHRpbWl6YXRpb24uaHRtbA==">优化工具<i class="fa fa-external-link-alt"></i></span>，当模块部署完毕以后，可以用这个工具将多个模块合并在一个文件中，减少 HTTP 请求数。</p>
-<h2 id="AMD-模块的写法">AMD 模块的写法</h2>
-<p>require.js 加载的模块，采用 AMD 规范。也就是说，模块必须按照 AMD 的规定来写。</p>
-<p>具体来说，就是模块必须采用特定的 define()函数来定义。如果一个模块不依赖其他模块，那么可以直接定义在 define()函数之中。</p>
-<p>假定现在有一个 math.js 文件，它定义了一个 math 模块。那么，math.js 就要这样写：</p>
+<p>require.js 要求，每个模块是一个单独的 js
+文件。这样的话，如果加载多个模块，就会发出多次 HTTP
+请求，会影响网页的加载速度。因此，require.js 提供了一个<span class="exturl" data-url="aHR0cDovL3JlcXVpcmVqcy5vcmcvZG9jcy9vcHRpbWl6YXRpb24uaHRtbA==">优化工具<i class="fa fa-external-link-alt"></i></span>，当模块部署完毕以后，可以用这个工具将多个模块合并在一个文件中，减少
+HTTP 请求数。</p>
+<h2 id="amd-模块的写法">AMD 模块的写法</h2>
+<p>require.js 加载的模块，采用 AMD 规范。也就是说，模块必须按照 AMD
+的规定来写。</p>
+<p>具体来说，就是模块必须采用特定的
+define()函数来定义。如果一个模块不依赖其他模块，那么可以直接定义在
+define()函数之中。</p>
+<p>假定现在有一个 math.js 文件，它定义了一个 math 模块。那么，math.js
+就要这样写：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// math.js</span></span><br><span class="line"></span><br><span class="line"><span class="title function_">define</span>(<span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">var</span> add = <span class="keyword">function</span> (<span class="params">x, y</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> x + y;</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    <span class="attr">add</span>: add,</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <p>加载方法如下：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// main.js</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">require</span>([<span class="string">&quot;math&quot;</span>], <span class="keyword">function</span> (<span class="params">math</span>) &#123;</span><br><span class="line">  <span class="title function_">alert</span>(math.<span class="title function_">add</span>(<span class="number">1</span>, <span class="number">1</span>));</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p>如果这个模块还依赖其他模块，那么 define()函数的第一个参数，必须是一个数组，指明该模块的依赖性。</p>
+<p>如果这个模块还依赖其他模块，那么
+define()函数的第一个参数，必须是一个数组，指明该模块的依赖性。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">define</span>([<span class="string">&quot;myLib&quot;</span>], <span class="keyword">function</span> (<span class="params">myLib</span>) &#123;</span><br><span class="line">  <span class="keyword">function</span> <span class="title function_">foo</span>(<span class="params"></span>) &#123;</span><br><span class="line">    myLib.<span class="title function_">doSomething</span>();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    <span class="attr">foo</span>: foo,</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p>当 require()函数加载上面这个模块的时候，就会先加载 myLib.js 文件。</p>
+<p>当 require()函数加载上面这个模块的时候，就会先加载 myLib.js
+文件。</p>
 <h2 id="加载非规范的模块">加载非规范的模块</h2>
-<p>理论上，require.js 加载的模块，必须是按照 AMD 规范、用 define()函数定义的模块。但是实际上，虽然已经有一部分流行的函数库（比如 jQuery）符合 AMD 规范，更多的库并不符合。那么，require.js 是否能够加载非规范的模块呢？</p>
+<p>理论上，require.js 加载的模块，必须是按照 AMD 规范、用
+define()函数定义的模块。但是实际上，虽然已经有一部分流行的函数库（比如
+jQuery）符合 AMD 规范，更多的库并不符合。那么，require.js
+是否能够加载非规范的模块呢？</p>
 <p>回答是可以的。</p>
-<p>这样的模块在用 require()加载之前，要先用 require.config()方法，定义它们的一些特征。</p>
-<p>举例来说，underscore 和 backbone 这两个库，都没有采用 AMD 规范编写。如果要加载它们的话，必须先定义它们的特征。</p>
+<p>这样的模块在用 require()加载之前，要先用
+require.config()方法，定义它们的一些特征。</p>
+<p>举例来说，underscore 和 backbone 这两个库，都没有采用 AMD
+规范编写。如果要加载它们的话，必须先定义它们的特征。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">require</span>.<span class="title function_">config</span>(&#123;</span><br><span class="line">  <span class="attr">shim</span>: &#123;</span><br><span class="line">    <span class="attr">underscore</span>: &#123;</span><br><span class="line">      <span class="attr">exports</span>: <span class="string">&quot;_&quot;</span>,</span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line">    <span class="attr">backbone</span>: &#123;</span><br><span class="line">      <span class="attr">deps</span>: [<span class="string">&quot;underscore&quot;</span>, <span class="string">&quot;jquery&quot;</span>],</span><br><span class="line">      <span class="attr">exports</span>: <span class="string">&quot;Backbone&quot;</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p>require.config()接受一个配置对象，这个对象除了有前面说过的 paths 属性之外，还有一个 shim 属性，专门用来配置不兼容的模块。具体来说，每个模块要定义（1）exports 值（输出的变量名），表明这个模块外部调用时的名称；（2）deps 数组，表明该模块的依赖性。</p>
+<p>require.config()接受一个配置对象，这个对象除了有前面说过的 paths
+属性之外，还有一个 shim
+属性，专门用来配置不兼容的模块。具体来说，每个模块要定义（1）exports
+值（输出的变量名），表明这个模块外部调用时的名称；（2）deps
+数组，表明该模块的依赖性。</p>
 <p>比如，jQuery 的插件可以这样定义：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">　　<span class="attr">shim</span>: &#123;</span><br><span class="line"></span><br><span class="line">　　　　<span class="string">&#x27;jquery.scroll&#x27;</span>: &#123;</span><br><span class="line"></span><br><span class="line">　　　　　　<span class="attr">deps</span>: [<span class="string">&#x27;jquery&#x27;</span>],</span><br><span class="line"></span><br><span class="line">　　　　　　<span class="attr">exports</span>: <span class="string">&#x27;jQuery.fn.scroll&#x27;</span></span><br><span class="line"></span><br><span class="line">　　　　&#125;</span><br><span class="line"></span><br><span class="line">　　&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="require-js-插件">require.js 插件</h2>
+<h2 id="require.js-插件">require.js 插件</h2>
 <p>require.js 还提供一系列<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2pyYnVya2UvcmVxdWlyZWpzL3dpa2kvUGx1Z2lucw==">插件<i class="fa fa-external-link-alt"></i></span>，实现一些特定的功能。</p>
 <p>domready 插件，可以让回调函数在页面 DOM 结构加载完成后再运行。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">require</span>([<span class="string">&quot;domready!&quot;</span>], <span class="keyword">function</span> (<span class="params">doc</span>) &#123;</span><br><span class="line">  <span class="comment">// called once the DOM is ready</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <p>text 和 image 插件，则是允许 require.js 加载文本和图片文件。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">define</span>([<span class="string">&quot;text!review.txt&quot;</span>, <span class="string">&quot;image!cat.jpg&quot;</span>], <span class="keyword">function</span> (<span class="params">review, cat</span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(review);</span><br><span class="line"></span><br><span class="line">  <span class="variable language_">document</span>.<span class="property">body</span>.<span class="title function_">appendChild</span>(cat);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p>类似的插件还有 json 和 mdown，用于加载 json 文件和 markdown 文件。</p>
+<p>类似的插件还有 json 和 mdown，用于加载 json 文件和 markdown
+文件。</p>
 <p>（完）</p>
 
     </div>
@@ -505,39 +553,38 @@
 
   
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/@next-theme/pjax@0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/@next-theme/pjax@0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/jquery@3.6.1/dist/jquery.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
-<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/comments.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/utils.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/next-boot.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/pjax.min.js"></script>
+<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/comments.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/utils.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/next-boot.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/pjax.min.js"></script>
 
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/algoliasearch@4.14.2/dist/algoliasearch-lite.umd.js" integrity="sha256-dImjLPUsG/6p3+i7gVKBiDM8EemJAhQ0VvkRK2pVsQY=" crossorigin="anonymous"></script>
-<script src="https://jsdelivr.cdn.iszy.xyz/npm/instantsearch.js@4.49.0/dist/instantsearch.production.min.js" integrity="sha256-5FvX4v/nWhVAZLvv1sbGwV6w8AY4kdd+R5FpIsXkh9w=" crossorigin="anonymous"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/search/algolia-search.min.js"></script>
+<script src="https://jsdelivr.cdn.iszy.xyz/npm/instantsearch.js@4.49.1/dist/instantsearch.production.min.js" integrity="sha256-3s8yn/IU/hV+UjoqczP+9xDS1VXIpMf3QYRUi9XoG0Y=" crossorigin="anonymous"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/search/algolia-search.min.js"></script>
 
   <script class="next-config" data-name="pdf" type="application/json">{"object_url":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/pdfobject@2.2.8/pdfobject.min.js","integrity":"sha256-tu9j5pBilBQrWSDePOOajCUdz6hWsid/lBNzK4KgEPM="},"url":"/lib/pdf/web/viewer"}</script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/tags/pdf.min.js"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/tags/pdf.min.js"></script>
 
 
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/fancybox.min.js"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/fancybox.min.js"></script>
 
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/pace.min.js"></script>
-
-  
-
-
-
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/pace.min.js"></script>
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.3/dist/katex.min.css" integrity="sha256-NJNVfEC6jfEt62wQMafLNT2eI6BaWONXbpkSEVAs3+8=" crossorigin="anonymous">
-  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.3/dist/contrib/copy-tex.min.js","integrity":"sha256-Us54+rSGDSTvIhKKUs4kygE2ipA0RXpWWh0/zLqw3bs="}}</script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/math/katex.min.js"></script>
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/mathjax@3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/math/mathjax.min.js"></script>
 
 
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/quicklink@2.3.0/dist/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>
   <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":false,"delay":true,"timeout":3000,"priority":true,"url":"https://www.iszy.cc/posts/require_js/"}</script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/quicklink.min.js"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/quicklink.min.js"></script>
 <script class="next-config" data-name="waline" type="application/json">{"lang":"zh-CN","enable":true,"serverURL":"https://wl.iszy.xyz","cssUrl":"https://jsdelivr.cdn.iszy.xyz/npm/@waline/client@v2.14.1/dist/waline.css","commentCount":false,"pageview":true,"libUrl":"https://jsdelivr.cdn.iszy.xyz/npm/@waline/client@v2.14.1/dist/waline.min.js","locale":{"placeholder":"本站支持匿名评论，无需登录~(●'◡'●)\n与文章无关的留言请前往本站留言板，谢谢配合~"},"emoji":["https://jsdelivr.cdn.iszy.xyz/gh/zvonimirsun/emojis@1.0.3/bilibili-xhl"],"meta":["nick","mail","link"],"requiredMeta":["nick"],"wordLimit":0,"login":"enable","pageSize":10,"dark":"auto","el":"#waline","comment":true,"path":"/posts/require_js/"}</script>
 <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/@waline/client@v2.14.1/dist/waline.css">
 <script>

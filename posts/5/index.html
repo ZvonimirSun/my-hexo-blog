@@ -21,12 +21,12 @@
 
 <link rel="stylesheet" href="https://fonts.cdn.iszy.xyz/css?family=Lato:300,300italic,400,400italic,700,700italic%7CJetBrains+Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
-<link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/@fortawesome/fontawesome-free@6.2.1/css/all.min.css" integrity="sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"www.iszy.cc","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.13.2","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":true,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"algolia":{"appID":"1UJ2W38EIN","apiKey":"c0cf4d0a9659a45dd3a38becbe6b6f73","indexName":"iszy_blog","hits":{"per_page":10}}}</script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/config.min.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.iszy.cc","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.14.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":true,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"algolia":{"appID":"1UJ2W38EIN","apiKey":"c0cf4d0a9659a45dd3a38becbe6b6f73","indexName":"iszy_blog","hits":{"per_page":10}}}</script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/config.min.js"></script>
 
     <meta name="description" content="最近尝试在 Vue 中实现奥利奥生成器的效果，遇到使用 Canvas 的 drawImage 方法绘制图片不显示的问题，在此记录下解决过程。">
 <meta property="og:type" content="article">
@@ -58,7 +58,7 @@
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-E60YKKHF8Y"></script>
   <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-E60YKKHF8Y","only_pageview":false}</script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/analytics/google-analytics.min.js"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/analytics/google-analytics.min.js"></script>
 
 
 
@@ -337,80 +337,99 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>最近尝试在 Vue 中实现奥利奥生成器的效果，遇到使用 Canvas 的 drawImage 方法绘制图片不显示的问题，在此记录下解决过程。</p>
+        <p>最近尝试在 Vue 中实现奥利奥生成器的效果，遇到使用 Canvas 的 drawImage
+方法绘制图片不显示的问题，在此记录下解决过程。</p>
 <span id="more"></span>
 <h2 id="前言">前言</h2>
 <p>欢迎体验</p>
 <p><span class="exturl" data-url="aHR0cHM6Ly90b29scy5pc3p5Lnh5ei9vdGhlcnMvb3Jlb29v">奥利奥生成器<i class="fa fa-external-link-alt"></i></span></p>
-<p><img data-src="https://img.iszy.xyz/20210523144733.png" alt=""><img data-src="https://img.iszy.xyz/20210523144706.png" alt=""></p>
+<p><img data-src="https://img.iszy.xyz/20210523144733.png" /><img data-src="https://img.iszy.xyz/20210523144706.png" /></p>
 <h2 id="实现思路">实现思路</h2>
-<p>奥利奥的原理，就是根据不同的字符串组合，对应不同的图片，然后按顺序将图片绘制到 canvas 上，最终生成图片。</p>
+<p>奥利奥的原理，就是根据不同的字符串组合，对应不同的图片，然后按顺序将图片绘制到
+canvas 上，最终生成图片。</p>
 <p>canvas 的 drawImage 有几种用法。</p>
 <ul>
 <li>在画布上定位图像: <code>ctx.drawImage(img,x,y);</code></li>
-<li>在画布上定位图像，并规定图像的宽度和高度: <code>ctx.drawImage(img,x,y,width,height);</code></li>
-<li>剪切图像，并在画布上定位被剪切的部分: <code>ctx.drawImage(img,sx,sy,swidth,sheight,x,y,width,height);</code></li>
+<li>在画布上定位图像，并规定图像的宽度和高度:
+<code>ctx.drawImage(img,x,y,width,height);</code></li>
+<li>剪切图像，并在画布上定位被剪切的部分:
+<code>ctx.drawImage(img,sx,sy,swidth,sheight,x,y,width,height);</code></li>
 </ul>
 <p>我们这里只需要使用第二种方法，控制下图片的大小即可。</p>
 <p>参数值</p>
 <table>
 <thead>
-<tr>
+<tr class="header">
 <th>参数</th>
 <th>描述</th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>img</td>
 <td>规定要使用的图像、画布或视频。</td>
 </tr>
-<tr>
+<tr class="even">
 <td>sx 可选。</td>
 <td>开始剪切的 x 坐标位置。</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>sy 可选。</td>
 <td>开始剪切的 y 坐标位置。</td>
 </tr>
-<tr>
+<tr class="even">
 <td>swidth 可选。</td>
 <td>被剪切图像的宽度。</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>sheight 可选。</td>
 <td>被剪切图像的高度。</td>
 </tr>
-<tr>
+<tr class="even">
 <td>x</td>
 <td>在画布上放置图像的 x 坐标位置。</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>y</td>
 <td>在画布上放置图像的 y 坐标位置。</td>
 </tr>
-<tr>
+<tr class="even">
 <td>width 可选。</td>
 <td>要使用的图像的宽度（伸展或缩小图像）。</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>height 可选。</td>
 <td>要使用的图像的高度（伸展或缩小图像）。</td>
 </tr>
 </tbody>
 </table>
-<p>一般情况下，都按照下面的示例来使用。把绘制写到 img 的 onload 事件里，是因为如果图片还没有加载完成，drawImage 是不生效的，这样能够保证图片已经加载完成。不过因为我们需要多次调用同一张图片，绘制多次，这样的方法就不是很方便。</p>
+<p>一般情况下，都按照下面的示例来使用。把绘制写到 img 的 onload
+事件里，是因为如果图片还没有加载完成，drawImage
+是不生效的，这样能够保证图片已经加载完成。不过因为我们需要多次调用同一张图片，绘制多次，这样的方法就不是很方便。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> c = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;myCanvas&quot;</span>);</span><br><span class="line"><span class="keyword">var</span> ctx = c.<span class="title function_">getContext</span>(<span class="string">&quot;2d&quot;</span>);</span><br><span class="line"><span class="keyword">var</span> img = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;scream&quot;</span>);</span><br><span class="line">img.<span class="property">onload</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">  ctx.<span class="title function_">drawImage</span>(img, <span class="number">10</span>, <span class="number">10</span>, <span class="number">150</span>, <span class="number">180</span>);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p>于是尝试将加载的图片缓存一下，方便调用，使用的是下面的方法。sources 中是图片名称和图片地址的键值对，使用 Image 对象设置 src 的方式加载图片；在 onload 事件中，记录加载完成的次数；当全部加载完成时，将存储了这些 Image 对象的 cacheImages 对象存储下来以便调用。</p>
-<p>在原版 oreooo 的页面中，我可以看到这个方法是有效的。但是我在 Vue 3 + Vite 2 的环境下，虽然 cacheImages 成功存储了，也能在 Networks 里面看到网络请求，但是 canvas 绘制出来的图形一直是空白的。</p>
+<p>于是尝试将加载的图片缓存一下，方便调用，使用的是下面的方法。sources
+中是图片名称和图片地址的键值对，使用 Image 对象设置 src
+的方式加载图片；在 onload
+事件中，记录加载完成的次数；当全部加载完成时，将存储了这些 Image 对象的
+cacheImages 对象存储下来以便调用。</p>
+<p>在原版 oreooo 的页面中，我可以看到这个方法是有效的。但是我在 Vue 3 +
+Vite 2 的环境下，虽然 cacheImages 成功存储了，也能在 Networks
+里面看到网络请求，但是 canvas 绘制出来的图形一直是空白的。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">loadImages</span>: <span class="keyword">function</span> (<span class="params">sources, callback</span>) &#123;</span><br><span class="line">    <span class="keyword">var</span> cacheImages = &#123;&#125;;</span><br><span class="line">    <span class="keyword">var</span> index = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">var</span> attCount = <span class="title class_">Object</span>.<span class="title function_">getOwnPropertyNames</span>(sources).<span class="property">length</span>;</span><br><span class="line">    <span class="keyword">for</span> (imgItem <span class="keyword">in</span> sources) &#123;</span><br><span class="line">        cacheImages[imgItem] = <span class="keyword">new</span> <span class="title class_">Image</span>();</span><br><span class="line">        cacheImages[imgItem].<span class="property">onload</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">            index++;</span><br><span class="line">            <span class="keyword">if</span> (index == attCount) &#123;</span><br><span class="line">                images = cacheImages;</span><br><span class="line">                <span class="keyword">if</span> (<span class="keyword">typeof</span> callback === <span class="string">&quot;function&quot;</span>) &#123;</span><br><span class="line">                    <span class="title function_">callback</span>();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        cacheImages[imgItem].<span class="property">src</span> = sources[imgItem];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>或许是需要实际存在的 img 标签才有用，我如果页面上实际就有这个图片，我测试了下，确实就能获取到图片绘制出来了。于是我换了种写法，通过在页面实际加载图片，然后在绘制时获取图片 DOM 的 image，只要图片已经加载完成了，绘制时就能正常出图了。下面是在 Vue 里的一个大概示例。</p>
+<p>或许是需要实际存在的 img
+标签才有用，我如果页面上实际就有这个图片，我测试了下，确实就能获取到图片绘制出来了。于是我换了种写法，通过在页面实际加载图片，然后在绘制时获取图片
+DOM 的 image，只要图片已经加载完成了，绘制时就能正常出图了。下面是在 Vue
+里的一个大概示例。</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;imgContainer&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">:src</span>=<span class="string">&quot;assets.O&quot;</span> <span class="attr">ref</span>=<span class="string">&quot;O&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">:src</span>=<span class="string">&quot;assets.R&quot;</span> <span class="attr">ref</span>=<span class="string">&quot;R&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">:src</span>=<span class="string">&quot;assets.Ob&quot;</span> <span class="attr">ref</span>=<span class="string">&quot;Ob&quot;</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;output-image&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">canvas</span> <span class="attr">ref</span>=<span class="string">&quot;oreo_canvas&quot;</span> <span class="attr">width</span>=<span class="string">&quot;240&quot;</span> <span class="attr">height</span>=<span class="string">&quot;500&quot;</span>&gt;</span></span><br><span class="line">      您的浏览器不支持 HTML5 canvas 标签。</span><br><span class="line">    <span class="tag">&lt;/<span class="name">canvas</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">  <span class="keyword">import</span> O <span class="keyword">from</span> <span class="string">&quot;./assets/image/O.png&quot;</span>;</span></span><br><span class="line"><span class="language-javascript">  <span class="keyword">import</span> R <span class="keyword">from</span> <span class="string">&quot;./assets/image/R.png&quot;</span>;</span></span><br><span class="line"><span class="language-javascript">  <span class="keyword">import</span> <span class="title class_">Ob</span> <span class="keyword">from</span> <span class="string">&quot;./assets/image/Ob.png&quot;</span>;</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">  <span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">data</span>: <span class="function">() =&gt;</span> (&#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">assets</span>: &#123;</span></span><br><span class="line"><span class="language-javascript">        O,</span></span><br><span class="line"><span class="language-javascript">        R,</span></span><br><span class="line"><span class="language-javascript">        <span class="title class_">Ob</span>,</span></span><br><span class="line"><span class="language-javascript">      &#125;,</span></span><br><span class="line"><span class="language-javascript">    &#125;),</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">methods</span>: &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="title function_">generateImage</span>(<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">const</span> canvas = <span class="variable language_">this</span>.<span class="property">$refs</span>.<span class="property">oreo_canvas</span>;</span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">const</span> ctx = canvas.<span class="title function_">getContext</span>(<span class="string">&quot;2d&quot;</span>);</span></span><br><span class="line"><span class="language-javascript">        ctx.<span class="title function_">drawImage</span>(<span class="variable language_">this</span>.<span class="property">$refs</span>.<span class="property">O</span>.<span class="property">image</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">240</span>, <span class="number">160</span>);</span></span><br><span class="line"><span class="language-javascript">      &#125;,</span></span><br><span class="line"><span class="language-javascript">    &#125;,</span></span><br><span class="line"><span class="language-javascript">  &#125;;</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">scoped</span> <span class="attr">lang</span>=<span class="string">&quot;scss&quot;</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.imgContainer</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">display</span>: none;</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h2 id="总结">总结</h2>
-<p>Canvas 的 drawImage 在图片还未加载完成时是不会生效的，由于这个特性，需要保证在调用 drawImage 时图片已经加载完成，否则就会有不显示的现象。解决的方案有下面两种。</p>
+<p>Canvas 的 drawImage
+在图片还未加载完成时是不会生效的，由于这个特性，需要保证在调用 drawImage
+时图片已经加载完成，否则就会有不显示的现象。解决的方案有下面两种。</p>
 <ul>
-<li>将 drawImage 事件写在图片的 onload 事件中，这样可以保证图片已经加载。</li>
-<li>可以在页面上写上 img 标签实际加载图片，然后 drawImage 时调用 img 的 DOM 下的 image 属性进行绘制。</li>
+<li>将 drawImage 事件写在图片的 onload
+事件中，这样可以保证图片已经加载。</li>
+<li>可以在页面上写上 img 标签实际加载图片，然后 drawImage 时调用 img 的
+DOM 下的 image 属性进行绘制。</li>
 </ul>
 
     </div>
@@ -511,39 +530,38 @@
 
   
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/@next-theme/pjax@0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/@next-theme/pjax@0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/jquery@3.6.1/dist/jquery.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
-<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/comments.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/utils.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/next-boot.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/pjax.min.js"></script>
+<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/comments.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/utils.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/next-boot.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/pjax.min.js"></script>
 
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/algoliasearch@4.14.2/dist/algoliasearch-lite.umd.js" integrity="sha256-dImjLPUsG/6p3+i7gVKBiDM8EemJAhQ0VvkRK2pVsQY=" crossorigin="anonymous"></script>
-<script src="https://jsdelivr.cdn.iszy.xyz/npm/instantsearch.js@4.49.0/dist/instantsearch.production.min.js" integrity="sha256-5FvX4v/nWhVAZLvv1sbGwV6w8AY4kdd+R5FpIsXkh9w=" crossorigin="anonymous"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/search/algolia-search.min.js"></script>
+<script src="https://jsdelivr.cdn.iszy.xyz/npm/instantsearch.js@4.49.1/dist/instantsearch.production.min.js" integrity="sha256-3s8yn/IU/hV+UjoqczP+9xDS1VXIpMf3QYRUi9XoG0Y=" crossorigin="anonymous"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/search/algolia-search.min.js"></script>
 
   <script class="next-config" data-name="pdf" type="application/json">{"object_url":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/pdfobject@2.2.8/pdfobject.min.js","integrity":"sha256-tu9j5pBilBQrWSDePOOajCUdz6hWsid/lBNzK4KgEPM="},"url":"/lib/pdf/web/viewer"}</script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/tags/pdf.min.js"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/tags/pdf.min.js"></script>
 
 
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/fancybox.min.js"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/fancybox.min.js"></script>
 
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/pace.min.js"></script>
-
-  
-
-
-
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/pace.min.js"></script>
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.3/dist/katex.min.css" integrity="sha256-NJNVfEC6jfEt62wQMafLNT2eI6BaWONXbpkSEVAs3+8=" crossorigin="anonymous">
-  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.3/dist/contrib/copy-tex.min.js","integrity":"sha256-Us54+rSGDSTvIhKKUs4kygE2ipA0RXpWWh0/zLqw3bs="}}</script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/math/katex.min.js"></script>
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/mathjax@3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/math/mathjax.min.js"></script>
 
 
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/quicklink@2.3.0/dist/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>
   <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":false,"delay":true,"timeout":3000,"priority":true,"url":"https://www.iszy.cc/posts/5/"}</script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/quicklink.min.js"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/quicklink.min.js"></script>
 <script class="next-config" data-name="waline" type="application/json">{"lang":"zh-CN","enable":true,"serverURL":"https://wl.iszy.xyz","cssUrl":"https://jsdelivr.cdn.iszy.xyz/npm/@waline/client@v2.14.1/dist/waline.css","commentCount":false,"pageview":true,"libUrl":"https://jsdelivr.cdn.iszy.xyz/npm/@waline/client@v2.14.1/dist/waline.min.js","locale":{"placeholder":"本站支持匿名评论，无需登录~(●'◡'●)\n与文章无关的留言请前往本站留言板，谢谢配合~"},"emoji":["https://jsdelivr.cdn.iszy.xyz/gh/zvonimirsun/emojis@1.0.3/bilibili-xhl"],"meta":["nick","mail","link"],"requiredMeta":["nick"],"wordLimit":0,"login":"enable","pageSize":10,"dark":"auto","el":"#waline","comment":true,"path":"/posts/5/"}</script>
 <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/@waline/client@v2.14.1/dist/waline.css">
 <script>

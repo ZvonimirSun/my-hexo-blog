@@ -21,12 +21,12 @@
 
 <link rel="stylesheet" href="https://fonts.cdn.iszy.xyz/css?family=Lato:300,300italic,400,400italic,700,700italic%7CJetBrains+Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
-<link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/@fortawesome/fontawesome-free@6.2.1/css/all.min.css" integrity="sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"www.iszy.cc","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.13.2","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":true,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"algolia":{"appID":"1UJ2W38EIN","apiKey":"c0cf4d0a9659a45dd3a38becbe6b6f73","indexName":"iszy_blog","hits":{"per_page":10}}}</script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/config.min.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.iszy.cc","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.14.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":true,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"algolia":{"appID":"1UJ2W38EIN","apiKey":"c0cf4d0a9659a45dd3a38becbe6b6f73","indexName":"iszy_blog","hits":{"per_page":10}}}</script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/config.min.js"></script>
 
     <meta name="description" content="今天来简单介绍一下如何自建 KMS 激活 Windows 以及 Office。不想自己部署的也可以直接跳到激活，我提供了自建的 KMS 地址，大家可以使用。">
 <meta property="og:type" content="article">
@@ -55,7 +55,7 @@
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-E60YKKHF8Y"></script>
   <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-E60YKKHF8Y","only_pageview":false}</script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/analytics/google-analytics.min.js"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/analytics/google-analytics.min.js"></script>
 
 
 
@@ -153,7 +153,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#KMS-%E7%AE%80%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text">KMS 简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vlmscd-%E4%BB%8B%E7%BB%8D%E5%92%8C%E5%AE%89%E8%A3%85"><span class="nav-number">2.</span> <span class="nav-text">vlmscd 介绍和安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-Docker"><span class="nav-number">2.1.</span> <span class="nav-text">安装 Docker</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-vlmscd"><span class="nav-number">2.2.</span> <span class="nav-text">安装 vlmscd</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%98%B2%E7%81%AB%E5%A2%99"><span class="nav-number">2.3.</span> <span class="nav-text">防火墙</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#UFW"><span class="nav-number">2.3.1.</span> <span class="nav-text">UFW</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#iptables"><span class="nav-number">2.3.2.</span> <span class="nav-text">iptables</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%BF%80%E6%B4%BB"><span class="nav-number">3.</span> <span class="nav-text">激活</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%BF%80%E6%B4%BB-Windows"><span class="nav-number">3.1.</span> <span class="nav-text">激活 Windows</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE-GVLK"><span class="nav-number">3.1.1.</span> <span class="nav-text">配置 GVLK</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8-KMS-%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number">3.1.2.</span> <span class="nav-text">配置使用 KMS 服务器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%9B%E8%A1%8C%E6%BF%80%E6%B4%BB"><span class="nav-number">3.1.3.</span> <span class="nav-text">进行激活</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%BF%80%E6%B4%BB-Office"><span class="nav-number">3.2.</span> <span class="nav-text">激活 Office</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE-GVLK-2"><span class="nav-number">3.2.1.</span> <span class="nav-text">配置 GVLK</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8-KMS-%E6%9C%8D%E5%8A%A1%E5%99%A8-2"><span class="nav-number">3.2.2.</span> <span class="nav-text">配置使用 KMS 服务器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%9B%E8%A1%8C%E6%BF%80%E6%B4%BB-2"><span class="nav-number">3.2.3.</span> <span class="nav-text">进行激活</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%8E%E8%AF%9D"><span class="nav-number">4.</span> <span class="nav-text">后话</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#kms-%E7%AE%80%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text">KMS 简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vlmscd-%E4%BB%8B%E7%BB%8D%E5%92%8C%E5%AE%89%E8%A3%85"><span class="nav-number">2.</span> <span class="nav-text">vlmscd 介绍和安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-docker"><span class="nav-number">2.1.</span> <span class="nav-text">安装 Docker</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-vlmscd"><span class="nav-number">2.2.</span> <span class="nav-text">安装 vlmscd</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%98%B2%E7%81%AB%E5%A2%99"><span class="nav-number">2.3.</span> <span class="nav-text">防火墙</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#ufw"><span class="nav-number">2.3.1.</span> <span class="nav-text">UFW</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#iptables"><span class="nav-number">2.3.2.</span> <span class="nav-text">iptables</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%BF%80%E6%B4%BB"><span class="nav-number">3.</span> <span class="nav-text">激活</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%BF%80%E6%B4%BB-windows"><span class="nav-number">3.1.</span> <span class="nav-text">激活 Windows</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE-gvlk"><span class="nav-number">3.1.1.</span> <span class="nav-text">配置 GVLK</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8-kms-%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number">3.1.2.</span> <span class="nav-text">配置使用 KMS 服务器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%9B%E8%A1%8C%E6%BF%80%E6%B4%BB"><span class="nav-number">3.1.3.</span> <span class="nav-text">进行激活</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%BF%80%E6%B4%BB-office"><span class="nav-number">3.2.</span> <span class="nav-text">激活 Office</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE-gvlk-1"><span class="nav-number">3.2.1.</span> <span class="nav-text">配置 GVLK</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8-kms-%E6%9C%8D%E5%8A%A1%E5%99%A8-1"><span class="nav-number">3.2.2.</span> <span class="nav-text">配置使用 KMS 服务器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%9B%E8%A1%8C%E6%BF%80%E6%B4%BB-1"><span class="nav-number">3.2.3.</span> <span class="nav-text">进行激活</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%8E%E8%AF%9D"><span class="nav-number">4.</span> <span class="nav-text">后话</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -348,17 +348,37 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>今天来简单介绍一下如何自建 KMS 激活 Windows 以及 Office。不想自己部署的也可以直接跳到<a href="#%E6%BF%80%E6%B4%BB">激活</a>，我提供了自建的 KMS 地址，大家可以使用。</p>
+        <p>今天来简单介绍一下如何自建 KMS 激活 Windows 以及
+Office。不想自己部署的也可以直接跳到<a
+href="#激活">激活</a>，我提供了自建的 KMS 地址，大家可以使用。</p>
 <span id="more"></span>
-<h2 id="KMS-简介">KMS 简介</h2>
-<p>KMS 是一种专为中型和大型企业设计的 Microsoft 产品的激活方法。 在标准 SOHO 环境中，您在安装期间输入产品密钥，然后通过 Internet 激活产品。这是通过向<code>microsoft.com</code>上的服务器发送请求来完成的，然后该服务器授予或拒绝激活。</p>
-<p>通过输入称为通用批量许可证密钥（GVLK）的特殊密钥（又名“KMS 客户端密钥”），产品不再要求 Microsoft 服务器进行激活，而是通常驻留在公司内部网中的用户定义服务器（称为 KMS 服务器）。 Microsoft 仅将其 KMS 服务器提供给签署了所谓“选择合同”的公司。</p>
-<p>KMS 激活大家应该比较熟悉，网上的激活工具基本都是使用 KMS 激活的，激活的期限一般是 180 天。不过激活工具相当于开了一个 KMS 服务器运行在你的电脑上，每过 180 天，系统会自动连接激活服务器进行激活，所以只要 KMS 服务器还在就不用担心失效的问题。如果 KMS 不在了，换一个即可，180 天总能找到一个，或者像本文这样自建一个就不怕失效了。</p>
+<h2 id="kms-简介">KMS 简介</h2>
+<p>KMS 是一种专为中型和大型企业设计的 Microsoft 产品的激活方法。 在标准
+SOHO 环境中，您在安装期间输入产品密钥，然后通过 Internet
+激活产品。这是通过向<code>microsoft.com</code>上的服务器发送请求来完成的，然后该服务器授予或拒绝激活。</p>
+<p>通过输入称为通用批量许可证密钥（GVLK）的特殊密钥（又名“KMS
+客户端密钥”），产品不再要求 Microsoft
+服务器进行激活，而是通常驻留在公司内部网中的用户定义服务器（称为 KMS
+服务器）。 Microsoft 仅将其 KMS
+服务器提供给签署了所谓“选择合同”的公司。</p>
+<p>KMS 激活大家应该比较熟悉，网上的激活工具基本都是使用 KMS
+激活的，激活的期限一般是 180 天。不过激活工具相当于开了一个 KMS
+服务器运行在你的电脑上，每过 180
+天，系统会自动连接激活服务器进行激活，所以只要 KMS
+服务器还在就不用担心失效的问题。如果 KMS 不在了，换一个即可，180
+天总能找到一个，或者像本文这样自建一个就不怕失效了。</p>
 <h2 id="vlmscd-介绍和安装">vlmscd 介绍和安装</h2>
-<p>vlmcsd 是完全与 Microsoft 兼容的 KMS 服务器，是 KMS 服务器的一个独立开源实现，可供所有人使用。可为客户端提供产品激活服务，是 Microsoft KMS 服务器的直接替代品。可以在 Windows 和 Linux 上运行。可以运行在大多数嵌入式系统上，如路由器，NAS，移动电话，平板电脑，电视，机顶盒等。相对于 Microsoft KMS 服务器仅激活客户已支付的产品，vlmcsd 从不拒绝激活。</p>
-<p>虽然 vlmcsd 既不需要激活密钥也不需要付费，但它并不是宣扬盗版 Windows。 其目的是确保合法副本的所有者可以无限制地使用他们的软件。例如，如果购买新计算机或主板，由于硬件更改，密钥将无法从 Microsoft 服务器激活，这种情况下可以通过使用 vlmcsd 激活来继续使用。</p>
+<p>vlmcsd 是完全与 Microsoft 兼容的 KMS 服务器，是 KMS
+服务器的一个独立开源实现，可供所有人使用。可为客户端提供产品激活服务，是
+Microsoft KMS 服务器的直接替代品。可以在 Windows 和 Linux
+上运行。可以运行在大多数嵌入式系统上，如路由器，NAS，移动电话，平板电脑，电视，机顶盒等。相对于
+Microsoft KMS 服务器仅激活客户已支付的产品，vlmcsd 从不拒绝激活。</p>
+<p>虽然 vlmcsd 既不需要激活密钥也不需要付费，但它并不是宣扬盗版
+Windows。
+其目的是确保合法副本的所有者可以无限制地使用他们的软件。例如，如果购买新计算机或主板，由于硬件更改，密钥将无法从
+Microsoft 服务器激活，这种情况下可以通过使用 vlmcsd 激活来继续使用。</p>
 <p>项目地址：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1dpbmQ0L3ZsbWNzZA==">Wind4/vlmcsd<i class="fa fa-external-link-alt"></i></span></p>
-<h3 id="安装-Docker">安装 Docker</h3>
+<h3 id="安装-docker">安装 Docker</h3>
 <p>为了避免系统环境不同引发未知问题，在这里使用 Docker。</p>
 <p>Ubuntu 安装脚本：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -qO- https://get.docker.com/ | sh</span><br></pre></td></tr></table></figure>
@@ -368,171 +388,187 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker pull mikolatero/vlmcsd</span><br><span class="line">docker run -d -p 1688:1688 --restart=always --name=<span class="string">&quot;vlmcsd&quot;</span> mikolatero/vlmcsd</span><br></pre></td></tr></table></figure>
 <h3 id="防火墙">防火墙</h3>
 <p>需要打开 1688 端口供 vlmcsd 使用。在这里举两个常用的。</p>
-<h4 id="UFW">UFW</h4>
+<h4 id="ufw">UFW</h4>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ufw allow 1688</span><br></pre></td></tr></table></figure>
 <h4 id="iptables">iptables</h4>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">iptables -A INPUT -p tcp --dport 1688 -j ACCEPT</span><br><span class="line">iptables -A OUTPUT -p tcp --sport 1688 -j ACCEPT</span><br></pre></td></tr></table></figure>
 <h2 id="激活">激活</h2>
-<p>在此我提供一下我个人使用的 KMS 服务器，不想自行安装的可以使用以下服务器。</p>
+<p>在此我提供一下我个人使用的 KMS
+服务器，不想自行安装的可以使用以下服务器。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">KMS服务器: kms.iszy.xyz</span><br><span class="line">端口: 1688</span><br></pre></td></tr></table></figure>
-<h3 id="激活-Windows">激活 Windows</h3>
+<h3 id="激活-windows">激活 Windows</h3>
 <p>用管理员权限打开 cmd(命令提示符)，输入以下命令。</p>
-<h4 id="配置-GVLK">配置 GVLK</h4>
-<p>一般情况下，新装的系统，没有输入过其他 key 的，系统会自带 GVLK，可以忽略此步，当然做了也没有影响。输入过其他 key 的则需要此步。</p>
+<h4 id="配置-gvlk">配置 GVLK</h4>
+<p>一般情况下，新装的系统，没有输入过其他 key 的，系统会自带
+GVLK，可以忽略此步，当然做了也没有影响。输入过其他 key
+的则需要此步。</p>
 <p>将以下命令中的 Key 替换成对应系统版本的 Key。</p>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#slmgr /ipk GVLK</span></span><br><span class="line"><span class="comment">#Example:</span></span><br><span class="line">slmgr /ipk GCRJD<span class="literal">-8NW9H-F2CDX-CCM8D-9D6T9</span></span><br></pre></td></tr></table></figure>
 <p>部分 GVLK 列表</p>
 <table>
+<colgroup>
+<col style="width: 40%" />
+<col style="width: 59%" />
+</colgroup>
 <thead>
-<tr>
-<th style="text-align:center">GVLK</th>
-<th style="text-align:left">系统版本</th>
+<tr class="header">
+<th style="text-align: center;">GVLK</th>
+<th style="text-align: left;">系统版本</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:center">TX9XD-98N7V-6WMQ6-BX7FG-H8Q99</td>
-<td style="text-align:left">Windows 10 Home</td>
+<tr class="odd">
+<td style="text-align: center;">TX9XD-98N7V-6WMQ6-BX7FG-H8Q99</td>
+<td style="text-align: left;">Windows 10 Home</td>
 </tr>
-<tr>
-<td style="text-align:center">3KHY7-WNT83-DGQKR-F7HPR-844BM</td>
-<td style="text-align:left">Windows 10 Home N</td>
+<tr class="even">
+<td style="text-align: center;">3KHY7-WNT83-DGQKR-F7HPR-844BM</td>
+<td style="text-align: left;">Windows 10 Home N</td>
 </tr>
-<tr>
-<td style="text-align:center">7HNRX-D7KGG-3K4RQ-4WPJ4-YTDFH</td>
-<td style="text-align:left">Windows 10 Home Single Language</td>
+<tr class="odd">
+<td style="text-align: center;">7HNRX-D7KGG-3K4RQ-4WPJ4-YTDFH</td>
+<td style="text-align: left;">Windows 10 Home Single Language</td>
 </tr>
-<tr>
-<td style="text-align:center">PVMJN-6DFY6-9CCP6-7BKTT-D3WVR</td>
-<td style="text-align:left">Windows 10 Home Country Specific</td>
+<tr class="even">
+<td style="text-align: center;">PVMJN-6DFY6-9CCP6-7BKTT-D3WVR</td>
+<td style="text-align: left;">Windows 10 Home Country Specific</td>
 </tr>
-<tr>
-<td style="text-align:center">789NJ-TQK6T-6XTH8-J39CJ-J8D3P</td>
-<td style="text-align:left">Windows 8.1 Professional with Media Center</td>
+<tr class="odd">
+<td style="text-align: center;">789NJ-TQK6T-6XTH8-J39CJ-J8D3P</td>
+<td style="text-align: left;">Windows 8.1 Professional with Media
+Center</td>
 </tr>
-<tr>
-<td style="text-align:center">M9Q9P-WNJJT-6PXPY-DWX8H-6XWKK</td>
-<td style="text-align:left">Windows 8.1 Core</td>
+<tr class="even">
+<td style="text-align: center;">M9Q9P-WNJJT-6PXPY-DWX8H-6XWKK</td>
+<td style="text-align: left;">Windows 8.1 Core</td>
 </tr>
-<tr>
-<td style="text-align:center">7B9N3-D94CG-YTVHR-QBPX3-RJP64</td>
-<td style="text-align:left">Windows 8.1 Core N</td>
+<tr class="odd">
+<td style="text-align: center;">7B9N3-D94CG-YTVHR-QBPX3-RJP64</td>
+<td style="text-align: left;">Windows 8.1 Core N</td>
 </tr>
-<tr>
-<td style="text-align:center">BB6NG-PQ82V-VRDPW-8XVD2-V8P66</td>
-<td style="text-align:left">Windows 8.1 Core Single Language</td>
+<tr class="even">
+<td style="text-align: center;">BB6NG-PQ82V-VRDPW-8XVD2-V8P66</td>
+<td style="text-align: left;">Windows 8.1 Core Single Language</td>
 </tr>
-<tr>
-<td style="text-align:center">NCTT7-2RGK8-WMHRF-RY7YQ-JTXG3</td>
-<td style="text-align:left">Windows 8.1 Core Country Specific</td>
+<tr class="odd">
+<td style="text-align: center;">NCTT7-2RGK8-WMHRF-RY7YQ-JTXG3</td>
+<td style="text-align: left;">Windows 8.1 Core Country Specific</td>
 </tr>
-<tr>
-<td style="text-align:center">GNBB8-YVD74-QJHX6-27H4K-8QHDG</td>
-<td style="text-align:left">Windows 8 Professional with Media Center</td>
+<tr class="even">
+<td style="text-align: center;">GNBB8-YVD74-QJHX6-27H4K-8QHDG</td>
+<td style="text-align: left;">Windows 8 Professional with Media
+Center</td>
 </tr>
-<tr>
-<td style="text-align:center">BN3D2-R7TKB-3YPBD-8DRP2-27GG4</td>
-<td style="text-align:left">Windows 8 Core</td>
+<tr class="odd">
+<td style="text-align: center;">BN3D2-R7TKB-3YPBD-8DRP2-27GG4</td>
+<td style="text-align: left;">Windows 8 Core</td>
 </tr>
-<tr>
-<td style="text-align:center">8N2M2-HWPGY-7PGT9-HGDD8-GVGGY</td>
-<td style="text-align:left">Windows 8 Core N</td>
+<tr class="even">
+<td style="text-align: center;">8N2M2-HWPGY-7PGT9-HGDD8-GVGGY</td>
+<td style="text-align: left;">Windows 8 Core N</td>
 </tr>
-<tr>
-<td style="text-align:center">2WN2H-YGCQR-KFX6K-CD6TF-84YXQ</td>
-<td style="text-align:left">Windows 8 Core Single Language</td>
+<tr class="odd">
+<td style="text-align: center;">2WN2H-YGCQR-KFX6K-CD6TF-84YXQ</td>
+<td style="text-align: left;">Windows 8 Core Single Language</td>
 </tr>
-<tr>
-<td style="text-align:center">4K36P-JN4VD-GDC6V-KDT89-DYFKP</td>
-<td style="text-align:left">Windows 8 Core Country Specific</td>
+<tr class="even">
+<td style="text-align: center;">4K36P-JN4VD-GDC6V-KDT89-DYFKP</td>
+<td style="text-align: left;">Windows 8 Core Country Specific</td>
 </tr>
 </tbody>
 </table>
 <p>更多 GVLK<span class="exturl" data-url="aHR0cHM6Ly9kb2NzLm1pY3Jvc29mdC5jb20vemgtY24vd2luZG93cy1zZXJ2ZXIvZ2V0LXN0YXJ0ZWQva21zY2xpZW50a2V5cw==">点击这里<i class="fa fa-external-link-alt"></i></span>查看。</p>
-<h4 id="配置使用-KMS-服务器">配置使用 KMS 服务器</h4>
+<h4 id="配置使用-kms-服务器">配置使用 KMS 服务器</h4>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># slmgr /skms kms-server[:tcp-port]</span></span><br><span class="line"><span class="comment"># Example:</span></span><br><span class="line">slmgr /skms kms.iszy.xyz:<span class="number">1688</span></span><br></pre></td></tr></table></figure>
-<p>将 IP 换成你的 vlmscd 所在服务器即可。1688 是默认端口，如果之前是按照本文进行配置，此端口可以不写。</p>
+<p>将 IP 换成你的 vlmscd 所在服务器即可。1688
+是默认端口，如果之前是按照本文进行配置，此端口可以不写。</p>
 <h4 id="进行激活">进行激活</h4>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">slmgr /ato</span><br></pre></td></tr></table></figure>
 <p>等待一会儿会看到激活成功的提示。</p>
-<p>可以输入以下命令查看激活状态，一般显示<code>批量激活将于 xxxx/x/x xx:xx:xx 过期</code>，一般是 180 天或 45 天的有效期。过期后，如果 KMS 服务器还在，会自动续期的。</p>
+<p>可以输入以下命令查看激活状态，一般显示<code>批量激活将于 xxxx/x/x xx:xx:xx 过期</code>，一般是
+180 天或 45 天的有效期。过期后，如果 KMS 服务器还在，会自动续期的。</p>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">slmgr /xpr</span><br></pre></td></tr></table></figure>
-<h3 id="激活-Office">激活 Office</h3>
-<p>你需要安装 Vol 版 Office 才能使用 KMS。可以去<span class="exturl" data-url="aHR0cHM6Ly9tc2RuLml0ZWxseW91LmNuLw==">MSDN<i class="fa fa-external-link-alt"></i></span>上找一找，一般 Vol 版的文件都带 VL，文件名一般以 SW 开头。</p>
-<h4 id="配置-GVLK-2">配置 GVLK</h4>
+<h3 id="激活-office">激活 Office</h3>
+<p>你需要安装 Vol 版 Office 才能使用 KMS。可以去<span class="exturl" data-url="aHR0cHM6Ly9tc2RuLml0ZWxseW91LmNuLw==">MSDN<i class="fa fa-external-link-alt"></i></span>上找一找，一般 Vol 版的文件都带
+VL，文件名一般以 SW 开头。</p>
+<h4 id="配置-gvlk-1">配置 GVLK</h4>
 <p>同样，没装过 key 的，一般可以忽略此步。</p>
 <p>将以下命令中的 Key 替换成对应软件版本的 Key。</p>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> exist <span class="string">&quot;C:\Program Files (x86)\Microsoft Office\Office14\ospp.vbs&quot;</span> (<span class="built_in">cd</span> <span class="string">&quot;C:\Program Files (x86)\Microsoft Office\Office14&quot;</span>) <span class="keyword">else</span> (<span class="built_in">cd</span> <span class="string">&quot;c:\Program Files\Microsoft Office\Office14&quot;</span>)</span><br><span class="line"><span class="keyword">if</span> exist <span class="string">&quot;C:\Program Files (x86)\Microsoft Office\Office15\ospp.vbs&quot;</span> (<span class="built_in">cd</span> <span class="string">&quot;C:\Program Files (x86)\Microsoft Office\Office15&quot;</span>) <span class="keyword">else</span> (<span class="built_in">cd</span> <span class="string">&quot;c:\Program Files\Microsoft Office\Office15&quot;</span>)</span><br><span class="line"><span class="keyword">if</span> exist <span class="string">&quot;C:\Program Files (x86)\Microsoft Office\Office16\ospp.vbs&quot;</span> (<span class="built_in">cd</span> <span class="string">&quot;C:\Program Files (x86)\Microsoft Office\Office16&quot;</span>) <span class="keyword">else</span> (<span class="built_in">cd</span> <span class="string">&quot;c:\Program Files\Microsoft Office\Office16&quot;</span>)</span><br><span class="line"><span class="comment"># cscript ospp.vbs /inpkey:GVLK</span></span><br><span class="line"><span class="comment"># Example:</span></span><br><span class="line">cscript ospp.vbs /inpkey:YC7DK<span class="literal">-G2NP3-2QQC3-J6H88-GVGXT</span></span><br></pre></td></tr></table></figure>
 <p>部分 GVLK 列表</p>
 <table>
 <thead>
-<tr>
-<th style="text-align:center">GVLK</th>
-<th style="text-align:left">软件版本</th>
+<tr class="header">
+<th style="text-align: center;">GVLK</th>
+<th style="text-align: left;">软件版本</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:center">NMMKJ-6RK4F-KMJVX-8D9MJ-6MWKP</td>
-<td style="text-align:left">Office Professional Plus 2019</td>
+<tr class="odd">
+<td style="text-align: center;">NMMKJ-6RK4F-KMJVX-8D9MJ-6MWKP</td>
+<td style="text-align: left;">Office Professional Plus 2019</td>
 </tr>
-<tr>
-<td style="text-align:center">6NWWJ-YQWMR-QKGCB-6TMB3-9D9HK</td>
-<td style="text-align:left">Office Standard 2019</td>
+<tr class="even">
+<td style="text-align: center;">6NWWJ-YQWMR-QKGCB-6TMB3-9D9HK</td>
+<td style="text-align: left;">Office Standard 2019</td>
 </tr>
-<tr>
-<td style="text-align:center">B4NPR-3FKK7-T2MBV-FRQ4W-PKD2B</td>
-<td style="text-align:left">Project Professional 2019</td>
+<tr class="odd">
+<td style="text-align: center;">B4NPR-3FKK7-T2MBV-FRQ4W-PKD2B</td>
+<td style="text-align: left;">Project Professional 2019</td>
 </tr>
-<tr>
-<td style="text-align:center">C4F7P-NCP8C-6CQPT-MQHV9-JXD2M</td>
-<td style="text-align:left">Project Standard 2019</td>
+<tr class="even">
+<td style="text-align: center;">C4F7P-NCP8C-6CQPT-MQHV9-JXD2M</td>
+<td style="text-align: left;">Project Standard 2019</td>
 </tr>
-<tr>
-<td style="text-align:center">9BGNQ-K37YR-RQHF2-38RQ3-7VCBB</td>
-<td style="text-align:left">Visio Professional 2019</td>
+<tr class="odd">
+<td style="text-align: center;">9BGNQ-K37YR-RQHF2-38RQ3-7VCBB</td>
+<td style="text-align: left;">Visio Professional 2019</td>
 </tr>
-<tr>
-<td style="text-align:center">7TQNQ-K3YQQ-3PFH7-CCPPM-X4VQ2</td>
-<td style="text-align:left">Visio Standard 2019</td>
+<tr class="even">
+<td style="text-align: center;">7TQNQ-K3YQQ-3PFH7-CCPPM-X4VQ2</td>
+<td style="text-align: left;">Visio Standard 2019</td>
 </tr>
-<tr>
-<td style="text-align:center">XQNVK-8JYDB-WJ9W3-YJ8YR-WFG99</td>
-<td style="text-align:left">Office Professional Plus 2016</td>
+<tr class="odd">
+<td style="text-align: center;">XQNVK-8JYDB-WJ9W3-YJ8YR-WFG99</td>
+<td style="text-align: left;">Office Professional Plus 2016</td>
 </tr>
-<tr>
-<td style="text-align:center">JNRGM-WHDWX-FJJG3-K47QV-DRTFM</td>
-<td style="text-align:left">Office Standard 2016</td>
+<tr class="even">
+<td style="text-align: center;">JNRGM-WHDWX-FJJG3-K47QV-DRTFM</td>
+<td style="text-align: left;">Office Standard 2016</td>
 </tr>
-<tr>
-<td style="text-align:center">YG9NW-3K39V-2T3HJ-93F3Q-G83KT</td>
-<td style="text-align:left">Project Professional 2016</td>
+<tr class="odd">
+<td style="text-align: center;">YG9NW-3K39V-2T3HJ-93F3Q-G83KT</td>
+<td style="text-align: left;">Project Professional 2016</td>
 </tr>
-<tr>
-<td style="text-align:center">GNFHQ-F6YQM-KQDGJ-327XX-KQBVC</td>
-<td style="text-align:left">Project Standard 2016</td>
+<tr class="even">
+<td style="text-align: center;">GNFHQ-F6YQM-KQDGJ-327XX-KQBVC</td>
+<td style="text-align: left;">Project Standard 2016</td>
 </tr>
-<tr>
-<td style="text-align:center">PD3PC-RHNGV-FXJ29-8JK7D-RJRJK</td>
-<td style="text-align:left">Visio Professional 2016</td>
+<tr class="odd">
+<td style="text-align: center;">PD3PC-RHNGV-FXJ29-8JK7D-RJRJK</td>
+<td style="text-align: left;">Visio Professional 2016</td>
 </tr>
-<tr>
-<td style="text-align:center">7WHWN-4T7MP-G96JF-G33KR-W8GF4</td>
-<td style="text-align:left">Visio Standard 2016</td>
+<tr class="even">
+<td style="text-align: center;">7WHWN-4T7MP-G96JF-G33KR-W8GF4</td>
+<td style="text-align: left;">Visio Standard 2016</td>
 </tr>
 </tbody>
 </table>
 <p>更多 GVLK<span class="exturl" data-url="aHR0cHM6Ly9kb2NzLm1pY3Jvc29mdC5jb20vemgtY24vRGVwbG95T2ZmaWNlL3ZsYWN0aXZhdGlvbi9ndmxrcw==">点击这里<i class="fa fa-external-link-alt"></i></span>查看。</p>
-<h4 id="配置使用-KMS-服务器-2">配置使用 KMS 服务器</h4>
-<p>将 IP 换成你的 vlmscd 所在服务器即可。1688 是默认端口，如果之前是按照本文进行配置，第二条命令可以不写。</p>
+<h4 id="配置使用-kms-服务器-1">配置使用 KMS 服务器</h4>
+<p>将 IP 换成你的 vlmscd 所在服务器即可。1688
+是默认端口，如果之前是按照本文进行配置，第二条命令可以不写。</p>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># cscript ospp.vbs /sethst:kms-server</span></span><br><span class="line"><span class="comment"># Example:</span></span><br><span class="line">cscript ospp.vbs /sethst:kms.iszy.xyz</span><br><span class="line"><span class="comment"># cscript ospp.vbs /setprt:tcp-port</span></span><br><span class="line"><span class="comment"># Example:</span></span><br><span class="line">cscript ospp.vbs /setprt:<span class="number">1688</span></span><br></pre></td></tr></table></figure>
-<h4 id="进行激活-2">进行激活</h4>
+<h4 id="进行激活-1">进行激活</h4>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cscript ospp.vbs /act</span><br></pre></td></tr></table></figure>
 <p>等一会儿会显示激活成功。</p>
-<p>可以输入以下命令查看激活状态，一般是 180 天或 45 天的有效期。过期后，如果 KMS 服务器还在，会自动续期的。</p>
+<p>可以输入以下命令查看激活状态，一般是 180 天或 45
+天的有效期。过期后，如果 KMS 服务器还在，会自动续期的。</p>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cscript ospp.vbs /dstatus</span><br></pre></td></tr></table></figure>
 <h2 id="后话">后话</h2>
-<p>到此，自建 KMS 到激活都介绍完了，按照本文介绍应该已经正常激活了，享受你的软件吧。如果 KMS 服务器出现问题，180 天应该早就解决了吧。</p>
+<p>到此，自建 KMS
+到激活都介绍完了，按照本文介绍应该已经正常激活了，享受你的软件吧。如果
+KMS 服务器出现问题，180 天应该早就解决了吧。</p>
 
     </div>
 
@@ -632,39 +668,38 @@
 
   
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/@next-theme/pjax@0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/@next-theme/pjax@0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/jquery@3.6.1/dist/jquery.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
-<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/comments.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/utils.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/next-boot.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/pjax.min.js"></script>
+<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/comments.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/utils.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/next-boot.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/pjax.min.js"></script>
 
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/algoliasearch@4.14.2/dist/algoliasearch-lite.umd.js" integrity="sha256-dImjLPUsG/6p3+i7gVKBiDM8EemJAhQ0VvkRK2pVsQY=" crossorigin="anonymous"></script>
-<script src="https://jsdelivr.cdn.iszy.xyz/npm/instantsearch.js@4.49.0/dist/instantsearch.production.min.js" integrity="sha256-5FvX4v/nWhVAZLvv1sbGwV6w8AY4kdd+R5FpIsXkh9w=" crossorigin="anonymous"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/search/algolia-search.min.js"></script>
+<script src="https://jsdelivr.cdn.iszy.xyz/npm/instantsearch.js@4.49.1/dist/instantsearch.production.min.js" integrity="sha256-3s8yn/IU/hV+UjoqczP+9xDS1VXIpMf3QYRUi9XoG0Y=" crossorigin="anonymous"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/search/algolia-search.min.js"></script>
 
   <script class="next-config" data-name="pdf" type="application/json">{"object_url":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/pdfobject@2.2.8/pdfobject.min.js","integrity":"sha256-tu9j5pBilBQrWSDePOOajCUdz6hWsid/lBNzK4KgEPM="},"url":"/lib/pdf/web/viewer"}</script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/tags/pdf.min.js"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/tags/pdf.min.js"></script>
 
 
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/fancybox.min.js"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/fancybox.min.js"></script>
 
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/pace.min.js"></script>
-
-  
-
-
-
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/pace.min.js"></script>
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.3/dist/katex.min.css" integrity="sha256-NJNVfEC6jfEt62wQMafLNT2eI6BaWONXbpkSEVAs3+8=" crossorigin="anonymous">
-  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.3/dist/contrib/copy-tex.min.js","integrity":"sha256-Us54+rSGDSTvIhKKUs4kygE2ipA0RXpWWh0/zLqw3bs="}}</script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/math/katex.min.js"></script>
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/mathjax@3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/math/mathjax.min.js"></script>
 
 
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/quicklink@2.3.0/dist/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>
   <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":false,"delay":true,"timeout":3000,"priority":true,"url":"https://www.iszy.cc/posts/setup-kms/"}</script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/quicklink.min.js"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/quicklink.min.js"></script>
 <script class="next-config" data-name="waline" type="application/json">{"lang":"zh-CN","enable":true,"serverURL":"https://wl.iszy.xyz","cssUrl":"https://jsdelivr.cdn.iszy.xyz/npm/@waline/client@v2.14.1/dist/waline.css","commentCount":false,"pageview":true,"libUrl":"https://jsdelivr.cdn.iszy.xyz/npm/@waline/client@v2.14.1/dist/waline.min.js","locale":{"placeholder":"本站支持匿名评论，无需登录~(●'◡'●)\n与文章无关的留言请前往本站留言板，谢谢配合~"},"emoji":["https://jsdelivr.cdn.iszy.xyz/gh/zvonimirsun/emojis@1.0.3/bilibili-xhl"],"meta":["nick","mail","link"],"requiredMeta":["nick"],"wordLimit":0,"login":"enable","pageSize":10,"dark":"auto","el":"#waline","comment":true,"path":"/posts/setup-kms/"}</script>
 <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/@waline/client@v2.14.1/dist/waline.css">
 <script>

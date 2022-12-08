@@ -21,12 +21,12 @@
 
 <link rel="stylesheet" href="https://fonts.cdn.iszy.xyz/css?family=Lato:300,300italic,400,400italic,700,700italic%7CJetBrains+Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
-<link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/@fortawesome/fontawesome-free@6.2.1/css/all.min.css" integrity="sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"www.iszy.cc","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.13.2","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":true,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"algolia":{"appID":"1UJ2W38EIN","apiKey":"c0cf4d0a9659a45dd3a38becbe6b6f73","indexName":"iszy_blog","hits":{"per_page":10}}}</script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/config.min.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.iszy.cc","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.14.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":true,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"algolia":{"appID":"1UJ2W38EIN","apiKey":"c0cf4d0a9659a45dd3a38becbe6b6f73","indexName":"iszy_blog","hits":{"per_page":10}}}</script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/config.min.js"></script>
 
     <meta name="description" content="最近折腾 Truenas Scale 一直不是很满意，准备换个 Unraid 试一试。">
 <meta property="og:type" content="article">
@@ -72,7 +72,7 @@
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-E60YKKHF8Y"></script>
   <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-E60YKKHF8Y","only_pageview":false}</script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/analytics/google-analytics.min.js"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/analytics/google-analytics.min.js"></script>
 
 
 
@@ -341,78 +341,122 @@
         <p>最近折腾 Truenas Scale 一直不是很满意，准备换个 Unraid 试一试。</p>
 <span id="more"></span>
 <h2 id="前期考虑">前期考虑</h2>
-<p>可能是我比较菜吧，折腾不来这个 Truenas。虽然搞了万兆交换机，接了万兆网卡，有 32GB 内存，raidz 的速度在硬盘少的情况下仍然不尽如人意。想要加几块硬盘，发现也不是很容易，没法提升原有 raid 的性能，只能横向扩展。而且 Truenas scale 的 docker 上了 k3s 还是稍微有些门槛，对我的应用场景来说也比较重了。以及众所周知的一些网络访问问题，大部分功能我其实也不大用到，使用起来实在比较僵硬。</p>
+<p>可能是我比较菜吧，折腾不来这个
+Truenas。虽然搞了万兆交换机，接了万兆网卡，有 32GB 内存，raidz
+的速度在硬盘少的情况下仍然不尽如人意。想要加几块硬盘，发现也不是很容易，没法提升原有
+raid 的性能，只能横向扩展。而且 Truenas scale 的 docker 上了 k3s
+还是稍微有些门槛，对我的应用场景来说也比较重了。以及众所周知的一些网络访问问题，大部分功能我其实也不大用到，使用起来实在比较僵硬。</p>
 <p>于是考虑再三准备上手 Unraid。</p>
-<p>我其实早就想试试 Unraid 了，之前看 LTT 视频，对 Unraid 的印象相当不错。突出一个特点，上手简单，灵活度又高。</p>
-<p>从 Unraid 这个名字也能看出，这个系统的磁盘阵列不搞 raid，扩展起来非常容易。</p>
+<p>我其实早就想试试 Unraid 了，之前看 LTT 视频，对 Unraid
+的印象相当不错。突出一个特点，上手简单，灵活度又高。</p>
+<p>从 Unraid 这个名字也能看出，这个系统的磁盘阵列不搞
+raid，扩展起来非常容易。</p>
 <p>而且只需要一块校验盘，只要损失不超过一块硬盘，都可以恢复。即使超过损失超过一块盘，也只会丢失那块盘的数据，不会影响整个阵列。这个数据安全性对于我来说是够了的。看网上的速度测试，在完成奇偶校验的情况下，有没有校验盘对整个阵列的读写速度没有什么影响。</p>
-<p>既然不搞 raid，速度就受限于你的硬盘速度了，不过可以靠添加缓存盘来提升，只要读写不超过缓存盘的存储上限，都不会掉速。像万兆内网，加个 nvme 的硬盘，基本就可以跑满了。</p>
-<p>为啥以前没有用呢，主要是 truenas 免费，而 Unraid 要钱嘛，而且组 nas 的时候偷懒让别人帮忙把系统装好了，懒得换了。Unraid 是按照硬盘数量收费的，不包括启动闪存盘，6 块硬盘需要 59 刀，12 块硬盘需要 89 刀，129 刀则不限硬盘数量。像我现在 7 块硬盘，加一块固态，后面还要加俩 nvme 做缓存，考虑到以后的扩展，应该得买 89 刀的就好。不过 Unraid 是一次性买断的，这样看似乎价格也还行，还有 30 天试用，让你充分考虑，许可也是可以后期升级的。</p>
+<p>既然不搞
+raid，速度就受限于你的硬盘速度了，不过可以靠添加缓存盘来提升，只要读写不超过缓存盘的存储上限，都不会掉速。像万兆内网，加个
+nvme 的硬盘，基本就可以跑满了。</p>
+<p>为啥以前没有用呢，主要是 truenas 免费，而 Unraid 要钱嘛，而且组 nas
+的时候偷懒让别人帮忙把系统装好了，懒得换了。Unraid
+是按照硬盘数量收费的，不包括启动闪存盘，6 块硬盘需要 59 刀，12
+块硬盘需要 89 刀，129 刀则不限硬盘数量。像我现在 7
+块硬盘，加一块固态，后面还要加俩 nvme 做缓存，考虑到以后的扩展，应该得买
+89 刀的就好。不过 Unraid 是一次性买断的，这样看似乎价格也还行，还有 30
+天试用，让你充分考虑，许可也是可以后期升级的。</p>
 <p>这次我先试用一波，没什么问题再上许可。</p>
 <h2 id="部署">部署</h2>
-<p><span class="exturl" data-url="aHR0cHM6Ly91bnJhaWQubmV0L3poLyVFNCVCOCU4QiVFOCVCRCVCRA==">下载 Unraid OS<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly91bnJhaWQubmV0L3poLyVFNCVCOCU4QiVFOCVCRCVCRA==">下载 Unraid
+OS<i class="fa fa-external-link-alt"></i></span></p>
 <p>首先你需要一个 U 盘。</p>
 <ul>
-<li>最小 4GB，最大不超过 32GB，<strong>一定要是 USB 2.0 的，不然系统可能读不到</strong>。</li>
-<li>格式化为 <strong>FAT32 格式</strong>，卷标必须为 <strong>UNRAID</strong> 这六个字母。</li>
-<li>不用在意 U 盘速度，这个 U 盘只会用来装系统和一些配置，启动后整个系统都是直接放到内存里的，只会偶尔读下配置会用到 U 盘。Unraid 现在还不支持通过 sd 卡和硬盘进行启动，所以你的主板必须要支持通过 U 盘启动。</li>
+<li>最小 4GB，最大不超过 32GB，<strong>一定要是 USB 2.0
+的，不然系统可能读不到</strong>。</li>
+<li>格式化为 <strong>FAT32 格式</strong>，卷标必须为
+<strong>UNRAID</strong> 这六个字母。</li>
+<li>不用在意 U 盘速度，这个 U
+盘只会用来装系统和一些配置，启动后整个系统都是直接放到内存里的，只会偶尔读下配置会用到
+U 盘。Unraid 现在还不支持通过 sd
+卡和硬盘进行启动，所以你的主板必须要支持通过 U 盘启动。</li>
 </ul>
 <p>Unraid 现在提供了一个创建 U 盘启动器的工具，还是比较傻瓜式的。</p>
-<p><img data-src="https://img.iszy.xyz/1668965114372.png" alt=""></p>
-<p>可以选择安装的分支和系统版本，设置一下访问地址、网络 ip 和启动方式。这个 server name 默认叫 Tower，后面启动好后，直接浏览器里输<span class="exturl" data-url="aHR0cDovL3Rvd2VyLmxvY2Fs">http://tower.local<i class="fa fa-external-link-alt"></i></span> 就行，这个后期也可以在设置改。</p>
-<p><img data-src="https://img.iszy.xyz/1668965501519.png" alt=""></p>
-<p>这边是在线下载的系统包，实测下载速度有点慢。可以选择直接在刚刚的下载页面下载 zip 包。</p>
-<p><img data-src="https://img.iszy.xyz/1668965696359.png" alt=""></p>
+<p><img data-src="https://img.iszy.xyz/1668965114372.png" /></p>
+<p>可以选择安装的分支和系统版本，设置一下访问地址、网络 ip
+和启动方式。这个 server name 默认叫
+Tower，后面启动好后，直接浏览器里输<span class="exturl" data-url="aHR0cDovL3Rvd2VyLmxvY2Fs">http://tower.local<i class="fa fa-external-link-alt"></i></span>
+就行，这个后期也可以在设置改。</p>
+<p><img data-src="https://img.iszy.xyz/1668965501519.png" /></p>
+<p>这边是在线下载的系统包，实测下载速度有点慢。可以选择直接在刚刚的下载页面下载
+zip 包。</p>
+<p><img data-src="https://img.iszy.xyz/1668965696359.png" /></p>
 <p>这个工具支持直接选择本地宝安装，就是不能设置了。</p>
-<p><img data-src="https://img.iszy.xyz/1668965764119.png" alt=""></p>
-<p>本地包写完盘后是这样的。如果要 LAGENCY 模式启动，就这样就可以了。如果要 UEFI 模式启动，就把 <code>EFI-</code> 重命名为 <code>EFI</code> 就行。这个不是名字写错了嗷，是有用的。</p>
-<p><img data-src="https://img.iszy.xyz/1668966001368.png" alt=""></p>
-<p>现在一块 Unraid 启动盘就做好了，接下来把这个 U 盘插到你的 Nas 主板上，在 Bios 里设置成启动盘启动就好啦。这块盘将会长期作为系统盘留在你的主板上了。需要注意的是，如果你的系统盘坏了，Unraid 是支持重写个系统盘更换的，但是<strong>一年只提供一次迁移许可</strong>，所以最好买一个质量有保证的 U 盘。</p>
-<p>当系统启动好后，访问 <span class="exturl" data-url="aHR0cDovL3Rvd2VyLmxvY2Fs">http://tower.local<i class="fa fa-external-link-alt"></i></span> 即可进入 WebGUI 页面。第一次访问会让你设置 root 用户的密码。</p>
-<p><img data-src="https://img.iszy.xyz/1668966459094.png" alt=""></p>
+<p><img data-src="https://img.iszy.xyz/1668965764119.png" /></p>
+<p>本地包写完盘后是这样的。如果要 LAGENCY
+模式启动，就这样就可以了。如果要 UEFI 模式启动，就把 <code>EFI-</code>
+重命名为 <code>EFI</code> 就行。这个不是名字写错了嗷，是有用的。</p>
+<p><img data-src="https://img.iszy.xyz/1668966001368.png" /></p>
+<p>现在一块 Unraid 启动盘就做好了，接下来把这个 U 盘插到你的 Nas
+主板上，在 Bios
+里设置成启动盘启动就好啦。这块盘将会长期作为系统盘留在你的主板上了。需要注意的是，如果你的系统盘坏了，Unraid
+是支持重写个系统盘更换的，但是<strong>一年只提供一次迁移许可</strong>，所以最好买一个质量有保证的
+U 盘。</p>
+<p>当系统启动好后，访问 <span class="exturl" data-url="aHR0cDovL3Rvd2VyLmxvY2Fs">http://tower.local<i class="fa fa-external-link-alt"></i></span> 即可进入 WebGUI
+页面。第一次访问会让你设置 root 用户的密码。</p>
+<p><img data-src="https://img.iszy.xyz/1668966459094.png" /></p>
 <h2 id="初始化配置">初始化配置</h2>
 <h3 id="时间设置">时间设置</h3>
-<p>转到 <code>Settings</code> 选项卡，选择 <code>Date and Time</code></p>
-<p>将时区设置为北京时区，并设置时间同步 ntp 服务器。这里推荐下我用的。点击 Apply 应用。</p>
+<p>转到 <code>Settings</code> 选项卡，选择
+<code>Date and Time</code></p>
+<p>将时区设置为北京时区，并设置时间同步 ntp
+服务器。这里推荐下我用的。点击 Apply 应用。</p>
 <ul>
-<li><span class="exturl" data-url="aHR0cDovL250cC5udHNjLmFjLmNu">ntp.ntsc.ac.cn<i class="fa fa-external-link-alt"></i></span></li>
-<li><span class="exturl" data-url="aHR0cDovL2NuLm50cC5vcmcuY24=">cn.ntp.org.cn<i class="fa fa-external-link-alt"></i></span></li>
-<li><span class="exturl" data-url="aHR0cDovL3RpbWUucG9vbC5hbGl5dW4uY29t">time.pool.aliyun.com<i class="fa fa-external-link-alt"></i></span></li>
-<li><span class="exturl" data-url="aHR0cDovL3RpbWUxLmNsb3VkLnRlbmNlbnQuY29t">time1.cloud.tencent.com<i class="fa fa-external-link-alt"></i></span></li>
+<li>ntp.ntsc.ac.cn</li>
+<li>cn.ntp.org.cn</li>
+<li>time.pool.aliyun.com</li>
+<li>time1.cloud.tencent.com</li>
 </ul>
-<p><img data-src="https://img.iszy.xyz/1668966634982.png" alt=""></p>
+<p><img data-src="https://img.iszy.xyz/1668966634982.png" /></p>
 <h3 id="网络设置">网络设置</h3>
-<p>如果没有设置的话，默认会通过 dhcp 动态分配 ip，虽然我们大部分时候不需要直接使用 Unraid 的 ip，但是推荐设置为一个静态 ip，也可以设置下 dns。Unraid 可以配置端口聚合，我因为只接了一个万兆网口，所以就无所谓了，我也没改。</p>
+<p>如果没有设置的话，默认会通过 dhcp 动态分配
+ip，虽然我们大部分时候不需要直接使用 Unraid 的
+ip，但是推荐设置为一个静态 ip，也可以设置下 dns。Unraid
+可以配置端口聚合，我因为只接了一个万兆网口，所以就无所谓了，我也没改。</p>
 <p>转到 <code>Settings</code> 选项卡，选择 <code>Networks</code></p>
-<p>我现在的配置如下。注意要在虚拟机和 docker 关闭的情况下修改。我这边万兆网卡是另外加的，默认网口没接，有个警告。</p>
-<p><img data-src="https://img.iszy.xyz/1668967055987.png?x-oss-process=style/big" alt=""></p>
-<p>使用万兆网卡，最好把 MTU 改为 9000，电脑的万兆网卡也改成 9000，以提升网络性能。</p>
-<p>如何判断应用成功了呢。可以通过 ping 一个大包看看有没有返回，如果 MTU 为 1500，这个命令将无响应。</p>
+<p>我现在的配置如下。注意要在虚拟机和 docker
+关闭的情况下修改。我这边万兆网卡是另外加的，默认网口没接，有个警告。</p>
+<p><img data-src="https://img.iszy.xyz/1668967055987.png?x-oss-process=style/big" /></p>
+<p>使用万兆网卡，最好把 MTU 改为 9000，电脑的万兆网卡也改成
+9000，以提升网络性能。</p>
+<p>如何判断应用成功了呢。可以通过 ping 一个大包看看有没有返回，如果 MTU
+为 1500，这个命令将无响应。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ping tower.lcoal -l 8962</span><br></pre></td></tr></table></figure>
-<p><img data-src="https://img.iszy.xyz/1668967282997.png" alt=""></p>
+<p><img data-src="https://img.iszy.xyz/1668967282997.png" /></p>
 <h3 id="安装中文插件">安装中文插件</h3>
 <p>现在 Unraid 官方提供了中文插件包，可以对用户界面进行完整的汉化。</p>
-<p>转到 <code>Apps</code> 选项卡，点击 install 即可自动安装 <code>Community Applications</code> 插件。在内容更新完成后，这边将展示各种社区应用，在左侧分类菜单里选择 Language，找到 简体中文语言包，点击 install 安装即可。</p>
-<p><img data-src="https://img.iszy.xyz/1668967574818.png?x-oss-process=style/big" alt=""></p>
-<p>接下来转到 <code>Settings</code> 选项卡，选择 <code>Display Settings</code>，此时已经可以选择中文语言了。</p>
-<p><img data-src="https://img.iszy.xyz/1668967669343.png?x-oss-process=style/big" alt=""></p>
+<p>转到 <code>Apps</code> 选项卡，点击 install 即可自动安装
+<code>Community Applications</code>
+插件。在内容更新完成后，这边将展示各种社区应用，在左侧分类菜单里选择
+Language，找到 简体中文语言包，点击 install 安装即可。</p>
+<p><img data-src="https://img.iszy.xyz/1668967574818.png?x-oss-process=style/big" /></p>
+<p>接下来转到 <code>Settings</code> 选项卡，选择
+<code>Display Settings</code>，此时已经可以选择中文语言了。</p>
+<p><img data-src="https://img.iszy.xyz/1668967669343.png?x-oss-process=style/big" /></p>
 <h3 id="添加磁盘阵列">添加磁盘阵列</h3>
 <p>当然我们做 Nas，没有磁盘阵列可不行。</p>
 <p>可以选择一到两块盘作为校验盘，一般一块就行了，安全要求不高可以不加，要求大于等于其他任意一块的容量，然后把其他盘添加到阵列里。</p>
-<p><img data-src="https://img.iszy.xyz/1668967785490.png?x-oss-process=style/big" alt=""></p>
+<p><img data-src="https://img.iszy.xyz/1668967785490.png?x-oss-process=style/big" /></p>
 <p>有固态可以添加到缓存池里。</p>
-<p><img data-src="https://img.iszy.xyz/1668967990297.png?x-oss-process=style/big" alt=""></p>
+<p><img data-src="https://img.iszy.xyz/1668967990297.png?x-oss-process=style/big" /></p>
 <p>完成后点击应用，点击启动阵列，此时校验盘会开始同步，容量越大，速度越慢。同步期间阵列访问速度也会很慢，推荐等到同步完成后再访问。点击格式化，完成阵列文件系统的格式化，阵列就可以使用了，不用等到同步完成。</p>
-<p><img data-src="https://img.iszy.xyz/1668968076515.png?x-oss-process=style/big" alt=""></p>
+<p><img data-src="https://img.iszy.xyz/1668968076515.png?x-oss-process=style/big" /></p>
 <h3 id="添加共享">添加共享</h3>
 <p>转到 <code>共享</code> 标签页，点击添加共享。</p>
-<p><img data-src="https://img.iszy.xyz/1668968286999.png?x-oss-process=style/big" alt=""></p>
+<p><img data-src="https://img.iszy.xyz/1668968286999.png?x-oss-process=style/big" /></p>
 <p>按需要进行配置，我这边选择开启缓存。</p>
-<p><img data-src="https://img.iszy.xyz/1668968418876.png?x-oss-process=style/big" alt=""></p>
+<p><img data-src="https://img.iszy.xyz/1668968418876.png?x-oss-process=style/big" /></p>
 <p>然后自动开启了 SMB 共享，可以进行设置。</p>
-<p><img data-src="https://img.iszy.xyz/1668968571494.png?x-oss-process=style/big" alt=""></p>
+<p><img data-src="https://img.iszy.xyz/1668968571494.png?x-oss-process=style/big" /></p>
 <h2 id="后记">后记</h2>
-<p>今天先折腾到这里，Nas 的基础功能已经基本可用。后续等我加点缓存再测试测试。</p>
+<p>今天先折腾到这里，Nas
+的基础功能已经基本可用。后续等我加点缓存再测试测试。</p>
 
     </div>
 
@@ -508,39 +552,38 @@
 
   
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/@next-theme/pjax@0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/@next-theme/pjax@0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/jquery@3.6.1/dist/jquery.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
-<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/comments.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/utils.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/next-boot.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/pjax.min.js"></script>
+<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/comments.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/utils.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/next-boot.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/pjax.min.js"></script>
 
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/algoliasearch@4.14.2/dist/algoliasearch-lite.umd.js" integrity="sha256-dImjLPUsG/6p3+i7gVKBiDM8EemJAhQ0VvkRK2pVsQY=" crossorigin="anonymous"></script>
-<script src="https://jsdelivr.cdn.iszy.xyz/npm/instantsearch.js@4.49.0/dist/instantsearch.production.min.js" integrity="sha256-5FvX4v/nWhVAZLvv1sbGwV6w8AY4kdd+R5FpIsXkh9w=" crossorigin="anonymous"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/search/algolia-search.min.js"></script>
+<script src="https://jsdelivr.cdn.iszy.xyz/npm/instantsearch.js@4.49.1/dist/instantsearch.production.min.js" integrity="sha256-3s8yn/IU/hV+UjoqczP+9xDS1VXIpMf3QYRUi9XoG0Y=" crossorigin="anonymous"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/search/algolia-search.min.js"></script>
 
   <script class="next-config" data-name="pdf" type="application/json">{"object_url":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/pdfobject@2.2.8/pdfobject.min.js","integrity":"sha256-tu9j5pBilBQrWSDePOOajCUdz6hWsid/lBNzK4KgEPM="},"url":"/lib/pdf/web/viewer"}</script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/tags/pdf.min.js"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/tags/pdf.min.js"></script>
 
 
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/fancybox.min.js"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/fancybox.min.js"></script>
 
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/pace.min.js"></script>
-
-  
-
-
-
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/pace.min.js"></script>
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.3/dist/katex.min.css" integrity="sha256-NJNVfEC6jfEt62wQMafLNT2eI6BaWONXbpkSEVAs3+8=" crossorigin="anonymous">
-  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.3/dist/contrib/copy-tex.min.js","integrity":"sha256-Us54+rSGDSTvIhKKUs4kygE2ipA0RXpWWh0/zLqw3bs="}}</script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/math/katex.min.js"></script>
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/mathjax@3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/math/mathjax.min.js"></script>
 
 
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/quicklink@2.3.0/dist/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>
   <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":false,"delay":true,"timeout":3000,"priority":true,"url":"https://www.iszy.cc/posts/unraid-start/"}</script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/quicklink.min.js"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/quicklink.min.js"></script>
 <script class="next-config" data-name="waline" type="application/json">{"lang":"zh-CN","enable":true,"serverURL":"https://wl.iszy.xyz","cssUrl":"https://jsdelivr.cdn.iszy.xyz/npm/@waline/client@v2.14.1/dist/waline.css","commentCount":false,"pageview":true,"libUrl":"https://jsdelivr.cdn.iszy.xyz/npm/@waline/client@v2.14.1/dist/waline.min.js","locale":{"placeholder":"本站支持匿名评论，无需登录~(●'◡'●)\n与文章无关的留言请前往本站留言板，谢谢配合~"},"emoji":["https://jsdelivr.cdn.iszy.xyz/gh/zvonimirsun/emojis@1.0.3/bilibili-xhl"],"meta":["nick","mail","link"],"requiredMeta":["nick"],"wordLimit":0,"login":"enable","pageSize":10,"dark":"auto","el":"#waline","comment":true,"path":"/posts/unraid-start/"}</script>
 <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/@waline/client@v2.14.1/dist/waline.css">
 <script>

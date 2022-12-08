@@ -21,12 +21,12 @@
 
 <link rel="stylesheet" href="https://fonts.cdn.iszy.xyz/css?family=Lato:300,300italic,400,400italic,700,700italic%7CJetBrains+Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
-<link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/@fortawesome/fontawesome-free@6.2.1/css/all.min.css" integrity="sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"www.iszy.cc","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.13.2","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":true,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"algolia":{"appID":"1UJ2W38EIN","apiKey":"c0cf4d0a9659a45dd3a38becbe6b6f73","indexName":"iszy_blog","hits":{"per_page":10}}}</script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/config.min.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.iszy.cc","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.14.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":true,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"algolia":{"appID":"1UJ2W38EIN","apiKey":"c0cf4d0a9659a45dd3a38becbe6b6f73","indexName":"iszy_blog","hits":{"per_page":10}}}</script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/config.min.js"></script>
 
     <meta name="description" content="在我们日常打包部署 Jar 包的时候，时常会出现需要修改少量内容或替换某个文件的时候，重新打包完整 Jar 包并在网上传输费时费力，所以需要直接修改 Jar 包，这里就对直接修改 和替换 Jar 包中文件的几种方式做一下总结。">
 <meta property="og:type" content="article">
@@ -57,7 +57,7 @@
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-E60YKKHF8Y"></script>
   <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-E60YKKHF8Y","only_pageview":false}</script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/analytics/google-analytics.min.js"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/analytics/google-analytics.min.js"></script>
 
 
 
@@ -155,7 +155,8 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%9A%E7%94%A8%E6%96%B9%E6%B3%95%E2%80%94%E2%80%94%E8%A7%A3%E5%8E%8B%E5%90%8E%E9%87%8D%E6%96%B0%E6%89%93%E5%8C%85-Jar-%E5%8C%85"><span class="nav-number">1.</span> <span class="nav-text">通用方法——解压后重新打包 Jar 包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Windows-%E6%96%B9%E5%BC%8F"><span class="nav-number">2.</span> <span class="nav-text">Windows 方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%85%E6%96%87%E6%9C%AC%E6%96%87%E4%BB%B6"><span class="nav-number">2.1.</span> <span class="nav-text">仅文本文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%80%E6%9C%89%E6%96%87%E4%BB%B6"><span class="nav-number">2.2.</span> <span class="nav-text">所有文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux-%E6%96%B9%E5%BC%8F"><span class="nav-number">3.</span> <span class="nav-text">Linux 方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%85%E6%96%87%E6%9C%AC%E6%96%87%E4%BB%B6-2"><span class="nav-number">3.1.</span> <span class="nav-text">仅文本文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%80%E6%9C%89%E6%96%87%E4%BB%B6-2"><span class="nav-number">3.2.</span> <span class="nav-text">所有文件</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%9A%E7%94%A8%E6%96%B9%E6%B3%95%E8%A7%A3%E5%8E%8B%E5%90%8E%E9%87%8D%E6%96%B0%E6%89%93%E5%8C%85-jar-%E5%8C%85"><span class="nav-number">1.</span> <span class="nav-text">通用方法——解压后重新打包 Jar
+包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#windows-%E6%96%B9%E5%BC%8F"><span class="nav-number">2.</span> <span class="nav-text">Windows 方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%85%E6%96%87%E6%9C%AC%E6%96%87%E4%BB%B6"><span class="nav-number">2.1.</span> <span class="nav-text">仅文本文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%80%E6%9C%89%E6%96%87%E4%BB%B6"><span class="nav-number">2.2.</span> <span class="nav-text">所有文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#linux-%E6%96%B9%E5%BC%8F"><span class="nav-number">3.</span> <span class="nav-text">Linux 方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%85%E6%96%87%E6%9C%AC%E6%96%87%E4%BB%B6-1"><span class="nav-number">3.1.</span> <span class="nav-text">仅文本文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%80%E6%9C%89%E6%96%87%E4%BB%B6-1"><span class="nav-number">3.2.</span> <span class="nav-text">所有文件</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -329,34 +330,55 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>在我们日常打包部署 Jar 包的时候，时常会出现需要修改少量内容或替换某个文件的时候，重新打包完整 Jar 包并在网上传输费时费力，所以需要直接修改 Jar 包，这里就对直接修改 和替换 Jar 包中文件的几种方式做一下总结。</p>
+        <p>在我们日常打包部署 Jar
+包的时候，时常会出现需要修改少量内容或替换某个文件的时候，重新打包完整
+Jar 包并在网上传输费时费力，所以需要直接修改 Jar 包，这里就对直接修改
+和替换 Jar 包中文件的几种方式做一下总结。</p>
 <span id="more"></span>
-<h2 id="通用方法——解压后重新打包-Jar-包">通用方法——解压后重新打包 Jar 包</h2>
-<p>这个通用方法，就是将 Jar 包进行解压，修改或替换文件后，重新打包成 Jar 包的方式。这个方法需要部署 JAVA jdk，需要用到其中的 jar 命令。</p>
+<h2 id="通用方法解压后重新打包-jar-包">通用方法——解压后重新打包 Jar
+包</h2>
+<p>这个通用方法，就是将 Jar 包进行解压，修改或替换文件后，重新打包成 Jar
+包的方式。这个方法需要部署 JAVA jdk，需要用到其中的 jar 命令。</p>
 <p>我们可以先看下 jar 命令的官方说明，<code>0</code>参数是关键。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">用法: jar &#123;ctxui&#125;[vfmn0PMe] [jar-file] [manifest-file] [entry-point] [-C dir] files ...</span><br><span class="line">选项:</span><br><span class="line">    -c  创建新档案</span><br><span class="line">    -t  列出档案目录</span><br><span class="line">    -x  从档案中提取指定的 (或所有) 文件</span><br><span class="line">    -u  更新现有档案</span><br><span class="line">    -v  在标准输出中生成详细输出</span><br><span class="line">    -f  指定档案文件名</span><br><span class="line">    -m  包含指定清单文件中的清单信息</span><br><span class="line">    -n  创建新档案后执行 Pack200 规范化</span><br><span class="line">    -e  为捆绑到可执行 jar 文件的独立应用程序</span><br><span class="line">        指定应用程序入口点</span><br><span class="line">    -0  仅存储; 不使用任何 ZIP 压缩</span><br><span class="line">    -P  保留文件名中的前导 &#x27;/&#x27; (绝对路径) 和 &quot;..&quot; (父目录) 组件</span><br><span class="line">    -M  不创建条目的清单文件</span><br><span class="line">    -i  为指定的 jar 文件生成索引信息</span><br><span class="line">    -C  更改为指定的目录并包含以下文件</span><br><span class="line">如果任何文件为目录, 则对其进行递归处理。</span><br><span class="line">清单文件名, 档案文件名和入口点名称的指定顺序</span><br><span class="line">与 &#x27;m&#x27;, &#x27;f&#x27; 和 &#x27;e&#x27; 标记的指定顺序相同。</span><br><span class="line"></span><br><span class="line">示例 1: 将两个类文件归档到一个名为 classes.jar 的档案中:</span><br><span class="line">       jar cvf classes.jar Foo.class Bar.class</span><br><span class="line">示例 2: 使用现有的清单文件 &#x27;mymanifest&#x27; 并</span><br><span class="line">           将 foo/ 目录中的所有文件归档到 &#x27;classes.jar&#x27; 中:</span><br><span class="line">       jar cvfm classes.jar mymanifest -C foo/ .</span><br></pre></td></tr></table></figure>
 <p>所以流程就是这样的，首先解压 jar 包。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 解压</span><br><span class="line">jar -xvf test.jar</span><br></pre></td></tr></table></figure>
-<p>进入文件夹编辑或者替换需要更改的文件，然后重新进行打包，加了 <code>0</code> 参数表示只打包不压缩。</p>
+<p>进入文件夹编辑或者替换需要更改的文件，然后重新进行打包，加了
+<code>0</code> 参数表示只打包不压缩。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 压缩</span><br><span class="line">jar -cvf0m test.jar ./META-INF/MANIFEST.MF .</span><br></pre></td></tr></table></figure>
-<p>不要漏了这个 MANIFET.MF 文件，，这个文件里面记录了该 JAR 包的版本、创建人和类搜索路径等信息。如果一个 JAR 文件被当作可执行文件，则其中的 MANIFEST 文件需要指出该程序的主类文件，漏掉了则不能正常执行。</p>
-<h2 id="Windows-方式">Windows 方式</h2>
-<p>在 Windows 上因为有许多完善好用的 GUI 应用，编辑起来就简单很多。Jar 包通常可以通过安装的压缩软件直接打开，所以至少要安装一个压缩软件，我想基本上每个人都会有的。</p>
+<p>不要漏了这个 MANIFET.MF 文件，，这个文件里面记录了该 JAR
+包的版本、创建人和类搜索路径等信息。如果一个 JAR
+文件被当作可执行文件，则其中的 MANIFEST
+文件需要指出该程序的主类文件，漏掉了则不能正常执行。</p>
+<h2 id="windows-方式">Windows 方式</h2>
+<p>在 Windows 上因为有许多完善好用的 GUI 应用，编辑起来就简单很多。Jar
+包通常可以通过安装的压缩软件直接打开，所以至少要安装一个压缩软件，我想基本上每个人都会有的。</p>
 <h3 id="仅文本文件">仅文本文件</h3>
-<p>对于文本文件来说，一般可以直接在 Jar 包里打开，修改保存后，压缩软件会提醒说文件已经修改，是否更新到 Jar 包中，点确定即可。</p>
-<p><img data-src="https://img.iszy.xyz/20200517234204.png" alt=""></p>
+<p>对于文本文件来说，一般可以直接在 Jar
+包里打开，修改保存后，压缩软件会提醒说文件已经修改，是否更新到 Jar
+包中，点确定即可。</p>
+<p><img data-src="https://img.iszy.xyz/20200517234204.png" /></p>
 <h3 id="所有文件">所有文件</h3>
-<p>所有文件，都可以通过将文件拖进 Jar 包的方式，添加或替换内容。需要注意的是，压缩方式需要选择存储/不压缩，或是其他类似的表达。当然也可以通过上面的通用方法解决。</p>
-<p><img data-src="https://img.iszy.xyz/20200517234555.png" alt=""></p>
-<h2 id="Linux-方式">Linux 方式</h2>
-<p>我指的 Linux 方式，基本就是指命令行的方式，不包含桌面操作，那个我不是很了解，或许会和 Windows 上的操作比较接近。</p>
-<h3 id="仅文本文件-2">仅文本文件</h3>
-<p>首先需要系统里面安装 vim 和 zip 两个包，如果是 Ubuntu，可以运行<code>sudo apt install vim zip -y</code>安装。</p>
-<p>然后你可能已经想到了，那就是通过 vim 工具打开 Jar 包，将会显示 Jar 包中的所有文件夹和文件绝对路径，每行显示一个。</p>
-<p><img data-src="https://img.iszy.xyz/20200518084041.png" alt=""></p>
+<p>所有文件，都可以通过将文件拖进 Jar
+包的方式，添加或替换内容。需要注意的是，压缩方式需要选择存储/不压缩，或是其他类似的表达。当然也可以通过上面的通用方法解决。</p>
+<p><img data-src="https://img.iszy.xyz/20200517234555.png" /></p>
+<h2 id="linux-方式">Linux 方式</h2>
+<p>我指的 Linux
+方式，基本就是指命令行的方式，不包含桌面操作，那个我不是很了解，或许会和
+Windows 上的操作比较接近。</p>
+<h3 id="仅文本文件-1">仅文本文件</h3>
+<p>首先需要系统里面安装 vim 和 zip 两个包，如果是
+Ubuntu，可以运行<code>sudo apt install vim zip -y</code>安装。</p>
+<p>然后你可能已经想到了，那就是通过 vim 工具打开 Jar 包，将会显示 Jar
+包中的所有文件夹和文件绝对路径，每行显示一个。</p>
+<p><img data-src="https://img.iszy.xyz/20200518084041.png" /></p>
 <p>通过将光标移动到需要修改的文件上，回车进入文件，像编辑普通文件一样进行修改，修改完成后，<code>:wq</code>退出返回到文件列表。</p>
-<p>接下来可以选择继续编辑其他文件或退出 Jar 包。退出 Jar 包时，请一定要通过<code>:q</code>退出，这个很重要，如果你像上面保存文件一样加了 w 参数，这个 Jar 包就废了，它将会变成保存了文件列表的一个文本文件。所以请千万通过<code>:q</code>参数退出 Jar 包，切记！</p>
-<h3 id="所有文件-2">所有文件</h3>
+<p>接下来可以选择继续编辑其他文件或退出 Jar 包。退出 Jar
+包时，请一定要通过<code>:q</code>退出，这个很重要，如果你像上面保存文件一样加了
+w 参数，这个 Jar
+包就废了，它将会变成保存了文件列表的一个文本文件。所以请千万通过<code>:q</code>参数退出
+Jar 包，切记！</p>
+<h3 id="所有文件-1">所有文件</h3>
 <p>这个我暂时只知道通过上面说明的通用方法进行修改替换文件，如有小伙伴知道其他方法，希望可以告诉我，十分感谢。</p>
 
     </div>
@@ -455,39 +477,38 @@
 
   
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/@next-theme/pjax@0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/@next-theme/pjax@0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/jquery@3.6.1/dist/jquery.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
-<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/comments.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/utils.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/next-boot.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/pjax.min.js"></script>
+<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/comments.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/utils.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/next-boot.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/pjax.min.js"></script>
 
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/algoliasearch@4.14.2/dist/algoliasearch-lite.umd.js" integrity="sha256-dImjLPUsG/6p3+i7gVKBiDM8EemJAhQ0VvkRK2pVsQY=" crossorigin="anonymous"></script>
-<script src="https://jsdelivr.cdn.iszy.xyz/npm/instantsearch.js@4.49.0/dist/instantsearch.production.min.js" integrity="sha256-5FvX4v/nWhVAZLvv1sbGwV6w8AY4kdd+R5FpIsXkh9w=" crossorigin="anonymous"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/search/algolia-search.min.js"></script>
+<script src="https://jsdelivr.cdn.iszy.xyz/npm/instantsearch.js@4.49.1/dist/instantsearch.production.min.js" integrity="sha256-3s8yn/IU/hV+UjoqczP+9xDS1VXIpMf3QYRUi9XoG0Y=" crossorigin="anonymous"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/search/algolia-search.min.js"></script>
 
   <script class="next-config" data-name="pdf" type="application/json">{"object_url":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/pdfobject@2.2.8/pdfobject.min.js","integrity":"sha256-tu9j5pBilBQrWSDePOOajCUdz6hWsid/lBNzK4KgEPM="},"url":"/lib/pdf/web/viewer"}</script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/tags/pdf.min.js"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/tags/pdf.min.js"></script>
 
 
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/fancybox.min.js"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/fancybox.min.js"></script>
 
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/pace.min.js"></script>
-
-  
-
-
-
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/pace.min.js"></script>
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.3/dist/katex.min.css" integrity="sha256-NJNVfEC6jfEt62wQMafLNT2eI6BaWONXbpkSEVAs3+8=" crossorigin="anonymous">
-  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.3/dist/contrib/copy-tex.min.js","integrity":"sha256-Us54+rSGDSTvIhKKUs4kygE2ipA0RXpWWh0/zLqw3bs="}}</script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/math/katex.min.js"></script>
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/mathjax@3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/math/mathjax.min.js"></script>
 
 
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/quicklink@2.3.0/dist/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>
   <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":false,"delay":true,"timeout":3000,"priority":true,"url":"https://www.iszy.cc/posts/kmznu4/"}</script>
-  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.13.2/source/js/third-party/quicklink.min.js"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/quicklink.min.js"></script>
 <script class="next-config" data-name="waline" type="application/json">{"lang":"zh-CN","enable":true,"serverURL":"https://wl.iszy.xyz","cssUrl":"https://jsdelivr.cdn.iszy.xyz/npm/@waline/client@v2.14.1/dist/waline.css","commentCount":false,"pageview":true,"libUrl":"https://jsdelivr.cdn.iszy.xyz/npm/@waline/client@v2.14.1/dist/waline.min.js","locale":{"placeholder":"本站支持匿名评论，无需登录~(●'◡'●)\n与文章无关的留言请前往本站留言板，谢谢配合~"},"emoji":["https://jsdelivr.cdn.iszy.xyz/gh/zvonimirsun/emojis@1.0.3/bilibili-xhl"],"meta":["nick","mail","link"],"requiredMeta":["nick"],"wordLimit":0,"login":"enable","pageSize":10,"dark":"auto","el":"#waline","comment":true,"path":"/posts/kmznu4/"}</script>
 <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/@waline/client@v2.14.1/dist/waline.css">
 <script>
