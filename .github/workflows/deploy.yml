@@ -3,17 +3,17 @@ name: Auto Test
 on:
   push:
     branches:
-      - 'main'
+      - "main"
     paths-ignore:
-      - '.github/**'
+      - ".github/**"
   pull_request:
     branches-ignore:
-      - 'deploy'
+      - "deploy"
     paths-ignore:
-      - '.github/**'
+      - ".github/**"
   workflow_dispatch:
     branches-ignore:
-      - 'deploy'
+      - "deploy"
 
 jobs:
   build:
@@ -30,9 +30,10 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: 'npm'
+          cache: "npm"
       - name: Install dependencies 🔧
         run: yarn install --frozen-lockfile --registry=https://registry.npmjs.org/
+      - uses: nikeee/setup-pandoc@v1
       - name: 编译应用 🔧
         run: |
           yarn global add hexo-cli
