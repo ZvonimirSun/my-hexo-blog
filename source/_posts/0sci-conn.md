@@ -27,12 +27,12 @@ permalink: /page/bgfw/
 | 机场名称（点击了解更多）                            | 关键词                                                     | 操作                                                                                                                                             | 当前状态 |
 | --------------------------------------------------- | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | -------- |
 | [FreeWhale 自由鲸 ⭐](/page/freewhale/)【长期优惠】 | 性价比，主流节点超多，小众节点                             | [官网传送门](https://url.iszy.xyz/freewhale) / [测速](/page/speed-test-collection/#FreeWhale-%E8%87%AA%E7%94%B1%E9%B2%B8)(2022-10-08)            | 优秀     |
-| [DuangCloud ⭐](#二、DuangCloud)【双十二】          | 性价比，专线，主流节点                                     | [官网传送门](https://url.iszy.xyz/duangcloud) / [测速](/page/speed-test-collection/#DuangCloud)(2022-10-08)                                      | 优秀     |
-| [MEET](#三、MEET)                                   | 性价比，主流节点，超小流量套餐                             | [官网传送门](https://url.iszy.xyz/fspeed) / [测速](/page/speed-test-collection/#MEET)(2022-10-08)                                                | 待测试   |
+| [DuangCloud ⭐](#二duangcloud)【双十二】            | 性价比，专线，主流节点                                     | [官网传送门](https://url.iszy.xyz/duangcloud) / [测速](/page/speed-test-collection/#DuangCloud)(2022-10-08)                                      | 优秀     |
+| [MEET](#三meet)                                     | 性价比，主流节点，超小流量套餐                             | [官网传送门](https://url.iszy.xyz/fspeed) / [测速](/page/speed-test-collection/#MEET)(2022-10-08)                                                | 待测试   |
 | [CMYNetwork 红莓网络](/page/cmynetwork/)            | IEPL/IPLC 专线，Trojan，主流节点多，小众节点，福利共享账号 | [官网传送门](https://url.iszy.xyz/cmynetwork) / [测速](/page/speed-test-collection/#CMYNetwork-%E7%BA%A2%E8%8E%93%E7%BD%91%E7%BB%9C)(2022-10-08) | 优秀     |
-| [WavesLink](#五、WavesLink)(原 后浪云)【暂停推荐】  | IEPL 专线，主流节点多，流媒体                              | [官网传送门](https://url.iszy.xyz/waveslink) / [测速](/page/speed-test-collection/#WavesLink)(2022-10-11)                                        | 差       |
-| [Gatern](#六、Gatern)(原 Shuttle)                   | 性价比，IPLC 专线，主流节点，小众节点多，流媒体            | [官网传送门](https://url.iszy.xyz/gatern) / [测速](/page/speed-test-collection/#Gatern)(10-08)                                                   | 优秀     |
-| [ByWave](#七、ByWave)【双十二】                     | BGP 专线中转，流媒体，节点较少但带宽大                     | [官网传送门](https://url.iszy.xyz/bywave) / [测速](/page/speed-test-collection/#ByWave)(2022-10-08)                                              | 良好     |
+| [WavesLink](#五waveslink)(原 后浪云)【暂停推荐】    | IEPL 专线，主流节点多，流媒体                              | [官网传送门](https://url.iszy.xyz/waveslink) / [测速](/page/speed-test-collection/#WavesLink)(2022-10-11)                                        | 差       |
+| [Gatern](#六gatern)(原 Shuttle)                     | 性价比，IPLC 专线，主流节点，小众节点多，流媒体            | [官网传送门](https://url.iszy.xyz/gatern) / [测速](/page/speed-test-collection/#Gatern)(10-08)                                                   | 优秀     |
+| [ByWave](#七bywave)【双十二】                       | BGP 专线中转，流媒体，节点较少但带宽大                     | [官网传送门](https://url.iszy.xyz/bywave) / [测速](/page/speed-test-collection/#ByWave)(2022-10-08)                                              | 良好     |
 
 点击前往查看测速: **[机场测速集合](/page/speed-test-collection/)**
 
