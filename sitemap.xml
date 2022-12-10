@@ -2,6 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.iszy.cc/posts/unraid-plex-nvidia/</loc>
+    
+    <lastmod>2022-12-10</lastmod>
+    
+    
+  </url>
+  
+  <url>
+    <loc>https://www.iszy.cc/posts/unraid-start/</loc>
+    
+    <lastmod>2022-12-10</lastmod>
+    
+    
+  </url>
+  
+  <url>
     <loc>https://www.iszy.cc/page/bgfw/</loc>
     
     <lastmod>2022-12-09</lastmod>
@@ -20,14 +36,6 @@
     
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.iszy.cc/posts/unraid-start/</loc>
-    
-    <lastmod>2022-11-20</lastmod>
-    
     
   </url>
   
@@ -1080,6 +1088,6 @@
 
   <url>
     <loc>https://www.iszy.cc/</loc>
-    <lastmod>2022-12-09</lastmod>
+    <lastmod>2022-12-10</lastmod>
   </url>
 </urlset>
