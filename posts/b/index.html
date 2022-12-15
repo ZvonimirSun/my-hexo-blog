@@ -152,7 +152,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E6%83%85%E6%8F%90%E8%A6%81"><span class="nav-number">1.</span> <span class="nav-text">前情提要</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3"><span class="nav-number">2.</span> <span class="nav-text">解决</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%89%E9%A1%B9%E4%B8%80%E6%8E%A8%E8%8D%90"><span class="nav-number">2.1.</span> <span class="nav-text">选项一（推荐）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%89%E9%A1%B9%E4%BA%8C"><span class="nav-number">2.2.</span> <span class="nav-text">选项二</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E6%83%85%E6%8F%90%E8%A6%81"><span class="nav-number">1.</span> <span class="nav-text"> 前情提要</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3"><span class="nav-number">2.</span> <span class="nav-text"> 解决</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%89%E9%A1%B9%E4%B8%80%E6%8E%A8%E8%8D%90"><span class="nav-number">2.1.</span> <span class="nav-text"> 选项一（推荐）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%89%E9%A1%B9%E4%BA%8C"><span class="nav-number">2.2.</span> <span class="nav-text"> 选项二</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -340,44 +340,33 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>本文记录下使用 vue-cli 的 babel 插件导致动态 import
-代码拆分失败的问题。</p>
+        <p>本文记录下使用 vue-cli 的 babel 插件导致动态 import 代码拆分失败的问题。</p>
 <span id="more"></span>
-<h2 id="前情提要">前情提要</h2>
-<p>先前在项目中使用了<code>@vue/cli-plugin-babel</code>插件，打包时发现项目被打包成了一个非常大的
-js 文件，动态 import 代码拆分失败了。</p>
-<p>经过测试，基本确定就是由于加上了这个 babel 插件导致的，估计是 babel
-的配置导致的问题。</p>
-<p>经过查找插件和 babel
-的官方文档，可以看到，<code>@vue/cli-plugin-babel</code>默认使用<code>Babel 7</code>
-+ <code>babel-loader</code> +
-<code>@vue/babel-preset-app</code>，而<code>@vue/babel-preset-app</code>使用了<code>@babel/preset-env</code>，并支持了以下几个
-stage 3 特性。</p>
+<h2 id="前情提要"><a class="markdownIt-Anchor" href="#前情提要"></a> 前情提要</h2>
+<p>先前在项目中使用了<code>@vue/cli-plugin-babel</code>插件，打包时发现项目被打包成了一个非常大的 js 文件，动态 import 代码拆分失败了。</p>
+<p>经过测试，基本确定就是由于加上了这个 babel 插件导致的，估计是 babel 的配置导致的问题。</p>
+<p>经过查找插件和 babel 的官方文档，可以看到，<code>@vue/cli-plugin-babel</code>默认使用<code>Babel 7</code> + <code>babel-loader</code> + <code>@vue/babel-preset-app</code>，而<code>@vue/babel-preset-app</code>使用了<code>@babel/preset-env</code>，并支持了以下几个 stage 3 特性。</p>
 <ul>
 <li>Dynamic Import Syntax</li>
 <li>Proposal Class Properties</li>
 <li>Proposal Decorators (legacy)</li>
 </ul>
-<p>问题就出在这个<code>@babel/preset-env</code>，其中包含了一个插件叫<code>@babel/plugin-proposal-dynamic-import</code>，这个插件的作用就是将动态
-import 转为 Promise 语法，这就导致 webpack
-没法再对转换后的代码进行动态拆分。这个<code>@babel/preset-env</code>也是很多人使用的一个预设，所以估计有这个问题的人不在少数，下面的方法也是可以适用的。</p>
+<p>问题就出在这个<code>@babel/preset-env</code>，其中包含了一个插件叫<code>@babel/plugin-proposal-dynamic-import</code>，这个插件的作用就是将动态 import 转为 Promise 语法，这就导致 webpack 没法再对转换后的代码进行动态拆分。这个<code>@babel/preset-env</code>也是很多人使用的一个预设，所以估计有这个问题的人不在少数，下面的方法也是可以适用的。</p>
 <p>原代码</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span>(<span class="string">&quot;./moduleA&quot;</span>).<span class="title function_">then</span>(<span class="comment">/* do stuff */</span>);</span><br></pre></td></tr></table></figure>
 <p>转换后的代码</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Promise</span>.<span class="title function_">resolve</span>()</span><br><span class="line">  .<span class="title function_">then</span>(<span class="function">() =&gt;</span> <span class="built_in">require</span>(<span class="string">&quot;./moduleA&quot;</span>))</span><br><span class="line">  .<span class="title function_">then</span>(<span class="comment">/* do stuff */</span>);</span><br></pre></td></tr></table></figure>
-<h2 id="解决">解决</h2>
+<h2 id="解决"><a class="markdownIt-Anchor" href="#解决"></a> 解决</h2>
 <p>既然问题已经清晰了，解决方法就比较明了了，就是要禁用<code>@babel/plugin-proposal-dynamic-import</code>插件。</p>
-<h3 id="选项一推荐">选项一（推荐）</h3>
-<p>比较直截了当的方法就是将这个插件直接排除掉。可以通过修改 babel
-配置，通过 exclude 选项，将插件直接排除。</p>
+<h3 id="选项一推荐"><a class="markdownIt-Anchor" href="#选项一推荐"></a> 选项一（推荐）</h3>
+<p>比较直截了当的方法就是将这个插件直接排除掉。可以通过修改 babel 配置，通过 exclude 选项，将插件直接排除。</p>
 <p>使用 <code>@vue/cli-plugin-babel</code> 的情况</p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;presets&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">    <span class="punctuation">[</span><span class="string">&quot;@vue/cli-plugin-babel/preset&quot;</span><span class="punctuation">,</span> <span class="punctuation">&#123;</span> <span class="attr">&quot;exclude&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">&quot;proposal-dynamic-import&quot;</span><span class="punctuation">]</span> <span class="punctuation">&#125;</span><span class="punctuation">]</span></span><br><span class="line">  <span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
 <p>直接使用 <code>@babel/preset-env</code> 的情况</p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;presets&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="punctuation">[</span><span class="string">&quot;@babel/preset-env&quot;</span><span class="punctuation">,</span> <span class="punctuation">&#123;</span> <span class="attr">&quot;exclude&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">&quot;proposal-dynamic-import&quot;</span><span class="punctuation">]</span> <span class="punctuation">&#125;</span><span class="punctuation">]</span><span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
-<h3 id="选项二">选项二</h3>
+<h3 id="选项二"><a class="markdownIt-Anchor" href="#选项二"></a> 选项二</h3>
 <p>这个其实是<code>@babel/preset-env</code>的配置项，我没有测试过使用<code>@vue/cli-plugin-babel</code>时能否正确将参数传递到后面。</p>
-<p>将 modules 参数设置为 false，则 Babel 将会保留 ES
-模组，自然也就不会转换动态 import 语句了。</p>
+<p>将 modules 参数设置为 false，则 Babel 将会保留 ES 模组，自然也就不会转换动态 import 语句了。</p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;presets&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="punctuation">[</span><span class="string">&quot;@babel/preset-env&quot;</span><span class="punctuation">,</span> <span class="punctuation">&#123;</span> <span class="attr">&quot;modules&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span> <span class="punctuation">&#125;</span><span class="punctuation">]</span><span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
 
     </div>
@@ -502,8 +491,9 @@ import 转为 Promise 语法，这就导致 webpack
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/mathjax@3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
-<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/math/mathjax.min.js"></script>
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.3/dist/katex.min.css" integrity="sha256-NJNVfEC6jfEt62wQMafLNT2eI6BaWONXbpkSEVAs3+8=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.3/dist/contrib/copy-tex.min.js","integrity":"sha256-Us54+rSGDSTvIhKKUs4kygE2ipA0RXpWWh0/zLqw3bs="}}</script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/math/katex.min.js"></script>
 
 
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/quicklink@2.3.0/dist/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>

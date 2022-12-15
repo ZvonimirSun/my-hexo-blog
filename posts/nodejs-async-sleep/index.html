@@ -152,7 +152,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E8%AE%B0%E5%BD%95"><span class="nav-number">1.</span> <span class="nav-text">方法记录</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-async"><span class="nav-number">1.1.</span> <span class="nav-text">安装 async</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sleep-%E5%8A%9F%E8%83%BD%E5%AE%9A%E4%B9%89"><span class="nav-number">1.2.</span> <span class="nav-text">sleep 功能定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B0%83%E7%94%A8-sleep"><span class="nav-number">1.3.</span> <span class="nav-text">调用 sleep</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A4%BA%E4%BE%8B"><span class="nav-number">2.</span> <span class="nav-text">示例</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E8%AE%B0%E5%BD%95"><span class="nav-number">1.</span> <span class="nav-text"> 方法记录</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-async"><span class="nav-number">1.1.</span> <span class="nav-text"> 安装 async</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sleep-%E5%8A%9F%E8%83%BD%E5%AE%9A%E4%B9%89"><span class="nav-number">1.2.</span> <span class="nav-text"> sleep 功能定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B0%83%E7%94%A8-sleep"><span class="nav-number">1.3.</span> <span class="nav-text"> 调用 sleep</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A4%BA%E4%BE%8B"><span class="nav-number">2.</span> <span class="nav-text"> 示例</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -326,24 +326,21 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>最近用 Node.js 的 request 调用我的一个 web
-api，循环访问速度太快，请求就会被丢弃。查找了一下 Node.js 中的 sleep
-功能的实现方法，下面的这个方法，用起来效果很好，在此记录一下。</p>
+        <p>最近用 Node.js 的 request 调用我的一个 web api，循环访问速度太快，请求就会被丢弃。查找了一下 Node.js 中的 sleep 功能的实现方法，下面的这个方法，用起来效果很好，在此记录一下。</p>
 <span id="more"></span>
-<h2 id="方法记录">方法记录</h2>
-<h3 id="安装-async">安装 async</h3>
+<h2 id="方法记录"><a class="markdownIt-Anchor" href="#方法记录"></a> 方法记录</h2>
+<h3 id="安装-async"><a class="markdownIt-Anchor" href="#安装-async"></a> 安装 async</h3>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i async --save</span><br></pre></td></tr></table></figure>
 <p>然后在你的文件开头引用此 package。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">async</span> = <span class="built_in">require</span>(<span class="string">&quot;async&quot;</span>);</span><br></pre></td></tr></table></figure>
-<h3 id="sleep-功能定义">sleep 功能定义</h3>
+<h3 id="sleep-功能定义"><a class="markdownIt-Anchor" href="#sleep-功能定义"></a> sleep 功能定义</h3>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">sleep</span> = (<span class="params"></span>) =&gt; <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">res, rej</span>) =&gt;</span> <span class="built_in">setTimeout</span>(res, <span class="number">2000</span>));</span><br></pre></td></tr></table></figure>
 <p>可以把<code>2000</code>改为你需要的数字，单位为毫秒。</p>
-<h3 id="调用-sleep">调用 sleep</h3>
+<h3 id="调用-sleep"><a class="markdownIt-Anchor" href="#调用-sleep"></a> 调用 sleep</h3>
 <p>在<code>async</code>方法中才能使用<code>await</code>。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">(<span class="keyword">async</span> () =&gt; &#123;</span><br><span class="line">  <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="comment">//some function</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">await</span> <span class="title function_">sleep</span>();</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
-<h2 id="示例">示例</h2>
-<p>随便写个示例，可以类比着来。把 sleep
-放在你需要暂停的位置上，外面要套上 async。</p>
+<h2 id="示例"><a class="markdownIt-Anchor" href="#示例"></a> 示例</h2>
+<p>随便写个示例，可以类比着来。把 sleep 放在你需要暂停的位置上，外面要套上 async。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">async</span> = <span class="built_in">require</span>(<span class="string">&quot;async&quot;</span>);</span><br><span class="line"><span class="keyword">const</span> <span class="title function_">sleep</span> = (<span class="params"></span>) =&gt; <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">res, rej</span>) =&gt;</span> <span class="built_in">setTimeout</span>(res, <span class="number">1000</span>));</span><br><span class="line"></span><br><span class="line">(<span class="keyword">async</span> () =&gt; &#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">9</span>; i++) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(i);</span><br><span class="line">    <span class="keyword">await</span> <span class="title function_">sleep</span>();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
 
     </div>
@@ -468,8 +465,9 @@ api，循环访问速度太快，请求就会被丢弃。查找了一下 Node.js
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/mathjax@3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
-<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/math/mathjax.min.js"></script>
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.3/dist/katex.min.css" integrity="sha256-NJNVfEC6jfEt62wQMafLNT2eI6BaWONXbpkSEVAs3+8=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.3/dist/contrib/copy-tex.min.js","integrity":"sha256-Us54+rSGDSTvIhKKUs4kygE2ipA0RXpWWh0/zLqw3bs="}}</script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/math/katex.min.js"></script>
 
 
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/quicklink@2.3.0/dist/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>

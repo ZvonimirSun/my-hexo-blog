@@ -161,7 +161,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%86%E5%A4%87"><span class="nav-number">1.</span> <span class="nav-text">准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E8%87%AA%E5%8A%A8%E6%A0%BC%E5%BC%8F%E5%8C%96"><span class="nav-number">2.</span> <span class="nav-text">配置自动格式化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0-eslint-%E8%87%AA%E5%8A%A8%E4%BF%AE%E5%A4%8D%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="nav-number">3.</span> <span class="nav-text">添加 ESLint 自动修复快捷键</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%86%E5%A4%87"><span class="nav-number">1.</span> <span class="nav-text"> 准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E8%87%AA%E5%8A%A8%E6%A0%BC%E5%BC%8F%E5%8C%96"><span class="nav-number">2.</span> <span class="nav-text"> 配置自动格式化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0-eslint-%E8%87%AA%E5%8A%A8%E4%BF%AE%E5%A4%8D%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="nav-number">3.</span> <span class="nav-text"> 添加 ESLint 自动修复快捷键</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -311,55 +311,32 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>在此记录一下 VS Code 配合 ESLint
-进行自动修复格式化，以及快捷键的配置。</p>
+        <p>在此记录一下 VS Code 配合 ESLint 进行自动修复格式化，以及快捷键的配置。</p>
 <span id="more"></span>
-<h2 id="准备">准备</h2>
-<p>首先在 VS Code 中使用 ESLint，<code>ESLint</code>
-插件肯定是少不了的。</p>
-<figure>
-<img data-src="https://img.iszy.xyz/1632972151436.png" alt="ESLint" />
-<figcaption aria-hidden="true">ESLint</figcaption>
-</figure>
+<h2 id="准备"><a class="markdownIt-Anchor" href="#准备"></a> 准备</h2>
+<p>首先在 VS Code 中使用 ESLint，<code>ESLint</code> 插件肯定是少不了的。</p>
+<p><img data-src="https://img.iszy.xyz/1632972151436.png" alt="ESLint" /></p>
 <p>如果需要支持 Vue，还需要安装 <code>Vetur</code> 插件。</p>
-<figure>
-<img data-src="https://img.iszy.xyz/1632972292437.png" alt="Vetur" />
-<figcaption aria-hidden="true">Vetur</figcaption>
-</figure>
+<p><img data-src="https://img.iszy.xyz/1632972292437.png" alt="Vetur" /></p>
 <p>当然项目中需要在 devDependencies 里添加 eslint 相关内容。</p>
-<figure>
-<img data-src="https://img.iszy.xyz/1632972500989.png"
-alt="devDependencies" />
-<figcaption aria-hidden="true">devDependencies</figcaption>
-</figure>
+<p><img data-src="https://img.iszy.xyz/1632972500989.png" alt="devDependencies" /></p>
 <p>如果需要对所有项目使用，建议全局安装 eslint。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install eslint -g</span><br></pre></td></tr></table></figure>
-<h2 id="配置自动格式化">配置自动格式化</h2>
+<h2 id="配置自动格式化"><a class="markdownIt-Anchor" href="#配置自动格式化"></a> 配置自动格式化</h2>
 <p>打开 VS Code 首选项，切换成 JSON 模式。</p>
-<p><img data-src="https://img.iszy.xyz/1632973295099.png" /></p>
+<p><img data-src="https://img.iszy.xyz/1632973295099.png" alt="" /></p>
 <p>然后添加如下内容。</p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;editor.codeActionsOnSave&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;source.fixAll.eslint&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;eslint.validate&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">&quot;javascript&quot;</span><span class="punctuation">,</span> <span class="string">&quot;vue&quot;</span><span class="punctuation">,</span> <span class="string">&quot;html&quot;</span><span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
-<p>此时，当你在保存 js、vue、html 文件时，ESLint
-将会执行自动修复格式化操作。</p>
-<h2 id="添加-eslint-自动修复快捷键">添加 ESLint 自动修复快捷键</h2>
+<p>此时，当你在保存 js、vue、html 文件时，ESLint 将会执行自动修复格式化操作。</p>
+<h2 id="添加-eslint-自动修复快捷键"><a class="markdownIt-Anchor" href="#添加-eslint-自动修复快捷键"></a> 添加 ESLint 自动修复快捷键</h2>
 <p>自动格式化是好，但是有时候我们想自己主动触发格式化，而不是在每次保存时自动修复格式化。那么为了方便，我们可以考虑设置一个快捷键，用于触发格式化。不用配置上一部分的内容。</p>
-<p>打开 <code>文件</code> -&gt; <code>首选项</code> -&gt;
-<code>键盘快捷方式</code>。或者英文的 <code>Code</code> -&gt;
-<code>Preferences</code> -&gt; <code>Keyboard Shortcuts</code>。</p>
-<figure>
-<img data-src="https://img.iszy.xyz/1632973421746.png" alt="快捷键" />
-<figcaption aria-hidden="true">快捷键</figcaption>
-</figure>
+<p>打开 <code>文件</code> -&gt; <code>首选项</code> -&gt; <code>键盘快捷方式</code>。或者英文的 <code>Code</code> -&gt; <code>Preferences</code> -&gt; <code>Keyboard Shortcuts</code>。</p>
+<p><img data-src="https://img.iszy.xyz/1632973421746.png" alt="快捷键" /></p>
 <p>此时会列出当前可以绑定快捷键的所有功能和快捷键，在这里搜索<code>fix</code>。</p>
-<figure>
-<img data-src="https://img.iszy.xyz/1632973767580.png" alt="修复快捷键" />
-<figcaption aria-hidden="true">修复快捷键</figcaption>
-</figure>
-<p>可以看到<code>全部修复</code>也就是修复当前文件的全部错误，是没有绑定快捷键的。点击条目前面的加号，或是双击该条，可以添加和覆盖绑定的快捷键。打开后先按下想要绑定的快捷键再回车，即可保存。右键该条目可以删除或重置键绑定。这边我按照自己的习惯绑定了<code>Alt</code>
-+ <code>X</code>。</p>
-<p><img data-src="https://img.iszy.xyz/1632973867998.png" /></p>
-<p>此时，在你打开的文件中按下此快捷键，就会触发 ESLint
-的自动修复格式化。</p>
+<p><img data-src="https://img.iszy.xyz/1632973767580.png" alt="修复快捷键" /></p>
+<p>可以看到<code>全部修复</code>也就是修复当前文件的全部错误，是没有绑定快捷键的。点击条目前面的加号，或是双击该条，可以添加和覆盖绑定的快捷键。打开后先按下想要绑定的快捷键再回车，即可保存。右键该条目可以删除或重置键绑定。这边我按照自己的习惯绑定了<code>Alt</code> + <code>X</code>。</p>
+<p><img data-src="https://img.iszy.xyz/1632973867998.png" alt="" /></p>
+<p>此时，在你打开的文件中按下此快捷键，就会触发 ESLint 的自动修复格式化。</p>
 
     </div>
 
@@ -484,8 +461,9 @@ alt="devDependencies" />
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/mathjax@3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
-<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/math/mathjax.min.js"></script>
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.3/dist/katex.min.css" integrity="sha256-NJNVfEC6jfEt62wQMafLNT2eI6BaWONXbpkSEVAs3+8=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.3/dist/contrib/copy-tex.min.js","integrity":"sha256-Us54+rSGDSTvIhKKUs4kygE2ipA0RXpWWh0/zLqw3bs="}}</script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/math/katex.min.js"></script>
 
 
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/quicklink@2.3.0/dist/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>

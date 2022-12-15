@@ -157,8 +157,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#valine-%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%E7%AE%80%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text">Valine 评论系统简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4"><span class="nav-number">2.</span> <span class="nav-text">安装步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E5%BA%94%E7%94%A8"><span class="nav-number">2.1.</span> <span class="nav-text">创建应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96-app-id-%E5%92%8C-app-key"><span class="nav-number">2.2.</span> <span class="nav-text">获取 APP ID 和
-APP KEY</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE%E5%AE%89%E5%85%A8%E5%9F%9F%E5%90%8D"><span class="nav-number">2.3.</span> <span class="nav-text">设置安全域名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8F%92%E5%85%A5%E9%A1%B5%E9%9D%A2"><span class="nav-number">2.4.</span> <span class="nav-text">插入页面</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E5%8F%82%E6%95%B0"><span class="nav-number">3.</span> <span class="nav-text">其他参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#valine-admin"><span class="nav-number">4.</span> <span class="nav-text">Valine-Admin</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#valine-%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%E7%AE%80%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text"> Valine 评论系统简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4"><span class="nav-number">2.</span> <span class="nav-text"> 安装步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E5%BA%94%E7%94%A8"><span class="nav-number">2.1.</span> <span class="nav-text"> 创建应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96-app-id-%E5%92%8C-app-key"><span class="nav-number">2.2.</span> <span class="nav-text"> 获取 APP ID 和 APP KEY</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE%E5%AE%89%E5%85%A8%E5%9F%9F%E5%90%8D"><span class="nav-number">2.3.</span> <span class="nav-text"> 设置安全域名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8F%92%E5%85%A5%E9%A1%B5%E9%9D%A2"><span class="nav-number">2.4.</span> <span class="nav-text"> 插入页面</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E5%8F%82%E6%95%B0"><span class="nav-number">3.</span> <span class="nav-text"> 其他参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#valine-admin"><span class="nav-number">4.</span> <span class="nav-text"> Valine-Admin</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -353,59 +352,43 @@ APP KEY</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>今天我来介绍一下，我现在正在使用的评论系统——<span class="exturl" data-url="aHR0cHM6Ly92YWxpbmUuanMub3JnLw==">Valine<i class="fa fa-external-link-alt"></i></span>，一个可以完全自主掌控数据的超好用无后端极简评论系统。我之前使用的评论系统是
-Remarkbox，感兴趣的可以看一下我之前的文章，我会在文章末尾放上链接。</p>
+        <p>今天我来介绍一下，我现在正在使用的评论系统——<span class="exturl" data-url="aHR0cHM6Ly92YWxpbmUuanMub3JnLw==">Valine<i class="fa fa-external-link-alt"></i></span>，一个可以完全自主掌控数据的超好用无后端极简评论系统。我之前使用的评论系统是 Remarkbox，感兴趣的可以看一下我之前的文章，我会在文章末尾放上链接。</p>
 <span id="more"></span>
-<h2 id="valine-评论系统简介">Valine 评论系统简介</h2>
-<p><img data-src="https://img.iszy.xyz/20190318221214.png" /></p>
-<p>如题目所说，Valine 是一个无后端的极简评论系统。由 <a
-target="_blank" rel="noopener" href="https://ioliu.cn/"><span class="citation"
-data-cites="云淡风轻">@云淡风轻</span></a> 大神开发，利用免费的
-leancloud 作云数据库，实现了真正的无后端。Valine
-有以下几点吸引我的地方：</p>
+<h2 id="valine-评论系统简介"><a class="markdownIt-Anchor" href="#valine-评论系统简介"></a> Valine 评论系统简介</h2>
+<p><img data-src="https://img.iszy.xyz/20190318221214.png" alt="" /></p>
+<p>如题目所说，Valine 是一个无后端的极简评论系统。由 <span class="exturl" data-url="aHR0cHM6Ly9pb2xpdS5jbi8=">@云淡风轻<i class="fa fa-external-link-alt"></i></span> 大神开发，利用免费的 leancloud 作云数据库，实现了真正的无后端。Valine 有以下几点吸引我的地方：</p>
 <ul>
 <li>能够完全掌控评论数据</li>
 <li>外观简约美观</li>
 <li>评论支持 markdown 语法</li>
 <li>能够邮件通知（不推荐使用）</li>
 </ul>
-<p><strong>备注：</strong>不推荐使用 Valine
-自带的邮件推送，功能并不完善，我会再后文另外说明实现的方法。</p>
-<h2 id="安装步骤">安装步骤</h2>
+<p>**备注：**不推荐使用 Valine 自带的邮件推送，功能并不完善，我会再后文另外说明实现的方法。</p>
+<h2 id="安装步骤"><a class="markdownIt-Anchor" href="#安装步骤"></a> 安装步骤</h2>
 <p>Valine 官方文档：<span class="exturl" data-url="aHR0cHM6Ly92YWxpbmUuanMub3JnL3F1aWNrc3RhcnQv">文档<i class="fa fa-external-link-alt"></i></span></p>
-<h3 id="创建应用">创建应用</h3>
-<ol type="1">
+<h3 id="创建应用"><a class="markdownIt-Anchor" href="#创建应用"></a> 创建应用</h3>
+<ol>
 <li><span class="exturl" data-url="aHR0cHM6Ly9sZWFuY2xvdWQuY24vZGFzaGJvYXJkL2xvZ2luLmh0bWwjL3NpZ251cA==">点击这里登录或注册<i class="fa fa-external-link-alt"></i></span><code>Leancloud</code></li>
 <li><span class="exturl" data-url="aHR0cHM6Ly9sZWFuY2xvdWQuY24vZGFzaGJvYXJkL2FwcGxpc3QuaHRtbCMvbmV3YXBw">点击这里创建应用<i class="fa fa-external-link-alt"></i></span>，应用名称随意。</li>
 </ol>
-<p><img data-src="https://img.iszy.xyz/20190318221231.png" /></p>
-<h3 id="获取-app-id-和-app-key">获取 <code>APP ID</code> 和
-<code>APP KEY</code></h3>
-<p>进入应用后，在此处获取该应用的 <code>APP ID</code> 和
-<code>APP KEY</code>。</p>
-<p><img data-src="https://img.iszy.xyz/20190318221242.png" /></p>
-<h3 id="设置安全域名">设置安全域名</h3>
+<p><img data-src="https://img.iszy.xyz/20190318221231.png" alt="" /></p>
+<h3 id="获取-app-id-和-app-key"><a class="markdownIt-Anchor" href="#获取-app-id-和-app-key"></a> 获取 <code>APP ID</code> 和 <code>APP KEY</code></h3>
+<p>进入应用后，在此处获取该应用的 <code>APP ID</code> 和 <code>APP KEY</code>。</p>
+<p><img data-src="https://img.iszy.xyz/20190318221242.png" alt="" /></p>
+<h3 id="设置安全域名"><a class="markdownIt-Anchor" href="#设置安全域名"></a> 设置安全域名</h3>
 <p>为了数据安全，请务必在此处添加安全域名为你的博客地址。如在本地测试，可以先不添加安全域名。</p>
-<p><img data-src="https://img.iszy.xyz/20190318221253.png" /></p>
-<h3 id="插入页面">插入页面</h3>
+<p><img data-src="https://img.iszy.xyz/20190318221253.png" alt="" /></p>
+<h3 id="插入页面"><a class="markdownIt-Anchor" href="#插入页面"></a> 插入页面</h3>
 <p>以本人博客为例，请将以下语句添加到博客的评论位置。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--评论显示区，请插入合适的位置--&gt;</span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;comment&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">&lt;!--<span class="title class_">Leancloud</span> 操作库:--&gt;</span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;//cdn1.lncld.net/static/js/3.6.1/av-min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line">&lt;!--<span class="title class_">Valine</span> 的核心代码库--&gt;</span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;//cdn.jsdelivr.net/npm/valine@1.1.9-beta9/dist/Valine.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="keyword">new</span> <span class="title class_">Valine</span>(&#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="attr">el</span>:<span class="string">&#x27;#comment&#x27;</span>,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="attr">appId</span>: <span class="string">&#x27;Your App ID&#x27;</span>,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="attr">appKey</span>: <span class="string">&#x27;Your App Key&#x27;</span>,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="attr">placeholder</span>: <span class="string">&#x27;ヾﾉ≧∀≦)o快来评论一下吧!&#x27;</span>,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="attr">avatar</span>:<span class="string">&#x27;&#x27;</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    &#125;);</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
-<p><strong>注意：</strong>在 Valine
-核心代码库的部分可以自行选择版本，现在最新的稳定版为 1.1.8，将链接中的
-<code>1.1.9-beta9</code> 换成 <code>1.1.8</code> 即可。beta 版可能存在
-bug，但能更快使用新功能，风险自负。</p>
-<h2 id="其他参数">其他参数</h2>
+<p>**注意：**在 Valine 核心代码库的部分可以自行选择版本，现在最新的稳定版为 1.1.8，将链接中的 <code>1.1.9-beta9</code> 换成 <code>1.1.8</code> 即可。beta 版可能存在 bug，但能更快使用新功能，风险自负。</p>
+<h2 id="其他参数"><a class="markdownIt-Anchor" href="#其他参数"></a> 其他参数</h2>
 <p>可自定义配置项较多，不在此一一列举，请参考官方文档。</p>
-<h2 id="valine-admin">Valine-Admin</h2>
-<p>我之前说过，不推荐使用 Valine 提供的邮件通知功能。由于 leancloud
-自身邮件系统的限制，无法传递足够的参数，所以通知邮件中的链接无法直接跳转到文章页，不能够满足使用。</p>
-<p>大神 <a target="_blank" rel="noopener" href="https://panjunwen.com"><span class="citation"
-data-cites="Deserts">@Deserts</span></a> 基于 leancloud
-云引擎做了一个邮件通知功能，顺便还实现了评论管理面板，Github：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3Bhbmp1bndlbi9WYWxpbmUtQWRtaW4=">Valine-Admin<i class="fa fa-external-link-alt"></i></span>。</p>
-<p>由于 Valine
-的版本更新，原本的功能除了管理面板已经基本不能使用了，包括邮件通知、垃圾评论识别。我对此进行了一点简单的改动，恢复了邮件通知的内容，垃圾评论识别不会搞，我就给删掉了，Github：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1p2b25pbWlyU3VuL1ZhbGluZS1BZG1pbg==">Valine-Admin<i class="fa fa-external-link-alt"></i></span>。</p>
-<p><a href="/2018/04/01/Valine-Admin/">下一篇文章</a>，我将写一下这个
-Valine-Admin 的配置。同样是十分简单的。</p>
+<h2 id="valine-admin"><a class="markdownIt-Anchor" href="#valine-admin"></a> Valine-Admin</h2>
+<p>我之前说过，不推荐使用 Valine 提供的邮件通知功能。由于 leancloud 自身邮件系统的限制，无法传递足够的参数，所以通知邮件中的链接无法直接跳转到文章页，不能够满足使用。</p>
+<p>大神 <span class="exturl" data-url="aHR0cHM6Ly9wYW5qdW53ZW4uY29t">@Deserts<i class="fa fa-external-link-alt"></i></span> 基于 leancloud 云引擎做了一个邮件通知功能，顺便还实现了评论管理面板，Github：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3Bhbmp1bndlbi9WYWxpbmUtQWRtaW4=">Valine-Admin<i class="fa fa-external-link-alt"></i></span>。</p>
+<p>由于 Valine 的版本更新，原本的功能除了管理面板已经基本不能使用了，包括邮件通知、垃圾评论识别。我对此进行了一点简单的改动，恢复了邮件通知的内容，垃圾评论识别不会搞，我就给删掉了，Github：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1p2b25pbWlyU3VuL1ZhbGluZS1BZG1pbg==">Valine-Admin<i class="fa fa-external-link-alt"></i></span>。</p>
+<p><a href="/2018/04/01/Valine-Admin/">下一篇文章</a>，我将写一下这个 Valine-Admin 的配置。同样是十分简单的。</p>
 
     </div>
 
@@ -529,8 +512,9 @@ Valine-Admin 的配置。同样是十分简单的。</p>
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/mathjax@3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
-<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/math/mathjax.min.js"></script>
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.3/dist/katex.min.css" integrity="sha256-NJNVfEC6jfEt62wQMafLNT2eI6BaWONXbpkSEVAs3+8=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.3/dist/contrib/copy-tex.min.js","integrity":"sha256-Us54+rSGDSTvIhKKUs4kygE2ipA0RXpWWh0/zLqw3bs="}}</script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/math/katex.min.js"></script>
 
 
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/quicklink@2.3.0/dist/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>

@@ -153,7 +153,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#bbr"><span class="nav-number">1.</span> <span class="nav-text">BBR</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#bbr-%E7%AE%80%E4%BB%8B"><span class="nav-number">1.1.</span> <span class="nav-text">BBR 简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%91%E6%B5%8B-bbr-%E6%98%AF%E5%90%A6%E5%BC%80%E5%90%AF"><span class="nav-number">1.2.</span> <span class="nav-text">监测 BBR 是否开启</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%87%E7%BA%A7%E5%86%85%E6%A0%B8"><span class="nav-number">2.</span> <span class="nav-text">升级内核</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E5%BD%93%E5%89%8D%E5%86%85%E6%A0%B8%E7%89%88%E6%9C%AC"><span class="nav-number">2.1.</span> <span class="nav-text">查看当前内核版本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%9A%E8%BF%87-apt-%E5%8D%87%E7%BA%A7%E5%86%85%E6%A0%B8"><span class="nav-number">2.2.</span> <span class="nav-text">通过 APT 升级内核</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%AF%E7%94%A8-bbr"><span class="nav-number">3.</span> <span class="nav-text">启用 BBR</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A3%85%E8%BD%BD-bbr"><span class="nav-number">3.1.</span> <span class="nav-text">装载 BBR</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A3%E5%BC%8F%E5%90%AF%E7%94%A8-bbr"><span class="nav-number">3.2.</span> <span class="nav-text">正式启用 BBR</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%8E%E8%AF%9D"><span class="nav-number">4.</span> <span class="nav-text">后话</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#bbr"><span class="nav-number">1.</span> <span class="nav-text"> BBR</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#bbr-%E7%AE%80%E4%BB%8B"><span class="nav-number">1.1.</span> <span class="nav-text"> BBR 简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%91%E6%B5%8B-bbr-%E6%98%AF%E5%90%A6%E5%BC%80%E5%90%AF"><span class="nav-number">1.2.</span> <span class="nav-text"> 监测 BBR 是否开启</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%87%E7%BA%A7%E5%86%85%E6%A0%B8"><span class="nav-number">2.</span> <span class="nav-text"> 升级内核</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E5%BD%93%E5%89%8D%E5%86%85%E6%A0%B8%E7%89%88%E6%9C%AC"><span class="nav-number">2.1.</span> <span class="nav-text"> 查看当前内核版本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%9A%E8%BF%87-apt-%E5%8D%87%E7%BA%A7%E5%86%85%E6%A0%B8"><span class="nav-number">2.2.</span> <span class="nav-text"> 通过 APT 升级内核</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%AF%E7%94%A8-bbr"><span class="nav-number">3.</span> <span class="nav-text"> 启用 BBR</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A3%85%E8%BD%BD-bbr"><span class="nav-number">3.1.</span> <span class="nav-text"> 装载 BBR</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A3%E5%BC%8F%E5%90%AF%E7%94%A8-bbr"><span class="nav-number">3.2.</span> <span class="nav-text"> 正式启用 BBR</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%8E%E8%AF%9D"><span class="nav-number">4.</span> <span class="nav-text"> 后话</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -348,81 +348,47 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>Google 的 TCP BBR
-拥塞控制算法能够有效地提高网速，根据实地测试，在部署了最新版内核并开启了
-TCP BBR 的机器上网速甚至可以提升好几个数量级。从 4.9 开始，Linux
-内核已经用上了该算法，但是不少 VPS 的内核甚至还停留在 4.4，更不要说开启
-BBR 了。这篇文章就来讲一下，在 Ubuntu
-上如何以标准的方式优雅地升级系统内核，并开启 BBR。</p>
+        <p>Google 的 TCP BBR 拥塞控制算法能够有效地提高网速，根据实地测试，在部署了最新版内核并开启了 TCP BBR 的机器上网速甚至可以提升好几个数量级。从 4.9 开始，Linux 内核已经用上了该算法，但是不少 VPS 的内核甚至还停留在 4.4，更不要说开启 BBR 了。这篇文章就来讲一下，在 Ubuntu 上如何以标准的方式优雅地升级系统内核，并开启 BBR。</p>
 <span id="more"></span>
-<h2 id="bbr">BBR</h2>
-<h3 id="bbr-简介">BBR 简介</h3>
+<h2 id="bbr"><a class="markdownIt-Anchor" href="#bbr"></a> BBR</h2>
+<h3 id="bbr-简介"><a class="markdownIt-Anchor" href="#bbr-简介"></a> BBR 简介</h3>
 <blockquote>
-<p>参考来源: <span class="exturl" data-url="aHR0cHM6Ly96aC53aWtpcGVkaWEub3JnL3dpa2kvVENQJUU2JThCJUE1JUU1JUExJTlFJUU2JThFJUE3JUU1JTg4JUI2I1RDUF9CQlI=">TCP
-拥塞控制 - 维基百科，自由的百科全书<i class="fa fa-external-link-alt"></i></span></p>
+<p>参考来源: <span class="exturl" data-url="aHR0cHM6Ly96aC53aWtpcGVkaWEub3JnL3dpa2kvVENQJUU2JThCJUE1JUU1JUExJTlFJUU2JThFJUE3JUU1JTg4JUI2I1RDUF9CQlI=">TCP 拥塞控制 - 维基百科，自由的百科全书<i class="fa fa-external-link-alt"></i></span></p>
 </blockquote>
-<p>TCP BBR（Bottleneck Bandwidth and Round-trip propagation time）是由
-Google 设计，于 2016
-年发布的拥塞算法。该算法使用网络最近出站数据分组当时的最大带宽和往返时间来创建网络的显式模型。数据包传输的每个累积或选择性确认用于生成记录在数据包传输过程和确认返回期间的时间内所传送数据量的采样率。Google
-在 YouTube 上应用该算法，将全球平均的 YouTube 网络吞吐量提高了
-4%，在一些国家超过了 14%。BBR 之后移植入 Linux 内核 4.9 版本，并且对于
-QUIC 可用。</p>
-<h3 id="监测-bbr-是否开启">监测 BBR 是否开启</h3>
+<p>TCP BBR（Bottleneck Bandwidth and Round-trip propagation time）是由 Google 设计，于 2016 年发布的拥塞算法。该算法使用网络最近出站数据分组当时的最大带宽和往返时间来创建网络的显式模型。数据包传输的每个累积或选择性确认用于生成记录在数据包传输过程和确认返回期间的时间内所传送数据量的采样率。Google 在 YouTube 上应用该算法，将全球平均的 YouTube 网络吞吐量提高了 4%，在一些国家超过了 14%。BBR 之后移植入 Linux 内核 4.9 版本，并且对于 QUIC 可用。</p>
+<h3 id="监测-bbr-是否开启"><a class="markdownIt-Anchor" href="#监测-bbr-是否开启"></a> 监测 BBR 是否开启</h3>
 <p>在 VPS 上运行以下命令来返回可用的 TCP 拥塞控制算法。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sysctl net.ipv4.tcp_available_congestion_control</span><br></pre></td></tr></table></figure>
-<p>如果返回的内容中没有 bbr
-字样，比如类似以下的内容，则不能开启。反之，则可以开启，直接跳到后文启用
-BBR 部分即可。</p>
+<p>如果返回的内容中没有 bbr 字样，比如类似以下的内容，则不能开启。反之，则可以开启，直接跳到后文启用 BBR 部分即可。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net.ipv4.tcp_available_congestion_control = reno cubic</span><br></pre></td></tr></table></figure>
 <p>在 VPS 上运行以下命令来返回现在正在使用的 TCP 拥塞控制算法。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sysctl net.ipv4.tcp_congestion_control</span><br></pre></td></tr></table></figure>
-<p>如果返回的内容中没有 bbr 字样，比如类似以下的内容，则表示未开启
-BBR。反之，则表示你的 VPS 已经开启了 BBR，你已经大功告成了。</p>
+<p>如果返回的内容中没有 bbr 字样，比如类似以下的内容，则表示未开启 BBR。反之，则表示你的 VPS 已经开启了 BBR，你已经大功告成了。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net.ipv4.tcp_congestion_control = cubic</span><br></pre></td></tr></table></figure>
-<h2 id="升级内核">升级内核</h2>
-<h3 id="查看当前内核版本">查看当前内核版本</h3>
-<p>由于 BBR 只能在 4.9 以上的内核中开启，如果内核低于 4.9
-版本，则需要升级内核，4.9
-版本以上的就可以跳过这一步了。据我所知，国内云主机很多默认镜像还是 4.4
-的内核。输入<code>uname -r</code>可以查看当前的内核版本。</p>
-<h3 id="通过-apt-升级内核">通过 APT 升级内核</h3>
-<p>很多开启 BBR
-的一键脚本都是手动下载新内核并编译安装的，但是手动升级内核存在着安全隐患，而且无法及时得到更新。</p>
-<p>其实 Ubuntu
-官方提供了升级最新内核的方式，那就是<code>linux-hwe-generic</code>软件包。Ubuntu
-通过 apt 包管理工具提供了两个内核版本，一个是通用版本(General
-Availability/GA)，即最稳定的版本；一个是硬件启用版本(Hardware
-Enablement/HWE)，会跟随最新的内核更新。</p>
+<h2 id="升级内核"><a class="markdownIt-Anchor" href="#升级内核"></a> 升级内核</h2>
+<h3 id="查看当前内核版本"><a class="markdownIt-Anchor" href="#查看当前内核版本"></a> 查看当前内核版本</h3>
+<p>由于 BBR 只能在 4.9 以上的内核中开启，如果内核低于 4.9 版本，则需要升级内核，4.9 版本以上的就可以跳过这一步了。据我所知，国内云主机很多默认镜像还是 4.4 的内核。输入<code>uname -r</code>可以查看当前的内核版本。</p>
+<h3 id="通过-apt-升级内核"><a class="markdownIt-Anchor" href="#通过-apt-升级内核"></a> 通过 APT 升级内核</h3>
+<p>很多开启 BBR 的一键脚本都是手动下载新内核并编译安装的，但是手动升级内核存在着安全隐患，而且无法及时得到更新。</p>
+<p>其实 Ubuntu 官方提供了升级最新内核的方式，那就是<code>linux-hwe-generic</code>软件包。Ubuntu 通过 apt 包管理工具提供了两个内核版本，一个是通用版本(General Availability/GA)，即最稳定的版本；一个是硬件启用版本(Hardware Enablement/HWE)，会跟随最新的内核更新。</p>
 <p>我们可以通过输入<code>apt search linux-generic</code>看到这两个软件包。其实那些内核版本旧的装的就是<code>linux-generic</code>这个最稳定版本。</p>
-<p>那么好了，这样就很明了了，我们就要安装<code>linux-generic-hwe</code>包即可，可以将
-Ubuntu 升级为当前版本可用的最新稳定内核。Ubuntu 16.04
-的包叫<code>linux-generic-hwe-16.04</code>，Ubuntu 18.04
-的包叫<code>linux-generic-hwe-18.04</code>，可以以此类推。以 Ubuntu
-16.04 为例，输入以下命令进行安装即可，重启后才会生效。</p>
+<p>那么好了，这样就很明了了，我们就要安装<code>linux-generic-hwe</code>包即可，可以将 Ubuntu 升级为当前版本可用的最新稳定内核。Ubuntu 16.04 的包叫<code>linux-generic-hwe-16.04</code>，Ubuntu 18.04 的包叫<code>linux-generic-hwe-18.04</code>，可以以此类推。以 Ubuntu 16.04 为例，输入以下命令进行安装即可，重启后才会生效。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install linux-generic-hwe-16.04 -y</span><br><span class="line">sudo reboot</span><br></pre></td></tr></table></figure>
-<p>重启后，我们可以再次输入<code>uname -r</code>查看一下内核版本，我们可以看到，此时我的
-Ubuntu 16.04 已经是 4.15 版本的内核了。</p>
+<p>重启后，我们可以再次输入<code>uname -r</code>查看一下内核版本，我们可以看到，此时我的 Ubuntu 16.04 已经是 4.15 版本的内核了。</p>
 <p>大家可能看到了还有一个叫做<code>linux-generic-hwe-16.04-edge</code>的包，那是做什么的呢？这个呢就相当于测试版吧，如果你想要使用更加新的内核，可以使用这个包。</p>
-<h2 id="启用-bbr">启用 BBR</h2>
-<h3 id="装载-bbr">装载 BBR</h3>
-<p>此时，虽然内核已经升级好了，但还没有正式装载 BBR
-模块，还无法在可用拥塞算法中查到。运行以下命令装载 BBR。</p>
+<h2 id="启用-bbr"><a class="markdownIt-Anchor" href="#启用-bbr"></a> 启用 BBR</h2>
+<h3 id="装载-bbr"><a class="markdownIt-Anchor" href="#装载-bbr"></a> 装载 BBR</h3>
+<p>此时，虽然内核已经升级好了，但还没有正式装载 BBR 模块，还无法在可用拥塞算法中查到。运行以下命令装载 BBR。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo modprobe tcp_bbr</span><br><span class="line">echo &quot;tcp_bbr&quot; | sudo tee -a /etc/modules-load.d/modules.conf</span><br></pre></td></tr></table></figure>
-<p>此时，输入<code>sysctl net.ipv4.tcp_available_congestion_control</code>命令，就能看到
-bbr 了。</p>
+<p>此时，输入<code>sysctl net.ipv4.tcp_available_congestion_control</code>命令，就能看到 bbr 了。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net.ipv4.tcp_available_congestion_control = reno cubic bbr</span><br></pre></td></tr></table></figure>
-<h3 id="正式启用-bbr">正式启用 BBR</h3>
+<h3 id="正式启用-bbr"><a class="markdownIt-Anchor" href="#正式启用-bbr"></a> 正式启用 BBR</h3>
 <p>执行以下命令，将 BBR 配置写入 sysctl.conf 文件，正式启用 BBR。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;net.core.default_qdisc=fq&quot; | sudo tee -a /etc/sysctl.conf</span><br><span class="line">echo &quot;net.ipv4.tcp_congestion_control=bbr&quot; | sudo tee -a /etc/sysctl.conf</span><br><span class="line">sudo sysctl -p</span><br></pre></td></tr></table></figure>
-<p>此时，BBR
-已经启用完成，通过<code>sysctl net.ipv4.tcp_congestion_control</code>验证一下，可以看到现在使用的拥塞算法已经是
-BBR 了，如图所示。</p>
+<p>此时，BBR 已经启用完成，通过<code>sysctl net.ipv4.tcp_congestion_control</code>验证一下，可以看到现在使用的拥塞算法已经是 BBR 了，如图所示。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net.ipv4.tcp_congestion_control = bbr</span><br></pre></td></tr></table></figure>
-<h2 id="后话">后话</h2>
-<p>至此，已经完成了 Ubuntu 系统的内核升级和 TCP_BBR
-的开启，享受高速网络吧。关于内核提升，虽然编译内核升级的方式也是有效的，但是还是更加推荐通过
-APT
-的方式升级内核。这既是官方推荐的方式，也是不容易出现问题的方式，还能跟随更新，何乐而不为呢。</p>
+<h2 id="后话"><a class="markdownIt-Anchor" href="#后话"></a> 后话</h2>
+<p>至此，已经完成了 Ubuntu 系统的内核升级和 TCP_BBR 的开启，享受高速网络吧。关于内核提升，虽然编译内核升级的方式也是有效的，但是还是更加推荐通过 APT 的方式升级内核。这既是官方推荐的方式，也是不容易出现问题的方式，还能跟随更新，何乐而不为呢。</p>
 
     </div>
 
@@ -547,8 +513,9 @@ APT
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/mathjax@3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
-<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/math/mathjax.min.js"></script>
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.3/dist/katex.min.css" integrity="sha256-NJNVfEC6jfEt62wQMafLNT2eI6BaWONXbpkSEVAs3+8=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.3/dist/contrib/copy-tex.min.js","integrity":"sha256-Us54+rSGDSTvIhKKUs4kygE2ipA0RXpWWh0/zLqw3bs="}}</script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/math/katex.min.js"></script>
 
 
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/quicklink@2.3.0/dist/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>

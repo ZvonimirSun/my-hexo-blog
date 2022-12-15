@@ -158,7 +158,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E"><span class="nav-number">1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E4%B8%8E%E6%94%B9%E5%8A%A8"><span class="nav-number">2.</span> <span class="nav-text">问题与改动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%91%E5%BC%95%E6%93%8E%E9%83%A8%E7%BD%B2"><span class="nav-number">3.</span> <span class="nav-text">云引擎部署</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%BA%90%E7%A0%81%E9%83%A8%E7%BD%B2"><span class="nav-number">3.1.</span> <span class="nav-text">源码部署</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE%E8%87%AA%E5%AE%9A%E4%B9%89%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="nav-number">3.2.</span> <span class="nav-text">设置自定义环境变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%84%E8%AE%BA%E7%AE%A1%E7%90%86%E5%90%8E%E5%8F%B0"><span class="nav-number">3.3.</span> <span class="nav-text">评论管理后台</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E"><span class="nav-number">1.</span> <span class="nav-text"> 说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E4%B8%8E%E6%94%B9%E5%8A%A8"><span class="nav-number">2.</span> <span class="nav-text"> 问题与改动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%91%E5%BC%95%E6%93%8E%E9%83%A8%E7%BD%B2"><span class="nav-number">3.</span> <span class="nav-text"> 云引擎部署</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%BA%90%E7%A0%81%E9%83%A8%E7%BD%B2"><span class="nav-number">3.1.</span> <span class="nav-text"> 源码部署</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE%E8%87%AA%E5%AE%9A%E4%B9%89%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="nav-number">3.2.</span> <span class="nav-text"> 设置自定义环境变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%84%E8%AE%BA%E7%AE%A1%E7%90%86%E5%90%8E%E5%8F%B0"><span class="nav-number">3.3.</span> <span class="nav-text"> 评论管理后台</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -360,63 +360,39 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>在<a href="/2018/04/01/Valine/">上一篇文章</a>中，我讲了怎样安装
-Valine 评论系统。Valine
-评论系统现在自带的邮件通知功能有很大缺陷，这就要轮到我今天要讲的
-Valine-Admin 了。由 <a target="_blank" rel="noopener" href="https://ioliu.cn/"><span class="citation"
-data-cites="云淡风轻">@云淡风轻</span></a> 大神开发的 Valine-Admin
-实现了基于 leancloud 云引擎的邮件通知、垃圾评论识别和评论管理面板，<a
-target="_blank" rel="noopener" href="http://www.zhaojun.im/hexo-valine-admin/"><span class="citation"
-data-cites="赵俊">@赵俊</span></a>大佬修改优化了一波，能够提供良好的评论通知体验。</p>
+        <p>在<a href="/2018/04/01/Valine/">上一篇文章</a>中，我讲了怎样安装 Valine 评论系统。Valine 评论系统现在自带的邮件通知功能有很大缺陷，这就要轮到我今天要讲的 Valine-Admin 了。由 <span class="exturl" data-url="aHR0cHM6Ly9pb2xpdS5jbi8=">@云淡风轻<i class="fa fa-external-link-alt"></i></span> 大神开发的 Valine-Admin 实现了基于 leancloud 云引擎的邮件通知、垃圾评论识别和评论管理面板，<span class="exturl" data-url="aHR0cDovL3d3dy56aGFvanVuLmltL2hleG8tdmFsaW5lLWFkbWluLw==">@赵俊<i class="fa fa-external-link-alt"></i></span>大佬修改优化了一波，能够提供良好的评论通知体验。</p>
 <span id="more"></span>
-<h2 id="说明">说明</h2>
-<p>本文内容已弃用，本人的库针对我的个人需求做了一些修改，不再适用于一般用户。因为后续原始的
-Valine-Admin 开始适配修改版的 Valine，所以建议使用<a
-target="_blank" rel="noopener" href="http://www.zhaojun.im/hexo-valine-admin/"><span class="citation"
-data-cites="赵俊">@赵俊</span></a>大佬的版本。</p>
-<p>赵俊大神的原始链接：<span class="exturl" data-url="aHR0cDovL3d3dy56aGFvanVuLmltL2hleG8tdmFsaW5lLWFkbWluLw==">Hexo 优化 --- Valine
-扩展之邮件通知<i class="fa fa-external-link-alt"></i></span></p>
+<h2 id="说明"><a class="markdownIt-Anchor" href="#说明"></a> 说明</h2>
+<p>本文内容已弃用，本人的库针对我的个人需求做了一些修改，不再适用于一般用户。因为后续原始的 Valine-Admin 开始适配修改版的 Valine，所以建议使用<span class="exturl" data-url="aHR0cDovL3d3dy56aGFvanVuLmltL2hleG8tdmFsaW5lLWFkbWluLw==">@赵俊<i class="fa fa-external-link-alt"></i></span>大佬的版本。</p>
+<p>赵俊大神的原始链接：<span class="exturl" data-url="aHR0cDovL3d3dy56aGFvanVuLmltL2hleG8tdmFsaW5lLWFkbWluLw==">Hexo 优化 — Valine 扩展之邮件通知<i class="fa fa-external-link-alt"></i></span></p>
 <details>
-<summary>
-原始文章
-</summary>
-<h2 id="问题与改动">问题与改动</h2>
+  <summary>原始文章</summary>
+<h2 id="问题与改动"><a class="markdownIt-Anchor" href="#问题与改动"></a> 问题与改动</h2>
 <p>由于 Valine 的更新，以前的一些功能已经无法继续使用。</p>
 <ul>
-<li>由于去除了 rid 字段，原本基于 rid
-字段的“被@邮件通知”功能不再有效。我从评论内容中重新提取了 rid
-字段，能够正常进行邮件通知了。</li>
-<li>由于不再有 IP
-字段，垃圾评论识别功能完全不起作用。emmm，我也不会搞，所以就删掉了。</li>
+<li>由于去除了 rid 字段，原本基于 rid 字段的“被@邮件通知”功能不再有效。我从评论内容中重新提取了 rid 字段，能够正常进行邮件通知了。</li>
+<li>由于不再有 IP 字段，垃圾评论识别功能完全不起作用。emmm，我也不会搞，所以就删掉了。</li>
 </ul>
-<h2 id="云引擎部署">云引擎部署</h2>
+<h2 id="云引擎部署"><a class="markdownIt-Anchor" href="#云引擎部署"></a> 云引擎部署</h2>
 <blockquote>
-<p>Deserts 大神的原始链接：<span class="exturl" data-url="aHR0cHM6Ly9wYW5qdW53ZW4uY29tL2RpeS1hLWNvbW1lbnQtc3lzdGVtLw==">Valine:
-独立博客评论系统<i class="fa fa-external-link-alt"></i></span></p>
+<p>Deserts 大神的原始链接：<span class="exturl" data-url="aHR0cHM6Ly9wYW5qdW53ZW4uY29tL2RpeS1hLWNvbW1lbnQtc3lzdGVtLw==">Valine: 独立博客评论系统<i class="fa fa-external-link-alt"></i></span></p>
 </blockquote>
 <p>由于我对项目做了一些改动，建议使用本文的库，即止到今日一直使用正常。</p>
-<h3 id="源码部署">源码部署</h3>
-<p>进入博客应用的云引擎的设置，在代码库中填入以下内容并点击保存。已改用
-zhaojun1998 的
-Valine-Admin，与教程暂不符合，<strong>请勿继续使用以下教程</strong>。</p>
+<h3 id="源码部署"><a class="markdownIt-Anchor" href="#源码部署"></a> 源码部署</h3>
+<p>进入博客应用的云引擎的设置，在代码库中填入以下内容并点击保存。已改用 zhaojun1998 的 Valine-Admin，与教程暂不符合，<strong>请勿继续使用以下教程</strong>。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/ZvonimirSun/Valine-Admin.git</span><br></pre></td></tr></table></figure>
-<p><img data-src="https://img.iszy.xyz/20190318221112.png" /></p>
+<p><img data-src="https://img.iszy.xyz/20190318221112.png" alt="" /></p>
 <p>接下来在云引擎的部署页，选择部署目标为<code>生产环境</code>，分支或版本号填入<code>master</code>，勾选平滑部署，点击部署。</p>
-<p><img data-src="https://img.iszy.xyz/20190318221123.png" /></p>
-<h3 id="设置自定义环境变量">设置自定义环境变量</h3>
+<p><img data-src="https://img.iszy.xyz/20190318221123.png" alt="" /></p>
+<h3 id="设置自定义环境变量"><a class="markdownIt-Anchor" href="#设置自定义环境变量"></a> 设置自定义环境变量</h3>
 <p>此外，还需要设置云引擎的环境变量以支持运行，如图所示。</p>
-<p><img data-src="https://img.iszy.xyz/20190318221132.png" /></p>
-<p>SMTP 信息需要准确填写，用于发送通知邮件，部分邮箱如 QQ
-邮箱需要使用授权码（密码）。注意我们使用 SSL
-发件，所以端口别填错了。</p>
-<h3 id="评论管理后台">评论管理后台</h3>
-<p><img data-src="https://img.iszy.xyz/20190318221144.png" /></p>
-<p>在云引擎的设置界面设置 Web
-主机域名，便可以通过这个地址访问评论的管理界面。用 _User
-表中的用户登录即可，注意要手动设置密码，才能登录，不能空密码。</p>
-<p><img data-src="https://img.iszy.xyz/20190318221157.png" /></p>
-<p>至此已经可以顺利使用了。由于云引擎的免费实例有每天的强制休眠，可以用定时脚本唤醒，但是大多数人应该不需要用到
-24 小时，所以影响不大。</p>
+<p><img data-src="https://img.iszy.xyz/20190318221132.png" alt="" /></p>
+<p>SMTP 信息需要准确填写，用于发送通知邮件，部分邮箱如 QQ 邮箱需要使用授权码（密码）。注意我们使用 SSL 发件，所以端口别填错了。</p>
+<h3 id="评论管理后台"><a class="markdownIt-Anchor" href="#评论管理后台"></a> 评论管理后台</h3>
+<p><img data-src="https://img.iszy.xyz/20190318221144.png" alt="" /></p>
+<p>在云引擎的设置界面设置 Web 主机域名，便可以通过这个地址访问评论的管理界面。用 _User 表中的用户登录即可，注意要手动设置密码，才能登录，不能空密码。</p>
+<p><img data-src="https://img.iszy.xyz/20190318221157.png" alt="" /></p>
+<p>至此已经可以顺利使用了。由于云引擎的免费实例有每天的强制休眠，可以用定时脚本唤醒，但是大多数人应该不需要用到 24 小时，所以影响不大。</p>
 </details>
 
     </div>
@@ -541,8 +517,9 @@ Valine-Admin，与教程暂不符合，<strong>请勿继续使用以下教程</s
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/mathjax@3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
-<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/math/mathjax.min.js"></script>
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.3/dist/katex.min.css" integrity="sha256-NJNVfEC6jfEt62wQMafLNT2eI6BaWONXbpkSEVAs3+8=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.3/dist/contrib/copy-tex.min.js","integrity":"sha256-Us54+rSGDSTvIhKKUs4kygE2ipA0RXpWWh0/zLqw3bs="}}</script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/math/katex.min.js"></script>
 
 
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/quicklink@2.3.0/dist/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>

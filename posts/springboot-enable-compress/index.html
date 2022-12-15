@@ -155,7 +155,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E5%90%AF%E6%96%B9%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text">开启方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%88%E6%9E%9C%E5%AF%B9%E6%AF%94"><span class="nav-number">2.</span> <span class="nav-text">效果对比</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E5%85%B6%E4%BB%96%E6%96%B9%E6%B3%95"><span class="nav-number">3.</span> <span class="nav-text">常见其他方法</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E5%90%AF%E6%96%B9%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text"> 开启方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%88%E6%9E%9C%E5%AF%B9%E6%AF%94"><span class="nav-number">2.</span> <span class="nav-text"> 效果对比</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E5%85%B6%E4%BB%96%E6%96%B9%E6%B3%95"><span class="nav-number">3.</span> <span class="nav-text"> 常见其他方法</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -336,30 +336,24 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>公司的部分老项目还没有用上
-webpack，前后端不分离，有不少静态资源不压缩的话还是比较大的。这边记录下
-Spring Boot 开启压缩的方法。</p>
+        <p>公司的部分老项目还没有用上 webpack，前后端不分离，有不少静态资源不压缩的话还是比较大的。这边记录下 Spring Boot 开启压缩的方法。</p>
 <span id="more"></span>
-<h2 id="开启方法">开启方法</h2>
-<ol type="1">
+<h2 id="开启方法"><a class="markdownIt-Anchor" href="#开启方法"></a> 开启方法</h2>
+<ol>
 <li>首先需要在 <code>application.yml</code> 里启用压缩</li>
-<li>因为默认只压缩 <code>text/html</code>
-类型，需要添加上其他需要的类型，比如 <code>application/json</code></li>
-<li>如有需要可以配置启用压缩的最小响应大小，默认为
-<code>2048 byte</code></li>
+<li>因为默认只压缩 <code>text/html</code> 类型，需要添加上其他需要的类型，比如 <code>application/json</code></li>
+<li>如有需要可以配置启用压缩的最小响应大小，默认为 <code>2048 byte</code></li>
 </ol>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">compression:</span></span><br><span class="line">    <span class="attr">enabled:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">mime-types:</span> <span class="string">application/json,application/xml,text/html,text/xml,text/plain</span></span><br><span class="line">    <span class="attr">min-response-size:</span> <span class="number">2048</span></span><br></pre></td></tr></table></figure>
-<h2 id="效果对比">效果对比</h2>
+<h2 id="效果对比"><a class="markdownIt-Anchor" href="#效果对比"></a> 效果对比</h2>
 <p>压缩前</p>
-<p><img data-src="https://img.iszy.xyz/1663551069657.png" /></p>
+<p><img data-src="https://img.iszy.xyz/1663551069657.png" alt="" /></p>
 <p>压缩后</p>
-<p><img data-src="https://img.iszy.xyz/1663551287356.png" /></p>
+<p><img data-src="https://img.iszy.xyz/1663551287356.png" alt="" /></p>
 <p>可以看到已经开启了 gzip 压缩</p>
-<p><img data-src="https://img.iszy.xyz/1663551338263.png" /></p>
-<h2 id="常见其他方法">常见其他方法</h2>
-<p>一般如果应用比较多，在每个应用里添加配置还是比较麻烦的。可以考虑使用
-Nginx 进行代理，统一添加 gzip 甚至 brotli 压缩，会更加方便。brotli 和
-gzip 可以同时开始，压缩效果更好。</p>
+<p><img data-src="https://img.iszy.xyz/1663551338263.png" alt="" /></p>
+<h2 id="常见其他方法"><a class="markdownIt-Anchor" href="#常见其他方法"></a> 常见其他方法</h2>
+<p>一般如果应用比较多，在每个应用里添加配置还是比较麻烦的。可以考虑使用 Nginx 进行代理，统一添加 gzip 甚至 brotli 压缩，会更加方便。brotli 和 gzip 可以同时开始，压缩效果更好。</p>
 
     </div>
 
@@ -482,8 +476,9 @@ gzip 可以同时开始，压缩效果更好。</p>
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/mathjax@3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
-<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/math/mathjax.min.js"></script>
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.3/dist/katex.min.css" integrity="sha256-NJNVfEC6jfEt62wQMafLNT2eI6BaWONXbpkSEVAs3+8=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.3/dist/contrib/copy-tex.min.js","integrity":"sha256-Us54+rSGDSTvIhKKUs4kygE2ipA0RXpWWh0/zLqw3bs="}}</script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/math/katex.min.js"></script>
 
 
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/quicklink@2.3.0/dist/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>

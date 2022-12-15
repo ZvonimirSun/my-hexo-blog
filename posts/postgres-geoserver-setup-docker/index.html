@@ -154,7 +154,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-docker"><span class="nav-number">1.</span> <span class="nav-text">安装 Docker</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-postgresql-postgis"><span class="nav-number">2.</span> <span class="nav-text">安装 Postgresql + PostGIS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%95%9C%E5%83%8F%E8%AF%B4%E6%98%8E"><span class="nav-number">2.1.</span> <span class="nav-text">镜像说明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E5%91%BD%E4%BB%A4"><span class="nav-number">2.2.</span> <span class="nav-text">部署命令</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-geoserver"><span class="nav-number">3.</span> <span class="nav-text">安装 Geoserver</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%95%9C%E5%83%8F%E8%AF%B4%E6%98%8E-1"><span class="nav-number">3.1.</span> <span class="nav-text">镜像说明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E5%91%BD%E4%BB%A4-1"><span class="nav-number">3.2.</span> <span class="nav-text">部署命令</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-docker"><span class="nav-number">1.</span> <span class="nav-text"> 安装 Docker</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-postgresql-postgis"><span class="nav-number">2.</span> <span class="nav-text"> 安装 Postgresql + PostGIS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%95%9C%E5%83%8F%E8%AF%B4%E6%98%8E"><span class="nav-number">2.1.</span> <span class="nav-text"> 镜像说明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E5%91%BD%E4%BB%A4"><span class="nav-number">2.2.</span> <span class="nav-text"> 部署命令</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-geoserver"><span class="nav-number">3.</span> <span class="nav-text"> 安装 Geoserver</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%95%9C%E5%83%8F%E8%AF%B4%E6%98%8E-2"><span class="nav-number">3.1.</span> <span class="nav-text"> 镜像说明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E5%91%BD%E4%BB%A4-2"><span class="nav-number">3.2.</span> <span class="nav-text"> 部署命令</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -349,52 +349,37 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>本文介绍一下如何通过 Docker 部署 <code>Postgresql</code> +
-<code>PostGIS</code> + <code>Geoserver</code> 环境。本文操作在 Ubuntu
-18.04 中完成，理论上适用于其他可用 Docker 的系统环境。</p>
+        <p>本文介绍一下如何通过 Docker 部署 <code>Postgresql</code> + <code>PostGIS</code> + <code>Geoserver</code> 环境。本文操作在 Ubuntu 18.04 中完成，理论上适用于其他可用 Docker 的系统环境。</p>
 <span id="more"></span>
-<h2 id="安装-docker">安装 Docker</h2>
-<p>Docker 的安装很简单，教程很多，在这里只列举一下，Ubuntu 和 CentOS
-的安装脚本。</p>
+<h2 id="安装-docker"><a class="markdownIt-Anchor" href="#安装-docker"></a> 安装 Docker</h2>
+<p>Docker 的安装很简单，教程很多，在这里只列举一下，Ubuntu 和 CentOS 的安装脚本。</p>
 <ul>
-<li>Ubuntu:
-<code>wget -qO- https://get.docker.com/ | sudo sh</code></li>
-<li>CentOS:
-<code>curl -fsSL https://get.docker.com -o get-docker.sh &amp;&amp; sudo sh get-docker.sh</code></li>
+<li>Ubuntu: <code>wget -qO- https://get.docker.com/ | sudo sh</code></li>
+<li>CentOS: <code>curl -fsSL https://get.docker.com -o get-docker.sh &amp;&amp; sudo sh get-docker.sh</code></li>
 </ul>
-<h2 id="安装-postgresql-postgis">安装 Postgresql + PostGIS</h2>
-<p>在这里使用 kartoza 大佬的 docker
-镜像<code>kartoza/postgis:10.0-2.4</code>。</p>
-<h3 id="镜像说明">镜像说明</h3>
+<h2 id="安装-postgresql-postgis"><a class="markdownIt-Anchor" href="#安装-postgresql-postgis"></a> 安装 Postgresql + PostGIS</h2>
+<p>在这里使用 kartoza 大佬的 docker 镜像<code>kartoza/postgis:10.0-2.4</code>。</p>
+<h3 id="镜像说明"><a class="markdownIt-Anchor" href="#镜像说明"></a> 镜像说明</h3>
 <ul>
 <li>Postgresql: <code>10.3.1</code></li>
 <li>PostGIS: <code>2.4.4</code></li>
 </ul>
 <p>项目地址：<code>https://github.com/kartoza/docker-postgis</code></p>
-<h3 id="部署命令">部署命令</h3>
-<p>运行以下命令部署 Postgresql +
-PostGis，注意替换命令中的用户名和密码。还有更多环境变量可用，亦可选择其他镜像版本可以参考项目
-<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2thcnRvemEvZG9ja2VyLXBvc3RnaXMvYmxvYi9kZXZlbG9wL1JFQURNRS5tZA==">README<i class="fa fa-external-link-alt"></i></span>。</p>
+<h3 id="部署命令"><a class="markdownIt-Anchor" href="#部署命令"></a> 部署命令</h3>
+<p>运行以下命令部署 Postgresql + PostGis，注意替换命令中的用户名和密码。还有更多环境变量可用，亦可选择其他镜像版本可以参考项目 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2thcnRvemEvZG9ja2VyLXBvc3RnaXMvYmxvYi9kZXZlbG9wL1JFQURNRS5tZA==">README<i class="fa fa-external-link-alt"></i></span>。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd ~ &amp;&amp; mkdir postgres_data</span><br><span class="line">docker run --name &quot;postgis&quot; -p 5432:5432 -d -t -v $HOME/postgres_data:/var/lib/postgresql -e POSTGRES_USER=&quot;postgres&quot; -e POSTGRES_PASS=&quot;postgres&quot; -e ALLOW_IP_RANGE=0.0.0.0/0 --restart=always kartoza/postgis:10.0-2.4</span><br></pre></td></tr></table></figure>
-<h2 id="安装-geoserver">安装 Geoserver</h2>
-<p>在这里使用我 build 的 docker
-镜像<code>zvonimirsun/geoserver:2.14.2</code>。</p>
-<h3 id="镜像说明-1">镜像说明</h3>
+<h2 id="安装-geoserver"><a class="markdownIt-Anchor" href="#安装-geoserver"></a> 安装 Geoserver</h2>
+<p>在这里使用我 build 的 docker 镜像<code>zvonimirsun/geoserver:2.14.2</code>。</p>
+<h3 id="镜像说明-2"><a class="markdownIt-Anchor" href="#镜像说明-2"></a> 镜像说明</h3>
 <ul>
 <li>Geoserver: <code>2.14.2</code></li>
 <li>oraclejdk: <code>8</code></li>
 <li>tomcat: <code>8.0-jre8</code></li>
 </ul>
 <p>项目地址：<code>https://github.com/ZvonimirSun/docker-geoserver</code></p>
-<p>本项目 fork 自 kartoza 大佬的<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2thcnRvemEvZG9ja2VyLWdlb3NlcnZlcg==">项目<i class="fa fa-external-link-alt"></i></span>，修复了命令中的一个不知道为何会存在的一个低级错误，替换了过期的下载链接。我只
-build 了<code>2.14.2</code>的版本，使用了 oraclejdk8。想要旧版本
-geoserver 的可以看 kartoza 大佬的<span class="exturl" data-url="aHR0cHM6Ly9odWIuZG9ja2VyLmNvbS9yL2thcnRvemEvZ2Vvc2VydmVyL3RhZ3M=">镜像<i class="fa fa-external-link-alt"></i></span>，现在的最新版本为<code>geoserver 2.13.0</code>，默认使用的是
-openjdk。如果仍旧不是自己想要的版本或是要添加插件，可以根据 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1p2b25pbWlyU3VuL2RvY2tlci1nZW9zZXJ2ZXIvYmxvYi9tYXN0ZXIvUkVBRE1FLm1k">README<i class="fa fa-external-link-alt"></i></span>
-自行 build。</p>
-<h3 id="部署命令-1">部署命令</h3>
-<p>运行以下命令部署
-Geoserver，注意替换命令中的用户名和密码。还有更多环境变量可用，可以参考项目
-<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1p2b25pbWlyU3VuL2RvY2tlci1nZW9zZXJ2ZXIvYmxvYi9tYXN0ZXIvUkVBRE1FLm1k">README<i class="fa fa-external-link-alt"></i></span>。</p>
+<p>本项目 fork 自 kartoza 大佬的<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2thcnRvemEvZG9ja2VyLWdlb3NlcnZlcg==">项目<i class="fa fa-external-link-alt"></i></span>，修复了命令中的一个不知道为何会存在的一个低级错误，替换了过期的下载链接。我只 build 了<code>2.14.2</code>的版本，使用了 oraclejdk8。想要旧版本 geoserver 的可以看 kartoza 大佬的<span class="exturl" data-url="aHR0cHM6Ly9odWIuZG9ja2VyLmNvbS9yL2thcnRvemEvZ2Vvc2VydmVyL3RhZ3M=">镜像<i class="fa fa-external-link-alt"></i></span>，现在的最新版本为<code>geoserver 2.13.0</code>，默认使用的是 openjdk。如果仍旧不是自己想要的版本或是要添加插件，可以根据 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1p2b25pbWlyU3VuL2RvY2tlci1nZW9zZXJ2ZXIvYmxvYi9tYXN0ZXIvUkVBRE1FLm1k">README<i class="fa fa-external-link-alt"></i></span> 自行 build。</p>
+<h3 id="部署命令-2"><a class="markdownIt-Anchor" href="#部署命令-2"></a> 部署命令</h3>
+<p>运行以下命令部署 Geoserver，注意替换命令中的用户名和密码。还有更多环境变量可用，可以参考项目 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1p2b25pbWlyU3VuL2RvY2tlci1nZW9zZXJ2ZXIvYmxvYi9tYXN0ZXIvUkVBRE1FLm1k">README<i class="fa fa-external-link-alt"></i></span>。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd ~ &amp;&amp; mkdir geoserver_data</span><br><span class="line">docker run -d -p 8080:8080 --name geoserver -v $HOME/geoserver_data:/opt/geoserver/data_dir zvonimirsun/geoserver:2.14.2</span><br></pre></td></tr></table></figure>
 
     </div>
@@ -521,8 +506,9 @@ Geoserver，注意替换命令中的用户名和密码。还有更多环境变�
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/mathjax@3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
-<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/math/mathjax.min.js"></script>
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.3/dist/katex.min.css" integrity="sha256-NJNVfEC6jfEt62wQMafLNT2eI6BaWONXbpkSEVAs3+8=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.3/dist/contrib/copy-tex.min.js","integrity":"sha256-Us54+rSGDSTvIhKKUs4kygE2ipA0RXpWWh0/zLqw3bs="}}</script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/math/katex.min.js"></script>
 
 
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/quicklink@2.3.0/dist/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>

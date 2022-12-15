@@ -328,13 +328,8 @@
     <div class="post-body" itemprop="articleBody">
         <p>记录</p>
 <span id="more"></span>
-<p>宽度的自适应是根据 Viewport 的 width 来调整的，高度的自适应也根据
-Viewport 的 height 来调整的，理论上和 width
-没有任何关系。所以需要找到一个可以关联上 Viewport 的 with
-的属性还能撑起高度。</p>
-<p>这个属性就是 padding，padding 是根据 Viewport 的 width
-来调整的，padding-top 和 padding-bottom
-也是如此，所以我们设置这个属性就可以和 width 保持一定比例了。</p>
+<p>宽度的自适应是根据 Viewport 的 width 来调整的，高度的自适应也根据 Viewport 的 height 来调整的，理论上和 width 没有任何关系。所以需要找到一个可以关联上 Viewport 的 with 的属性还能撑起高度。</p>
+<p>这个属性就是 padding，padding 是根据 Viewport 的 width 来调整的，padding-top 和 padding-bottom 也是如此，所以我们设置这个属性就可以和 width 保持一定比例了。</p>
 <p>现在比如</p>
 <p>父容器样式为</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.father</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">300px</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#dedede</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -342,9 +337,8 @@ Viewport 的 height 来调整的，理论上和 width
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.child</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">80%</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#666</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>这时候我们再设置</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.child</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">80%</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">padding-bottom</span>: <span class="number">80%</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#666</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>子元素就变成了一个宽度 80%，高度为 0，但有 80% 宽度 的 padding-bottom
-的正方形了，效果如下图</p>
-<p><img data-src="https://img.iszy.xyz/1667613841613.png" /></p>
+<p>子元素就变成了一个宽度 80%，高度为 0，但有 80% 宽度 的 padding-bottom 的正方形了，效果如下图</p>
+<p><img data-src="https://img.iszy.xyz/1667613841613.png" alt="" /></p>
 
     </div>
 
@@ -467,8 +461,9 @@ Viewport 的 height 来调整的，理论上和 width
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/mathjax@3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
-<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/math/mathjax.min.js"></script>
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.3/dist/katex.min.css" integrity="sha256-NJNVfEC6jfEt62wQMafLNT2eI6BaWONXbpkSEVAs3+8=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.3/dist/contrib/copy-tex.min.js","integrity":"sha256-Us54+rSGDSTvIhKKUs4kygE2ipA0RXpWWh0/zLqw3bs="}}</script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/math/katex.min.js"></script>
 
 
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/quicklink@2.3.0/dist/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>

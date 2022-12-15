@@ -154,7 +154,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E7%8E%AF%E5%A2%83"><span class="nav-number">2.</span> <span class="nav-text">安装环境</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#docker-%E5%AE%89%E8%A3%85"><span class="nav-number">2.1.</span> <span class="nav-text">Docker 安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#docker-compose-%E5%AE%89%E8%A3%85"><span class="nav-number">2.2.</span> <span class="nav-text">docker-compose 安装</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2-acme.sh"><span class="nav-number">3.</span> <span class="nav-text">部署 acme.sh</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BC%96%E5%86%99-docker-compose.yml"><span class="nav-number">3.1.</span> <span class="nav-text">编写 docker-compose.yml</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%B3%E8%AF%B7%E8%AF%81%E4%B9%A6"><span class="nav-number">3.2.</span> <span class="nav-text">申请证书</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE-crontab-%E4%BB%BB%E5%8A%A1%E8%87%AA%E5%8A%A8%E7%BB%AD%E7%AD%BE"><span class="nav-number">3.3.</span> <span class="nav-text">设置 crontab 任务自动续签</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%8E%E8%AF%9D"><span class="nav-number">4.</span> <span class="nav-text">后话</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text"> 前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E7%8E%AF%E5%A2%83"><span class="nav-number">2.</span> <span class="nav-text"> 安装环境</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#docker-%E5%AE%89%E8%A3%85"><span class="nav-number">2.1.</span> <span class="nav-text"> Docker 安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#docker-compose-%E5%AE%89%E8%A3%85"><span class="nav-number">2.2.</span> <span class="nav-text"> docker-compose 安装</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2-acmesh"><span class="nav-number">3.</span> <span class="nav-text"> 部署 acme.sh</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BC%96%E5%86%99-docker-composeyml"><span class="nav-number">3.1.</span> <span class="nav-text"> 编写 docker-compose.yml</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%B3%E8%AF%B7%E8%AF%81%E4%B9%A6"><span class="nav-number">3.2.</span> <span class="nav-text"> 申请证书</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE-crontab-%E4%BB%BB%E5%8A%A1%E8%87%AA%E5%8A%A8%E7%BB%AD%E7%AD%BE"><span class="nav-number">3.3.</span> <span class="nav-text"> 设置 crontab 任务自动续签</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%8E%E8%AF%9D"><span class="nav-number">4.</span> <span class="nav-text"> 后话</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -349,60 +349,41 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>本文介绍一下如何通过 Docker 部署 acme.sh 申请证书，并添加 crontab
-任务自动更新证书。</p>
+        <p>本文介绍一下如何通过 Docker 部署 <span class="exturl" data-url="aHR0cDovL2FjbWUuc2g=">acme.sh<i class="fa fa-external-link-alt"></i></span> 申请证书，并添加 crontab 任务自动更新证书。</p>
 <span id="more"></span>
-<h2 id="前言">前言</h2>
-<p>最近觉得这个 <code>Docker</code>
-超好用啊，<code>docker-compose</code>
-也是个神器，折腾了半天，把服务器上跑的所有应用都 docker 化了，用一个
-<code>docker-compose.yml</code> 统一管理，怎一个爽字了得。</p>
-<p>今天才把 acme.sh 替换成 docker，在此记录一下。</p>
-<h2 id="安装环境">安装环境</h2>
-<h3 id="docker-安装">Docker 安装</h3>
+<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
+<p>最近觉得这个 <code>Docker</code> 超好用啊，<code>docker-compose</code> 也是个神器，折腾了半天，把服务器上跑的所有应用都 docker 化了，用一个 <code>docker-compose.yml</code> 统一管理，怎一个爽字了得。</p>
+<p>今天才把 <span class="exturl" data-url="aHR0cDovL2FjbWUuc2g=">acme.sh<i class="fa fa-external-link-alt"></i></span> 替换成 docker，在此记录一下。</p>
+<h2 id="安装环境"><a class="markdownIt-Anchor" href="#安装环境"></a> 安装环境</h2>
+<h3 id="docker-安装"><a class="markdownIt-Anchor" href="#docker-安装"></a> Docker 安装</h3>
 <p>在此以 Ubuntu 为例，其他系统请自己找下方法，教程很多，很容易的。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">wget -qO- https://get.docker.com/ | sudo sh</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">注意把username换成你自己的用户名，root用户请忽略</span></span><br><span class="line">sudo usermod -aG docker username</span><br><span class="line">sudo reboot</span><br></pre></td></tr></table></figure>
-<h3 id="docker-compose-安装">docker-compose 安装</h3>
-<p><code>docker-compose</code>作为一个 python
-应用，也是可以直接用容器来执行的，下面来安装一下。</p>
+<h3 id="docker-compose-安装"><a class="markdownIt-Anchor" href="#docker-compose-安装"></a> docker-compose 安装</h3>
+<p><code>docker-compose</code>作为一个 python 应用，也是可以直接用容器来执行的，下面来安装一下。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo curl -L https://github.com/docker/compose/releases/download/1.23.2/run.sh &gt; /usr/local/bin/docker-compose</span><br><span class="line">sudo chmod +x /usr/local/bin/docker-compose</span><br></pre></td></tr></table></figure>
-<p>下面可以运行一下<code>docker-compose version</code>来检测一下是否成功，第一次运行
-docker-compose
-命令会自动拉取<code>docker/compose:1.23.2</code>镜像。</p>
+<p>下面可以运行一下<code>docker-compose version</code>来检测一下是否成功，第一次运行 docker-compose 命令会自动拉取<code>docker/compose:1.23.2</code>镜像。</p>
 <p>安装成功会显示如下内容，可能会与我有些差异。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">docker-compose version 1.23.2, build 1110ad01</span><br><span class="line">docker-py version: 3.6.0</span><br><span class="line">CPython version: 3.6.7</span><br><span class="line">OpenSSL version: OpenSSL 1.1.0f  25 May 2017</span><br></pre></td></tr></table></figure>
-<h2 id="部署-acme.sh">部署 acme.sh</h2>
-<h3 id="编写-docker-compose.yml">编写 docker-compose.yml</h3>
-<p>本文使用一个<code>docker-compose.yml</code>文件来部署 acme.sh，不使用
-docker-compose 的方法呢，请看<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL05laWxwYW5nL2FjbWUuc2gvd2lraS9SdW4tYWNtZS5zaC1pbi1kb2NrZXI=">官方给出的方法<i class="fa fa-external-link-alt"></i></span>。</p>
+<h2 id="部署-acmesh"><a class="markdownIt-Anchor" href="#部署-acmesh"></a> 部署 <span class="exturl" data-url="aHR0cDovL2FjbWUuc2g=">acme.sh<i class="fa fa-external-link-alt"></i></span></h2>
+<h3 id="编写-docker-composeyml"><a class="markdownIt-Anchor" href="#编写-docker-composeyml"></a> 编写 docker-compose.yml</h3>
+<p>本文使用一个<code>docker-compose.yml</code>文件来部署 <span class="exturl" data-url="aHR0cDovL2FjbWUuc2g=">acme.sh<i class="fa fa-external-link-alt"></i></span>，不使用 docker-compose 的方法呢，请看<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL05laWxwYW5nL2FjbWUuc2gvd2lraS9SdW4tYWNtZS5zaC1pbi1kb2NrZXI=">官方给出的方法<i class="fa fa-external-link-alt"></i></span>。</p>
 <p>在你想要的位置运行如下命令创建<code>docker-compose.yml</code>文件。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch docker-compose.yml</span><br></pre></td></tr></table></figure>
-<p>编辑此文件，加入如下内容。需要使用 dns api
-的请参考注释中的添加方法添加环境变量，如果有什么类似 CloudXNS 的 IP
-白名单记得要加好。</p>
+<p>编辑此文件，加入如下内容。需要使用 dns api 的请参考注释中的添加方法添加环境变量，如果有什么类似 CloudXNS 的 IP 白名单记得要加好。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">version: &quot;3&quot;</span><br><span class="line">services:</span><br><span class="line">  acme.sh:</span><br><span class="line">    image: neilpang/acme.sh</span><br><span class="line">    container_name: acme.sh</span><br><span class="line">    restart: always</span><br><span class="line">    command: daemon</span><br><span class="line">    #environment:</span><br><span class="line">    #  - CX_Key=&quot;XXXXXXXXXX&quot;</span><br><span class="line">    #  - CX_Secret=&quot;XXXXXXXXXX&quot;</span><br><span class="line">    volumes:</span><br><span class="line">      - ./ssl:/acme.sh</span><br><span class="line">    network_mode: host</span><br></pre></td></tr></table></figure>
-<p>保存后在<code>docker-compose.yml</code>同目录下运行如下命令启动
-acme.sh。如果更改了<code>docker-compose.yml</code>文件，只要在此运行如下命令，就能够更新到最新状态。</p>
+<p>保存后在<code>docker-compose.yml</code>同目录下运行如下命令启动 <span class="exturl" data-url="aHR0cDovL2FjbWUuc2g=">acme.sh<i class="fa fa-external-link-alt"></i></span>。如果更改了<code>docker-compose.yml</code>文件，只要在此运行如下命令，就能够更新到最新状态。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker-compose up -d</span><br></pre></td></tr></table></figure>
-<h3 id="申请证书">申请证书</h3>
-<p>所有 acme.sh
-的正常命令都能够正常使用，需要做一点小小的更改，比如我演示一下使用
-CloudXNS API 申请本站的 ECC 泛域名证书，其他命令也类似进行。由于我的
-container_name 也是 acme.sh，所以可以直接使用 docker 而非 docker-compose
-命令运行。</p>
+<h3 id="申请证书"><a class="markdownIt-Anchor" href="#申请证书"></a> 申请证书</h3>
+<p>所有 <span class="exturl" data-url="aHR0cDovL2FjbWUuc2g=">acme.sh<i class="fa fa-external-link-alt"></i></span> 的正常命令都能够正常使用，需要做一点小小的更改，比如我演示一下使用 CloudXNS API 申请本站的 ECC 泛域名证书，其他命令也类似进行。由于我的 container_name 也是 <span class="exturl" data-url="aHR0cDovL2FjbWUuc2g=">acme.sh<i class="fa fa-external-link-alt"></i></span>，所以可以直接使用 docker 而非 docker-compose 命令运行。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker exec acme.sh --issue --dns dns_cx -d iszy.cc -d &#x27;*.iszy.cc&#x27; --keylength ec-384</span><br></pre></td></tr></table></figure>
-<p>也可以添加一条 alias 来像往常一样运行
-acme.sh，可以将这句添加到<code>.bashrc</code>或<code>.zshrc</code>文件中。</p>
+<p>也可以添加一条 alias 来像往常一样运行 <span class="exturl" data-url="aHR0cDovL2FjbWUuc2g=">acme.sh<i class="fa fa-external-link-alt"></i></span>，可以将这句添加到<code>.bashrc</code>或<code>.zshrc</code>文件中。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alias acme.sh=&quot;docker exec acme.sh&quot;</span><br></pre></td></tr></table></figure>
-<h3 id="设置-crontab-任务自动续签">设置 crontab 任务自动续签</h3>
-<p>运行<code>crontab -e</code>来编辑 crontab
-文件，添加如下内容，保存即可。</p>
+<h3 id="设置-crontab-任务自动续签"><a class="markdownIt-Anchor" href="#设置-crontab-任务自动续签"></a> 设置 crontab 任务自动续签</h3>
+<p>运行<code>crontab -e</code>来编辑 crontab 文件，添加如下内容，保存即可。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0 0 * * * docker exec acme.sh --cron</span><br></pre></td></tr></table></figure>
 <p>可以运行<code>crontab -e</code>来查看已经添加的 crontab 任务。</p>
-<h2 id="后话">后话</h2>
-<p>所以，这就部署好了，还是很方便的，尤其是在你的 VPS 上有不少
-docker，并统一使用 docker-compose
-进行管理的时候。有兴趣的可以这么折腾一下啦。</p>
+<h2 id="后话"><a class="markdownIt-Anchor" href="#后话"></a> 后话</h2>
+<p>所以，这就部署好了，还是很方便的，尤其是在你的 VPS 上有不少 docker，并统一使用 docker-compose 进行管理的时候。有兴趣的可以这么折腾一下啦。</p>
 
     </div>
 
@@ -528,8 +509,9 @@ docker，并统一使用 docker-compose
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/mathjax@3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
-<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/math/mathjax.min.js"></script>
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.3/dist/katex.min.css" integrity="sha256-NJNVfEC6jfEt62wQMafLNT2eI6BaWONXbpkSEVAs3+8=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.3/dist/contrib/copy-tex.min.js","integrity":"sha256-Us54+rSGDSTvIhKKUs4kygE2ipA0RXpWWh0/zLqw3bs="}}</script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/math/katex.min.js"></script>
 
 
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/quicklink@2.3.0/dist/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>

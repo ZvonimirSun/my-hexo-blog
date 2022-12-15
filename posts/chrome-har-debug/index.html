@@ -157,7 +157,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80har-%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-number">1.</span> <span class="nav-text">一、HAR 是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E5%88%9B%E5%BB%BA%E5%92%8C%E6%9F%A5%E7%9C%8B-har-%E6%96%87%E4%BB%B6"><span class="nav-number">2.</span> <span class="nav-text">二、创建和查看 HAR 文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA-har-%E6%96%87%E4%BB%B6"><span class="nav-number">2.1.</span> <span class="nav-text">创建 HAR 文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B-har-%E6%96%87%E4%BB%B6"><span class="nav-number">2.2.</span> <span class="nav-text">查看 HAR 文件</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80-har-%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-number">1.</span> <span class="nav-text"> 一、HAR 是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C-%E5%88%9B%E5%BB%BA%E5%92%8C%E6%9F%A5%E7%9C%8B-har-%E6%96%87%E4%BB%B6"><span class="nav-number">2.</span> <span class="nav-text"> 二、创建和查看 HAR 文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA-har-%E6%96%87%E4%BB%B6"><span class="nav-number">2.1.</span> <span class="nav-text"> 创建 HAR 文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B-har-%E6%96%87%E4%BB%B6"><span class="nav-number">2.2.</span> <span class="nav-text"> 查看 HAR 文件</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -359,14 +359,10 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>通过 HAR
-文件可以方便快捷的查看和诊断网络请求，定位问题。最近才学习到这个有用的知识，在此记录下</p>
+        <p>通过 HAR 文件可以方便快捷的查看和诊断网络请求，定位问题。最近才学习到这个有用的知识，在此记录下</p>
 <span id="more"></span>
-<h2 id="一har-是什么">一、HAR 是什么</h2>
-<p>HAR（HTTP 归档）是多种 HTTP 会话工具用来导出所记录数据的
-一种文件格式。这种格式基本上是 JSON
-对象，并具有一组特定的字段。请注意，并非所有 HAR
-格式的字段都是必填字段， 很多时候，部分信息不会保存到文件中。</p>
+<h2 id="一-har-是什么"><a class="markdownIt-Anchor" href="#一-har-是什么"></a> 一、HAR 是什么</h2>
+<p>HAR（HTTP 归档）是多种 HTTP 会话工具用来导出所记录数据的 一种文件格式。这种格式基本上是 JSON 对象，并具有一组特定的字段。请注意，并非所有 HAR 格式的字段都是必填字段， 很多时候，部分信息不会保存到文件中。</p>
 <p><strong>注意：</strong></p>
 <p><strong>HAR 文件包含敏感数据！</strong></p>
 <ul>
@@ -374,31 +370,20 @@
 <li>Cookie（任何有 HAR 文件的人都可以使用这些 Cookie 冒用帐号）。</li>
 <li>录制过程中提交的所有信息： 个人详细信息、密码、信用卡号码等。</li>
 </ul>
-<p>如有需要，可以在文本编辑器中编辑 HAR 文件以及对敏感信息进行
-匿名处理。</p>
-<p>以在多种浏览器中记录 HTTP 会话，包括 Google Chrome、Microsoft Edge
-以及 Mozilla Firefox。</p>
-<h2 id="二创建和查看-har-文件">二、创建和查看 HAR 文件</h2>
-<p>这边我主要以 Chrome 浏览器为例，其他浏览器可以参考。IE
-浏览器不支持保存为 HAR 文件，需要通过第三方软件如 <span class="exturl" data-url="aHR0cHM6Ly93d3cudGVsZXJpay5jb20vZmlkZGxlcg==">Fiddler<i class="fa fa-external-link-alt"></i></span>、<span class="exturl" data-url="aHR0cHM6Ly93d3cuaHR0cHdhdGNoLmNvbS8=">HttpWatch<i class="fa fa-external-link-alt"></i></span> 等实现。</p>
-<h3 id="创建-har-文件">创建 HAR 文件</h3>
-<p>在 Network
-面板中<strong>右键点击任意一条请求</strong>，点击<strong>Save As HAR
-With Content</strong>，即可将所有请求保存为 HAR
-文件。<strong>注意，Network 面板中的过滤条件是被忽略的。</strong></p>
-<p><img data-src="https://img.iszy.xyz/1663130958729.png" /></p>
-<p>从 71 版本开始，导入导出 HAR 文件开始包好 Initiator 和 priority
-信息。</p>
-<p>从 <strong>76 版本</strong>开始，Chrome 导出的 HAR 文件中首次开始包含
-WebSocket 消息。另外 ，Chrome 在 Network 面板<strong>新增了导入和导出
-HAR 文件的按钮</strong>，使用更加便捷。</p>
-<p><img data-src="https://img.iszy.xyz/1663131014757.png" /></p>
-<h3 id="查看-har-文件">查看 HAR 文件</h3>
-<p>从 <strong>62 版本</strong>开始，Chrome 增加了<strong>将 HAR
-文件拖拽到 Network 面板进行导入展示</strong>的功能。</p>
-<p><img data-src="https://img.iszy.xyz/1663130703947.png" /></p>
-<p>从 76 版本开始，可以通过 Chrome 在 Network 面板<strong>新增的导入 HAR
-文件的按钮</strong>进行导入。</p>
+<p>如有需要，可以在文本编辑器中编辑 HAR 文件以及对敏感信息进行 匿名处理。</p>
+<p>以在多种浏览器中记录 HTTP 会话，包括 Google Chrome、Microsoft Edge 以及 Mozilla Firefox。</p>
+<h2 id="二-创建和查看-har-文件"><a class="markdownIt-Anchor" href="#二-创建和查看-har-文件"></a> 二、创建和查看 HAR 文件</h2>
+<p>这边我主要以 Chrome 浏览器为例，其他浏览器可以参考。IE 浏览器不支持保存为 HAR 文件，需要通过第三方软件如 <span class="exturl" data-url="aHR0cHM6Ly93d3cudGVsZXJpay5jb20vZmlkZGxlcg==">Fiddler<i class="fa fa-external-link-alt"></i></span>、<span class="exturl" data-url="aHR0cHM6Ly93d3cuaHR0cHdhdGNoLmNvbS8=">HttpWatch<i class="fa fa-external-link-alt"></i></span> 等实现。</p>
+<h3 id="创建-har-文件"><a class="markdownIt-Anchor" href="#创建-har-文件"></a> 创建 HAR 文件</h3>
+<p>在 Network 面板中<strong>右键点击任意一条请求</strong>，点击<strong>Save As HAR With Content</strong>，即可将所有请求保存为 HAR 文件。<strong>注意，Network 面板中的过滤条件是被忽略的。</strong></p>
+<p><img data-src="https://img.iszy.xyz/1663130958729.png" alt="" /></p>
+<p>从 71 版本开始，导入导出 HAR 文件开始包好 Initiator 和 priority 信息。</p>
+<p>从 <strong>76 版本</strong>开始，Chrome 导出的 HAR 文件中首次开始包含 WebSocket 消息。另外 ，Chrome 在 Network 面板<strong>新增了导入和导出 HAR 文件的按钮</strong>，使用更加便捷。</p>
+<p><img data-src="https://img.iszy.xyz/1663131014757.png" alt="" /></p>
+<h3 id="查看-har-文件"><a class="markdownIt-Anchor" href="#查看-har-文件"></a> 查看 HAR 文件</h3>
+<p>从 <strong>62 版本</strong>开始，Chrome 增加了<strong>将 HAR 文件拖拽到 Network 面板进行导入展示</strong>的功能。</p>
+<p><img data-src="https://img.iszy.xyz/1663130703947.png" alt="" /></p>
+<p>从 76 版本开始，可以通过 Chrome 在 Network 面板<strong>新增的导入 HAR 文件的按钮</strong>进行导入。</p>
 
     </div>
 
@@ -523,8 +508,9 @@ HAR 文件的按钮</strong>，使用更加便捷。</p>
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/mathjax@3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
-<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/math/mathjax.min.js"></script>
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.3/dist/katex.min.css" integrity="sha256-NJNVfEC6jfEt62wQMafLNT2eI6BaWONXbpkSEVAs3+8=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.3/dist/contrib/copy-tex.min.js","integrity":"sha256-Us54+rSGDSTvIhKKUs4kygE2ipA0RXpWWh0/zLqw3bs="}}</script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/math/katex.min.js"></script>
 
 
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/quicklink@2.3.0/dist/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>

@@ -155,7 +155,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%94%B9%E8%BF%9B"><span class="nav-number">1.</span> <span class="nav-text">改进</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gihub-actions-%E8%84%9A%E6%9C%AC"><span class="nav-number">2.</span> <span class="nav-text">Gihub Actions 脚本</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A2%9E%E5%8A%A0%E7%BC%93%E5%AD%98"><span class="nav-number">2.1.</span> <span class="nav-text">增加缓存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%99%BB%E5%BD%95%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number">2.2.</span> <span class="nav-text">登录服务器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C"><span class="nav-number">3.</span> <span class="nav-text">使用体验</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%94%B9%E8%BF%9B"><span class="nav-number">1.</span> <span class="nav-text"> 改进</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gihub-actions-%E8%84%9A%E6%9C%AC"><span class="nav-number">2.</span> <span class="nav-text"> Gihub Actions 脚本</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A2%9E%E5%8A%A0%E7%BC%93%E5%AD%98"><span class="nav-number">2.1.</span> <span class="nav-text"> 增加缓存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%99%BB%E5%BD%95%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number">2.2.</span> <span class="nav-text"> 登录服务器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C"><span class="nav-number">3.</span> <span class="nav-text"> 使用体验</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -350,44 +350,27 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>前段时间写了一个通过 Github Actions 配合 Webhooks
-实现项目自动化部署，但是服务器上由于并没有后端服务，所以实现的方式不太优雅。今天我将完全抛弃
-Webhook，完全通过 Github Actions 来实现项目的自动化部署。</p>
+        <p>前段时间写了一个通过 Github Actions 配合 Webhooks 实现项目自动化部署，但是服务器上由于并没有后端服务，所以实现的方式不太优雅。今天我将完全抛弃 Webhook，完全通过 Github Actions 来实现项目的自动化部署。</p>
 <span id="more"></span>
-<h2 id="改进">改进</h2>
-<p>如果还没看过上一篇的，可以移步这里看一下<a href="/posts/10/">Github
-Actions + Webhooks 实现项目自动化部署</a>。</p>
-<p>这次的主要改进就是移除了 Webhooks
-的依赖，不需要在服务器上进行监听。</p>
-<p>其实很简单，就是通过 Github Actions
-主动登录服务器，执行自定义脚本，完成 git pull 操作。</p>
-<h2 id="gihub-actions-脚本">Gihub Actions 脚本</h2>
+<h2 id="改进"><a class="markdownIt-Anchor" href="#改进"></a> 改进</h2>
+<p>如果还没看过上一篇的，可以移步这里看一下<a href="/posts/10/">Github Actions + Webhooks 实现项目自动化部署</a>。</p>
+<p>这次的主要改进就是移除了 Webhooks 的依赖，不需要在服务器上进行监听。</p>
+<p>其实很简单，就是通过 Github Actions 主动登录服务器，执行自定义脚本，完成 git pull 操作。</p>
+<h2 id="gihub-actions-脚本"><a class="markdownIt-Anchor" href="#gihub-actions-脚本"></a> Gihub Actions 脚本</h2>
 <p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1p2b25pbWlyU3VuL215LWhleG8tYmxvZy9ibG9iLzczYWY5OGFlNGVmOTUxNTZkMmU1MTY5NzYzM2I5ZmI0M2M1OTM4NmUvLmdpdGh1Yi93b3JrZmxvd3MvZGVwbG95LnltbA==">完整脚本<i class="fa fa-external-link-alt"></i></span></p>
 <p>大致内容和之前是一样的，优化了两个地方。</p>
-<h3 id="增加缓存">增加缓存</h3>
-<p>增加了对<code>node_modules</code>目录的缓存，从而在大部分时间里加速安装依赖的时间。由于
-yarn 的机制，在没有更新 yarn.lock
-文件时，安装依赖几乎可以说是直接跳过的，从而大大缩短了每次部署的时间。</p>
+<h3 id="增加缓存"><a class="markdownIt-Anchor" href="#增加缓存"></a> 增加缓存</h3>
+<p>增加了对<code>node_modules</code>目录的缓存，从而在大部分时间里加速安装依赖的时间。由于 yarn 的机制，在没有更新 yarn.lock 文件时，安装依赖几乎可以说是直接跳过的，从而大大缩短了每次部署的时间。</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">build:</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Checkout</span> <span class="string">🛎️</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/checkout@v2</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Restore</span> <span class="string">cached</span> <span class="string">./node_modules</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/cache@v2</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">path:</span> <span class="string">./node_modules</span></span><br><span class="line">          <span class="attr">key:</span> <span class="string">$&#123;&#123;</span> <span class="string">runner.os</span> <span class="string">&#125;&#125;-yarn-lock-$&#123;&#123;</span> <span class="string">hashFiles(&#x27;./yarn.lock&#x27;)</span> <span class="string">&#125;&#125;</span></span><br><span class="line">          <span class="attr">restore-keys:</span> <span class="string">|</span></span><br><span class="line">            <span class="string">$&#123;&#123;</span> <span class="string">runner.os</span> <span class="string">&#125;&#125;-yarn-lock-</span></span><br></pre></td></tr></table></figure>
-<p>可以看到这边采用了官方的<code>actions/cache@v2</code>脚本，根据
-yarn.lock 的 hash 值来缓存 node_modules
-目录，可以不用担心没法升级依赖。</p>
-<h3 id="登录服务器">登录服务器</h3>
-<p>这边为了安全因素，建议将登录参数储存到项目的 Secrets
-中，这样就能通过环境变量在 Github Actions
-中调用，不用担心泄露的问题。</p>
-<figure>
-<img data-src="https://img.iszy.xyz/20210923134132.png?x-oss-process=style/big"
-alt="Secrets" />
-<figcaption aria-hidden="true">Secrets</figcaption>
-</figure>
-<p>点击项目的<code>Settings</code>-<code>Secrets</code>-<code>New repository secret</code>即可创建。Secret
-名称就是环境变量名，内容则是具体的值。</p>
+<p>可以看到这边采用了官方的<code>actions/cache@v2</code>脚本，根据 yarn.lock 的 hash 值来缓存 node_modules 目录，可以不用担心没法升级依赖。</p>
+<h3 id="登录服务器"><a class="markdownIt-Anchor" href="#登录服务器"></a> 登录服务器</h3>
+<p>这边为了安全因素，建议将登录参数储存到项目的 Secrets 中，这样就能通过环境变量在 Github Actions 中调用，不用担心泄露的问题。</p>
+<p><img data-src="https://img.iszy.xyz/20210923134132.png?x-oss-process=style/big" alt="Secrets" /></p>
+<p>点击项目的<code>Settings</code>-<code>Secrets</code>-<code>New repository secret</code>即可创建。Secret 名称就是环境变量名，内容则是具体的值。</p>
 <p>接着调用<code>appleboy/ssh-action@master</code>脚本，将登录参数指定为对应的环境变量，然后配置一组需要执行的脚本，这边可以根据个人的实际情况进行配置，自由度很高了。既然都能登陆服务器，那自然是想做什么都可以了。</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">build:</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Checkout</span> <span class="string">🛎️</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/checkout@v2</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Restore</span> <span class="string">cached</span> <span class="string">./node_modules</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/cache@v2</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">path:</span> <span class="string">./node_modules</span></span><br><span class="line">          <span class="attr">key:</span> <span class="string">$&#123;&#123;</span> <span class="string">runner.os</span> <span class="string">&#125;&#125;-yarn-lock-$&#123;&#123;</span> <span class="string">hashFiles(&#x27;./yarn.lock&#x27;)</span> <span class="string">&#125;&#125;</span></span><br><span class="line">          <span class="attr">restore-keys:</span> <span class="string">|</span></span><br><span class="line"><span class="string">            $&#123;&#123; runner.os &#125;&#125;-yarn-lock-</span></span><br><span class="line"><span class="string"></span>      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Install</span> <span class="string">hexo</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">npm</span> <span class="string">install</span> <span class="string">hexo-cli</span> <span class="string">-g</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Install</span> <span class="string">dependencies</span> <span class="string">🔧</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">yarn</span> <span class="string">install</span> <span class="string">--frozen-lockfile</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Build</span> <span class="string">app</span> <span class="string">🔧</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">hexo</span> <span class="string">g</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Deploy</span> <span class="string">🚀</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">JamesIves/github-pages-deploy-action@4.1.0</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">branch:</span> <span class="string">gh-pages</span></span><br><span class="line">          <span class="attr">folder:</span> <span class="string">public</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Deploy</span> <span class="string">to</span> <span class="string">server</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">appleboy/ssh-action@master</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">host:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.HOST</span> <span class="string">&#125;&#125;</span></span><br><span class="line">          <span class="attr">username:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.USERNAME</span> <span class="string">&#125;&#125;</span></span><br><span class="line">          <span class="attr">port:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.PORT</span> <span class="string">&#125;&#125;</span></span><br><span class="line">          <span class="attr">key:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.KEY</span> <span class="string">&#125;&#125;</span></span><br><span class="line">          <span class="attr">script:</span> <span class="string">|</span></span><br><span class="line"><span class="string">            cd /your/path</span></span><br><span class="line"><span class="string">            git pull --rebase</span></span><br><span class="line"><span class="string">            ls -al</span></span><br></pre></td></tr></table></figure>
-<h2 id="使用体验">使用体验</h2>
-<p>这次的体验很好，基本上不用浪费自己服务器的性能，也可以通过自定义的脚本将服务器上自己关心的内容输出到日志中。我暂时认为这就是现阶段通过
-Github Actions 完成自动化部署的最佳方案了。希望对大家有所帮助。</p>
+<h2 id="使用体验"><a class="markdownIt-Anchor" href="#使用体验"></a> 使用体验</h2>
+<p>这次的体验很好，基本上不用浪费自己服务器的性能，也可以通过自定义的脚本将服务器上自己关心的内容输出到日志中。我暂时认为这就是现阶段通过 Github Actions 完成自动化部署的最佳方案了。希望对大家有所帮助。</p>
 
     </div>
 
@@ -512,8 +495,9 @@ Github Actions 完成自动化部署的最佳方案了。希望对大家有所�
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/mathjax@3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
-<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/math/mathjax.min.js"></script>
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.3/dist/katex.min.css" integrity="sha256-NJNVfEC6jfEt62wQMafLNT2eI6BaWONXbpkSEVAs3+8=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.3/dist/contrib/copy-tex.min.js","integrity":"sha256-Us54+rSGDSTvIhKKUs4kygE2ipA0RXpWWh0/zLqw3bs="}}</script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/math/katex.min.js"></script>
 
 
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/quicklink@2.3.0/dist/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>

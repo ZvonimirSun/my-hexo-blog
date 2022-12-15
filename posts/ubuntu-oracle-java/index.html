@@ -155,7 +155,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0-oracle-%E7%9A%84-ppa"><span class="nav-number">1.</span> <span class="nav-text">添加 Oracle 的 PPA</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-java-8"><span class="nav-number">2.</span> <span class="nav-text">安装 Java 8</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8C%87%E5%AE%9A-java-%E7%89%88%E6%9C%AC"><span class="nav-number">3.</span> <span class="nav-text">指定 Java 版本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BE%E5%AE%9Ajava_home%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="nav-number">4.</span> <span class="nav-text">设定JAVA_HOME环境变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%8E%E8%AF%9D"><span class="nav-number">5.</span> <span class="nav-text">后话</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0-oracle-%E7%9A%84-ppa"><span class="nav-number">1.</span> <span class="nav-text"> 添加 Oracle 的 PPA</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-java-8"><span class="nav-number">2.</span> <span class="nav-text"> 安装 Java 8</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8C%87%E5%AE%9A-java-%E7%89%88%E6%9C%AC"><span class="nav-number">3.</span> <span class="nav-text"> 指定 Java 版本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BE%E5%AE%9Ajava_home%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="nav-number">4.</span> <span class="nav-text"> 设定JAVA_HOME环境变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%8E%E8%AF%9D"><span class="nav-number">5.</span> <span class="nav-text"> 后话</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -352,19 +352,17 @@
     <div class="post-body" itemprop="articleBody">
         <p>在此记录一下在 Ubuntu 16.04 中安装 Oracle Java 8 的过程。</p>
 <span id="more"></span>
-<h2 id="添加-oracle-的-ppa">添加 Oracle 的 PPA</h2>
+<h2 id="添加-oracle-的-ppa"><a class="markdownIt-Anchor" href="#添加-oracle-的-ppa"></a> 添加 Oracle 的 PPA</h2>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:webupd8team/java</span><br><span class="line">sudo apt update</span><br></pre></td></tr></table></figure>
-<p><img data-src="https://img.iszy.xyz/20190318220829.png?x-oss-process=style/big" /></p>
-<h2 id="安装-java-8">安装 Java 8</h2>
+<p><img data-src="https://img.iszy.xyz/20190318220829.png?x-oss-process=style/big" alt="" /></p>
+<h2 id="安装-java-8"><a class="markdownIt-Anchor" href="#安装-java-8"></a> 安装 Java 8</h2>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install oracle-java8-installer -y</span><br></pre></td></tr></table></figure>
-<p>如下图所示，将会跳出一个界面让你同意 Oracle 的 license，切换到 Yes
-回车即可。</p>
-<p><img data-src="https://img.iszy.xyz/20190318220840.png?x-oss-process=style/big" /></p>
-<h2 id="指定-java-版本">指定 Java 版本</h2>
-<p>一台服务器上可能会安装有多个 Java
-版本，通过以下语句指定版本，选择想要的版本即可。</p>
+<p>如下图所示，将会跳出一个界面让你同意 Oracle 的 license，切换到 Yes 回车即可。</p>
+<p><img data-src="https://img.iszy.xyz/20190318220840.png?x-oss-process=style/big" alt="" /></p>
+<h2 id="指定-java-版本"><a class="markdownIt-Anchor" href="#指定-java-版本"></a> 指定 Java 版本</h2>
+<p>一台服务器上可能会安装有多个 Java 版本，通过以下语句指定版本，选择想要的版本即可。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo update-alternatives --config java</span><br></pre></td></tr></table></figure>
-<h2 id="设定java_home环境变量">设定<code>JAVA_HOME</code>环境变量</h2>
+<h2 id="设定java_home环境变量"><a class="markdownIt-Anchor" href="#设定java_home环境变量"></a> 设定<code>JAVA_HOME</code>环境变量</h2>
 <p>打开存环境变量的文件</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vi /etc/environment</span><br></pre></td></tr></table></figure>
 <p>在底部添加一行</p>
@@ -373,7 +371,7 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source /etc/environment</span><br></pre></td></tr></table></figure>
 <p>可以通过如下语句确认环境变量是否配置成功</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo $JAVA_HOME</span><br></pre></td></tr></table></figure>
-<h2 id="后话">后话</h2>
+<h2 id="后话"><a class="markdownIt-Anchor" href="#后话"></a> 后话</h2>
 <p>现在已经成功安装了 Oracle Java 8，尽情使用吧。</p>
 
     </div>
@@ -498,8 +496,9 @@
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/mathjax@3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
-<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/math/mathjax.min.js"></script>
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.3/dist/katex.min.css" integrity="sha256-NJNVfEC6jfEt62wQMafLNT2eI6BaWONXbpkSEVAs3+8=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.3/dist/contrib/copy-tex.min.js","integrity":"sha256-Us54+rSGDSTvIhKKUs4kygE2ipA0RXpWWh0/zLqw3bs="}}</script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/math/katex.min.js"></script>
 
 
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/quicklink@2.3.0/dist/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>

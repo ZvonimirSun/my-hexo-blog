@@ -154,7 +154,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#uuid"><span class="nav-number">1.</span> <span class="nav-text">UUID</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="nav-number">2.</span> <span class="nav-text">解决方案</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#uuid"><span class="nav-number">1.</span> <span class="nav-text"> UUID</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="nav-number">2.</span> <span class="nav-text"> 解决方案</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -304,77 +304,62 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>最近需要将一批数据添加唯一 ID，UUID
-作为一个具有唯一性的通用编号方案，正适合承担这个任务。</p>
+        <p>最近需要将一批数据添加唯一 ID，UUID 作为一个具有唯一性的通用编号方案，正适合承担这个任务。</p>
 <span id="more"></span>
-<h2 id="uuid">UUID</h2>
-<p>通用唯一识别码（英语：Universally Unique
-Identifier，缩写：UUID）是用于计算机体系中以识别信息数目的一个 128
-位标识符，还有相关的术语：全局唯一标识符（GUID）。根据标准方法生成，不依赖中央机构的注册和分配，UUID
-具有唯一性，这与其他大多数编号方案不同。重复 UUID
-码概率接近零，可以忽略不计。</p>
+<h2 id="uuid"><a class="markdownIt-Anchor" href="#uuid"></a> UUID</h2>
+<p>通用唯一识别码（英语：Universally Unique Identifier，缩写：UUID）是用于计算机体系中以识别信息数目的一个 128 位标识符，还有相关的术语：全局唯一标识符（GUID）。根据标准方法生成，不依赖中央机构的注册和分配，UUID 具有唯一性，这与其他大多数编号方案不同。重复 UUID 码概率接近零，可以忽略不计。</p>
 <p>UUID 主要有五个算法，也就是五种方法来实现：</p>
 <table>
-<colgroup>
-<col style="width: 2%" />
-<col style="width: 13%" />
-<col style="width: 83%" />
-</colgroup>
 <thead>
-<tr class="header">
+<tr>
 <th>算法</th>
 <th>方式</th>
 <th>介绍</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>uuid1</td>
 <td>基于时间戳</td>
-<td>由 MAC 地址、当前时间戳、随机数生成。可以保证全球范围内的唯一性，但
-MAC 的使用同时带来安全性问题，局域网中可以使用 IP 来代替 MAC。</td>
+<td>由 MAC 地址、当前时间戳、随机数生成。可以保证全球范围内的唯一性，但 MAC 的使用同时带来安全性问题，局域网中可以使用 IP 来代替 MAC。</td>
 </tr>
-<tr class="even">
+<tr>
 <td>uuid2</td>
 <td>基于分布式计算环境 DCE</td>
-<td>算法与 uuid1 相同，不同的是把时间戳的前 4 位置换为 POSIX 的
-UID。实际中很少用到该方法。</td>
+<td>算法与 uuid1 相同，不同的是把时间戳的前 4 位置换为 POSIX 的 UID。实际中很少用到该方法。</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>uuid3</td>
 <td>基于名字的 MD5 散列值</td>
-<td>通过计算名字和命名空间的 MD5
-散列值得到，保证了同一命名空间中不同名字的唯一性，和不同命名空间的唯一性，但同一命名空间的同一名字生成相同的
-uuid。</td>
+<td>通过计算名字和命名空间的 MD5 散列值得到，保证了同一命名空间中不同名字的唯一性，和不同命名空间的唯一性，但同一命名空间的同一名字生成相同的 uuid。</td>
 </tr>
-<tr class="even">
+<tr>
 <td>uuid4</td>
 <td>基于随机数</td>
 <td>由伪随机数得到，有一定的重复概率，该概率可以计算出来。</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>uuid5</td>
 <td>基于名字的 SHA-1 散列值</td>
 <td>算法与 uuid3 相同，不同的是使用 Secure Hash Algorithm 1 算法</td>
 </tr>
 </tbody>
 </table>
-<h2 id="解决方案">解决方案</h2>
-<p>通过上面的介绍，我们可以看出来，为了保证全局的唯一性，我们将使用
-uuid1 方法来完成这项工作。</p>
-<p>我们用 ArcGIS
-打开我们需要创建唯一字段的矢量数据属性表，创建一个类型为 text
-的新字段，打开字段编辑器(Field Calculator)。Parser
-选择<code>Python</code>，勾选<code>Show Codeblock</code>，分别输入以下内容。</p>
+<h2 id="解决方案"><a class="markdownIt-Anchor" href="#解决方案"></a> 解决方案</h2>
+<p>通过上面的介绍，我们可以看出来，为了保证全局的唯一性，我们将使用 uuid1 方法来完成这项工作。</p>
+<p>我们用 ArcGIS 打开我们需要创建唯一字段的矢量数据属性表，创建一个类型为 text 的新字段，打开字段编辑器(Field Calculator)。Parser 选择<code>Python</code>，勾选<code>Show Codeblock</code>，分别输入以下内容。</p>
 <ul>
-<li><p>Pre-Logic Script Code:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> uuid</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">getUUID</span>():</span><br><span class="line">  val=(<span class="built_in">str</span>(uuid.uuid1())).lower()</span><br><span class="line">  <span class="keyword">return</span> val</span><br></pre></td></tr></table></figure></li>
-<li><p>UUID = (你刚刚创建的字段名)</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">getUUID()</span><br></pre></td></tr></table></figure></li>
+<li>
+<p>Pre-Logic Script Code:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> uuid</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">getUUID</span>():</span><br><span class="line">  val=(<span class="built_in">str</span>(uuid.uuid1())).lower()</span><br><span class="line">  <span class="keyword">return</span> val</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>UUID = (你刚刚创建的字段名)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">getUUID()</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
-<p><img data-src="https://img.iszy.xyz/20190909102342.png" /></p>
-<p>点击 OK，等待运算完成，你将能看到所有的 feature 已经被赋予了
-UUID。</p>
+<p><img data-src="https://img.iszy.xyz/20190909102342.png" alt="" /></p>
+<p>点击 OK，等待运算完成，你将能看到所有的 feature 已经被赋予了 UUID。</p>
 
     </div>
 
@@ -498,8 +483,9 @@ UUID。</p>
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/mathjax@3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
-<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/math/mathjax.min.js"></script>
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.3/dist/katex.min.css" integrity="sha256-NJNVfEC6jfEt62wQMafLNT2eI6BaWONXbpkSEVAs3+8=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.3/dist/contrib/copy-tex.min.js","integrity":"sha256-Us54+rSGDSTvIhKKUs4kygE2ipA0RXpWWh0/zLqw3bs="}}</script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/math/katex.min.js"></script>
 
 
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/quicklink@2.3.0/dist/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>

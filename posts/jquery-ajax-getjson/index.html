@@ -152,7 +152,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F"><span class="nav-number">1.</span> <span class="nav-text">两种方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ajax-%E6%96%B9%E5%BC%8F"><span class="nav-number">1.1.</span> <span class="nav-text">$.ajax 方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#getjson-%E6%96%B9%E5%BC%8F"><span class="nav-number">1.2.</span> <span class="nav-text">$.getJSON 方式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8C%BA%E5%88%AB"><span class="nav-number">2.</span> <span class="nav-text">区别</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F"><span class="nav-number">1.</span> <span class="nav-text"> 两种方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ajax-%E6%96%B9%E5%BC%8F"><span class="nav-number">1.1.</span> <span class="nav-text"> $.ajax 方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#getjson-%E6%96%B9%E5%BC%8F"><span class="nav-number">1.2.</span> <span class="nav-text"> $.getJSON 方式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8C%BA%E5%88%AB"><span class="nav-number">2.</span> <span class="nav-text"> 区别</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -302,22 +302,20 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>在项目中使用到了 <code>$.ajax</code> 与 <code>$.getJSON</code>
-两种从后台获取 json 的方式，在此进行简单的对比，用以记录学习。</p>
+        <p>在项目中使用到了 <code>$.ajax</code> 与 <code>$.getJSON</code> 两种从后台获取 json 的方式，在此进行简单的对比，用以记录学习。</p>
 <span id="more"></span>
-<h2 id="两种方式">两种方式</h2>
-<h3 id="ajax-方式"><code>$.ajax</code> 方式</h3>
+<h2 id="两种方式"><a class="markdownIt-Anchor" href="#两种方式"></a> 两种方式</h2>
+<h3 id="ajax-方式"><a class="markdownIt-Anchor" href="#ajax-方式"></a> <code>$.ajax</code> 方式</h3>
 <p>代码如下</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$.<span class="title function_">ajax</span>(&#123;</span><br><span class="line">  <span class="attr">url</span>: <span class="string">&quot;/example&quot;</span>,</span><br><span class="line">  <span class="attr">type</span>: <span class="string">&quot;GET&quot;</span>,</span><br><span class="line">  <span class="attr">dataType</span>: <span class="string">&quot;json&quot;</span>,</span><br><span class="line">  <span class="attr">data</span>: &#123; <span class="attr">key</span>: <span class="string">&quot;test&quot;</span> &#125;,</span><br><span class="line">  <span class="attr">async</span>: <span class="literal">false</span>,</span><br><span class="line">  <span class="attr">success</span>: <span class="keyword">function</span> (<span class="params">data</span>) &#123;</span><br><span class="line">    <span class="title function_">somefunction</span>();</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">error</span>: <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;error&quot;</span>);</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<h3 id="getjson-方式"><code>$.getJSON</code> 方式</h3>
+<h3 id="getjson-方式"><a class="markdownIt-Anchor" href="#getjson-方式"></a> <code>$.getJSON</code> 方式</h3>
 <p>代码如下</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$.getJSON(&quot;/example&quot;,&#123;key: &quot;test&quot;&#125;,function(data)&#123;</span><br><span class="line">    somefunction();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<h2 id="区别">区别</h2>
+<h2 id="区别"><a class="markdownIt-Anchor" href="#区别"></a> 区别</h2>
 <p>我能想到的一些区别:</p>
 <ul>
 <li><code>$.ajax</code> 功能更加强大，能够实现更多功能</li>
-<li>在获取 <code>json</code> 的这一目标下，<code>$.getJSON</code>
-代码更加简洁易懂</li>
+<li>在获取 <code>json</code> 的这一目标下，<code>$.getJSON</code> 代码更加简洁易懂</li>
 </ul>
 <p>在实际使用过程中，我觉得似乎差别不大，实在不知道还有什么区别。希望了解的大佬能够教我。</p>
 
@@ -443,8 +441,9 @@
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/mathjax@3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
-<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/math/mathjax.min.js"></script>
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.3/dist/katex.min.css" integrity="sha256-NJNVfEC6jfEt62wQMafLNT2eI6BaWONXbpkSEVAs3+8=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.3/dist/contrib/copy-tex.min.js","integrity":"sha256-Us54+rSGDSTvIhKKUs4kygE2ipA0RXpWWh0/zLqw3bs="}}</script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/math/katex.min.js"></script>
 
 
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/quicklink@2.3.0/dist/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>

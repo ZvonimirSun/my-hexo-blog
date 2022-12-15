@@ -310,62 +310,58 @@
         <p>记录下 BT 下载中节点(Peer)状态码含义。</p>
 <span id="more"></span>
 <table>
-<colgroup>
-<col style="width: 8%" />
-<col style="width: 91%" />
-</colgroup>
 <thead>
-<tr class="header">
+<tr>
 <th>状态码</th>
 <th>说明</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>O</td>
 <td>远程节点状态良好，未阻塞本客户端</td>
 </tr>
-<tr class="even">
+<tr>
 <td>D</td>
 <td>正在从远程节点下载</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>d</td>
 <td>如果远程节点允许，本客户端将会从该节点下载</td>
 </tr>
-<tr class="even">
+<tr>
 <td>U</td>
 <td>正在上传到远程节点</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>u</td>
 <td>如果远程节点请求，本客户端将会向该节点上传</td>
 </tr>
-<tr class="even">
+<tr>
 <td>K</td>
 <td>远程节点未阻塞，但本客户端对远程节点提供的数据不感兴趣</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>?</td>
 <td>本客户端未阻塞远程节点，但远程节点对本客户端提供的数据不感兴趣</td>
 </tr>
-<tr class="even">
+<tr>
 <td>E</td>
 <td>加密连接</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>H</td>
 <td>远程节点是通过 DHT 网络发现的</td>
 </tr>
-<tr class="even">
+<tr>
 <td>X</td>
 <td>远程节点是通过节点间交换发现的(PEX)</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>I</td>
 <td>该节点是一个传入节点</td>
 </tr>
-<tr class="even">
+<tr>
 <td>T</td>
 <td>正在通过 uTP 连接该节点</td>
 </tr>
@@ -493,8 +489,9 @@
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/mathjax@3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
-<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/math/mathjax.min.js"></script>
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.3/dist/katex.min.css" integrity="sha256-NJNVfEC6jfEt62wQMafLNT2eI6BaWONXbpkSEVAs3+8=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.3/dist/contrib/copy-tex.min.js","integrity":"sha256-Us54+rSGDSTvIhKKUs4kygE2ipA0RXpWWh0/zLqw3bs="}}</script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/math/katex.min.js"></script>
 
 
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/quicklink@2.3.0/dist/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>

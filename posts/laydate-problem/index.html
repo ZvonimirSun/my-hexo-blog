@@ -156,7 +156,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E7%AE%80%E8%BF%B0"><span class="nav-number">1.</span> <span class="nav-text">问题简述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E4%BA%8Elaydate%E7%9A%84change%E4%B8%8Edone%E5%B1%9E%E6%80%A7"><span class="nav-number">1.1.</span> <span class="nav-text">关于layDate的change与done属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E4%BA%8Edate.change%E4%B8%8D%E8%A7%A6%E5%8F%91"><span class="nav-number">1.2.</span> <span class="nav-text">关于$(&#39;#date&#39;).change()不触发</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E7%AE%80%E8%BF%B0"><span class="nav-number">1.</span> <span class="nav-text"> 问题简述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E4%BA%8Elaydate%E7%9A%84change%E4%B8%8Edone%E5%B1%9E%E6%80%A7"><span class="nav-number">1.1.</span> <span class="nav-text"> 关于layDate的change与done属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E4%BA%8Edatechange%E4%B8%8D%E8%A7%A6%E5%8F%91"><span class="nav-number">1.2.</span> <span class="nav-text"> 关于$(&#39;#date&#39;).change()不触发</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -337,23 +337,19 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>最近在写个小网页的时候用到了 Layui
-的日期控件——layDate，期间遇到了一些小问题，在此记录一下。</p>
+        <p>最近在写个小网页的时候用到了 Layui 的日期控件——layDate，期间遇到了一些小问题，在此记录一下。</p>
 <span id="more"></span>
-<h2 id="问题简述">问题简述</h2>
+<h2 id="问题简述"><a class="markdownIt-Anchor" href="#问题简述"></a> 问题简述</h2>
 <p>情形大致如下。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">layui.<span class="title function_">use</span>(<span class="string">&quot;laydate&quot;</span>, <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">var</span> laydate = layui.<span class="property">laydate</span>;</span><br><span class="line">  laydate.<span class="title function_">render</span>(&#123;</span><br><span class="line">    <span class="attr">elem</span>: <span class="string">&quot;#date&quot;</span>,</span><br><span class="line">    <span class="attr">change</span>: <span class="keyword">function</span> (<span class="params"></span>) &#123;&#125;,</span><br><span class="line">    <span class="attr">done</span>: <span class="keyword">function</span> (<span class="params"></span>) &#123;&#125;,</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<h3
-id="关于laydate的change与done属性">关于<code>layDate</code>的<code>change</code>与<code>done</code>属性</h3>
+<h3 id="关于laydate的change与done属性"><a class="markdownIt-Anchor" href="#关于laydate的change与done属性"></a> 关于<code>layDate</code>的<code>change</code>与<code>done</code>属性</h3>
 <p>如果是单独的时间选择，效果类似下图，则选中日期后的回调触发的是<code>change</code>。</p>
-<p><img data-src="https://img.iszy.xyz/20190407214909.png" /></p>
+<p><img data-src="https://img.iszy.xyz/20190407214909.png" alt="" /></p>
 <p>如果是时间范围的选择，效果类似下图，则选中日期后的回调触发的是<code>done</code>。</p>
-<p><img data-src="https://img.iszy.xyz/20190407215225.png" /></p>
+<p><img data-src="https://img.iszy.xyz/20190407215225.png" alt="" /></p>
 <p>需要根据情况在对应的属性后编写回调函数。</p>
-<h3
-id="关于date.change不触发">关于<code>$('#date').change()</code>不触发</h3>
-<p>我本想用<code>$('#date').change(function()&#123;&#125;)</code>来在日期变化时做些处理，但我发现
-laydate 的日期变化并没有触发 change 事件，十分奇怪。</p>
+<h3 id="关于datechange不触发"><a class="markdownIt-Anchor" href="#关于datechange不触发"></a> 关于<code>$('#date').change()</code>不触发</h3>
+<p>我本想用<code>$('#date').change(function()&#123;&#125;)</code>来在日期变化时做些处理，但我发现 laydate 的日期变化并没有触发 change 事件，十分奇怪。</p>
 <p>解决办法：</p>
 <p>在<code>layDate</code>的<code>change</code>或<code>done</code>的回调函数中手动触发<code>change</code>事件，即加入以下内容。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&quot;#date&quot;</span>).<span class="title function_">change</span>();</span><br></pre></td></tr></table></figure>
@@ -481,8 +477,9 @@ laydate 的日期变化并没有触发 change 事件，十分奇怪。</p>
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/mathjax@3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
-<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/math/mathjax.min.js"></script>
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.3/dist/katex.min.css" integrity="sha256-NJNVfEC6jfEt62wQMafLNT2eI6BaWONXbpkSEVAs3+8=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.3/dist/contrib/copy-tex.min.js","integrity":"sha256-Us54+rSGDSTvIhKKUs4kygE2ipA0RXpWWh0/zLqw3bs="}}</script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/math/katex.min.js"></script>
 
 
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/quicklink@2.3.0/dist/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>

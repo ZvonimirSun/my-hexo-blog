@@ -157,7 +157,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%88%90%E6%9E%9C"><span class="nav-number">1.</span> <span class="nav-text">成果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%9F%E8%83%BD"><span class="nav-number">2.</span> <span class="nav-text">功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%83%A8%E5%88%86%E8%AF%B4%E6%98%8E"><span class="nav-number">3.</span> <span class="nav-text">部分说明</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%88%90%E6%9E%9C"><span class="nav-number">1.</span> <span class="nav-text"> 成果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%9F%E8%83%BD"><span class="nav-number">2.</span> <span class="nav-text"> 功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%83%A8%E5%88%86%E8%AF%B4%E6%98%8E"><span class="nav-number">3.</span> <span class="nav-text"> 部分说明</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -331,22 +331,14 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>平常遇到 GeoJSON 都喜欢去 <span class="exturl" data-url="aHR0cHM6Ly9nZW9qc29uLmlv">GeoJSON.IO<i class="fa fa-external-link-alt"></i></span>
-上看一下数据，是 Mapbox
-做的，功能还挺好用的。不过这个网站不开代理有时候速度还是挺慢的，我正好在写小工具集合，何不自己写一个呢。</p>
+        <p>平常遇到 GeoJSON 都喜欢去 <span class="exturl" data-url="aHR0cHM6Ly9nZW9qc29uLmlv">GeoJSON.IO<i class="fa fa-external-link-alt"></i></span> 上看一下数据，是 Mapbox 做的，功能还挺好用的。不过这个网站不开代理有时候速度还是挺慢的，我正好在写小工具集合，何不自己写一个呢。</p>
 <span id="more"></span>
-<h2 id="成果">成果</h2>
+<h2 id="成果"><a class="markdownIt-Anchor" href="#成果"></a> 成果</h2>
 <p>欢迎体验</p>
-<p><span class="exturl" data-url="aHR0cHM6Ly90b29scy5pc3p5Lnh5ei9naXMvZ2VvanNvbg==">GeoJSON-ISZY
-工具集合<i class="fa fa-external-link-alt"></i></span></p>
-<figure>
-<img data-src="https://img.iszy.xyz/20210903134058.png?x-oss-process=style/big"
-alt="GeoJSON-ISZY 工具集合" />
-<figcaption aria-hidden="true">GeoJSON-ISZY 工具集合</figcaption>
-</figure>
-<h2 id="功能">功能</h2>
-<p>当然，自己看过 GeoJSON.IO
-这个网站后呢，可以发现虽然看着挺简单的页面，功能还不少呢。我决定先做个比较基础的，包含以下功能，先能用再说。</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly90b29scy5pc3p5Lnh5ei9naXMvZ2VvanNvbg==">GeoJSON-ISZY 工具集合<i class="fa fa-external-link-alt"></i></span></p>
+<p><img data-src="https://img.iszy.xyz/20210903134058.png?x-oss-process=style/big" alt="GeoJSON-ISZY 工具集合" /></p>
+<h2 id="功能"><a class="markdownIt-Anchor" href="#功能"></a> 功能</h2>
+<p>当然，自己看过 <span class="exturl" data-url="aHR0cDovL0dlb0pTT04uSU8=">GeoJSON.IO<i class="fa fa-external-link-alt"></i></span> 这个网站后呢，可以发现虽然看着挺简单的页面，功能还不少呢。我决定先做个比较基础的，包含以下功能，先能用再说。</p>
 <ul>
 <li>界面由 Leaflet 地图窗口和 JSON 编辑器组成</li>
 <li>底图，默认使用高德街道底图，天地图个人 token 每日访问次数有限
@@ -357,39 +349,36 @@ alt="GeoJSON-ISZY 工具集合" />
 <li>天地图影像底图</li>
 <li>天地图地形底图</li>
 <li>OpenStreetMap 街道底图</li>
-</ul></li>
+</ul>
+</li>
 <li>支持在 JSON 编辑器输入 GeoJSON 后将 GeoJSON 添加到地图上
 <ul>
-<li>在 JSON 编辑器输入完，编辑器失焦后，尝试解析 GeoJSON
-并添加到地图上</li>
-<li>在 JSON 编辑器一段时间没有继续输入，但没有失焦的情况下，也尝试解析
-GeoJSON 并添加到地图上</li>
-</ul></li>
-<li>支持地图上单个 Feature
-图形选择，选择后跳出弹窗展示属性，可编辑，编辑实时同步</li>
+<li>在 JSON 编辑器输入完，编辑器失焦后，尝试解析 GeoJSON 并添加到地图上</li>
+<li>在 JSON 编辑器一段时间没有继续输入，但没有失焦的情况下，也尝试解析 GeoJSON 并添加到地图上</li>
+</ul>
+</li>
+<li>支持地图上单个 Feature 图形选择，选择后跳出弹窗展示属性，可编辑，编辑实时同步</li>
 <li>通过表格界面展示所有 Feature 的属性表，支持编辑</li>
 </ul>
-<h2 id="部分说明">部分说明</h2>
+<h2 id="部分说明"><a class="markdownIt-Anchor" href="#部分说明"></a> 部分说明</h2>
 <p>使用 Vue 3 开发，有些注意事项记录下。</p>
-<ol type="1">
-<li><p>通过 leaflet-src.esm.js 能够按需导出 leaflet 中的组件，引入
-jsoneditor 用于 GeoJSON 输入</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;</span><br><span class="line">  map,</span><br><span class="line">  control,</span><br><span class="line">  tileLayer,</span><br><span class="line">  layerGroup,</span><br><span class="line">  geoJSON,</span><br><span class="line">  <span class="title class_">GeoJSON</span>,</span><br><span class="line">&#125; <span class="keyword">from</span> <span class="string">&quot;leaflet/dist/leaflet-src.esm.js&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="title class_">JSON</span>Editor <span class="keyword">from</span> <span class="string">&quot;jsoneditor&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&quot;jsoneditor/dist/jsoneditor.min.css&quot;</span>;</span><br></pre></td></tr></table></figure></li>
-<li><p>初始化的 <code>map 对象</code>和
-<code>JSONEditor 对象</code>如果要存入 data，需要使用
-<code>markRaw</code> 标记不监听。</p></li>
-<li><p>勿把经过代理的
-<code>Layer 对象</code>直接加入图层控制组件，否则不能成功销毁
-<code>map 对象</code>，可以通过以下方法规避。</p>
+<ol>
+<li>
+<p>通过 leaflet-src.esm.js 能够按需导出 leaflet 中的组件，引入 jsoneditor 用于 GeoJSON 输入</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;</span><br><span class="line">  map,</span><br><span class="line">  control,</span><br><span class="line">  tileLayer,</span><br><span class="line">  layerGroup,</span><br><span class="line">  geoJSON,</span><br><span class="line">  <span class="title class_">GeoJSON</span>,</span><br><span class="line">&#125; <span class="keyword">from</span> <span class="string">&quot;leaflet/dist/leaflet-src.esm.js&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="title class_">JSON</span>Editor <span class="keyword">from</span> <span class="string">&quot;jsoneditor&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&quot;jsoneditor/dist/jsoneditor.min.css&quot;</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>初始化的 <code>map 对象</code>和 <code>JSONEditor 对象</code>如果要存入 data，需要使用 <code>markRaw</code> 标记不监听。</p>
+</li>
+<li>
+<p>勿把经过代理的 <code>Layer 对象</code>直接加入图层控制组件，否则不能成功销毁 <code>map 对象</code>，可以通过以下方法规避。</p>
 <ul>
 <li>在销毁 <code>map 对象</code>前提前将该图层移出地图</li>
-<li>在将 <code>Layer 对象</code>存入 data 前，使用 <code>markRaw</code>
-标记不监听</li>
-<li>如果需要监听该 <code>Layer 对象</code>变化，可以将监听后的对象用
-<code>toRaw</code>方法转出未监听版本加入图层控制</li>
-<li>在组件 beforeUnmount 时销毁对应的 <code>map 对象</code>和
-<code>JSONEditor 对象</code>，这样会清除页面上的 DOM 和监听事件</li>
-</ul></li>
+<li>在将 <code>Layer 对象</code>存入 data 前，使用 <code>markRaw</code> 标记不监听</li>
+<li>如果需要监听该 <code>Layer 对象</code>变化，可以将监听后的对象用 <code>toRaw</code>方法转出未监听版本加入图层控制</li>
+<li>在组件 beforeUnmount 时销毁对应的 <code>map 对象</code>和 <code>JSONEditor 对象</code>，这样会清除页面上的 DOM 和监听事件</li>
+</ul>
+</li>
 </ol>
 
     </div>
@@ -517,8 +506,9 @@ jsoneditor 用于 GeoJSON 输入</p>
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/mathjax@3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
-<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/math/mathjax.min.js"></script>
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.3/dist/katex.min.css" integrity="sha256-NJNVfEC6jfEt62wQMafLNT2eI6BaWONXbpkSEVAs3+8=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.3/dist/contrib/copy-tex.min.js","integrity":"sha256-Us54+rSGDSTvIhKKUs4kygE2ipA0RXpWWh0/zLqw3bs="}}</script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/math/katex.min.js"></script>
 
 
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/quicklink@2.3.0/dist/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>

@@ -152,7 +152,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9B%B4%E6%8D%A2%E8%BD%AF%E4%BB%B6%E6%BA%90"><span class="nav-number">1.</span> <span class="nav-text">更换软件源</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%87%E4%BB%BD%E5%AE%98%E6%96%B9%E8%BD%AF%E4%BB%B6%E6%BA%90%E5%88%97%E8%A1%A8"><span class="nav-number">1.1.</span> <span class="nav-text">备份官方软件源列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E8%BD%AF%E4%BB%B6%E6%BA%90%E5%88%97%E8%A1%A8"><span class="nav-number">1.2.</span> <span class="nav-text">修改软件源列表</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%94%A8%E7%86%9F%E6%82%89%E7%9A%84%E7%BC%96%E8%BE%91%E5%99%A8%E6%89%93%E5%BC%80"><span class="nav-number">1.2.1.</span> <span class="nav-text">用熟悉的编辑器打开</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%9B%E8%A1%8C%E6%9B%BF%E6%8D%A2"><span class="nav-number">1.2.2.</span> <span class="nav-text">进行替换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BF%9D%E5%AD%98%E5%B9%B6%E9%80%80%E5%87%BA"><span class="nav-number">1.2.3.</span> <span class="nav-text">保存并退出</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9B%B4%E6%96%B0%E6%BA%90%E5%92%8C%E8%BD%AF%E4%BB%B6"><span class="nav-number">1.3.</span> <span class="nav-text">更新源和软件</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9B%B4%E6%8D%A2%E8%BD%AF%E4%BB%B6%E6%BA%90"><span class="nav-number">1.</span> <span class="nav-text"> 更换软件源</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%87%E4%BB%BD%E5%AE%98%E6%96%B9%E8%BD%AF%E4%BB%B6%E6%BA%90%E5%88%97%E8%A1%A8"><span class="nav-number">1.1.</span> <span class="nav-text"> 备份官方软件源列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E8%BD%AF%E4%BB%B6%E6%BA%90%E5%88%97%E8%A1%A8"><span class="nav-number">1.2.</span> <span class="nav-text"> 修改软件源列表</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%94%A8%E7%86%9F%E6%82%89%E7%9A%84%E7%BC%96%E8%BE%91%E5%99%A8%E6%89%93%E5%BC%80"><span class="nav-number">1.2.1.</span> <span class="nav-text"> 用熟悉的编辑器打开</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%9B%E8%A1%8C%E6%9B%BF%E6%8D%A2"><span class="nav-number">1.2.2.</span> <span class="nav-text"> 进行替换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BF%9D%E5%AD%98%E5%B9%B6%E9%80%80%E5%87%BA"><span class="nav-number">1.2.3.</span> <span class="nav-text"> 保存并退出</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9B%B4%E6%96%B0%E6%BA%90%E5%92%8C%E8%BD%AF%E4%BB%B6"><span class="nav-number">1.3.</span> <span class="nav-text"> 更新源和软件</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -347,25 +347,22 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>由于国内的特殊环境，Linux
-系统如果不更换软件源，软件的下载安装将会速度奇慢。总不能下载软件也全走代理吧，更换软件源才是正道。本文是在
-Win10 子系统 Ubuntu 中完成的，在原版 Ubuntu 中同样适用。</p>
+        <p>由于国内的特殊环境，Linux 系统如果不更换软件源，软件的下载安装将会速度奇慢。总不能下载软件也全走代理吧，更换软件源才是正道。本文是在 Win10 子系统 Ubuntu 中完成的，在原版 Ubuntu 中同样适用。</p>
 <span id="more"></span>
-<h2 id="更换软件源">更换软件源</h2>
+<h2 id="更换软件源"><a class="markdownIt-Anchor" href="#更换软件源"></a> 更换软件源</h2>
 <p>本文选择将软件源更换为阿里云的镜像以实现高速访问。</p>
-<h3 id="备份官方软件源列表">备份官方软件源列表</h3>
+<h3 id="备份官方软件源列表"><a class="markdownIt-Anchor" href="#备份官方软件源列表"></a> 备份官方软件源列表</h3>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo <span class="built_in">cp</span> /etc/apt/sources.list /etc/apt/sources.list.bak</span><br></pre></td></tr></table></figure>
-<h3 id="修改软件源列表">修改软件源列表</h3>
-<h4 id="用熟悉的编辑器打开">用熟悉的编辑器打开</h4>
+<h3 id="修改软件源列表"><a class="markdownIt-Anchor" href="#修改软件源列表"></a> 修改软件源列表</h3>
+<h4 id="用熟悉的编辑器打开"><a class="markdownIt-Anchor" href="#用熟悉的编辑器打开"></a> 用熟悉的编辑器打开</h4>
 <p>我在这里使用 vim 打开</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/apt/sources.list</span><br></pre></td></tr></table></figure>
-<h4 id="进行替换">进行替换</h4>
+<h4 id="进行替换"><a class="markdownIt-Anchor" href="#进行替换"></a> 进行替换</h4>
 <p>替换默认的<code>http://archive.ubuntu.com/</code>和<code>http://security.ubuntu.com/</code>为<code>https://mirrors.aliyun.com/</code></p>
-<p><strong>注：</strong>vim 中的全局替换命令为
-<code>:%s/源字符串/目的字符串/g</code></p>
-<h4 id="保存并退出">保存并退出</h4>
+<p>**注：**vim 中的全局替换命令为 <code>:%s/源字符串/目的字符串/g</code></p>
+<h4 id="保存并退出"><a class="markdownIt-Anchor" href="#保存并退出"></a> 保存并退出</h4>
 <p>输入<code>:wq</code>。</p>
-<h3 id="更新源和软件">更新源和软件</h3>
+<h3 id="更新源和软件"><a class="markdownIt-Anchor" href="#更新源和软件"></a> 更新源和软件</h3>
 <ul>
 <li>使用 <code>sudo apt-get update -y</code> 获取软件列表更新</li>
 <li>使用 <code>sudo apt-get upgrade -y</code> 获取软件更新</li>
@@ -493,8 +490,9 @@ Win10 子系统 Ubuntu 中完成的，在原版 Ubuntu 中同样适用。</p>
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/mathjax@3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
-<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/math/mathjax.min.js"></script>
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.3/dist/katex.min.css" integrity="sha256-NJNVfEC6jfEt62wQMafLNT2eI6BaWONXbpkSEVAs3+8=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.3/dist/contrib/copy-tex.min.js","integrity":"sha256-Us54+rSGDSTvIhKKUs4kygE2ipA0RXpWWh0/zLqw3bs="}}</script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/math/katex.min.js"></script>
 
 
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/quicklink@2.3.0/dist/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>

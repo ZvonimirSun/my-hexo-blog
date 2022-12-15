@@ -156,7 +156,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98"><span class="nav-number">1.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#java-%E4%BF%A1%E4%BB%BB%E8%87%AA%E7%AD%BE%E5%90%8D%E8%AF%81%E4%B9%A6"><span class="nav-number">2.</span> <span class="nav-text">Java 信任自签名证书</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98"><span class="nav-number">1.</span> <span class="nav-text"> 问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#java-%E4%BF%A1%E4%BB%BB%E8%87%AA%E7%AD%BE%E5%90%8D%E8%AF%81%E4%B9%A6"><span class="nav-number">2.</span> <span class="nav-text"> Java 信任自签名证书</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -351,32 +351,24 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>这篇文章是为了解决 Java 使用 SSL
-过程中出现<code>PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target</code>的问题。</p>
+        <p>这篇文章是为了解决 Java 使用 SSL 过程中出现<code>PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target</code>的问题。</p>
 <span id="more"></span>
-<h2 id="问题">问题</h2>
-<p>今天在给微服务添加自签名证书后，微服务间使用 SSL
-验证权限时出现了如下错误。</p>
+<h2 id="问题"><a class="markdownIt-Anchor" href="#问题"></a> 问题</h2>
+<p>今天在给微服务添加自签名证书后，微服务间使用 SSL 验证权限时出现了如下错误。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target</span><br><span class="line">    at sun.security.ssl.Alerts.getSSLException(Alerts.java:192)</span><br><span class="line">    at sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1949)</span><br><span class="line">    at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:302)</span><br><span class="line">    at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:296)</span><br><span class="line">...</span><br><span class="line">Caused by: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target</span><br><span class="line">    at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:387)</span><br><span class="line">    at sun.security.validator.PKIXValidator.engineValidate(PKIXValidator.java:292)</span><br><span class="line">    at sun.security.validator.Validator.validate(Validator.java:260)</span><br><span class="line">    at sun.security.ssl.X509TrustManagerImpl.validate(X509TrustManagerImpl.java:324)</span><br><span class="line">    at sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:229)</span><br></pre></td></tr></table></figure>
-<p>这是因为自签名证书不被 Java 信任导致 SSL
-握手失败。我看网上有不少是通过代码忽略证书验证来解决的，但是我觉得不能一刀切忽略验证，而是应该将特定证书添加到服务器的
-Java 证书信任库中。</p>
-<h2 id="java-信任自签名证书">Java 信任自签名证书</h2>
+<p>这是因为自签名证书不被 Java 信任导致 SSL 握手失败。我看网上有不少是通过代码忽略证书验证来解决的，但是我觉得不能一刀切忽略验证，而是应该将特定证书添加到服务器的 Java 证书信任库中。</p>
+<h2 id="java-信任自签名证书"><a class="markdownIt-Anchor" href="#java-信任自签名证书"></a> Java 信任自签名证书</h2>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">keytool -import -trustcacerts -<span class="built_in">alias</span> nginx -file /opt/ssl/server.crt -keystore <span class="variable">$JAVA_HOME</span>/jre/lib/security/cacerts -storepass changeit -keyalg RSAs -noprompt</span><br></pre></td></tr></table></figure>
 <blockquote>
-<ol type="1">
+<ol>
 <li><code>-alias</code>，证书别名，可以任意填写，但不能重复</li>
 <li><code>-file</code>，需要导入的证书路径</li>
-<li><code>-keystore</code>，Java
-证书库地址，默认地址为<code>$JAVA_HOME/jre/lib/security/cacerts</code></li>
-<li><code>-storepass</code>，Java
-证书库密码，默认密码为<code>changeit</code></li>
+<li><code>-keystore</code>，Java 证书库地址，默认地址为<code>$JAVA_HOME/jre/lib/security/cacerts</code></li>
+<li><code>-storepass</code>，Java 证书库密码，默认密码为<code>changeit</code></li>
 </ol>
 </blockquote>
-<p><img data-src="https://img.iszy.xyz/20210309181047.png?x-oss-process=style/big" /></p>
-<p>这样就将证书导入到了该服务器的 Java
-证书信任库中了，<strong>涉及到这个证书的 Java
-应用需要重启才能生效</strong>。</p>
+<p><img data-src="https://img.iszy.xyz/20210309181047.png?x-oss-process=style/big" alt="" /></p>
+<p>这样就将证书导入到了该服务器的 Java 证书信任库中了，<strong>涉及到这个证书的 Java 应用需要重启才能生效</strong>。</p>
 
     </div>
 
@@ -502,8 +494,9 @@ Java 证书信任库中。</p>
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/mathjax@3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
-<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/math/mathjax.min.js"></script>
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.3/dist/katex.min.css" integrity="sha256-NJNVfEC6jfEt62wQMafLNT2eI6BaWONXbpkSEVAs3+8=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.3/dist/contrib/copy-tex.min.js","integrity":"sha256-Us54+rSGDSTvIhKKUs4kygE2ipA0RXpWWh0/zLqw3bs="}}</script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.14.0/source/js/third-party/math/katex.min.js"></script>
 
 
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/quicklink@2.3.0/dist/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>
