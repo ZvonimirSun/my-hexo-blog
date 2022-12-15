@@ -6,7 +6,7 @@
   <link href="https://www.iszy.cc/atom.xml" rel="self"/>
   
   <link href="https://www.iszy.cc/"/>
-  <updated>2022-12-10T11:28:06.000Z</updated>
+  <updated>2022-12-15T00:54:08.000Z</updated>
   <id>https://www.iszy.cc/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>删除win11右键一级菜单的AMD驱动栏</title>
+    <link href="https://www.iszy.cc/posts/remove-win11-amd-menu/"/>
+    <id>https://www.iszy.cc/posts/remove-win11-amd-menu/</id>
+    <published>2022-12-15T00:35:29.000Z</published>
+    <updated>2022-12-15T00:54:08.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>如题，在此记录一下。</p><span id="more"></span><h2 id="问题">问题</h2><p><img data-src="https://img.iszy.xyz/1671064733303.png" /></p><p>如图所示，就是想把这个东西去掉，用处不大，还把右键菜单撑老大，想去掉。</p><h2 id="打开注册表编辑器">打开注册表编辑器</h2><p>按 <code>Win + R</code> 快捷键，输入 <code>regedit</code>打开注册表。</p><h2 id="查找-amd-应用-id">查找 AMD 应用 ID</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\HKEY_LOCAL_MACHINE\SOFTWARE\Classes\PackagedCom\Package\AdvancedMicroDevicesInc-2.AMDRadeonSoftware_10.22.20034.0_x64__0a9344xs7nr4m\Server</span><br></pre></td></tr></table></figure><p>按照这个路径一直往下找，Package名称在不同电脑和软件版本的情况下可能会有不通，以自己找到的为准。</p><p><img data-src="https://img.iszy.xyz/1671065063988.png" /></p><p>在这个 Server 里面，有的人是键值 <code>0</code>，有的是键值<code>1</code>，点到这个键值下，我这边键值是 <code>0</code>。</p><p><img data-src="https://img.iszy.xyz/1671065176268.png" /></p><p>在这个下面的 SurrogateAppId里的数据，也就是右侧大括号的数据就是我们需要的ID，可以双击打开来复制。</p><h2 id="屏蔽菜单">屏蔽菜单</h2><p>在地址栏里输入以下路径并回车。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Shell Extensions\Blocked</span><br></pre></td></tr></table></figure><p>右键新建字符串值，值为刚刚的 AppID，我这里为<code>&#123;6767B3BC-8FF7-11EC-B909-0242AC120002&#125;</code></p><p><img data-src="https://img.iszy.xyz/1671065384645.png" /></p><p><img data-src="https://img.iszy.xyz/1671065443124.png" /></p><p>这样菜单就不显示了，如果想要恢复展示，删掉这条字符串值即可。</p><p><img data-src="https://img.iszy.xyz/1671065556009.png" /></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;如题，在此记录一下。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="技巧" scheme="https://www.iszy.cc/categories/%E6%8A%80%E5%B7%A7/"/>
+    
+    
+    <category term="Windows" scheme="https://www.iszy.cc/tags/Windows/"/>
+    
+  </entry>
   
   <entry>
     <title>Unraid 安装 Nvidia 驱动并开启 Plex 硬解</title>
@@ -473,35 +494,6 @@ API，浏览器会做一些安全限制，不是所有情况都能调用的到�
     <summary type="html">&lt;blockquote&gt;
 &lt;p&gt;&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvbG9uZ2VzdC1zdWJzdHJpbmctd2l0aG91dC1yZXBlYXRpbmctY2hhcmFjdGVycy8=&quot;&gt;无重复字符的最长子串
 - 力扣&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;难度中等&lt;/strong&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="技术" scheme="https://www.iszy.cc/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-    <category term="JavaScript" scheme="https://www.iszy.cc/tags/JavaScript/"/>
-    
-    <category term="LeetCode" scheme="https://www.iszy.cc/tags/LeetCode/"/>
-    
-    <category term="力扣" scheme="https://www.iszy.cc/tags/%E5%8A%9B%E6%89%A3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JavaScript LeetCode 2.两数相加</title>
-    <link href="https://www.iszy.cc/posts/g/"/>
-    <id>https://www.iszy.cc/posts/g/</id>
-    <published>2022-03-20T15:36:23.000Z</published>
-    <updated>2022-03-20T15:36:23.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p><span class="exturl" data-url="aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvYWRkLXR3by1udW1iZXJz">两数相加 -力扣<i class="fa fa-external-link-alt"></i></span></p></blockquote><p><strong>难度中等</strong></p><span id="more"></span><h2 id="题目">题目</h2><p>给你两个<strong>非空</strong>的链表，表示两个非负的整数。它们每位数字都是按照<strong>逆序</strong>的方式存储的，并且每个节点只能存储<strong>一位</strong>数字。</p><p>请你将两个数相加，并以相同形式返回一个表示和的链表。</p><p>你可以假设除了数字 0 之外，这两个数都不会以 0  开头。</p><p><strong>示例 1：</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：l1 = [2,4,3], l2 = [5,6,4]</span><br><span class="line">输出：[7,0,8]</span><br><span class="line">解释：342 + 465 = 807.</span><br></pre></td></tr></table></figure><p><strong>示例 2：</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：l1 = [0], l2 = [0]</span><br><span class="line">输出：[0]</span><br></pre></td></tr></table></figure><p><strong>示例 3：</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：l1 = [9,9,9,9,9,9,9], l2 = [9,9,9,9]</span><br><span class="line">输出：[8,9,9,9,0,0,0,1]</span><br></pre></td></tr></table></figure><p><strong>提示：</strong></p><ul><li>每个链表中的节点数在范围 <code>[1, 100]</code> 内</li><li><code>0 &lt;= Node.val &lt;= 9</code></li><li>题目数据保证列表表示的数字不含前导零</li></ul><h2 id="解答">解答</h2><p>总的来说就是模拟一个相加的过程，满 10 进位。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * function ListNode(val, next) &#123;</span></span><br><span class="line"><span class="comment"> *     this.val = (val===undefined ? 0 : val)</span></span><br><span class="line"><span class="comment"> *     this.next = (next===undefined ? null : next)</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">ListNode</span>&#125; <span class="variable">l1</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">ListNode</span>&#125; <span class="variable">l2</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">ListNode</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> addTwoNumbers = <span class="keyword">function</span> (<span class="params">l1, l2</span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> head = <span class="literal">null</span>,</span><br><span class="line">    tail = <span class="literal">null</span>;</span><br><span class="line">  <span class="keyword">let</span> add = <span class="literal">false</span>;</span><br><span class="line">  <span class="keyword">while</span> (l1 || l2) &#123;</span><br><span class="line">    <span class="keyword">const</span> sum = (l1 ? l1.<span class="property">val</span> : <span class="number">0</span>) + (l2 ? l2.<span class="property">val</span> : <span class="number">0</span>) + (add ? <span class="number">1</span> : <span class="number">0</span>);</span><br><span class="line">    <span class="keyword">if</span> (!head) &#123;</span><br><span class="line">      head = tail = <span class="keyword">new</span> <span class="title class_">ListNode</span>(sum % <span class="number">10</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      tail.<span class="property">next</span> = <span class="keyword">new</span> <span class="title class_">ListNode</span>(sum % <span class="number">10</span>);</span><br><span class="line">      tail = tail.<span class="property">next</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (sum &gt; <span class="number">9</span>) &#123;</span><br><span class="line">      add = <span class="literal">true</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      add = <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (l1) &#123;</span><br><span class="line">      l1 = l1.<span class="property">next</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (l2) &#123;</span><br><span class="line">      l2 = l2.<span class="property">next</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span> (add) &#123;</span><br><span class="line">    tail.<span class="property">next</span> = <span class="keyword">new</span> <span class="title class_">ListNode</span>(<span class="number">1</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> head;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvYWRkLXR3by1udW1iZXJz&quot;&gt;两数相加 -
-力扣&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;难度中等&lt;/strong&gt;&lt;/p&gt;</summary>
     

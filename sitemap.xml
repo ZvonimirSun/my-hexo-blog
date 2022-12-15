@@ -2,6 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.iszy.cc/posts/remove-win11-amd-menu/</loc>
+    
+    <lastmod>2022-12-15</lastmod>
+    
+    
+  </url>
+  
+  <url>
     <loc>https://www.iszy.cc/posts/unraid-plex-nvidia/</loc>
     
     <lastmod>2022-12-10</lastmod>
@@ -1088,6 +1096,6 @@
 
   <url>
     <loc>https://www.iszy.cc/</loc>
-    <lastmod>2022-12-10</lastmod>
+    <lastmod>2022-12-15</lastmod>
   </url>
 </urlset>
