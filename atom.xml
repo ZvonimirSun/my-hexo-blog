@@ -6,7 +6,7 @@
   <link href="https://www.iszy.cc/atom.xml" rel="self"/>
   
   <link href="https://www.iszy.cc/"/>
-  <updated>2022-12-15T00:54:08.000Z</updated>
+  <updated>2022-12-16T06:34:50.000Z</updated>
   <id>https://www.iszy.cc/</id>
   
   <author>
@@ -17,13 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>添加或移除 WIN11 此电脑中的文件夹</title>
+    <link href="https://www.iszy.cc/posts/add-or-remove-folders-in-explorer-win11/"/>
+    <id>https://www.iszy.cc/posts/add-or-remove-folders-in-explorer-win11/</id>
+    <published>2022-12-16T06:00:25.000Z</published>
+    <updated>2022-12-16T06:34:50.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>在 <code>Windows 11 build 25136</code> 或者 <code>build 22621.160</code> 版本后，系统更新了资源管理器的布局，引入了多标签页的功能。与此同时，我也发现，在此电脑里的那些用户文件夹，比如文档、下载等，不见了。虽然说大多数不是很常用，但是没了还是不太习惯，整个此电脑页面也有些空旷。这里就记录下，如何将这些文件夹加回来，以及如何再次隐藏。</p><span id="more"></span><h2 id="添加文件夹"><a class="markdownIt-Anchor" href="#添加文件夹"></a> 添加文件夹</h2><p>按 <code>Win + R</code> 快捷键，输入 <code>regedit</code> 打开注册表。</p><p>在地址栏里输入以下路径并回车。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">计算机\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace</span><br></pre></td></tr></table></figure><p><img data-src="https://img.iszy.xyz/1671171351365.png?x-oss-process=style/big" alt="" /></p><p>这些每一条对应的就是一个文件夹。具体是什么文件夹，可以点进去看一下。</p><p><img data-src="https://img.iszy.xyz/1671171792200.png?x-oss-process=style/big" alt="" /></p><p>比如这条的值为<code>CLSID_ThisPCLocalDownloadsRegFolder</code>，对应的就是下载文件夹。</p><p><strong>我们可以看到除了文件夹信息，还有一条 <code>HideIfEnabled</code> 的值，就是这条注册表值把文件夹隐藏了，删除掉刷新一下就可以显示出来。</strong></p><p><img data-src="https://img.iszy.xyz/1671171893640.png?x-oss-process=style/big" alt="" /></p><h2 id="移除文件夹"><a class="markdownIt-Anchor" href="#移除文件夹"></a> 移除文件夹</h2><p>与上面操作相反，我们只要把<code>HideIfEnabled</code>条目加上，就可以将文件夹隐藏。</p><p>点击到你想要隐藏的文件夹，右键新建<strong>DWORD (32 位)值</strong>，名称为<code>HideIfEnabled</code>。</p><p><img data-src="https://img.iszy.xyz/1671172330084.png" alt="" /></p><p><img data-src="https://img.iszy.xyz/1671172365571.png" alt="" /></p><p>双击打开，输入值为<code>22ab9b9</code></p><p><img data-src="https://img.iszy.xyz/1671172425560.png" alt="" /></p><p><img data-src="https://img.iszy.xyz/1671172451119.png" alt="" /></p><p>现在刷新一下资源管理器，文件夹就被隐藏了。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;在 &lt;code&gt;Windows 11 build 25136&lt;/code&gt; 或者 &lt;code&gt;build 22621.160&lt;/code&gt; 版本后，系统更新了资源管理器的布局，引入了多标签页的功能。与此同时，我也发现，在此电脑里的那些用户文件夹，比如文档、下载等，不见了。虽然说大多数不是很常用，但是没了还是不太习惯，整个此电脑页面也有些空旷。这里就记录下，如何将这些文件夹加回来，以及如何再次隐藏。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="技巧" scheme="https://www.iszy.cc/categories/%E6%8A%80%E5%B7%A7/"/>
+    
+    
+    <category term="Windows" scheme="https://www.iszy.cc/tags/Windows/"/>
+    
+    <category term="Windows 11" scheme="https://www.iszy.cc/tags/Windows-11/"/>
+    
+  </entry>
+  
+  <entry>
     <title>删除win11右键一级菜单的AMD驱动栏</title>
     <link href="https://www.iszy.cc/posts/remove-win11-amd-menu/"/>
     <id>https://www.iszy.cc/posts/remove-win11-amd-menu/</id>
     <published>2022-12-15T00:35:29.000Z</published>
-    <updated>2022-12-15T00:54:08.000Z</updated>
+    <updated>2022-12-16T06:34:50.000Z</updated>
     
-    <content type="html"><![CDATA[<p>如题，在此记录一下。</p><span id="more"></span><h2 id="问题"><a class="markdownIt-Anchor" href="#问题"></a> 问题</h2><p><img data-src="https://img.iszy.xyz/1671064733303.png" alt="" /></p><p>如图所示，就是想把这个东西去掉，用处不大，还把右键菜单撑老大，想去掉。</p><h2 id="打开注册表编辑器"><a class="markdownIt-Anchor" href="#打开注册表编辑器"></a> 打开注册表编辑器</h2><p>按 <code>Win + R</code> 快捷键，输入 <code>regedit</code> 打开注册表。</p><h2 id="查找-amd-应用-id"><a class="markdownIt-Anchor" href="#查找-amd-应用-id"></a> 查找 AMD 应用 ID</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\HKEY_LOCAL_MACHINE\SOFTWARE\Classes\PackagedCom\Package\AdvancedMicroDevicesInc-2.AMDRadeonSoftware_10.22.20034.0_x64__0a9344xs7nr4m\Server</span><br></pre></td></tr></table></figure><p>按照这个路径一直往下找，Package 名称在不同电脑和软件版本的情况下可能会有不通，以自己找到的为准。</p><p><img data-src="https://img.iszy.xyz/1671065063988.png" alt="" /></p><p>在这个 Server 里面，有的人是键值 <code>0</code>，有的是键值 <code>1</code>，点到这个键值下，我这边键值是 <code>0</code>。</p><p><img data-src="https://img.iszy.xyz/1671065176268.png" alt="" /></p><p>在这个下面的 SurrogateAppId 里的数据，也就是右侧大括号的数据就是我们需要的 ID，可以双击打开来复制。</p><h2 id="屏蔽菜单"><a class="markdownIt-Anchor" href="#屏蔽菜单"></a> 屏蔽菜单</h2><p>在地址栏里输入以下路径并回车。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Shell Extensions\Blocked</span><br></pre></td></tr></table></figure><p>右键新建字符串值，值为刚刚的 AppID，我这里为 <code>&#123;6767B3BC-8FF7-11EC-B909-0242AC120002&#125;</code></p><p><img data-src="https://img.iszy.xyz/1671065384645.png" alt="" /></p><p><img data-src="https://img.iszy.xyz/1671065443124.png" alt="" /></p><p>这样菜单就不显示了，如果想要恢复展示，删掉这条字符串值即可。</p><p><img data-src="https://img.iszy.xyz/1671065556009.png" alt="" /></p>]]></content>
+    <content type="html"><![CDATA[<p>如题，在此记录一下。</p><span id="more"></span><h2 id="问题"><a class="markdownIt-Anchor" href="#问题"></a> 问题</h2><p><img data-src="https://img.iszy.xyz/1671064733303.png" alt="" /></p><p>如图所示，就是想把这个东西去掉，用处不大，还把右键菜单撑老大，想去掉。</p><h2 id="打开注册表编辑器"><a class="markdownIt-Anchor" href="#打开注册表编辑器"></a> 打开注册表编辑器</h2><p>按 <code>Win + R</code> 快捷键，输入 <code>regedit</code> 打开注册表。</p><h2 id="查找-amd-应用-id"><a class="markdownIt-Anchor" href="#查找-amd-应用-id"></a> 查找 AMD 应用 ID</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">计算机\HKEY_LOCAL_MACHINE\SOFTWARE\Classes\PackagedCom\Package\AdvancedMicroDevicesInc-2.AMDRadeonSoftware_10.22.20034.0_x64__0a9344xs7nr4m\Server</span><br></pre></td></tr></table></figure><p>按照这个路径一直往下找，Package 名称在不同电脑和软件版本的情况下可能会有不通，以自己找到的为准。</p><p><img data-src="https://img.iszy.xyz/1671065063988.png" alt="" /></p><p>在这个 Server 里面，有的人是键值 <code>0</code>，有的是键值 <code>1</code>，点到这个键值下，我这边键值是 <code>0</code>。</p><p><img data-src="https://img.iszy.xyz/1671065176268.png" alt="" /></p><p>在这个下面的 SurrogateAppId 里的数据，也就是右侧大括号的数据就是我们需要的 ID，可以双击打开来复制。</p><h2 id="屏蔽菜单"><a class="markdownIt-Anchor" href="#屏蔽菜单"></a> 屏蔽菜单</h2><p>在地址栏里输入以下路径并回车。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">计算机\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Shell Extensions\Blocked</span><br></pre></td></tr></table></figure><p>右键新建字符串值，值为刚刚的 AppID，我这里为 <code>&#123;6767B3BC-8FF7-11EC-B909-0242AC120002&#125;</code></p><p><img data-src="https://img.iszy.xyz/1671065384645.png" alt="" /></p><p><img data-src="https://img.iszy.xyz/1671065443124.png" alt="" /></p><p>这样菜单就不显示了，如果想要恢复展示，删掉这条字符串值即可。</p><p><img data-src="https://img.iszy.xyz/1671065556009.png" alt="" /></p>]]></content>
     
     
     <summary type="html">&lt;p&gt;如题，在此记录一下。&lt;/p&gt;</summary>
@@ -34,6 +57,8 @@
     
     
     <category term="Windows" scheme="https://www.iszy.cc/tags/Windows/"/>
+    
+    <category term="Windows 11" scheme="https://www.iszy.cc/tags/Windows-11/"/>
     
   </entry>
   
@@ -460,34 +485,6 @@
     <category term="Nintendo" scheme="https://www.iszy.cc/tags/Nintendo/"/>
     
     <category term="Switch" scheme="https://www.iszy.cc/tags/Switch/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JavaScript LeetCode 3.无重复字符的最长子串</title>
-    <link href="https://www.iszy.cc/posts/h/"/>
-    <id>https://www.iszy.cc/posts/h/</id>
-    <published>2022-03-20T16:10:23.000Z</published>
-    <updated>2022-03-20T16:10:23.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p><span class="exturl" data-url="aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvbG9uZ2VzdC1zdWJzdHJpbmctd2l0aG91dC1yZXBlYXRpbmctY2hhcmFjdGVycy8=">无重复字符的最长子串 - 力扣<i class="fa fa-external-link-alt"></i></span></p></blockquote><p><strong>难度中等</strong></p><span id="more"></span><h2 id="题目"><a class="markdownIt-Anchor" href="#题目"></a> 题目</h2><p>给定一个字符串<code>s</code>，请你找出其中不含有重复字符的<strong>最长子串</strong>的长度。</p><p><strong>示例 1：</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: s = &quot;abcabcbb&quot;</span><br><span class="line">输出: 3</span><br><span class="line">解释: 因为无重复字符的最长子串是 &quot;abc&quot;，所以其长度为 3。</span><br></pre></td></tr></table></figure><p><strong>示例 2：</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: s = &quot;bbbbb&quot;</span><br><span class="line">输出: 1</span><br><span class="line">解释: 因为无重复字符的最长子串是 &quot;b&quot;，所以其长度为 1。</span><br></pre></td></tr></table></figure><p><strong>示例 3：</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入: s = &quot;pwwkew&quot;</span><br><span class="line">输出: 3</span><br><span class="line">解释: 因为无重复字符的最长子串是 &quot;wke&quot;，所以其长度为 3。</span><br><span class="line">     请注意，你的答案必须是 子串 的长度，&quot;pwke&quot; 是一个子序列，不是子串。</span><br></pre></td></tr></table></figure><p><strong>提示：</strong></p><ul><li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>≤</mo><mi>s</mi><mi mathvariant="normal">.</mi><mi>l</mi><mi>e</mi><mi>n</mi><mi>g</mi><mi>t</mi><mi>h</mi><mo>≤</mo><mn>5</mn><mo>×</mo><mn>1</mn><msup><mn>0</mn><mn>4</mn></msup></mrow><annotation encoding="application/x-tex">0 \leq s.length \leq 5 \times 10^4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.78041em;vertical-align:-0.13597em;"></span><span class="mord">0</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">s</span><span class="mord">.</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">e</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mord mathnormal">t</span><span class="mord mathnormal">h</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">5</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">4</span></span></span></span></span></span></span></span></span></span></span></li><li><code>s</code>由英文字母、数字、符号和空格组成</li></ul><h2 id="解答"><a class="markdownIt-Anchor" href="#解答"></a> 解答</h2><p>遍历字符串。</p><ul><li>当没有遇见重复字符，则将当前字符拼入临时字符串。</li><li>当遇见了重复字符，将临时字符串中重复字符及以前的字符串移除，然后将当前字符拼入临时字符串。</li><li>如果此时临时字符串长度大于记录的最大长度，则更新最大长度。</li></ul><p>所以总的来说，只需要遍历一遍字符串即可。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">string</span>&#125; <span class="variable">s</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">number</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> lengthOfLongestSubstring = <span class="keyword">function</span> (<span class="params">s</span>) &#123;</span><br><span class="line">  <span class="keyword">if</span> (!s) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">let</span> result = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">let</span> tmp = <span class="string">&quot;&quot;</span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; s.<span class="property">length</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">const</span> index = tmp.<span class="title function_">indexOf</span>(s[i]);</span><br><span class="line">    <span class="keyword">if</span> (index === -<span class="number">1</span>) &#123;</span><br><span class="line">      tmp += s[i];</span><br><span class="line">      <span class="keyword">if</span> (tmp.<span class="property">length</span> &gt; result) &#123;</span><br><span class="line">        result = tmp.<span class="property">length</span>;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      tmp = tmp.<span class="title function_">substring</span>(index + <span class="number">1</span>) + s[i];</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> result;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvbG9uZ2VzdC1zdWJzdHJpbmctd2l0aG91dC1yZXBlYXRpbmctY2hhcmFjdGVycy8=&quot;&gt;无重复字符的最长子串 - 力扣&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;难度中等&lt;/strong&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="技术" scheme="https://www.iszy.cc/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-    <category term="JavaScript" scheme="https://www.iszy.cc/tags/JavaScript/"/>
-    
-    <category term="LeetCode" scheme="https://www.iszy.cc/tags/LeetCode/"/>
-    
-    <category term="力扣" scheme="https://www.iszy.cc/tags/%E5%8A%9B%E6%89%A3/"/>
     
   </entry>
   
