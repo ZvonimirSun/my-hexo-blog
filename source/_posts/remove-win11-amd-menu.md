@@ -5,6 +5,7 @@ categories:
   - 技巧
 tags:
   - Windows
+  - Windows 11
 ---
 
 如题，在此记录一下。
@@ -24,7 +25,7 @@ tags:
 ## 查找 AMD 应用 ID
 
 ```
-\HKEY_LOCAL_MACHINE\SOFTWARE\Classes\PackagedCom\Package\AdvancedMicroDevicesInc-2.AMDRadeonSoftware_10.22.20034.0_x64__0a9344xs7nr4m\Server
+计算机\HKEY_LOCAL_MACHINE\SOFTWARE\Classes\PackagedCom\Package\AdvancedMicroDevicesInc-2.AMDRadeonSoftware_10.22.20034.0_x64__0a9344xs7nr4m\Server
 ```
 
 按照这个路径一直往下找，Package 名称在不同电脑和软件版本的情况下可能会有不通，以自己找到的为准。
@@ -42,7 +43,7 @@ tags:
 在地址栏里输入以下路径并回车。
 
 ```
-\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Shell Extensions\Blocked
+计算机\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Shell Extensions\Blocked
 ```
 
 右键新建字符串值，值为刚刚的 AppID，我这里为 `{6767B3BC-8FF7-11EC-B909-0242AC120002}`
