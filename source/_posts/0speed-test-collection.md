@@ -33,9 +33,9 @@ permalink: /page/speed-test-collection/
 
 [官网传送门](https://url.iszy.xyz/fspeed)
 
-2022-10-08
+2023-01-17
 
-![](https://img.iszy.xyz/1665244049497.png?x-oss-process=style/big)
+![](https://img.iszy.xyz/1673948839497.png?x-oss-process=style/big)
 
 ## DuangCloud
 
