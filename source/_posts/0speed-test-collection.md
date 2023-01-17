@@ -17,11 +17,9 @@ permalink: /page/speed-test-collection/
 
 [官网传送门](https://url.iszy.xyz/freewhale)
 
-2022-10-08
+2023-01-17
 
-![](https://img.iszy.xyz/1665252904491.png?x-oss-process=style/big)
-
-![](https://img.iszy.xyz/1665253726263.png?x-oss-process=style/big)
+![](https://img.iszy.xyz/1673945313908.png?x-oss-process=style/big)
 
 ## CMYNetwork 红莓网络
 
