@@ -42,7 +42,7 @@ permalink: /page/bgfw/
 
 邀请码: `iszy`
 
-[⭐⭐ 测速 ⭐⭐](/page/speed-test-collection/#FreeWhale-自由鲸) (2022-10-08)
+[⭐⭐ 测速 ⭐⭐](/page/speed-test-collection/#FreeWhale-自由鲸) (2023-01-17)
 
 [⭐ 更多详细介绍 ⭐](/page/freewhale/)
 
