@@ -112,15 +112,15 @@ tags:
 
 首先把网络模式切换成 bridge，然后添加需要暴露的端口。
 
-- 32400/tcp
-- 8324/tcp
-- 3005/tcp
-- 32469/tcp
-- 1900/udp
-- 32410/udp
-- 32412/udp
-- 32413/udp
-- 32414/udp
+- 32400/tcp (Plex Media Server 的 TCP 端口)
+- 8324/tcp (通过 Plex Companion 的 Roku 的 TCP 端口)
+- 3005/tcp (用于 Plex Companion 的 TCP 端口)
+- 32469/tcp (Plex DLNA 服务器的 TCP 端口)
+- 1900/udp (Plex DLNA 服务器的 UDP 端口)
+- 32410/udp (用于网络发现的 UDP 端口)
+- 32412/udp (用于网络发现的 UDP 端口)
+- 32413/udp (用于网络发现的 UDP 端口)
+- 32414/udp (用于网络发现的 UDP 端口)
 
 最后大概是这样。
 
