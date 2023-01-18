@@ -2,6 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.iszy.cc/posts/unraid-plex-nvidia/</loc>
+    
+    <lastmod>2023-01-18</lastmod>
+    
+    
+  </url>
+  
+  <url>
     <loc>https://www.iszy.cc/page/bgfw/</loc>
     
     <lastmod>2023-01-17</lastmod>
@@ -46,14 +54,6 @@
     <loc>https://www.iszy.cc/posts/remove-win11-amd-menu/</loc>
     
     <lastmod>2022-12-16</lastmod>
-    
-    
-  </url>
-  
-  <url>
-    <loc>https://www.iszy.cc/posts/unraid-plex-nvidia/</loc>
-    
-    <lastmod>2022-12-10</lastmod>
     
     
   </url>
@@ -1104,6 +1104,6 @@
 
   <url>
     <loc>https://www.iszy.cc/</loc>
-    <lastmod>2023-01-17</lastmod>
+    <lastmod>2023-01-18</lastmod>
   </url>
 </urlset>
