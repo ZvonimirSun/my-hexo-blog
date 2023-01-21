@@ -27,7 +27,7 @@ permalink: /page/bgfw/
 | 机场名称（点击了解更多）                             | 关键词                                                     | 操作                                                                                                                                             | 当前状态 |
 | ---------------------------------------------------- | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | -------- |
 | [FreeWhale 自由鲸 ⭐](/page/freewhale/)【长期优惠】  | 性价比，主流节点超多，小众节点                             | [官网传送门](https://url.iszy.xyz/freewhale) / [测速](/page/speed-test-collection/#FreeWhale-%E8%87%AA%E7%94%B1%E9%B2%B8)(2023-01-17)            | 优秀     |
-| [DuangCloud ⭐](#二-duangcloud)【新年优惠】          | 性价比，专线，主流节点                                     | [官网传送门](https://url.iszy.xyz/duangcloud) / [测速](/page/speed-test-collection/#DuangCloud)(2022-10-08)                                      | 优秀     |
+| [DuangCloud ⭐](#二-duangcloud)【新年优惠】          | 性价比，专线，主流节点                                     | [官网传送门](https://url.iszy.xyz/duangcloud) / [测速](/page/speed-test-collection/#DuangCloud)(2023-01-21)                                      | 优秀     |
 | [MEET](#三-meet)                                     | 性价比，主流节点，超小流量套餐                             | [官网传送门](https://url.iszy.xyz/fspeed) / [测速](/page/speed-test-collection/#MEET)(2023-01-17)                                                | 良       |
 | [CMYNetwork 红莓网络](/page/cmynetwork/)【新年优惠】 | IEPL/IPLC 专线，Trojan，主流节点多，小众节点，福利共享账号 | [官网传送门](https://url.iszy.xyz/cmynetwork) / [测速](/page/speed-test-collection/#CMYNetwork-%E7%BA%A2%E8%8E%93%E7%BD%91%E7%BB%9C)(2022-10-08) | 优秀     |
 | [Gatern](#五-gatern)(原 Shuttle)                     | 性价比，IPLC 专线，主流节点，小众节点多，流媒体            | [官网传送门](https://url.iszy.xyz/gatern) / [测速](/page/speed-test-collection/#Gatern)(10-08)                                                   | 优秀     |
@@ -186,7 +186,7 @@ permalink: /page/bgfw/
 
 [官网传送门](https://url.iszy.xyz/cmynetwork)
 
-[⭐⭐ 测速 ⭐⭐](/page/speed-test-collection/#CMYNetwork-红莓网络) (2022-10-08)
+[⭐⭐ 测速 ⭐⭐](/page/speed-test-collection/#CMYNetwork-红莓网络) (2023-01-21)
 
 [⭐ 更多详细介绍 ⭐](/page/cmynetwork/)
 

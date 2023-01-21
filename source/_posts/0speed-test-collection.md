@@ -25,9 +25,9 @@ permalink: /page/speed-test-collection/
 
 [官网传送门](https://url.iszy.xyz/cmynetwork)
 
-2022-10-08
+2023-01-21
 
-![](https://img.iszy.xyz/1665250207111.png?x-oss-process=style/big)
+![](https://img.iszy.xyz/1674287611277.png?x-oss-process=style/big)
 
 ## MEET
 
@@ -60,11 +60,3 @@ permalink: /page/speed-test-collection/
 2022-10-08
 
 ![](https://img.iszy.xyz/1665255728656.png?x-oss-process=style/big)
-
-## WavesLink
-
-[官网传送门](https://url.iszy.xyz/waveslink)
-
-2022-10-11
-
-![](https://img.iszy.xyz/1665500824447.png?x-oss-process=style/big)
