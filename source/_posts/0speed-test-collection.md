@@ -27,7 +27,7 @@ permalink: /page/speed-test-collection/
 
 2023-01-21
 
-![](https://img.iszy.xyz/1674287611277.png?x-oss-process=style/big)
+![](https://img.iszy.xyz/1674292799882.png?x-oss-process=style/big)
 
 ## MEET
 
@@ -41,9 +41,9 @@ permalink: /page/speed-test-collection/
 
 [官网传送门](https://url.iszy.xyz/duangcloud)
 
-2022-10-08
+2023-01-21
 
-![](https://img.iszy.xyz/1665245508155.png?x-oss-process=style/big)
+![](https://img.iszy.xyz/1674287611277.png?x-oss-process=style/big)
 
 ## ByWave
 
