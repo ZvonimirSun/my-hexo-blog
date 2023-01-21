@@ -30,9 +30,8 @@ permalink: /page/bgfw/
 | [DuangCloud ⭐](#二-duangcloud)【新年优惠】          | 性价比，专线，主流节点                                     | [官网传送门](https://url.iszy.xyz/duangcloud) / [测速](/page/speed-test-collection/#DuangCloud)(2022-10-08)                                      | 优秀     |
 | [MEET](#三-meet)                                     | 性价比，主流节点，超小流量套餐                             | [官网传送门](https://url.iszy.xyz/fspeed) / [测速](/page/speed-test-collection/#MEET)(2023-01-17)                                                | 良       |
 | [CMYNetwork 红莓网络](/page/cmynetwork/)【新年优惠】 | IEPL/IPLC 专线，Trojan，主流节点多，小众节点，福利共享账号 | [官网传送门](https://url.iszy.xyz/cmynetwork) / [测速](/page/speed-test-collection/#CMYNetwork-%E7%BA%A2%E8%8E%93%E7%BD%91%E7%BB%9C)(2022-10-08) | 优秀     |
-| [WavesLink](#五-waveslink)(原 后浪云)【暂停推荐】    | IEPL 专线，主流节点多，流媒体                              | [官网传送门](https://url.iszy.xyz/waveslink) / [测速](/page/speed-test-collection/#WavesLink)(2022-10-11)                                        | 差       |
-| [Gatern](#六-gatern)(原 Shuttle)                     | 性价比，IPLC 专线，主流节点，小众节点多，流媒体            | [官网传送门](https://url.iszy.xyz/gatern) / [测速](/page/speed-test-collection/#Gatern)(10-08)                                                   | 优秀     |
-| [ByWave](#七-bywave)                                 | BGP 专线中转，流媒体，节点较少但带宽大                     | [官网传送门](https://url.iszy.xyz/bywave) / [测速](/page/speed-test-collection/#ByWave)(2022-10-08)                                              | 良好     |
+| [Gatern](#五-gatern)(原 Shuttle)                     | 性价比，IPLC 专线，主流节点，小众节点多，流媒体            | [官网传送门](https://url.iszy.xyz/gatern) / [测速](/page/speed-test-collection/#Gatern)(10-08)                                                   | 优秀     |
+| [ByWave](#六-bywave)                                 | BGP 专线中转，流媒体，节点较少但带宽大                     | [官网传送门](https://url.iszy.xyz/bywave) / [测速](/page/speed-test-collection/#ByWave)(2022-10-08)                                              | 良好     |
 
 点击前往查看测速: **[机场测速集合](/page/speed-test-collection/)**
 
@@ -293,39 +292,7 @@ permalink: /page/bgfw/
 </tr>
 </table>
 
-## 五、WavesLink
-
-[官网传送门](https://url.iszy.xyz/waveslink)
-
-[⭐⭐ 测速 ⭐⭐](/page/speed-test-collection/#WavesLink) (2022-10-11)
-
-### （一）优惠
-
-> 本站专属优惠
-
-- 优惠码: `随遇而安`
-- 优惠力度: 年付八折优惠
-
-### （二）简介
-
-**WavesLink**，原后浪云 BackWavesCloud，重新升级线路，规范节点命名，是一家专做稳定高端的全 IEPL 专线机场，拥有较全的主流地区节点覆盖。
-
-1. 线路：全中转线路
-   NORMAL 为广州移动公网中转
-   MASTER 为移动入口的广港专线或深港专线中转。
-2. 落地：香港 Akari、HKT、HKBN、HGC、Nathosts，日本 FDCServer、G-Core，台湾 Hinet，美国 BLinkload，英国 GTHost。
-3. 流媒体解锁：”保证解锁港区流媒体“。
-4. 将升级为自有专线和 AS 落地。
-
-### （三）套餐
-
-| 套餐               | 价格      | 流量     | 可用设备 |
-| ------------------ | --------- | -------- | -------- |
-| Normal-輕量後浪-V1 | 30 元/月  | 100GB/月 | 5        |
-| Pro-高級後浪-V2    | 60 元/月  | 200GB/月 | 5        |
-| Master-至尊後浪-V3 | 120 元/月 | 500GB/月 | 5        |
-
-## 六、Gatern
+## 五、Gatern
 
 [官网传送门](https://url.iszy.xyz/gatern)
 
@@ -397,7 +364,7 @@ permalink: /page/bgfw/
   - 还提供了官方 tg 群组，可以随时交流，购买套餐后可在套餐页看到进群链接
 - [域名发布页](https://shuttlehub.github.io)，防止失联
 
-## 七、ByWave
+## 六、ByWave
 
 [官网传送门](https://url.iszy.xyz/bywave)
 
@@ -412,15 +379,6 @@ permalink: /page/bgfw/
 优惠码: `iszy`
 
 > 转官方优惠公告
-
-**1212 促销**
-
-- 优惠码：`1212`
-  使用周期：年付及以上
-  优惠力度：30%off
-- 优惠码：`WH3OI8EUO7`
-  使用周期：任何
-  优惠力度：20%off 循环优惠
 
 **充值获得赠送金**
 
