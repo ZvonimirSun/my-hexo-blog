@@ -1,5 +1,5 @@
 ---
-title: CMY Network--高端专线SSR/Trojan机场推荐【新年优惠】
+title: CMY Network--高端专线SSR/Trojan机场推荐
 date: 2019-04-11 11:47:31
 categories:
   - 其他
@@ -49,12 +49,6 @@ permalink: /page/cmynetwork/
 使用我的邀请码注册可以获得 **5 元**网站余额红包，可用于购买套餐。此优惠仅可使用一次，同 IP 下多次注册，视为相同账户。
 
 邀请码: `iszy`
-
-> 转官方优惠公告
-
-**八-折**-优-惠-码: `duangcloud2023`
-
-每人限用一次,推荐年付
 
 ## 二、CMY Network 简介
 

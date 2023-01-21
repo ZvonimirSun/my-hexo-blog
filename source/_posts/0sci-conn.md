@@ -24,14 +24,14 @@ permalink: /page/bgfw/
 
 ## 目录
 
-| 机场名称（点击了解更多）                             | 关键词                                                     | 操作                                                                                                                                             | 当前状态 |
-| ---------------------------------------------------- | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | -------- |
-| [FreeWhale 自由鲸 ⭐](/page/freewhale/)【长期优惠】  | 性价比，主流节点超多，小众节点                             | [官网传送门](https://url.iszy.xyz/freewhale) / [测速](/page/speed-test-collection/#FreeWhale-%E8%87%AA%E7%94%B1%E9%B2%B8)(2023-01-17)            | 优秀     |
-| [DuangCloud ⭐](#二-duangcloud)【新年优惠】          | 性价比，专线，主流节点                                     | [官网传送门](https://url.iszy.xyz/duangcloud) / [测速](/page/speed-test-collection/#DuangCloud)(2023-01-21)                                      | 优秀     |
-| [MEET](#三-meet)                                     | 性价比，主流节点，超小流量套餐                             | [官网传送门](https://url.iszy.xyz/fspeed) / [测速](/page/speed-test-collection/#MEET)(2023-01-17)                                                | 良       |
-| [CMYNetwork 红莓网络](/page/cmynetwork/)【新年优惠】 | IEPL/IPLC 专线，Trojan，主流节点多，小众节点，福利共享账号 | [官网传送门](https://url.iszy.xyz/cmynetwork) / [测速](/page/speed-test-collection/#CMYNetwork-%E7%BA%A2%E8%8E%93%E7%BD%91%E7%BB%9C)(2022-10-08) | 优秀     |
-| [Gatern](#五-gatern)(原 Shuttle)                     | 性价比，IPLC 专线，主流节点，小众节点多，流媒体            | [官网传送门](https://url.iszy.xyz/gatern) / [测速](/page/speed-test-collection/#Gatern)(10-08)                                                   | 优秀     |
-| [ByWave](#六-bywave)                                 | BGP 专线中转，流媒体，节点较少但带宽大                     | [官网传送门](https://url.iszy.xyz/bywave) / [测速](/page/speed-test-collection/#ByWave)(2022-10-08)                                              | 良好     |
+| 机场名称（点击了解更多）                            | 关键词                                                     | 操作                                                                                                                                             | 当前状态 |
+| --------------------------------------------------- | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | -------- |
+| [FreeWhale 自由鲸 ⭐](/page/freewhale/)【长期优惠】 | 性价比，主流节点超多，小众节点                             | [官网传送门](https://url.iszy.xyz/freewhale) / [测速](/page/speed-test-collection/#FreeWhale-%E8%87%AA%E7%94%B1%E9%B2%B8)(2023-01-17)            | 优秀     |
+| [DuangCloud ⭐](#二-duangcloud)【新年优惠】         | 性价比，专线，主流节点                                     | [官网传送门](https://url.iszy.xyz/duangcloud) / [测速](/page/speed-test-collection/#DuangCloud)(2023-01-21)                                      | 优秀     |
+| [MEET](#三-meet)                                    | 性价比，主流节点，超小流量套餐                             | [官网传送门](https://url.iszy.xyz/fspeed) / [测速](/page/speed-test-collection/#MEET)(2023-01-17)                                                | 良       |
+| [CMYNetwork 红莓网络](/page/cmynetwork/)            | IEPL/IPLC 专线，Trojan，主流节点多，小众节点，福利共享账号 | [官网传送门](https://url.iszy.xyz/cmynetwork) / [测速](/page/speed-test-collection/#CMYNetwork-%E7%BA%A2%E8%8E%93%E7%BD%91%E7%BB%9C)(2022-10-08) | 优秀     |
+| [Gatern](#五-gatern)(原 Shuttle)                    | 性价比，IPLC 专线，主流节点，小众节点多，流媒体            | [官网传送门](https://url.iszy.xyz/gatern) / [测速](/page/speed-test-collection/#Gatern)(10-08)                                                   | 优秀     |
+| [ByWave](#六-bywave)                                | BGP 专线中转，流媒体，节点较少但带宽大                     | [官网传送门](https://url.iszy.xyz/bywave) / [测速](/page/speed-test-collection/#ByWave)(2022-10-08)                                              | 良好     |
 
 点击前往查看测速: **[机场测速集合](/page/speed-test-collection/)**
 
@@ -197,12 +197,6 @@ permalink: /page/bgfw/
 使用我的邀请码注册可以获得 **5 元**网站余额红包，可用于购买套餐。此优惠仅可使用一次，同 IP 下多次注册，视为相同账户。
 
 邀请码: `iszy`
-
-> 转官方优惠公告
-
-**八-折**-优-惠-码: `duangcloud2023`
-
-每人限用一次,推荐年付
 
 ### （二）简介
 
