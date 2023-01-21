@@ -1,5 +1,5 @@
 ---
-title: 自由鲸FreeWhale--性价比SSR/V2Ray机场推荐
+title: 自由鲸FreeWhale--性价比SSR/V2Ray机场推荐【新年优惠】
 date: 2019-04-11 11:47:31
 categories:
   - 其他
@@ -55,6 +55,10 @@ permalink: /page/freewhale/
 **￥ 124** 及以上套餐可用，C 套餐可叠加
 
 **95 折**礼遇码：`chunjie`
+
+> 官方优惠
+
+新春礼遇：储值金额满 100 立减 5 元
 
 ## 自由鲸 FreeWhale 简介
 
