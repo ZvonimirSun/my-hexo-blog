@@ -214,75 +214,58 @@ permalink: /page/bgfw/
 
 ### （三）套餐
 
-> 注意，需要专线中转线路，请至少选择 Pro 及以上套餐，专线倍率为 2，需要注意。
-
 <table>
-<tr><th>套餐</th><th>流量</th><th>价格</th><th>公网IP数</th><th>线路</th><th>客服</th></tr>
+<tr><th>套餐</th><th>流量</th><th>价格</th><th>公网IP数</th><th>线路</th></tr>
 <tr>
-  <td rowspan="4">Air/入门版</td>
-  <td rowspan="2">100G/月</td>
-  <td>18元/30天</td>
-  <td rowspan="4">2</td>
-  <td rowspan="4">国际轻量优化链路<br/>解锁Trojan直连线路</td>
-  <td rowspan="4">工单客服支持</td>
-</tr>
-<tr>
-  <td>54元/90天</td>
-</tr>
-<tr>
-  <td>125G/月</td>
-  <td>108元/180天</td>
-</tr>
-<tr>
+  <td>Air/入门版<br>(暂无)</td>
   <td>150G/月</td>
-  <td>193元/365天</td>
+  <td>25元/30天</td>
+  <td>2</td>
+  <td>仅支持 Trojan 协议<br>20+ 直连节点 · 无限流量<br/>15+ 优化节点 · 倍率流量<br>无速度保证，仅轻量使用</td>
 </tr>
 <tr>
   <td rowspan="4">Pro/专业版订阅</td>
-  <td rowspan="2">200G/月</td>
-  <td>35元/30天</td>
+  <td rowspan="2">350G/月</td>
+  <td>49元/30天</td>
   <td rowspan="4">3</td>
-  <td rowspan="4">解锁 CN2 优化直连专线（Trojan）<br>解锁 IPLC 流媒体专线（SSR）<br>解锁港/台/日/美 原生IP线路（Trojan）</td>
-  <td rowspan="11">12 x 365在线客服支持</td>
-</tr>
-<tr>
-  <td>105元/90天</td>
-</tr>
-<tr>
-  <td>250G/月</td>
-  <td>210元/180天</td>
-</tr>
-<tr>
-  <td>300G/月</td>
-  <td>370元/365天</td>
-</tr>
-<tr>
-  <td rowspan="4">Extreme/至尊版</td>
-  <td rowspan="2">643G/月</td>
-  <td>68元/30天</td>
-  <td rowspan="4">4</td>
-  <td rowspan="4">免费远程技术支持<br>解锁 IEPL 流媒体专线<br>解锁 IEPL 游戏专线(内网)<br>Netflix/HULU/HBO/Pxxnhub等价值千元福利账号</td>
+  <td rowspan="4">支持 Trojan/SSR 协议<br>20+ IPLC专线 · 倍率流量<br>解锁Netflix/Disney+等非自制剧</td>
 </tr>
 <tr>
   <td>147元/90天</td>
 </tr>
 <tr>
-  <td>768G/月</td>
-  <td>399元/180天</td>
+  <td rowspan="2">400G/月</td>
+  <td>494元/365天</td>
 </tr>
 <tr>
-  <td>1024G/月</td>
-  <td>696元/365天</td>
+  <td>1412元/1095天</td>
+</tr>
+<tr>
+  <td rowspan="4">Extreme/至尊版</td>
+  <td rowspan="2">800G/月</td>
+  <td>88元/30天</td>
+  <td rowspan="4">4</td>
+  <td rowspan="4">支持 Trojan/SSR 协议<br>15+ IEPL专线 · 倍率流量<br>解锁Netflix/Disney等各大流媒体<br>Netflix/PH/Disney等福利账号</td>
+</tr>
+<tr>
+  <td>264元/90天</td>
+</tr>
+<tr>
+  <td rowspan="2">1200G/月</td>
+  <td>845元/365天</td>
+</tr>
+<tr>
+  <td>2376元/1095天</td>
 </tr>
 <tr>
   <td rowspan="2">Business/企业版基础套餐</td>
   <td rowspan="2">1200G/月</td>
-  <td>298元/30天</td>
+  <td>398元/30天</td>
   <td rowspan="2">10</td>
   <td rowspan="2">无定制专线，可自助购买<br>如需要线路定制请查看定制套餐<br>可提供国际电子收据（英文/日文可选）</td>
 </tr>
 <tr>
-  <td>3398元/365天</td>
+  <td>4538元/365天</td>
 </tr>
 <tr>
   <td>Business/企业专线定制</td>
