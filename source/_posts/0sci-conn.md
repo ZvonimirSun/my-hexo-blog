@@ -1,5 +1,5 @@
 ---
-title: 【评测2022】优质SS/SSR/Trojan/V2Ray机场推荐【新年优惠】
+title: 【评测2022】优质SS/SSR/Trojan/V2Ray机场推荐
 date: 2019-01-03 03:11:50
 categories:
   - 其他
@@ -26,8 +26,8 @@ permalink: /page/bgfw/
 
 | 机场名称（点击了解更多）                            | 关键词                                                     | 操作                                                                                                                                             | 当前状态 |
 | --------------------------------------------------- | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | -------- |
-| [FreeWhale 自由鲸 ⭐](/page/freewhale/)【新年优惠】 | 性价比，主流节点超多，小众节点                             | [官网传送门](https://url.iszy.xyz/freewhale) / [测速](/page/speed-test-collection/#freewhale-%E8%87%AA%E7%94%B1%E9%B2%B8)(2023-01-17)            | 优秀     |
-| [DuangCloud ⭐](#二-duangcloud)【新年优惠】         | 性价比，专线，主流节点                                     | [官网传送门](https://url.iszy.xyz/duangcloud) / [测速](/page/speed-test-collection/#duangcloud)(2023-01-21)                                      | 优秀     |
+| [FreeWhale 自由鲸 ⭐](/page/freewhale/)【长期优惠】 | 性价比，主流节点超多，小众节点                             | [官网传送门](https://url.iszy.xyz/freewhale) / [测速](/page/speed-test-collection/#freewhale-%E8%87%AA%E7%94%B1%E9%B2%B8)(2023-01-17)            | 优秀     |
+| [DuangCloud ⭐](#二-duangcloud)【专属优惠】         | 性价比，专线，主流节点                                     | [官网传送门](https://url.iszy.xyz/duangcloud) / [测速](/page/speed-test-collection/#duangcloud)(2023-03-17)                                      | 优秀     |
 | [MEET](#三-meet)                                    | 性价比，主流节点，超小流量套餐                             | [官网传送门](https://url.iszy.xyz/fspeed) / [测速](/page/speed-test-collection/#meet)(2023-01-17)                                                | 良       |
 | [CMYNetwork 红莓网络](/page/cmynetwork/)            | IEPL/IPLC 专线，Trojan，主流节点多，小众节点，福利共享账号 | [官网传送门](https://url.iszy.xyz/cmynetwork) / [测速](/page/speed-test-collection/#cmynetwork-%E7%BA%A2%E8%8E%93%E7%BD%91%E7%BB%9C)(2023-01-21) | 良       |
 | [Gatern](#五-gatern)                                | 性价比，IPLC 专线，主流节点，小众节点多，流媒体            | [官网传送门](https://url.iszy.xyz/gatern) / [测速](/page/speed-test-collection/#gatern)(2023-01-21)                                              | 优秀     |
@@ -51,11 +51,7 @@ permalink: /page/bgfw/
 
 **￥ 124** 及以上套餐可用，C 套餐可叠加
 
-**95 折**礼遇码：`Feb02`
-
-> 官方优惠
-
-新春礼遇：储值金额满 100 立减 5 元
+**95 折**礼遇码：`March315`
 
 ### （二）简介
 
@@ -109,7 +105,7 @@ permalink: /page/bgfw/
 
 [官网传送门](https://url.iszy.xyz/duangcloud)
 
-[⭐⭐ 测速 ⭐⭐](/page/speed-test-collection/#DuangCloud)(2023-01-21)
+[⭐⭐ 测速 ⭐⭐](/page/speed-test-collection/#DuangCloud)(2023-03-17)
 
 ### （一）优惠
 
@@ -121,23 +117,14 @@ permalink: /page/bgfw/
 
 本站优惠码一个账户仅可享受一次
 
-> 转官方优惠公告
-
-**新年大促**
-
-- 优惠码：`duangcloud2023`
-  限制：每人限用一次，推荐年付，数量有限用完为止
-  优惠力度：**八折**
-
 ### （二）简介
 
 这是一家稳定运行半年多的纯 SS 机场，口碑还不错，不过线路确实稳定且质量不错，已经是全 IEPL 专线，价格比较合理，可以推荐。
 
-- IEPL 专线线路接入
-- 拥有香港、台湾、日本、美国、新加坡节点
-- 1.5G 最高可用速率，满足绝大部分需求
-- 原生 IP 流媒体解锁
-- 无设备数量限制，可多人使用
+- 拥有香港、台湾、日本、韩国、美国、新加坡节点
+- 万兆不限速专线接入
+- 不过墙零被封锁风险
+- 允许多设备同时在线
 - 支持支付宝/微信支付
 
 ### （三）套餐
@@ -151,7 +138,6 @@ permalink: /page/bgfw/
 | Pro      | 300G/月 | 55 元/月 或 550 元/年   | 0.18 元/G  |
 | Gold     | 500G/月 | 75 元/月 或 750 元/年   | 0.15 元/G  |
 | Business | 800G/月 | 100 元/月 或 1000 元/年 | 0.125 元/G |
-| Light    | 100G/年 | 100 元/年               | 1 元/G     |
 
 ### （四）其他说明
 

@@ -25,9 +25,9 @@ permalink: /page/speed-test-collection/
 
 [官网传送门](https://url.iszy.xyz/duangcloud)
 
-2023-01-21
+2023-03-17
 
-![](https://img.iszy.xyz/1674287611277.png?x-oss-process=style/big)
+![](https://img.iszy.xyz/1679033837606.png?x-oss-process=style/big)
 
 ## MEET
 
