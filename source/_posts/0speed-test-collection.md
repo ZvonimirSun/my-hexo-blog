@@ -52,11 +52,3 @@ permalink: /page/speed-test-collection/
 2023-01-21
 
 ![](https://img.iszy.xyz/1674297094572.png?x-oss-process=style/big)
-
-## ByWave
-
-[官网传送门](https://url.iszy.xyz/bywave)
-
-2022-10-08
-
-![](https://img.iszy.xyz/1665254136204.png?x-oss-process=style/big)
