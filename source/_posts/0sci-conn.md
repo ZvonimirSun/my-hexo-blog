@@ -30,7 +30,7 @@ permalink: /page/bgfw/
 | [DuangCloud ⭐](#二-duangcloud)【专属优惠】         | 性价比，专线，主流节点                                     | [官网传送门](https://url.iszy.xyz/duangcloud) / [测速](/page/speed-test-collection/#duangcloud)(2023-07-25)                                      |
 | [MEET](#三-meet)                                    | 性价比，主流节点，超小流量套餐                             | [官网传送门](https://url.iszy.xyz/fspeed) / [测速](/page/speed-test-collection/#meet)(2023-01-17)                                                |
 | [CMYNetwork 红莓网络](/page/cmynetwork/)            | IEPL/IPLC 专线，Trojan，主流节点多，小众节点，福利共享账号 | [官网传送门](https://url.iszy.xyz/cmynetwork) / [测速](/page/speed-test-collection/#cmynetwork-%E7%BA%A2%E8%8E%93%E7%BD%91%E7%BB%9C)(2023-01-21) |
-| [Gatern](#五-gatern)                                | 性价比，IPLC 专线，主流节点，小众节点多，流媒体            | [官网传送门](https://url.iszy.xyz/gatern) / [测速](/page/speed-test-collection/#gatern)(2023-01-21)                                              |
+| [Gatern](#五-gatern)                                | 性价比，IPLC 专线，主流节点，小众节点多，流媒体            | [官网传送门](https://url.iszy.xyz/gatern) / [测速](/page/speed-test-collection/#gatern)(2023-09-05)                                              |
 
 点击前往查看测速: **[机场测速集合](/page/speed-test-collection/)**
 
@@ -262,7 +262,7 @@ permalink: /page/bgfw/
 
 [官网传送门](https://url.iszy.xyz/gatern)
 
-[⭐⭐ 测速 ⭐⭐](/page/speed-test-collection/#Gatern)(2023-01-21)
+[⭐⭐ 测速 ⭐⭐](/page/speed-test-collection/#Gatern)(2023-09-05)
 
 ### （一）优惠
 

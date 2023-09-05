@@ -49,6 +49,6 @@ permalink: /page/speed-test-collection/
 
 [官网传送门](https://url.iszy.xyz/gatern)
 
-2023-01-21
+2023-09-05
 
-![](https://img.iszy.xyz/1674297094572.png?x-oss-process=style/big)
+![](https://img.iszy.xyz/1693900684963.png?x-oss-process=style/big)
