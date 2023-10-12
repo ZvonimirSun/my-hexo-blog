@@ -54,7 +54,7 @@ permalink: /page/freewhale/
 
 **￥ 124** 及以上套餐可用，C 套餐可叠加
 
-**95 折**礼遇码：`March315`
+**95 折**礼遇码：`2023HappyO`
 
 ## 自由鲸 FreeWhale 简介
 
