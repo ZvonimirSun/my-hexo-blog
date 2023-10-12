@@ -17,9 +17,9 @@ permalink: /page/speed-test-collection/
 
 [官网传送门](https://url.iszy.xyz/freewhale)
 
-2023-01-17
+2023-10-12
 
-![](https://img.iszy.xyz/1673945313908.png?x-oss-process=style/big)
+![](https://img.iszy.xyz/1697094261746.png?x-oss-process=style/big)
 
 ## DuangCloud
 

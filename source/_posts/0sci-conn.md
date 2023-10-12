@@ -26,7 +26,7 @@ permalink: /page/bgfw/
 
 | 机场名称（点击了解更多）                            | 关键词                                                     | 操作                                                                                                                                             |
 | --------------------------------------------------- | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [FreeWhale 自由鲸 ⭐](/page/freewhale/)【长期优惠】 | 性价比，主流节点超多，小众节点                             | [官网传送门](https://url.iszy.xyz/freewhale) / [测速](/page/speed-test-collection/#freewhale-%E8%87%AA%E7%94%B1%E9%B2%B8)(2023-01-17)            |
+| [FreeWhale 自由鲸 ⭐](/page/freewhale/)【长期优惠】 | 性价比，主流节点超多，小众节点                             | [官网传送门](https://url.iszy.xyz/freewhale) / [测速](/page/speed-test-collection/#freewhale-%E8%87%AA%E7%94%B1%E9%B2%B8)(2023-10-12)            |
 | [DuangCloud ⭐](#二-duangcloud)【双节优惠】         | 性价比，专线，主流节点                                     | [官网传送门](https://url.iszy.xyz/duangcloud) / [测速](/page/speed-test-collection/#duangcloud)(2023-07-25)                                      |
 | [MEET](#三-meet)                                    | 性价比，主流节点，超小流量套餐                             | [官网传送门](https://url.iszy.xyz/fspeed) / [测速](/page/speed-test-collection/#meet)(2023-01-17)                                                |
 | [CMYNetwork 红莓网络](/page/cmynetwork/)            | IEPL/IPLC 专线，Trojan，主流节点多，小众节点，福利共享账号 | [官网传送门](https://url.iszy.xyz/cmynetwork) / [测速](/page/speed-test-collection/#cmynetwork-%E7%BA%A2%E8%8E%93%E7%BD%91%E7%BB%9C)(2023-01-21) |
@@ -40,7 +40,7 @@ permalink: /page/bgfw/
 
 邀请码: `iszy`
 
-[⭐⭐ 测速 ⭐⭐](/page/speed-test-collection/#FreeWhale-自由鲸) (2023-01-17)
+[⭐⭐ 测速 ⭐⭐](/page/speed-test-collection/#FreeWhale-自由鲸) (2023-10-12)
 
 [⭐ 更多详细介绍 ⭐](/page/freewhale/)
 
