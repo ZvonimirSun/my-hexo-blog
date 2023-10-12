@@ -26,7 +26,7 @@
   <url>
     <loc>https://www.iszy.cc/page/speed-test-collection/</loc>
     
-    <lastmod>2023-09-05</lastmod>
+    <lastmod>2023-10-12</lastmod>
     
     
     <changefreq>daily</changefreq>
@@ -126,22 +126,6 @@
   </url>
   
   <url>
-    <loc>https://www.iszy.cc/posts/winrar/</loc>
-    
-    <lastmod>2022-11-15</lastmod>
-    
-    
-  </url>
-  
-  <url>
-    <loc>https://www.iszy.cc/posts/zsh-character-not-in-range/</loc>
-    
-    <lastmod>2022-11-15</lastmod>
-    
-    
-  </url>
-  
-  <url>
     <loc>https://www.iszy.cc/posts/c/</loc>
     
     <lastmod>2022-11-15</lastmod>
@@ -183,6 +167,22 @@
   
   <url>
     <loc>https://www.iszy.cc/posts/unplugin-vue-components-first-experience/</loc>
+    
+    <lastmod>2022-11-15</lastmod>
+    
+    
+  </url>
+  
+  <url>
+    <loc>https://www.iszy.cc/posts/winrar/</loc>
+    
+    <lastmod>2022-11-15</lastmod>
+    
+    
+  </url>
+  
+  <url>
+    <loc>https://www.iszy.cc/posts/zsh-character-not-in-range/</loc>
     
     <lastmod>2022-11-15</lastmod>
     
