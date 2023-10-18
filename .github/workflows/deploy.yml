@@ -6,11 +6,13 @@ on:
       - "main"
     paths-ignore:
       - ".github/**"
+      - "source/_drafts/**"
   pull_request:
     branches-ignore:
       - "deploy"
     paths-ignore:
       - ".github/**"
+      - "source/_drafts/**"
   workflow_dispatch:
     branches-ignore:
       - "deploy"
