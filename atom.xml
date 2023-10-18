@@ -357,9 +357,9 @@
     <category term="技巧" scheme="https://www.iszy.cc/categories/%E6%8A%80%E5%B7%A7/"/>
     
     
-    <category term="Docker" scheme="https://www.iszy.cc/tags/Docker/"/>
-    
     <category term="Linux" scheme="https://www.iszy.cc/tags/Linux/"/>
+    
+    <category term="Docker" scheme="https://www.iszy.cc/tags/Docker/"/>
     
   </entry>
   
