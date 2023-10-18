@@ -23,6 +23,7 @@ custom_file_path:
   #header: source/_data/header.njk
   #sidebar: source/_data/sidebar.njk
   #postMeta: source/_data/post-meta.njk
+  #postBodyStart: source/_data/post-body-start.njk
   #postBodyEnd: source/_data/post-body-end.njk
   #footer: source/_data/footer.njk
   #bodyEnd: source/_data/body-end.njk
@@ -139,7 +140,7 @@ sidebar:
 avatar:
   # Replace the default image and set the url here.
   url: https://gravatar.cdn.iszy.xyz/avatar/5012e410377c7a93d14f7bf31aeeb7fd?d=mm
-  # If true, the avatar will be dispalyed in circle.
+  # If true, the avatar will be displayed in circle.
   rounded: true
   # If true, the avatar will be rotated with the cursor.
   rotated: false
@@ -155,7 +156,6 @@ social:
   #GitHub: https://github.com/yourname || fab fa-github
   #E-Mail: mailto:yourname@gmail.com || fa fa-envelope
   #Weibo: https://weibo.com/yourname || fab fa-weibo
-  #Google: https://plus.google.com/yourname || fab fa-google
   #Twitter: https://twitter.com/yourname || fab fa-twitter
   #FB Page: https://www.facebook.com/yourname || fab fa-facebook
   #StackOverflow: https://stackoverflow.com/yourname || fab fa-stack-overflow
@@ -212,6 +212,7 @@ footer:
     color: "#ff0000"
 
   # If not defined, `author` from Hexo `_config.yml` will be used.
+  # Set to `false` to disable the copyright statement.
   copyright: Dirge
 
   # Powered by Hexo & NexT
@@ -233,7 +234,7 @@ footer:
 # See: https://theme-next.js.org/docs/theme-settings/posts
 # ---------------------------------------------------------------
 
-# Automatically excerpt description in homepage as preamble text.
+# Use `description` in front-matter to specify post excerpt.
 excerpt_description: true
 
 # Read more button
@@ -367,6 +368,10 @@ codeblock:
     enable: false
     # Available values: default | flat | mac
     style:
+  # Fold code block
+  fold:
+    enable: true
+    height: 500
 
 back2top:
   enable: true
@@ -523,6 +528,10 @@ mermaid:
   theme:
     light: default
     dark: dark
+
+# WaveDrom tag
+wavedrom:
+  enable: false
 
 # ---------------------------------------------------------------
 # Third Party Plugins & Services Settings
@@ -736,10 +745,10 @@ waline:
   serverURL: https://wl.iszy.xyz # Waline server address url
 
   # Waline library CDN url, you can set this to your preferred CDN
-  libUrl: https://jsdelivr.cdn.iszy.xyz/npm/@waline/client@v2.14.1/dist/waline.min.js
+  libUrl: https://jsdelivr.cdn.iszy.xyz/npm/@waline/client@v2.15.8/dist/waline.js
 
   # Waline CSS styles CDN url, you can set this to your preferred CDN
-  cssUrl: https://jsdelivr.cdn.iszy.xyz/npm/@waline/client@v2.14.1/dist/waline.css
+  cssUrl: https://jsdelivr.cdn.iszy.xyz/npm/@waline/client@v2.15.8/dist/waline.css
 
   # If false, comment count will only be displayed in post page, not in home page
   commentCount: false
@@ -789,9 +798,12 @@ waline:
 # See: https://theme-next.js.org/docs/third-party-services/post-widgets
 # ---------------------------------------------------------------
 
-# AddThis Share. See: https://www.addthis.com
-# Go to https://www.addthis.com/dashboard to customize your tools.
-add_this_id:
+# AddToAny Share. See: https://www.addtoany.com
+addtoany:
+  enable: false
+  buttons:
+    - facebook
+    - twitter
 
 # ---------------------------------------------------------------
 # Statistics and Analytics
@@ -835,6 +847,7 @@ umami:
   enable: false
   script_url: # https://umami.example.com/script.js
   website_id: # <your website id>
+  host_url: # <your umami site url>
 
 # Plausible Analytics
 # See: https://plausible.io/
@@ -911,7 +924,7 @@ local_search:
 # Firstly, you need to enable and configure the chat service.
 chat:
   enable: false
-  icon: fa fa-comment # Icon name in Font Awesome, set false to disable icon.
+  icon: fa fa-comment # Icon name in Font Awesome, set to `false` to disable icon.
 
 # Chatra is a functional, easy to use piece of chat software for websites.
 # For more information: https://chatra.com
@@ -928,12 +941,6 @@ chatra:
 tidio:
   enable: false
   key: # Public Key, get it from dashboard. See: https://www.tidio.com/panel/settings/developer
-
-# Gitter is a chat and networking platform.
-# For more information: https://gitter.im
-gitter:
-  enable: false
-  room:
 
 # ---------------------------------------------------------------
 # CDN Settings
