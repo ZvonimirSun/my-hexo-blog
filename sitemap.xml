@@ -2,6 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.iszy.cc/posts/cesium-vue-problem/</loc>
+    
+    <lastmod>2023-10-25</lastmod>
+    
+    
+  </url>
+  
+  <url>
     <loc>https://www.iszy.cc/page/freewhale/</loc>
     
     <lastmod>2023-10-12</lastmod>
@@ -1104,6 +1112,6 @@
 
   <url>
     <loc>https://www.iszy.cc/</loc>
-    <lastmod>2023-10-18</lastmod>
+    <lastmod>2023-10-25</lastmod>
   </url>
 </urlset>

@@ -6,7 +6,7 @@
   <link href="https://www.iszy.cc/atom.xml" rel="self"/>
   
   <link href="https://www.iszy.cc/"/>
-  <updated>2022-12-16T06:34:50.000Z</updated>
+  <updated>2023-10-25T15:53:12.000Z</updated>
   <id>https://www.iszy.cc/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>记一次Cesium排错</title>
+    <link href="https://www.iszy.cc/posts/cesium-vue-problem/"/>
+    <id>https://www.iszy.cc/posts/cesium-vue-problem/</id>
+    <published>2023-10-25T15:25:08.000Z</published>
+    <updated>2023-10-25T15:53:12.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近遇到一个贴模型 entity 导致，倾斜摄影渲染出现异常的问题，记录一下排错过程。</p><span id="more"></span><h2 id="问题描述"><a class="markdownIt-Anchor" href="#问题描述"></a> 问题描述</h2><p>首先，我只是使用 Cesium，并不涉及扩展开发。</p><p>问题出现的场景是这样的，我在 Vue 项目中使用超图 iClient for Cesium (基于 Cesium 扩展)，向球体添加了一个 s3m 格式的倾斜摄服务。项目中有测面的功能，其中有一步会绘制一个贴模型的面类型 entity。意想不到的情况出现了，在我完成绘制的时，倾斜摄影的颜色渲染出现了异常，原来红色的部分似乎被覆盖了一层蓝色。</p><h2 id="解决问题"><a class="markdownIt-Anchor" href="#解决问题"></a> 解决问题</h2><p>首先，要排除 iClient for Cesium 包本身不存在问题，于是我写了一个单页面，添加了同样的 s3m 服务。并且实现了一下绘制贴模型面的功能。结果发现，这个页面没有预想中的异常。</p><p>这就说明我项目中的代码造成了这个异常。基于我的推断，能造成这样异常的代码应该存在于我们实现的绘制功能里，于是先大量注释无关代码，逐步释放，最终却定位在了绘制完成的回调事件上，只要不执行回调事件，就不会出现异常。这个回调事件将绘制得到的 entity 对象进行了返回。所以这个问题与绘制本身没有关系，也没有在绘制功能中做影响渲染的操作。</p><p>排查使用绘制功能的组件时，最终确定到了一行代码。这行代码的功能很简单，在 Vue 组件的 data 对象中定义有一个变量，这行代码将这个 entity 对象赋值给了这个变量。想来已经知道问题所在了，Vue 的响应式机制和 Cesium 的渲染机制产生了冲突，刚好我们绘制的面是贴模型面，会影响倾斜摄影服务的渲染，最终表现成了这个问题。最终只要避免将 entity 对象进行不必要的转换就不会出现渲染异常。</p><h2 id="总结"><a class="markdownIt-Anchor" href="#总结"></a> 总结</h2><p>其实早该想到可能有这样的问题，毕竟 Vue 的响应式机制和 Cesium 的渲染机制都是很复杂的，两者的结合必然会产生一些问题。比如先前将 Viewer 对象响应化，会导致整个球体出现大量卡顿掉帧，且页面 Vue 组件的渲染也会十分卡顿，也是类似的问题。</p><p>很多时候，我们其实并不需要 Vue 的响应式机制，只是为了方便调用，牺牲了一些性能。Vue 3 当中的 markRaw 方法，可以将对象标记为非响应式的，可以比较有效的解决这个问题。在 Vue 2 中，遇到像 Cesium 这种会产生严重错误的，只能采取绕行方案了。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;最近遇到一个贴模型 entity 导致，倾斜摄影渲染出现异常的问题，记录一下排错过程。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="技术" scheme="https://www.iszy.cc/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="Vue" scheme="https://www.iszy.cc/tags/Vue/"/>
+    
+    <category term="Cesium" scheme="https://www.iszy.cc/tags/Cesium/"/>
+    
+  </entry>
   
   <entry>
     <title>添加或移除 WIN11 此电脑中的文件夹</title>
@@ -357,9 +380,9 @@
     <category term="技巧" scheme="https://www.iszy.cc/categories/%E6%8A%80%E5%B7%A7/"/>
     
     
-    <category term="Linux" scheme="https://www.iszy.cc/tags/Linux/"/>
-    
     <category term="Docker" scheme="https://www.iszy.cc/tags/Docker/"/>
+    
+    <category term="Linux" scheme="https://www.iszy.cc/tags/Linux/"/>
     
   </entry>
   
@@ -460,31 +483,6 @@
     <category term="Clipboard" scheme="https://www.iszy.cc/tags/Clipboard/"/>
     
     <category term="ClipboardItem" scheme="https://www.iszy.cc/tags/ClipboardItem/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Switch正在检查是否可以运行软件问题</title>
-    <link href="https://www.iszy.cc/posts/i/"/>
-    <id>https://www.iszy.cc/posts/i/</id>
-    <published>2022-03-25T09:19:24.000Z</published>
-    <updated>2022-03-25T09:59:06.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>今天在 Switch 上启动游戏老是出现<code>正在检查是否可以运行软件</code>的提示，而且只有游戏所有者能通过检查打开游戏，其他号都显示未购买游戏。后面在尝试的过程中，我偶然发现了问题所在，在此记录下。</p><span id="more"></span><h2 id="太长不看版"><a class="markdownIt-Anchor" href="#太长不看版"></a> 太长不看版</h2><p>总的来说就是，购买游戏的账号未在这台 Switch 上登录过 eShop，并跳过密码，导致其他账号无法查找到游戏的购买记录。</p><p>所以解决办法就是，<strong>购买游戏的账号</strong>在这台 Switch 上登录一次 eShop，勾选下次跳过后，输入密码登录。然后退出到主界面，使用<strong>玩游戏的账号</strong>打开游戏，此时应当已经可以通过检查，在第一次通过检查后，后续其他账号即可正常打开。</p><h2 id="问题复现"><a class="markdownIt-Anchor" href="#问题复现"></a> 问题复现</h2><p>众所周知，在 Switch 上可以登录多个账号，任意一个账号购买过游戏，在这台 Switch 上所有用户都能玩。</p><p>所以一个常规操作就是注册几个不同地区的账号，在价格最低的地区购买游戏。</p><p>我就注册了几个账号，也在几个号上买了游戏。今天想要整理一下我这些个号，把没用的都删除掉。一开始我以为如果我删除了一个账号，这个账号所有的游戏也会从 Switch 上移除，于是我轮流删除了除我的主号以外的所有账号，发现游戏列表里一个都没少。</p><p>这就让我有点意外了，于是我轮流打开了一下每个游戏，看下有没有什么问题。果然，我发现，除了我主号购买的，以及实体卡的游戏，其他游戏会跳出<code>正在检查是否可以运行软件</code>的提示，并最终告诉我我没有这个游戏，需要去 eShop 购买。</p><p>于是我一个个加回我的账号，然后，把刚刚不能打开的游戏，都确认了一下是哪一个号买的。虽然我确认到了每个账号的游戏购买情况，我却遇到了新的问题。就是每次打开那几个游戏的时候，都会跳出<code>正在检查是否可以运行软件</code>的提示，且除了购买游戏的账号能够打开外，其他账号一律显示没有购买。</p><p>在接下来的试错过程中，我偶然间用我主号之外的号打开 eShop 时发现，需要我再次输入密码，且在我勾选下次跳过，并完成登录后，其他账号能够正常打开这个号的游戏了。</p><p>我回忆了一下，我以前的使用流程，基本上都是绑定账号后，登录 eShop 再购买下载游戏的，所以从来没出现过这个验证。这次删除再重新添加账号，就把这个登录记录清空了，其他账号就没法查到购买记录了。</p><p>这下问题就确定了，我用每个号都登了遍 eShop，再验证，所有游戏打开都正常了。</p><h2 id="其他"><a class="markdownIt-Anchor" href="#其他"></a> 其他</h2><p>我看网上还有人是在迁移主机，以及多台主机一起使用的时候出现上述问题，不确定我这里的方法能不能解决，毕竟我只有过一个 Switch，没法验证。另外平常基本都是联网状态下玩的 Switch，离线使用也没遇到过问题。如果有类似问题，可以试验下以上方法能不能解决，希望能帮到有需要的人。</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;今天在 Switch 上启动游戏老是出现&lt;code&gt;正在检查是否可以运行软件&lt;/code&gt;的提示，而且只有游戏所有者能通过检查打开游戏，其他号都显示未购买游戏。后面在尝试的过程中，我偶然发现了问题所在，在此记录下。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="其他" scheme="https://www.iszy.cc/categories/%E5%85%B6%E4%BB%96/"/>
-    
-    
-    <category term="NS" scheme="https://www.iszy.cc/tags/NS/"/>
-    
-    <category term="Nintendo" scheme="https://www.iszy.cc/tags/Nintendo/"/>
-    
-    <category term="Switch" scheme="https://www.iszy.cc/tags/Switch/"/>
     
   </entry>
   
