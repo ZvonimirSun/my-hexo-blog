@@ -32,7 +32,7 @@ permalink: /page/cmynetwork/
 
 <!--more-->
 
-![](https://img.iszy.xyz/20210411191903.png?x-oss-process=style/big)
+![](https://img.iszy.xyz/20210411191903.png)
 
 ## 一、前言
 
