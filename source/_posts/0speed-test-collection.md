@@ -19,7 +19,7 @@ permalink: /page/speed-test-collection/
 
 2023-10-12
 
-![](https://img.iszy.xyz/1697094261746.png?x-oss-process=style/big)
+![](https://img.iszy.xyz/1697094261746.png)
 
 ## DuangCloud
 
@@ -27,7 +27,7 @@ permalink: /page/speed-test-collection/
 
 2023-07-25
 
-![](https://img.iszy.xyz/1679033837606.png?x-oss-process=style/big)
+![](https://img.iszy.xyz/1679033837606.png)
 
 ## MEET
 
@@ -35,7 +35,7 @@ permalink: /page/speed-test-collection/
 
 2023-01-17
 
-![](https://img.iszy.xyz/1673948839497.png?x-oss-process=style/big)
+![](https://img.iszy.xyz/1673948839497.png)
 
 ## CMYNetwork 红莓网络
 
@@ -43,7 +43,7 @@ permalink: /page/speed-test-collection/
 
 2023-01-21
 
-![](https://img.iszy.xyz/1674292799882.png?x-oss-process=style/big)
+![](https://img.iszy.xyz/1674292799882.png)
 
 ## Gatern
 
@@ -51,4 +51,4 @@ permalink: /page/speed-test-collection/
 
 2023-09-05
 
-![](https://img.iszy.xyz/1693900684963.png?x-oss-process=style/big)
+![](https://img.iszy.xyz/1693900684963.png)

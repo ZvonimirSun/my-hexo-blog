@@ -58,7 +58,7 @@ yum install -y wget && wget -O install.sh http://download.bt.cn/install/install.
 
 在安装完成后，还有几个内容需要添加，后期将会用到。点击左侧导航栏的软件管理，再点击 PHP-7.1 右侧的设置。
 
-![](https://img.iszy.xyz/20190318214947.png?x-oss-process=style/big)
+![](https://img.iszy.xyz/20190318214947.png)
 
 这样将会弹出 php 的管理界面，点击左侧栏的安装扩展，安装如图所示的三个扩展。
 
@@ -76,7 +76,7 @@ yum install -y wget && wget -O install.sh http://download.bt.cn/install/install.
 
 在页面中选择 Get Nextcloud Server 栏目下的 Download 按钮点击它。出现如下图界面点击 Download Nextcloud 开始下载：
 
-![](https://img.iszy.xyz/20190318215030.png?x-oss-process=style/big)
+![](https://img.iszy.xyz/20190318215030.png)
 
 下下来的文件是个压缩包，你只需要把文件夹中的文件都上传到刚刚的网站目录即可。**注意：只要文件夹中的文件，不要文件夹。**
 
@@ -92,7 +92,7 @@ yum install -y wget && wget -O install.sh http://download.bt.cn/install/install.
 
 现在你已经可以访问你的域名来访问 nextcloud 了，你将会看到如下所示的界面，你需要在这里创建管理员账户。
 
-![](https://img.iszy.xyz/20190318215100.png?x-oss-process=style/big)
+![](https://img.iszy.xyz/20190318215100.png)
 
 管理员账户的用户名密码，自定。点开存储&数据库，在这里可以修改数据目录。配置数据库选择 MySQL/MariaDB，然后填入刚刚你创建的数据库，最后点击安装完成。**注意：localhost 后一定要写上端口 3306，如图所示**
 

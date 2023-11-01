@@ -90,7 +90,7 @@ curl -H "Content-Type: application/json" -XPUT localhost:9200/_cluster/settings 
 }'
 ```
 
-![](https://img.iszy.xyz/20210309190311.png?x-oss-process=style/big)
+![](https://img.iszy.xyz/20210309190311.png)
 
 ## 解锁已经锁定的索引
 

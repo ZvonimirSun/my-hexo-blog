@@ -115,7 +115,7 @@ Unraid 现在提供了一个创建 U 盘启动器的工具，还是比较傻瓜�
 
 我现在的配置如下。注意要在虚拟机和 docker 关闭的情况下修改。我这边万兆网卡是另外加的，默认网口没接，有个警告。
 
-![](https://img.iszy.xyz/1668967055987.png?x-oss-process=style/big)
+![](https://img.iszy.xyz/1668967055987.png)
 
 使用万兆网卡，最好把 MTU 改为 9000，电脑的万兆网卡也改成 9000，以提升网络性能。
 
@@ -133,11 +133,11 @@ ping tower.lcoal -l 8962
 
 转到 `Apps` 选项卡，点击 install 即可自动安装 `Community Applications` 插件。在内容更新完成后，这边将展示各种社区应用，在左侧分类菜单里选择 Language，找到 简体中文语言包，点击 install 安装即可。
 
-![](https://img.iszy.xyz/1668967574818.png?x-oss-process=style/big)
+![](https://img.iszy.xyz/1668967574818.png)
 
 接下来转到 `Settings` 选项卡，选择 `Display Settings`，此时已经可以选择中文语言了。
 
-![](https://img.iszy.xyz/1668967669343.png?x-oss-process=style/big)
+![](https://img.iszy.xyz/1668967669343.png)
 
 ### 4. 添加磁盘阵列
 
@@ -145,29 +145,29 @@ ping tower.lcoal -l 8962
 
 可以选择一到两块盘作为校验盘，一般一块就行了，安全要求不高可以不加，要求大于等于其他任意一块的容量，然后把其他盘添加到阵列里。
 
-![](https://img.iszy.xyz/1668967785490.png?x-oss-process=style/big)
+![](https://img.iszy.xyz/1668967785490.png)
 
 有固态可以添加到缓存池里。
 
-![](https://img.iszy.xyz/1668967990297.png?x-oss-process=style/big)
+![](https://img.iszy.xyz/1668967990297.png)
 
 完成后点击应用，点击启动阵列，此时校验盘会开始同步，容量越大，速度越慢。同步期间阵列访问速度也会很慢，推荐等到同步完成后再访问。点击格式化，完成阵列文件系统的格式化，阵列就可以使用了，不用等到同步完成。
 
-![](https://img.iszy.xyz/1668968076515.png?x-oss-process=style/big)
+![](https://img.iszy.xyz/1668968076515.png)
 
 ### 5. 添加共享
 
 转到 `共享` 标签页，点击添加共享。
 
-![](https://img.iszy.xyz/1668968286999.png?x-oss-process=style/big)
+![](https://img.iszy.xyz/1668968286999.png)
 
 按需要进行配置，我这边选择开启缓存。
 
-![](https://img.iszy.xyz/1668968418876.png?x-oss-process=style/big)
+![](https://img.iszy.xyz/1668968418876.png)
 
 然后自动开启了 SMB 共享，可以进行设置。
 
-![](https://img.iszy.xyz/1668968571494.png?x-oss-process=style/big)
+![](https://img.iszy.xyz/1668968571494.png)
 
 ## 五、后记
 

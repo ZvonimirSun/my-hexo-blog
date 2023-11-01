@@ -47,6 +47,6 @@ keytool -import -trustcacerts -alias nginx -file /opt/ssl/server.crt -keystore $
 > 3. `-keystore`，Java 证书库地址，默认地址为`$JAVA_HOME/jre/lib/security/cacerts`
 > 4. `-storepass`，Java 证书库密码，默认密码为`changeit`
 
-![](https://img.iszy.xyz/20210309181047.png?x-oss-process=style/big)
+![](https://img.iszy.xyz/20210309181047.png)
 
 这样就将证书导入到了该服务器的 Java 证书信任库中了，**涉及到这个证书的 Java 应用需要重启才能生效**。

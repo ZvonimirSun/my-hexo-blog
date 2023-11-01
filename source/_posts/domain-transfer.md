@@ -21,21 +21,21 @@ tags:
 
 首先在个人面板里点击这里。
 
-![](https://img.iszy.xyz/20190318212633.png?x-oss-process=style/big)
+![](https://img.iszy.xyz/20190318212633.png)
 
 ### 解锁域名
 
 如果域名是锁定状态，需要先点击这里进行解锁。
 
-![](https://img.iszy.xyz/20190318212645.png?x-oss-process=style/big)
+![](https://img.iszy.xyz/20190318212645.png)
 
 ### 获取转移码
 
 解锁后，点击这里获取转移码，namecheap 将会将转移码通过邮箱方式发送到你的邮箱。
 
-![](https://img.iszy.xyz/20190318212656.png?x-oss-process=style/big)
+![](https://img.iszy.xyz/20190318212656.png)
 
-![](https://img.iszy.xyz/20190318212708.png?x-oss-process=style/big)
+![](https://img.iszy.xyz/20190318212708.png)
 
 ## 转移域名
 
@@ -43,7 +43,7 @@ tags:
 
 首先需要有一套实名认证的模板，在国内需要实名认证这是绕不过去的，在这里添加信息模板并进行实名认证。
 
-![](https://img.iszy.xyz/20190318212719.png?x-oss-process=style/big)
+![](https://img.iszy.xyz/20190318212719.png)
 
 ### 进行域名转入
 
@@ -51,7 +51,7 @@ tags:
 
 在这里按格式填写你要转入的域名和之前获取的转移码。
 
-![](https://img.iszy.xyz/20190318212733.png?x-oss-process=style/big)
+![](https://img.iszy.xyz/20190318212733.png)
 
 ### 验证审核
 
@@ -65,7 +65,7 @@ tags:
 
 阿里云流程结束后，将会等待 namecheap 释放域名，你将会收到一封由 namecheap 发送的验证邮件。
 
-![](https://img.iszy.xyz/20190318212747.png?x-oss-process=style/big)
+![](https://img.iszy.xyz/20190318212747.png)
 
 邮件上说，你如果要取消转移，才去点那个链接，需要等 5 天没有收到消息，namecheap 才会释放域名。其实，经过我的验证，点击那个链接，将会有`approve`和`reject`两个选项。点击`approve`以后，namecheap 就会直接通过验证，释放域名，几秒后，就会收到阿里云域名转移成功的通知。
 

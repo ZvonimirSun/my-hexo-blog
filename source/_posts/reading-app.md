@@ -18,7 +18,7 @@ categories:
 
 ## 应用界面
 
-![](https://img.iszy.xyz/20190318220006.png?x-oss-process=style/big)
+![](https://img.iszy.xyz/20190318220006.png)
 
 ## 应用特点
 

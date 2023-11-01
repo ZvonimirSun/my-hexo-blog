@@ -22,17 +22,17 @@ tags:
 计算机\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace
 ```
 
-![](https://img.iszy.xyz/1671171351365.png?x-oss-process=style/big)
+![](https://img.iszy.xyz/1671171351365.png)
 
 这些每一条对应的就是一个文件夹。具体是什么文件夹，可以点进去看一下。
 
-![](https://img.iszy.xyz/1671171792200.png?x-oss-process=style/big)
+![](https://img.iszy.xyz/1671171792200.png)
 
 比如这条的值为`CLSID_ThisPCLocalDownloadsRegFolder`，对应的就是下载文件夹。
 
 **我们可以看到除了文件夹信息，还有一条 `HideIfEnabled` 的值，就是这条注册表值把文件夹隐藏了，删除掉刷新一下就可以显示出来。**
 
-![](https://img.iszy.xyz/1671171893640.png?x-oss-process=style/big)
+![](https://img.iszy.xyz/1671171893640.png)
 
 ## 移除文件夹
 
