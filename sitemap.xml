@@ -2,6 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.iszy.cc/posts/vite-hash-cache/</loc>
+    
+    <lastmod>2023-11-01</lastmod>
+    
+    
+  </url>
+  
+  <url>
     <loc>https://www.iszy.cc/posts/cesium-vue-problem/</loc>
     
     <lastmod>2023-10-26</lastmod>
@@ -1112,6 +1120,6 @@
 
   <url>
     <loc>https://www.iszy.cc/</loc>
-    <lastmod>2023-10-31</lastmod>
+    <lastmod>2023-11-01</lastmod>
   </url>
 </urlset>
