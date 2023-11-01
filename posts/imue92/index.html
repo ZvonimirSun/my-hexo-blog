@@ -35,13 +35,13 @@
 <meta property="og:site_name" content="随遇而安">
 <meta property="og:description" content="解决一下因为 Elasticsearch 节点磁盘使用率过高，导致 ES 索引无法写入的问题。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://img.iszy.xyz/20210309190311.png?x-oss-process=style/big">
+<meta property="og:image" content="https://img.iszy.xyz/20210309190311.png">
 <meta property="article:published_time" content="2020-09-15T10:31:15.000Z">
 <meta property="article:modified_time" content="2021-03-09T10:31:15.000Z">
 <meta property="article:author" content="Dirge">
 <meta property="article:tag" content="ElasticSearch">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img.iszy.xyz/20210309190311.png?x-oss-process=style/big">
+<meta name="twitter:image" content="https://img.iszy.xyz/20210309190311.png">
 
 
 <link rel="canonical" href="https://www.iszy.cc/posts/imue92/">
@@ -391,7 +391,7 @@
 </ul>
 <p>通过向<code>/_cluster/settings</code>提交<code>PUT</code>请求来修改，示例如下。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">curl -H <span class="string">&quot;Content-Type: application/json&quot;</span> -XPUT localhost:9200/_cluster/settings  -d <span class="string">&#x27;</span></span><br><span class="line"><span class="string">&#123;</span></span><br><span class="line"><span class="string">  &quot;transient&quot;: &#123;</span></span><br><span class="line"><span class="string">    &quot;cluster.routing.allocation.disk.watermark.low&quot;: &quot;90%&quot;,</span></span><br><span class="line"><span class="string">    &quot;cluster.routing.allocation.disk.watermark.high&quot;: &quot;95%&quot;,</span></span><br><span class="line"><span class="string">    &quot;cluster.routing.allocation.disk.watermark.flood_stage&quot;: &quot;98%&quot;,</span></span><br><span class="line"><span class="string">    &quot;cluster.info.update.interval&quot;: &quot;1m&quot;</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">&#125;&#x27;</span></span><br></pre></td></tr></table></figure>
-<p><img data-src="https://img.iszy.xyz/20210309190311.png?x-oss-process=style/big" alt="" /></p>
+<p><img data-src="https://img.iszy.xyz/20210309190311.png" alt="" /></p>
 <h2 id="解锁已经锁定的索引"><a class="markdownIt-Anchor" href="#解锁已经锁定的索引"></a> 解锁已经锁定的索引</h2>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl -H <span class="string">&quot;Content-Type: application/json&quot;</span> -XPUT http://localhost:9200/_cluster/settings -d <span class="string">&#x27;&#123;&quot;transient&quot;:&#123;&quot;cluster.routing.allocation.disk.threshold_enabled&quot;:false&#125;&#125;&#x27;</span></span><br><span class="line">curl -H <span class="string">&quot;Content-Type: application/json&quot;</span> -XPUT http://localhost:9200/_all/_settings -d <span class="string">&#x27;&#123;&quot;index.blocks.read_only_allow_delete&quot;:null&#125;&#x27;</span></span><br></pre></td></tr></table></figure>
 

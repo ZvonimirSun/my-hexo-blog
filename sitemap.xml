@@ -2,6 +2,71 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.iszy.cc/page/cmynetwork/</loc>
+    
+    <lastmod>2023-11-01</lastmod>
+    
+    
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.iszy.cc/page/freewhale/</loc>
+    
+    <lastmod>2023-11-01</lastmod>
+    
+    
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.iszy.cc/page/speed-test-collection/</loc>
+    
+    <lastmod>2023-11-01</lastmod>
+    
+    
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.iszy.cc/posts/add-or-remove-folders-in-explorer-win11/</loc>
+    
+    <lastmod>2023-11-01</lastmod>
+    
+    
+  </url>
+  
+  <url>
+    <loc>https://www.iszy.cc/posts/tc-light-hk-server-benchmark-20220407/</loc>
+    
+    <lastmod>2023-11-01</lastmod>
+    
+    
+  </url>
+  
+  <url>
+    <loc>https://www.iszy.cc/posts/unraid-plex-nvidia/</loc>
+    
+    <lastmod>2023-11-01</lastmod>
+    
+    
+  </url>
+  
+  <url>
+    <loc>https://www.iszy.cc/posts/unraid-start/</loc>
+    
+    <lastmod>2023-11-01</lastmod>
+    
+    
+  </url>
+  
+  <url>
     <loc>https://www.iszy.cc/posts/vite-hash-cache/</loc>
     
     <lastmod>2023-11-01</lastmod>
@@ -18,17 +83,6 @@
   </url>
   
   <url>
-    <loc>https://www.iszy.cc/page/freewhale/</loc>
-    
-    <lastmod>2023-10-12</lastmod>
-    
-    
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-    
-  </url>
-  
-  <url>
     <loc>https://www.iszy.cc/page/bgfw/</loc>
     
     <lastmod>2023-10-12</lastmod>
@@ -40,55 +94,9 @@
   </url>
   
   <url>
-    <loc>https://www.iszy.cc/page/speed-test-collection/</loc>
-    
-    <lastmod>2023-10-12</lastmod>
-    
-    
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.iszy.cc/page/cmynetwork/</loc>
-    
-    <lastmod>2023-01-31</lastmod>
-    
-    
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.iszy.cc/posts/unraid-plex-nvidia/</loc>
-    
-    <lastmod>2023-01-18</lastmod>
-    
-    
-  </url>
-  
-  <url>
-    <loc>https://www.iszy.cc/posts/add-or-remove-folders-in-explorer-win11/</loc>
-    
-    <lastmod>2022-12-16</lastmod>
-    
-    
-  </url>
-  
-  <url>
     <loc>https://www.iszy.cc/posts/remove-win11-amd-menu/</loc>
     
     <lastmod>2022-12-16</lastmod>
-    
-    
-  </url>
-  
-  <url>
-    <loc>https://www.iszy.cc/posts/unraid-start/</loc>
-    
-    <lastmod>2022-12-10</lastmod>
     
     
   </url>
@@ -233,14 +241,6 @@
     <loc>https://www.iszy.cc/posts/old-chromium-download/</loc>
     
     <lastmod>2022-07-14</lastmod>
-    
-    
-  </url>
-  
-  <url>
-    <loc>https://www.iszy.cc/posts/tc-light-hk-server-benchmark-20220407/</loc>
-    
-    <lastmod>2022-04-07</lastmod>
     
     
   </url>

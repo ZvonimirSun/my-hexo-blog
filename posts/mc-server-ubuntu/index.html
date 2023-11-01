@@ -35,10 +35,10 @@
 <meta property="og:site_name" content="随遇而安">
 <meta property="og:description" content="在此记录在 Ubuntu 16.04 搭建 Minecraft 服务器 1.13 的全过程。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://img.iszy.xyz/20190318214212.png?x-oss-process=style/big">
-<meta property="og:image" content="https://img.iszy.xyz/20190318214227.png?x-oss-process=style/big">
-<meta property="og:image" content="https://img.iszy.xyz/20190318214241.png?x-oss-process=style/big">
-<meta property="og:image" content="https://img.iszy.xyz/20190318214300.png?x-oss-process=style/big">
+<meta property="og:image" content="https://img.iszy.xyz/20190318214212.png">
+<meta property="og:image" content="https://img.iszy.xyz/20190318214227.png">
+<meta property="og:image" content="https://img.iszy.xyz/20190318214241.png">
+<meta property="og:image" content="https://img.iszy.xyz/20190318214300.png">
 <meta property="article:published_time" content="2018-08-05T04:47:10.000Z">
 <meta property="article:modified_time" content="2018-08-05T04:47:10.000Z">
 <meta property="article:author" content="Dirge">
@@ -46,7 +46,7 @@
 <meta property="article:tag" content="Linux">
 <meta property="article:tag" content="Minecraft">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img.iszy.xyz/20190318214212.png?x-oss-process=style/big">
+<meta name="twitter:image" content="https://img.iszy.xyz/20190318214212.png">
 
 
 <link rel="canonical" href="https://www.iszy.cc/posts/mc-server-ubuntu/">
@@ -367,15 +367,15 @@
 <h3 id="启动-minecraft"><a class="markdownIt-Anchor" href="#启动-minecraft"></a> 启动 Minecraft</h3>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -Xmx1024M -Xms1024M -jar server.jar nogui</span><br></pre></td></tr></table></figure>
 <p>如图所示，首次运行需要同意 EULA 协议。</p>
-<p><img data-src="https://img.iszy.xyz/20190318214212.png?x-oss-process=style/big" alt="" /></p>
+<p><img data-src="https://img.iszy.xyz/20190318214212.png" alt="" /></p>
 <p>下面编辑生成的<code>eula.txt</code>。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi eula.txt</span><br></pre></td></tr></table></figure>
 <p>如图所示，将<code>eula=false</code>改为<code>eula=true</code>。</p>
-<p><img data-src="https://img.iszy.xyz/20190318214227.png?x-oss-process=style/big" alt="" /></p>
+<p><img data-src="https://img.iszy.xyz/20190318214227.png" alt="" /></p>
 <p>再次启动，<code>-Xmx</code>和<code>-Xms</code>可以调整内存大小，请自行根据情况调整，内存太少将会卡顿严重。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -Xmx1024M -Xms1024M -jar server.jar nogui</span><br></pre></td></tr></table></figure>
 <p>如图所示，你的服务器已经启动成功，注意打开服务器端口。</p>
-<p><img data-src="https://img.iszy.xyz/20190318214241.png?x-oss-process=style/big" alt="" /></p>
+<p><img data-src="https://img.iszy.xyz/20190318214241.png" alt="" /></p>
 <p>按<code>Ctrl+C</code>可以中止服务器</p>
 <h3 id="打开服务器端口"><a class="markdownIt-Anchor" href="#打开服务器端口"></a> 打开服务器端口</h3>
 <p>使用如下语句打开服务器端口。</p>
@@ -391,7 +391,7 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service minecraft start</span><br></pre></td></tr></table></figure>
 <p>还可以使用如下语句</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">service minecraft stop #停止 Minecraft 服务</span><br><span class="line">service minecraft status # 查看 Minecraft 服务运行状态</span><br></pre></td></tr></table></figure>
-<p><img data-src="https://img.iszy.xyz/20190318214300.png?x-oss-process=style/big" alt="" /></p>
+<p><img data-src="https://img.iszy.xyz/20190318214300.png" alt="" /></p>
 <h2 id="后话"><a class="markdownIt-Anchor" href="#后话"></a> 后话</h2>
 <p>至此，已经成功在 Ubuntu 16.04 搭建了 Minecraft 服务器 1.13，可以尽情玩耍了。当然，需要获得更好的体验，还有更多调整需要进行。</p>
 

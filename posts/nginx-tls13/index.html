@@ -35,7 +35,7 @@
 <meta property="og:site_name" content="随遇而安">
 <meta property="og:description" content="早就听说有 TLS1.3 了，一直心痒痒，想折腾折腾试试。以前浏览器支持的不多，网上也没太多人试过，不太敢趟雷。现在有一些大型网站网站已经弄上了 TLS1.3，也有不少博主给自己的博客升级了 TLS1.3 了，留下了宝贵的经验。我也忍不住了，今天就来折腾一下看看。Openssl 1.1.1 LTS 已经发布，更新一下 TLS1.3 正式版。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://img.iszy.xyz/20190318215152.png?x-oss-process=style/big">
+<meta property="og:image" content="https://img.iszy.xyz/20190318215152.png">
 <meta property="og:image" content="https://img.iszy.xyz/20190318215203.png">
 <meta property="article:published_time" content="2018-08-12T11:39:14.000Z">
 <meta property="article:modified_time" content="2018-09-29T17:03:50.000Z">
@@ -45,7 +45,7 @@
 <meta property="article:tag" content="Nginx">
 <meta property="article:tag" content="TLS">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img.iszy.xyz/20190318215152.png?x-oss-process=style/big">
+<meta name="twitter:image" content="https://img.iszy.xyz/20190318215152.png">
 
 
 <link rel="canonical" href="https://www.iszy.cc/posts/nginx-tls13/">
@@ -393,7 +393,7 @@
 <p>最后使用<code>nginx -t</code>测试 nginx 配置的正确性。</p>
 <h3 id="成功"><a class="markdownIt-Anchor" href="#成功"></a> 成功</h3>
 <p>重启 Nginx，你会发现你的网站已经是 TLS1.3 连接了。</p>
-<p><img data-src="https://img.iszy.xyz/20190318215152.png?x-oss-process=style/big" alt="" /></p>
+<p><img data-src="https://img.iszy.xyz/20190318215152.png" alt="" /></p>
 <p><img data-src="https://img.iszy.xyz/20190318215203.png" alt="" /></p>
 <h3 id="一点问题"><a class="markdownIt-Anchor" href="#一点问题"></a> 一点问题</h3>
 <p>我原本使用的是 Nginx 1.14.0，现在升级到了 1.15.4，配置文件可能会报以下警告。当然，由于只是警告，并不会影响运行，只是我强迫症受不了。</p>
