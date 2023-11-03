@@ -2,6 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.iszy.cc/posts/docker-compose-yml-error/</loc>
+    
+    <lastmod>2023-11-03</lastmod>
+    
+    
+  </url>
+  
+  <url>
     <loc>https://www.iszy.cc/page/cmynetwork/</loc>
     
     <lastmod>2023-11-01</lastmod>
@@ -1120,6 +1128,6 @@
 
   <url>
     <loc>https://www.iszy.cc/</loc>
-    <lastmod>2023-11-01</lastmod>
+    <lastmod>2023-11-03</lastmod>
   </url>
 </urlset>

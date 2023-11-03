@@ -6,7 +6,7 @@
   <link href="https://www.iszy.cc/atom.xml" rel="self"/>
   
   <link href="https://www.iszy.cc/"/>
-  <updated>2023-11-01T05:00:54.000Z</updated>
+  <updated>2023-11-03T05:13:20.000Z</updated>
   <id>https://www.iszy.cc/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>迁移 Docker Compose 遇到 yaml 结构错误</title>
+    <link href="https://www.iszy.cc/posts/docker-compose-yml-error/"/>
+    <id>https://www.iszy.cc/posts/docker-compose-yml-error/</id>
+    <published>2023-11-03T04:51:48.000Z</published>
+    <updated>2023-11-03T05:13:20.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近在迁移服务器，遇到了一个问题。我原来一直使用的 docker-compose.yml 文件，迁移到新服务器上后，居然报错了。</p><span id="more"></span><h2 id="问题"><a class="markdownIt-Anchor" href="#问题"></a> 问题</h2><p>差不多是这样的错误</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yaml: unmarshal errors:</span><br><span class="line">  line 155: mapping key &quot;&lt;&lt;&quot; already defined at line 154</span><br><span class="line">  line 192: mapping key &quot;&lt;&lt;&quot; already defined at line 191</span><br></pre></td></tr></table></figure><p>那么来看下我的 docker-compose.yml 文件</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&quot;3.8&quot;</span></span><br><span class="line"><span class="attr">x-proxy:</span> <span class="string">&amp;default-proxy</span></span><br><span class="line">  <span class="attr">environment:</span></span><br><span class="line">    <span class="attr">http_proxy:</span> <span class="string">http://clash:10808</span></span><br><span class="line">    <span class="attr">https_proxy:</span> <span class="string">http://clash:10808</span></span><br><span class="line">  <span class="attr">depends_on:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">clash</span></span><br><span class="line">  <span class="attr">networks:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">proxy</span></span><br><span class="line"></span><br><span class="line"><span class="attr">x-timesync:</span> <span class="meta">&amp;time</span></span><br><span class="line">  <span class="attr">volumes:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">/etc/localtime:/etc/localtime:ro</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">/etc/timezone:/etc/timezone:ro</span></span><br><span class="line"></span><br><span class="line"><span class="attr">nginx:</span></span><br><span class="line">  <span class="string">&lt;&lt;:</span> <span class="string">*default-proxy</span></span><br><span class="line">  <span class="string">&lt;&lt;:</span> <span class="meta">*time</span></span><br></pre></td></tr></table></figure><p>这边就是给 nginx 的配置中插入了两段配置，分别是代理和时区。一直用下来都很正常，没出现过问题。</p><h2 id="解决"><a class="markdownIt-Anchor" href="#解决"></a> 解决</h2><p>两边唯一的区别就是 docker compose 的版本了。老服务器上的版本是 <code>2.4.1</code> 的，新服务器装了当前的最新版本，也就是 <code>2.21.0</code>。</p><p>经过一番搜索，总的来说是这样的。</p><p>根据 yaml 的规范，一个 key 像这样出现多次是不规范的。按照官方的写法，这里应该写成：</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">nginx:</span></span><br><span class="line">  <span class="string">&lt;&lt;:</span> [<span class="string">*default-proxy</span>, <span class="string">*time</span>]</span><br></pre></td></tr></table></figure><p>根据 docker compose 的相关 issue，在 2.17 版本时改进了 yaml 解析器，不再允许这种不规范的写法。</p><p>所以，这边只需要规范一下写法即可。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;最近在迁移服务器，遇到了一个问题。我原来一直使用的 docker-compose.yml 文件，迁移到新服务器上后，居然报错了。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="技巧" scheme="https://www.iszy.cc/categories/%E6%8A%80%E5%B7%A7/"/>
+    
+    
+    <category term="Docker" scheme="https://www.iszy.cc/tags/Docker/"/>
+    
+    <category term="Docker Compose" scheme="https://www.iszy.cc/tags/Docker-Compose/"/>
+    
+  </entry>
   
   <entry>
     <title>解决Vite打包产生的hash缓存失效问题</title>
@@ -456,31 +479,6 @@
     <category term="Benchmark" scheme="https://www.iszy.cc/tags/Benchmark/"/>
     
     <category term="香港" scheme="https://www.iszy.cc/tags/%E9%A6%99%E6%B8%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>zsh (anon):12: character not in range</title>
-    <link href="https://www.iszy.cc/posts/zsh-character-not-in-range/"/>
-    <id>https://www.iszy.cc/posts/zsh-character-not-in-range/</id>
-    <published>2022-04-07T06:30:15.000Z</published>
-    <updated>2022-11-15T01:23:48.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>运行<code>source ~/.zshrc</code>，报错<code>zsh (anon):12: character not in range</code></p><span id="more"></span><p>这是由于环境变量 LC_ALL 和 LANG 未设置的缘故。</p><p>只需要在<code>~/.zshrc</code>文件前面加入</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> LC_ALL=C.UTF-8</span><br><span class="line"><span class="built_in">export</span> LANG=C.UTF-8</span><br></pre></td></tr></table></figure><p>然后运行<code>source ~/.zshrc</code>即可。</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;运行&lt;code&gt;source ~/.zshrc&lt;/code&gt;，报错&lt;code&gt;zsh (anon):12: character not in range&lt;/code&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="技巧" scheme="https://www.iszy.cc/categories/%E6%8A%80%E5%B7%A7/"/>
-    
-    
-    <category term="Linux" scheme="https://www.iszy.cc/tags/Linux/"/>
-    
-    <category term="Zsh" scheme="https://www.iszy.cc/tags/Zsh/"/>
-    
-    <category term="Locale" scheme="https://www.iszy.cc/tags/Locale/"/>
     
   </entry>
   
