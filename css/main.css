@@ -3074,6 +3074,7 @@ header.header {
   margin-right: 1em !important;
   border-radius: 50%;
   transition: transform 1s ease-out;
+  object-fit: cover;
 }
 #links .card .card-header {
   font-style: italic;
