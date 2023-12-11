@@ -19,7 +19,7 @@ date: 2022-02-05 01:49:02
 可以通过以下语句拉取。
 
 ```bash
-docker pull ghcr.io/zvonimirsun/nginx:stable-alpine-brotli
+docker pull ghcr.io/zvonimirsun/nginx-brotli:stable-alpine
 ```
 
 我这边选用了最新 stable 版本的 Nginx，因为不会一直关注 Nginx 版本，更新可能会不及时。
@@ -36,26 +36,25 @@ docker pull ghcr.io/zvonimirsun/nginx:stable-alpine-brotli
 - `openssl-dev`: ssl 模块需要用到
 - `zlib-dev`: gzip 模块需要用到
 - `linux-headers`: with-file-ato 需要用到
-- configure 参数完全使用了官方镜像参数，仅添加了 add-dynamic-module 用于添加 brotli
+- brotli-dev: 用于编译 brotli 模块
+- configure 参数完全使用了官方镜像参数，仅添加了 add-dynamic-module 用于添加 brotl。可以执行 `docker run --rm nginx:stable-alpine nginx -V` 查看最新的编译参数，然后替换掉我的。
 
 **Dockerfile:**
 
 ```Dockerfile
-ARG version=1.20.2
+FROM nginx:stable-alpine-slim AS builder
 
-FROM nginx:${version}-alpine AS builder
-
-ARG version
+ARG NGINX_VERSION
 
 WORKDIR /root/
 
-RUN apk add --update --no-cache build-base git pcre-dev openssl-dev zlib-dev linux-headers \
-    && wget http://nginx.org/download/nginx-${version}.tar.gz \
-    && tar zxf nginx-${version}.tar.gz \
+RUN apk add --update --no-cache build-base git pcre-dev openssl-dev zlib-dev linux-headers brotli-dev \
+    && wget http://nginx.org/download/nginx-${NGINX_VERSION}.tar.gz \
+    && tar zxf nginx-${NGINX_VERSION}.tar.gz \
     && git clone https://github.com/google/ngx_brotli.git \
     && cd ngx_brotli \
     && git submodule update --init --recursive \
-    && cd ../nginx-${version} \
+    && cd ../nginx-${NGINX_VERSION} \
     && ./configure \
     --add-dynamic-module=../ngx_brotli \
     --prefix=/etc/nginx \
@@ -102,16 +101,14 @@ RUN apk add --update --no-cache build-base git pcre-dev openssl-dev zlib-dev lin
     --with-ld-opt=-Wl,--as-needed,-O1,--sort-common \
     && make modules
 
-FROM nginx:${version}-alpine
-
-ARG version
+FROM nginx:stable-alpine
 
 ENV TIME_ZONE=Asia/Shanghai
 
 RUN ln -snf /usr/share/zoneinfo/$TIME_ZONE /etc/localtime && echo $TIME_ZONE > /etc/timezone
 
-COPY --from=builder /root/nginx-${version}/objs/ngx_http_brotli_filter_module.so /usr/lib/nginx/modules/
-COPY --from=builder /root/nginx-${version}/objs/ngx_http_brotli_static_module.so /usr/lib/nginx/modules/
+COPY --from=builder /root/nginx-${NGINX_VERSION}/objs/ngx_http_brotli_filter_module.so /usr/lib/nginx/modules/
+COPY --from=builder /root/nginx-${NGINX_VERSION}/objs/ngx_http_brotli_static_module.so /usr/lib/nginx/modules/
 ```
 
 ## 三、启用 Brotli
