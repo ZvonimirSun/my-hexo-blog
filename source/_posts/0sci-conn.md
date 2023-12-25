@@ -28,9 +28,8 @@ permalink: /page/bgfw/
 | --------------------------------------------------- | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [FreeWhale 自由鲸 ⭐](/page/freewhale/)【长期优惠】 | 性价比，主流节点超多，小众节点                             | [官网传送门](https://url.iszy.xyz/freewhale) / [测速](/page/speed-test-collection/#freewhale-%E8%87%AA%E7%94%B1%E9%B2%B8)(2023-10-12)            |
 | [DuangCloud ⭐](#二-duangcloud)【双节优惠】         | 性价比，专线，主流节点                                     | [官网传送门](https://url.iszy.xyz/duangcloud) / [测速](/page/speed-test-collection/#duangcloud)(2023-07-25)                                      |
-| [MEET](#三-meet)                                    | 性价比，主流节点，超小流量套餐                             | [官网传送门](https://url.iszy.xyz/fspeed) / [测速](/page/speed-test-collection/#meet)(2023-01-17)                                                |
 | [CMYNetwork 红莓网络](/page/cmynetwork/)            | IEPL/IPLC 专线，Trojan，主流节点多，小众节点，福利共享账号 | [官网传送门](https://url.iszy.xyz/cmynetwork) / [测速](/page/speed-test-collection/#cmynetwork-%E7%BA%A2%E8%8E%93%E7%BD%91%E7%BB%9C)(2023-01-21) |
-| [Gatern](#五-gatern)                                | 性价比，IPLC 专线，主流节点，小众节点多，流媒体            | [官网传送门](https://url.iszy.xyz/gatern) / [测速](/page/speed-test-collection/#gatern)(2023-09-05)                                              |
+| [Gatern](#四-gatern)                                | 性价比，IPLC 专线，主流节点，小众节点多，流媒体            | [官网传送门](https://url.iszy.xyz/gatern) / [测速](/page/speed-test-collection/#gatern)(2023-09-05)                                              |
 
 点击前往查看测速: **[机场测速集合](/page/speed-test-collection/)**
 
@@ -153,33 +152,7 @@ permalink: /page/bgfw/
   - 工单方式
   - tg 群：[DuangCloud 客户群](https://t.me/duangcloud)
 
-## 三、MEET
-
-[官网传送门](https://url.iszy.xyz/fspeed)
-
-[⭐⭐ 测速 ⭐⭐](/page/speed-test-collection/#MEET) (2023-01-17)
-
-### （一）简介
-
-**MEET** 是一家专做按量付费套餐的商家，推荐中低流量用户选择。可以了解一下，买个最便宜的套餐试试看。
-
-- 主打按量付费，套餐有效期长，为中低流量用户准备
-- 主流客户端 SSR 订阅支持
-- 节点高速稳定
-- 不限制设备数，但仅限个人使用，禁止滥用
-
-### （二）套餐
-
-> 套餐不能叠加使用，请根据自己的使用情况进行选择。
-
-| 套餐         | 有效期 | 流量 | 价格   |
-| ------------ | ------ | ---- | ------ |
-| 一年套餐     | 360 天 | 800G | 239 元 |
-| 半年套餐     | 180 天 | 300G | 119 元 |
-| 季度套餐     | 90 天  | 100G | 55 元  |
-| 10G 流量月包 | 30 天  | 10G  | 6 元   |
-
-## 四、CMYNetwork 红莓网络
+## 三、CMYNetwork 红莓网络
 
 [官网传送门](https://url.iszy.xyz/cmynetwork)
 
@@ -266,7 +239,7 @@ permalink: /page/bgfw/
 </tr>
 </table>
 
-## 五、Gatern
+## 四、Gatern
 
 [官网传送门](https://url.iszy.xyz/gatern)
 
