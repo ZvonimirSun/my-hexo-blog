@@ -1,5 +1,5 @@
 ---
-title: 【评测2023】优质SS/SSR/Trojan/V2Ray机场推荐【双节优惠】
+title: 【评测2023】优质SS/SSR/Trojan/V2Ray机场推荐【春节优惠】
 date: 2019-01-03 03:11:50
 categories:
   - 其他
@@ -27,9 +27,9 @@ permalink: /page/bgfw/
 | 机场名称（点击了解更多）                            | 关键词                                                     | 操作                                                                                                                                             |
 | --------------------------------------------------- | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [FreeWhale 自由鲸 ⭐](/page/freewhale/)【长期优惠】 | 性价比，主流节点超多，小众节点                             | [官网传送门](https://url.iszy.xyz/freewhale) / [测速](/page/speed-test-collection/#freewhale-%E8%87%AA%E7%94%B1%E9%B2%B8)(2023-10-12)            |
-| [DuangCloud ⭐](#二-duangcloud)【双节优惠】         | 性价比，专线，主流节点                                     | [官网传送门](https://url.iszy.xyz/duangcloud) / [测速](/page/speed-test-collection/#duangcloud)(2023-07-25)                                      |
+| [DuangCloud ⭐](#二-duangcloud)【春节优惠】         | 性价比，专线，主流节点                                     | [官网传送门](https://url.iszy.xyz/duangcloud) / [测速](/page/speed-test-collection/#duangcloud)(2023-07-25)                                      |
 | [CMYNetwork 红莓网络](/page/cmynetwork/)            | IEPL/IPLC 专线，Trojan，主流节点多，小众节点，福利共享账号 | [官网传送门](https://url.iszy.xyz/cmynetwork) / [测速](/page/speed-test-collection/#cmynetwork-%E7%BA%A2%E8%8E%93%E7%BD%91%E7%BB%9C)(2023-01-21) |
-| [Gatern](#四-gatern)                                | 性价比，IPLC 专线，主流节点，小众节点多，流媒体            | [官网传送门](https://url.iszy.xyz/gatern) / [测速](/page/speed-test-collection/#gatern)(2023-09-05)                                              |
+| [Gatern](#四-gatern)【春节优惠】                    | 性价比，IPLC 专线，主流节点，小众节点多，流媒体            | [官网传送门](https://url.iszy.xyz/gatern) / [测速](/page/speed-test-collection/#gatern)(2023-09-05)                                              |
 
 点击前往查看测速: **[机场测速集合](/page/speed-test-collection/)**
 
@@ -49,7 +49,7 @@ permalink: /page/bgfw/
 
 **￥ 124** 及以上套餐可用，C 套餐可叠加
 
-**95 折**礼遇码：`2023HappyO`
+**95 折**礼遇码：`Wintermute`
 
 ### （二）简介
 
@@ -109,8 +109,8 @@ permalink: /page/bgfw/
 
 > 转官方优惠公告
 
-- **9 折**优惠码: `happydays`
-- **8 折**优惠码（mini 不可用，限年付）: `happyhappydays`
+- **9 折**优惠码: `duangweb.com`
+- **8 折**优惠码（限年付）: `portal.dc-site5.com`
 
 数量有限，用完为止，每人限用一次
 注: 续费请点【续费按钮】，不要覆盖掉您没用完的订阅哦~
@@ -256,6 +256,13 @@ permalink: /page/bgfw/
 (新购续费均可使用 只能用于季付及以上套餐)
 
 > 转官方优惠
+
+**2024 年的第一次优惠**
+
+- 优惠码 1: `IAB38FR0OQ`
+  - **85 折优惠**，适合半年付及以下产品，流量包可用
+- 优惠码 2: `Y3JX61ET6A`
+  - **75 折优惠**，适合年付及其以上产品，流量包不算包年产品
 
 **充值获取赠金**:
 
