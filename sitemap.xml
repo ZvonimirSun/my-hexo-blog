@@ -2,9 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.iszy.cc/page/bgfw/</loc>
+    <loc>https://www.iszy.cc/page/freewhale/</loc>
     
-    <lastmod>2024-02-03</lastmod>
+    <lastmod>2024-02-05</lastmod>
     
     
     <changefreq>daily</changefreq>
@@ -13,9 +13,9 @@
   </url>
   
   <url>
-    <loc>https://www.iszy.cc/page/freewhale/</loc>
+    <loc>https://www.iszy.cc/page/bgfw/</loc>
     
-    <lastmod>2024-02-03</lastmod>
+    <lastmod>2024-02-05</lastmod>
     
     
     <changefreq>daily</changefreq>
@@ -26,7 +26,7 @@
   <url>
     <loc>https://www.iszy.cc/page/speed-test-collection/</loc>
     
-    <lastmod>2023-12-25</lastmod>
+    <lastmod>2024-02-05</lastmod>
     
     
     <changefreq>daily</changefreq>
@@ -150,7 +150,7 @@
   </url>
   
   <url>
-    <loc>https://www.iszy.cc/posts/css-percentagewidth-autoheight/</loc>
+    <loc>https://www.iszy.cc/posts/d/</loc>
     
     <lastmod>2022-11-15</lastmod>
     
@@ -158,7 +158,7 @@
   </url>
   
   <url>
-    <loc>https://www.iszy.cc/posts/d/</loc>
+    <loc>https://www.iszy.cc/posts/css-percentagewidth-autoheight/</loc>
     
     <lastmod>2022-11-15</lastmod>
     
@@ -1136,6 +1136,6 @@
 
   <url>
     <loc>https://www.iszy.cc/</loc>
-    <lastmod>2024-02-03</lastmod>
+    <lastmod>2024-02-05</lastmod>
   </url>
 </urlset>
