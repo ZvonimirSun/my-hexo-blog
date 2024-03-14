@@ -39,7 +39,7 @@ permalink: /page/bgfw/
 | 机场名称（点击查看详细介绍）                             | 操作                                                                                                                        |
 | -------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
 | [FreeWhale 自由鲸](/page/freewhale/)【长期优惠】         | [点我前往官网](https://url.iszy.xyz/freewhale)<br>[仅看价格测速](#一-freewhale-自由鲸)<br>[详细介绍](/page/freewhale/)      |
-| [Gatern](/page/gatern/)【本站专属优惠】                  | [点我前往官网](https://url.iszy.xyz/gatern)<br>[仅看价格测速](#二-Gatern)<br>[详细介绍](/page/gatern)                       |
+| [Gatern](/page/gatern/)【本站专属优惠】                  | [点我前往官网](https://url.iszy.xyz/gatern)<br>[仅看价格测速](#二-gatern)<br>[详细介绍](/page/gatern)                       |
 | [DuangCloud](/page/duangcloud/)                          | [点我前往官网](https://url.iszy.xyz/duangcloud)<br>[仅看价格测速](#三-duangcloud)<br>[详细介绍](/page/duangcloud/)          |
 | [CMYNetwork 红莓网络](/page/cmynetwork/)【本站专属优惠】 | [点我前往官网](https://url.iszy.xyz/cmynetwork)<br>[仅看价格测速](#四-cmynetwork-红莓网络)<br>[详细介绍](/page/cmynetwork/) |
 
