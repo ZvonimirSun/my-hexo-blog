@@ -38,10 +38,9 @@ jobs:
       - uses: nikeee/setup-pandoc@v1
       - name: 编译应用 🔧
         run: |
-          yarn global add hexo-cli
-          hexo clean
-          hexo g
-          hexo algolia
+          yarn clean
+          yarn build
+          yarn algolia
         env:
           ALGOLIA_ADMIN_API_KEY: ${{ secrets.ALGOLIA_ADMIN_API_KEY }}
       - name: 部署应用

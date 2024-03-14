@@ -5,7 +5,7 @@
   "scripts": {
     "build": "hexo generate",
     "clean": "hexo clean",
-    "deploy": "hexo deploy",
+    "algolia": "hexo algolia",
     "server": "hexo server",
     "up": "taze minor -I"
   },
@@ -16,7 +16,7 @@
     "@waline/hexo-next": "^3.0.1",
     "chalk": "^4.1.2",
     "hexo": "^6.3.0",
-    "hexo-algoliasearch": "^1.1.0",
+    "hexo-algoliasearch": "^2.0.1",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-category": "^2.0.0",
     "hexo-generator-feed": "^3.0.0",
