@@ -34,14 +34,14 @@ permalink: /page/bgfw/
 
 ## 目录
 
+本文主要是大致展示了下几个机场的优惠信息、价格与测速情况，详细介绍可以点到各自的详细介绍页面中查看。
+
 | 机场名称（点击查看详细介绍）                             | 操作                                                                                                                        |
 | -------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
 | [FreeWhale 自由鲸](/page/freewhale/)【长期优惠】         | [点我前往官网](https://url.iszy.xyz/freewhale)<br>[仅看价格测速](#一-freewhale-自由鲸)<br>[详细介绍](/page/freewhale/)      |
 | [Gatern](/page/gatern/)【本站专属优惠】                  | [点我前往官网](https://url.iszy.xyz/gatern)<br>[仅看价格测速](#二-Gatern)<br>[详细介绍](/page/gatern)                       |
 | [DuangCloud](/page/duangcloud/)                          | [点我前往官网](https://url.iszy.xyz/duangcloud)<br>[仅看价格测速](#三-duangcloud)<br>[详细介绍](/page/duangcloud/)          |
 | [CMYNetwork 红莓网络](/page/cmynetwork/)【本站专属优惠】 | [点我前往官网](https://url.iszy.xyz/cmynetwork)<br>[仅看价格测速](#四-cmynetwork-红莓网络)<br>[详细介绍](/page/cmynetwork/) |
-
-点击前往查看测速: **[机场测速集合](/page/speed-test-collection/)**
 
 ## 一、FreeWhale 自由鲸
 
