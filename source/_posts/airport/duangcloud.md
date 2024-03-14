@@ -30,6 +30,8 @@ permalink: /page/duangcloud/
 
 本文要介绍是一家稳定性相当出众的 SS 机场，名为 DuangCloud。节点不算太多，但胜在都是专线，价格合适，有需要的可以考虑一下。
 
+<!--more-->
+
 ## DuangCloud 机场特色
 
 [点我前往官网](https://url.iszy.xyz/duangcloud)
