@@ -2,7 +2,7 @@
 title: 下载老版本 Chromium 的正确姿势
 date: 2022-07-14 11:18:03
 categories:
-  - 其他
+  - 技巧
 tags:
   - Chrome
   - Chromium
