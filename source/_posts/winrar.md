@@ -2,7 +2,7 @@
 title: 经典压缩软件WinRAR 6.10官方中文无广告正式版
 date: 2018-10-11 21:12:00
 categories:
-  - 其他
+  - 分享
 tags:
   - WinRAR
   - 无广告

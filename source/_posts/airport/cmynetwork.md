@@ -2,7 +2,7 @@
 title: 优质机场推荐--CMYNetwork【本站专属优惠】
 date: 2019-04-11 11:47:31
 categories:
-  - 其他
+  - 分享
 tags:
   - 翻墙
   - 科学上网

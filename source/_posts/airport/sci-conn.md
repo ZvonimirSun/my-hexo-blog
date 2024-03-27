@@ -2,7 +2,7 @@
 title: 【评测2024】优质SS/SSR/Trojan/V2Ray机场推荐
 date: 2019-01-03 03:11:50
 categories:
-  - 其他
+  - 分享
 tags:
   - 翻墙
   - 科学上网
