@@ -28,30 +28,33 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"www.iszy.cc","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.19.2","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":true,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":true,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"algolia":{"appID":"1UJ2W38EIN","apiKey":"c0cf4d0a9659a45dd3a38becbe6b6f73","indexName":"iszy_blog","hits":{"per_page":10}}}</script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.19.2/source/js/config.min.js"></script>
 
-    <meta name="description" content="解决一下因为 Elasticsearch 节点磁盘使用率过高，导致 ES 索引无法写入的问题。">
+    <meta name="description" content="在日常开发工作中，要连接不同的环境需要连接不同的 VPN 服务，OpenVPN 默认只会添加一个 Tap 网卡，只能来回切换 VPN，很不方便。所以我们只需要能够增加更多的 Tap 网卡即可。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Elasticsearch 节点磁盘使用率过高，导致ES索引无法写入">
-<meta property="og:url" content="https://www.iszy.cc/posts/imue92/">
+<meta property="og:title" content="OpenVPN同时连接多个VPN服务">
+<meta property="og:url" content="https://www.iszy.cc/posts/multi-openvpn/">
 <meta property="og:site_name" content="随遇而安">
-<meta property="og:description" content="解决一下因为 Elasticsearch 节点磁盘使用率过高，导致 ES 索引无法写入的问题。">
+<meta property="og:description" content="在日常开发工作中，要连接不同的环境需要连接不同的 VPN 服务，OpenVPN 默认只会添加一个 Tap 网卡，只能来回切换 VPN，很不方便。所以我们只需要能够增加更多的 Tap 网卡即可。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://img.iszy.xyz/20210309190311.png">
-<meta property="article:published_time" content="2020-09-15T10:31:15.000Z">
-<meta property="article:modified_time" content="2021-03-09T10:31:15.000Z">
+<meta property="og:image" content="https://img.iszy.xyz/1711520900617.png">
+<meta property="og:image" content="https://img.iszy.xyz/1711521772122.png">
+<meta property="og:image" content="https://img.iszy.xyz/1711521749124.png">
+<meta property="og:image" content="https://img.iszy.xyz/1711522259063.png">
+<meta property="article:published_time" content="2024-03-27T06:13:47.000Z">
+<meta property="article:modified_time" content="2024-03-27T07:03:27.000Z">
 <meta property="article:author" content="Dirge">
-<meta property="article:tag" content="ElasticSearch">
+<meta property="article:tag" content="OpenVPN">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img.iszy.xyz/20210309190311.png">
+<meta name="twitter:image" content="https://img.iszy.xyz/1711520900617.png">
 
 
-<link rel="canonical" href="https://www.iszy.cc/posts/imue92/">
+<link rel="canonical" href="https://www.iszy.cc/posts/multi-openvpn/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.iszy.cc/posts/imue92/","path":"posts/imue92/","title":"Elasticsearch 节点磁盘使用率过高，导致ES索引无法写入"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.iszy.cc/posts/multi-openvpn/","path":"posts/multi-openvpn/","title":"OpenVPN同时连接多个VPN服务"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Elasticsearch 节点磁盘使用率过高，导致ES索引无法写入 | 随遇而安</title>
+<title>OpenVPN同时连接多个VPN服务 | 随遇而安</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-E60YKKHF8Y"></script>
   <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-E60YKKHF8Y","only_pageview":false,"measure_protocol_api_secret":null}</script>
@@ -151,7 +154,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%9F%E5%9B%A0"><span class="nav-number">1.</span> <span class="nav-text"> 原因</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95"><span class="nav-number">2.</span> <span class="nav-text"> 解决方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B0%83%E6%95%B4%E7%89%A9%E7%90%86%E7%8E%AF%E5%A2%83"><span class="nav-number">2.1.</span> <span class="nav-text"> 调整物理环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B0%83%E6%95%B4-es-%E9%85%8D%E7%BD%AE"><span class="nav-number">2.2.</span> <span class="nav-text"> 调整 es 配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%9A%E8%BF%87%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E9%9C%80%E8%A6%81%E9%87%8D%E5%90%AF"><span class="nav-number">2.2.1.</span> <span class="nav-text"> 通过配置文件(需要重启)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%9A%E8%BF%87%E6%8E%A5%E5%8F%A3%E6%97%A0%E9%9C%80%E9%87%8D%E5%90%AF"><span class="nav-number">2.2.2.</span> <span class="nav-text"> 通过接口(无需重启)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E9%94%81%E5%B7%B2%E7%BB%8F%E9%94%81%E5%AE%9A%E7%9A%84%E7%B4%A2%E5%BC%95"><span class="nav-number">3.</span> <span class="nav-text"> 解锁已经锁定的索引</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84%E6%96%B9%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text"> 最简单的方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%89%8B%E5%8A%A8%E6%93%8D%E4%BD%9C"><span class="nav-number">2.</span> <span class="nav-text"> 手动操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B-tap-adapter"><span class="nav-number">2.1.</span> <span class="nav-text"> 查看 Tap adapter</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B0%E5%A2%9E-tap-adapter"><span class="nav-number">2.2.</span> <span class="nav-text"> 新增 Tap adapter</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A0%E9%99%A4-tap-adapter"><span class="nav-number">2.3.</span> <span class="nav-text"> 删除 Tap adapter</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#openvpn-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E6%8C%87%E5%AE%9A%E7%BD%91%E5%8D%A1"><span class="nav-number">2.4.</span> <span class="nav-text"> OpenVPN 配置文件指定网卡</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -203,38 +206,10 @@
   </div>
   <ul class="popular-posts">
     <li class="popular-posts-item">
-      <a class="popular-posts-link" href="/posts/6x5bzj/" rel="bookmark">
-        <time class="popular-posts-time">2021-02-26</time>
+      <a class="popular-posts-link" href="/posts/openvpn-connect-2-3/" rel="bookmark">
+        <time class="popular-posts-time">2024-03-27</time>
         <br>
-      解决ElasticSearch查询记录超过10000时的异常
-      </a>
-    </li>
-    <li class="popular-posts-item">
-      <a class="popular-posts-link" href="/posts/vite-hash-cache/" rel="bookmark">
-        <time class="popular-posts-time">2023-11-01</time>
-        <br>
-      解决Vite打包产生的hash缓存失效问题
-      </a>
-    </li>
-    <li class="popular-posts-item">
-      <a class="popular-posts-link" href="/posts/janusgraph/" rel="bookmark">
-        <time class="popular-posts-time">2019-07-02</time>
-        <br>
-      JanusGraph 图数据库搭建
-      </a>
-    </li>
-    <li class="popular-posts-item">
-      <a class="popular-posts-link" href="/posts/gmail-and-mailgun/" rel="bookmark">
-        <time class="popular-posts-time">2018-07-06</time>
-        <br>
-      (转载)整合 Gmail 与 Mailgun 实现免费域名邮箱 — 香菇肥牛的博客
-      </a>
-    </li>
-    <li class="popular-posts-item">
-      <a class="popular-posts-link" href="/posts/telegram-sensitive-content/" rel="bookmark">
-        <time class="popular-posts-time">2020-01-05</time>
-        <br>
-      最新Telegram关闭敏感内容过滤方法
+      OpenVPN连接2.3及更老版本服务端问题
       </a>
     </li>
   </ul>
@@ -258,7 +233,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.iszy.cc/posts/imue92/">
+    <link itemprop="mainEntityOfPage" href="https://www.iszy.cc/posts/multi-openvpn/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://gravatar.cdn.iszy.xyz/avatar/5012e410377c7a93d14f7bf31aeeb7fd?d=mm">
@@ -271,12 +246,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Elasticsearch 节点磁盘使用率过高，导致ES索引无法写入 | 随遇而安">
+      <meta itemprop="name" content="OpenVPN同时连接多个VPN服务 | 随遇而安">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Elasticsearch 节点磁盘使用率过高，导致ES索引无法写入
+          OpenVPN同时连接多个VPN服务
         </h1>
 
         <div class="post-meta-container">
@@ -286,15 +261,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2020-09-15 18:31:15" itemprop="dateCreated datePublished" datetime="2020-09-15T18:31:15+08:00">2020-09-15</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2021-03-09 18:31:15" itemprop="dateModified" datetime="2021-03-09T18:31:15+08:00">2021-03-09</time>
+      <time title="创建时间：2024-03-27 14:13:47 / 修改时间：15:03:27" itemprop="dateCreated datePublished" datetime="2024-03-27T14:13:47+08:00">2024-03-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -315,8 +284,8 @@
     </span>
     <span class="post-meta-item-text">Waline：</span>
   
-    <a title="waline" href="/posts/imue92/#waline" itemprop="discussionUrl">
-      <span class="post-comments-count waline-comment-count" data-path="/posts/imue92/" itemprop="commentCount"></span>
+    <a title="waline" href="/posts/multi-openvpn/#waline" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" data-path="/posts/multi-openvpn/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -326,7 +295,7 @@
         <i class="far fa-eye"></i>
       </span>
       <span class="post-meta-item-text">阅读次数：</span>
-      <span class="waline-pageview-count" data-path="/posts/imue92/"></span>
+      <span class="waline-pageview-count" data-path="/posts/multi-openvpn/"></span>
     </span>
   
     <span class="post-meta-break"></span>
@@ -335,7 +304,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>652</span>
+      <span>482</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -352,48 +321,38 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>解决一下因为 Elasticsearch 节点磁盘使用率过高，导致 ES 索引无法写入的问题。</p>
+    <div class="post-body" itemprop="articleBody"><p>在日常开发工作中，要连接不同的环境需要连接不同的 VPN 服务，OpenVPN 默认只会添加一个 Tap 网卡，只能来回切换 VPN，很不方便。所以我们只需要能够增加更多的 Tap 网卡即可。</p>
 <span id="more"></span>
-<h2 id="原因"><a class="markdownIt-Anchor" href="#原因"></a> 原因</h2>
-<p>经过查阅<span class="exturl" data-url="aHR0cHM6Ly93d3cuZWxhc3RpYy5jby9ndWlkZS9lbi9lbGFzdGljc2VhcmNoL3JlZmVyZW5jZS9jdXJyZW50L21vZHVsZXMtY2x1c3Rlci5odG1sI2Rpc2stYmFzZWQtc2hhcmQtYWxsb2NhdGlvbg==">官方文档<i class="fa fa-external-link-alt"></i></span>，我们可以看到 ES 的默认配置是当集群中的某个节点磁盘达到使用率为 <code>85%</code> 的时候，就不会在该节点进行创建副本，当磁盘使用率达到 <code>90%</code> 的时候，尝试将该节点的副本重分配到其他节点。当磁盘使用率达到 <code>95%</code> 的时候，当前节点的所有索引将被设置为只读索引。</p>
-<blockquote>
-<ul>
-<li><code>cluster.routing.allocation.disk.threshold_enabled</code><br />
-(Dynamic) Defaults to . Set to to disable the disk allocation decider. truefalse</li>
-<li><code>cluster.routing.allocation.disk.watermark.low</code><br />
-(Dynamic) Controls the low watermark for disk usage. It defaults to , meaning that Elasticsearch will not allocate shards to nodes that have more than 85% disk used. It can also be set to an absolute byte value (like ) to prevent Elasticsearch from allocating shards if less than the specified amount of space is available. This setting has no effect on the primary shards of newly-created indices but will prevent their replicas from being allocated. 85%500mb</li>
-<li><code>cluster.routing.allocation.disk.watermark.high</code><br />
-(Dynamic) Controls the high watermark. It defaults to , meaning that Elasticsearch will attempt to relocate shards away from a node whose disk usage is above 90%. It can also be set to an absolute byte value (similarly to the low watermark) to relocate shards away from a node if it has less than the specified amount of free space. This setting affects the allocation of all shards, whether previously allocated or not. 90%</li>
-<li><code>cluster.routing.allocation.disk.watermark.enable_for_single_data_node</code><br />
-(Static) For a single data node, the default is to disregard disk watermarks when making an allocation decision. This is deprecated behavior and will be changed in 8.0. This setting can be set to to enable the disk watermarks for a single data node cluster (will become default in 8.0). true</li>
-<li><code>cluster.routing.allocation.disk.watermark.flood_stage</code><br />
-(Dynamic) Controls the flood stage watermark, which defaults to 95%. Elasticsearch enforces a read-only index block () on every index that has one or more shards allocated on the node, and that has at least one disk exceeding the flood stage. This setting is a last resort to prevent nodes from running out of disk space. The index block is automatically released when the disk utilization falls below the high watermark.index.blocks.read_only_allow_delete</li>
-</ul>
-</blockquote>
-<h2 id="解决方法"><a class="markdownIt-Anchor" href="#解决方法"></a> 解决方法</h2>
-<h3 id="调整物理环境"><a class="markdownIt-Anchor" href="#调整物理环境"></a> 调整物理环境</h3>
-<p>扩大磁盘，或者删除部分数据来空出一些磁盘，这个没什么好多说的。</p>
-<h3 id="调整-es-配置"><a class="markdownIt-Anchor" href="#调整-es-配置"></a> 调整 es 配置</h3>
-<h4 id="通过配置文件需要重启"><a class="markdownIt-Anchor" href="#通过配置文件需要重启"></a> 通过配置文件(需要重启)</h4>
-<p>更改配置文件<code>elasticsearch.yml</code>，调高锁定的阈值，需要重启 ES。</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">cluster.routing.allocation.disk.threshold_enabled:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">cluster.routing.allocation.disk.watermark.low:</span> <span class="number">90</span><span class="string">%</span></span><br><span class="line"><span class="attr">cluster.routing.allocation.disk.watermark.high:</span> <span class="number">95</span><span class="string">%</span></span><br><span class="line"><span class="attr">cluster.routing.allocation.disk.watermark.flood_stage:</span> <span class="number">98</span><span class="string">%</span></span><br></pre></td></tr></table></figure>
-<h4 id="通过接口无需重启"><a class="markdownIt-Anchor" href="#通过接口无需重启"></a> 通过接口(无需重启)</h4>
-<p>通过 ES api 调整配置。transient 临时更改，persistent 是永久更改。</p>
-<ul>
-<li>
-<p>永久更改 <code>persistent</code></p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;persistent&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;cluster.routing.allocation.disk.watermark.low&quot;</span><span class="punctuation">:</span> <span class="string">&quot;90%&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;cluster.routing.allocation.disk.watermark.high&quot;</span><span class="punctuation">:</span> <span class="string">&quot;95%&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;cluster.routing.allocation.disk.watermark.flood_stage&quot;</span><span class="punctuation">:</span> <span class="string">&quot;98%&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;cluster.info.update.interval&quot;</span><span class="punctuation">:</span> <span class="string">&quot;1m&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>临时更改 <code>transient</code></p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;transient&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;cluster.routing.allocation.disk.watermark.low&quot;</span><span class="punctuation">:</span> <span class="string">&quot;90%&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;cluster.routing.allocation.disk.watermark.high&quot;</span><span class="punctuation">:</span> <span class="string">&quot;95%&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;cluster.routing.allocation.disk.watermark.flood_stage&quot;</span><span class="punctuation">:</span> <span class="string">&quot;98%&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;cluster.info.update.interval&quot;</span><span class="punctuation">:</span> <span class="string">&quot;1m&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>通过向<code>/_cluster/settings</code>提交<code>PUT</code>请求来修改，示例如下。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">curl -H <span class="string">&quot;Content-Type: application/json&quot;</span> -XPUT localhost:9200/_cluster/settings  -d <span class="string">&#x27;</span></span><br><span class="line"><span class="string">&#123;</span></span><br><span class="line"><span class="string">  &quot;transient&quot;: &#123;</span></span><br><span class="line"><span class="string">    &quot;cluster.routing.allocation.disk.watermark.low&quot;: &quot;90%&quot;,</span></span><br><span class="line"><span class="string">    &quot;cluster.routing.allocation.disk.watermark.high&quot;: &quot;95%&quot;,</span></span><br><span class="line"><span class="string">    &quot;cluster.routing.allocation.disk.watermark.flood_stage&quot;: &quot;98%&quot;,</span></span><br><span class="line"><span class="string">    &quot;cluster.info.update.interval&quot;: &quot;1m&quot;</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">&#125;&#x27;</span></span><br></pre></td></tr></table></figure>
-<p><img data-src="https://img.iszy.xyz/20210309190311.png" alt="" /></p>
-<h2 id="解锁已经锁定的索引"><a class="markdownIt-Anchor" href="#解锁已经锁定的索引"></a> 解锁已经锁定的索引</h2>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl -H <span class="string">&quot;Content-Type: application/json&quot;</span> -XPUT http://localhost:9200/_cluster/settings -d <span class="string">&#x27;&#123;&quot;transient&quot;:&#123;&quot;cluster.routing.allocation.disk.threshold_enabled&quot;:false&#125;&#125;&#x27;</span></span><br><span class="line">curl -H <span class="string">&quot;Content-Type: application/json&quot;</span> -XPUT http://localhost:9200/_all/_settings -d <span class="string">&#x27;&#123;&quot;index.blocks.read_only_allow_delete&quot;:null&#125;&#x27;</span></span><br></pre></td></tr></table></figure>
+<p>接下来的操作都是以安装完 OpenVPN 为前提的，如果没有安装，可以前往<span class="exturl" data-url="aHR0cHM6Ly9vcGVudnBuLm5ldC9jb21tdW5pdHktZG93bmxvYWRzLw==">官网<i class="fa fa-external-link-alt"></i></span>进行安装。</p>
+<p>默认的 OpenVPN 安装目录为 <code>C:\Program Files\OpenVPN</code>，这边就以默认目录为例。</p>
+<h2 id="最简单的方法"><a class="markdownIt-Anchor" href="#最简单的方法"></a> 最简单的方法</h2>
+<p><img data-src="https://img.iszy.xyz/1711520900617.png" alt="" /></p>
+<p>其实最新的 OpenVPN 版本为了用户方便考虑，在开始菜单里面提供了添加新 Tap 网卡的快捷命令，<strong>只要点击就会自动添加一个新的 Tap 网卡</strong>，网卡会自动命名。需要同时连接几个 OpenVPN 服务，就增加几个网卡，OpenVPN 会自动使用空闲的 Tap 网卡进行连接。</p>
+<p>打开这个快捷方式的属性就可以看到，其实这个就是包装了一个创建 Tap 网卡的命令。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Program Files\OpenVPN\bin\tapctl.exe create --hwid root\tap0901</span><br></pre></td></tr></table></figure>
+<h2 id="手动操作"><a class="markdownIt-Anchor" href="#手动操作"></a> 手动操作</h2>
+<p>在<strong>管理员权限</strong>的 PowerShell 中执行</p>
+<p>进入 OpenVPN 安装目录</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd &quot;C:\Program Files\OpenVPN&quot;</span><br></pre></td></tr></table></figure>
+<h3 id="查看-tap-adapter"><a class="markdownIt-Anchor" href="#查看-tap-adapter"></a> 查看 Tap adapter</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.\bin\tapctl.exe list</span><br></pre></td></tr></table></figure>
+<p>输出</p>
+<p><img data-src="https://img.iszy.xyz/1711521772122.png" alt="" /></p>
+<p>或者使用</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.\bin\openvpn.exe --show-adapters</span><br></pre></td></tr></table></figure>
+<p>输出</p>
+<p><img data-src="https://img.iszy.xyz/1711521749124.png" alt="" /></p>
+<h3 id="新增-tap-adapter"><a class="markdownIt-Anchor" href="#新增-tap-adapter"></a> 新增 Tap adapter</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.\bin\tapctl.exe create --name &quot;test&quot; --hwid root\tap0901</span><br></pre></td></tr></table></figure>
+<p>可以通过 <code>name</code> 参数指定网卡名称，网卡名称不能重复。创建成功后，将会返回创建的网卡 id。</p>
+<p>查看一下列表，可以看到网卡已经正常添加。</p>
+<p><img data-src="https://img.iszy.xyz/1711522259063.png" alt="" /></p>
+<h3 id="删除-tap-adapter"><a class="markdownIt-Anchor" href="#删除-tap-adapter"></a> 删除 Tap adapter</h3>
+<p>如果 Tap 网卡多了，或者不想要那些之前默认的网卡，可以删除掉。删除成功不会返回内容。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.\bin\tapctl.exe delete &quot;test&quot;</span><br></pre></td></tr></table></figure>
+<h3 id="openvpn-配置文件指定网卡"><a class="markdownIt-Anchor" href="#openvpn-配置文件指定网卡"></a> OpenVPN 配置文件指定网卡</h3>
+<p>可以添加以下配置到 ovpn 文件中，可以按照名称指定使用的网卡。注意，如果该名称的网卡不存在将会报错。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dev-node test</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -411,7 +370,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://www.iszy.cc/posts/imue92/" title="Elasticsearch 节点磁盘使用率过高，导致ES索引无法写入">https://www.iszy.cc/posts/imue92/</a>
+      <a href="https://www.iszy.cc/posts/multi-openvpn/" title="OpenVPN同时连接多个VPN服务">https://www.iszy.cc/posts/multi-openvpn/</a>
   </li>
   <li class="post-copyright-license">
       <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
@@ -420,21 +379,18 @@
 </div>
 
           <div class="post-tags">
-              <a href="/tags/ElasticSearch/" rel="tag"><i class="fa fa-tag"></i> ElasticSearch</a>
+              <a href="/tags/OpenVPN/" rel="tag"><i class="fa fa-tag"></i> OpenVPN</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/posts/kmznu4/" rel="prev" title="直接修改和替换Jar包中文件的几种方式">
-                  <i class="fa fa-angle-left"></i> 直接修改和替换Jar包中文件的几种方式
+                <a href="/posts/openvpn-connect-2-3/" rel="prev" title="OpenVPN连接2.3及更老版本服务端问题">
+                  <i class="fa fa-angle-left"></i> OpenVPN连接2.3及更老版本服务端问题
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/posts/y4i72s/" rel="next" title="Office 365 家庭版开车圆满结束~">
-                  Office 365 家庭版开车圆满结束~ <i class="fa fa-angle-right"></i>
-                </a>
             </div>
           </div>
     </footer>
@@ -522,9 +478,9 @@
 
 
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/quicklink@2.3.0/dist/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>
-  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":false,"delay":true,"timeout":3000,"priority":true,"url":"https://www.iszy.cc/posts/imue92/"}</script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":false,"delay":true,"timeout":3000,"priority":true,"url":"https://www.iszy.cc/posts/multi-openvpn/"}</script>
   <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.19.2/source/js/third-party/quicklink.min.js"></script>
-<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-CN","enable":true,"serverURL":"https://wl.iszy.xyz","cssUrl":"https://jsdelivr.cdn.iszy.xyz/npm/@waline/client@v2.15.8/dist/waline.css","commentCount":false,"pageview":true,"libUrl":"https://jsdelivr.cdn.iszy.xyz/npm/@waline/client@v2.15.8/dist/waline.js","locale":{"placeholder":"本站支持匿名评论，无需登录~(●'◡'●)\n与文章无关的留言请前往本站留言板，谢谢配合~"},"emoji":["https://jsdelivr.cdn.iszy.xyz/gh/zvonimirsun/emojis@1.0.3/bilibili-xhl"],"meta":["nick","mail","link"],"requiredMeta":["nick"],"wordLimit":0,"login":"enable","pageSize":10,"dark":"auto","el":"#waline","comment":true,"path":"/posts/imue92/"}</script>
+<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-CN","enable":true,"serverURL":"https://wl.iszy.xyz","cssUrl":"https://jsdelivr.cdn.iszy.xyz/npm/@waline/client@v2.15.8/dist/waline.css","commentCount":false,"pageview":true,"libUrl":"https://jsdelivr.cdn.iszy.xyz/npm/@waline/client@v2.15.8/dist/waline.js","locale":{"placeholder":"本站支持匿名评论，无需登录~(●'◡'●)\n与文章无关的留言请前往本站留言板，谢谢配合~"},"emoji":["https://jsdelivr.cdn.iszy.xyz/gh/zvonimirsun/emojis@1.0.3/bilibili-xhl"],"meta":["nick","mail","link"],"requiredMeta":["nick"],"wordLimit":0,"login":"enable","pageSize":10,"dark":"auto","el":"#waline","comment":true,"path":"/posts/multi-openvpn/"}</script>
 <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/@waline/client@v2.15.8/dist/waline.css">
 <script>
 document.addEventListener('page:loaded', () => {
