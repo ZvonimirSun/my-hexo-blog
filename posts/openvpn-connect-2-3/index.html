@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+<link rel="preconnect" href="https://fonts.cdn.iszy.xyz" crossorigin>
+<link rel="preconnect" href="https://jsdelivr.cdn.iszy.xyz" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="google-site-verification" content="NVbOnZWipX7gWLG4NVJzJWVD16F6okyUB1NDN6mNoIo">
+  <meta name="msvalidate.01" content="10AA475F381BF9E4C280F1E2E0B3F280">
+  <meta name="yandex-verification" content="3ec99cb3451ef771">
+  <meta name="baidu-site-verification" content="tV7s6Tu88n">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.cdn.iszy.xyz/css?family=Lato:300,300italic,400,400italic,700,700italic%7CJetBrains+Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css" integrity="sha256-wiz7ZSCn/btzhjKDQBms9Hx4sSeUYsDrTLg7roPstac=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.css" integrity="sha256-gkQVf8UKZgQ0HyuxL/VnacadJ+D2Kox2TCEBuNQg5+w=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.iszy.cc","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.19.2","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":true,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":true,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"algolia":{"appID":"1UJ2W38EIN","apiKey":"c0cf4d0a9659a45dd3a38becbe6b6f73","indexName":"iszy_blog","hits":{"per_page":10}}}</script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.19.2/source/js/config.min.js"></script>
+
+    <meta name="description" content="最近由于需要连接几个公司不同的 OpenVPN 服务，各家都提供了自己的定制 OpenVPN 客户端，不胜其烦。而且个人不太喜欢使用旧版本的客户端，理论上使用最新的 OpenVPN 客户端没有道理不能连接，遂研究开始。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="OpenVPN连接2.3及更老版本服务端问题">
+<meta property="og:url" content="https://www.iszy.cc/posts/openvpn-connect-2-3/">
+<meta property="og:site_name" content="随遇而安">
+<meta property="og:description" content="最近由于需要连接几个公司不同的 OpenVPN 服务，各家都提供了自己的定制 OpenVPN 客户端，不胜其烦。而且个人不太喜欢使用旧版本的客户端，理论上使用最新的 OpenVPN 客户端没有道理不能连接，遂研究开始。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img.iszy.xyz/1711506949529.png">
+<meta property="og:image" content="https://img.iszy.xyz/1711510301173.png">
+<meta property="article:published_time" content="2024-03-27T03:38:34.000Z">
+<meta property="article:modified_time" content="2024-03-27T03:39:18.000Z">
+<meta property="article:author" content="Dirge">
+<meta property="article:tag" content="OpenVPN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img.iszy.xyz/1711506949529.png">
+
+
+<link rel="canonical" href="https://www.iszy.cc/posts/openvpn-connect-2-3/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.iszy.cc/posts/openvpn-connect-2-3/","path":"posts/openvpn-connect-2-3/","title":"OpenVPN连接2.3及更老版本服务端问题"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>OpenVPN连接2.3及更老版本服务端问题 | 随遇而安</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E60YKKHF8Y"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-E60YKKHF8Y","only_pageview":false,"measure_protocol_api_secret":null}</script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.19.2/source/js/third-party/analytics/google-analytics.min.js"></script>
+
+
+
+
+
+
+
+<link rel="dns-prefetch" href="https://wl.iszy.xyz">
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="随遇而安" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">随遇而安</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">在自由的空气中漂浮</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">175</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">6</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">141</span></a></li><li class="menu-item menu-item-友链"><a href="/links/" rel="section"><i class="fa fa-link fa-fw"></i>友链</a></li><li class="menu-item menu-item-优质机场推荐"><a href="/page/bgfw/" rel="section"><i class="fa fa-globe-asia fa-fw"></i>优质机场推荐</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container"></div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container">
+  <div class="algolia-stats"><hr></div>
+  <div class="algolia-hits"></div>
+  <div class="algolia-pagination"></div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98"><span class="nav-number">1.</span> <span class="nav-text"> 问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98"><span class="nav-number">2.</span> <span class="nav-text"> 解决问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E4%B8%80tls-handshake-failed"><span class="nav-number">2.1.</span> <span class="nav-text"> 问题一：TLS handshake failed</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E4%BA%8C-data-cipher"><span class="nav-number">2.2.</span> <span class="nav-text"> 问题二: data-cipher</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93%E4%B8%80%E4%B8%8B"><span class="nav-number">3.</span> <span class="nav-text"> 总结一下</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Dirge"
+      src="https://gravatar.cdn.iszy.xyz/avatar/5012e410377c7a93d14f7bf31aeeb7fd?d=mm">
+  <p class="site-author-name" itemprop="name">Dirge</p>
+  <div class="site-description" itemprop="description">生活吐槽 & 学习记录</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">141</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">175</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="cc-license animated" itemprop="license">
+    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><img src="https://jsdelivr.cdn.iszy.xyz/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></span>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+        <div class="pjax">
+        <div class="sidebar-inner sidebar-post-related">
+          <div class="animated">
+              <div class="links-of-blogroll-title"><i class="fa fa-signs-post fa-fw"></i>
+    相关文章
+  </div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/posts/a/" rel="bookmark">
+        <time class="popular-posts-time">2021-01-12</time>
+        <br>
+      (转载)低微漏洞处理办法记录
+      </a>
+    </li>
+  </ul>
+
+          </div>
+        </div>
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.iszy.cc/posts/openvpn-connect-2-3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://gravatar.cdn.iszy.xyz/avatar/5012e410377c7a93d14f7bf31aeeb7fd?d=mm">
+      <meta itemprop="name" content="Dirge">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="随遇而安">
+      <meta itemprop="description" content="生活吐槽 & 学习记录">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="OpenVPN连接2.3及更老版本服务端问题 | 随遇而安">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          OpenVPN连接2.3及更老版本服务端问题
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2024-03-27 11:38:34 / 修改时间：11:39:18" itemprop="dateCreated datePublished" datetime="2024-03-27T11:38:34+08:00">2024-03-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E5%B7%A7/" itemprop="url" rel="index"><span itemprop="name">技巧</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/posts/openvpn-connect-2-3/#waline" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" data-path="/posts/openvpn-connect-2-3/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-item" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="waline-pageview-count" data-path="/posts/openvpn-connect-2-3/"></span>
+    </span>
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.4k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>5 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>最近由于需要连接几个公司不同的 OpenVPN 服务，各家都提供了自己的定制 OpenVPN 客户端，不胜其烦。而且个人不太喜欢使用旧版本的客户端，理论上使用最新的 OpenVPN 客户端没有道理不能连接，遂研究开始。</p>
+<span id="more"></span>
+<h2 id="问题"><a class="markdownIt-Anchor" href="#问题"></a> 问题</h2>
+<p>一般情况下，需要连接的 OpenVPN 服务端版本越老，由于各种安全限制逐渐收紧，老版本使用的安全协议逐渐不受支持，问题也就越多。</p>
+<p>这里我需要连接的最老的 OpenVPN 版本是 2.1.1 的，使用的客户端是文章编写时<span class="exturl" data-url="aHR0cHM6Ly9vcGVudnBuLm5ldC9jb21tdW5pdHktZG93bmxvYWRzLw==">最新的 OpenVPN 开源客户端<i class="fa fa-external-link-alt"></i></span> 2.6.10 版本。</p>
+<p>直接使用公司提供的 ovpn 配置文件进行连接，不出意料的报错失败了。</p>
+<p>点这里<a href="#%E6%80%BB%E7%BB%93%E4%B8%80%E4%B8%8B">直接看结论</a></p>
+<h2 id="解决问题"><a class="markdownIt-Anchor" href="#解决问题"></a> 解决问题</h2>
+<h3 id="问题一tls-handshake-failed"><a class="markdownIt-Anchor" href="#问题一tls-handshake-failed"></a> 问题一：TLS handshake failed</h3>
+<p>先看一下连接出现的报错。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">2024-03-27 10:29:54 Received fatal SSL alert: handshake failure</span><br><span class="line">2024-03-27 10:29:54 OpenSSL: error:0A000410:SSL routines::ssl/tls alert handshake failure:SSL alert number 40</span><br><span class="line">2024-03-27 10:29:54 TLS_ERROR: BIO read tls_read_plaintext error</span><br><span class="line">2024-03-27 10:29:54 TLS Error: TLS object -&gt; incoming plaintext read error</span><br><span class="line">2024-03-27 10:29:54 TLS Error: TLS handshake failed</span><br><span class="line">2024-03-27 10:29:54 Fatal TLS error (check_tls_errors_co), restarting</span><br><span class="line">2024-03-27 10:29:54 SIGUSR1[soft,tls-error] received, process restarting</span><br><span class="line">2024-03-27 10:29:54 MANAGEMENT: &gt;STATE:1711506594,RECONNECTING,tls-error,,,,,</span><br></pre></td></tr></table></figure>
+<p>从这边的报错可以看到，是 TLS 协商握手直接就失败了。</p>
+<p>经过相关搜索，在 OpenVPN Community 的 Wiki 中的 <span class="exturl" data-url="aHR0cHM6Ly9jb21tdW5pdHkub3BlbnZwbi5uZXQvb3BlbnZwbi93aWtpL0hhcmRlbmluZyNVc2VvZi0tdGxzLWNpcGhlcg==">tls-cipher<i class="fa fa-external-link-alt"></i></span> 配置部分提到了可能的原因。<strong>在 OpenVPN 2.3.2 版本之前，只有 TLSv1.0 RSA cipher 可用。在 OpenVPN 2.4 版本后，对默认的 cipher 列表添加了新的限制。</strong></p>
+<p><img data-src="https://img.iszy.xyz/1711506949529.png" alt="" /></p>
+<p>经过尝试，在 <strong>ovpn 配置中增加如下内容</strong>，使用 <strong>OpenVPN 2.4 版本</strong>能够正常进行连接。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tls-cipher DEFAULT:!EXP:!LOW</span><br></pre></td></tr></table></figure>
+<p>或</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tls-cipher DEFAULT</span><br></pre></td></tr></table></figure>
+<h3 id="问题二-data-cipher"><a class="markdownIt-Anchor" href="#问题二-data-cipher"></a> 问题二: data-cipher</h3>
+<p>虽然加上上面的配置在 OpenVPN 2.4 可以正常连接了，但是在 OpenVPN 2.6.10 上仍然有问题没有解决。</p>
+<p>看看新的日志</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">2024-03-27 10:47:26 MANAGEMENT: &gt;STATE:1711507646,RESOLVE,,,,,,</span><br><span class="line">2024-03-27 10:47:26 TCP/UDP: Preserving recently used remote address: [AF_INET]xxx.xxx.xxx.xxx:xxxx</span><br><span class="line">2024-03-27 10:47:26 Socket Buffers: R=[65536-&gt;65536] S=[65536-&gt;65536]</span><br><span class="line">2024-03-27 10:47:26 Attempting to establish TCP connection with [AF_INET]xxx.xxx.xxx.xxx:xxxx</span><br><span class="line">2024-03-27 10:47:26 MANAGEMENT: &gt;STATE:1711507646,TCP_CONNECT,,,,,,</span><br><span class="line">2024-03-27 10:47:26 TCP connection established with [AF_INET]xxx.xxx.xxx.xxx:xxxx</span><br><span class="line">2024-03-27 10:47:26 TCPv4_CLIENT link local: (not bound)</span><br><span class="line">2024-03-27 10:47:26 TCPv4_CLIENT link remote: [AF_INET]xxx.xxx.xxx.xxx:xxxx</span><br><span class="line">2024-03-27 10:47:26 MANAGEMENT: &gt;STATE:1711507646,WAIT,,,,,,</span><br><span class="line">2024-03-27 10:47:26 MANAGEMENT: &gt;STATE:1711507646,AUTH,,,,,,</span><br><span class="line">2024-03-27 10:47:26 TLS: Initial packet from [AF_INET]xxx.xxx.xxx.xxx:xxxx, sid=7a8a0685 8d7eb18c</span><br><span class="line">2024-03-27 10:47:26 VERIFY OK: depth=1, C=CN, ST=XX, L=XX, O=XX, OU=ovpn, CN=XX, name=ovpn, emailAddress=XX@XX.XX</span><br><span class="line">2024-03-27 10:47:26 VERIFY KU OK</span><br><span class="line">2024-03-27 10:47:26 Validating certificate extended key usage</span><br><span class="line">2024-03-27 10:47:26 ++ Certificate has EKU (str) TLS Web Server Authentication, expects TLS Web Server Authentication</span><br><span class="line">2024-03-27 10:47:26 VERIFY EKU OK</span><br><span class="line">2024-03-27 10:47:26 VERIFY OK: depth=0, C=CN, ST=XX, L=XX, O=XX, OU=ovpn, CN=XX, name=ovpn, emailAddress=XX@XX.XX</span><br><span class="line">2024-03-27 10:47:26 Connection reset, restarting [0]</span><br><span class="line">2024-03-27 10:47:26 SIGUSR1[soft,connection-reset] received, process restarting</span><br><span class="line">2024-03-27 10:47:26 MANAGEMENT: &gt;STATE:1711507646,RECONNECTING,connection-reset,,,,,</span><br><span class="line">2024-03-27 10:47:26 Restart pause, 1 second(s)</span><br></pre></td></tr></table></figure>
+<p>这里很奇怪，证书验证正确，但是连接断开了。</p>
+<p>从这里看不出来，那就从老版本的连接日志里看看。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Wed Mar 27 11:02:31 2024 Data Channel Encrypt: Cipher &#x27;BF-CBC&#x27; initialized with 128 bit key</span><br><span class="line">Wed Mar 27 11:02:31 2024 Data Channel Encrypt: Using 160 bit message hash &#x27;SHA1&#x27; for HMAC authentication</span><br><span class="line">Wed Mar 27 11:02:31 2024 Data Channel Decrypt: Cipher &#x27;BF-CBC&#x27; initialized with 128 bit key</span><br><span class="line">Wed Mar 27 11:02:31 2024 Data Channel Decrypt: Using 160 bit message hash &#x27;SHA1&#x27; for HMAC authentication</span><br><span class="line">Wed Mar 27 11:02:31 2024 Control Channel: TLSv1, cipher TLSv1/SSLv3 AES256-SHA, 2048 bit RSA</span><br></pre></td></tr></table></figure>
+<p>从这里我们可以看到除了简历 TCP 连接的握手，还有一个数据加密的 Cipher，这里的这个 BF-CBC 就是一个比较老旧的不安全的协议，应当早就已经被默认禁用了。</p>
+<p>根据<span class="exturl" data-url="aHR0cHM6Ly9jb21tdW5pdHkub3BlbnZwbi5uZXQvb3BlbnZwbi93aWtpL0NpcGhlck5lZ290aWF0aW9u">官方关于密码协商的 Wiki 部分<i class="fa fa-external-link-alt"></i></span>，在 2.2 及更早的版本，似乎没有配置可以指定数据加密使用的 Cipher；从 2.3 版本开始新增了 <code>cipher</code> 配置项用于指定数据加密使用的 Cipher；从 <strong>2.5 版本</strong>开始，需要使用新配置 <code>data-ciphers</code>来指定一组可用的数据加密 Cipher。</p>
+<p>这里我就尝试将<code>cipher</code>配置为<code>BF-CBC</code>并没有作用，按照文档，只有服务端和客户端都配置了<code>cipher</code>才行，我这边服务端才 2.1.1 版本显然是无法实现的。</p>
+<p>转而添加以下配置进行测试。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data-ciphers BF-CBC</span><br></pre></td></tr></table></figure>
+<p>这个同样报错了，属于配置错误，都不进行连接了。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">2024-03-27 11:24:06 Note: --cipher is not set. OpenVPN versions before 2.5 defaulted to BF-CBC as fallback when cipher negotiation failed in this case. If you need this fallback please add &#x27;--data-ciphers-fallback BF-CBC&#x27; to your configuration and/or add BF-CBC to --data-ciphers.</span><br><span class="line">2024-03-27 11:24:06 Unsupported cipher in --data-ciphers: BF-CBC</span><br><span class="line">Options error: --data-ciphers list contains unsupported ciphers or is too long.</span><br><span class="line">Use --help for more information.</span><br></pre></td></tr></table></figure>
+<p>可以看到 <code>BF-CBC</code> 不支持，想来应该是被禁用了。</p>
+<p>经过了一些搜索，在 OpenVPN 2.6 版本需要添加以下配置，就可以正常连接了。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">providers legacy default</span><br></pre></td></tr></table></figure>
+<p>在 OpenVPN 2.6 的<span class="exturl" data-url="aHR0cHM6Ly9vcGVudnBuLm5ldC9jb21tdW5pdHktcmVzb3VyY2VzL3JlZmVyZW5jZS1tYW51YWwtZm9yLW9wZW52cG4tMi02Lw==">使用手册<i class="fa fa-external-link-alt"></i></span>中，找到了对这个配置项的说明，但没有详细内容。</p>
+<p><img data-src="https://img.iszy.xyz/1711510301173.png" alt="" /></p>
+<h2 id="总结一下"><a class="markdownIt-Anchor" href="#总结一下"></a> 总结一下</h2>
+<p>这边测试了两个版本的 OpenVPN 客户端。</p>
+<p>在 OpenVPN 2.4 版本客户端的 ovpn 配置中需要添加</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tls-cipher DEFAULT:!EXP:!LOW</span><br></pre></td></tr></table></figure>
+<p>在 OpenVPN 2.6 版本客户端的 ovpn 配置中需要添加</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tls-cipher DEFAULT:!EXP:!LOW</span><br><span class="line">data-ciphers BF-CBC</span><br><span class="line">providers legacy default</span><br></pre></td></tr></table></figure>
+<p>即可正常连接 2.3 及更老版本的 OpenVPN，可能需要根据服务端配置进行更多的调整，以实际情况为准。</p>
+<p>如有问题，请不吝指正。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Dirge
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.iszy.cc/posts/openvpn-connect-2-3/" title="OpenVPN连接2.3及更老版本服务端问题">https://www.iszy.cc/posts/openvpn-connect-2-3/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/OpenVPN/" rel="tag"><i class="fa fa-tag"></i> OpenVPN</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/alioss-img-bed/" rel="prev" title="利用阿里云OSS搭建图床">
+                  <i class="fa fa-angle-left"></i> 利用阿里云OSS搭建图床
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="waline"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2017 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Dirge</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">108k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">6:33</span>
+  </span>
+</div>
+  <div class="powered-by">由 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZw==">NexT.Gemini</span> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/@next-theme/pjax@0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.js" integrity="sha256-+2+qOqR8CKoHh/AsVR9k2qaDBKWjYNC2nozhYmv5j9k=" crossorigin="anonymous"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.19.2/source/js/comments.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.19.2/source/js/utils.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.19.2/source/js/next-boot.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.19.2/source/js/pjax.min.js"></script>
+
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/algoliasearch@4.22.1/dist/algoliasearch-lite.umd.js" integrity="sha256-pxkGFjfnFWYGOtV9uhCWK/spKiGS0Z7gVDKYm39LyfM=" crossorigin="anonymous"></script>
+<script src="https://jsdelivr.cdn.iszy.xyz/npm/instantsearch.js@4.64.2/dist/instantsearch.production.min.js" integrity="sha256-/DLulTBQ8KQ7xGOs8mrQ6FgKsknJpjCGAjFhjfjc8yo=" crossorigin="anonymous"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.19.2/source/js/third-party/search/algolia-search.min.js"></script>
+
+  <script class="next-config" data-name="pdf" type="application/json">{"object_url":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/pdfobject@2.2.12/pdfobject.min.js","integrity":"sha256-g2xji1rlE3KsGVClvuxTbcR0Kn2+wtQADSff2Tbb4zA="},"url":"/lib/pdf/web/viewer"}</script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.19.2/source/js/third-party/tags/pdf.min.js"></script>
+
+
+
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.19.2/source/js/third-party/fancybox.min.js"></script>
+
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.19.2/source/js/third-party/pace.min.js"></script>
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.9/dist/katex.min.css" integrity="sha256-UF1fgpAiu3tPJN/uCqEUHNe7pnr+QR0SQDNfgglgtcM=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.9/dist/contrib/copy-tex.min.js","integrity":"sha256-Us54+rSGDSTvIhKKUs4kygE2ipA0RXpWWh0/zLqw3bs="}}</script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.19.2/source/js/third-party/math/katex.min.js"></script>
+
+
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/quicklink@2.3.0/dist/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":false,"delay":true,"timeout":3000,"priority":true,"url":"https://www.iszy.cc/posts/openvpn-connect-2-3/"}</script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.19.2/source/js/third-party/quicklink.min.js"></script>
+<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-CN","enable":true,"serverURL":"https://wl.iszy.xyz","cssUrl":"https://jsdelivr.cdn.iszy.xyz/npm/@waline/client@v2.15.8/dist/waline.css","commentCount":false,"pageview":true,"libUrl":"https://jsdelivr.cdn.iszy.xyz/npm/@waline/client@v2.15.8/dist/waline.js","locale":{"placeholder":"本站支持匿名评论，无需登录~(●'◡'●)\n与文章无关的留言请前往本站留言板，谢谢配合~"},"emoji":["https://jsdelivr.cdn.iszy.xyz/gh/zvonimirsun/emojis@1.0.3/bilibili-xhl"],"meta":["nick","mail","link"],"requiredMeta":["nick"],"wordLimit":0,"login":"enable","pageSize":10,"dark":"auto","el":"#waline","comment":true,"path":"/posts/openvpn-connect-2-3/"}</script>
+<link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/@waline/client@v2.15.8/dist/waline.css">
+<script>
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.waline.el).then(() =>
+    NexT.utils.getScript(CONFIG.waline.libUrl, { condition: window.Waline })
+  ).then(() => 
+    Waline.init(Object.assign({}, CONFIG.waline,{ el: document.querySelector(CONFIG.waline.el) }))
+  );
+});
+</script>
+
+</body>
+</html>
