@@ -1,10 +1,9 @@
 ---
-title: (转载)Javascript模块化编程（一）：模块的写法
+title: Javascript模块化编程（一）：模块的写法
 date: 2019-08-14 09:00:00
 updated: 2019-08-14 09:00:00
 categories:
-  - [技术]
-  - [转载]
+  - 技术
 tags:
   - JavaScript
   - AMD
