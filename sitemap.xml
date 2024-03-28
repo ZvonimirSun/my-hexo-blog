@@ -2,6 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.iszy.cc/posts/unraid-plex-nvidia/</loc>
+    
+    <lastmod>2024-03-28</lastmod>
+    
+    
+  </url>
+  
+  <url>
+    <loc>https://www.iszy.cc/posts/unraid-start/</loc>
+    
+    <lastmod>2024-03-28</lastmod>
+    
+    
+  </url>
+  
+  <url>
     <loc>https://www.iszy.cc/page/cmynetwork/</loc>
     
     <lastmod>2024-03-27</lastmod>
@@ -122,22 +138,6 @@
   
   <url>
     <loc>https://www.iszy.cc/posts/add-or-remove-folders-in-explorer-win11/</loc>
-    
-    <lastmod>2023-11-01</lastmod>
-    
-    
-  </url>
-  
-  <url>
-    <loc>https://www.iszy.cc/posts/unraid-plex-nvidia/</loc>
-    
-    <lastmod>2023-11-01</lastmod>
-    
-    
-  </url>
-  
-  <url>
-    <loc>https://www.iszy.cc/posts/unraid-start/</loc>
     
     <lastmod>2023-11-01</lastmod>
     
@@ -1163,6 +1163,6 @@
 
   <url>
     <loc>https://www.iszy.cc/</loc>
-    <lastmod>2024-03-27</lastmod>
+    <lastmod>2024-03-28</lastmod>
   </url>
 </urlset>
