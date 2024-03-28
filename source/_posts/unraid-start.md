@@ -2,7 +2,7 @@
 title: Unraid初体验
 date: 2022-11-21 03:55:47
 categories:
-  - 技巧
+  - 折腾
 tags:
   - Unraid
   - Nas

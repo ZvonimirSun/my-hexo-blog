@@ -1,10 +1,9 @@
 ---
-title: (转载)整合 Gmail 与 Mailgun 实现免费域名邮箱 — 香菇肥牛的博客
+title: 整合 Gmail 与 Mailgun 实现免费域名邮箱 — 香菇肥牛的博客
 date: 2018-07-06 12:00:00
 updated: 2018-07-06 12:00:00
 categories:
-  - [技巧]
-  - [转载]
+  - 折腾
 tags:
   - Mailgun
   - Google

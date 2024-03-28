@@ -3,7 +3,7 @@ title: VPS 使用 Caddy 快速搭建 Nextcloud 全过程
 date: 2018-07-15 21:00:00
 updated: 2018-07-15 21:00:00
 categories:
-  - 技巧
+  - 折腾
 tags:
   - Caddy
   - Linux

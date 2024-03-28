@@ -3,7 +3,7 @@ title: 从头开始搭建NextCloud私有云盘
 date: 2017-12-18 12:00:00
 updated: 2017-12-18 12:00:00
 categories:
-  - 技巧
+  - 折腾
 tags:
   - NextCloud
   - 宝塔面板
