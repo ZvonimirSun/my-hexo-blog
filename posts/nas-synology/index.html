@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+<link rel="preconnect" href="https://fonts.cdn.iszy.xyz" crossorigin>
+<link rel="preconnect" href="https://jsdelivr.cdn.iszy.xyz" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="google-site-verification" content="NVbOnZWipX7gWLG4NVJzJWVD16F6okyUB1NDN6mNoIo">
+  <meta name="msvalidate.01" content="10AA475F381BF9E4C280F1E2E0B3F280">
+  <meta name="yandex-verification" content="3ec99cb3451ef771">
+  <meta name="baidu-site-verification" content="tV7s6Tu88n">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.cdn.iszy.xyz/css?family=Lato:300,300italic,400,400italic,700,700italic%7CJetBrains+Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css" integrity="sha256-wiz7ZSCn/btzhjKDQBms9Hx4sSeUYsDrTLg7roPstac=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.css" integrity="sha256-gkQVf8UKZgQ0HyuxL/VnacadJ+D2Kox2TCEBuNQg5+w=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.iszy.cc","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.19.2","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":true,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":true,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"algolia":{"appID":"1UJ2W38EIN","apiKey":"c0cf4d0a9659a45dd3a38becbe6b6f73","indexName":"iszy_blog","hits":{"per_page":10}}}</script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.19.2/source/js/config.min.js"></script>
+
+    <meta name="description" content="大家都说折腾的尽头是群晖，以前我不相信，折腾来折腾去，终究还是上了个群晖 DS1821+。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="折腾的尽头是群晖，终究还是把家里NAS换成群晖了">
+<meta property="og:url" content="https://www.iszy.cc/posts/nas-synology/">
+<meta property="og:site_name" content="随遇而安">
+<meta property="og:description" content="大家都说折腾的尽头是群晖，以前我不相信，折腾来折腾去，终究还是上了个群晖 DS1821+。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-03-23T15:17:35.000Z">
+<meta property="article:modified_time" content="2024-03-30T16:50:03.000Z">
+<meta property="article:author" content="Dirge">
+<meta property="article:tag" content="群晖">
+<meta property="article:tag" content="Nas">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://www.iszy.cc/posts/nas-synology/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.iszy.cc/posts/nas-synology/","path":"posts/nas-synology/","title":"折腾的尽头是群晖，终究还是把家里NAS换成群晖了"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>折腾的尽头是群晖，终究还是把家里NAS换成群晖了 | 随遇而安</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E60YKKHF8Y"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-E60YKKHF8Y","only_pageview":false,"measure_protocol_api_secret":null}</script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.19.2/source/js/third-party/analytics/google-analytics.min.js"></script>
+
+
+
+
+
+
+
+<link rel="dns-prefetch" href="https://wl.iszy.xyz">
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="随遇而安" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">随遇而安</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">在自由的空气中漂浮</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">159</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">6</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">143</span></a></li><li class="menu-item menu-item-友链"><a href="/links/" rel="section"><i class="fa fa-link fa-fw"></i>友链</a></li><li class="menu-item menu-item-优质机场推荐"><a href="/page/bgfw/" rel="section"><i class="fa fa-globe-asia fa-fw"></i>优质机场推荐</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container"></div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container">
+  <div class="algolia-stats"><hr></div>
+  <div class="algolia-hits"></div>
+  <div class="algolia-pagination"></div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E7%94%A8-nas"><span class="nav-number">1.</span> <span class="nav-text"> 为什么用 Nas</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8A%98%E8%85%BE%E4%B9%8B%E8%B7%AF"><span class="nav-number">2.</span> <span class="nav-text"> 折腾之路</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#truenas-core"><span class="nav-number">2.1.</span> <span class="nav-text"> TrueNas Core</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#unraid"><span class="nav-number">2.2.</span> <span class="nav-text"> Unraid</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BE%A4%E6%99%96"><span class="nav-number">2.3.</span> <span class="nav-text"> 群晖</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">3.</span> <span class="nav-text"> 总结</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Dirge"
+      src="https://gravatar.cdn.iszy.xyz/avatar/5012e410377c7a93d14f7bf31aeeb7fd?d=mm">
+  <p class="site-author-name" itemprop="name">Dirge</p>
+  <div class="site-description" itemprop="description">生活吐槽 & 学习记录</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">143</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">159</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="cc-license animated" itemprop="license">
+    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><img src="https://jsdelivr.cdn.iszy.xyz/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></span>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+        <div class="pjax">
+        <div class="sidebar-inner sidebar-post-related">
+          <div class="animated">
+              <div class="links-of-blogroll-title"><i class="fa fa-signs-post fa-fw"></i>
+    相关文章
+  </div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/posts/linux-install-docker-compose-v2/" rel="bookmark">
+        <time class="popular-posts-time">2022-04-13</time>
+        <br>
+      Linux 安装 docker compose v2
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/posts/docker-acme-sh/" rel="bookmark">
+        <time class="popular-posts-time">2019-02-13</time>
+        <br>
+      通过Docker部署acme.sh
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/posts/dnmp/" rel="bookmark">
+        <time class="popular-posts-time">2019-03-09</time>
+        <br>
+      Docker一键部署LNMP
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/posts/unraid-start/" rel="bookmark">
+        <time class="popular-posts-time">2022-11-21</time>
+        <br>
+      Unraid初体验
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/posts/14/" rel="bookmark">
+        <time class="popular-posts-time">2021-10-05</time>
+        <br>
+      使用 Nexus OSS 为 Docker 镜像提供代理/缓存功能
+      </a>
+    </li>
+  </ul>
+
+          </div>
+        </div>
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.iszy.cc/posts/nas-synology/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://gravatar.cdn.iszy.xyz/avatar/5012e410377c7a93d14f7bf31aeeb7fd?d=mm">
+      <meta itemprop="name" content="Dirge">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="随遇而安">
+      <meta itemprop="description" content="生活吐槽 & 学习记录">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="折腾的尽头是群晖，终究还是把家里NAS换成群晖了 | 随遇而安">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          折腾的尽头是群晖，终究还是把家里NAS换成群晖了
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-03-23 23:17:35" itemprop="dateCreated datePublished" datetime="2024-03-23T23:17:35+08:00">2024-03-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-03-31 00:50:03" itemprop="dateModified" datetime="2024-03-31T00:50:03+08:00">2024-03-31</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%98%E8%85%BE/" itemprop="url" rel="index"><span itemprop="name">折腾</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/posts/nas-synology/#waline" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" data-path="/posts/nas-synology/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-item" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="waline-pageview-count" data-path="/posts/nas-synology/"></span>
+    </span>
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>7 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>大家都说折腾的尽头是群晖，以前我不相信，折腾来折腾去，终究还是上了个群晖 DS1821+。</p>
+<span id="more"></span>
+<h2 id="为什么用-nas"><a class="markdownIt-Anchor" href="#为什么用-nas"></a> 为什么用 Nas</h2>
+<p>个人比较喜欢收纳数据，而且对需要用到的各种在线服务能自己搭的，都优先使用开源方案，自己搭建，自己掌握数据。</p>
+<p>刚开始将服务搭建在欧洲的大盘云服务器上，不过访问速度不太能接受。换到国内的服务器上，随着服务的增多，对云服务器的性能和内存要求也越来越大。这时候我就开始寻求一种能够存储大量数据，方便访问，还能运行各种开源服务的方案。</p>
+<p>Nas 作为文件存储服务器本身能够存储大量的数据，和网盘相比，同样的存储容量性价比高太多，不需要开会员，凭着千兆宽带附带的上传带宽，使用体验也完全足够，家用宽带也不用担心云服务器高额的网络费用，如果内网访问速度更是可以直接拉满。无论是自己搭建 Nas 还是成品 Nas，运行一些负载不会太高的个人服务，性能都绰绰有余，加内存的成本也完全可以接受。</p>
+<p>总结一下</p>
+<ul>
+<li>相比网盘
+<ul>
+<li>存储容量大</li>
+<li>访问速度快</li>
+<li>不需要会员</li>
+</ul>
+</li>
+<li>相比云服务器
+<ul>
+<li>性能成本低</li>
+<li>存储成本低</li>
+</ul>
+</li>
+</ul>
+<h2 id="折腾之路"><a class="markdownIt-Anchor" href="#折腾之路"></a> 折腾之路</h2>
+<h3 id="truenas-core"><a class="markdownIt-Anchor" href="#truenas-core"></a> TrueNas Core</h3>
+<p>一开始，我经过了一些调研，看到了翼王的视频，<span class="exturl" data-url="aHR0cHM6Ly9iMjMudHYvWmxWbHBHRQ==">【翼王】DIY 一台高性能的 MINI ITX 文件服务器，还要能使用万兆网络-哔哩哔哩<i class="fa fa-external-link-alt"></i></span>，我决定使用类似配置自己搭建一个 Nas 出来。</p>
+<p>在淘宝搜索相关配件的时候，找到了一个叫做优易的店，根据我的配置，人家能给出现成的整机，那我还整啥，直接上了，微调了下配置，内存干到 32G ECC，使用最新的 TrueNas Core 系统。然后在闲鱼上整了两块万兆网卡，将电脑和 Nas 通过光纤直连。</p>
+<p>看过我先前文章的朋友可能知道，后面我使用 TrueNas 系统一直不是很满意。也是我能力有限，不知道哪里配置存在问题，5 块盘组了 RAIDZ，32G 内存，还加了 NVME 的固态作为缓存，但是读写速度一直不算很高，远远达不到万兆的水平。</p>
+<p>另外就是我原来了解不到位，当我发现我想增加硬盘的时候，我现有的配置根本没法增加，只能增加新的存储池。</p>
+<p>最后就是这个 TrueNas Core 系统里面，他基于 FreeBSD，稳定是稳定，不过我对这个很不熟悉，而且不支持 Docker，让我这个 Docker 狂魔非常难受，自带的容器用起来非常难受。当然后面 TrueNas Scale 换成 Linux 内核了，原生支持 Docker 了，但是毕竟版本还比较早期，而且 Docker 的可视化使用体验也是一言难尽。</p>
+<h3 id="unraid"><a class="markdownIt-Anchor" href="#unraid"></a> Unraid</h3>
+<p>然后就轮到 Unraid 了，这个是我在看 LTT 视频的时候看到的，当时对这个好玩的系统很感兴趣。这个系统的一个很大的特点就是不做 RAID，就算盘坏了，也就损失那个盘的数据，而且也可以通过校验盘的方式来保障数据的安全。我比较喜欢的一点就是，这个系统的各种信息都非常简介明了，操作简单，而且对 Docker 的支持上做的不错。正好赶上我想要更新换代台式电脑，Nas 也跟着换了。</p>
+<p>换上了新的银欣 CS381 机箱，换上了从台式机上淘汰的 3600，换上了以前闲置的 450W 海盗船电源。甚至还新买了一块华硕 TUF Gaming B550M-Plus WIFI 版主板，得益于 AMD 对 ECC 内存的支持，我能够直接用上老 Nas 的 32G ECC 内存。为了安静，连机箱风扇和 CPU 散热都用的猫扇。</p>
+<p>硬盘上我又增加了两块机械，上到了 7 块。还增加了两块致钛 1TB 的 SSD 来做缓存。原来的光口万兆模块换成了两个电口万兆模块，通过网线连到了新上的 4 口 2.5G + 2 口 10G 的威联通交换机上。</p>
+<p>为了实现硬解，还上了一块 Nvidia T600 显卡，用来解码。</p>
+<p>使用起来还是比较舒服的，我用 Seafile 实现了我多平台数据的同步，还将服务器上的部分服务逐步迁移到了 Nas 上。得益于 Docker，我甚至不需要做什么配置，即能完成迁移。由于使用的是 3600，主频不低，我甚至在服务器上起了 Palworld 游戏服务器。</p>
+<p>不过不知道是我装系统的 U 盘原因，Unraid 在升级系统后总有几率出现奇怪问题，让我心惊胆战，中间也有出现过丢失配置的问题。后面起了游戏服务器，由于这个 Palworld 本身内存压力比较大，可能对服务器产生了未知的影响，出现了多次远程连不上，系统无响应，只能重启解决。重启后，我也找不到在哪里能看到先前出现问题的日志，让我对这个系统失去了信心。</p>
+<h3 id="群晖"><a class="markdownIt-Anchor" href="#群晖"></a> 群晖</h3>
+<p>终于我觉得吧，Nas 这个东西啊，还是稳定最重要，其他的嘛，咱也能妥协妥协，说实话，我这个需求也不是太高，之前的配置完完全全过剩了嘛，要不搞个大厂的成品 Nas 算球了。</p>
+<p>那么首先就想到群晖了，当然中间也对比了一下威联通、绿联、华为、Asus 子品牌的一些 Nas 产品。在功能扩展性、系统易用性以及使用广泛性的综合考虑下，还是选择群晖了。咱已经那么多个盘了，只好上 8 盘位了，这就是 DS1821+ 了。</p>
+<p>更低配置，首先是硬盘位不够，然后就是没有 PCI-E 口进行扩展，以及 M.2 位做缓存。更高的配置，比如 DS1823xs+，虽然说直接自带万兆口，不用再进行扩展，是最佳的选择，奈何价格实在太高，没能忍下心。DS1821+ 的原价我其实也不太能接受，好在在闲鱼有价格优惠不少的特别产品，内存加到 32G，八千多，比官方便宜太多。特别的，这个只能用类似笔记本内存的那种插槽，我原来的内存条不能用了，大为心痛。</p>
+<p>唯一的 PCI-E 位置，通过 x8 转 x16 的转接卡接了显卡了。群晖支持 4 网口的链路聚合，网速还算凑合，暂时不准备上万兆网卡了。欸，其实我这个威联通交换机不支持 IEEE 802.3ad，所以不支持真的链路聚合，现在只能说是负载均衡，这个后面再看看怎么搞。</p>
+<p>群晖 DS1821+ 的这颗 CPU 说实话，性能还是比较出乎我的意料的，虽然性能指标一般般，运行 Palworld 游戏服务器压力却也并不大，运行我其他 Docker 服务也没啥压力，性能其实非常够用了。看来我真是高估我对这 Nas 的性能需求了。</p>
+<h2 id="总结"><a class="markdownIt-Anchor" href="#总结"></a> 总结</h2>
+<p>总的来说，我最终还是入了群晖了，大概我是不太会再换了吧。</p>
+<p>初步评价下这个 DS1821+ 吧，</p>
+<ol>
+<li>对我来说，性能够用，扩展性满足需求。</li>
+<li>运行非常安静，指示灯也不打扰人，能关。</li>
+<li>系统稳定易用，和前面两个系统相比，使用门槛低，配置简单，还能有技术支持。</li>
+</ol>
+<p>具体的使用，待我多用用，再分享吧。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Dirge
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.iszy.cc/posts/nas-synology/" title="折腾的尽头是群晖，终究还是把家里NAS换成群晖了">https://www.iszy.cc/posts/nas-synology/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E7%BE%A4%E6%99%96/" rel="tag"><i class="fa fa-tag"></i> 群晖</a>
+              <a href="/tags/Nas/" rel="tag"><i class="fa fa-tag"></i> Nas</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/alioss-img-bed/" rel="prev" title="利用阿里云OSS搭建图床">
+                  <i class="fa fa-angle-left"></i> 利用阿里云OSS搭建图床
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/openvpn-connect-2-3/" rel="next" title="OpenVPN连接2.3及更老版本服务端问题">
+                  OpenVPN连接2.3及更老版本服务端问题 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="waline"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2017 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Dirge</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">111k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">6:42</span>
+  </span>
+</div>
+  <div class="powered-by">由 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZw==">NexT.Gemini</span> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/@next-theme/pjax@0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.js" integrity="sha256-+2+qOqR8CKoHh/AsVR9k2qaDBKWjYNC2nozhYmv5j9k=" crossorigin="anonymous"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.19.2/source/js/comments.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.19.2/source/js/utils.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.19.2/source/js/next-boot.min.js"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.19.2/source/js/pjax.min.js"></script>
+
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/algoliasearch@4.22.1/dist/algoliasearch-lite.umd.js" integrity="sha256-pxkGFjfnFWYGOtV9uhCWK/spKiGS0Z7gVDKYm39LyfM=" crossorigin="anonymous"></script>
+<script src="https://jsdelivr.cdn.iszy.xyz/npm/instantsearch.js@4.64.2/dist/instantsearch.production.min.js" integrity="sha256-/DLulTBQ8KQ7xGOs8mrQ6FgKsknJpjCGAjFhjfjc8yo=" crossorigin="anonymous"></script><script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.19.2/source/js/third-party/search/algolia-search.min.js"></script>
+
+  <script class="next-config" data-name="pdf" type="application/json">{"object_url":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/pdfobject@2.2.12/pdfobject.min.js","integrity":"sha256-g2xji1rlE3KsGVClvuxTbcR0Kn2+wtQADSff2Tbb4zA="},"url":"/lib/pdf/web/viewer"}</script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.19.2/source/js/third-party/tags/pdf.min.js"></script>
+
+
+
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.19.2/source/js/third-party/fancybox.min.js"></script>
+
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.19.2/source/js/third-party/pace.min.js"></script>
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.9/dist/katex.min.css" integrity="sha256-UF1fgpAiu3tPJN/uCqEUHNe7pnr+QR0SQDNfgglgtcM=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://jsdelivr.cdn.iszy.xyz/npm/katex@0.16.9/dist/contrib/copy-tex.min.js","integrity":"sha256-Us54+rSGDSTvIhKKUs4kygE2ipA0RXpWWh0/zLqw3bs="}}</script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.19.2/source/js/third-party/math/katex.min.js"></script>
+
+
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/quicklink@2.3.0/dist/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":false,"delay":true,"timeout":3000,"priority":true,"url":"https://www.iszy.cc/posts/nas-synology/"}</script>
+  <script src="https://jsdelivr.cdn.iszy.xyz/npm/hexo-theme-next@8.19.2/source/js/third-party/quicklink.min.js"></script>
+<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-CN","enable":true,"serverURL":"https://wl.iszy.xyz","cssUrl":"https://jsdelivr.cdn.iszy.xyz/npm/@waline/client@v2.15.8/dist/waline.css","commentCount":false,"pageview":true,"libUrl":"https://jsdelivr.cdn.iszy.xyz/npm/@waline/client@v2.15.8/dist/waline.js","locale":{"placeholder":"本站支持匿名评论，无需登录~(●'◡'●)\n与文章无关的留言请前往本站留言板，谢谢配合~"},"emoji":["https://jsdelivr.cdn.iszy.xyz/gh/zvonimirsun/emojis@1.0.3/bilibili-xhl"],"meta":["nick","mail","link"],"requiredMeta":["nick"],"wordLimit":0,"login":"enable","pageSize":10,"dark":"auto","el":"#waline","comment":true,"path":"/posts/nas-synology/"}</script>
+<link rel="stylesheet" href="https://jsdelivr.cdn.iszy.xyz/npm/@waline/client@v2.15.8/dist/waline.css">
+<script>
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.waline.el).then(() =>
+    NexT.utils.getScript(CONFIG.waline.libUrl, { condition: window.Waline })
+  ).then(() => 
+    Waline.init(Object.assign({}, CONFIG.waline,{ el: document.querySelector(CONFIG.waline.el) }))
+  );
+});
+</script>
+
+</body>
+</html>

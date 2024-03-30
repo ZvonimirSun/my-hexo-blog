@@ -2,6 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.iszy.cc/posts/nas-synology/</loc>
+    
+    <lastmod>2024-03-30</lastmod>
+    
+    
+  </url>
+  
+  <url>
     <loc>https://www.iszy.cc/posts/unraid-plex-nvidia/</loc>
     
     <lastmod>2024-03-28</lastmod>
@@ -1163,6 +1171,6 @@
 
   <url>
     <loc>https://www.iszy.cc/</loc>
-    <lastmod>2024-03-28</lastmod>
+    <lastmod>2024-03-30</lastmod>
   </url>
 </urlset>
