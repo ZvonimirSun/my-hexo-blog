@@ -99,7 +99,7 @@ menu:
   categories: /categories/ || fa fa-th
   archives: /archives/ || fa fa-archive
   友链: /links/ || fa fa-link
-  # 优质机场推荐: /page/bgfw/ || fa fa-globe-asia
+  优质机场推荐: /page/bgfw/ || fa fa-globe-asia
   #schedule: /schedule/ || fa fa-calendar
   #sitemap: /sitemap.xml || fa fa-sitemap
   #commonweal: /404/ || fa fa-heartbeat
