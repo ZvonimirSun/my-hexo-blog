@@ -36,6 +36,10 @@ Subversion 仅使用每次提交的用户名，而 Git 存储真实姓名和电�
 
 如有需要，可以编辑文件中的每一行，以创建 SVN 用户到格式正确的 Git 用户的映射。 例如，可将 `jamal = jamal <jamal>` 映射到 `jamal = Jamal Hartnett <jamal@fabrikam-fiber.com>`。
 
+最终内容参考如下图，内容手动改出来的。
+
+![](https://img.iszy.xyz/1715064451591.png)
+
 ### 2. 使用 git-svn 克隆 Subversion 存储库
 
 以下命令将使用在上一步中创建的 `authors-transform.txt` 文件执行标准 git-svn 转换。 它将 Git 存储库放置在本地计算机的 c:\mytempdir 文件夹中。此处可以使用相对路径。
