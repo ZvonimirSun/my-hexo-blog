@@ -10,50 +10,6 @@
   </url>
   
   <url>
-    <loc>https://www.iszy.cc/page/cmynetwork/</loc>
-    
-    <lastmod>2024-05-05</lastmod>
-    
-    
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.iszy.cc/page/duangcloud/</loc>
-    
-    <lastmod>2024-05-05</lastmod>
-    
-    
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.iszy.cc/page/gatern/</loc>
-    
-    <lastmod>2024-05-05</lastmod>
-    
-    
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.iszy.cc/page/bgfw/</loc>
-    
-    <lastmod>2024-05-05</lastmod>
-    
-    
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-    
-  </url>
-  
-  <url>
     <loc>https://www.iszy.cc/posts/nas-synology/</loc>
     
     <lastmod>2024-03-30</lastmod>
@@ -198,7 +154,7 @@
   </url>
   
   <url>
-    <loc>https://www.iszy.cc/posts/css-percentagewidth-autoheight/</loc>
+    <loc>https://www.iszy.cc/posts/d/</loc>
     
     <lastmod>2022-11-15</lastmod>
     
@@ -206,7 +162,7 @@
   </url>
   
   <url>
-    <loc>https://www.iszy.cc/posts/d/</loc>
+    <loc>https://www.iszy.cc/posts/css-percentagewidth-autoheight/</loc>
     
     <lastmod>2022-11-15</lastmod>
     
@@ -1168,6 +1124,6 @@
 
   <url>
     <loc>https://www.iszy.cc/</loc>
-    <lastmod>2024-05-07</lastmod>
+    <lastmod>2024-05-27</lastmod>
   </url>
 </urlset>
