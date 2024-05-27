@@ -22,40 +22,11 @@ permalink: /page/bgfw/
 
 | 机场名称（点击查看详细介绍）                             | 操作                                                                                                                        |
 | -------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| [FreeWhale 自由鲸](/page/freewhale/)【长期优惠】         | [点我前往官网](https://url.iszy.xyz/freewhale)<br>[仅看价格测速](#一-freewhale-自由鲸)<br>[详细介绍](/page/freewhale/)      |
-| [Gatern](/page/gatern/)【本站专属优惠】                  | [点我前往官网](https://url.iszy.xyz/gatern)<br>[仅看价格测速](#二-gatern)<br>[详细介绍](/page/gatern)                       |
-| [DuangCloud](/page/duangcloud/)                          | [点我前往官网](https://url.iszy.xyz/duangcloud)<br>[仅看价格测速](#三-duangcloud)<br>[详细介绍](/page/duangcloud/)          |
-| [CMYNetwork 红莓网络](/page/cmynetwork/)【本站专属优惠】 | [点我前往官网](https://url.iszy.xyz/cmynetwork)<br>[仅看价格测速](#四-cmynetwork-红莓网络)<br>[详细介绍](/page/cmynetwork/) |
+| [Gatern](/page/gatern/)【本站专属优惠】                  | [点我前往官网](https://url.iszy.xyz/gatern)<br>[仅看价格测速](#一-gatern)<br>[详细介绍](/page/gatern)                       |
+| [DuangCloud](/page/duangcloud/)                          | [点我前往官网](https://url.iszy.xyz/duangcloud)<br>[仅看价格测速](#二-duangcloud)<br>[详细介绍](/page/duangcloud/)          |
+| [CMYNetwork 红莓网络](/page/cmynetwork/)【本站专属优惠】 | [点我前往官网](https://url.iszy.xyz/cmynetwork)<br>[仅看价格测速](#三-cmynetwork-红莓网络)<br>[详细介绍](/page/cmynetwork/) |
 
-## 一、FreeWhale 自由鲸
-
-[点我前往官网](https://url.iszy.xyz/freewhale)
-
-邀请码: `iszy`
-
-[⭐ 更多详细介绍 ⭐](/page/freewhale/)
-
-### （一）优惠
-
-> 官方长期优惠
-
-**￥ 124** 及以上套餐可用，C 套餐可叠加
-
-**95 折**礼遇码：`Jupiter`
-
-### （二）价格
-
-![](https://img.iszy.xyz/1710424993923.png)
-
-### （三）测速
-
-测速更新时间 2024-03-14
-
-这边推荐只用 ssr 节点，不推荐 V2Ray 节点了。
-
-![](https://img.iszy.xyz/1710422997709.png)
-
-## 二、Gatern
+## 一、Gatern
 
 [点我前往 Gatern 官网](https://url.iszy.xyz/gatern)
 
@@ -93,7 +64,7 @@ permalink: /page/bgfw/
 
 ![](https://img.iszy.xyz/1710425626550.png)
 
-## 三、DuangCloud
+## 二、DuangCloud
 
 [点我前往 DuangCloud 官网](https://url.iszy.xyz/duangcloud)
 
@@ -117,7 +88,7 @@ permalink: /page/bgfw/
 
 ![](https://img.iszy.xyz/1679033837606.png)
 
-## 四、CMYNetwork 红莓网络
+## 三、CMYNetwork 红莓网络
 
 [点我前往 CMYNetwork 官网](https://url.iszy.xyz/cmynetwork)
 
