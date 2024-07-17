@@ -50,3 +50,7 @@ jobs:
           folder: public
           branch: deploy
           force: false
+      - name: Purge Cache
+        if: ${{ github.ref_name == 'main' }}
+        run: |
+          curl https://purge.jsdelivr.net/gh/zvonimirsun/my-hexo-blog@deploy/css/main.min.css
