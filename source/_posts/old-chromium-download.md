@@ -8,29 +8,25 @@ tags:
   - Chromium
 ---
 
-网站开发中，有时候会遇到特定老版本 Chrome 才会产生的 bug，需要使用老版本的 Chrome 来解决。下面记录一下如何下载老版本的 Chromium 包。
+网站开发中，有时候会遇到特定老版本 Chromium 才会产生的 bug，需要使用老版本的 Chromium 来解决。下面记录一下如何下载老版本的 Chromium 包。
 
 <!--more-->
 
 ## 步骤
 
-### 一、在更新日志中查找需要的版本
+### 一、查找对应版本的分支信息
 
-[Chrome Releases](https://chromereleases.googleblog.com/2019/03/)
+[https://chromiumdash.appspot.com/branches](https://chromiumdash.appspot.com/branches)
 
-比如我需要 72 版本，我在 2019 年 3 月的更新日志中可以找到了最新的 72 版本的 Chromium 的版本号`72.0.3626.121`。
+这里有每个分支版本的相关信息以及分支位置
 
-![](https://img.iszy.xyz/1657769323436.png)
+![页面预览](https://img.iszy.xyz/1722480749524.png)
 
-### 二、通过版本号查找 commit 信息
+比如我需要80版本的Chromium，这里就可以看下80分支的信息，主要需要这个 `Branch Pos.` 的内容，如图所示。
 
-[omahaproxy.appspot.com](https://omahaproxy.appspot.com/)
+![](https://img.iszy.xyz/1722480814407.png)
 
-![](https://img.iszy.xyz/1657769457812.png)
-
-我们这里看一下`Branch Base Position`这一项。
-
-### 三、通过 Position 号查找软件包
+### 二、通过 Position 号查找软件包
 
 [Chromium 历史存储仓库](https://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html)
 
