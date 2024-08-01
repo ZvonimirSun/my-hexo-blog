@@ -28,27 +28,27 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"www.iszy.cc","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.19.2","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":true,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":true,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"algolia":{"appID":"1UJ2W38EIN","apiKey":"c0cf4d0a9659a45dd3a38becbe6b6f73","indexName":"iszy_blog","hits":{"per_page":10}}}</script><script src="https://jsdelivr.cdn.iszy.cc/npm/hexo-theme-next@8.19.2/source/js/config.min.js"></script>
 
-    <meta name="description" content="网站开发中，有时候会遇到特定老版本 Chrome 才会产生的 bug，需要使用老版本的 Chrome 来解决。下面记录一下如何下载老版本的 Chromium 包。">
+    <meta name="description" content="网站开发中，有时候会遇到特定老版本 Chromium 才会产生的 bug，需要使用老版本的 Chromium 来解决。下面记录一下如何下载老版本的 Chromium 包。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="下载老版本 Chromium 的正确姿势">
 <meta property="og:url" content="https://www.iszy.cc/posts/old-chromium-download/">
 <meta property="og:site_name" content="随遇而安">
-<meta property="og:description" content="网站开发中，有时候会遇到特定老版本 Chrome 才会产生的 bug，需要使用老版本的 Chrome 来解决。下面记录一下如何下载老版本的 Chromium 包。">
+<meta property="og:description" content="网站开发中，有时候会遇到特定老版本 Chromium 才会产生的 bug，需要使用老版本的 Chromium 来解决。下面记录一下如何下载老版本的 Chromium 包。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://img.iszy.xyz/1657769323436.png">
-<meta property="og:image" content="https://img.iszy.xyz/1657769457812.png">
+<meta property="og:image" content="https://img.iszy.xyz/1722480749524.png">
+<meta property="og:image" content="https://img.iszy.xyz/1722480814407.png">
 <meta property="og:image" content="https://img.iszy.xyz/1657769779611.png">
 <meta property="og:image" content="https://img.iszy.xyz/1657769834283.png">
 <meta property="og:image" content="https://img.iszy.xyz/1657769953873.png">
 <meta property="og:image" content="https://img.iszy.xyz/1657770071034.png">
 <meta property="og:image" content="https://img.iszy.xyz/1657770205975.png">
 <meta property="article:published_time" content="2022-07-14T03:18:03.000Z">
-<meta property="article:modified_time" content="2024-03-25T15:32:21.000Z">
+<meta property="article:modified_time" content="2024-08-01T02:56:15.000Z">
 <meta property="article:author" content="Dirge">
 <meta property="article:tag" content="Chrome">
 <meta property="article:tag" content="Chromium">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img.iszy.xyz/1657769323436.png">
+<meta name="twitter:image" content="https://img.iszy.xyz/1722480749524.png">
 
 
 <link rel="canonical" href="https://www.iszy.cc/posts/old-chromium-download/">
@@ -158,7 +158,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4"><span class="nav-number">1.</span> <span class="nav-text"> 步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80-%E5%9C%A8%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97%E4%B8%AD%E6%9F%A5%E6%89%BE%E9%9C%80%E8%A6%81%E7%9A%84%E7%89%88%E6%9C%AC"><span class="nav-number">1.1.</span> <span class="nav-text"> 一、在更新日志中查找需要的版本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C-%E9%80%9A%E8%BF%87%E7%89%88%E6%9C%AC%E5%8F%B7%E6%9F%A5%E6%89%BE-commit-%E4%BF%A1%E6%81%AF"><span class="nav-number">1.2.</span> <span class="nav-text"> 二、通过版本号查找 commit 信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89-%E9%80%9A%E8%BF%87-position-%E5%8F%B7%E6%9F%A5%E6%89%BE%E8%BD%AF%E4%BB%B6%E5%8C%85"><span class="nav-number">1.3.</span> <span class="nav-text"> 三、通过 Position 号查找软件包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8%E5%90%A7"><span class="nav-number">1.4.</span> <span class="nav-text"> 开始使用吧</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E7%82%B9%E6%B3%A8%E6%84%8F"><span class="nav-number">2.</span> <span class="nav-text"> 一点注意</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4"><span class="nav-number">1.</span> <span class="nav-text"> 步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80-%E6%9F%A5%E6%89%BE%E5%AF%B9%E5%BA%94%E7%89%88%E6%9C%AC%E7%9A%84%E5%88%86%E6%94%AF%E4%BF%A1%E6%81%AF"><span class="nav-number">1.1.</span> <span class="nav-text"> 一、查找对应版本的分支信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C-%E9%80%9A%E8%BF%87-position-%E5%8F%B7%E6%9F%A5%E6%89%BE%E8%BD%AF%E4%BB%B6%E5%8C%85"><span class="nav-number">1.2.</span> <span class="nav-text"> 二、通过 Position 号查找软件包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8%E5%90%A7"><span class="nav-number">1.3.</span> <span class="nav-text"> 开始使用吧</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E7%82%B9%E6%B3%A8%E6%84%8F"><span class="nav-number">2.</span> <span class="nav-text"> 一点注意</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -230,6 +230,13 @@
       MacOS 解决新版 Chrome 中 NET::ERR_CERT_INVALID不能继续的问题
       </a>
     </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/posts/svn-to-git/" rel="bookmark">
+        <time class="popular-posts-time">2024-05-07</time>
+        <br>
+      SVN迁移至GIT，并附带历史提交记录
+      </a>
+    </li>
   </ul>
 
           </div>
@@ -287,7 +294,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-03-25 23:32:21" itemprop="dateModified" datetime="2024-03-25T23:32:21+08:00">2024-03-25</time>
+      <time title="修改时间：2024-08-01 10:56:15" itemprop="dateModified" datetime="2024-08-01T10:56:15+08:00">2024-08-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -306,7 +313,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>310</span>
+      <span>308</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -323,18 +330,16 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>网站开发中，有时候会遇到特定老版本 Chrome 才会产生的 bug，需要使用老版本的 Chrome 来解决。下面记录一下如何下载老版本的 Chromium 包。</p>
+    <div class="post-body" itemprop="articleBody"><p>网站开发中，有时候会遇到特定老版本 Chromium 才会产生的 bug，需要使用老版本的 Chromium 来解决。下面记录一下如何下载老版本的 Chromium 包。</p>
 <span id="more"></span>
 <h2 id="步骤"><a class="markdownIt-Anchor" href="#步骤"></a> 步骤</h2>
-<h3 id="一-在更新日志中查找需要的版本"><a class="markdownIt-Anchor" href="#一-在更新日志中查找需要的版本"></a> 一、在更新日志中查找需要的版本</h3>
-<p><span class="exturl" data-url="aHR0cHM6Ly9jaHJvbWVyZWxlYXNlcy5nb29nbGVibG9nLmNvbS8yMDE5LzAzLw==">Chrome Releases<i class="fa fa-external-link-alt"></i></span></p>
-<p>比如我需要 72 版本，我在 2019 年 3 月的更新日志中可以找到了最新的 72 版本的 Chromium 的版本号<code>72.0.3626.121</code>。</p>
-<p><img data-src="https://img.iszy.xyz/1657769323436.png" alt="" /></p>
-<h3 id="二-通过版本号查找-commit-信息"><a class="markdownIt-Anchor" href="#二-通过版本号查找-commit-信息"></a> 二、通过版本号查找 commit 信息</h3>
-<p><span class="exturl" data-url="aHR0cHM6Ly9vbWFoYXByb3h5LmFwcHNwb3QuY29tLw==">omahaproxy.appspot.com<i class="fa fa-external-link-alt"></i></span></p>
-<p><img data-src="https://img.iszy.xyz/1657769457812.png" alt="" /></p>
-<p>我们这里看一下<code>Branch Base Position</code>这一项。</p>
-<h3 id="三-通过-position-号查找软件包"><a class="markdownIt-Anchor" href="#三-通过-position-号查找软件包"></a> 三、通过 Position 号查找软件包</h3>
+<h3 id="一-查找对应版本的分支信息"><a class="markdownIt-Anchor" href="#一-查找对应版本的分支信息"></a> 一、查找对应版本的分支信息</h3>
+<p><span class="exturl" data-url="aHR0cHM6Ly9jaHJvbWl1bWRhc2guYXBwc3BvdC5jb20vYnJhbmNoZXM=">https://chromiumdash.appspot.com/branches<i class="fa fa-external-link-alt"></i></span></p>
+<p>这里有每个分支版本的相关信息以及分支位置</p>
+<p><img data-src="https://img.iszy.xyz/1722480749524.png" alt="页面预览" /></p>
+<p>比如我需要80版本的Chromium，这里就可以看下80分支的信息，主要需要这个 <code>Branch Pos.</code> 的内容，如图所示。</p>
+<p><img data-src="https://img.iszy.xyz/1722480814407.png" alt="" /></p>
+<h3 id="二-通过-position-号查找软件包"><a class="markdownIt-Anchor" href="#二-通过-position-号查找软件包"></a> 二、通过 Position 号查找软件包</h3>
 <p><span class="exturl" data-url="aHR0cHM6Ly9jb21tb25kYXRhc3RvcmFnZS5nb29nbGVhcGlzLmNvbS9jaHJvbWl1bS1icm93c2VyLXNuYXBzaG90cy9pbmRleC5odG1s">Chromium 历史存储仓库<i class="fa fa-external-link-alt"></i></span></p>
 <p>先选择需要的平台</p>
 <p><img data-src="https://img.iszy.xyz/1657769779611.png" alt="" /></p>

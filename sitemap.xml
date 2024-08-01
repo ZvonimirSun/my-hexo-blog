@@ -2,6 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.iszy.cc/posts/old-chromium-download/</loc>
+    
+    <lastmod>2024-08-01</lastmod>
+    
+    
+  </url>
+  
+  <url>
     <loc>https://www.iszy.cc/posts/svn-to-git/</loc>
     
     <lastmod>2024-05-07</lastmod>
@@ -53,14 +61,6 @@
     <loc>https://www.iszy.cc/posts/openvpn-connect-2-3/</loc>
     
     <lastmod>2024-03-27</lastmod>
-    
-    
-  </url>
-  
-  <url>
-    <loc>https://www.iszy.cc/posts/old-chromium-download/</loc>
-    
-    <lastmod>2024-03-25</lastmod>
     
     
   </url>
@@ -1124,6 +1124,6 @@
 
   <url>
     <loc>https://www.iszy.cc/</loc>
-    <lastmod>2024-07-17</lastmod>
+    <lastmod>2024-08-01</lastmod>
   </url>
 </urlset>
