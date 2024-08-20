@@ -165,7 +165,7 @@ waline:
   serverURL: https://wl.iszy.xyz # Waline server address url
 
   # Waline library CDN url, you can set this to your preferred CDN
-  libUrl: https://jsdelivr.cdn.iszy.cc/npm/@waline/client@v3/dist/waline.js
+  libUrl: https://jsdelivr.cdn.iszy.cc/npm/@waline/client@v3/dist/waline.umd.js
 
   # Waline CSS styles CDN url, you can set this to your preferred CDN
   cssUrl: https://jsdelivr.cdn.iszy.cc/npm/@waline/client@v3/dist/waline.css
