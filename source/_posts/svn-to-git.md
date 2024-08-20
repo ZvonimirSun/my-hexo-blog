@@ -50,7 +50,7 @@ git svn clone ["SVN repo URL"] --prefix=svn/ --no-metadata --authors-file "autho
 
 > 备注
 >
-> `--prefix=svn/` 是必需的，否则工具无法从导入的修订中判断 SVN 修订。 建议设置一个前缀（带有尾部斜杠），原因是因为 SVN 跟踪引用将位于 refs/remotes/$prefix/，这与 Git 自己的远程跟踪分支布局 (refs/remotes/$remote/) 兼容。
+> `--prefix=svn/` 是必需的，否则工具无法从导入的修订中判断 SVN 修订。 建议设置一个前缀（带有尾部斜杠），原因是因为 SVN 跟踪引用将位于 `refs/remotes/$prefix/`，这与 Git 自己的远程跟踪分支布局 (refs/remotes/$remote/) 兼容。
 >
 > 如果要跟踪共享通用存储库的多个项目，设置前缀也很有用。 默认情况下，前缀设置为 origin/。
 
