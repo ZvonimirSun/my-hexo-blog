@@ -29,6 +29,6 @@
     "hexo-server": "^3.0.0",
     "hexo-theme-next": "^8.20.0",
     "hexo-word-counter": "^0.1.0",
-    "taze": "^0.13.9"
+    "taze": "^0.16.6"
   }
 }
