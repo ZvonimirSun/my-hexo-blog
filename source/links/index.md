@@ -2,6 +2,7 @@
 title: 友情链接
 date: 2018-12-19 10:11:00
 updated: 2019-11-15 08:11:00
+type: friends
 exturl: false
 ---
 
@@ -9,24 +10,7 @@ exturl: false
 
 ## 友情链接
 
-<div id="links">
-    <div class="links-content">
-        <div class="link-navigation">
-        {% for link in site.data.links %}
-        <div class="card">
-            <a href="{{ link.site }}" target="_blank">
-            <img class="ava" src="{{ link.avatar }}"/></a>
-            <div class="card-header">
-                <div>
-                    <a href="{{ link.site }}" target="_blank">{{ link.name }}</a>
-                </div>
-                <div class="info" title="{{ link.info }}">{{ link.info }}</div>
-            </div>
-        </div>
-        {% endfor %}
-        </div>
-    </div>
-</div>
+<div id="links"></div>
 
 友链排名不分先后~
 

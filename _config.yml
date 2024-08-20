@@ -46,17 +46,18 @@ render_drafts: false
 post_asset_folder: false
 relative_link: false
 future: true
+syntax_highlighter: highlight.js
 highlight:
-  enable: true
-  line_number: true
   auto_detect: false
+  line_number: true
+  line_threshold: 0
   tab_replace: ""
   wrap: true
   hljs: false
 prismjs:
-  enable: false
   preprocess: true
   line_number: true
+  line_threshold: 0
   tab_replace: ""
 
 # Home page setting
@@ -84,7 +85,7 @@ meta_generator: true
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
 ## updated_option supports 'mtime', 'date', 'empty'
-updated_option: "mtime"
+updated_option: "date"
 
 # Pagination
 ## Set per_page to 0 to disable pagination

@@ -10,17 +10,17 @@
     "up": "taze minor -I"
   },
   "hexo": {
-    "version": "6.3.0"
+    "version": "7.3.0"
   },
   "dependencies": {
     "@waline/hexo-next": "^3.0.1",
     "chalk": "^4.1.2",
-    "hexo": "^6.3.0",
+    "hexo": "^7.3.0",
     "hexo-algoliasearch": "^2.0.1",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-category": "^2.0.0",
     "hexo-generator-feed": "^3.0.0",
-    "hexo-generator-index": "^3.0.0",
+    "hexo-generator-index": "^4.0.0",
     "hexo-generator-sitemap": "^3.0.1",
     "hexo-generator-tag": "^2.0.0",
     "hexo-related-posts": "^1.5.2",
@@ -28,7 +28,7 @@
     "hexo-renderer-stylus": "^3.0.1",
     "hexo-server": "^3.0.0",
     "hexo-theme-next": "^8.20.0",
-    "hexo-word-counter": "^0.1.0",
+    "hexo-word-counter": "^0.2.0",
     "taze": "^0.16.6"
   }
 }
