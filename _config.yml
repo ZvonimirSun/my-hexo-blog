@@ -152,3 +152,65 @@ algolia:
     - tags
     - categories
     - title
+
+# Waline Config File
+# For more information:
+# - https://waline.js.org
+# - https://waline.js.org/reference/component.html
+waline:
+  # New! Whether enable this plugin
+  enable: true
+
+  # Waline server address url, you should set this to your own link
+  serverURL: https://wl.iszy.xyz # Waline server address url
+
+  # Waline library CDN url, you can set this to your preferred CDN
+  libUrl: https://jsdelivr.cdn.iszy.cc/npm/@waline/client@v3/dist/waline.js
+
+  # Waline CSS styles CDN url, you can set this to your preferred CDN
+  cssUrl: https://jsdelivr.cdn.iszy.cc/npm/@waline/client@v3/dist/waline.css
+
+  # Custom locales
+  locale:
+    placeholder: |-
+      本站支持匿名评论，无需登录~(●'◡'●)
+      与文章无关的留言请前往本站留言板，谢谢配合~
+
+  # If false, comment count will only be displayed in post page, not in home page
+  commentCount: false
+
+  # Pageviews count, Note: You should not enable both `waline.pageview` and `leancloud_visitors`.
+  pageview: true
+
+  # Custom emoji
+  emoji:
+    - https://jsdelivr.cdn.iszy.cc/npm/@waline/emojis@1.1.0/bilibili
+    - https://jsdelivr.cdn.iszy.cc/npm/@waline/emojis@1.1.0/weibo
+    - https://jsdelivr.cdn.iszy.cc/npm/@waline/emojis@1.1.0/alus
+    - https://jsdelivr.cdn.iszy.cc/npm/@waline/emojis@1.1.0/qq
+    - https://jsdelivr.cdn.iszy.cc/npm/@waline/emojis@1.1.0/tieba
+    - https://jsdelivr.cdn.iszy.cc/npm/@waline/emojis@1.1.0/tw-emoji
+
+  # Comment information, valid meta are nick, mail and link
+  meta:
+    - nick
+    - mail
+  #   - link
+
+  # Set required meta field, e.g.: [nick] | [nick, mail]
+  requiredMeta:
+    - nick
+
+  # Language, available values: en-US, zh-CN, zh-TW, pt-BR, ru-RU, jp-JP, fr-FR
+  lang: zh-CN
+
+  # Word limit, no limit when setting to 0
+  wordLimit: 0
+
+  # Whether enable login, can choose from 'enable', 'disable' and 'force'
+  login: enable
+
+  # comment per page
+  pageSize: 10
+
+  dark: "auto"
