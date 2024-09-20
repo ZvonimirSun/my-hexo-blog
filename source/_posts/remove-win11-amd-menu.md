@@ -5,7 +5,6 @@ categories:
   - 技巧
 tags:
   - Windows
-  - Windows 11
 ---
 
 如题，在此记录一下。
