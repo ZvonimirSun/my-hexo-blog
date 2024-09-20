@@ -18,7 +18,7 @@ tags:
 
 - 官方仓库地址: `registry-1.docker.io`
 - jwt授权地址: `auth.docker.io`
-- api地址: `index.docker.io`进行了代理
+- api地址: `index.docker.io`
 
 限制:
 
