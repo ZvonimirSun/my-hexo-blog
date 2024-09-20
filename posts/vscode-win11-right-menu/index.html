@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.3.0">
+<link rel="preconnect" href="https://fonts.cdn.iszy.cc" crossorigin>
+<link rel="preconnect" href="https://jsdelivr.cdn.iszy.cc" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="google-site-verification" content="NVbOnZWipX7gWLG4NVJzJWVD16F6okyUB1NDN6mNoIo">
+  <meta name="msvalidate.01" content="10AA475F381BF9E4C280F1E2E0B3F280">
+  <meta name="yandex-verification" content="3ec99cb3451ef771">
+  <meta name="baidu-site-verification" content="tV7s6Tu88n">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.cdn.iszy.cc/css?family=Lato:300,300italic,400,400italic,700,700italic%7CJetBrains+Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://jsdelivr.cdn.iszy.cc/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css" integrity="sha256-XOqroi11tY4EFQMR9ZYwZWKj5ZXiftSx36RRuC3anlA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.cc/npm/@fancyapps/ui@5.0.31/dist/fancybox/fancybox.css" integrity="sha256-gkQVf8UKZgQ0HyuxL/VnacadJ+D2Kox2TCEBuNQg5+w=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://jsdelivr.cdn.iszy.cc/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://jsdelivr.cdn.iszy.cc/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.iszy.cc","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.20.0","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":true,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":true,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"algolia":{"appID":"1UJ2W38EIN","apiKey":"c0cf4d0a9659a45dd3a38becbe6b6f73","indexName":"iszy_blog","hits":{"per_page":10}}}</script><script src="https://jsdelivr.cdn.iszy.cc/npm/hexo-theme-next@8.20.0/source/js/config.min.js"></script>
+
+    <meta name="description" content="自Windows 11以来，传统右键菜单被折叠到二级菜单，使用起来不太方便，没法一键用VSCode打开了。我又比较喜欢现在的新菜单样式，不想改回老菜单。遂研究了下添加通过VSCode打开到右键菜单的方法。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Win11添加通过VSCode打开到右键菜单">
+<meta property="og:url" content="https://www.iszy.cc/posts/vscode-win11-right-menu/">
+<meta property="og:site_name" content="随遇而安">
+<meta property="og:description" content="自Windows 11以来，传统右键菜单被折叠到二级菜单，使用起来不太方便，没法一键用VSCode打开了。我又比较喜欢现在的新菜单样式，不想改回老菜单。遂研究了下添加通过VSCode打开到右键菜单的方法。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img.iszy.xyz/1726803912716.png">
+<meta property="og:image" content="https://img.iszy.xyz/1726806485504.png">
+<meta property="og:image" content="https://img.iszy.xyz/1726806649124.png">
+<meta property="article:published_time" content="2024-09-10T02:43:48.000Z">
+<meta property="article:modified_time" content="2024-09-10T02:43:48.000Z">
+<meta property="article:author" content="Dirge">
+<meta property="article:tag" content="VS Code">
+<meta property="article:tag" content="Windows">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img.iszy.xyz/1726803912716.png">
+
+
+<link rel="canonical" href="https://www.iszy.cc/posts/vscode-win11-right-menu/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.iszy.cc/posts/vscode-win11-right-menu/","path":"posts/vscode-win11-right-menu/","title":"Win11添加通过VSCode打开到右键菜单"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Win11添加通过VSCode打开到右键菜单 | 随遇而安</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E60YKKHF8Y"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-E60YKKHF8Y","only_pageview":false,"measure_protocol_api_secret":null}</script>
+  <script src="https://jsdelivr.cdn.iszy.cc/npm/hexo-theme-next@8.20.0/source/js/third-party/analytics/google-analytics.min.js"></script>
+
+
+
+
+
+
+
+<link rel="dns-prefetch" href="https://wl.iszy.xyz">
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="随遇而安" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">随遇而安</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">在自由的空气中漂浮</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">156</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">6</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">141</span></a></li><li class="menu-item menu-item-友链"><a href="/links/" rel="section"><i class="fa fa-link fa-fw"></i>友链</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container"></div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container">
+  <div class="algolia-stats"><hr></div>
+  <div class="algolia-hits"></div>
+  <div class="algolia-pagination"></div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80-%E6%8E%A2%E7%B4%A2"><span class="nav-number">1.</span> <span class="nav-text"> 一、探索</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C-%E5%AE%89%E8%A3%85"><span class="nav-number">2.</span> <span class="nav-text"> 二、安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89-%E5%8D%B8%E8%BD%BD"><span class="nav-number">3.</span> <span class="nav-text"> 三、卸载</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Dirge"
+      src="https://gravatar.cdn.iszy.cc/avatar/5012e410377c7a93d14f7bf31aeeb7fd?d=mm">
+  <p class="site-author-name" itemprop="name">Dirge</p>
+  <div class="site-description" itemprop="description">生活吐槽 & 学习记录</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">141</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">156</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="cc-license animated" itemprop="license">
+    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><img src="https://jsdelivr.cdn.iszy.cc/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></span>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+        <div class="pjax">
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.iszy.cc/posts/vscode-win11-right-menu/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://gravatar.cdn.iszy.cc/avatar/5012e410377c7a93d14f7bf31aeeb7fd?d=mm">
+      <meta itemprop="name" content="Dirge">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="随遇而安">
+      <meta itemprop="description" content="生活吐槽 & 学习记录">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Win11添加通过VSCode打开到右键菜单 | 随遇而安">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Win11添加通过VSCode打开到右键菜单
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-09-10 10:43:48" itemprop="dateCreated datePublished" datetime="2024-09-10T10:43:48+08:00">2024-09-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E5%B7%A7/" itemprop="url" rel="index"><span itemprop="name">技巧</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/posts/vscode-win11-right-menu/#waline" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" data-path="/posts/vscode-win11-right-menu/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-item" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="waline-pageview-count" data-path="/posts/vscode-win11-right-menu/"></span>
+    </span>
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>821</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>自Windows 11以来，传统右键菜单被折叠到二级菜单，使用起来不太方便，没法一键用VSCode打开了。我又比较喜欢现在的新菜单样式，不想改回老菜单。遂研究了下添加<code>通过VSCode打开</code>到右键菜单的方法。</p>
+<span id="more"></span>
+<h2 id="一-探索"><a class="markdownIt-Anchor" href="#一-探索"></a> 一、探索</h2>
+<p>其实我发现安装VSCode Insider版本，Win11右键菜单是有通过Code打开的内容的，不过稳定版本迟迟没有加上这个功能。</p>
+<p>经过一番搜索，在VSCode的Github仓库找到了一个相关issue，<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL21pY3Jvc29mdC92c2NvZGUvaXNzdWVzLzE4MzI5Nw==">Windows 11 menu recommendation<i class="fa fa-external-link-alt"></i></span>，2023年5月就已经打开了。</p>
+<p>总的来说，就是官方暂时没有计划将这个功能添加到稳定版，因为根据<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL21pY3Jvc29mdC92c2NvZGUvaXNzdWVzLzE2NDY4OQ==">另外一个issue<i class="fa fa-external-link-alt"></i></span>，如果资源管理器被占用，这个功能会阻塞VSCode的卸载。</p>
+<p>不过微软还是专门有个仓库<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL21pY3Jvc29mdC92c2NvZGUtZXhwbG9yZXItY29tbWFuZA==">vscode-explorer-command<i class="fa fa-external-link-alt"></i></span>提供了这个功能，不过需要手动通过命令安装。</p>
+<p>我在之前的issue评论区根据大佬的评论，成功地进行了安装。</p>
+<h2 id="二-安装"><a class="markdownIt-Anchor" href="#二-安装"></a> 二、安装</h2>
+<ol>
+<li>
+<p>从 <a target="_blank" rel="noopener" href="https://github.com/microsoft/vscode-explorer-command/releases/"><code>https://github.com/microsoft/vscode-explorer-command/releases/</code></a> 获取最新的VSCode context menu插件发布版本。</p>
+<p>请确认下载了对应系统版本的文件(<code>code_explorer_&lt;arch&gt;.zip</code>)，比如我就需要<code>code_explorer_x64.zip</code></p>
+<p><img data-src="https://img.iszy.xyz/1726803912716.png" alt="" /></p>
+</li>
+<li>
+<p>在VSCode的安装目录下创建一个shell文件夹，把刚刚下载的<code>code_explorer_&lt;arch&gt;.zip</code>文件解压到这个shell文件夹。</p>
+<p>我这边是<code>C:\Users\&lt;username&gt;\AppData\Local\Programs\Microsoft VS Code\</code></p>
+</li>
+<li>
+<p><code>code_explorer_&lt;arch&gt;.appx</code>实际上是个压缩包，通过7z或者其他压缩软件解压出来。</p>
+<p>现在的文件结构</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;vscode安装目录&gt;</span><br><span class="line">|-bin/</span><br><span class="line">|-...</span><br><span class="line">|-shell/</span><br><span class="line">| |-[Content_Types].xml</span><br><span class="line">| |-AppxBlockMap.xml</span><br><span class="line">| |-AppxManifest.xml</span><br><span class="line">| |-code_explorer_command.dll</span><br><span class="line">| L-code_explorer_x64.appx</span><br><span class="line">|-...</span><br><span class="line">|-Code.exe</span><br><span class="line">L-...</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>通过文本编辑器比如说就VSCode打开<code>&lt;vscode安装目录&gt;/shell/AppxManifest.xml</code>文件，找到如下内容并修改。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Publisher=&quot;CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US&quot;</span><br></pre></td></tr></table></figure>
+<p>把两个<code>Microsoft Corporation</code>替换成任何内容，因为Windows禁止安装任何发布自微软的未经签名的内容。</p>
+<p>我这边直接改成了</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Publisher=&quot;CN=Unknown, O=Unknown, L=Unknown, S=Unknown, C=Unknown&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>打开注册表编辑器(<code>regedit.exe</code>)，在<code>HKEY_CURRENT_USER\Software\Classes</code>下新建项<code>VSCodeContextMenu</code>。</p>
+<p>如果需要为其他用户也启用，可以在<code>HKEY_LOCAL_MACHINE\Software\Classes</code>下创建。</p>
+</li>
+<li>
+<p>在刚刚创建的 <code>HKEY_CURRENT_USER\Software\Classes\VSCodeContextMenu</code> 下新建字符串值，名称为<code>Title</code>，数据为菜单里需要展示的内容，如 <code>通过 VSCode 打开</code>。</p>
+<p><img data-src="https://img.iszy.xyz/1726806485504.png" alt="" /></p>
+</li>
+<li>
+<p>在<code>设置</code>-<code>系统</code>-<code>开发者选项</code>中打开<code>开发人员模式</code>以便从松散文件进行安装。</p>
+<p><img data-src="https://img.iszy.xyz/1726806649124.png" alt="" /></p>
+</li>
+<li>
+<p>打开管理员权限的Powershell，进入<code>&lt;vscode安装目录&gt;/shell/</code>，执行以下命令，等待安装完成。</p>
+<figure class="highlight pwsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Add-AppxPackage</span> <span class="literal">-Path</span> <span class="string">&quot;&lt;vscode安装目录&gt;/shell/AppxManifest.xml&quot;</span> <span class="literal">-Register</span> <span class="literal">-ExternalLocation</span> <span class="string">&quot;&lt;vscode安装目录&gt;/shell/&quot;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>装好后就可以关闭<code>开发人员模式</code>了。</p>
+</li>
+<li>
+<p>通过<code>任务管理器</code>重启<code>资源管理器(explorer.exe)</code>，现在右键应该可以看到<code>通过 VSCode打开</code>了。</p>
+</li>
+</ol>
+<h2 id="三-卸载"><a class="markdownIt-Anchor" href="#三-卸载"></a> 三、卸载</h2>
+<p>如果需要卸载这个插件，可以运行如下命令找到插件全名，找到<code>PackageFullName</code>一项。</p>
+<figure class="highlight pwsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Get-AppxPackage</span> Microsoft.VSCode</span><br></pre></td></tr></table></figure>
+<p>然后运行如下命令移除插件。</p>
+<figure class="highlight pwsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Remove-AppxPackage</span> &lt;PackageFullName&gt;</span><br></pre></td></tr></table></figure>
+<p>卸载需要一段时间，完成后就可以重启资源管理器，删除先前添加的注册表项，shell文件夹了。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Dirge
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.iszy.cc/posts/vscode-win11-right-menu/" title="Win11添加通过VSCode打开到右键菜单">https://www.iszy.cc/posts/vscode-win11-right-menu/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/VS-Code/" rel="tag"><i class="fa fa-tag"></i> VS Code</a>
+              <a href="/tags/Windows/" rel="tag"><i class="fa fa-tag"></i> Windows</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/svn-to-git/" rel="prev" title="SVN迁移至GIT，并附带历史提交记录">
+                  <i class="fa fa-angle-left"></i> SVN迁移至GIT，并附带历史提交记录
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/nginx-docker-hub/" rel="next" title="自建Docker Hub加速镜像">
+                  自建Docker Hub加速镜像 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="waline"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2017 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Dirge</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">110k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">6:38</span>
+  </span>
+</div>
+  <div class="powered-by">由 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZw==">NexT.Gemini</span> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://jsdelivr.cdn.iszy.cc/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://jsdelivr.cdn.iszy.cc/npm/@next-theme/pjax@0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+  <script src="https://jsdelivr.cdn.iszy.cc/npm/@fancyapps/ui@5.0.31/dist/fancybox/fancybox.umd.js" integrity="sha256-a+H7FYzJv6oU2hfsfDGM2Ohw/cR9v+hPfxHCLdmCrE8=" crossorigin="anonymous"></script>
+  <script src="https://jsdelivr.cdn.iszy.cc/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://jsdelivr.cdn.iszy.cc/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="https://jsdelivr.cdn.iszy.cc/npm/hexo-theme-next@8.20.0/source/js/comments.min.js"></script><script src="https://jsdelivr.cdn.iszy.cc/npm/hexo-theme-next@8.20.0/source/js/utils.min.js"></script><script src="https://jsdelivr.cdn.iszy.cc/npm/hexo-theme-next@8.20.0/source/js/sidebar.min.js"></script><script src="https://jsdelivr.cdn.iszy.cc/npm/hexo-theme-next@8.20.0/source/js/next-boot.min.js"></script><script src="https://jsdelivr.cdn.iszy.cc/npm/hexo-theme-next@8.20.0/source/js/pjax.min.js"></script>
+
+  <script src="https://jsdelivr.cdn.iszy.cc/npm/algoliasearch@4.23.3/dist/algoliasearch-lite.umd.js" integrity="sha256-1QNshz86RqXe/qsCBldsUu13eAX6n/O98uubKQs87UI=" crossorigin="anonymous"></script>
+<script src="https://jsdelivr.cdn.iszy.cc/npm/instantsearch.js@4.67.0/dist/instantsearch.production.min.js" integrity="sha256-TW7D3X/i/W+RUgEeDppEnFT2ixv5lzplKH0c58D92dY=" crossorigin="anonymous"></script><script src="https://jsdelivr.cdn.iszy.cc/npm/hexo-theme-next@8.20.0/source/js/third-party/search/algolia-search.min.js"></script>
+
+  <script class="next-config" data-name="pdf" type="application/json">{"object_url":{"url":"https://jsdelivr.cdn.iszy.cc/npm/pdfobject@2.3.0/pdfobject.min.js","integrity":"sha256-JJZNsid68vnh3/zyj0lY9BN5ynxVX/12XgOa1TlaYN0="},"url":"/lib/pdf/web/viewer"}</script>
+  <script src="https://jsdelivr.cdn.iszy.cc/npm/hexo-theme-next@8.20.0/source/js/third-party/tags/pdf.min.js"></script>
+
+
+
+  <script src="https://jsdelivr.cdn.iszy.cc/npm/hexo-theme-next@8.20.0/source/js/third-party/fancybox.min.js"></script>
+
+  <script src="https://jsdelivr.cdn.iszy.cc/npm/hexo-theme-next@8.20.0/source/js/third-party/pace.min.js"></script>
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://jsdelivr.cdn.iszy.cc/npm/katex@0.16.9/dist/katex.min.css" integrity="sha256-UF1fgpAiu3tPJN/uCqEUHNe7pnr+QR0SQDNfgglgtcM=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://jsdelivr.cdn.iszy.cc/npm/katex@0.16.9/dist/contrib/copy-tex.min.js","integrity":"sha256-Us54+rSGDSTvIhKKUs4kygE2ipA0RXpWWh0/zLqw3bs="}}</script>
+  <script src="https://jsdelivr.cdn.iszy.cc/npm/hexo-theme-next@8.20.0/source/js/third-party/math/katex.min.js"></script>
+
+
+  <script src="https://jsdelivr.cdn.iszy.cc/npm/quicklink@2.3.0/dist/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":false,"delay":true,"timeout":3000,"priority":true,"url":"https://www.iszy.cc/posts/vscode-win11-right-menu/"}</script>
+  <script src="https://jsdelivr.cdn.iszy.cc/npm/hexo-theme-next@8.20.0/source/js/third-party/quicklink.min.js"></script>
+<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-CN","enable":true,"serverURL":"https://wl.iszy.xyz","cssUrl":"https://jsdelivr.cdn.iszy.cc/npm/@waline/client@v3/dist/waline.css","commentCount":false,"pageview":true,"libUrl":"https://jsdelivr.cdn.iszy.cc/npm/@waline/client@v3/dist/waline.umd.js","locale":{"placeholder":"本站支持匿名评论，无需登录~(●'◡'●)\n与文章无关的留言请前往本站留言板，谢谢配合~"},"emoji":["https://jsdelivr.cdn.iszy.cc/npm/@waline/emojis@1.1.0/bilibili","https://jsdelivr.cdn.iszy.cc/npm/@waline/emojis@1.1.0/weibo","https://jsdelivr.cdn.iszy.cc/npm/@waline/emojis@1.1.0/alus","https://jsdelivr.cdn.iszy.cc/npm/@waline/emojis@1.1.0/qq","https://jsdelivr.cdn.iszy.cc/npm/@waline/emojis@1.1.0/tieba","https://jsdelivr.cdn.iszy.cc/npm/@waline/emojis@1.1.0/tw-emoji"],"meta":["nick","mail"],"requiredMeta":["nick"],"wordLimit":0,"login":"enable","pageSize":10,"dark":"auto","el":"#waline","comment":true,"path":"/posts/vscode-win11-right-menu/"}</script>
+<link rel="stylesheet" href="https://jsdelivr.cdn.iszy.cc/npm/@waline/client@v3/dist/waline.css">
+<script>
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.waline.el).then(() =>
+    NexT.utils.getScript(CONFIG.waline.libUrl, { condition: window.Waline })
+  ).then(() => 
+    Waline.init(Object.assign({}, CONFIG.waline,{ el: document.querySelector(CONFIG.waline.el) }))
+  );
+});
+</script>
+<script type="text/html" id="friendsContent">
+    <div class="links-content">
+        <div class="link-navigation">
+            
+                <div class="card">
+                    <a href="https://www.iszy.cc/" target="_blank">
+                        <img class="ava" src="https://www.iszy.cc/images/avatar.png"/></a>
+                    <div class="card-header">
+                        <div>
+                            <a href="https://www.iszy.cc/" target="_blank">随遇而安</a>
+                        </div>
+                        <div class="info" title="生活吐槽 & 学习记录">生活吐槽 & 学习记录</div>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <a href="https://lstarry.github.io/" target="_blank">
+                        <img class="ava" src="https://lstarry.github.io/images/avatar.jpg"/></a>
+                    <div class="card-header">
+                        <div>
+                            <a href="https://lstarry.github.io/" target="_blank">人间有味是清欢</a>
+                        </div>
+                        <div class="info" title="Gone with the wind">Gone with the wind</div>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <a href="https://samkallon.top" target="_blank">
+                        <img class="ava" src="https://samkallon.top/img/avatar.png"/></a>
+                    <div class="card-header">
+                        <div>
+                            <a href="https://samkallon.top" target="_blank">samkallon</a>
+                        </div>
+                        <div class="info" title="技术分享 && 生活日常">技术分享 && 生活日常</div>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <a href="https://www.hurbai.com/link" target="_blank">
+                        <img class="ava" src="https://img.iszy.xyz/logos/www.hurbai.com.ico"/></a>
+                    <div class="card-header">
+                        <div>
+                            <a href="https://www.hurbai.com/link" target="_blank">大灰hurbai</a>
+                        </div>
+                        <div class="info" title="各种资源分享">各种资源分享</div>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <a href="https://vel.life/link/" target="_blank">
+                        <img class="ava" src="https://img.iszy.xyz/logos/vel.life.gif"/></a>
+                    <div class="card-header">
+                        <div>
+                            <a href="https://vel.life/link/" target="_blank">思维之海</a>
+                        </div>
+                        <div class="info" title="在云端，寻找我的星匙">在云端，寻找我的星匙</div>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <a href="https://www.xxwhite.com/" target="_blank">
+                        <img class="ava" src="https://img.iszy.xyz/logos/www.xxwhite.com.jpg"/></a>
+                    <div class="card-header">
+                        <div>
+                            <a href="https://www.xxwhite.com/" target="_blank">叉叉白</a>
+                        </div>
+                        <div class="info" title="一个小白搞机的记事本">一个小白搞机的记事本</div>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <a href="https://lala.im/" target="_blank">
+                        <img class="ava" src="https://img.iszy.xyz/logos/lala.im.ico"/></a>
+                    <div class="card-header">
+                        <div>
+                            <a href="https://lala.im/" target="_blank">荒岛</a>
+                        </div>
+                        <div class="info" title="暂无介绍~">暂无介绍~</div>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <a href="https://www.finen.top/friends/" target="_blank">
+                        <img class="ava" src="https://img.iszy.xyz/logos/www.finen.top.png"/></a>
+                    <div class="card-header">
+                        <div>
+                            <a href="https://www.finen.top/friends/" target="_blank">Finen</a>
+                        </div>
+                        <div class="info" title="Stay Hungry! Stay Foolish!">Stay Hungry! Stay Foolish!</div>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <a href="https://blog.jimmyho.net/links.html" target="_blank">
+                        <img class="ava" src="https://img.iszy.xyz/logos/blog.jimmyho.net.jpg"/></a>
+                    <div class="card-header">
+                        <div>
+                            <a href="https://blog.jimmyho.net/links.html" target="_blank">Jimmy's Blog</a>
+                        </div>
+                        <div class="info" title="永远相信美好的事情即将发生">永远相信美好的事情即将发生</div>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <a href="https://crosschannel.cc/links.html" target="_blank">
+                        <img class="ava" src="https://img.iszy.xyz/logos/crosschannel.cc.ico"/></a>
+                    <div class="card-header">
+                        <div>
+                            <a href="https://crosschannel.cc/links.html" target="_blank">宅日记</a>
+                        </div>
+                        <div class="info" title="一个不知名懒肥宅的自留地">一个不知名懒肥宅的自留地</div>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <a href="https://www.zjhuiwan.cn/" target="_blank">
+                        <img class="ava" src="https://img.iszy.xyz/logos/www.zjhuiwan.cn.png"/></a>
+                    <div class="card-header">
+                        <div>
+                            <a href="https://www.zjhuiwan.cn/" target="_blank">ZJBLOG</a>
+                        </div>
+                        <div class="info" title="记录生活·分享技术">记录生活·分享技术</div>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <a href="https://pengrl.com/link/" target="_blank">
+                        <img class="ava" src="https://img.iszy.xyz/logos/pengrl.com.jpeg"/></a>
+                    <div class="card-header">
+                        <div>
+                            <a href="https://pengrl.com/link/" target="_blank">yoko blog</a>
+                        </div>
+                        <div class="info" title="非常程序员">非常程序员</div>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <a href="https://jianger.space/links/" target="_blank">
+                        <img class="ava" src="https://img.iszy.xyz/logos/jianger.space.jpeg"/></a>
+                    <div class="card-header">
+                        <div>
+                            <a href="https://jianger.space/links/" target="_blank">Jianger’s Blog</a>
+                        </div>
+                        <div class="info" title="热爱生活｜分享技术｜鼓捣科技">热爱生活｜分享技术｜鼓捣科技</div>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <a href="http://www.wenxuands.com" target="_blank">
+                        <img class="ava" src="https://img.iszy.xyz/logos/www.wenxuands.com.ico"/></a>
+                    <div class="card-header">
+                        <div>
+                            <a href="http://www.wenxuands.com" target="_blank">文轩设计之路</a>
+                        </div>
+                        <div class="info" title="一个 80 后从事于网站前端设计和平面设计的站长之路。">一个 80 后从事于网站前端设计和平面设计的站长之路。</div>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <a href="https://www.younglee.cn/" target="_blank">
+                        <img class="ava" src="https://img.iszy.xyz/logos/hkublog.top.jpg"/></a>
+                    <div class="card-header">
+                        <div>
+                            <a href="https://www.younglee.cn/" target="_blank">Young Lee's Blog</a>
+                        </div>
+                        <div class="info" title="各种教程分享，鸡汤喝饱">各种教程分享，鸡汤喝饱</div>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <a href="https://blog.hofaeair.net/" target="_blank">
+                        <img class="ava" src="https://img.iszy.xyz/logos/blog.hofaeair.net.ico"/></a>
+                    <div class="card-header">
+                        <div>
+                            <a href="https://blog.hofaeair.net/" target="_blank">浩方</a>
+                        </div>
+                        <div class="info" title="hofaeair 的动力源泉">hofaeair 的动力源泉</div>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <a href="https://finisky.github.io/" target="_blank">
+                        <img class="ava" src="https://img.iszy.xyz/logos/finisky.github.io.png"/></a>
+                    <div class="card-header">
+                        <div>
+                            <a href="https://finisky.github.io/" target="_blank">Finisky Garden</a>
+                        </div>
+                        <div class="info" title="Easy doesn’t enter into grown-up life.">Easy doesn’t enter into grown-up life.</div>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <a href="https://blog.tmen.top" target="_blank">
+                        <img class="ava" src="https://img.iszy.xyz/1644659059598.png"/></a>
+                    <div class="card-header">
+                        <div>
+                            <a href="https://blog.tmen.top" target="_blank">Tmenの博客</a>
+                        </div>
+                        <div class="info" title="菜鸟的成长">菜鸟的成长</div>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <a href="https://core.dpangzi.com" target="_blank">
+                        <img class="ava" src="https://img.iszy.xyz/1644659180128.png"/></a>
+                    <div class="card-header">
+                        <div>
+                            <a href="https://core.dpangzi.com" target="_blank">叫我阿胖</a>
+                        </div>
+                        <div class="info" title="追赶大佬脚步的阿胖">追赶大佬脚步的阿胖</div>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <a href="https://yongtaiq.github.io/" target="_blank">
+                        <img class="ava" src="https://img.iszy.xyz/1648013691501.png"/></a>
+                    <div class="card-header">
+                        <div>
+                            <a href="https://yongtaiq.github.io/" target="_blank">闲话茶楼</a>
+                        </div>
+                        <div class="info" title="欢迎来找我随便聊点什么哦">欢迎来找我随便聊点什么哦</div>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <a href="https://dong2000.xyz/" target="_blank">
+                        <img class="ava" src="https://dong2000.xyz/wombo.png"/></a>
+                    <div class="card-header">
+                        <div>
+                            <a href="https://dong2000.xyz/" target="_blank">Anomie</a>
+                        </div>
+                        <div class="info" title="野夫怒见不平处，磨平胸中万古刀">野夫怒见不平处，磨平胸中万古刀</div>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <a href="https://azurelake.cn" target="_blank">
+                        <img class="ava" src="https://azurelake.cn/Avatar.jpg"/></a>
+                    <div class="card-header">
+                        <div>
+                            <a href="https://azurelake.cn" target="_blank">沧浪湖</a>
+                        </div>
+                        <div class="info" title="沧浪’s Blog">沧浪’s Blog</div>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <a href="https://wcowin.work/about/link.html" target="_blank">
+                        <img class="ava" src="https://s2.loli.net/2024/02/01/gaE47y5fKM6kosV.png"/></a>
+                    <div class="card-header">
+                        <div>
+                            <a href="https://wcowin.work/about/link.html" target="_blank">Wcowin’s Web</a>
+                        </div>
+                        <div class="info" title="循此苦旅，以达星辰">循此苦旅，以达星辰</div>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <a href="https://www.ifb.me/" target="_blank">
+                        <img class="ava" src="https://www.ifb.me/static/images/avatar.png"/></a>
+                    <div class="card-header">
+                        <div>
+                            <a href="https://www.ifb.me/" target="_blank">Innovation for Bytes</a>
+                        </div>
+                        <div class="info" title="专注于为读者提供有趣、有用和实际的文章，和大家一起探索、学习技术的最新应用场景。">专注于为读者提供有趣、有用和实际的文章，和大家一起探索、学习技术的最新应用场景。</div>
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+</script>
+<script type="module">
+    function renderFriends() {
+        if (location.pathname !== "/links/") {
+            return
+        }
+        document
+            .getElementById("links")
+            .innerHTML = document
+            .getElementById("friendsContent")
+            .innerHTML;
+    }
+    renderFriends()
+    document.addEventListener('pjax:success', renderFriends)
+</script>
+
+<script type="module">
+    const cdnBase = "https://jsdelivr.cdn.iszy.cc"
+    // live2d_path 参数建议使用绝对路径
+    const live2d_path = `${cdnBase}/gh/stevenjoezhang/live2d-widget@latest/`;
+    //const live2d_path = "/live2d-widget/";
+
+    // 封装异步加载资源的方法
+    function loadExternalResource(url, type) {
+        return new Promise((resolve, reject) => {
+            let tag;
+
+            if (type === "css") {
+                tag = document.createElement("link");
+                tag.rel = "stylesheet";
+                tag.href = url;
+            } else if (type === "js") {
+                tag = document.createElement("script");
+                tag.src = url;
+            }
+            if (tag) {
+                tag.onload = () => resolve(url);
+                tag.onerror = () => reject(url);
+                document
+                    .body
+                    .appendChild(tag);
+            }
+        });
+    }
+
+    // 加载 waifu.css live2d.min.js waifu-tips.js
+    if (screen.width >= 768) {
+        Promise
+            .all([
+                loadExternalResource(live2d_path + "waifu.css", "css"),
+                loadExternalResource(live2d_path + "live2d.min.js", "js"),
+                loadExternalResource(live2d_path + "waifu-tips.js", "js")
+            ])
+            .then(() => {
+                // 配置选项的具体用法见 README.md
+                initWidget({
+                    waifuPath: live2d_path + "waifu-tips.json",
+                    //apiPath: "https://live2d.fghrsh.net/api/",
+                    cdnPath: `${cdnBase}/gh/fghrsh/live2d_api/`,
+                    tools: ["hitokoto", "switch-model", "quit"]
+                });
+                document
+                    .getElementById("waifu")
+                    .style
+                    .userSelect = "none";
+            });
+    }
+</script>
+</body>
+</html>

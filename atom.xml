@@ -40,6 +40,29 @@
   </entry>
   
   <entry>
+    <title>Win11添加通过VSCode打开到右键菜单</title>
+    <link href="https://www.iszy.cc/posts/vscode-win11-right-menu/"/>
+    <id>https://www.iszy.cc/posts/vscode-win11-right-menu/</id>
+    <published>2024-09-10T02:43:48.000Z</published>
+    <updated>2024-09-10T02:43:48.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>自Windows 11以来，传统右键菜单被折叠到二级菜单，使用起来不太方便，没法一键用VSCode打开了。我又比较喜欢现在的新菜单样式，不想改回老菜单。遂研究了下添加<code>通过VSCode打开</code>到右键菜单的方法。</p><span id="more"></span><h2 id="一-探索"><a class="markdownIt-Anchor" href="#一-探索"></a> 一、探索</h2><p>其实我发现安装VSCode Insider版本，Win11右键菜单是有通过Code打开的内容的，不过稳定版本迟迟没有加上这个功能。</p><p>经过一番搜索，在VSCode的Github仓库找到了一个相关issue，<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL21pY3Jvc29mdC92c2NvZGUvaXNzdWVzLzE4MzI5Nw==">Windows 11 menu recommendation<i class="fa fa-external-link-alt"></i></span>，2023年5月就已经打开了。</p><p>总的来说，就是官方暂时没有计划将这个功能添加到稳定版，因为根据<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL21pY3Jvc29mdC92c2NvZGUvaXNzdWVzLzE2NDY4OQ==">另外一个issue<i class="fa fa-external-link-alt"></i></span>，如果资源管理器被占用，这个功能会阻塞VSCode的卸载。</p><p>不过微软还是专门有个仓库<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL21pY3Jvc29mdC92c2NvZGUtZXhwbG9yZXItY29tbWFuZA==">vscode-explorer-command<i class="fa fa-external-link-alt"></i></span>提供了这个功能，不过需要手动通过命令安装。</p><p>我在之前的issue评论区根据大佬的评论，成功地进行了安装。</p><h2 id="二-安装"><a class="markdownIt-Anchor" href="#二-安装"></a> 二、安装</h2><ol><li><p>从 <a href="https://github.com/microsoft/vscode-explorer-command/releases/"><code>https://github.com/microsoft/vscode-explorer-command/releases/</code></a> 获取最新的VSCode context menu插件发布版本。</p><p>请确认下载了对应系统版本的文件(<code>code_explorer_&lt;arch&gt;.zip</code>)，比如我就需要<code>code_explorer_x64.zip</code></p><p><img data-src="https://img.iszy.xyz/1726803912716.png" alt="" /></p></li><li><p>在VSCode的安装目录下创建一个shell文件夹，把刚刚下载的<code>code_explorer_&lt;arch&gt;.zip</code>文件解压到这个shell文件夹。</p><p>我这边是<code>C:\Users\&lt;username&gt;\AppData\Local\Programs\Microsoft VS Code\</code></p></li><li><p><code>code_explorer_&lt;arch&gt;.appx</code>实际上是个压缩包，通过7z或者其他压缩软件解压出来。</p><p>现在的文件结构</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;vscode安装目录&gt;</span><br><span class="line">|-bin/</span><br><span class="line">|-...</span><br><span class="line">|-shell/</span><br><span class="line">| |-[Content_Types].xml</span><br><span class="line">| |-AppxBlockMap.xml</span><br><span class="line">| |-AppxManifest.xml</span><br><span class="line">| |-code_explorer_command.dll</span><br><span class="line">| L-code_explorer_x64.appx</span><br><span class="line">|-...</span><br><span class="line">|-Code.exe</span><br><span class="line">L-...</span><br></pre></td></tr></table></figure></li><li><p>通过文本编辑器比如说就VSCode打开<code>&lt;vscode安装目录&gt;/shell/AppxManifest.xml</code>文件，找到如下内容并修改。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Publisher=&quot;CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US&quot;</span><br></pre></td></tr></table></figure><p>把两个<code>Microsoft Corporation</code>替换成任何内容，因为Windows禁止安装任何发布自微软的未经签名的内容。</p><p>我这边直接改成了</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Publisher=&quot;CN=Unknown, O=Unknown, L=Unknown, S=Unknown, C=Unknown&quot;</span><br></pre></td></tr></table></figure></li><li><p>打开注册表编辑器(<code>regedit.exe</code>)，在<code>HKEY_CURRENT_USER\Software\Classes</code>下新建项<code>VSCodeContextMenu</code>。</p><p>如果需要为其他用户也启用，可以在<code>HKEY_LOCAL_MACHINE\Software\Classes</code>下创建。</p></li><li><p>在刚刚创建的 <code>HKEY_CURRENT_USER\Software\Classes\VSCodeContextMenu</code> 下新建字符串值，名称为<code>Title</code>，数据为菜单里需要展示的内容，如 <code>通过 VSCode 打开</code>。</p><p><img data-src="https://img.iszy.xyz/1726806485504.png" alt="" /></p></li><li><p>在<code>设置</code>-<code>系统</code>-<code>开发者选项</code>中打开<code>开发人员模式</code>以便从松散文件进行安装。</p><p><img data-src="https://img.iszy.xyz/1726806649124.png" alt="" /></p></li><li><p>打开管理员权限的Powershell，进入<code>&lt;vscode安装目录&gt;/shell/</code>，执行以下命令，等待安装完成。</p><figure class="highlight pwsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Add-AppxPackage</span> <span class="literal">-Path</span> <span class="string">&quot;&lt;vscode安装目录&gt;/shell/AppxManifest.xml&quot;</span> <span class="literal">-Register</span> <span class="literal">-ExternalLocation</span> <span class="string">&quot;&lt;vscode安装目录&gt;/shell/&quot;</span></span><br></pre></td></tr></table></figure></li><li><p>装好后就可以关闭<code>开发人员模式</code>了。</p></li><li><p>通过<code>任务管理器</code>重启<code>资源管理器(explorer.exe)</code>，现在右键应该可以看到<code>通过 VSCode打开</code>了。</p></li></ol><h2 id="三-卸载"><a class="markdownIt-Anchor" href="#三-卸载"></a> 三、卸载</h2><p>如果需要卸载这个插件，可以运行如下命令找到插件全名，找到<code>PackageFullName</code>一项。</p><figure class="highlight pwsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Get-AppxPackage</span> Microsoft.VSCode</span><br></pre></td></tr></table></figure><p>然后运行如下命令移除插件。</p><figure class="highlight pwsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Remove-AppxPackage</span> &lt;PackageFullName&gt;</span><br></pre></td></tr></table></figure><p>卸载需要一段时间，完成后就可以重启资源管理器，删除先前添加的注册表项，shell文件夹了。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;自Windows 11以来，传统右键菜单被折叠到二级菜单，使用起来不太方便，没法一键用VSCode打开了。我又比较喜欢现在的新菜单样式，不想改回老菜单。遂研究了下添加&lt;code&gt;通过VSCode打开&lt;/code&gt;到右键菜单的方法。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="技巧" scheme="https://www.iszy.cc/categories/%E6%8A%80%E5%B7%A7/"/>
+    
+    
+    <category term="VS Code" scheme="https://www.iszy.cc/tags/VS-Code/"/>
+    
+    <category term="Windows" scheme="https://www.iszy.cc/tags/Windows/"/>
+    
+  </entry>
+  
+  <entry>
     <title>SVN迁移至GIT，并附带历史提交记录</title>
     <link href="https://www.iszy.cc/posts/svn-to-git/"/>
     <id>https://www.iszy.cc/posts/svn-to-git/</id>
@@ -240,8 +263,6 @@
     
     <category term="Windows" scheme="https://www.iszy.cc/tags/Windows/"/>
     
-    <category term="Windows 11" scheme="https://www.iszy.cc/tags/Windows-11/"/>
-    
   </entry>
   
   <entry>
@@ -262,8 +283,6 @@
     
     
     <category term="Windows" scheme="https://www.iszy.cc/tags/Windows/"/>
-    
-    <category term="Windows 11" scheme="https://www.iszy.cc/tags/Windows-11/"/>
     
   </entry>
   
@@ -450,29 +469,6 @@
     <category term="Kubernetes" scheme="https://www.iszy.cc/tags/Kubernetes/"/>
     
     <category term="K8s" scheme="https://www.iszy.cc/tags/K8s/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>下载老版本 Chromium 的正确姿势</title>
-    <link href="https://www.iszy.cc/posts/old-chromium-download/"/>
-    <id>https://www.iszy.cc/posts/old-chromium-download/</id>
-    <published>2022-07-14T03:18:03.000Z</published>
-    <updated>2022-07-14T03:18:03.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>网站开发中，有时候会遇到特定老版本 Chromium 才会产生的 bug，需要使用老版本的 Chromium 来解决。下面记录一下如何下载老版本的 Chromium 包。</p><span id="more"></span><h2 id="步骤"><a class="markdownIt-Anchor" href="#步骤"></a> 步骤</h2><h3 id="一-查找对应版本的分支信息"><a class="markdownIt-Anchor" href="#一-查找对应版本的分支信息"></a> 一、查找对应版本的分支信息</h3><p><span class="exturl" data-url="aHR0cHM6Ly9jaHJvbWl1bWRhc2guYXBwc3BvdC5jb20vYnJhbmNoZXM=">https://chromiumdash.appspot.com/branches<i class="fa fa-external-link-alt"></i></span></p><p>这里有每个分支版本的相关信息以及分支位置</p><p><img data-src="https://img.iszy.xyz/1722480749524.png" alt="页面预览" /></p><p>比如我需要80版本的Chromium，这里就可以看下80分支的信息，主要需要这个 <code>Branch Pos.</code> 的内容，如图所示。</p><p><img data-src="https://img.iszy.xyz/1722480814407.png" alt="" /></p><h3 id="二-通过-position-号查找软件包"><a class="markdownIt-Anchor" href="#二-通过-position-号查找软件包"></a> 二、通过 Position 号查找软件包</h3><p><span class="exturl" data-url="aHR0cHM6Ly9jb21tb25kYXRhc3RvcmFnZS5nb29nbGVhcGlzLmNvbS9jaHJvbWl1bS1icm93c2VyLXNuYXBzaG90cy9pbmRleC5odG1s">Chromium 历史存储仓库<i class="fa fa-external-link-alt"></i></span></p><p>先选择需要的平台</p><p><img data-src="https://img.iszy.xyz/1657769779611.png" alt="" /></p><p>然后根据 <code>Position</code> 号找到对应的版本</p><p><img data-src="https://img.iszy.xyz/1657769834283.png" alt="" /></p><p>可能会搜不到，可以手动拉到对应 <code>Position</code> 号附近的版本，大版本号基本是一致的。比如这里我选择了 <code>612439</code> 版本。</p><p><img data-src="https://img.iszy.xyz/1657769953873.png" alt="" /></p><p>下载对应的压缩版，解压即可使用。比如这里就是<code>chrome-win.zip</code>。</p><p><img data-src="https://img.iszy.xyz/1657770071034.png" alt="" /></p><h3 id="开始使用吧"><a class="markdownIt-Anchor" href="#开始使用吧"></a> 开始使用吧</h3><p><img data-src="https://img.iszy.xyz/1657770205975.png" alt="" /></p><h2 id="一点注意"><a class="markdownIt-Anchor" href="#一点注意"></a> 一点注意</h2><p>有一点小坑，在需要切换 Chromium 版本时，需要把已经开着的 Chromium 全都关闭，再打开新版本的 Chromium，否则版本不会切换。</p><p>另，Chrome 和 Chromium 是互不影响的，切换 Chromium 版本，不用考虑 Chrome 的状态。</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;网站开发中，有时候会遇到特定老版本 Chromium 才会产生的 bug，需要使用老版本的 Chromium 来解决。下面记录一下如何下载老版本的 Chromium 包。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="技巧" scheme="https://www.iszy.cc/categories/%E6%8A%80%E5%B7%A7/"/>
-    
-    
-    <category term="Chrome" scheme="https://www.iszy.cc/tags/Chrome/"/>
-    
-    <category term="Chromium" scheme="https://www.iszy.cc/tags/Chromium/"/>
     
   </entry>
   
