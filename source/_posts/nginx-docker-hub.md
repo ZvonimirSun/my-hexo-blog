@@ -324,7 +324,7 @@ server
         # 处理429错误
         location @handle_too_many_requests {
             proxy_set_header Host docker.xxxxx.workers.dev;  # 替换为另一个服务器的地址
-            proxy_pass http://docker.xxxxx.workers.dev;
+            proxy_pass https://docker.xxxxx.workers.dev;
         }
         # ....
     }
@@ -426,8 +426,8 @@ server
 
         # 处理429错误
         location @handle_too_many_requests {
-            proxy_set_header Host docker.iszy.workers.dev;  # 替换为另一个服务器的地址
-            proxy_pass http://docker.iszy.workers.dev;
+            proxy_set_header Host docker.xxxxx.workers.dev;  # 替换为另一个服务器的地址
+            proxy_pass https://docker.xxxxx.workers.dev;
         }
     }
 ```
