@@ -166,10 +166,10 @@ waline:
   serverURL: https://wl.iszy.xyz # Waline server address url
 
   # Waline library CDN url, you can set this to your preferred CDN
-  libUrl: https://jsdelivr.cdn.iszy.cc/npm/@waline/client@v3/dist/waline.umd.js
+  libUrl: https://cdn.iszy.cc/jsd/npm/@waline/client@v3/dist/waline.umd.js
 
   # Waline CSS styles CDN url, you can set this to your preferred CDN
-  cssUrl: https://jsdelivr.cdn.iszy.cc/npm/@waline/client@v3/dist/waline.css
+  cssUrl: https://cdn.iszy.cc/jsd/npm/@waline/client@v3/dist/waline.css
 
   # Custom locales
   locale:
@@ -185,12 +185,12 @@ waline:
 
   # Custom emoji
   emoji:
-    - https://jsdelivr.cdn.iszy.cc/npm/@waline/emojis@1.1.0/bilibili
-    - https://jsdelivr.cdn.iszy.cc/npm/@waline/emojis@1.1.0/weibo
-    - https://jsdelivr.cdn.iszy.cc/npm/@waline/emojis@1.1.0/alus
-    - https://jsdelivr.cdn.iszy.cc/npm/@waline/emojis@1.1.0/qq
-    - https://jsdelivr.cdn.iszy.cc/npm/@waline/emojis@1.1.0/tieba
-    - https://jsdelivr.cdn.iszy.cc/npm/@waline/emojis@1.1.0/tw-emoji
+    - https://cdn.iszy.cc/jsd/npm/@waline/emojis@1.1.0/bilibili
+    - https://cdn.iszy.cc/jsd/npm/@waline/emojis@1.1.0/weibo
+    - https://cdn.iszy.cc/jsd/npm/@waline/emojis@1.1.0/alus
+    - https://cdn.iszy.cc/jsd/npm/@waline/emojis@1.1.0/qq
+    - https://cdn.iszy.cc/jsd/npm/@waline/emojis@1.1.0/tieba
+    - https://cdn.iszy.cc/jsd/npm/@waline/emojis@1.1.0/tw-emoji
 
   # Comment information, valid meta are nick, mail and link
   meta:
