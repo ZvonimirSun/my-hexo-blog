@@ -22,25 +22,28 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 切换到当前分支
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - name: 恢复文件修改时间
         run: |
           git ls-files -z | while read -d '' path; do touch -d "$(git log -1 --format="@%ct" "$path")" "$path"; done
       - name: 设置Node版本和缓存
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: 18
-          cache: "npm"
+          node-version: 20
+          cache: "pnpm"
+          cache-dependency-path: "pnpm-lock.yaml"
       - name: Install dependencies 🔧
-        run: yarn install --frozen-lockfile --registry=https://registry.npmjs.org/
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: true
       - uses: nikeee/setup-pandoc@v1
       - name: 编译应用 🔧
         run: |
-          yarn clean
-          yarn build
-          yarn algolia
+          pnpm clean
+          pnpm build
+          pnpm algolia
         env:
           ALGOLIA_ADMIN_API_KEY: ${{ secrets.ALGOLIA_ADMIN_API_KEY }}
       - name: 部署应用
@@ -50,7 +53,3 @@ jobs:
           folder: public
           branch: deploy
           force: false
-      - name: Purge Cache
-        if: ${{ github.ref_name == 'main' }}
-        run: |
-          curl https://purge.jsdelivr.net/gh/zvonimirsun/my-hexo-blog@deploy/css/main.min.css
