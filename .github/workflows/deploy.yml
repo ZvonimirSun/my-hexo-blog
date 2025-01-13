@@ -28,16 +28,16 @@ jobs:
       - name: 恢复文件修改时间
         run: |
           git ls-files -z | while read -d '' path; do touch -d "$(git log -1 --format="@%ct" "$path")" "$path"; done
+      - name: 安装PNPM
+        uses: pnpm/action-setup@v4
       - name: 设置Node版本和缓存
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: "pnpm"
           cache-dependency-path: "pnpm-lock.yaml"
-      - name: Install dependencies 🔧
-        uses: pnpm/action-setup@v4
-        with:
-          run_install: true
+      - name: 安装依赖
+        run: pnpm install
       - uses: nikeee/setup-pandoc@v1
       - name: 编译应用 🔧
         run: |
