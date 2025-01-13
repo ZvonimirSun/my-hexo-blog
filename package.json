@@ -27,8 +27,9 @@
     "hexo-renderer-markdown-it-plus": "^1.0.6",
     "hexo-renderer-stylus": "^3.0.1",
     "hexo-server": "^3.0.0",
-    "hexo-theme-next": "^8.20.0",
+    "hexo-theme-next": "^8.22.0",
     "hexo-word-counter": "^0.2.0",
-    "taze": "^0.16.6"
-  }
+    "taze": "^18.1.0"
+  },
+  "packageManager": "pnpm@9.15.0"
 }
