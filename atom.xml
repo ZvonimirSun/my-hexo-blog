@@ -6,7 +6,7 @@
   <link href="https://www.iszy.cc/atom.xml" rel="self"/>
   
   <link href="https://www.iszy.cc/"/>
-  <updated>2024-09-20T01:08:29.000Z</updated>
+  <updated>2025-08-25T06:34:56.000Z</updated>
   <id>https://www.iszy.cc/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Win11/Win10补丁严重BUG，如何禁用更新</title>
+    <link href="https://www.iszy.cc/posts/win-bug-kb5063878/"/>
+    <id>https://www.iszy.cc/posts/win-bug-kb5063878/</id>
+    <published>2025-08-25T06:34:56.000Z</published>
+    <updated>2025-08-25T06:34:56.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>前些天看到Windows更新了个补丁，带严重的恶性BUG，可能会导致硬盘识别问题，可能导致数据丢失。我第一时间把补丁卸载了，没想到第二天自动更新又给我装上了，经过了一番搜索，遂有此文。</p><span id="more"></span><h2 id="卸载补丁"><a class="markdownIt-Anchor" href="#卸载补丁"></a> 卸载补丁</h2><p>关于这个BUG，大家可以看下果壳剥壳的这篇文章，<span class="exturl" data-url="aHR0cHM6Ly9tcC53ZWl4aW4ucXEuY29tL3MvaVc0TDBSeEd5MFh5S3NOaVJsY1hTQQ==">Win11严重BUG，不要更新！！！<i class="fa fa-external-link-alt"></i></span></p><p>涉及的补丁如下：</p><p>Win10更新版本：</p><p><code>KB5063709</code> / <code>KB5063877</code> / <code>KB5063871</code> / <code>KB5063889</code></p><p>Win11更新版本</p><p><code>KB5063878</code>、<code>KB5063875</code></p><p>现在看情况是说 <code>KB5063878</code> 存在问题，保险起见，我把涉及到的补丁都先给卸载了。</p><p>可以在 <code>设置</code>-<code>Windows更新</code>-<code>更新历史记录</code>-<code>卸载更新</code>中找到可以卸载的补丁，然后进行卸载。</p><p><img data-src="https://img.iszy.xyz/1756105154778.png" alt="卸载补丁" /></p><h2 id="禁用更新"><a class="markdownIt-Anchor" href="#禁用更新"></a> 禁用更新</h2><p>卸载之后，本来以为万事大吉，结果第二天一看，自动更新又给装上了，这没办法只好先暂停更新吧。</p><p>不过还有个问题，我发现Windows更新界面给的暂停更新选项时间有点短，最多只有5周。经过一番搜索，是有注册表项可以修改这个最长暂停时间。</p><p>可以创建一个<code>test.reg</code>文件，文件名随意，贴入以下内容，保存后双击运行，即可添加到注册表。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"></span><br><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings]</span><br><span class="line">&quot;FlightSettingsMaxPauseDays&quot;=dword:0001869f</span><br></pre></td></tr></table></figure><p>根据键名可以看到，这里修改的是最大暂停天数，其中<code>0001869f</code>是16进制的<code>99999</code>，这里时间随便指定的，在reg文件中，这里必须使用16进制写法。</p><p>修改完后，暂停更新的下拉框就能选到更长了。时间其实可以改短一点，99999大概14000多周，这个下拉框点了都卡住了。</p><p><img data-src="https://img.iszy.xyz/1756105855236.png" alt="暂停更新" /></p><p>以后啥时候想更新了，再点继续更新就完事了。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;前些天看到Windows更新了个补丁，带严重的恶性BUG，可能会导致硬盘识别问题，可能导致数据丢失。我第一时间把补丁卸载了，没想到第二天自动更新又给我装上了，经过了一番搜索，遂有此文。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="技巧" scheme="https://www.iszy.cc/categories/%E6%8A%80%E5%B7%A7/"/>
+    
+    
+    <category term="Windows" scheme="https://www.iszy.cc/tags/Windows/"/>
+    
+    <category term="注册表" scheme="https://www.iszy.cc/tags/%E6%B3%A8%E5%86%8C%E8%A1%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>自建Docker Hub加速镜像</title>
@@ -444,31 +467,6 @@
     
     
     <category term="Spring Boot" scheme="https://www.iszy.cc/tags/Spring-Boot/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>强制删除 Kubernetes Namespace</title>
-    <link href="https://www.iszy.cc/posts/force-delete-k8s-namespace/"/>
-    <id>https://www.iszy.cc/posts/force-delete-k8s-namespace/</id>
-    <published>2022-08-12T08:43:41.000Z</published>
-    <updated>2022-08-12T08:43:41.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>记一次 Kubernetes NameSpace 的强制删除。</p><span id="more"></span><h2 id="一-前情"><a class="markdownIt-Anchor" href="#一-前情"></a> 一、前情</h2><p>我在使用 Kubernetes 时，遇到了 Kubernetes NameSpace 无法正常删除的问题。</p><p>NameSpace 状态保持在 Terminating 已经挺久了，我决定强制删除这个 NameSpace。</p><h2 id="二-步骤"><a class="markdownIt-Anchor" href="#二-步骤"></a> 二、步骤</h2><h3 id="1-查看存在的-namespace"><a class="markdownIt-Anchor" href="#1-查看存在的-namespace"></a> 1. 查看存在的 NameSpace</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[root@master ~]# kubectl get ns</span><br><span class="line">NAME                   STATUS        AGE</span><br><span class="line">default                Active        5h46m</span><br><span class="line">istio-system           Terminating   11m</span><br><span class="line">kube-node-lease        Active        5h46m</span><br><span class="line">kube-public            Active        5h46m</span><br><span class="line">kube-system            Active        5h46m</span><br><span class="line">kubernetes-dashboard   Active        5h46m</span><br></pre></td></tr></table></figure><h3 id="2-尝试强制删除-namespace"><a class="markdownIt-Anchor" href="#2-尝试强制删除-namespace"></a> 2. 尝试强制删除 NameSpace</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@master ~]# kubectl delete ns istio-system --force --grace-period=0</span><br><span class="line">warning: Immediate deletion does not <span class="built_in">wait</span> <span class="keyword">for</span> confirmation that the running resource has been terminated. The resource may <span class="built_in">continue</span> to run on the cluster indefinitely.</span><br></pre></td></tr></table></figure><p>卡了挺久也没有效果，看来是删不掉，得强制删了</p><h3 id="2-获取需要强制删除的-namespace-信息"><a class="markdownIt-Anchor" href="#2-获取需要强制删除的-namespace-信息"></a> 2. 获取需要强制删除的 NameSpace 信息</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@master ~]# kubectl get namespace istio-system -o json &gt; istio-system.json</span><br></pre></td></tr></table></figure><h3 id="3-删除-finalizers-相关内容"><a class="markdownIt-Anchor" href="#3-删除-finalizers-相关内容"></a> 3. 删除 finalizers 相关内容</h3><p><img data-src="https://img.iszy.xyz/1660293510641.png" alt="" /></p><h3 id="4-运行-kube-proxy"><a class="markdownIt-Anchor" href="#4-运行-kube-proxy"></a> 4. 运行 kube-proxy</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@master ~]# kubectl proxy</span><br><span class="line">Starting to serve on 127.0.0.1:8001</span><br></pre></td></tr></table></figure><h3 id="5-通过-api-强制删除-namespace"><a class="markdownIt-Anchor" href="#5-通过-api-强制删除-namespace"></a> 5. 通过 API 强制删除 NameSpace</h3><p>新运行个终端，调用 API 删除 NameSpace</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@master ~]# curl -k -H <span class="string">&quot;Content-Type: application/json&quot;</span> -X PUT --data-binary @istio-system.json http://127.0.0.1:8001/api/v1/namespaces/istio-system/finalize</span><br></pre></td></tr></table></figure><h3 id="6-关闭-kube-proxy-并确认-namespace-已删除"><a class="markdownIt-Anchor" href="#6-关闭-kube-proxy-并确认-namespace-已删除"></a> 6. 关闭 kube-proxy 并确认 NameSpace 已删除</h3><p>按 <code>CTRL-C</code> 关闭 kube-proxy，然后确认下现在的 NameSpace</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[root@master ~]# kubectl get ns</span><br><span class="line">NAME                   STATUS        AGE</span><br><span class="line">default                Active        5h48m</span><br><span class="line">kube-node-lease        Active        5h48m</span><br><span class="line">kube-public            Active        5h48m</span><br><span class="line">kube-system            Active        5h48m</span><br><span class="line">kubernetes-dashboard   Active        5h48m</span><br></pre></td></tr></table></figure><p>可以看到 NameSpace 已经被强制删除了。</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;记一次 Kubernetes NameSpace 的强制删除。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="技术" scheme="https://www.iszy.cc/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-    <category term="Docker" scheme="https://www.iszy.cc/tags/Docker/"/>
-    
-    <category term="Kubernetes" scheme="https://www.iszy.cc/tags/Kubernetes/"/>
-    
-    <category term="K8s" scheme="https://www.iszy.cc/tags/K8s/"/>
     
   </entry>
   
