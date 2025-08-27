@@ -1,7 +1,5 @@
 ---
 title: 将 Blob 数据保存到剪贴板
-categories:
-  - 技术
 tags:
   - JavaScript
   - Clipboard

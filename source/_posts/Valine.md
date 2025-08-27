@@ -2,8 +2,6 @@
 title: 超好用极简评论系统 Valine 安装
 date: 2018-04-01 12:00:00
 updated: 2018-04-01 12:00:00
-categories:
-  - 折腾
 tags:
   - Valine
   - 评论系统

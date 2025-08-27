@@ -2,8 +2,6 @@
 title: 利用 acme.sh 申请 Let's Encrypt 免费泛域名证书
 date: 2018-03-18 12:00:00
 updated: 2018-03-18 12:00:00
-categories:
-  - 技巧
 tags:
   - SSL
   - 证书

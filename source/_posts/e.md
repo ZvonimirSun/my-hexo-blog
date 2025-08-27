@@ -1,7 +1,5 @@
 ---
 title: 为 Docker 中的 Nginx 启用 Brotli 压缩算法
-categories:
-  - 技术
 tags:
   - Nginx
   - Docker

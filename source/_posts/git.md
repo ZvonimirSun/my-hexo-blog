@@ -2,8 +2,6 @@
 title: Git实用技巧
 date: 2022-11-10 17:28:50
 updated: 2022-11-10 17:28:50
-categories:
-  - 技巧
 tags:
   - git
 ---

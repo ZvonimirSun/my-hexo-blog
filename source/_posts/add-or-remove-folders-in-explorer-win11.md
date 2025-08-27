@@ -1,8 +1,6 @@
 ---
 title: 添加或移除 WIN11 此电脑中的文件夹
 date: 2022-12-16 14:00:25
-categories:
-  - 技巧
 tags:
   - Windows
 ---

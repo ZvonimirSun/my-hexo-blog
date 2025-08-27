@@ -2,8 +2,6 @@
 title: 尝试Layui日期控件(layDate)遇到的坑
 date: 2019-04-07 21:01:47
 updated: 2019-04-07 21:01:47
-categories:
-  - 技术
 tags:
   - JavaScript
   - JQuery

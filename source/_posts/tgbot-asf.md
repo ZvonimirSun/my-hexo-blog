@@ -2,8 +2,6 @@
 title: 通过Telegram机器人管理ASF
 date: 2019-10-05 12:18:52
 updated: 2019-10-05 12:18:52
-categories:
-  - 技巧
 tags:
   - ASF
   - Telegram

@@ -2,8 +2,6 @@
 title: 道格拉斯—普克法
 date: 2017-10-17 12:00:00
 updated: 2017-10-17 12:00:00
-categories:
-  - 技术
 tags:
   - GIS
   - Csharp

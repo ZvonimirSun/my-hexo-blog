@@ -2,8 +2,6 @@
 title: 申请AdSense记录
 date: 2018-08-18 10:54:33
 updated: 2018-08-31 14:46:33
-categories:
-  - 折腾
 tags:
   - 广告
   - Google

@@ -1,7 +1,5 @@
 ---
 title: 强制删除 Kubernetes Namespace
-categories:
-  - 技术
 tags:
   - Docker
   - Kubernetes

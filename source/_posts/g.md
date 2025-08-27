@@ -2,8 +2,6 @@
 title: JavaScript LeetCode 2.两数相加
 date: 2022-03-20 23:36:23
 updated: 2022-03-20 23:36:23
-categories:
-  - 技术
 tags:
   - LeetCode
   - 力扣

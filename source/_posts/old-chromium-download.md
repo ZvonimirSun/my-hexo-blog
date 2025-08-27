@@ -1,8 +1,6 @@
 ---
 title: 下载老版本 Chromium 的正确姿势
 date: 2022-07-14 11:18:03
-categories:
-  - 技巧
 tags:
   - Chrome
   - Chromium
@@ -22,7 +20,7 @@ tags:
 
 ![页面预览](https://img.iszy.xyz/1722480749524.png)
 
-比如我需要80版本的Chromium，这里就可以看下80分支的信息，主要需要这个 `Branch Pos.` 的内容，如图所示。
+比如我需要 80 版本的 Chromium，这里就可以看下 80 分支的信息，主要需要这个 `Branch Pos.` 的内容，如图所示。
 
 ![](https://img.iszy.xyz/1722480814407.png)
 

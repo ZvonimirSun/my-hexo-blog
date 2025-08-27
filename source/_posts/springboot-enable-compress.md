@@ -1,7 +1,5 @@
 ---
 title: Spring Boot 开启压缩
-categories:
-  - 技术
 tags:
   - Spring Boot
 date: 2022-09-14 09:38:50

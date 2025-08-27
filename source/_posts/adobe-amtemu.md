@@ -2,8 +2,6 @@
 title: 超强 Adobe 系列软件一键破解工具——amtemu
 date: 2018-03-30 12:00:00
 updated: 2019-03-05 12:00:00
-categories:
-  - 分享
 tags:
   - Adobe
 ---

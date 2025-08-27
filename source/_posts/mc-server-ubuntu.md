@@ -2,8 +2,6 @@
 title: 在Ubuntu 16.04搭建Minecraft服务器1.13
 date: 2018-08-05 12:47:10
 updated: 2018-08-05 12:47:10
-categories:
-  - 技巧
 tags:
   - Linux
   - Minecraft

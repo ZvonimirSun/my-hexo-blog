@@ -2,8 +2,6 @@
 title: 自建短域名服务——Polr
 date: 2018-08-15 09:39:44
 updated: 2019-02-14 09:39:44
-categories:
-  - 折腾
 tags:
   - Ubuntu
   - Linux

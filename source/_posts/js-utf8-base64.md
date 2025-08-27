@@ -1,7 +1,5 @@
 ---
 title: JS实现UTF-8下的Base64编解码
-categories:
-  - 技术
 tags:
   - JavaScript
   - Node.js

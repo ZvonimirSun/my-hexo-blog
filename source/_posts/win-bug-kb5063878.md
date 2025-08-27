@@ -1,8 +1,6 @@
 ---
 title: Win11/Win10补丁严重BUG，如何禁用更新
 date: 2025-08-25 14:34:56
-categories:
-  - 技巧
 tags:
   - Windows
   - 注册表

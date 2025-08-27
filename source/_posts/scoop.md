@@ -2,8 +2,6 @@
 title: 用Scoop包管理器管理你的Windows软件
 date: 2019-06-12 10:00:00
 updated: 2019-06-12 10:00:00
-categories:
-  - 技巧
 tags:
   - Scoop
   - PowerShell

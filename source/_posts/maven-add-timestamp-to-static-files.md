@@ -1,8 +1,6 @@
 ---
 title: MAVEN打包时自动给静态文件添加时间戳
 date: 2022-04-18 10:56:43
-categories:
-  - 技术
 tags:
   - Maven
 ---

@@ -1,8 +1,6 @@
 ---
 title: SVN迁移至GIT，并附带历史提交记录
 date: 2024-05-07 11:42:45
-categories:
-  - 技巧
 tags:
   - Git
   - SVN

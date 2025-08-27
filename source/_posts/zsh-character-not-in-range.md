@@ -1,7 +1,5 @@
 ---
 title: "zsh (anon):12: character not in range"
-categories:
-  - 技巧
 tags:
   - Linux
   - Zsh

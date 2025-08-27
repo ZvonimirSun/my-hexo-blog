@@ -1,8 +1,6 @@
 ---
 title: 迁移 Docker Compose 遇到 yaml 结构错误
 date: 2023-11-03 12:51:48
-categories:
-  - 技巧
 tags:
   - Docker
   - Docker Compose

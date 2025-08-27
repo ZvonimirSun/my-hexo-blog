@@ -1,7 +1,5 @@
 ---
 title: 利用Github自建图床的几种方式
-categories:
-  - 技巧
 tags:
   - Github
   - 图床

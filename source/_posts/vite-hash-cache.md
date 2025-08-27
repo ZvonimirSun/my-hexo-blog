@@ -1,7 +1,5 @@
 ---
 title: 解决Vite打包产生的hash缓存失效问题
-categories:
-  - 技术
 tags:
   - Vite
   - Vue

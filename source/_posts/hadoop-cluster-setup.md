@@ -2,8 +2,6 @@
 title: Ubuntu部署Hadoop集群记录
 date: 2019-12-01 20:12:00
 updated: 2019-12-01 20:12:00
-categories:
-  - 技巧
 tags:
   - Hadoop
   - 集群

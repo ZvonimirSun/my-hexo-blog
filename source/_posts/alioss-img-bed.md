@@ -1,8 +1,6 @@
 ---
 title: 利用阿里云OSS搭建图床
 date: 2023-11-27 13:02:28
-categories:
-  - 技巧
 tags:
   - 图床
   - 阿里云

@@ -1,8 +1,6 @@
 ---
 title: Unraid 安装 Nvidia 驱动并开启 Plex 硬解
 date: 2022-12-10 16:44:51
-categories:
-  - 折腾
 tags:
   - Unraid
   - Nas

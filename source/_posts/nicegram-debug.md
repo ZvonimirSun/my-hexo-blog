@@ -2,8 +2,6 @@
 title: 最新开启Nicegram Debug方法
 date: 2019-10-15 14:07:23
 updated: 2021-06-20 14:07:23
-categories:
-  - 分享
 tags:
   - iOS
   - Telegram

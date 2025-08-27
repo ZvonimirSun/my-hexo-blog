@@ -2,8 +2,6 @@
 title: NexT 主题配置记录
 date: 2018-07-22 12:16:13
 updated: 2018-11-28 22:04:00
-categories:
-  - 折腾
 tags:
   - NexT
   - Hexo

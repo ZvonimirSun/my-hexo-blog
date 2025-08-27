@@ -1,7 +1,5 @@
 ---
 title: Linux 安装 docker compose v2
-categories:
-  - 技巧
 tags:
   - Docker
   - Linux

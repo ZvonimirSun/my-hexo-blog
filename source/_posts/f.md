@@ -2,8 +2,6 @@
 title: JavaScript LeetCode 1.两数之和
 date: 2022-03-20 22:55:23
 updated: 2022-03-20 22:55:23
-categories:
-  - 技术
 tags:
   - LeetCode
   - 力扣

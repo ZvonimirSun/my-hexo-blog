@@ -2,8 +2,6 @@
 title: JAVA信任自签名证书
 date: 2021-03-07 17:45:55
 updated: 2021-03-07 17:45:55
-categories:
-  - 技术
 tags:
   - OpenSSL
   - Java

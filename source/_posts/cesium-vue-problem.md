@@ -1,8 +1,6 @@
 ---
 title: 记一次Cesium排错
 date: 2023-10-25 23:25:08
-categories:
-  - 技术
 tags:
   - Cesium
   - Vue

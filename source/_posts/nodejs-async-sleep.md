@@ -2,8 +2,6 @@
 title: Node.js利用async实现sleep功能
 date: 2019-03-08 14:18:04
 updated: 2019-03-08 14:18:04
-categories:
-  - 技术
 tags:
   - Node.js
   - JavaScript

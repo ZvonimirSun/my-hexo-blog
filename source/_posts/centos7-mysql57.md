@@ -2,8 +2,6 @@
 title: CentOS 7 手动部署 MySQL 5.7
 date: 2019-08-05 09:00:00
 updated: 2019-08-05 09:00:00
-categories:
-  - 技巧
 tags:
   - MySQL
   - Linux

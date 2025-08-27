@@ -2,8 +2,6 @@
 title: 体验 Windows 10 内置 Linux 子系统
 date: 2018-05-05 12:00:00
 updated: 2018-05-05 12:00:00
-categories:
-  - 折腾
 tags:
   - WSL
   - Ubuntu

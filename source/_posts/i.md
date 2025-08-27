@@ -1,8 +1,6 @@
 ---
 title: Switch正在检查是否可以运行软件问题
 date: 2022-03-25 17:19:24
-categories:
-  - 其他
 tags:
   - NS
   - Nintendo

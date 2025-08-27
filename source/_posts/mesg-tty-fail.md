@@ -2,8 +2,6 @@
 title: "解决ttyname failed: Inappropriate ioctl for device问题"
 date: 2018-08-11 09:41:17
 updated: 2018-08-11 09:41:17
-categories:
-  - 技巧
 tags:
   - Linux
 ---

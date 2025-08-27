@@ -1,8 +1,6 @@
 ---
 title: Win11添加通过VSCode打开到右键菜单
 date: 2024-09-10 10:43:48
-categories:
-  - 技巧
 tags:
   - Windows
   - VS Code

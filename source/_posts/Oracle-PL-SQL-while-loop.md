@@ -2,8 +2,6 @@
 title: Oracle PL/SQL while loop循环实例
 date: 2017-11-29 12:00:00
 updated: 2017-11-29 12:00:00
-categories:
-  - 技术
 tags:
   - Oracle
   - SQL

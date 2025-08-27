@@ -2,8 +2,6 @@
 title: Oracle PL/SQL BREAK-ON排列实例
 date: 2017-12-05 12:00:00
 updated: 2017-12-05 12:00:00
-categories:
-  - 技术
 tags:
   - Oracle
   - SQL

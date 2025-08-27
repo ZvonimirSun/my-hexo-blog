@@ -1,8 +1,6 @@
 ---
 title: OpenVPN同时连接多个VPN服务
 date: 2024-03-27 14:13:47
-categories:
-  - 技巧
 tags:
   - OpenVPN
 ---

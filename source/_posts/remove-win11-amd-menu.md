@@ -1,8 +1,6 @@
 ---
 title: 删除win11右键一级菜单的AMD驱动栏
 date: 2022-12-15 08:35:29
-categories:
-  - 技巧
 tags:
   - Windows
 ---

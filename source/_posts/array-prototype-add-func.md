@@ -2,8 +2,6 @@
 title: 给数组原型对象添加方法
 date: 2021-06-15 10:24:35
 updated: 2021-06-15 10:24:35
-categories:
-  - 技术
 tags:
   - JavaScript
   - 数组

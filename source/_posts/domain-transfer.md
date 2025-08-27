@@ -2,8 +2,6 @@
 title: 从namecheap转移域名到阿里云/万网
 date: 2018-10-02 12:10:00
 updated: 2018-10-02 12:10:00
-categories:
-  - 折腾
 tags:
   - 域名
   - 备案

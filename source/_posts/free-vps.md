@@ -2,8 +2,6 @@
 title: 闲置VPS能用来干点啥
 date: 2018-08-14 10:18:43
 updated: 2018-08-14 10:18:43
-categories:
-  - 杂谈
 tags:
   - VPS
 keywords: 闲置,VPS,代理

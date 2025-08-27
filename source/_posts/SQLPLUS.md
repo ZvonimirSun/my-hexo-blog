@@ -2,8 +2,6 @@
 title: Oracle SQLPLUS命令
 date: 2017-09-26 15:00:00
 updated: 2017-09-26 15:00:00
-categories:
-  - 技巧
 tags:
   - SQL
   - 数据库

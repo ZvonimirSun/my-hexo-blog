@@ -2,8 +2,6 @@
 title: SQL Server数据库角色成员身份
 date: 2017-11-11 12:00:00
 updated: 2017-11-11 12:00:00
-categories:
-  - 技术
 tags:
   - SQL Server
   - 数据库
