@@ -30,16 +30,12 @@
   site: https://lala.im/
   info: 暂无介绍~
   avatar: https://img.iszy.xyz/logos/lala.im.ico
-- name: Finen
-  site: https://www.finen.top/friends/
-  info: Stay Hungry! Stay Foolish!
-  avatar: https://img.iszy.xyz/logos/www.finen.top.png
 - name: Jimmy's Blog
   site: https://blog.jimmyho.net/links.html
   info: 永远相信美好的事情即将发生
   avatar: https://img.iszy.xyz/logos/blog.jimmyho.net.jpg
 - name: 宅日记
-  site: https://crosschannel.cc/links.html
+  site: https://crosschannel.cc/friends/
   info: 一个不知名懒肥宅的自留地
   avatar: https://img.iszy.xyz/logos/crosschannel.cc.ico
 - name: ZJBLOG
@@ -50,29 +46,13 @@
   site: https://pengrl.com/link/
   info: 非常程序员
   avatar: https://img.iszy.xyz/logos/pengrl.com.jpeg
-- name: Jianger’s Blog
-  site: https://jianger.space/links/
-  info: 热爱生活｜分享技术｜鼓捣科技
-  avatar: https://img.iszy.xyz/logos/jianger.space.jpeg
-- name: 文轩设计之路
-  site: http://www.wenxuands.com
-  info: 一个 80 后从事于网站前端设计和平面设计的站长之路。
-  avatar: https://img.iszy.xyz/logos/www.wenxuands.com.ico
-- name: Young Lee's Blog
-  site: https://www.younglee.cn/
-  info: 各种教程分享，鸡汤喝饱
-  avatar: https://img.iszy.xyz/logos/hkublog.top.jpg
-- name: 浩方
-  site: https://blog.hofaeair.net/
-  info: hofaeair 的动力源泉
-  avatar: https://img.iszy.xyz/logos/blog.hofaeair.net.ico
 - name: Finisky Garden
-  site: https://finisky.github.io/
+  site: https://finisky.github.io/links/
   info: Easy doesn’t enter into grown-up life.
   avatar: https://img.iszy.xyz/logos/finisky.github.io.png
 - name: Tmenの博客
-  site: https://blog.tmen.top
-  info: 菜鸟的成长
+  site: https://blog.tmen.top/link
+  info: 菜鸟进步营地
   avatar: https://img.iszy.xyz/1644659059598.png
 - name: 叫我阿胖
   site: https://core.dpangzi.com
@@ -83,7 +63,7 @@
   info: 欢迎来找我随便聊点什么哦
   avatar: https://img.iszy.xyz/1648013691501.png
 - name: Anomie
-  site: https://dong2000.xyz/
+  site: https://dong2000.xyz/links/
   info: 野夫怒见不平处，磨平胸中万古刀
   avatar: https://dong2000.xyz/wombo.png
 - name: 沧浪湖
@@ -91,10 +71,10 @@
   info: 沧浪’s Blog
   avatar: https://azurelake.cn/Avatar.jpg
 - name: Wcowin’s Web
-  site: https://wcowin.work/about/link.html
+  site: https://wcowin.work/link/
   info: 循此苦旅，以达星辰
   avatar: https://s2.loli.net/2024/02/01/gaE47y5fKM6kosV.png
 - name: Innovation for Bytes
-  site: https://www.ifb.me/
+  site: https://www.ifb.me/zh/links
   info: 专注于为读者提供有趣、有用和实际的文章，和大家一起探索、学习技术的最新应用场景。
   avatar: https://www.ifb.me/static/images/avatar.png
