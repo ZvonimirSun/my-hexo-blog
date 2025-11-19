@@ -15,7 +15,7 @@ ReactOS 是一个适用于 x86/x64 平台的免费、开源的操作系统暨项
 
 前往 ReactOS 官网[下载系统镜像](https://www.reactos.org/download)。
 
-![](https://img.iszy.xyz/20190318215607.png)
+![](https://img.iszy.cc/20190318215607.png)
 
 将会得到一个 zip 压缩包，解压后是 ReactOS 的安装镜像。
 
@@ -27,33 +27,33 @@ ReactOS 是一个适用于 x86/x64 平台的免费、开源的操作系统暨项
 
 #### 新建虚拟机
 
-![](https://img.iszy.xyz/20190318215634.png)
+![](https://img.iszy.cc/20190318215634.png)
 
 #### 选择镜像
 
-![](https://img.iszy.xyz/20190318215652.png)
+![](https://img.iszy.cc/20190318215652.png)
 
 #### 系统类型设置
 
 全部选择其他
 
-![](https://img.iszy.xyz/20190318215707.png)
+![](https://img.iszy.cc/20190318215707.png)
 
 #### 选择虚拟机存储位置
 
-![](https://img.iszy.xyz/20190318215717.png)
+![](https://img.iszy.cc/20190318215717.png)
 
 #### 硬盘设置
 
 容量设置为 8G，不用太多
 
-![](https://img.iszy.xyz/20190318215728.png)
+![](https://img.iszy.cc/20190318215728.png)
 
 #### 其他参数设置
 
 内存建议至少 512M，如果想的话，可以开启加速 3D 图形
 
-![](https://img.iszy.xyz/20190318215740.png)
+![](https://img.iszy.cc/20190318215740.png)
 
 点击完成即可。
 
@@ -65,45 +65,45 @@ ReactOS 是一个适用于 x86/x64 平台的免费、开源的操作系统暨项
 
 有许多语言可供选择，在这里我选择`Chinese (RPC)`，点击回车。
 
-![](https://img.iszy.xyz/20190318215752.png)
+![](https://img.iszy.cc/20190318215752.png)
 
 #### 调整屏幕分辨率
 
 一路回车到如下界面，可以调整屏幕分辨率，若不需要，回车即可。
 
-![](https://img.iszy.xyz/20190318215803.png)
+![](https://img.iszy.cc/20190318215803.png)
 
 在此，我调整了分辨率为`1280x1024x32`。
 
-![](https://img.iszy.xyz/20190318215814.png)
+![](https://img.iszy.cc/20190318215814.png)
 
 #### 安装
 
 一路回车进行安装，到如下界面。在虚拟机右下角断开 CD 连接后回车重启。
 
-![](https://img.iszy.xyz/20190318215825.png)
+![](https://img.iszy.cc/20190318215825.png)
 
 ## 设置
 
 启动后直接回车进入第一个系统，后面都是类 Windows 的操作，比较简单，不用设置的地方下一步即可。
 
-![](https://img.iszy.xyz/20190318215850.png)
+![](https://img.iszy.cc/20190318215850.png)
 
 在此页面可以设置时区、输入语言和键盘，可惜似乎没有中文的输入法支持。
 
-![](https://img.iszy.xyz/20190318215901.png)
+![](https://img.iszy.cc/20190318215901.png)
 
 在此页面可以设置系统密码，我在此留空，不设密码。
 
-![](https://img.iszy.xyz/20190318215909.png)
+![](https://img.iszy.cc/20190318215909.png)
 
 时区选择北京，关闭夏令时。
 
-![](https://img.iszy.xyz/20190318215922.png)
+![](https://img.iszy.cc/20190318215922.png)
 
 一路下一步完成安装，重启后即可进入系统。自动安装驱动可以取消，反正也没有可以支持的内容。
 
-![](https://img.iszy.xyz/20190318215937.png)
+![](https://img.iszy.cc/20190318215937.png)
 
 ## 后话
 
@@ -111,4 +111,4 @@ ReactOS 完成度已经很高了，经网友测试已经可以兼容许多 Windo
 
 在此我就体验了一下 ReactOS 自带的扫雷游戏，更多功能留给看官自行探索。
 
-![](https://img.iszy.xyz/20190318215950.png)
+![](https://img.iszy.cc/20190318215950.png)

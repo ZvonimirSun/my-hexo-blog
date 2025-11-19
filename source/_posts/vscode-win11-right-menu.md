@@ -28,7 +28,7 @@ tags:
 
    请确认下载了对应系统版本的文件(`code_explorer_<arch>.zip`)，比如我就需要`code_explorer_x64.zip`
 
-   ![](https://img.iszy.xyz/1726803912716.png)
+   ![](https://img.iszy.cc/1726803912716.png)
 
 2. 在VSCode的安装目录下创建一个shell文件夹，把刚刚下载的`code_explorer_<arch>.zip`文件解压到这个shell文件夹。
 
@@ -73,11 +73,11 @@ tags:
 
 6. 在刚刚创建的 `HKEY_CURRENT_USER\Software\Classes\VSCodeContextMenu` 下新建字符串值，名称为`Title`，数据为菜单里需要展示的内容，如 `通过 VSCode 打开`。
 
-   ![](https://img.iszy.xyz/1726806485504.png)
+   ![](https://img.iszy.cc/1726806485504.png)
 
 7. 在`设置`-`系统`-`开发者选项`中打开`开发人员模式`以便从松散文件进行安装。
 
-   ![](https://img.iszy.xyz/1726806649124.png)
+   ![](https://img.iszy.cc/1726806649124.png)
 
 8. 打开管理员权限的Powershell，进入`<vscode安装目录>/shell/`，执行以下命令，等待安装完成。
 

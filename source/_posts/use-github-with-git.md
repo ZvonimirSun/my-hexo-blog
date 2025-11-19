@@ -46,7 +46,7 @@ tags:
 
 ## Git 常用命令
 
-![](https://img.iszy.xyz/20190318220908.png)
+![](https://img.iszy.cc/20190318220908.png)
 
 ### 新建代码库
 

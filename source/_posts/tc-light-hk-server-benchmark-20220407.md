@@ -16,14 +16,14 @@ date: 2022-04-07 15:30:01
 
 后悔以前 CN2 线路的时候没留一台，现在是 163 线路，体验上其实还可以，至少不像阿里轻量到处绕。
 
-![](https://img.iszy.xyz/1649315971476.png)
+![](https://img.iszy.cc/1649315971476.png)
 
 ## Benchmark
 
 用老鬼大佬的脚本跑了下，还是挺满意的。Fast.com 不知道为啥不通。
 
-![](https://img.iszy.xyz/1649315021461.png)
+![](https://img.iszy.cc/1649315021461.png)
 
 ## 媒体解锁和性能测试
 
-![](https://img.iszy.xyz/1649316516160.png)
+![](https://img.iszy.cc/1649316516160.png)

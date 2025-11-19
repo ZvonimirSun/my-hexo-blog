@@ -35,15 +35,15 @@ keywords: telegram,nicegram,ios
 
 1. 点击菜单中的 `Settings` 打开设置
 
-   ![Settings](https://img.iszy.xyz/20210802093233.png)
+   ![Settings](https://img.iszy.cc/20210802093233.png)
 
 2. 点击 `Privacy and Security`
 
-   ![Privacy and Security](https://img.iszy.xyz/20210802093803.png)
+   ![Privacy and Security](https://img.iszy.cc/20210802093803.png)
 
 3. 打开 `Disable filtering` 开关
 
-   ![Disable filtering](https://img.iszy.xyz/20210802093917.png)
+   ![Disable filtering](https://img.iszy.cc/20210802093917.png)
 
 4. 关闭 Telegram iOS 端，重新打开，你将看到原本被过滤的群组已经可以正常进入了
 
@@ -55,16 +55,16 @@ keywords: telegram,nicegram,ios
 
 2. 打开菜单
 
-   ![菜单位置](https://img.iszy.xyz/20210620194729.png)
+   ![菜单位置](https://img.iszy.cc/20210620194729.png)
 
 3. 打开 `Settings` - `Privacy and Security` - `Sensitive Content`
 
-   ![Settings](https://img.iszy.xyz/20210620194935.png)
+   ![Settings](https://img.iszy.cc/20210620194935.png)
 
-   ![Privacy and Security](https://img.iszy.xyz/20210620195102.png)
+   ![Privacy and Security](https://img.iszy.cc/20210620195102.png)
 
 4. 打开 `Disable filtering` 开关
 
-   ![Disable filtering](https://img.iszy.xyz/20210620195246.png)
+   ![Disable filtering](https://img.iszy.cc/20210620195246.png)
 
 5. 关闭 Telegram iOS 端，重新打开，你将看到原本被过滤的群组已经可以正常进入了

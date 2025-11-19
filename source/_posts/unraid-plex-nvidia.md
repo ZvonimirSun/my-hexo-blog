@@ -32,31 +32,31 @@ tags:
 
 在应用中心，搜索`nvidia driver`，就能看到一个由 ich777 大佬维护的 Nvidia-Driver 插件，点击安装。
 
-![](https://img.iszy.xyz/1670667734658.png)
+![](https://img.iszy.cc/1670667734658.png)
 
 安装完成后，进入设置，点击进入下方刚刚安装的应用。应用会拉取最新的驱动信息，所以会比较慢。
 
-![](https://img.iszy.xyz/1670667950035.png)
+![](https://img.iszy.cc/1670667950035.png)
 
 选择分支或者指定的驱动版本，点击 `Update & Download` 按钮。这里我选择 Production 分支，感觉会比较稳。
 
-![](https://img.iszy.xyz/1670668181420.png)
+![](https://img.iszy.cc/1670668181420.png)
 
 等待驱动下载完成，弹窗信息里会显示下载完成，重启以安装新的驱动，弹窗下方的按钮会变为完成。此时可以重启 Unraid，新的驱动会自动安装。千万不要在中途关闭弹窗，这样就搞不清楚状态了。
 
 装好后，再次进入应用，应用里就会有驱动信息了。
 
-![](https://img.iszy.xyz/1670668411649.png)
+![](https://img.iszy.cc/1670668411649.png)
 
 ### 2. 安装 GPU 监控插件（选）
 
 为了方便查看 GPU 状态，可以考虑安装一个 GPU Statistics 插件。
 
-![](https://img.iszy.xyz/1670668613284.png)
+![](https://img.iszy.cc/1670668613284.png)
 
 装好后，就可以在仪表盘看到 GPU 的负载情况。
 
-![](https://img.iszy.xyz/1670668551407.png)
+![](https://img.iszy.cc/1670668551407.png)
 
 ### 3. 安装 Plex
 
@@ -66,7 +66,7 @@ tags:
 
 这里我选择了`binhex-plexpass`这个应用，选其他的也可以，这个主要是比较方便一点，不少参数已经帮你列好了，可以直接配置。
 
-![](https://img.iszy.xyz/1670668918772.png)
+![](https://img.iszy.cc/1670668918772.png)
 
 #### (2) 修改主要参数
 
@@ -76,33 +76,33 @@ tags:
 - Host Path 2:(Container Path: /media): 这个是存储影片的路径，可自行修改，所有的共享都在这个`/mnt/user`下面看到
 - Key 3 (NVIDIA_VISIBLE_DEVICES): 这个是 GPU 的 id，可以在 `Nvidia Driver` 应用里找到，这个指定了 docker 使用的显卡。注意，一张显卡可以在多个 docker 应用中共用，但不能在 docker 和虚拟机中共享。
 
-![](https://img.iszy.xyz/1670669464258.png)
+![](https://img.iszy.cc/1670669464258.png)
 
 #### (3) 添加 GPU 设备
 
 点击添加设备
 
-![](https://img.iszy.xyz/1670670100384.png)
+![](https://img.iszy.cc/1670670100384.png)
 
 这边添加两个设备
 
 `/dev/nvidia0`
 
-![](https://img.iszy.xyz/1670670160151.png)
+![](https://img.iszy.cc/1670670160151.png)
 
 `/dev/nvidiactl`
 
-![](https://img.iszy.xyz/1670670251438.png)
+![](https://img.iszy.cc/1670670251438.png)
 
 #### (4) 设置 Nvidia 运行时
 
 点击右上角基本视图切换到高级视图
 
-![](https://img.iszy.xyz/1670670408658.png)
+![](https://img.iszy.cc/1670670408658.png)
 
 在额外参数里填入`--runtime=nvidia`，指定使用 Nvidia 运行时。
 
-![](https://img.iszy.xyz/1670670469551.png)
+![](https://img.iszy.cc/1670670469551.png)
 
 #### (5) 设置网络模式为 bridge 模式（选）
 
@@ -122,7 +122,7 @@ tags:
 
 最后大概是这样。
 
-![](https://img.iszy.xyz/1670670957919.png)
+![](https://img.iszy.cc/1670670957919.png)
 
 #### (6) 完成安装
 
@@ -134,22 +134,22 @@ tags:
 
 应用都需要从 dockerhub 上拉取，众所周知，国内从 dockerhub 上拉取应用还是比较慢的，需要换源。这边就不说具体怎么换源了，主要是在安装完 Nvidia 驱动后，会添加 nvidia 运行时到 docker 配置里，换源的时候主要不要把这个配置覆盖了，否则上面的安装会报错。
 
-![](https://img.iszy.xyz/1670670779242.png)
+![](https://img.iszy.cc/1670670779242.png)
 
 ### 4. 开启硬解
 
 点击进入 WebUI。
 
-![](https://img.iszy.xyz/1670671309161.png)
+![](https://img.iszy.cc/1670671309161.png)
 
 自行完成 Plex 的初始化设置，登录的账户需要有 Plex Pass 订阅。
 
-![](https://img.iszy.xyz/1670671436939.png)
+![](https://img.iszy.cc/1670671436939.png)
 
 在设置 - 转码器里勾选**可用时使用硬件加速**，既可开启硬件加速。
 
-![](https://img.iszy.xyz/1670671485170.png)
+![](https://img.iszy.cc/1670671485170.png)
 
 播放一个视频，不要使用原画，如果 GPU 有负载，就说明硬件加速成功了。
 
-![](https://img.iszy.xyz/1670671596040.png)
+![](https://img.iszy.cc/1670671596040.png)

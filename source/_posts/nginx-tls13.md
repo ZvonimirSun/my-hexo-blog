@@ -135,9 +135,9 @@ ssl_prefer_server_ciphers on;
 
 重启 Nginx，你会发现你的网站已经是 TLS1.3 连接了。
 
-![](https://img.iszy.xyz/20190318215152.png)
+![](https://img.iszy.cc/20190318215152.png)
 
-![](https://img.iszy.xyz/20190318215203.png)
+![](https://img.iszy.cc/20190318215203.png)
 
 ### 一点问题
 

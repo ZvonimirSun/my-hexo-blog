@@ -36,7 +36,7 @@ inverted index. Note that this can however use significant memory.
 
 > [fielddata mapping parameter](https://www.elastic.co/guide/en/elasticsearch/reference/current/text.html#fielddata-mapping-param)
 
-![fielddata mapping parameter](https://img.iszy.xyz/20210224173812.png)
+![fielddata mapping parameter](https://img.iszy.cc/20210224173812.png)
 
 按照官方的说明，text 类型的字段默认不支持聚合、排序等操作，此时如果进行聚合、排序等操作就会出现上文所示的错误信息。
 
@@ -59,7 +59,7 @@ inverted index. Note that this can however use significant memory.
 
 ### 第二种方法【推荐】
 
-![Before enabling fielddata](https://img.iszy.xyz/20210224180354.png)
+![Before enabling fielddata](https://img.iszy.cc/20210224180354.png)
 
 为了解决上面提到的性能和资源的浪费，官方更推荐使用多字段映射的方式。也就是一方面保留原字段来进行全文搜索，另一方面使用一个未做处理的`keyword`字段来进行聚合、排序等操作。配置方法如下示例所示。
 

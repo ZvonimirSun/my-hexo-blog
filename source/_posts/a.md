@@ -53,7 +53,7 @@ copyright: false
 
    处理：使用 man sshd_config 查看 Ciphers 项可以看到 sshd 支持的算法（如下图所示）
 
-   ![](https://img.iszy.xyz/1641952164668.png)
+   ![](https://img.iszy.cc/1641952164668.png)
 
    处理办法是在 sshd_config 中配置 Ciphers 项，并去除所有包含 cbc 字眼的算法然后重启 sshd 即可。
 

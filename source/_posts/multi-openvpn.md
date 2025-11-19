@@ -15,7 +15,7 @@ tags:
 
 ## 最简单的方法
 
-![](https://img.iszy.xyz/1711520900617.png)
+![](https://img.iszy.cc/1711520900617.png)
 
 其实最新的 OpenVPN 版本为了用户方便考虑，在开始菜单里面提供了添加新 Tap 网卡的快捷命令，**只要点击就会自动添加一个新的 Tap 网卡**，网卡会自动命名。需要同时连接几个 OpenVPN 服务，就增加几个网卡，OpenVPN 会自动使用空闲的 Tap 网卡进行连接。
 
@@ -43,7 +43,7 @@ cd "C:\Program Files\OpenVPN"
 
 输出
 
-![](https://img.iszy.xyz/1711521772122.png)
+![](https://img.iszy.cc/1711521772122.png)
 
 或者使用
 
@@ -53,7 +53,7 @@ cd "C:\Program Files\OpenVPN"
 
 输出
 
-![](https://img.iszy.xyz/1711521749124.png)
+![](https://img.iszy.cc/1711521749124.png)
 
 ### 新增 Tap adapter
 
@@ -65,7 +65,7 @@ cd "C:\Program Files\OpenVPN"
 
 查看一下列表，可以看到网卡已经正常添加。
 
-![](https://img.iszy.xyz/1711522259063.png)
+![](https://img.iszy.cc/1711522259063.png)
 
 ### 删除 Tap adapter
 

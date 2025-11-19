@@ -27,7 +27,7 @@ tags:
 
 GreenChrome 插件直接下载地址：[点击下载](https://shuax.com/gc)
 
-![](https://img.iszy.xyz/20190318220055.png)
+![](https://img.iszy.cc/20190318220055.png)
 
 ### 安装
 
@@ -37,11 +37,11 @@ GreenChrome 插件直接下载地址：[点击下载](https://shuax.com/gc)
 
 如果安装成功，打开设置页面的侧边栏，可以看到`设置GreenChrome`选项。
 
-![](https://img.iszy.xyz/20190318220120.png)
+![](https://img.iszy.cc/20190318220120.png)
 
 在关于页面，也应该能够看到 GreenChrome 的标记。
 
-![](https://img.iszy.xyz/20190318220132.png)
+![](https://img.iszy.cc/20190318220132.png)
 
 ## 功能
 
@@ -81,7 +81,7 @@ GreenChrome 插件直接下载地址：[点击下载](https://shuax.com/gc)
 
 可以通过如下位置进入设置。
 
-![](https://img.iszy.xyz/20190318220144.png)
+![](https://img.iszy.cc/20190318220144.png)
 
 如果老版本 chrome 没有出现设置选项，还可以直接点击以下链接进行设置。
 
@@ -89,7 +89,7 @@ GreenChrome 插件直接下载地址：[点击下载](https://shuax.com/gc)
 
 ### 设置界面
 
-![](https://img.iszy.xyz/20190318220157.png)
+![](https://img.iszy.cc/20190318220157.png)
 
 ### 我的设置
 

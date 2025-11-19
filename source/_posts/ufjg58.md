@@ -28,11 +28,11 @@ updated: 2020-05-05 10:18:02
 
 我们要用 Github 做图床，首先建个 Repo 应该不难理解吧，这个就是你用来存储图片的仓库了。[点击前往](https://github.com/new)
 
-![](https://img.iszy.xyz/20200505113214.png)
+![](https://img.iszy.cc/20200505113214.png)
 
 点击 Create repository，这个仓库就建好了。
 
-![](https://img.iszy.xyz/20200505113547.png)
+![](https://img.iszy.cc/20200505113547.png)
 
 比如我这里建立了一个名为 img-hosting 的仓库作为示例，链接形如
 
@@ -44,7 +44,7 @@ updated: 2020-05-05 10:18:02
 
 [传送门](https://picgo.github.io/PicGo-Doc/zh/guide/config.html#github%E5%9B%BE%E5%BA%8A)
 
-![](https://img.iszy.xyz/20200505114811.png)
+![](https://img.iszy.cc/20200505114811.png)
 
 通过设定自定义域名，就可以每次自动获取你需要的链接格式。
 
@@ -95,7 +95,7 @@ server
     {
         listen 80;
         #listen [::]:80;
-        server_name img.iszy.xyz;
+        server_name img.iszy.cc;
         return 301 https://$host$request_uri;
 
         access_log off;
@@ -105,7 +105,7 @@ server
     {
         listen 443 ssl http2;
         #listen [::]:443 ssl http2;
-        server_name img.iszy.xyz;
+        server_name img.iszy.cc;
 
         include conf.d/iszyxyz-ssl.conf;
 

@@ -65,7 +65,7 @@ cd zip
 /usr/local/php/bin/phpize
 ```
 
-![](https://img.iszy.xyz/20190318204059.png)
+![](https://img.iszy.cc/20190318204059.png)
 
 #### 执行 configure
 

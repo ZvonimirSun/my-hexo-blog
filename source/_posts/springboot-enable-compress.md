@@ -28,15 +28,15 @@ server:
 
 压缩前
 
-![](https://img.iszy.xyz/1663551069657.png)
+![](https://img.iszy.cc/1663551069657.png)
 
 压缩后
 
-![](https://img.iszy.xyz/1663551287356.png)
+![](https://img.iszy.cc/1663551287356.png)
 
 可以看到已经开启了 gzip 压缩
 
-![](https://img.iszy.xyz/1663551338263.png)
+![](https://img.iszy.cc/1663551338263.png)
 
 ## 常见其他方法
 

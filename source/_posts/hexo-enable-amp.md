@@ -16,7 +16,7 @@ keywords: hexo-generator-amp,amp,hexo,启用amp
 
 Accelerated Mobile Pages（简称 AMP，意为“加速移动页面”）是 Google 带领开发的开源项目，目的是为提升移动设备对网站的访问速度。AMP 也可指其派生的标准和库等项目成果。AMP 在 HTML 等广泛使用的网络技术基础上进行改良，它的核心称作 AMP HTML，是 HTML 的一种。服务于技术预览期结束后的 2016 年 2 月正式发布。
 
-![](https://img.iszy.xyz/20190318213401.png)
+![](https://img.iszy.cc/20190318213401.png)
 
 ## Hexo 博客启用方式
 
@@ -79,10 +79,10 @@ hexo g -d
 
 在我的每篇文章地址后加上`./amp/`即可看到效果，以本文为例。
 
-![](https://img.iszy.xyz/20190318213417.png)
+![](https://img.iszy.cc/20190318213417.png)
 
 ## Google 的 AMP 测试
 
 可以使用 Google 的[AMP 测试](https://search.google.com/test/amp)来测试你的 AMP 网页的有效性。然后你就能放心地将网页提交给 Google 和百度了。
 
-![](https://img.iszy.xyz/20190318213428.png)
+![](https://img.iszy.cc/20190318213428.png)

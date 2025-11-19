@@ -86,7 +86,7 @@ filebrowser/filebrowser
 
 访问你的浏览器，现在应该可以开始使用了。如果通过外网访问，别忘了在防火墙打开端口。
 
-![File Browser](https://img.iszy.xyz/20190318213056.png)
+![File Browser](https://img.iszy.cc/20190318213056.png)
 
 ## 其他
 

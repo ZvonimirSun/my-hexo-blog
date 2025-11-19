@@ -66,29 +66,29 @@ tags:
 
 Unraid 现在提供了一个创建 U 盘启动器的工具，还是比较傻瓜式的。
 
-![](https://img.iszy.xyz/1668965114372.png)
+![](https://img.iszy.cc/1668965114372.png)
 
 可以选择安装的分支和系统版本，设置一下访问地址、网络 ip 和启动方式。这个 server name 默认叫 Tower，后面启动好后，直接浏览器里输[http://tower.local](http://tower.local) 就行，这个后期也可以在设置改。
 
-![](https://img.iszy.xyz/1668965501519.png)
+![](https://img.iszy.cc/1668965501519.png)
 
 这边是在线下载的系统包，实测下载速度有点慢。可以选择直接在刚刚的下载页面下载 zip 包。
 
-![](https://img.iszy.xyz/1668965696359.png)
+![](https://img.iszy.cc/1668965696359.png)
 
 这个工具支持直接选择本地宝安装，就是不能设置了。
 
-![](https://img.iszy.xyz/1668965764119.png)
+![](https://img.iszy.cc/1668965764119.png)
 
 本地包写完盘后是这样的。如果要 LAGENCY 模式启动，就这样就可以了。如果要 UEFI 模式启动，就把 `EFI-` 重命名为 `EFI` 就行。这个不是名字写错了嗷，是有用的。
 
-![](https://img.iszy.xyz/1668966001368.png)
+![](https://img.iszy.cc/1668966001368.png)
 
 现在一块 Unraid 启动盘就做好了，接下来把这个 U 盘插到你的 Nas 主板上，在 Bios 里设置成启动盘启动就好啦。这块盘将会长期作为系统盘留在你的主板上了。需要注意的是，如果你的系统盘坏了，Unraid 是支持重写个系统盘更换的，但是**一年只提供一次迁移许可**，所以最好买一个质量有保证的 U 盘。
 
 当系统启动好后，访问 [http://tower.local](http://tower.local) 即可进入 WebGUI 页面。第一次访问会让你设置 root 用户的密码。
 
-![](https://img.iszy.xyz/1668966459094.png)
+![](https://img.iszy.cc/1668966459094.png)
 
 ## 四、初始化配置
 
@@ -103,7 +103,7 @@ Unraid 现在提供了一个创建 U 盘启动器的工具，还是比较傻瓜�
 - time.pool.aliyun.com
 - time1.cloud.tencent.com
 
-![](https://img.iszy.xyz/1668966634982.png)
+![](https://img.iszy.cc/1668966634982.png)
 
 ### 2. 网络设置
 
@@ -113,7 +113,7 @@ Unraid 现在提供了一个创建 U 盘启动器的工具，还是比较傻瓜�
 
 我现在的配置如下。注意要在虚拟机和 docker 关闭的情况下修改。我这边万兆网卡是另外加的，默认网口没接，有个警告。
 
-![](https://img.iszy.xyz/1668967055987.png)
+![](https://img.iszy.cc/1668967055987.png)
 
 使用万兆网卡，最好把 MTU 改为 9000，电脑的万兆网卡也改成 9000，以提升网络性能。
 
@@ -123,7 +123,7 @@ Unraid 现在提供了一个创建 U 盘启动器的工具，还是比较傻瓜�
 ping tower.lcoal -l 8962
 ```
 
-![](https://img.iszy.xyz/1668967282997.png)
+![](https://img.iszy.cc/1668967282997.png)
 
 ### 3. 安装中文插件
 
@@ -131,11 +131,11 @@ ping tower.lcoal -l 8962
 
 转到 `Apps` 选项卡，点击 install 即可自动安装 `Community Applications` 插件。在内容更新完成后，这边将展示各种社区应用，在左侧分类菜单里选择 Language，找到 简体中文语言包，点击 install 安装即可。
 
-![](https://img.iszy.xyz/1668967574818.png)
+![](https://img.iszy.cc/1668967574818.png)
 
 接下来转到 `Settings` 选项卡，选择 `Display Settings`，此时已经可以选择中文语言了。
 
-![](https://img.iszy.xyz/1668967669343.png)
+![](https://img.iszy.cc/1668967669343.png)
 
 ### 4. 添加磁盘阵列
 
@@ -143,29 +143,29 @@ ping tower.lcoal -l 8962
 
 可以选择一到两块盘作为校验盘，一般一块就行了，安全要求不高可以不加，要求大于等于其他任意一块的容量，然后把其他盘添加到阵列里。
 
-![](https://img.iszy.xyz/1668967785490.png)
+![](https://img.iszy.cc/1668967785490.png)
 
 有固态可以添加到缓存池里。
 
-![](https://img.iszy.xyz/1668967990297.png)
+![](https://img.iszy.cc/1668967990297.png)
 
 完成后点击应用，点击启动阵列，此时校验盘会开始同步，容量越大，速度越慢。同步期间阵列访问速度也会很慢，推荐等到同步完成后再访问。点击格式化，完成阵列文件系统的格式化，阵列就可以使用了，不用等到同步完成。
 
-![](https://img.iszy.xyz/1668968076515.png)
+![](https://img.iszy.cc/1668968076515.png)
 
 ### 5. 添加共享
 
 转到 `共享` 标签页，点击添加共享。
 
-![](https://img.iszy.xyz/1668968286999.png)
+![](https://img.iszy.cc/1668968286999.png)
 
 按需要进行配置，我这边选择开启缓存。
 
-![](https://img.iszy.xyz/1668968418876.png)
+![](https://img.iszy.cc/1668968418876.png)
 
 然后自动开启了 SMB 共享，可以进行设置。
 
-![](https://img.iszy.xyz/1668968571494.png)
+![](https://img.iszy.cc/1668968571494.png)
 
 ## 五、后记
 

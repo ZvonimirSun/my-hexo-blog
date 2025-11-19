@@ -30,7 +30,7 @@ permalink: /posts/c/
 
 其中的使用的算法在[RFC 4648, 第四段](https://datatracker.ietf.org/doc/html/rfc4648#section-4)中进行了描述。
 
-![The Base 64 Alphabet](https://img.iszy.xyz/1643809821264.png)
+![The Base 64 Alphabet](https://img.iszy.cc/1643809821264.png)
 
 可以通过`window.atob(string)`、`window.btoa(base64string)`的方式调用，非常方便。
 

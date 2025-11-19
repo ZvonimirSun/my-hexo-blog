@@ -18,7 +18,7 @@ Git 官方文档: [https://git-scm.com/docs](https://git-scm.com/docs)
 git init
 ```
 
-![](https://img.iszy.xyz/1669185106451.png)
+![](https://img.iszy.cc/1669185106451.png)
 
 ```shell
 git init -b main
@@ -78,13 +78,13 @@ git commit -am "first commit"
 git status
 ```
 
-![](https://img.iszy.xyz/1669185760241.png)
+![](https://img.iszy.cc/1669185760241.png)
 
 ```shell
 git status -s
 ```
 
-![](https://img.iszy.xyz/1669185789446.png)
+![](https://img.iszy.cc/1669185789446.png)
 
 ### 5. 查看提交历史
 
@@ -94,7 +94,7 @@ git status -s
 git log
 ```
 
-![](https://img.iszy.xyz/1669185798311.png)
+![](https://img.iszy.cc/1669185798311.png)
 
 ### 6. 新建分支
 
@@ -110,7 +110,7 @@ git checkout test
 git checkout -b test
 ```
 
-![](https://img.iszy.xyz/1669185814401.png)
+![](https://img.iszy.cc/1669185814401.png)
 
 ### 7. 合并分支
 
@@ -119,7 +119,7 @@ git checkout main
 git merge test
 ```
 
-![](https://img.iszy.xyz/1669185829746.png)
+![](https://img.iszy.cc/1669185829746.png)
 
 ### 8. 删除分支
 
@@ -127,15 +127,15 @@ git merge test
 git branch -d test-not-need
 ```
 
-![](https://img.iszy.xyz/1669185836945.png)
+![](https://img.iszy.cc/1669185836945.png)
 
 ### 9. 合并冲突
 
-![](https://img.iszy.xyz/1669185846981.png)
+![](https://img.iszy.cc/1669185846981.png)
 
 当两个分支都对同一行进行了修改，git 便会产生冲突，并标记为未合并
 
-![](https://img.iszy.xyz/1669185854676.png)
+![](https://img.iszy.cc/1669185854676.png)
 
 此时将每个文件进行修改，确认最后的内容，使用 git add 方法标记为冲突已解决
 
@@ -145,7 +145,7 @@ git add .\A.txt
 
 在所有文件的冲突均已解决后，使用 commit 提交此次修改。
 
-![](https://img.iszy.xyz/1669185864622.png)
+![](https://img.iszy.cc/1669185864622.png)
 
 ```shell
 git merge --abort
@@ -180,7 +180,7 @@ git branch --set-upstream-to=origin/main main
 git branch -u origin/main main
 ```
 
-![](https://img.iszy.xyz/1669186022128.png)
+![](https://img.iszy.cc/1669186022128.png)
 
 ```shell
 git push -u origin main
@@ -202,13 +202,13 @@ git pull origin main
 git stash
 ```
 
-![](https://img.iszy.xyz/1669186037294.png)
+![](https://img.iszy.cc/1669186037294.png)
 
 ```shell
 git stash pop
 ```
 
-![](https://img.iszy.xyz/1669186045214.png)
+![](https://img.iszy.cc/1669186045214.png)
 
 ### 2. 合并分支灵活选择 rebase/merge
 
@@ -220,7 +220,7 @@ git merge test
 git rebase test
 ```
 
-![](https://img.iszy.xyz/1669186058175.png)
+![](https://img.iszy.cc/1669186058175.png)
 
 ### 3. cherry-pick
 
@@ -230,9 +230,9 @@ git rebase test
 git cherry-pick 12d654f1d701cbf7cd9abb98ce84eeef460a24a7
 ```
 
-![](https://img.iszy.xyz/1669186102974.png)
+![](https://img.iszy.cc/1669186102974.png)
 
-![](https://img.iszy.xyz/1669186072778.png)
+![](https://img.iszy.cc/1669186072778.png)
 
 ### 4. 修改上次提交
 
@@ -248,7 +248,7 @@ git commit --amend
 git checkout .\C.txt
 ```
 
-![](https://img.iszy.xyz/1669186116701.png)
+![](https://img.iszy.cc/1669186116701.png)
 
 ### 6. 弃用提交
 

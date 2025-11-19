@@ -42,7 +42,7 @@ function testPromise() {
 testPromise();
 ```
 
-![](https://img.iszy.xyz/1649347940017.png)
+![](https://img.iszy.cc/1649347940017.png)
 
 1. 一个 promise 中，resolve 和 reject 只会执行最先触发的一个
 
@@ -97,7 +97,7 @@ testPromise();
 
 运行结果
 
-![](https://img.iszy.xyz/1649347319739.png)
+![](https://img.iszy.cc/1649347319739.png)
 
 1. 第一个 then 的参数是 resolve 的参数值，然后执行第一个 finally
 2. 第二个 then 的回调参数是第一个 then 的返回值，然后执行第二个 finally，以此类推
@@ -152,7 +152,7 @@ function testPromise() {
 testPromise();
 ```
 
-![](https://img.iszy.xyz/1649348250796.png)
+![](https://img.iszy.cc/1649348250796.png)
 
 1. reject 抛出的错误会在第一个 catch 中捕获，参数是 reject 的参数值，接着执行第一个 finally
 2. 继续会执行第二个 then，参数是第一个 catch 的返回值，然后执行第二个 finally，接下来与上个测试类似，以此类推
@@ -209,7 +209,7 @@ function testPromise() {
 testPromise();
 ```
 
-![](https://img.iszy.xyz/1649350087385.png)
+![](https://img.iszy.cc/1649350087385.png)
 
 1. 在 resolve 后，抛出错误不会被处理，与 reject 处理相似
 2. 在第一个 then 中抛出错误，被后续的第一个 catch（catch1）捕获，参数是错误值，后续继续执行。
@@ -245,7 +245,7 @@ function testPromise() {
 testPromise();
 ```
 
-![](https://img.iszy.xyz/1649350721994.png)
+![](https://img.iszy.cc/1649350721994.png)
 
 1. then、finally、catch 返回的都是一个新的 Promise，所以 a、b、c、d、e 的值都是不同的
 2. 在 a 上添加的 catch 仅会处理 a 的 reject 和错误，不会处理 then 和 finally 的错误
@@ -300,7 +300,7 @@ function testPromise() {
 testPromise();
 ```
 
-![](https://img.iszy.xyz/1649351186185.png)
+![](https://img.iszy.cc/1649351186185.png)
 
 1. 将 a.then 的返回值保存为 b，可以看到 b 上添加的 then、catch、finally 执行必然在 a 上添加的 then、catch、finally 之后执行
 2. 在同一个 Promise 对象上多次添加 then、catch、finally，也会按照添加顺序依次执行

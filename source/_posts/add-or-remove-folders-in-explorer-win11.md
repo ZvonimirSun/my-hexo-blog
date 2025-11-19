@@ -19,17 +19,17 @@ tags:
 计算机\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace
 ```
 
-![](https://img.iszy.xyz/1671171351365.png)
+![](https://img.iszy.cc/1671171351365.png)
 
 这些每一条对应的就是一个文件夹。具体是什么文件夹，可以点进去看一下。
 
-![](https://img.iszy.xyz/1671171792200.png)
+![](https://img.iszy.cc/1671171792200.png)
 
 比如这条的值为`CLSID_ThisPCLocalDownloadsRegFolder`，对应的就是下载文件夹。
 
 **我们可以看到除了文件夹信息，还有一条 `HideIfEnabled` 的值，就是这条注册表值把文件夹隐藏了，删除掉刷新一下就可以显示出来。**
 
-![](https://img.iszy.xyz/1671171893640.png)
+![](https://img.iszy.cc/1671171893640.png)
 
 ## 移除文件夹
 
@@ -37,14 +37,14 @@ tags:
 
 点击到你想要隐藏的文件夹，右键新建**DWORD (32 位)值**，名称为`HideIfEnabled`。
 
-![](https://img.iszy.xyz/1671172330084.png)
+![](https://img.iszy.cc/1671172330084.png)
 
-![](https://img.iszy.xyz/1671172365571.png)
+![](https://img.iszy.cc/1671172365571.png)
 
 双击打开，输入值为`22ab9b9`
 
-![](https://img.iszy.xyz/1671172425560.png)
+![](https://img.iszy.cc/1671172425560.png)
 
-![](https://img.iszy.xyz/1671172451119.png)
+![](https://img.iszy.cc/1671172451119.png)
 
 现在刷新一下资源管理器，文件夹就被隐藏了。

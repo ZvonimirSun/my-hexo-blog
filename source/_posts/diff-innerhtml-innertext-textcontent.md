@@ -45,7 +45,7 @@ textContent、innerText 与 innerHTML 三个接口，在我们想要获取或改
 </html>
 ```
 
-![](https://img.iszy.xyz/1652678013076.png)
+![](https://img.iszy.cc/1652678013076.png)
 
 从结果里我们可以清晰的看出 textContent、innerText 和 innerHTML 的区别。
 

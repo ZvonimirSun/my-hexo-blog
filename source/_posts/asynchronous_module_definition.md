@@ -15,7 +15,7 @@ copyright: false
 
 这个系列的[第一部分](/2019/08/14/javascript_module/)介绍了 Javascript 模块的基本写法，今天介绍如何规范地使用模块。
 
-![](https://img.iszy.xyz/20190814100700.png)
+![](https://img.iszy.cc/20190814100700.png)
 
 （接[上文](/2019/08/14/javascript_module/)）
 
@@ -33,7 +33,7 @@ copyright: false
 
 2009 年，美国程序员 Ryan Dahl 创造了[node.js](http://nodejs.org/)项目，将 javascript 语言用于服务器端编程。
 
-![](https://img.iszy.xyz/20190814100903.png)
+![](https://img.iszy.cc/20190814100903.png)
 
 这标志"Javascript 模块化编程"正式诞生。因为老实说，在浏览器环境下，没有模块也不是特别大的问题，毕竟网页程序的复杂性有限；但是在服务器端，一定要有模块，与操作系统和其他应用程序互动，否则根本没法编程。
 

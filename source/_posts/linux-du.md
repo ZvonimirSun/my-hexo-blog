@@ -18,7 +18,7 @@ date: 2022-11-04 09:56:06
 du -sh
 ```
 
-![](https://img.iszy.xyz/1667525725877.png)
+![](https://img.iszy.cc/1667525725877.png)
 
 ### 查看当前目录所有文件（包括内层文件）所占空间
 
@@ -26,7 +26,7 @@ du -sh
 du -h
 ```
 
-![](https://img.iszy.xyz/1667525880573.png)
+![](https://img.iszy.cc/1667525880573.png)
 
 ### 查看当前目录所有文件及目录大小
 
@@ -34,7 +34,7 @@ du -h
 du -sh *
 ```
 
-![](https://img.iszy.xyz/1667525959810.png)
+![](https://img.iszy.cc/1667525959810.png)
 
 ### 查看当前目录所有隐藏文件及目录大小
 
@@ -42,7 +42,7 @@ du -sh *
 du -sh .[!.]*
 ```
 
-![](https://img.iszy.xyz/1667526150032.png)
+![](https://img.iszy.cc/1667526150032.png)
 
 ### 查看当前目录所有文件及目录大小，包含隐藏文件夹
 
@@ -50,7 +50,7 @@ du -sh .[!.]*
 du -sh * .[^.]*
 ```
 
-![](https://img.iszy.xyz/1667525678301.png)
+![](https://img.iszy.cc/1667525678301.png)
 
 ## 二、主要参数
 

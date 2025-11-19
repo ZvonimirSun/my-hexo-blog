@@ -40,7 +40,7 @@ date: 2024-03-27 11:38:34
 
 经过相关搜索，在 OpenVPN Community 的 Wiki 中的 [tls-cipher](https://community.openvpn.net/openvpn/wiki/Hardening#Useof--tls-cipher) 配置部分提到了可能的原因。**在 OpenVPN 2.3.2 版本之前，只有 TLSv1.0 RSA cipher 可用。在 OpenVPN 2.4 版本后，对默认的 cipher 列表添加了新的限制。**
 
-![](https://img.iszy.xyz/1711506949529.png)
+![](https://img.iszy.cc/1711506949529.png)
 
 经过尝试，在 **ovpn 配置中增加如下内容**，使用 **OpenVPN 2.4 版本**能够正常进行连接。
 
@@ -127,7 +127,7 @@ providers legacy default
 
 在 OpenVPN 2.6 的[使用手册](https://openvpn.net/community-resources/reference-manual-for-openvpn-2-6/)中，找到了对这个配置项的说明，但没有详细内容。
 
-![](https://img.iszy.xyz/1711510301173.png)
+![](https://img.iszy.cc/1711510301173.png)
 
 ## 总结一下
 

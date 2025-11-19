@@ -28,7 +28,7 @@ tags:
 
 Caddy Web Server 会自动申请 ssl 证书，全站 https，但是需要提前将域名解析到所在 VPS，否则 Caddy 会启动失败。不需要 ssl 的或想要 IP 访问的请自行调整 Caddy 配置。
 
-![](https://img.iszy.xyz/20190318212135.png)
+![](https://img.iszy.cc/20190318212135.png)
 
 ## 环境配置
 
@@ -378,7 +378,7 @@ service caddy restart
 
 配图为我前一次[使用宝塔面板进行安装](/2017/12/18/NextCloud/)时的截图。
 
-![](https://img.iszy.xyz/20190318212151.png)
+![](https://img.iszy.cc/20190318212151.png)
 
 ## 更多问题
 

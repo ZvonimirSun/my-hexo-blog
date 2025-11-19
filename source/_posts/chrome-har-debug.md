@@ -35,18 +35,18 @@ HAR（HTTP 归档）是多种 HTTP 会话工具用来导出所记录数据的 �
 
 在 Network 面板中**右键点击任意一条请求**，点击**Save As HAR With Content**，即可将所有请求保存为 HAR 文件。**注意，Network 面板中的过滤条件是被忽略的。**
 
-![](https://img.iszy.xyz/1663130958729.png)
+![](https://img.iszy.cc/1663130958729.png)
 
 从 71 版本开始，导入导出 HAR 文件开始包好 Initiator 和 priority 信息。
 
 从 **76 版本**开始，Chrome 导出的 HAR 文件中首次开始包含 WebSocket 消息。另外 ，Chrome 在 Network 面板**新增了导入和导出 HAR 文件的按钮**，使用更加便捷。
 
-![](https://img.iszy.xyz/1663131014757.png)
+![](https://img.iszy.cc/1663131014757.png)
 
 ### 查看 HAR 文件
 
 从 **62 版本**开始，Chrome 增加了**将 HAR 文件拖拽到 Network 面板进行导入展示**的功能。
 
-![](https://img.iszy.xyz/1663130703947.png)
+![](https://img.iszy.cc/1663130703947.png)
 
 从 76 版本开始，可以通过 Chrome 在 Network 面板**新增的导入 HAR 文件的按钮**进行导入。

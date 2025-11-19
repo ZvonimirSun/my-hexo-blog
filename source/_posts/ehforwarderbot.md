@@ -55,11 +55,11 @@ pip3 install efb-wechat-slave
 
 搜索`botfather`，注意是图中圈出的，不要找错了。
 
-![](https://img.iszy.xyz/20190318212915.png)
+![](https://img.iszy.cc/20190318212915.png)
 
 然后发送`/newbot`，开始创建 bot。
 
-![](https://img.iszy.xyz/20190318212925.png)
+![](https://img.iszy.cc/20190318212925.png)
 
 如图所示，发过`/newbot`以后，先发送 bot 的名称，类似于昵称，可以重复。再发送用户名，用户名需要唯一。顺序注意不要搞错。当然左边也有说明，照着说明来一般没有问题。
 
@@ -80,21 +80,21 @@ recog - 回复语音消息以进行识别
 extra - 获取更多功能
 ```
 
-![](https://img.iszy.xyz/20190318212939.png)
+![](https://img.iszy.cc/20190318212939.png)
 
-![](https://img.iszy.xyz/20190318212953.png)
+![](https://img.iszy.cc/20190318212953.png)
 
-![](https://img.iszy.xyz/20190318213004.png)
+![](https://img.iszy.cc/20190318213004.png)
 
 #### 获取个人 chat id
 
 搜索`get_id_bot`，同样是图中圈出的。
 
-![](https://img.iszy.xyz/20190318213016.png)
+![](https://img.iszy.cc/20190318213016.png)
 
 发送`/start`即可获取自己的 chat id，留作后用。
 
-![](https://img.iszy.xyz/20190318213029.png)
+![](https://img.iszy.cc/20190318213029.png)
 
 ### 配置 EH Forwarder Bot
 

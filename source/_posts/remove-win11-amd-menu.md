@@ -11,7 +11,7 @@ tags:
 
 ## 问题
 
-![](https://img.iszy.xyz/1671064733303.png)
+![](https://img.iszy.cc/1671064733303.png)
 
 如图所示，就是想把这个东西去掉，用处不大，还把右键菜单撑老大，想去掉。
 
@@ -27,11 +27,11 @@ tags:
 
 按照这个路径一直往下找，Package 名称在不同电脑和软件版本的情况下可能会有不通，以自己找到的为准。
 
-![](https://img.iszy.xyz/1671065063988.png)
+![](https://img.iszy.cc/1671065063988.png)
 
 在这个 Server 里面，有的人是键值 `0`，有的是键值 `1`，点到这个键值下，我这边键值是 `0`。
 
-![](https://img.iszy.xyz/1671065176268.png)
+![](https://img.iszy.cc/1671065176268.png)
 
 在这个下面的 SurrogateAppId 里的数据，也就是右侧大括号的数据就是我们需要的 ID，可以双击打开来复制。
 
@@ -45,10 +45,10 @@ tags:
 
 右键新建字符串值，值为刚刚的 AppID，我这里为 `{6767B3BC-8FF7-11EC-B909-0242AC120002}`
 
-![](https://img.iszy.xyz/1671065384645.png)
+![](https://img.iszy.cc/1671065384645.png)
 
-![](https://img.iszy.xyz/1671065443124.png)
+![](https://img.iszy.cc/1671065443124.png)
 
 这样菜单就不显示了，如果想要恢复展示，删掉这条字符串值即可。
 
-![](https://img.iszy.xyz/1671065556009.png)
+![](https://img.iszy.cc/1671065556009.png)
