@@ -35,25 +35,25 @@
 <meta property="og:site_name" content="随遇而安">
 <meta property="og:description" content="前面记录了一下我刚装好 Unraid，初始化配置，及搭建磁盘阵列的过程。一个 Nas 装好，少不了要整一个家庭影音系统用起来，今天就来记录一下，安装 Plex 并开启 Nvidia 显卡硬解的过程。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://img.iszy.xyz/1670667734658.png">
-<meta property="og:image" content="https://img.iszy.xyz/1670667950035.png">
-<meta property="og:image" content="https://img.iszy.xyz/1670668181420.png">
-<meta property="og:image" content="https://img.iszy.xyz/1670668411649.png">
-<meta property="og:image" content="https://img.iszy.xyz/1670668613284.png">
-<meta property="og:image" content="https://img.iszy.xyz/1670668551407.png">
-<meta property="og:image" content="https://img.iszy.xyz/1670668918772.png">
-<meta property="og:image" content="https://img.iszy.xyz/1670669464258.png">
-<meta property="og:image" content="https://img.iszy.xyz/1670670100384.png">
-<meta property="og:image" content="https://img.iszy.xyz/1670670160151.png">
-<meta property="og:image" content="https://img.iszy.xyz/1670670251438.png">
-<meta property="og:image" content="https://img.iszy.xyz/1670670408658.png">
-<meta property="og:image" content="https://img.iszy.xyz/1670670469551.png">
-<meta property="og:image" content="https://img.iszy.xyz/1670670957919.png">
-<meta property="og:image" content="https://img.iszy.xyz/1670670779242.png">
-<meta property="og:image" content="https://img.iszy.xyz/1670671309161.png">
-<meta property="og:image" content="https://img.iszy.xyz/1670671436939.png">
-<meta property="og:image" content="https://img.iszy.xyz/1670671485170.png">
-<meta property="og:image" content="https://img.iszy.xyz/1670671596040.png">
+<meta property="og:image" content="https://img.iszy.cc/1670667734658.png">
+<meta property="og:image" content="https://img.iszy.cc/1670667950035.png">
+<meta property="og:image" content="https://img.iszy.cc/1670668181420.png">
+<meta property="og:image" content="https://img.iszy.cc/1670668411649.png">
+<meta property="og:image" content="https://img.iszy.cc/1670668613284.png">
+<meta property="og:image" content="https://img.iszy.cc/1670668551407.png">
+<meta property="og:image" content="https://img.iszy.cc/1670668918772.png">
+<meta property="og:image" content="https://img.iszy.cc/1670669464258.png">
+<meta property="og:image" content="https://img.iszy.cc/1670670100384.png">
+<meta property="og:image" content="https://img.iszy.cc/1670670160151.png">
+<meta property="og:image" content="https://img.iszy.cc/1670670251438.png">
+<meta property="og:image" content="https://img.iszy.cc/1670670408658.png">
+<meta property="og:image" content="https://img.iszy.cc/1670670469551.png">
+<meta property="og:image" content="https://img.iszy.cc/1670670957919.png">
+<meta property="og:image" content="https://img.iszy.cc/1670670779242.png">
+<meta property="og:image" content="https://img.iszy.cc/1670671309161.png">
+<meta property="og:image" content="https://img.iszy.cc/1670671436939.png">
+<meta property="og:image" content="https://img.iszy.cc/1670671485170.png">
+<meta property="og:image" content="https://img.iszy.cc/1670671596040.png">
 <meta property="article:published_time" content="2022-12-10T08:44:51.000Z">
 <meta property="article:modified_time" content="2022-12-10T08:44:51.000Z">
 <meta property="article:author" content="Dirge">
@@ -62,7 +62,7 @@
 <meta property="article:tag" content="Plex">
 <meta property="article:tag" content="Nvidia">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img.iszy.xyz/1670667734658.png">
+<meta name="twitter:image" content="https://img.iszy.cc/1670667734658.png">
 
 
 <link rel="canonical" href="https://www.iszy.cc/posts/unraid-plex-nvidia/">
@@ -401,24 +401,24 @@
 <p>可能需要用点魔法，不然下载速度啥的都会比较慢。</p>
 <h3 id="1-安装驱动"><a class="markdownIt-Anchor" href="#1-安装驱动"></a> 1. 安装驱动</h3>
 <p>在应用中心，搜索<code>nvidia driver</code>，就能看到一个由 ich777 大佬维护的 Nvidia-Driver 插件，点击安装。</p>
-<p><img data-src="https://img.iszy.xyz/1670667734658.png" alt="" /></p>
+<p><img data-src="https://img.iszy.cc/1670667734658.png" alt="" /></p>
 <p>安装完成后，进入设置，点击进入下方刚刚安装的应用。应用会拉取最新的驱动信息，所以会比较慢。</p>
-<p><img data-src="https://img.iszy.xyz/1670667950035.png" alt="" /></p>
+<p><img data-src="https://img.iszy.cc/1670667950035.png" alt="" /></p>
 <p>选择分支或者指定的驱动版本，点击 <code>Update &amp; Download</code> 按钮。这里我选择 Production 分支，感觉会比较稳。</p>
-<p><img data-src="https://img.iszy.xyz/1670668181420.png" alt="" /></p>
+<p><img data-src="https://img.iszy.cc/1670668181420.png" alt="" /></p>
 <p>等待驱动下载完成，弹窗信息里会显示下载完成，重启以安装新的驱动，弹窗下方的按钮会变为完成。此时可以重启 Unraid，新的驱动会自动安装。千万不要在中途关闭弹窗，这样就搞不清楚状态了。</p>
 <p>装好后，再次进入应用，应用里就会有驱动信息了。</p>
-<p><img data-src="https://img.iszy.xyz/1670668411649.png" alt="" /></p>
+<p><img data-src="https://img.iszy.cc/1670668411649.png" alt="" /></p>
 <h3 id="2-安装-gpu-监控插件选"><a class="markdownIt-Anchor" href="#2-安装-gpu-监控插件选"></a> 2. 安装 GPU 监控插件（选）</h3>
 <p>为了方便查看 GPU 状态，可以考虑安装一个 GPU Statistics 插件。</p>
-<p><img data-src="https://img.iszy.xyz/1670668613284.png" alt="" /></p>
+<p><img data-src="https://img.iszy.cc/1670668613284.png" alt="" /></p>
 <p>装好后，就可以在仪表盘看到 GPU 的负载情况。</p>
-<p><img data-src="https://img.iszy.xyz/1670668551407.png" alt="" /></p>
+<p><img data-src="https://img.iszy.cc/1670668551407.png" alt="" /></p>
 <h3 id="3-安装-plex"><a class="markdownIt-Anchor" href="#3-安装-plex"></a> 3. 安装 Plex</h3>
 <p>接下来就是我们的主角了。</p>
 <h4 id="1-选择应用"><a class="markdownIt-Anchor" href="#1-选择应用"></a> (1) 选择应用</h4>
 <p>这里我选择了<code>binhex-plexpass</code>这个应用，选其他的也可以，这个主要是比较方便一点，不少参数已经帮你列好了，可以直接配置。</p>
-<p><img data-src="https://img.iszy.xyz/1670668918772.png" alt="" /></p>
+<p><img data-src="https://img.iszy.cc/1670668918772.png" alt="" /></p>
 <h4 id="2-修改主要参数"><a class="markdownIt-Anchor" href="#2-修改主要参数"></a> (2) 修改主要参数</h4>
 <p>点击安装进入参数设置，主要是修改这几点。</p>
 <ul>
@@ -426,20 +426,20 @@
 <li>Host Path 2:(Container Path: /media): 这个是存储影片的路径，可自行修改，所有的共享都在这个<code>/mnt/user</code>下面看到</li>
 <li>Key 3 (NVIDIA_VISIBLE_DEVICES): 这个是 GPU 的 id，可以在 <code>Nvidia Driver</code> 应用里找到，这个指定了 docker 使用的显卡。注意，一张显卡可以在多个 docker 应用中共用，但不能在 docker 和虚拟机中共享。</li>
 </ul>
-<p><img data-src="https://img.iszy.xyz/1670669464258.png" alt="" /></p>
+<p><img data-src="https://img.iszy.cc/1670669464258.png" alt="" /></p>
 <h4 id="3-添加-gpu-设备"><a class="markdownIt-Anchor" href="#3-添加-gpu-设备"></a> (3) 添加 GPU 设备</h4>
 <p>点击添加设备</p>
-<p><img data-src="https://img.iszy.xyz/1670670100384.png" alt="" /></p>
+<p><img data-src="https://img.iszy.cc/1670670100384.png" alt="" /></p>
 <p>这边添加两个设备</p>
 <p><code>/dev/nvidia0</code></p>
-<p><img data-src="https://img.iszy.xyz/1670670160151.png" alt="" /></p>
+<p><img data-src="https://img.iszy.cc/1670670160151.png" alt="" /></p>
 <p><code>/dev/nvidiactl</code></p>
-<p><img data-src="https://img.iszy.xyz/1670670251438.png" alt="" /></p>
+<p><img data-src="https://img.iszy.cc/1670670251438.png" alt="" /></p>
 <h4 id="4-设置-nvidia-运行时"><a class="markdownIt-Anchor" href="#4-设置-nvidia-运行时"></a> (4) 设置 Nvidia 运行时</h4>
 <p>点击右上角基本视图切换到高级视图</p>
-<p><img data-src="https://img.iszy.xyz/1670670408658.png" alt="" /></p>
+<p><img data-src="https://img.iszy.cc/1670670408658.png" alt="" /></p>
 <p>在额外参数里填入<code>--runtime=nvidia</code>，指定使用 Nvidia 运行时。</p>
-<p><img data-src="https://img.iszy.xyz/1670670469551.png" alt="" /></p>
+<p><img data-src="https://img.iszy.cc/1670670469551.png" alt="" /></p>
 <h4 id="5-设置网络模式为-bridge-模式选"><a class="markdownIt-Anchor" href="#5-设置网络模式为-bridge-模式选"></a> (5) 设置网络模式为 bridge 模式（选）</h4>
 <p>这个应用模板，默认用的是 host 模式的网络，如果你不喜欢想要换成 bridge 模式，就看下这边，否则跳过这一步。</p>
 <p>首先把网络模式切换成 bridge，然后添加需要暴露的端口。</p>
@@ -455,22 +455,22 @@
 <li>32414/udp (用于网络发现的 UDP 端口)</li>
 </ul>
 <p>最后大概是这样。</p>
-<p><img data-src="https://img.iszy.xyz/1670670957919.png" alt="" /></p>
+<p><img data-src="https://img.iszy.cc/1670670957919.png" alt="" /></p>
 <h4 id="6-完成安装"><a class="markdownIt-Anchor" href="#6-完成安装"></a> (6) 完成安装</h4>
 <p>最后点击应用，即可进入安装。</p>
 <h4 id="7-注意事项"><a class="markdownIt-Anchor" href="#7-注意事项"></a> (7) 注意事项</h4>
 <p>要开启硬解功能，你需要有 Plex Pass 的订阅。</p>
 <p>应用都需要从 dockerhub 上拉取，众所周知，国内从 dockerhub 上拉取应用还是比较慢的，需要换源。这边就不说具体怎么换源了，主要是在安装完 Nvidia 驱动后，会添加 nvidia 运行时到 docker 配置里，换源的时候主要不要把这个配置覆盖了，否则上面的安装会报错。</p>
-<p><img data-src="https://img.iszy.xyz/1670670779242.png" alt="" /></p>
+<p><img data-src="https://img.iszy.cc/1670670779242.png" alt="" /></p>
 <h3 id="4-开启硬解"><a class="markdownIt-Anchor" href="#4-开启硬解"></a> 4. 开启硬解</h3>
 <p>点击进入 WebUI。</p>
-<p><img data-src="https://img.iszy.xyz/1670671309161.png" alt="" /></p>
+<p><img data-src="https://img.iszy.cc/1670671309161.png" alt="" /></p>
 <p>自行完成 Plex 的初始化设置，登录的账户需要有 Plex Pass 订阅。</p>
-<p><img data-src="https://img.iszy.xyz/1670671436939.png" alt="" /></p>
+<p><img data-src="https://img.iszy.cc/1670671436939.png" alt="" /></p>
 <p>在设置 - 转码器里勾选<strong>可用时使用硬件加速</strong>，既可开启硬件加速。</p>
-<p><img data-src="https://img.iszy.xyz/1670671485170.png" alt="" /></p>
+<p><img data-src="https://img.iszy.cc/1670671485170.png" alt="" /></p>
 <p>播放一个视频，不要使用原画，如果 GPU 有负载，就说明硬件加速成功了。</p>
-<p><img data-src="https://img.iszy.xyz/1670671596040.png" alt="" /></p>
+<p><img data-src="https://img.iszy.cc/1670671596040.png" alt="" /></p>
 
     </div>
 
@@ -622,7 +622,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://www.hurbai.com/link" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/www.hurbai.com.ico"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/www.hurbai.com.ico"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://www.hurbai.com/link" target="_blank">大灰hurbai</a>
@@ -633,7 +633,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://stellarkey.github.io/link/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/vel.life.gif"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/vel.life.gif"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://stellarkey.github.io/link/" target="_blank">思维之海</a>
@@ -644,7 +644,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://www.xxwhite.com/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/www.xxwhite.com.jpg"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/www.xxwhite.com.jpg"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://www.xxwhite.com/" target="_blank">叉叉白</a>
@@ -655,7 +655,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://lala.im/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/lala.im.ico"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/lala.im.ico"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://lala.im/" target="_blank">荒岛</a>
@@ -666,7 +666,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://blog.jimmyho.net/links.html" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/blog.jimmyho.net.jpg"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/blog.jimmyho.net.jpg"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://blog.jimmyho.net/links.html" target="_blank">Jimmy's Blog</a>
@@ -677,7 +677,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://crosschannel.cc/friends/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/crosschannel.cc.ico"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/crosschannel.cc.ico"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://crosschannel.cc/friends/" target="_blank">宅日记</a>
@@ -688,7 +688,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://www.zjhuiwan.cn/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/www.zjhuiwan.cn.png"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/www.zjhuiwan.cn.png"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://www.zjhuiwan.cn/" target="_blank">ZJBLOG</a>
@@ -699,7 +699,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://pengrl.com/link/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/pengrl.com.jpeg"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/pengrl.com.jpeg"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://pengrl.com/link/" target="_blank">yoko blog</a>
@@ -710,7 +710,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://finisky.github.io/links/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/finisky.github.io.png"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/finisky.github.io.png"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://finisky.github.io/links/" target="_blank">Finisky Garden</a>
@@ -721,7 +721,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://blog.tmen.top/link" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/1644659059598.png"/></a>
+                        <img class="ava" src="https://img.iszy.cc/1644659059598.png"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://blog.tmen.top/link" target="_blank">Tmenの博客</a>
@@ -732,7 +732,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://core.dpangzi.com" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/1644659180128.png"/></a>
+                        <img class="ava" src="https://img.iszy.cc/1644659180128.png"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://core.dpangzi.com" target="_blank">叫我阿胖</a>
@@ -743,7 +743,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://yongtaiq.github.io/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/1648013691501.png"/></a>
+                        <img class="ava" src="https://img.iszy.cc/1648013691501.png"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://yongtaiq.github.io/" target="_blank">闲话茶楼</a>

@@ -35,16 +35,16 @@
 <meta property="og:site_name" content="随遇而安">
 <meta property="og:description" content="在日常开发工作中，要连接不同的环境需要连接不同的 VPN 服务，OpenVPN 默认只会添加一个 Tap 网卡，只能来回切换 VPN，很不方便。所以我们只需要能够增加更多的 Tap 网卡即可。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://img.iszy.xyz/1711520900617.png">
-<meta property="og:image" content="https://img.iszy.xyz/1711521772122.png">
-<meta property="og:image" content="https://img.iszy.xyz/1711521749124.png">
-<meta property="og:image" content="https://img.iszy.xyz/1711522259063.png">
+<meta property="og:image" content="https://img.iszy.cc/1711520900617.png">
+<meta property="og:image" content="https://img.iszy.cc/1711521772122.png">
+<meta property="og:image" content="https://img.iszy.cc/1711521749124.png">
+<meta property="og:image" content="https://img.iszy.cc/1711522259063.png">
 <meta property="article:published_time" content="2024-03-27T06:13:47.000Z">
 <meta property="article:modified_time" content="2024-03-27T06:13:47.000Z">
 <meta property="article:author" content="Dirge">
 <meta property="article:tag" content="OpenVPN">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img.iszy.xyz/1711520900617.png">
+<meta name="twitter:image" content="https://img.iszy.cc/1711520900617.png">
 
 
 <link rel="canonical" href="https://www.iszy.cc/posts/multi-openvpn/">
@@ -348,7 +348,7 @@
 <p>接下来的操作都是以安装完 OpenVPN 为前提的，如果没有安装，可以前往<span class="exturl" data-url="aHR0cHM6Ly9vcGVudnBuLm5ldC9jb21tdW5pdHktZG93bmxvYWRzLw==">官网<i class="fa fa-external-link-alt"></i></span>进行安装。</p>
 <p>默认的 OpenVPN 安装目录为 <code>C:\Program Files\OpenVPN</code>，这边就以默认目录为例。</p>
 <h2 id="最简单的方法"><a class="markdownIt-Anchor" href="#最简单的方法"></a> 最简单的方法</h2>
-<p><img data-src="https://img.iszy.xyz/1711520900617.png" alt="" /></p>
+<p><img data-src="https://img.iszy.cc/1711520900617.png" alt="" /></p>
 <p>其实最新的 OpenVPN 版本为了用户方便考虑，在开始菜单里面提供了添加新 Tap 网卡的快捷命令，<strong>只要点击就会自动添加一个新的 Tap 网卡</strong>，网卡会自动命名。需要同时连接几个 OpenVPN 服务，就增加几个网卡，OpenVPN 会自动使用空闲的 Tap 网卡进行连接。</p>
 <p>打开这个快捷方式的属性就可以看到，其实这个就是包装了一个创建 Tap 网卡的命令。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Program Files\OpenVPN\bin\tapctl.exe create --hwid root\tap0901</span><br></pre></td></tr></table></figure>
@@ -359,16 +359,16 @@
 <h3 id="查看-tap-adapter"><a class="markdownIt-Anchor" href="#查看-tap-adapter"></a> 查看 Tap adapter</h3>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.\bin\tapctl.exe list</span><br></pre></td></tr></table></figure>
 <p>输出</p>
-<p><img data-src="https://img.iszy.xyz/1711521772122.png" alt="" /></p>
+<p><img data-src="https://img.iszy.cc/1711521772122.png" alt="" /></p>
 <p>或者使用</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.\bin\openvpn.exe --show-adapters</span><br></pre></td></tr></table></figure>
 <p>输出</p>
-<p><img data-src="https://img.iszy.xyz/1711521749124.png" alt="" /></p>
+<p><img data-src="https://img.iszy.cc/1711521749124.png" alt="" /></p>
 <h3 id="新增-tap-adapter"><a class="markdownIt-Anchor" href="#新增-tap-adapter"></a> 新增 Tap adapter</h3>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.\bin\tapctl.exe create --name &quot;test&quot; --hwid root\tap0901</span><br></pre></td></tr></table></figure>
 <p>可以通过 <code>name</code> 参数指定网卡名称，网卡名称不能重复。创建成功后，将会返回创建的网卡 id。</p>
 <p>查看一下列表，可以看到网卡已经正常添加。</p>
-<p><img data-src="https://img.iszy.xyz/1711522259063.png" alt="" /></p>
+<p><img data-src="https://img.iszy.cc/1711522259063.png" alt="" /></p>
 <h3 id="删除-tap-adapter"><a class="markdownIt-Anchor" href="#删除-tap-adapter"></a> 删除 Tap adapter</h3>
 <p>如果 Tap 网卡多了，或者不想要那些之前默认的网卡，可以删除掉。删除成功不会返回内容。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.\bin\tapctl.exe delete &quot;test&quot;</span><br></pre></td></tr></table></figure>
@@ -523,7 +523,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://www.hurbai.com/link" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/www.hurbai.com.ico"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/www.hurbai.com.ico"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://www.hurbai.com/link" target="_blank">大灰hurbai</a>
@@ -534,7 +534,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://stellarkey.github.io/link/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/vel.life.gif"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/vel.life.gif"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://stellarkey.github.io/link/" target="_blank">思维之海</a>
@@ -545,7 +545,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://www.xxwhite.com/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/www.xxwhite.com.jpg"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/www.xxwhite.com.jpg"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://www.xxwhite.com/" target="_blank">叉叉白</a>
@@ -556,7 +556,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://lala.im/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/lala.im.ico"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/lala.im.ico"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://lala.im/" target="_blank">荒岛</a>
@@ -567,7 +567,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://blog.jimmyho.net/links.html" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/blog.jimmyho.net.jpg"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/blog.jimmyho.net.jpg"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://blog.jimmyho.net/links.html" target="_blank">Jimmy's Blog</a>
@@ -578,7 +578,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://crosschannel.cc/friends/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/crosschannel.cc.ico"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/crosschannel.cc.ico"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://crosschannel.cc/friends/" target="_blank">宅日记</a>
@@ -589,7 +589,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://www.zjhuiwan.cn/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/www.zjhuiwan.cn.png"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/www.zjhuiwan.cn.png"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://www.zjhuiwan.cn/" target="_blank">ZJBLOG</a>
@@ -600,7 +600,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://pengrl.com/link/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/pengrl.com.jpeg"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/pengrl.com.jpeg"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://pengrl.com/link/" target="_blank">yoko blog</a>
@@ -611,7 +611,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://finisky.github.io/links/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/finisky.github.io.png"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/finisky.github.io.png"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://finisky.github.io/links/" target="_blank">Finisky Garden</a>
@@ -622,7 +622,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://blog.tmen.top/link" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/1644659059598.png"/></a>
+                        <img class="ava" src="https://img.iszy.cc/1644659059598.png"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://blog.tmen.top/link" target="_blank">Tmenの博客</a>
@@ -633,7 +633,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://core.dpangzi.com" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/1644659180128.png"/></a>
+                        <img class="ava" src="https://img.iszy.cc/1644659180128.png"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://core.dpangzi.com" target="_blank">叫我阿胖</a>
@@ -644,7 +644,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://yongtaiq.github.io/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/1648013691501.png"/></a>
+                        <img class="ava" src="https://img.iszy.cc/1648013691501.png"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://yongtaiq.github.io/" target="_blank">闲话茶楼</a>

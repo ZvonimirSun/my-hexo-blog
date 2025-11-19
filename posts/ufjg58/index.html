@@ -35,16 +35,16 @@
 <meta property="og:site_name" content="随遇而安">
 <meta property="og:description" content="本文我来简单讲一下利用 Github 自建图床的几种方式，希望能对大家有些帮助。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://img.iszy.xyz/20200505113214.png">
-<meta property="og:image" content="https://img.iszy.xyz/20200505113547.png">
-<meta property="og:image" content="https://img.iszy.xyz/20200505114811.png">
+<meta property="og:image" content="https://img.iszy.cc/20200505113214.png">
+<meta property="og:image" content="https://img.iszy.cc/20200505113547.png">
+<meta property="og:image" content="https://img.iszy.cc/20200505114811.png">
 <meta property="article:published_time" content="2020-05-05T02:18:02.000Z">
 <meta property="article:modified_time" content="2020-05-05T02:18:02.000Z">
 <meta property="article:author" content="Dirge">
 <meta property="article:tag" content="Github">
 <meta property="article:tag" content="图床">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img.iszy.xyz/20200505113214.png">
+<meta name="twitter:image" content="https://img.iszy.cc/20200505113214.png">
 
 
 <link rel="canonical" href="https://www.iszy.cc/posts/ufjg58/">
@@ -384,15 +384,15 @@
 <h2 id="准备条件"><a class="markdownIt-Anchor" href="#准备条件"></a> 准备条件</h2>
 <h3 id="建立-repo"><a class="markdownIt-Anchor" href="#建立-repo"></a> 建立 Repo</h3>
 <p>我们要用 Github 做图床，首先建个 Repo 应该不难理解吧，这个就是你用来存储图片的仓库了。<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL25ldw==">点击前往<i class="fa fa-external-link-alt"></i></span></p>
-<p><img data-src="https://img.iszy.xyz/20200505113214.png" alt="" /></p>
+<p><img data-src="https://img.iszy.cc/20200505113214.png" alt="" /></p>
 <p>点击 Create repository，这个仓库就建好了。</p>
-<p><img data-src="https://img.iszy.xyz/20200505113547.png" alt="" /></p>
+<p><img data-src="https://img.iszy.cc/20200505113547.png" alt="" /></p>
 <p>比如我这里建立了一个名为 img-hosting 的仓库作为示例，链接形如</p>
 <p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1p2b25pbWlyU3VuL2ltZy1ob3N0aW5n">https://github.com/ZvonimirSun/img-hosting<i class="fa fa-external-link-alt"></i></span></p>
 <h3 id="上传工具"><a class="markdownIt-Anchor" href="#上传工具"></a> 上传工具</h3>
 <p>既然要用 GitHub 作为图床，如果没有一个方便的上传图片的方式，用起来就很难受了。这边推荐下我主要在用的工具，也就是我前面提到的 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL01vbHVuZXJmaW5uL1BpY0dv">PicGo<i class="fa fa-external-link-alt"></i></span>，文档比较完善，我这边就不再细说，大家可以直接看下官方说明，配置很简单的。</p>
 <p><span class="exturl" data-url="aHR0cHM6Ly9waWNnby5naXRodWIuaW8vUGljR28tRG9jL3poL2d1aWRlL2NvbmZpZy5odG1sI2dpdGh1YiVFNSU5QiVCRSVFNSVCQSU4QQ==">传送门<i class="fa fa-external-link-alt"></i></span></p>
-<p><img data-src="https://img.iszy.xyz/20200505114811.png" alt="" /></p>
+<p><img data-src="https://img.iszy.cc/20200505114811.png" alt="" /></p>
 <p>通过设定自定义域名，就可以每次自动获取你需要的链接格式。</p>
 <h2 id="获取图片链接方案"><a class="markdownIt-Anchor" href="#获取图片链接方案"></a> 获取图片链接方案</h2>
 <h3 id="直连方案"><a class="markdownIt-Anchor" href="#直连方案"></a> 直连方案</h3>
@@ -412,7 +412,7 @@
 <h3 id="nginx-反代cdn"><a class="markdownIt-Anchor" href="#nginx-反代cdn"></a> Nginx 反代+CDN</h3>
 <p>这个方案吧，感觉稍微有点憨。就是我想用自己的域名，正好我的 VPS 不缺流量，还有个百度云加速 CDN 可以用。于是我采用了 Nginx 反代 GitHub 直链，然后给我的域名套 CDN 的方式。</p>
 <p>这是我的 Nginx 配置，大家可以参考下。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">server</span><br><span class="line">    &#123;</span><br><span class="line">        listen 80;</span><br><span class="line">        #listen [::]:80;</span><br><span class="line">        server_name img.iszy.xyz;</span><br><span class="line">        return 301 https://$host$request_uri;</span><br><span class="line"></span><br><span class="line">        access_log off;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">server</span><br><span class="line">    &#123;</span><br><span class="line">        listen 443 ssl http2;</span><br><span class="line">        #listen [::]:443 ssl http2;</span><br><span class="line">        server_name img.iszy.xyz;</span><br><span class="line"></span><br><span class="line">        include conf.d/iszyxyz-ssl.conf;</span><br><span class="line"></span><br><span class="line">        location ~ ^(.*)/$ &#123;</span><br><span class="line">            add_header Access-Control-Allow-Origin *;</span><br><span class="line">            add_header Access-Control-Allow-Methods &#x27;GET, POST, OPTIONS&#x27;;</span><br><span class="line">            add_header Access-Control-Allow-Headers &#x27;DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization&#x27;;</span><br><span class="line"></span><br><span class="line">            if ($request_method = &#x27;OPTIONS&#x27;) &#123;</span><br><span class="line">                return 204;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        location / &#123;</span><br><span class="line">            proxy_pass https://raw.githubusercontent.com/ZvonimirSun/my-img-hosting/master/;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        access_log off;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">server</span><br><span class="line">    &#123;</span><br><span class="line">        listen 80;</span><br><span class="line">        #listen [::]:80;</span><br><span class="line">        server_name img.iszy.cc;</span><br><span class="line">        return 301 https://$host$request_uri;</span><br><span class="line"></span><br><span class="line">        access_log off;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">server</span><br><span class="line">    &#123;</span><br><span class="line">        listen 443 ssl http2;</span><br><span class="line">        #listen [::]:443 ssl http2;</span><br><span class="line">        server_name img.iszy.cc;</span><br><span class="line"></span><br><span class="line">        include conf.d/iszyxyz-ssl.conf;</span><br><span class="line"></span><br><span class="line">        location ~ ^(.*)/$ &#123;</span><br><span class="line">            add_header Access-Control-Allow-Origin *;</span><br><span class="line">            add_header Access-Control-Allow-Methods &#x27;GET, POST, OPTIONS&#x27;;</span><br><span class="line">            add_header Access-Control-Allow-Headers &#x27;DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization&#x27;;</span><br><span class="line"></span><br><span class="line">            if ($request_method = &#x27;OPTIONS&#x27;) &#123;</span><br><span class="line">                return 204;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        location / &#123;</span><br><span class="line">            proxy_pass https://raw.githubusercontent.com/ZvonimirSun/my-img-hosting/master/;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        access_log off;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -562,7 +562,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://www.hurbai.com/link" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/www.hurbai.com.ico"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/www.hurbai.com.ico"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://www.hurbai.com/link" target="_blank">大灰hurbai</a>
@@ -573,7 +573,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://stellarkey.github.io/link/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/vel.life.gif"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/vel.life.gif"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://stellarkey.github.io/link/" target="_blank">思维之海</a>
@@ -584,7 +584,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://www.xxwhite.com/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/www.xxwhite.com.jpg"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/www.xxwhite.com.jpg"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://www.xxwhite.com/" target="_blank">叉叉白</a>
@@ -595,7 +595,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://lala.im/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/lala.im.ico"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/lala.im.ico"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://lala.im/" target="_blank">荒岛</a>
@@ -606,7 +606,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://blog.jimmyho.net/links.html" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/blog.jimmyho.net.jpg"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/blog.jimmyho.net.jpg"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://blog.jimmyho.net/links.html" target="_blank">Jimmy's Blog</a>
@@ -617,7 +617,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://crosschannel.cc/friends/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/crosschannel.cc.ico"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/crosschannel.cc.ico"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://crosschannel.cc/friends/" target="_blank">宅日记</a>
@@ -628,7 +628,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://www.zjhuiwan.cn/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/www.zjhuiwan.cn.png"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/www.zjhuiwan.cn.png"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://www.zjhuiwan.cn/" target="_blank">ZJBLOG</a>
@@ -639,7 +639,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://pengrl.com/link/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/pengrl.com.jpeg"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/pengrl.com.jpeg"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://pengrl.com/link/" target="_blank">yoko blog</a>
@@ -650,7 +650,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://finisky.github.io/links/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/finisky.github.io.png"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/finisky.github.io.png"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://finisky.github.io/links/" target="_blank">Finisky Garden</a>
@@ -661,7 +661,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://blog.tmen.top/link" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/1644659059598.png"/></a>
+                        <img class="ava" src="https://img.iszy.cc/1644659059598.png"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://blog.tmen.top/link" target="_blank">Tmenの博客</a>
@@ -672,7 +672,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://core.dpangzi.com" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/1644659180128.png"/></a>
+                        <img class="ava" src="https://img.iszy.cc/1644659180128.png"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://core.dpangzi.com" target="_blank">叫我阿胖</a>
@@ -683,7 +683,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://yongtaiq.github.io/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/1648013691501.png"/></a>
+                        <img class="ava" src="https://img.iszy.cc/1648013691501.png"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://yongtaiq.github.io/" target="_blank">闲话茶楼</a>

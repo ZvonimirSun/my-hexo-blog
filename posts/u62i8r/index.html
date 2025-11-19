@@ -35,9 +35,9 @@
 <meta property="og:site_name" content="随遇而安">
 <meta property="og:description" content="今天需要生成一个自签名证书，记录下。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://img.iszy.xyz/20210309172353.png">
-<meta property="og:image" content="https://img.iszy.xyz/20210309173008.png">
-<meta property="og:image" content="https://img.iszy.xyz/20210309173723.png">
+<meta property="og:image" content="https://img.iszy.cc/20210309172353.png">
+<meta property="og:image" content="https://img.iszy.cc/20210309173008.png">
+<meta property="og:image" content="https://img.iszy.cc/20210309173723.png">
 <meta property="article:published_time" content="2021-03-09T08:02:40.000Z">
 <meta property="article:modified_time" content="2021-03-09T08:02:40.000Z">
 <meta property="article:author" content="Dirge">
@@ -45,7 +45,7 @@
 <meta property="article:tag" content="自签名证书">
 <meta property="article:tag" content="SSL">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img.iszy.xyz/20210309172353.png">
+<meta name="twitter:image" content="https://img.iszy.cc/20210309172353.png">
 
 
 <link rel="canonical" href="https://www.iszy.cc/posts/u62i8r/">
@@ -349,7 +349,7 @@
 <h2 id="需求"><a class="markdownIt-Anchor" href="#需求"></a> 需求</h2>
 <p>今天，我需要给微服务统一添加一个自签名证书，按照最简单的方式生成了一个证书。不过现在这个证书在验证时会报<code>No subject alternative names present</code>错误，虽然可以通过代码绕过，但是正式环境不太推荐，所以还是在创建证书的环节解决。</p>
 <p>我们查看一个一般的网站证书，可以看到现在的证书都有使用者可选名称，而使用 OpenSSL 的默认参数生成的自签名证书是没有这一条的，而 SSL 验证较为严格的地方就会报上面的错误。</p>
-<p><img data-src="https://img.iszy.xyz/20210309172353.png" alt="" /></p>
+<p><img data-src="https://img.iszy.cc/20210309172353.png" alt="" /></p>
 <h2 id="两句话生成自签名证书"><a class="markdownIt-Anchor" href="#两句话生成自签名证书"></a> 两句话生成自签名证书</h2>
 <ol>
 <li>
@@ -362,7 +362,7 @@
 <li><code>-out</code>，证书请求文件生成路径</li>
 </ol>
 </blockquote>
-<p><img data-src="https://img.iszy.xyz/20210309173008.png" alt="" /></p>
+<p><img data-src="https://img.iszy.cc/20210309173008.png" alt="" /></p>
 </li>
 <li>
 <p>生成自签名证书，带上 SAN 扩展信息</p>
@@ -377,7 +377,7 @@
 <li><code>-extfile</code>，指定签名时包含要添加到证书中的扩展项的文件，自签名时候可以这样使用</li>
 </ol>
 </blockquote>
-<p><img data-src="https://img.iszy.xyz/20210309173723.png" alt="" /></p>
+<p><img data-src="https://img.iszy.cc/20210309173723.png" alt="" /></p>
 </li>
 </ol>
 
@@ -530,7 +530,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://www.hurbai.com/link" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/www.hurbai.com.ico"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/www.hurbai.com.ico"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://www.hurbai.com/link" target="_blank">大灰hurbai</a>
@@ -541,7 +541,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://stellarkey.github.io/link/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/vel.life.gif"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/vel.life.gif"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://stellarkey.github.io/link/" target="_blank">思维之海</a>
@@ -552,7 +552,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://www.xxwhite.com/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/www.xxwhite.com.jpg"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/www.xxwhite.com.jpg"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://www.xxwhite.com/" target="_blank">叉叉白</a>
@@ -563,7 +563,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://lala.im/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/lala.im.ico"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/lala.im.ico"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://lala.im/" target="_blank">荒岛</a>
@@ -574,7 +574,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://blog.jimmyho.net/links.html" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/blog.jimmyho.net.jpg"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/blog.jimmyho.net.jpg"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://blog.jimmyho.net/links.html" target="_blank">Jimmy's Blog</a>
@@ -585,7 +585,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://crosschannel.cc/friends/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/crosschannel.cc.ico"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/crosschannel.cc.ico"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://crosschannel.cc/friends/" target="_blank">宅日记</a>
@@ -596,7 +596,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://www.zjhuiwan.cn/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/www.zjhuiwan.cn.png"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/www.zjhuiwan.cn.png"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://www.zjhuiwan.cn/" target="_blank">ZJBLOG</a>
@@ -607,7 +607,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://pengrl.com/link/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/pengrl.com.jpeg"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/pengrl.com.jpeg"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://pengrl.com/link/" target="_blank">yoko blog</a>
@@ -618,7 +618,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://finisky.github.io/links/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/finisky.github.io.png"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/finisky.github.io.png"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://finisky.github.io/links/" target="_blank">Finisky Garden</a>
@@ -629,7 +629,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://blog.tmen.top/link" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/1644659059598.png"/></a>
+                        <img class="ava" src="https://img.iszy.cc/1644659059598.png"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://blog.tmen.top/link" target="_blank">Tmenの博客</a>
@@ -640,7 +640,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://core.dpangzi.com" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/1644659180128.png"/></a>
+                        <img class="ava" src="https://img.iszy.cc/1644659180128.png"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://core.dpangzi.com" target="_blank">叫我阿胖</a>
@@ -651,7 +651,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://yongtaiq.github.io/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/1648013691501.png"/></a>
+                        <img class="ava" src="https://img.iszy.cc/1648013691501.png"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://yongtaiq.github.io/" target="_blank">闲话茶楼</a>

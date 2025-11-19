@@ -35,20 +35,20 @@
 <meta property="og:site_name" content="随遇而安">
 <meta property="og:description" content="网站开发中，有时候会遇到特定老版本 Chromium 才会产生的 bug，需要使用老版本的 Chromium 来解决。下面记录一下如何下载老版本的 Chromium 包。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://img.iszy.xyz/1722480749524.png">
-<meta property="og:image" content="https://img.iszy.xyz/1722480814407.png">
-<meta property="og:image" content="https://img.iszy.xyz/1657769779611.png">
-<meta property="og:image" content="https://img.iszy.xyz/1657769834283.png">
-<meta property="og:image" content="https://img.iszy.xyz/1657769953873.png">
-<meta property="og:image" content="https://img.iszy.xyz/1657770071034.png">
-<meta property="og:image" content="https://img.iszy.xyz/1657770205975.png">
+<meta property="og:image" content="https://img.iszy.cc/1722480749524.png">
+<meta property="og:image" content="https://img.iszy.cc/1722480814407.png">
+<meta property="og:image" content="https://img.iszy.cc/1657769779611.png">
+<meta property="og:image" content="https://img.iszy.cc/1657769834283.png">
+<meta property="og:image" content="https://img.iszy.cc/1657769953873.png">
+<meta property="og:image" content="https://img.iszy.cc/1657770071034.png">
+<meta property="og:image" content="https://img.iszy.cc/1657770205975.png">
 <meta property="article:published_time" content="2022-07-14T03:18:03.000Z">
 <meta property="article:modified_time" content="2022-07-14T03:18:03.000Z">
 <meta property="article:author" content="Dirge">
 <meta property="article:tag" content="Chrome">
 <meta property="article:tag" content="Chromium">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img.iszy.xyz/1722480749524.png">
+<meta name="twitter:image" content="https://img.iszy.cc/1722480749524.png">
 
 
 <link rel="canonical" href="https://www.iszy.cc/posts/old-chromium-download/">
@@ -367,21 +367,21 @@
 <h3 id="一-查找对应版本的分支信息"><a class="markdownIt-Anchor" href="#一-查找对应版本的分支信息"></a> 一、查找对应版本的分支信息</h3>
 <p><span class="exturl" data-url="aHR0cHM6Ly9jaHJvbWl1bWRhc2guYXBwc3BvdC5jb20vYnJhbmNoZXM=">https://chromiumdash.appspot.com/branches<i class="fa fa-external-link-alt"></i></span></p>
 <p>这里有每个分支版本的相关信息以及分支位置</p>
-<p><img data-src="https://img.iszy.xyz/1722480749524.png" alt="页面预览" /></p>
+<p><img data-src="https://img.iszy.cc/1722480749524.png" alt="页面预览" /></p>
 <p>比如我需要 80 版本的 Chromium，这里就可以看下 80 分支的信息，主要需要这个 <code>Branch Pos.</code> 的内容，如图所示。</p>
-<p><img data-src="https://img.iszy.xyz/1722480814407.png" alt="" /></p>
+<p><img data-src="https://img.iszy.cc/1722480814407.png" alt="" /></p>
 <h3 id="二-通过-position-号查找软件包"><a class="markdownIt-Anchor" href="#二-通过-position-号查找软件包"></a> 二、通过 Position 号查找软件包</h3>
 <p><span class="exturl" data-url="aHR0cHM6Ly9jb21tb25kYXRhc3RvcmFnZS5nb29nbGVhcGlzLmNvbS9jaHJvbWl1bS1icm93c2VyLXNuYXBzaG90cy9pbmRleC5odG1s">Chromium 历史存储仓库<i class="fa fa-external-link-alt"></i></span></p>
 <p>先选择需要的平台</p>
-<p><img data-src="https://img.iszy.xyz/1657769779611.png" alt="" /></p>
+<p><img data-src="https://img.iszy.cc/1657769779611.png" alt="" /></p>
 <p>然后根据 <code>Position</code> 号找到对应的版本</p>
-<p><img data-src="https://img.iszy.xyz/1657769834283.png" alt="" /></p>
+<p><img data-src="https://img.iszy.cc/1657769834283.png" alt="" /></p>
 <p>可能会搜不到，可以手动拉到对应 <code>Position</code> 号附近的版本，大版本号基本是一致的。比如这里我选择了 <code>612439</code> 版本。</p>
-<p><img data-src="https://img.iszy.xyz/1657769953873.png" alt="" /></p>
+<p><img data-src="https://img.iszy.cc/1657769953873.png" alt="" /></p>
 <p>下载对应的压缩版，解压即可使用。比如这里就是<code>chrome-win.zip</code>。</p>
-<p><img data-src="https://img.iszy.xyz/1657770071034.png" alt="" /></p>
+<p><img data-src="https://img.iszy.cc/1657770071034.png" alt="" /></p>
 <h3 id="开始使用吧"><a class="markdownIt-Anchor" href="#开始使用吧"></a> 开始使用吧</h3>
-<p><img data-src="https://img.iszy.xyz/1657770205975.png" alt="" /></p>
+<p><img data-src="https://img.iszy.cc/1657770205975.png" alt="" /></p>
 <h2 id="一点注意"><a class="markdownIt-Anchor" href="#一点注意"></a> 一点注意</h2>
 <p>有一点小坑，在需要切换 Chromium 版本时，需要把已经开着的 Chromium 全都关闭，再打开新版本的 Chromium，否则版本不会切换。</p>
 <p>另，Chrome 和 Chromium 是互不影响的，切换 Chromium 版本，不用考虑 Chrome 的状态。</p>
@@ -534,7 +534,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://www.hurbai.com/link" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/www.hurbai.com.ico"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/www.hurbai.com.ico"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://www.hurbai.com/link" target="_blank">大灰hurbai</a>
@@ -545,7 +545,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://stellarkey.github.io/link/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/vel.life.gif"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/vel.life.gif"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://stellarkey.github.io/link/" target="_blank">思维之海</a>
@@ -556,7 +556,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://www.xxwhite.com/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/www.xxwhite.com.jpg"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/www.xxwhite.com.jpg"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://www.xxwhite.com/" target="_blank">叉叉白</a>
@@ -567,7 +567,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://lala.im/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/lala.im.ico"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/lala.im.ico"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://lala.im/" target="_blank">荒岛</a>
@@ -578,7 +578,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://blog.jimmyho.net/links.html" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/blog.jimmyho.net.jpg"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/blog.jimmyho.net.jpg"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://blog.jimmyho.net/links.html" target="_blank">Jimmy's Blog</a>
@@ -589,7 +589,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://crosschannel.cc/friends/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/crosschannel.cc.ico"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/crosschannel.cc.ico"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://crosschannel.cc/friends/" target="_blank">宅日记</a>
@@ -600,7 +600,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://www.zjhuiwan.cn/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/www.zjhuiwan.cn.png"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/www.zjhuiwan.cn.png"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://www.zjhuiwan.cn/" target="_blank">ZJBLOG</a>
@@ -611,7 +611,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://pengrl.com/link/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/pengrl.com.jpeg"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/pengrl.com.jpeg"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://pengrl.com/link/" target="_blank">yoko blog</a>
@@ -622,7 +622,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://finisky.github.io/links/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/finisky.github.io.png"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/finisky.github.io.png"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://finisky.github.io/links/" target="_blank">Finisky Garden</a>
@@ -633,7 +633,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://blog.tmen.top/link" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/1644659059598.png"/></a>
+                        <img class="ava" src="https://img.iszy.cc/1644659059598.png"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://blog.tmen.top/link" target="_blank">Tmenの博客</a>
@@ -644,7 +644,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://core.dpangzi.com" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/1644659180128.png"/></a>
+                        <img class="ava" src="https://img.iszy.cc/1644659180128.png"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://core.dpangzi.com" target="_blank">叫我阿胖</a>
@@ -655,7 +655,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://yongtaiq.github.io/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/1648013691501.png"/></a>
+                        <img class="ava" src="https://img.iszy.cc/1648013691501.png"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://yongtaiq.github.io/" target="_blank">闲话茶楼</a>

@@ -35,11 +35,11 @@
 <meta property="og:site_name" content="随遇而安">
 <meta property="og:description" content="记录一下利用阿里云 OSS 搭建图床的过程。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://img.iszy.xyz/1701062082875.png">
-<meta property="og:image" content="https://img.iszy.xyz/1701062277474.png">
-<meta property="og:image" content="https://img.iszy.xyz/1701062570486.png">
-<meta property="og:image" content="https://img.iszy.xyz/1701064625613.png">
-<meta property="og:image" content="https://img.iszy.xyz/1701065046947.png">
+<meta property="og:image" content="https://img.iszy.cc/1701062082875.png">
+<meta property="og:image" content="https://img.iszy.cc/1701062277474.png">
+<meta property="og:image" content="https://img.iszy.cc/1701062570486.png">
+<meta property="og:image" content="https://img.iszy.cc/1701064625613.png">
+<meta property="og:image" content="https://img.iszy.cc/1701065046947.png">
 <meta property="article:published_time" content="2023-11-27T05:02:28.000Z">
 <meta property="article:modified_time" content="2023-11-27T05:02:28.000Z">
 <meta property="article:author" content="Dirge">
@@ -47,7 +47,7 @@
 <meta property="article:tag" content="阿里云">
 <meta property="article:tag" content="OSS">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img.iszy.xyz/1701062082875.png">
+<meta name="twitter:image" content="https://img.iszy.cc/1701062082875.png">
 
 
 <link rel="canonical" href="https://www.iszy.cc/posts/alioss-img-bed/">
@@ -338,26 +338,26 @@
 <h3 id="1-创建存储桶"><a class="markdownIt-Anchor" href="#1-创建存储桶"></a> 1. 创建存储桶</h3>
 <p>首先当然是要注册阿里云账号，并且在阿里云控制台开通 OSS 服务。这里就不多说了。</p>
 <p>我们在此创建一个 OSS Bucket，用于存储图片。</p>
-<p><img data-src="https://img.iszy.xyz/1701062082875.png" alt="" /></p>
+<p><img data-src="https://img.iszy.cc/1701062082875.png" alt="" /></p>
 <p>选择一个地域，存储类型只需要标准存储即可，存储冗余也不需要，直接本地冗余存储即可。读写权限选择公共读，这样我们就能在博客里进行展示。我这边选择了私有读写权限，这样，我可以进一步进行控制。</p>
-<p><img data-src="https://img.iszy.xyz/1701062277474.png" alt="" /></p>
+<p><img data-src="https://img.iszy.cc/1701062277474.png" alt="" /></p>
 <p>创建成功后我们就可以通过外网地址拼上文件路径进行访问了。</p>
 <h3 id="2-上传图片"><a class="markdownIt-Anchor" href="#2-上传图片"></a> 2. 上传图片</h3>
 <p>上传图片有多种方式，当然我们可以通过网页端直接上传图片到存储桶，也可以使用阿里云 OSS 的官方客户端进行上传，不过多少有点不便。</p>
 <p>这里推荐一个工具，<span class="exturl" data-url="aHR0cHM6Ly9waWNnby5naXRodWIuaW8vUGljR28tRG9jLw==">PicGo<i class="fa fa-external-link-alt"></i></span>，它是一个开源的图床工具，支持多种图床，包括阿里云 OSS。我们可以通过它来上传图片到 OSS。</p>
 <p>可以根据 PicGo 的文档，申请阿里云的 Token 进行配置，即可实现方便快捷的上传图片。</p>
-<p><img data-src="https://img.iszy.xyz/1701062570486.png" alt="" /></p>
+<p><img data-src="https://img.iszy.cc/1701062570486.png" alt="" /></p>
 <h3 id="3-图片处理"><a class="markdownIt-Anchor" href="#3-图片处理"></a> 3. 图片处理</h3>
 <p>在数据处理-图片处理中，可以新建自定义样式，然后访问时拼上响应参数即可。</p>
 <p>这里我将图片全部转为 50%质量的 webp 格式，压缩效果非常拔群，且能保证图片有足够的清晰度。</p>
-<p><img data-src="https://img.iszy.xyz/1701064625613.png" alt="" /></p>
+<p><img data-src="https://img.iszy.cc/1701064625613.png" alt="" /></p>
 <h2 id="三-进一步处理"><a class="markdownIt-Anchor" href="#三-进一步处理"></a> 三、进一步处理</h2>
 <p>如果你有同地域的 ECS 服务器，可以访问到内网的 bucket 域名，那样还能够进一步进行配置。</p>
 <h3 id="1-自定义域名"><a class="markdownIt-Anchor" href="#1-自定义域名"></a> 1. 自定义域名</h3>
 <p>首先可以在服务器上使用 Nginx 反代内网 bucket 域名，这样，内网流量是不进行收费的，可以统一走服务器的外网流量，还可以绑定自己的域名。</p>
 <h3 id="2-读写权限控制"><a class="markdownIt-Anchor" href="#2-读写权限控制"></a> 2. 读写权限控制</h3>
 <p>可以将 bucket 的读写权限设置为私有，在 Bucket 授权策略中进一步控制权限。在这里我仅允许我的服务器内网 ip 进行只读访问。</p>
-<p><img data-src="https://img.iszy.xyz/1701065046947.png" alt="" /></p>
+<p><img data-src="https://img.iszy.cc/1701065046947.png" alt="" /></p>
 <h3 id="3-默认处理样式"><a class="markdownIt-Anchor" href="#3-默认处理样式"></a> 3. 默认处理样式</h3>
 <p>上面我们设置了一个自定义样式，但是访问的时候每次都需要拼上响应参数，这样很不方便。我们可以在 Nginx 配置中统一加上该参数。</p>
 <figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">server</span> &#123;</span><br><span class="line">  <span class="comment"># ...</span></span><br><span class="line"></span><br><span class="line">  <span class="section">location</span> = / &#123;</span><br><span class="line">      <span class="attribute">return</span> <span class="number">403</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="attribute">set</span> <span class="variable">$token</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line"></span><br><span class="line">  <span class="attribute">if</span> (<span class="variable">$is_args</span>) &#123;</span><br><span class="line">      <span class="attribute">set</span> <span class="variable">$token</span> <span class="string">&quot;&amp;&quot;</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="attribute">set</span> <span class="variable">$flag</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line"></span><br><span class="line">  <span class="attribute">if</span> (<span class="variable">$args</span> !<span class="regexp">~ &quot;x-oss-process=style&quot;)</span> &#123;</span><br><span class="line">      <span class="attribute">set</span> <span class="variable">$flag</span> <span class="string">&quot;1&quot;</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="section">location</span> / &#123;</span><br><span class="line">    <span class="attribute">if</span> (<span class="variable">$flag</span>) &#123;</span><br><span class="line">        <span class="attribute">set</span> <span class="variable">$args</span> <span class="string">&quot;<span class="variable">$&#123;args&#125;</span><span class="variable">$&#123;token&#125;</span>x-oss-process=style/default&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="attribute">proxy_pass</span> https://iszy-img.oss-cn-shanghai-internal.aliyuncs.com;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -515,7 +515,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://www.hurbai.com/link" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/www.hurbai.com.ico"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/www.hurbai.com.ico"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://www.hurbai.com/link" target="_blank">大灰hurbai</a>
@@ -526,7 +526,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://stellarkey.github.io/link/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/vel.life.gif"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/vel.life.gif"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://stellarkey.github.io/link/" target="_blank">思维之海</a>
@@ -537,7 +537,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://www.xxwhite.com/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/www.xxwhite.com.jpg"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/www.xxwhite.com.jpg"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://www.xxwhite.com/" target="_blank">叉叉白</a>
@@ -548,7 +548,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://lala.im/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/lala.im.ico"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/lala.im.ico"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://lala.im/" target="_blank">荒岛</a>
@@ -559,7 +559,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://blog.jimmyho.net/links.html" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/blog.jimmyho.net.jpg"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/blog.jimmyho.net.jpg"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://blog.jimmyho.net/links.html" target="_blank">Jimmy's Blog</a>
@@ -570,7 +570,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://crosschannel.cc/friends/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/crosschannel.cc.ico"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/crosschannel.cc.ico"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://crosschannel.cc/friends/" target="_blank">宅日记</a>
@@ -581,7 +581,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://www.zjhuiwan.cn/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/www.zjhuiwan.cn.png"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/www.zjhuiwan.cn.png"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://www.zjhuiwan.cn/" target="_blank">ZJBLOG</a>
@@ -592,7 +592,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://pengrl.com/link/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/pengrl.com.jpeg"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/pengrl.com.jpeg"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://pengrl.com/link/" target="_blank">yoko blog</a>
@@ -603,7 +603,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://finisky.github.io/links/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/finisky.github.io.png"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/finisky.github.io.png"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://finisky.github.io/links/" target="_blank">Finisky Garden</a>
@@ -614,7 +614,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://blog.tmen.top/link" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/1644659059598.png"/></a>
+                        <img class="ava" src="https://img.iszy.cc/1644659059598.png"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://blog.tmen.top/link" target="_blank">Tmenの博客</a>
@@ -625,7 +625,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://core.dpangzi.com" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/1644659180128.png"/></a>
+                        <img class="ava" src="https://img.iszy.cc/1644659180128.png"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://core.dpangzi.com" target="_blank">叫我阿胖</a>
@@ -636,7 +636,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://yongtaiq.github.io/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/1648013691501.png"/></a>
+                        <img class="ava" src="https://img.iszy.cc/1648013691501.png"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://yongtaiq.github.io/" target="_blank">闲话茶楼</a>

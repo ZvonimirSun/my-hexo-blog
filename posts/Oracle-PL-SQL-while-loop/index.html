@@ -35,10 +35,10 @@
 <meta property="og:site_name" content="随遇而安">
 <meta property="og:description" content="用 while loop 语句进行循环计算的一个实例。最近做题遇到，在此记录。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://img.iszy.xyz/20190318215310.png">
-<meta property="og:image" content="https://img.iszy.xyz/20190318215323.png">
-<meta property="og:image" content="https://img.iszy.xyz/20190318215335.png">
-<meta property="og:image" content="https://img.iszy.xyz/20190318215348.png">
+<meta property="og:image" content="https://img.iszy.cc/20190318215310.png">
+<meta property="og:image" content="https://img.iszy.cc/20190318215323.png">
+<meta property="og:image" content="https://img.iszy.cc/20190318215335.png">
+<meta property="og:image" content="https://img.iszy.cc/20190318215348.png">
 <meta property="article:published_time" content="2017-11-29T04:00:00.000Z">
 <meta property="article:modified_time" content="2017-11-29T04:00:00.000Z">
 <meta property="article:author" content="Dirge">
@@ -46,7 +46,7 @@
 <meta property="article:tag" content="Oracle">
 <meta property="article:tag" content="SQL">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img.iszy.xyz/20190318215310.png">
+<meta name="twitter:image" content="https://img.iszy.cc/20190318215310.png">
 
 
 <link rel="canonical" href="https://www.iszy.cc/posts/Oracle-PL-SQL-while-loop/">
@@ -336,7 +336,7 @@
 <h2 id="实例"><a class="markdownIt-Anchor" href="#实例"></a> 实例</h2>
 <h3 id="题目"><a class="markdownIt-Anchor" href="#题目"></a> 题目</h3>
 <p>给出一个 Power 表(表 1)的数据如下：</p>
-<p><img data-src="https://img.iszy.xyz/20190318215310.png" alt="" /></p>
+<p><img data-src="https://img.iszy.cc/20190318215310.png" alt="" /></p>
 <ol>
 <li>3 日的电费=1 日+2 日</li>
 <li>4 日的电费=2 日+3 日</li>
@@ -346,13 +346,13 @@
 <h3 id="答题"><a class="markdownIt-Anchor" href="#答题"></a> 答题</h3>
 <h4 id="创建表存入初始数据"><a class="markdownIt-Anchor" href="#创建表存入初始数据"></a> 创建表，存入初始数据</h4>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create table</span> <span class="built_in">power</span>(mon <span class="type">int</span>,<span class="keyword">day</span> <span class="type">int</span>,fee <span class="type">int</span>);</span><br><span class="line"><span class="keyword">insert into</span> power <span class="keyword">values</span>(<span class="number">6</span>,<span class="number">1</span>,<span class="number">60</span>);</span><br><span class="line"><span class="keyword">insert into</span> power <span class="keyword">values</span>(<span class="number">6</span>,<span class="number">2</span>,<span class="number">34</span>);</span><br></pre></td></tr></table></figure>
-<p><img data-src="https://img.iszy.xyz/20190318215323.png" alt="" /></p>
+<p><img data-src="https://img.iszy.cc/20190318215323.png" alt="" /></p>
 <h4 id="计算整月的电费"><a class="markdownIt-Anchor" href="#计算整月的电费"></a> 计算整月的电费</h4>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">declare</span></span><br><span class="line">    a number;</span><br><span class="line">    b number;</span><br><span class="line">    x number;</span><br><span class="line">    y number;</span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line">    a:<span class="operator">=</span><span class="number">1</span>;</span><br><span class="line">    b:<span class="operator">=</span><span class="number">2</span>;</span><br><span class="line">    while (b<span class="operator">&lt;=</span><span class="number">29</span>) loop</span><br><span class="line">        <span class="keyword">select</span> fee</span><br><span class="line">        <span class="keyword">into</span> x</span><br><span class="line">        <span class="keyword">from</span> power</span><br><span class="line">        <span class="keyword">where</span> <span class="keyword">day</span><span class="operator">=</span>a;</span><br><span class="line">        <span class="keyword">select</span> fee</span><br><span class="line">        <span class="keyword">into</span> y</span><br><span class="line">        <span class="keyword">from</span> power</span><br><span class="line">        <span class="keyword">where</span> <span class="keyword">day</span><span class="operator">=</span>b;</span><br><span class="line">        <span class="keyword">insert into</span> power <span class="keyword">values</span>(<span class="number">6</span>,a<span class="operator">+</span><span class="number">2</span>,x<span class="operator">+</span>y);</span><br><span class="line">        a:<span class="operator">=</span>a<span class="operator">+</span><span class="number">1</span>;</span><br><span class="line">        b:<span class="operator">=</span>b<span class="operator">+</span><span class="number">1</span>;</span><br><span class="line">    <span class="keyword">end</span> loop;</span><br><span class="line"><span class="keyword">end</span>;</span><br><span class="line"><span class="operator">/</span></span><br></pre></td></tr></table></figure>
-<p><img data-src="https://img.iszy.xyz/20190318215335.png" alt="" /></p>
+<p><img data-src="https://img.iszy.cc/20190318215335.png" alt="" /></p>
 <h4 id="显示结果"><a class="markdownIt-Anchor" href="#显示结果"></a> 显示结果</h4>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> power;</span><br></pre></td></tr></table></figure>
-<p><img data-src="https://img.iszy.xyz/20190318215348.png" alt="" /></p>
+<p><img data-src="https://img.iszy.cc/20190318215348.png" alt="" /></p>
 
     </div>
 
@@ -503,7 +503,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://www.hurbai.com/link" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/www.hurbai.com.ico"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/www.hurbai.com.ico"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://www.hurbai.com/link" target="_blank">大灰hurbai</a>
@@ -514,7 +514,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://stellarkey.github.io/link/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/vel.life.gif"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/vel.life.gif"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://stellarkey.github.io/link/" target="_blank">思维之海</a>
@@ -525,7 +525,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://www.xxwhite.com/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/www.xxwhite.com.jpg"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/www.xxwhite.com.jpg"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://www.xxwhite.com/" target="_blank">叉叉白</a>
@@ -536,7 +536,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://lala.im/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/lala.im.ico"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/lala.im.ico"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://lala.im/" target="_blank">荒岛</a>
@@ -547,7 +547,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://blog.jimmyho.net/links.html" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/blog.jimmyho.net.jpg"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/blog.jimmyho.net.jpg"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://blog.jimmyho.net/links.html" target="_blank">Jimmy's Blog</a>
@@ -558,7 +558,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://crosschannel.cc/friends/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/crosschannel.cc.ico"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/crosschannel.cc.ico"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://crosschannel.cc/friends/" target="_blank">宅日记</a>
@@ -569,7 +569,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://www.zjhuiwan.cn/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/www.zjhuiwan.cn.png"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/www.zjhuiwan.cn.png"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://www.zjhuiwan.cn/" target="_blank">ZJBLOG</a>
@@ -580,7 +580,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://pengrl.com/link/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/pengrl.com.jpeg"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/pengrl.com.jpeg"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://pengrl.com/link/" target="_blank">yoko blog</a>
@@ -591,7 +591,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://finisky.github.io/links/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/finisky.github.io.png"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/finisky.github.io.png"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://finisky.github.io/links/" target="_blank">Finisky Garden</a>
@@ -602,7 +602,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://blog.tmen.top/link" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/1644659059598.png"/></a>
+                        <img class="ava" src="https://img.iszy.cc/1644659059598.png"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://blog.tmen.top/link" target="_blank">Tmenの博客</a>
@@ -613,7 +613,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://core.dpangzi.com" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/1644659180128.png"/></a>
+                        <img class="ava" src="https://img.iszy.cc/1644659180128.png"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://core.dpangzi.com" target="_blank">叫我阿胖</a>
@@ -624,7 +624,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://yongtaiq.github.io/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/1648013691501.png"/></a>
+                        <img class="ava" src="https://img.iszy.cc/1648013691501.png"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://yongtaiq.github.io/" target="_blank">闲话茶楼</a>

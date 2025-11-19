@@ -35,11 +35,11 @@
 <meta property="og:site_name" content="随遇而安">
 <meta property="og:description" content="最近想写一些功能接口给自己用，平常写前端比较多，我自己可怜的小服务器用 java 资源不是很充足，所以准备还是用 Node.js 来实现后端，选用 NestJS 作为本次开发的后端框架。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://img.iszy.xyz/20210724195818.png">
-<meta property="og:image" content="https://img.iszy.xyz/20210724201411.png">
-<meta property="og:image" content="https://img.iszy.xyz/20210724201050.png">
-<meta property="og:image" content="https://img.iszy.xyz/20210724201226.png">
-<meta property="og:image" content="https://img.iszy.xyz/20210725123352.png">
+<meta property="og:image" content="https://img.iszy.cc/20210724195818.png">
+<meta property="og:image" content="https://img.iszy.cc/20210724201411.png">
+<meta property="og:image" content="https://img.iszy.cc/20210724201050.png">
+<meta property="og:image" content="https://img.iszy.cc/20210724201226.png">
+<meta property="og:image" content="https://img.iszy.cc/20210725123352.png">
 <meta property="article:published_time" content="2021-07-24T11:02:26.000Z">
 <meta property="article:modified_time" content="2021-07-24T11:02:26.000Z">
 <meta property="article:author" content="Dirge">
@@ -47,7 +47,7 @@
 <meta property="article:tag" content="NestJS">
 <meta property="article:tag" content="TypeScript">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img.iszy.xyz/20210724195818.png">
+<meta name="twitter:image" content="https://img.iszy.cc/20210724195818.png">
 
 
 <link rel="canonical" href="https://www.iszy.cc/posts/7/">
@@ -381,18 +381,18 @@
 <p>运行如下命令创建项目，<code>nest-cli</code>会根据参数初始化项目文件。接着会让你选择想用的包管理器，<code>npm</code>或<code>yarn</code>，我选择了<code>yarn</code>，因为我感觉国内即使换了源，<code>yarn</code> 似乎也更快一些。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nest new project-name</span><br></pre></td></tr></table></figure>
 <p>完成安装后就会显示如下信息。</p>
-<p><img data-src="https://img.iszy.xyz/20210724195818.png" alt="" /></p>
+<p><img data-src="https://img.iszy.cc/20210724195818.png" alt="" /></p>
 <p>目录结构可以参考 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL25lc3Rqcy90eXBlc2NyaXB0LXN0YXJ0ZXI=">Nest framework TypeScript starter repository<i class="fa fa-external-link-alt"></i></span>，项目就是基于这个创建的。我们可以看到这个模板使用了 TypeScript 语言，NestJS 也是可以基于 JavaScript 运行的，创建时加上参数配置如下所示即可。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nest new project-name -l JavaScript</span><br></pre></td></tr></table></figure>
 <p>更多参数可以参考 cli 的帮助，<code>nest new --help</code>。</p>
-<p><img data-src="https://img.iszy.xyz/20210724201411.png" alt="" /></p>
+<p><img data-src="https://img.iszy.cc/20210724201411.png" alt="" /></p>
 <p>运行<code>yarn start</code>后，NestJS 就会开始运行，当显示<code>Nest application successfully started</code>时，即表示启动完成。</p>
-<p><img data-src="https://img.iszy.xyz/20210724201050.png" alt="" /></p>
+<p><img data-src="https://img.iszy.cc/20210724201050.png" alt="" /></p>
 <p>此时可以访问 <span class="exturl" data-url="aHR0cDovL2xvY2FsaG9zdDozMDAw">http://localhost:3000<i class="fa fa-external-link-alt"></i></span>，就能看到默认返回的 <code>Hello World!</code> 了。</p>
-<p><img data-src="https://img.iszy.xyz/20210724201226.png" alt="" /></p>
+<p><img data-src="https://img.iszy.cc/20210724201226.png" alt="" /></p>
 <h2 id="项目结构"><a class="markdownIt-Anchor" href="#项目结构"></a> 项目结构</h2>
 <p>初始项目结构如下，我们主要关注 <code>src</code> 目录</p>
-<p><img data-src="https://img.iszy.xyz/20210725123352.png" alt="" /></p>
+<p><img data-src="https://img.iszy.cc/20210725123352.png" alt="" /></p>
 <p>初始内容由一个入口文件 <code>main.ts</code>、用于定义路由的 controller 文件<code>app.controller.ts</code>、用于具体方法实现的 provider 文件 <code>app.service.ts</code>、以及一个将 controller 和 service 文件关联在一起的 module 文件组成。</p>
 <p>打开入口文件<code>src/main.ts</code>，内容如下。</p>
 <figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// main.ts</span></span><br><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">NestFactory</span> &#125; <span class="keyword">from</span> <span class="string">&quot;@nestjs/core&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">AppModule</span> &#125; <span class="keyword">from</span> <span class="string">&quot;./app.module&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">bootstrap</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> app = <span class="keyword">await</span> <span class="title class_">NestFactory</span>.<span class="title function_">create</span>(<span class="title class_">AppModule</span>);</span><br><span class="line">  <span class="keyword">await</span> app.<span class="title function_">listen</span>(<span class="number">3000</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">bootstrap</span>();</span><br></pre></td></tr></table></figure>
@@ -559,7 +559,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://www.hurbai.com/link" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/www.hurbai.com.ico"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/www.hurbai.com.ico"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://www.hurbai.com/link" target="_blank">大灰hurbai</a>
@@ -570,7 +570,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://stellarkey.github.io/link/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/vel.life.gif"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/vel.life.gif"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://stellarkey.github.io/link/" target="_blank">思维之海</a>
@@ -581,7 +581,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://www.xxwhite.com/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/www.xxwhite.com.jpg"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/www.xxwhite.com.jpg"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://www.xxwhite.com/" target="_blank">叉叉白</a>
@@ -592,7 +592,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://lala.im/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/lala.im.ico"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/lala.im.ico"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://lala.im/" target="_blank">荒岛</a>
@@ -603,7 +603,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://blog.jimmyho.net/links.html" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/blog.jimmyho.net.jpg"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/blog.jimmyho.net.jpg"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://blog.jimmyho.net/links.html" target="_blank">Jimmy's Blog</a>
@@ -614,7 +614,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://crosschannel.cc/friends/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/crosschannel.cc.ico"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/crosschannel.cc.ico"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://crosschannel.cc/friends/" target="_blank">宅日记</a>
@@ -625,7 +625,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://www.zjhuiwan.cn/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/www.zjhuiwan.cn.png"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/www.zjhuiwan.cn.png"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://www.zjhuiwan.cn/" target="_blank">ZJBLOG</a>
@@ -636,7 +636,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://pengrl.com/link/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/pengrl.com.jpeg"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/pengrl.com.jpeg"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://pengrl.com/link/" target="_blank">yoko blog</a>
@@ -647,7 +647,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://finisky.github.io/links/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/finisky.github.io.png"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/finisky.github.io.png"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://finisky.github.io/links/" target="_blank">Finisky Garden</a>
@@ -658,7 +658,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://blog.tmen.top/link" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/1644659059598.png"/></a>
+                        <img class="ava" src="https://img.iszy.cc/1644659059598.png"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://blog.tmen.top/link" target="_blank">Tmenの博客</a>
@@ -669,7 +669,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://core.dpangzi.com" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/1644659180128.png"/></a>
+                        <img class="ava" src="https://img.iszy.cc/1644659180128.png"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://core.dpangzi.com" target="_blank">叫我阿胖</a>
@@ -680,7 +680,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://yongtaiq.github.io/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/1648013691501.png"/></a>
+                        <img class="ava" src="https://img.iszy.cc/1648013691501.png"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://yongtaiq.github.io/" target="_blank">闲话茶楼</a>

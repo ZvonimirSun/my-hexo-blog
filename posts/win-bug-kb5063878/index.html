@@ -35,15 +35,15 @@
 <meta property="og:site_name" content="随遇而安">
 <meta property="og:description" content="前些天看到Windows更新了个补丁，带严重的恶性BUG，可能会导致硬盘识别问题，可能导致数据丢失。我第一时间把补丁卸载了，没想到第二天自动更新又给我装上了，经过了一番搜索，遂有此文。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://img.iszy.xyz/1756105154778.png">
-<meta property="og:image" content="https://img.iszy.xyz/1756105855236.png">
+<meta property="og:image" content="https://img.iszy.cc/1756105154778.png">
+<meta property="og:image" content="https://img.iszy.cc/1756105855236.png">
 <meta property="article:published_time" content="2025-08-25T06:34:56.000Z">
 <meta property="article:modified_time" content="2025-08-25T06:34:56.000Z">
 <meta property="article:author" content="Dirge">
 <meta property="article:tag" content="Windows">
 <meta property="article:tag" content="注册表">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img.iszy.xyz/1756105154778.png">
+<meta name="twitter:image" content="https://img.iszy.cc/1756105154778.png">
 
 
 <link rel="canonical" href="https://www.iszy.cc/posts/win-bug-kb5063878/">
@@ -336,7 +336,7 @@
 <p><code>KB5063878</code>、<code>KB5063875</code></p>
 <p>现在看情况是说 <code>KB5063878</code> 存在问题，保险起见，我把涉及到的补丁都先给卸载了。</p>
 <p>可以在 <code>设置</code>-<code>Windows更新</code>-<code>更新历史记录</code>-<code>卸载更新</code>中找到可以卸载的补丁，然后进行卸载。</p>
-<p><img data-src="https://img.iszy.xyz/1756105154778.png" alt="卸载补丁" /></p>
+<p><img data-src="https://img.iszy.cc/1756105154778.png" alt="卸载补丁" /></p>
 <h2 id="禁用更新"><a class="markdownIt-Anchor" href="#禁用更新"></a> 禁用更新</h2>
 <p>卸载之后，本来以为万事大吉，结果第二天一看，自动更新又给装上了，这没办法只好先暂停更新吧。</p>
 <p>不过还有个问题，我发现Windows更新界面给的暂停更新选项时间有点短，最多只有5周。经过一番搜索，是有注册表项可以修改这个最长暂停时间。</p>
@@ -344,7 +344,7 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"></span><br><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings]</span><br><span class="line">&quot;FlightSettingsMaxPauseDays&quot;=dword:0001869f</span><br></pre></td></tr></table></figure>
 <p>根据键名可以看到，这里修改的是最大暂停天数，其中<code>0001869f</code>是16进制的<code>99999</code>，这里时间随便指定的，在reg文件中，这里必须使用16进制写法。</p>
 <p>修改完后，暂停更新的下拉框就能选到更长了。时间其实可以改短一点，99999大概14000多周，这个下拉框点了都卡住了。</p>
-<p><img data-src="https://img.iszy.xyz/1756105855236.png" alt="暂停更新" /></p>
+<p><img data-src="https://img.iszy.cc/1756105855236.png" alt="暂停更新" /></p>
 <p>以后啥时候想更新了，再点继续更新就完事了。</p>
 
     </div>
@@ -495,7 +495,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://www.hurbai.com/link" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/www.hurbai.com.ico"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/www.hurbai.com.ico"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://www.hurbai.com/link" target="_blank">大灰hurbai</a>
@@ -506,7 +506,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://stellarkey.github.io/link/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/vel.life.gif"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/vel.life.gif"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://stellarkey.github.io/link/" target="_blank">思维之海</a>
@@ -517,7 +517,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://www.xxwhite.com/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/www.xxwhite.com.jpg"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/www.xxwhite.com.jpg"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://www.xxwhite.com/" target="_blank">叉叉白</a>
@@ -528,7 +528,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://lala.im/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/lala.im.ico"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/lala.im.ico"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://lala.im/" target="_blank">荒岛</a>
@@ -539,7 +539,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://blog.jimmyho.net/links.html" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/blog.jimmyho.net.jpg"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/blog.jimmyho.net.jpg"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://blog.jimmyho.net/links.html" target="_blank">Jimmy's Blog</a>
@@ -550,7 +550,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://crosschannel.cc/friends/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/crosschannel.cc.ico"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/crosschannel.cc.ico"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://crosschannel.cc/friends/" target="_blank">宅日记</a>
@@ -561,7 +561,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://www.zjhuiwan.cn/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/www.zjhuiwan.cn.png"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/www.zjhuiwan.cn.png"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://www.zjhuiwan.cn/" target="_blank">ZJBLOG</a>
@@ -572,7 +572,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://pengrl.com/link/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/pengrl.com.jpeg"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/pengrl.com.jpeg"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://pengrl.com/link/" target="_blank">yoko blog</a>
@@ -583,7 +583,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://finisky.github.io/links/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/finisky.github.io.png"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/finisky.github.io.png"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://finisky.github.io/links/" target="_blank">Finisky Garden</a>
@@ -594,7 +594,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://blog.tmen.top/link" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/1644659059598.png"/></a>
+                        <img class="ava" src="https://img.iszy.cc/1644659059598.png"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://blog.tmen.top/link" target="_blank">Tmenの博客</a>
@@ -605,7 +605,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://core.dpangzi.com" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/1644659180128.png"/></a>
+                        <img class="ava" src="https://img.iszy.cc/1644659180128.png"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://core.dpangzi.com" target="_blank">叫我阿胖</a>
@@ -616,7 +616,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://yongtaiq.github.io/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/1648013691501.png"/></a>
+                        <img class="ava" src="https://img.iszy.cc/1648013691501.png"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://yongtaiq.github.io/" target="_blank">闲话茶楼</a>

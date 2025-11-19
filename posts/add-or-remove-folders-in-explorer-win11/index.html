@@ -35,19 +35,19 @@
 <meta property="og:site_name" content="随遇而安">
 <meta property="og:description" content="在 Windows 11 build 25136 或者 build 22621.160 版本后，系统更新了资源管理器的布局，引入了多标签页的功能。与此同时，我也发现，在此电脑里的那些用户文件夹，比如文档、下载等，不见了。虽然说大多数不是很常用，但是没了还是不太习惯，整个此电脑页面也有些空旷。这里就记录下，如何将这些文件夹加回来，以及如何再次隐藏。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://img.iszy.xyz/1671171351365.png">
-<meta property="og:image" content="https://img.iszy.xyz/1671171792200.png">
-<meta property="og:image" content="https://img.iszy.xyz/1671171893640.png">
-<meta property="og:image" content="https://img.iszy.xyz/1671172330084.png">
-<meta property="og:image" content="https://img.iszy.xyz/1671172365571.png">
-<meta property="og:image" content="https://img.iszy.xyz/1671172425560.png">
-<meta property="og:image" content="https://img.iszy.xyz/1671172451119.png">
+<meta property="og:image" content="https://img.iszy.cc/1671171351365.png">
+<meta property="og:image" content="https://img.iszy.cc/1671171792200.png">
+<meta property="og:image" content="https://img.iszy.cc/1671171893640.png">
+<meta property="og:image" content="https://img.iszy.cc/1671172330084.png">
+<meta property="og:image" content="https://img.iszy.cc/1671172365571.png">
+<meta property="og:image" content="https://img.iszy.cc/1671172425560.png">
+<meta property="og:image" content="https://img.iszy.cc/1671172451119.png">
 <meta property="article:published_time" content="2022-12-16T06:00:25.000Z">
 <meta property="article:modified_time" content="2022-12-16T06:00:25.000Z">
 <meta property="article:author" content="Dirge">
 <meta property="article:tag" content="Windows">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img.iszy.xyz/1671171351365.png">
+<meta name="twitter:image" content="https://img.iszy.cc/1671171351365.png">
 
 
 <link rel="canonical" href="https://www.iszy.cc/posts/add-or-remove-folders-in-explorer-win11/">
@@ -373,20 +373,20 @@
 <p>按 <code>Win + R</code> 快捷键，输入 <code>regedit</code> 打开注册表。</p>
 <p>在地址栏里输入以下路径并回车。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">计算机\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace</span><br></pre></td></tr></table></figure>
-<p><img data-src="https://img.iszy.xyz/1671171351365.png" alt="" /></p>
+<p><img data-src="https://img.iszy.cc/1671171351365.png" alt="" /></p>
 <p>这些每一条对应的就是一个文件夹。具体是什么文件夹，可以点进去看一下。</p>
-<p><img data-src="https://img.iszy.xyz/1671171792200.png" alt="" /></p>
+<p><img data-src="https://img.iszy.cc/1671171792200.png" alt="" /></p>
 <p>比如这条的值为<code>CLSID_ThisPCLocalDownloadsRegFolder</code>，对应的就是下载文件夹。</p>
 <p><strong>我们可以看到除了文件夹信息，还有一条 <code>HideIfEnabled</code> 的值，就是这条注册表值把文件夹隐藏了，删除掉刷新一下就可以显示出来。</strong></p>
-<p><img data-src="https://img.iszy.xyz/1671171893640.png" alt="" /></p>
+<p><img data-src="https://img.iszy.cc/1671171893640.png" alt="" /></p>
 <h2 id="移除文件夹"><a class="markdownIt-Anchor" href="#移除文件夹"></a> 移除文件夹</h2>
 <p>与上面操作相反，我们只要把<code>HideIfEnabled</code>条目加上，就可以将文件夹隐藏。</p>
 <p>点击到你想要隐藏的文件夹，右键新建<strong>DWORD (32 位)值</strong>，名称为<code>HideIfEnabled</code>。</p>
-<p><img data-src="https://img.iszy.xyz/1671172330084.png" alt="" /></p>
-<p><img data-src="https://img.iszy.xyz/1671172365571.png" alt="" /></p>
+<p><img data-src="https://img.iszy.cc/1671172330084.png" alt="" /></p>
+<p><img data-src="https://img.iszy.cc/1671172365571.png" alt="" /></p>
 <p>双击打开，输入值为<code>22ab9b9</code></p>
-<p><img data-src="https://img.iszy.xyz/1671172425560.png" alt="" /></p>
-<p><img data-src="https://img.iszy.xyz/1671172451119.png" alt="" /></p>
+<p><img data-src="https://img.iszy.cc/1671172425560.png" alt="" /></p>
+<p><img data-src="https://img.iszy.cc/1671172451119.png" alt="" /></p>
 <p>现在刷新一下资源管理器，文件夹就被隐藏了。</p>
 
     </div>
@@ -536,7 +536,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://www.hurbai.com/link" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/www.hurbai.com.ico"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/www.hurbai.com.ico"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://www.hurbai.com/link" target="_blank">大灰hurbai</a>
@@ -547,7 +547,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://stellarkey.github.io/link/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/vel.life.gif"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/vel.life.gif"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://stellarkey.github.io/link/" target="_blank">思维之海</a>
@@ -558,7 +558,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://www.xxwhite.com/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/www.xxwhite.com.jpg"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/www.xxwhite.com.jpg"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://www.xxwhite.com/" target="_blank">叉叉白</a>
@@ -569,7 +569,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://lala.im/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/lala.im.ico"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/lala.im.ico"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://lala.im/" target="_blank">荒岛</a>
@@ -580,7 +580,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://blog.jimmyho.net/links.html" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/blog.jimmyho.net.jpg"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/blog.jimmyho.net.jpg"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://blog.jimmyho.net/links.html" target="_blank">Jimmy's Blog</a>
@@ -591,7 +591,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://crosschannel.cc/friends/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/crosschannel.cc.ico"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/crosschannel.cc.ico"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://crosschannel.cc/friends/" target="_blank">宅日记</a>
@@ -602,7 +602,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://www.zjhuiwan.cn/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/www.zjhuiwan.cn.png"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/www.zjhuiwan.cn.png"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://www.zjhuiwan.cn/" target="_blank">ZJBLOG</a>
@@ -613,7 +613,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://pengrl.com/link/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/pengrl.com.jpeg"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/pengrl.com.jpeg"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://pengrl.com/link/" target="_blank">yoko blog</a>
@@ -624,7 +624,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://finisky.github.io/links/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/finisky.github.io.png"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/finisky.github.io.png"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://finisky.github.io/links/" target="_blank">Finisky Garden</a>
@@ -635,7 +635,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://blog.tmen.top/link" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/1644659059598.png"/></a>
+                        <img class="ava" src="https://img.iszy.cc/1644659059598.png"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://blog.tmen.top/link" target="_blank">Tmenの博客</a>
@@ -646,7 +646,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://core.dpangzi.com" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/1644659180128.png"/></a>
+                        <img class="ava" src="https://img.iszy.cc/1644659180128.png"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://core.dpangzi.com" target="_blank">叫我阿胖</a>
@@ -657,7 +657,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://yongtaiq.github.io/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/1648013691501.png"/></a>
+                        <img class="ava" src="https://img.iszy.cc/1648013691501.png"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://yongtaiq.github.io/" target="_blank">闲话茶楼</a>

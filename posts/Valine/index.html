@@ -35,17 +35,17 @@
 <meta property="og:site_name" content="随遇而安">
 <meta property="og:description" content="今天我来介绍一下，我现在正在使用的评论系统——Valine，一个可以完全自主掌控数据的超好用无后端极简评论系统。我之前使用的评论系统是 Remarkbox，感兴趣的可以看一下我之前的文章，我会在文章末尾放上链接。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://img.iszy.xyz/20190318221214.png">
-<meta property="og:image" content="https://img.iszy.xyz/20190318221231.png">
-<meta property="og:image" content="https://img.iszy.xyz/20190318221242.png">
-<meta property="og:image" content="https://img.iszy.xyz/20190318221253.png">
+<meta property="og:image" content="https://img.iszy.cc/20190318221214.png">
+<meta property="og:image" content="https://img.iszy.cc/20190318221231.png">
+<meta property="og:image" content="https://img.iszy.cc/20190318221242.png">
+<meta property="og:image" content="https://img.iszy.cc/20190318221253.png">
 <meta property="article:published_time" content="2018-04-01T04:00:00.000Z">
 <meta property="article:modified_time" content="2018-04-01T04:00:00.000Z">
 <meta property="article:author" content="Dirge">
 <meta property="article:tag" content="评论系统">
 <meta property="article:tag" content="Valine">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img.iszy.xyz/20190318221214.png">
+<meta name="twitter:image" content="https://img.iszy.cc/20190318221214.png">
 
 
 <link rel="canonical" href="https://www.iszy.cc/posts/Valine/">
@@ -361,7 +361,7 @@
     <div class="post-body" itemprop="articleBody"><p>今天我来介绍一下，我现在正在使用的评论系统——<span class="exturl" data-url="aHR0cHM6Ly92YWxpbmUuanMub3JnLw==">Valine<i class="fa fa-external-link-alt"></i></span>，一个可以完全自主掌控数据的超好用无后端极简评论系统。我之前使用的评论系统是 Remarkbox，感兴趣的可以看一下我之前的文章，我会在文章末尾放上链接。</p>
 <span id="more"></span>
 <h2 id="valine-评论系统简介"><a class="markdownIt-Anchor" href="#valine-评论系统简介"></a> Valine 评论系统简介</h2>
-<p><img data-src="https://img.iszy.xyz/20190318221214.png" alt="" /></p>
+<p><img data-src="https://img.iszy.cc/20190318221214.png" alt="" /></p>
 <p>如题目所说，Valine 是一个无后端的极简评论系统。由 <span class="exturl" data-url="aHR0cHM6Ly9pb2xpdS5jbi8=">@云淡风轻<i class="fa fa-external-link-alt"></i></span> 大神开发，利用免费的 leancloud 作云数据库，实现了真正的无后端。Valine 有以下几点吸引我的地方：</p>
 <ul>
 <li>能够完全掌控评论数据</li>
@@ -377,13 +377,13 @@
 <li><span class="exturl" data-url="aHR0cHM6Ly9sZWFuY2xvdWQuY24vZGFzaGJvYXJkL2xvZ2luLmh0bWwjL3NpZ251cA==">点击这里登录或注册<i class="fa fa-external-link-alt"></i></span><code>Leancloud</code></li>
 <li><span class="exturl" data-url="aHR0cHM6Ly9sZWFuY2xvdWQuY24vZGFzaGJvYXJkL2FwcGxpc3QuaHRtbCMvbmV3YXBw">点击这里创建应用<i class="fa fa-external-link-alt"></i></span>，应用名称随意。</li>
 </ol>
-<p><img data-src="https://img.iszy.xyz/20190318221231.png" alt="" /></p>
+<p><img data-src="https://img.iszy.cc/20190318221231.png" alt="" /></p>
 <h3 id="获取-app-id-和-app-key"><a class="markdownIt-Anchor" href="#获取-app-id-和-app-key"></a> 获取 <code>APP ID</code> 和 <code>APP KEY</code></h3>
 <p>进入应用后，在此处获取该应用的 <code>APP ID</code> 和 <code>APP KEY</code>。</p>
-<p><img data-src="https://img.iszy.xyz/20190318221242.png" alt="" /></p>
+<p><img data-src="https://img.iszy.cc/20190318221242.png" alt="" /></p>
 <h3 id="设置安全域名"><a class="markdownIt-Anchor" href="#设置安全域名"></a> 设置安全域名</h3>
 <p>为了数据安全，请务必在此处添加安全域名为你的博客地址。如在本地测试，可以先不添加安全域名。</p>
-<p><img data-src="https://img.iszy.xyz/20190318221253.png" alt="" /></p>
+<p><img data-src="https://img.iszy.cc/20190318221253.png" alt="" /></p>
 <h3 id="插入页面"><a class="markdownIt-Anchor" href="#插入页面"></a> 插入页面</h3>
 <p>以本人博客为例，请将以下语句添加到博客的评论位置。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--评论显示区，请插入合适的位置--&gt;</span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;comment&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">&lt;!--<span class="title class_">Leancloud</span> 操作库:--&gt;</span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;//cdn1.lncld.net/static/js/3.6.1/av-min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line">&lt;!--<span class="title class_">Valine</span> 的核心代码库--&gt;</span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;//cdn.jsdelivr.net/npm/valine@1.1.9-beta9/dist/Valine.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="keyword">new</span> <span class="title class_">Valine</span>(&#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="attr">el</span>:<span class="string">&#x27;#comment&#x27;</span>,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="attr">appId</span>: <span class="string">&#x27;Your App ID&#x27;</span>,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="attr">appKey</span>: <span class="string">&#x27;Your App Key&#x27;</span>,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="attr">placeholder</span>: <span class="string">&#x27;ヾﾉ≧∀≦)o快来评论一下吧!&#x27;</span>,</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="attr">avatar</span>:<span class="string">&#x27;&#x27;</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    &#125;);</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
@@ -544,7 +544,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://www.hurbai.com/link" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/www.hurbai.com.ico"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/www.hurbai.com.ico"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://www.hurbai.com/link" target="_blank">大灰hurbai</a>
@@ -555,7 +555,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://stellarkey.github.io/link/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/vel.life.gif"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/vel.life.gif"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://stellarkey.github.io/link/" target="_blank">思维之海</a>
@@ -566,7 +566,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://www.xxwhite.com/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/www.xxwhite.com.jpg"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/www.xxwhite.com.jpg"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://www.xxwhite.com/" target="_blank">叉叉白</a>
@@ -577,7 +577,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://lala.im/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/lala.im.ico"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/lala.im.ico"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://lala.im/" target="_blank">荒岛</a>
@@ -588,7 +588,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://blog.jimmyho.net/links.html" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/blog.jimmyho.net.jpg"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/blog.jimmyho.net.jpg"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://blog.jimmyho.net/links.html" target="_blank">Jimmy's Blog</a>
@@ -599,7 +599,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://crosschannel.cc/friends/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/crosschannel.cc.ico"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/crosschannel.cc.ico"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://crosschannel.cc/friends/" target="_blank">宅日记</a>
@@ -610,7 +610,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://www.zjhuiwan.cn/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/www.zjhuiwan.cn.png"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/www.zjhuiwan.cn.png"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://www.zjhuiwan.cn/" target="_blank">ZJBLOG</a>
@@ -621,7 +621,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://pengrl.com/link/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/pengrl.com.jpeg"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/pengrl.com.jpeg"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://pengrl.com/link/" target="_blank">yoko blog</a>
@@ -632,7 +632,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://finisky.github.io/links/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/logos/finisky.github.io.png"/></a>
+                        <img class="ava" src="https://img.iszy.cc/logos/finisky.github.io.png"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://finisky.github.io/links/" target="_blank">Finisky Garden</a>
@@ -643,7 +643,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://blog.tmen.top/link" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/1644659059598.png"/></a>
+                        <img class="ava" src="https://img.iszy.cc/1644659059598.png"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://blog.tmen.top/link" target="_blank">Tmenの博客</a>
@@ -654,7 +654,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://core.dpangzi.com" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/1644659180128.png"/></a>
+                        <img class="ava" src="https://img.iszy.cc/1644659180128.png"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://core.dpangzi.com" target="_blank">叫我阿胖</a>
@@ -665,7 +665,7 @@ document.addEventListener('page:loaded', () => {
             
                 <div class="card">
                     <a href="https://yongtaiq.github.io/" target="_blank">
-                        <img class="ava" src="https://img.iszy.xyz/1648013691501.png"/></a>
+                        <img class="ava" src="https://img.iszy.cc/1648013691501.png"/></a>
                     <div class="card-header">
                         <div>
                             <a href="https://yongtaiq.github.io/" target="_blank">闲话茶楼</a>
