@@ -141,7 +141,7 @@ sidebar:
 # Sidebar Avatar
 avatar:
   # Replace the default image and set the url here.
-  url: https://cdn.iszy.cc/gravatar/avatar/5012e410377c7a93d14f7bf31aeeb7fd?d=mm
+  url: https://cdn.owooo.cc/gravatar/avatar/5012e410377c7a93d14f7bf31aeeb7fd?d=mm
   # If true, the avatar will be displayed in circle.
   rounded: true
   # If true, the avatar will be rotated with the cursor.
@@ -423,7 +423,7 @@ font:
   enable: true
 
   # Uri of fonts host, e.g. https://fonts.googleapis.com (Default).
-  host: https://cdn.iszy.cc/fonts
+  host: https://cdn.owooo.cc/fonts
 
   # Font options:
   # `external: true` will load this font family from `host` above.
@@ -902,7 +902,7 @@ vendors:
   # For example:
   # custom_cdn_url: https://cdn.jsdelivr.net/npm/${npm_name}@${version}/${minified}
   # custom_cdn_url: https://cdnjs.cloudflare.com/ajax/libs/${cdnjs_name}/${version}/${cdnjs_file}
-  custom_cdn_url: https://cdn.iszy.cc/jsd/npm/${npm_name}@${version}/${minified}
+  custom_cdn_url: https://cdn.owooo.cc/jsd/npm/${npm_name}@${version}/${minified}
 
 # Assets
 # Accelerate delivery of static files using a CDN
