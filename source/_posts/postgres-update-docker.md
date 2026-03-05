@@ -114,7 +114,7 @@ docker run -it --rm --name postgres-upgrade \
   -e POSTGRES_PASSWORD=mysecretpassword \
   -e PGUSER=postgres \
   -e PGPASSWORD=mysecretpassword \
-  postgis/postgis:17-3.6 \
+  postgis/postgis:17-3.5 \
   pg_upgrade \
     --old-datadir=/data \
     --new-datadir=/var/lib/postgresql/data \
@@ -146,7 +146,7 @@ docker run -it --rm --name postgres-upgrade \
 
 ```bash
 mv data/postgres-new-data data/postgres
-docker run --name postgres -v ./data/postgres:/var/lib/postgresql/data -e POSTGRES_PASSWORD=mysecretpassword -p 5432:5432 -d postgis/postgis:17-3.6
+docker run --name postgres -v ./data/postgres:/var/lib/postgresql/data -e POSTGRES_PASSWORD=mysecretpassword -p 5432:5432 -d postgis/postgis:17-3.5
 ```
 
 执行优化
