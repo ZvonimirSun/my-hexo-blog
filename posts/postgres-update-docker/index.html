@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.3.0">
+<link rel="preconnect" href="https://cdn.owooo.cc/fonts" crossorigin>
+<link rel="preconnect" href="https://cdn.owooo.cc" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="google-site-verification" content="NVbOnZWipX7gWLG4NVJzJWVD16F6okyUB1NDN6mNoIo">
+  <meta name="msvalidate.01" content="10AA475F381BF9E4C280F1E2E0B3F280">
+  <meta name="yandex-verification" content="3ec99cb3451ef771">
+  <meta name="baidu-site-verification" content="tV7s6Tu88n">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://cdn.owooo.cc/fonts/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=JetBrains+Mono:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.owooo.cc/jsd/npm/@fortawesome/fontawesome-free@7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.owooo.cc/jsd/npm/@fancyapps/ui@5.0.31/dist/fancybox/fancybox.css" integrity="sha256-gkQVf8UKZgQ0HyuxL/VnacadJ+D2Kox2TCEBuNQg5+w=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.owooo.cc/jsd/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdn.owooo.cc/jsd/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous" defer></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.iszy.cc","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.27.0","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":true,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":true,"motion":{"enable":false,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"algolia":{"appID":"1UJ2W38EIN","apiKey":"c0cf4d0a9659a45dd3a38becbe6b6f73","indexName":"iszy_blog","hits":{"per_page":10}}}</script><script src="https://cdn.owooo.cc/jsd/npm/hexo-theme-next@8.27.0/source/js/config.min.js" defer></script>
+
+    <meta name="description" content="最近，我发现 PostgreSQL 14 的官方支持在 2026年11月12日 就要结束了， 我正在使用的 postgis&#x2F;postgis:14-3.2 镜像也即将失去官方支持。为了保持系统的安全性和稳定性，我决定将数据库升级到 PostgreSQL 17。有人说 Docker 镜像没有办法用 pg_upgrade 来升级数据库，但实际上是可以的。今天，我就来记录一下我的升级过程。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PostgreSQL Docker镜像大版本升级">
+<meta property="og:url" content="https://www.iszy.cc/posts/postgres-update-docker/">
+<meta property="og:site_name" content="随遇而安">
+<meta property="og:description" content="最近，我发现 PostgreSQL 14 的官方支持在 2026年11月12日 就要结束了， 我正在使用的 postgis&#x2F;postgis:14-3.2 镜像也即将失去官方支持。为了保持系统的安全性和稳定性，我决定将数据库升级到 PostgreSQL 17。有人说 Docker 镜像没有办法用 pg_upgrade 来升级数据库，但实际上是可以的。今天，我就来记录一下我的升级过程。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-03-05T17:01:31.000Z">
+<meta property="article:modified_time" content="2026-03-05T17:01:31.000Z">
+<meta property="article:author" content="Dirge">
+<meta property="article:tag" content="Docker">
+<meta property="article:tag" content="数据库">
+<meta property="article:tag" content="PostgreSQL">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://www.iszy.cc/posts/postgres-update-docker/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.iszy.cc/posts/postgres-update-docker/","path":"posts/postgres-update-docker/","title":"PostgreSQL Docker镜像大版本升级"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>PostgreSQL Docker镜像大版本升级 | 随遇而安</title>
+  
+
+
+
+  <script data-pjax defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{&quot;token&quot;: &quot;c68cf7920b0f4e2a9dd42c7a5b379fd7&quot;}'></script>
+
+
+
+
+
+  
+  <script src="https://cdn.owooo.cc/jsd/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.owooo.cc/jsd/npm/@next-theme/pjax@0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.owooo.cc/jsd/npm/@fancyapps/ui@5.0.31/dist/fancybox/fancybox.umd.js" integrity="sha256-a+H7FYzJv6oU2hfsfDGM2Ohw/cR9v+hPfxHCLdmCrE8=" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.owooo.cc/jsd/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.owooo.cc/jsd/npm/pangu@7.2.0/dist/browser/pangu.umd.js" integrity="sha256-JnmRRnJK7DC6RQJbAJb6AXOM9OmWzS6z8eYultk/48Y=" crossorigin="anonymous" defer></script>
+<script src="https://cdn.owooo.cc/jsd/npm/hexo-theme-next@8.27.0/source/js/utils.min.js" defer></script><script src="https://cdn.owooo.cc/jsd/npm/hexo-theme-next@8.27.0/source/js/sidebar.min.js" defer></script><script src="https://cdn.owooo.cc/jsd/npm/hexo-theme-next@8.27.0/source/js/next-boot.min.js" defer></script><script src="https://cdn.owooo.cc/jsd/npm/hexo-theme-next@8.27.0/source/js/pjax.min.js" defer></script>
+
+  <script src="https://cdn.owooo.cc/jsd/npm/algoliasearch@5.36.0/dist/lite/builds/browser.umd.js" integrity="sha256-o49zoHLDPBm9WLg6AiliAVi3axCRTqe3ltTxLvhzAVg=" crossorigin="anonymous" defer></script><script src="https://cdn.owooo.cc/jsd/npm/hexo-theme-next@8.27.0/source/js/third-party/search/algolia-search.min.js" defer></script>
+
+  <script class="next-config" data-name="pdf" type="application/json">{"object_url":{"url":"https://cdn.owooo.cc/jsd/npm/pdfobject@2.3.1/pdfobject.min.js","integrity":"sha256-jI72I8ZLVflVOisZIOaLvRew3tyvzeu6aZXFm7P7dEo="},"url":"/lib/pdf/web/viewer"}</script>
+  <script src="https://cdn.owooo.cc/jsd/npm/hexo-theme-next@8.27.0/source/js/third-party/tags/pdf.min.js" defer></script>
+
+
+
+  <script src="https://cdn.owooo.cc/jsd/npm/hexo-theme-next@8.27.0/source/js/third-party/fancybox.min.js" defer></script>
+
+  <script src="https://cdn.owooo.cc/jsd/npm/hexo-theme-next@8.27.0/source/js/third-party/pace.min.js" defer></script>
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://cdn.owooo.cc/jsd/npm/katex@0.16.9/dist/katex.min.css" integrity="sha256-UF1fgpAiu3tPJN/uCqEUHNe7pnr+QR0SQDNfgglgtcM=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://cdn.owooo.cc/jsd/npm/katex@0.16.9/dist/contrib/copy-tex.min.js","integrity":"sha256-Us54+rSGDSTvIhKKUs4kygE2ipA0RXpWWh0/zLqw3bs="}}</script>
+  <script src="https://cdn.owooo.cc/jsd/npm/hexo-theme-next@8.27.0/source/js/third-party/math/katex.min.js" defer></script>
+
+
+  <script src="https://cdn.owooo.cc/jsd/npm/quicklink@3.0.1/dist/quicklink.umd.js" integrity="sha256-44BednzIpUeQJcY8qtLyarFu0UCCTbgmWOvaoehiFQQ=" crossorigin="anonymous" defer></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":false,"delay":true,"timeout":3000,"priority":true,"url":"https://www.iszy.cc/posts/postgres-update-docker/"}</script>
+  <script src="https://cdn.owooo.cc/jsd/npm/hexo-theme-next@8.27.0/source/js/third-party/quicklink.min.js" defer></script>
+<link rel="dns-prefetch" href="https://wl.iszy.xyz">
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="随遇而安" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">随遇而安</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">在自由的空气中漂浮</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">158</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">144</span></a></li><li class="menu-item menu-item-友链"><a href="/links/" rel="section"><i class="fa fa-link fa-fw"></i>友链</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fab fa-algolia fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80-%E5%8D%87%E7%BA%A7%E5%89%8D%E7%9A%84%E5%87%86%E5%A4%87"><span class="nav-number">1.</span> <span class="nav-text"> 一、升级前的准备</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%88%9D%E5%A7%8B%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84%E5%8F%82%E8%80%83"><span class="nav-number">1.1.</span> <span class="nav-text"> 1. 初始目录结构参考</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%A4%87%E4%BB%BD%E6%95%B0%E6%8D%AE"><span class="nav-number">1.2.</span> <span class="nav-text"> 2. 备份数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E6%8B%B7%E8%B4%9D%E4%BA%8C%E8%BF%9B%E5%88%B6%E7%9B%AE%E5%BD%95"><span class="nav-number">1.3.</span> <span class="nav-text"> 3. 拷贝二进制目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E5%88%9D%E5%A7%8B%E5%8C%96%E6%96%B0%E7%9B%AE%E5%BD%95"><span class="nav-number">1.4.</span> <span class="nav-text"> 4. 初始化新目录</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C-%E6%89%A7%E8%A1%8C%E5%8D%87%E7%BA%A7"><span class="nav-number">2.</span> <span class="nav-text"> 二、执行升级</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89-%E5%8D%87%E7%BA%A7%E5%90%8E%E7%9A%84%E6%B8%85%E7%90%86%E5%B7%A5%E4%BD%9C"><span class="nav-number">3.</span> <span class="nav-text"> 三、升级后的清理工作</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Dirge"
+      src="https://cdn.owooo.cc/gravatar/avatar/5012e410377c7a93d14f7bf31aeeb7fd?d=mm">
+  <p class="site-author-name" itemprop="name">Dirge</p>
+  <div class="site-description" itemprop="description">生活吐槽 & 学习记录</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">144</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">158</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="cc-license animated" itemprop="license">
+    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><img src="https://cdn.owooo.cc/jsd/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></span>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+        <div class="pjax">
+        <div class="sidebar-inner sidebar-post-related">
+          <div class="animated">
+              <div class="links-of-blogroll-title"><i class="fa fa-signs-post fa-fw"></i>
+    相关文章
+  </div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/posts/postgres-geoserver-setup-docker/" rel="bookmark">
+        <time class="popular-posts-time">2019-02-05</time>
+        <br>
+      通过Docker部署Posgresql+Geoserver环境
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/posts/dnmp/" rel="bookmark">
+        <time class="popular-posts-time">2019-03-09</time>
+        <br>
+      Docker一键部署LNMP
+      </a>
+    </li>
+  </ul>
+
+          </div>
+        </div>
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.iszy.cc/posts/postgres-update-docker/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://cdn.owooo.cc/gravatar/avatar/5012e410377c7a93d14f7bf31aeeb7fd?d=mm">
+      <meta itemprop="name" content="Dirge">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="随遇而安">
+      <meta itemprop="description" content="生活吐槽 & 学习记录">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="PostgreSQL Docker镜像大版本升级 | 随遇而安">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          PostgreSQL Docker镜像大版本升级
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2026-03-06 01:01:31" itemprop="dateCreated datePublished" datetime="2026-03-06T01:01:31+08:00">2026-03-06</time>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/posts/postgres-update-docker/#waline" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" data-path="/posts/postgres-update-docker/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-item" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="waline-pageview-count" data-path="/posts/postgres-update-docker/"></span>
+    </span>
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>967</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>4 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>最近，我发现 <code>PostgreSQL 14</code> 的官方支持在 <code>2026年11月12日</code> 就要结束了， 我正在使用的 <code>postgis/postgis:14-3.2</code> 镜像也即将失去官方支持。为了保持系统的安全性和稳定性，我决定将数据库升级到 <code>PostgreSQL 17</code>。有人说 Docker 镜像没有办法用 <code>pg_upgrade</code> 来升级数据库，但实际上是可以的。今天，我就来记录一下我的升级过程。</p>
+<span id="more"></span>
+<h2 id="一-升级前的准备"><a class="markdownIt-Anchor" href="#一-升级前的准备"></a> 一、升级前的准备</h2>
+<h3 id="1-初始目录结构参考"><a class="markdownIt-Anchor" href="#1-初始目录结构参考"></a> 1. 初始目录结构参考</h3>
+<p>我当前的目录结构如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">├── docker-compose.yml</span><br><span class="line">├── data</span><br><span class="line">│   └── postgres-old-data</span><br></pre></td></tr></table></figure>
+<h3 id="2-备份数据"><a class="markdownIt-Anchor" href="#2-备份数据"></a> 2. 备份数据</h3>
+<p>首先在备份前一定要先停止容器，防止备份时还在写入，造成数据不一致。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker stop postgres-old</span><br></pre></td></tr></table></figure>
+<p>我选择直接备份volume目录，直接打一个tar包。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> data</span><br><span class="line">tar cvf postgres-old.tar postgres-old-data</span><br><span class="line"><span class="built_in">cd</span> ..</span><br></pre></td></tr></table></figure>
+<p>当前目录结构如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">├── docker-compose.yml</span><br><span class="line">├── data</span><br><span class="line">│   ├── postgres-old-data</span><br><span class="line">│   └── postgres-old.tar</span><br></pre></td></tr></table></figure>
+<h3 id="3-拷贝二进制目录"><a class="markdownIt-Anchor" href="#3-拷贝二进制目录"></a> 3. 拷贝二进制目录</h3>
+<p>接下来，我需要拷贝 <code>PostgreSQL 14</code> 的二进制目录，以便在升级过程中使用。我使用的镜像是 <code>postgis/postgis:14-3.2</code>，注意<code>alpine</code>镜像的路径不一样，此处仅做参考。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> data</span><br><span class="line"><span class="built_in">mkdir</span> postgres-old-bin</span><br><span class="line"><span class="built_in">chown</span> 999 postgres-old-bin</span><br><span class="line">docker <span class="built_in">cp</span> postgres-old:/usr/lib/postgresql/14 ./postgres-old-bin/lib</span><br><span class="line">docker <span class="built_in">cp</span> postgres-old:/usr/share/postgresql/14 ./postgres-old-bin/share</span><br><span class="line"><span class="built_in">cd</span> ..</span><br></pre></td></tr></table></figure>
+<p>当前目录结构如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">├── docker-compose.yml</span><br><span class="line">├── data</span><br><span class="line">│   ├── postgres-old-data</span><br><span class="line">│   ├── postgres-old.tar</span><br><span class="line">│   ├── postgres-old-bin</span><br><span class="line">|   |   ├── lib</span><br><span class="line">|   |   └── share</span><br></pre></td></tr></table></figure>
+<h3 id="4-初始化新目录"><a class="markdownIt-Anchor" href="#4-初始化新目录"></a> 4. 初始化新目录</h3>
+<p>接下来，我需要初始化一个新的目录来存放升级后的数据。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> data</span><br><span class="line"><span class="built_in">mkdir</span> postgres-new-data</span><br><span class="line"><span class="built_in">chown</span> 999 postgres-new-data</span><br><span class="line"><span class="built_in">cd</span> ..</span><br><span class="line">docker run -it --<span class="built_in">rm</span> --name postgres-new \</span><br><span class="line">  -v ./data/postgres-new-data:/var/lib/postgresql/data \</span><br><span class="line">  -e POSTGRES_PASSWORD=mysecretpassword \</span><br><span class="line">  postgres:17</span><br></pre></td></tr></table></figure>
+<p>数据库创建完成按 <code>Ctrl + C</code> 停止，现在 <code>postgres-new-data</code> 目录已经初始化好了。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">├── docker-compose.yml</span><br><span class="line">├── data</span><br><span class="line">│   └── postgres-old-data</span><br><span class="line">│   └── postgres-old.tar</span><br><span class="line">│   └── postgres-old-bin</span><br><span class="line">│   └── postgres-new-data</span><br></pre></td></tr></table></figure>
+<h2 id="二-执行升级"><a class="markdownIt-Anchor" href="#二-执行升级"></a> 二、执行升级</h2>
+<p>这里要使用需要升级的目标镜像，保证对应的插件在新版本中都包含。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">docker run -it --<span class="built_in">rm</span> --name postgres-upgrade \</span><br><span class="line">  -v ./data/postgres-old-data:/data \</span><br><span class="line">  -v ./data/postgres-new-data:/var/lib/postgresql/data \</span><br><span class="line">  -v ./data/postgres-old-bin/lib:/usr/lib/postgresql/14 \</span><br><span class="line">  -v ./data/postgres-old-bin/share:/usr/share/postgresql/14 \</span><br><span class="line">  --workdir /var/lib/postgresql/data \</span><br><span class="line">  --user postgres \</span><br><span class="line">  -e POSTGRES_PASSWORD=mysecretpassword \</span><br><span class="line">  -e PGUSER=postgres \</span><br><span class="line">  -e PGPASSWORD=mysecretpassword \</span><br><span class="line">  postgis/postgis:17-3.6 \</span><br><span class="line">  pg_upgrade \</span><br><span class="line">    --old-datadir=/data \</span><br><span class="line">    --new-datadir=/var/lib/postgresql/data \</span><br><span class="line">    --old-bindir=/usr/lib/postgresql/14/bin \</span><br><span class="line">    --new-bindir=/usr/lib/postgresql/17/bin</span><br></pre></td></tr></table></figure>
+<p>参数说明：</p>
+<ul>
+<li><code>-v ./data/postgres-old-data:/data</code>：将旧数据目录挂载到容器内的 <code>/data</code>。</li>
+<li><code>-v ./data/postgres-new-data:/var/lib/postgresql/data</code>：将新数据目录挂载到容器内的 PostgreSQL 数据目录。</li>
+<li><code>-v ./data/postgres-old-bin/lib:/usr/lib/postgresql/14</code>：将旧版本的二进制文件挂载到容器内的 <code>/usr/lib/postgresql/14</code>。</li>
+<li><code>-v ./data/postgres-old-bin/share:/usr/share/postgresql/14</code>：将旧版本的共享文件挂载到容器内的 <code>/usr/share/postgresql/14</code>。</li>
+<li><code>--workdir /var/lib/postgresql/data</code>：设置工作目录为新数据目录。</li>
+<li><code>--user postgres</code>：以 postgres 用户身份运行容器。</li>
+<li><code>-e POSTGRES_PASSWORD=mysecretpassword</code>：设置 PostgreSQL 密码环境变量。</li>
+<li><code>-e PGUSER=postgres</code>：设置 PostgreSQL 用户环境变量。</li>
+<li><code>-e PGPASSWORD=mysecretpassword</code>：设置 PostgreSQL 密码环境变量。</li>
+</ul>
+<p>运行完成后，可以根据日志提示进行一些补充工作。</p>
+<ol>
+<li>会生成一个升级插件的sql脚本，可以执行一下，或者后续自行在数据库里执行升级对应的插件版本。</li>
+<li>会生成一个移除旧目录的脚本，鉴于我们后面直接不挂载旧目录了，可以不管。</li>
+<li>还提示推荐执行一下优化查询统计的命令：<code>vacuumdb --all --analyze-in-stages</code>。</li>
+</ol>
+<h2 id="三-升级后的清理工作"><a class="markdownIt-Anchor" href="#三-升级后的清理工作"></a> 三、升级后的清理工作</h2>
+<p>运行新镜像</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mv</span> data/postgres-new-data data/postgres</span><br><span class="line">docker run --name postgres -v ./data/postgres:/var/lib/postgresql/data -e POSTGRES_PASSWORD=mysecretpassword -p 5432:5432 -d postgis/postgis:17-3.6</span><br></pre></td></tr></table></figure>
+<p>执行优化</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> -it -u postgres postgres vacuumdb --all --analyze-in-stages</span><br></pre></td></tr></table></figure>
+<p>确认无误后可以删除旧数据了。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">rm</span> postgres-old</span><br><span class="line"><span class="built_in">rm</span> -rf data/postgres-old-data</span><br><span class="line"><span class="built_in">rm</span> -rf data/postgres-old-bin</span><br><span class="line"><span class="built_in">rm</span> -rf data/postgres-old.tar</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Dirge
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.iszy.cc/posts/postgres-update-docker/" title="PostgreSQL Docker镜像大版本升级">https://www.iszy.cc/posts/postgres-update-docker/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/Docker/" rel="tag"><i class="fa fa-tag"></i> Docker</a>
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" rel="tag"><i class="fa fa-tag"></i> 数据库</a>
+              <a href="/tags/PostgreSQL/" rel="tag"><i class="fa fa-tag"></i> PostgreSQL</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/create-swap/" rel="prev" title="Linux添加虚拟内存(swap)">
+                  <i class="fa fa-angle-left"></i> Linux添加虚拟内存(swap)
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="waline"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2017 – 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Dirge</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">111k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">6:45</span>
+  </span>
+</div>
+  <div class="powered-by">由 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZw==">NexT.Gemini</span> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-CN","enable":true,"serverURL":"https://wl.iszy.xyz","cssUrl":"https://cdn.owooo.cc/jsd/npm/@waline/client@v3/dist/waline.css","commentCount":false,"pageview":true,"libUrl":"https://cdn.owooo.cc/jsd/npm/@waline/client@v3/dist/waline.umd.js","locale":{"placeholder":"本站支持匿名评论，无需登录~(●'◡'●)\n与文章无关的留言请前往本站留言板，谢谢配合~"},"emoji":["https://cdn.owooo.cc/jsd/npm/@waline/emojis@1.1.0/bilibili","https://cdn.owooo.cc/jsd/npm/@waline/emojis@1.1.0/weibo","https://cdn.owooo.cc/jsd/npm/@waline/emojis@1.1.0/alus","https://cdn.owooo.cc/jsd/npm/@waline/emojis@1.1.0/qq","https://cdn.owooo.cc/jsd/npm/@waline/emojis@1.1.0/tieba","https://cdn.owooo.cc/jsd/npm/@waline/emojis@1.1.0/tw-emoji"],"meta":["nick","mail"],"requiredMeta":["nick"],"wordLimit":0,"login":"enable","pageSize":10,"dark":"auto","el":"#waline","comment":true,"path":"/posts/postgres-update-docker/"}</script>
+<link rel="stylesheet" href="https://cdn.owooo.cc/jsd/npm/@waline/client@v3/dist/waline.css">
+<script>
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.waline.el).then(() =>
+    NexT.utils.getScript(CONFIG.waline.libUrl, { condition: window.Waline })
+  ).then(() => 
+    Waline.init(Object.assign({}, CONFIG.waline,{ el: document.querySelector(CONFIG.waline.el) }))
+  );
+});
+</script>
+<script type="text/html" id="friendsContent">
+    <div class="links-content">
+        <div class="link-navigation">
+            
+                <div class="card">
+                    <a href="https://www.iszy.cc/" target="_blank">
+                        <img class="ava" src="https://www.iszy.cc/images/avatar.png"/></a>
+                    <div class="card-header">
+                        <div>
+                            <a href="https://www.iszy.cc/" target="_blank">随遇而安</a>
+                        </div>
+                        <div class="info" title="生活吐槽 & 学习记录">生活吐槽 & 学习记录</div>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <a href="https://lstarry.github.io/" target="_blank">
+                        <img class="ava" src="https://lstarry.github.io/images/avatar.jpg"/></a>
+                    <div class="card-header">
+                        <div>
+                            <a href="https://lstarry.github.io/" target="_blank">人间有味是清欢</a>
+                        </div>
+                        <div class="info" title="Gone with the wind">Gone with the wind</div>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <a href="https://samkallon.top" target="_blank">
+                        <img class="ava" src="https://samkallon.top/img/avatar.png"/></a>
+                    <div class="card-header">
+                        <div>
+                            <a href="https://samkallon.top" target="_blank">samkallon</a>
+                        </div>
+                        <div class="info" title="技术分享 && 生活日常">技术分享 && 生活日常</div>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <a href="https://www.hurbai.com/link" target="_blank">
+                        <img class="ava" src="https://img.iszy.cc/logos/www.hurbai.com.ico"/></a>
+                    <div class="card-header">
+                        <div>
+                            <a href="https://www.hurbai.com/link" target="_blank">大灰hurbai</a>
+                        </div>
+                        <div class="info" title="各种资源分享">各种资源分享</div>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <a href="https://stellarkey.github.io/link/" target="_blank">
+                        <img class="ava" src="https://img.iszy.cc/logos/vel.life.gif"/></a>
+                    <div class="card-header">
+                        <div>
+                            <a href="https://stellarkey.github.io/link/" target="_blank">思维之海</a>
+                        </div>
+                        <div class="info" title="在云端，寻找我的星匙">在云端，寻找我的星匙</div>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <a href="https://www.xxwhite.com/" target="_blank">
+                        <img class="ava" src="https://img.iszy.cc/logos/www.xxwhite.com.jpg"/></a>
+                    <div class="card-header">
+                        <div>
+                            <a href="https://www.xxwhite.com/" target="_blank">叉叉白</a>
+                        </div>
+                        <div class="info" title="一个小白搞机的记事本">一个小白搞机的记事本</div>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <a href="https://lala.im/" target="_blank">
+                        <img class="ava" src="https://img.iszy.cc/logos/lala.im.ico"/></a>
+                    <div class="card-header">
+                        <div>
+                            <a href="https://lala.im/" target="_blank">荒岛</a>
+                        </div>
+                        <div class="info" title="暂无介绍~">暂无介绍~</div>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <a href="https://blog.jimmyho.net/links.html" target="_blank">
+                        <img class="ava" src="https://img.iszy.cc/logos/blog.jimmyho.net.jpg"/></a>
+                    <div class="card-header">
+                        <div>
+                            <a href="https://blog.jimmyho.net/links.html" target="_blank">Jimmy's Blog</a>
+                        </div>
+                        <div class="info" title="永远相信美好的事情即将发生">永远相信美好的事情即将发生</div>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <a href="https://crosschannel.cc/friends/" target="_blank">
+                        <img class="ava" src="https://img.iszy.cc/logos/crosschannel.cc.ico"/></a>
+                    <div class="card-header">
+                        <div>
+                            <a href="https://crosschannel.cc/friends/" target="_blank">宅日记</a>
+                        </div>
+                        <div class="info" title="一个不知名懒肥宅的自留地">一个不知名懒肥宅的自留地</div>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <a href="https://www.zjhuiwan.cn/" target="_blank">
+                        <img class="ava" src="https://img.iszy.cc/logos/www.zjhuiwan.cn.png"/></a>
+                    <div class="card-header">
+                        <div>
+                            <a href="https://www.zjhuiwan.cn/" target="_blank">ZJBLOG</a>
+                        </div>
+                        <div class="info" title="记录生活·分享技术">记录生活·分享技术</div>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <a href="https://pengrl.com/link/" target="_blank">
+                        <img class="ava" src="https://img.iszy.cc/logos/pengrl.com.jpeg"/></a>
+                    <div class="card-header">
+                        <div>
+                            <a href="https://pengrl.com/link/" target="_blank">yoko blog</a>
+                        </div>
+                        <div class="info" title="非常程序员">非常程序员</div>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <a href="https://finisky.github.io/links/" target="_blank">
+                        <img class="ava" src="https://img.iszy.cc/logos/finisky.github.io.png"/></a>
+                    <div class="card-header">
+                        <div>
+                            <a href="https://finisky.github.io/links/" target="_blank">Finisky Garden</a>
+                        </div>
+                        <div class="info" title="Easy doesn’t enter into grown-up life.">Easy doesn’t enter into grown-up life.</div>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <a href="https://blog.tmen.top/link" target="_blank">
+                        <img class="ava" src="https://img.iszy.cc/1644659059598.png"/></a>
+                    <div class="card-header">
+                        <div>
+                            <a href="https://blog.tmen.top/link" target="_blank">Tmenの博客</a>
+                        </div>
+                        <div class="info" title="菜鸟进步营地">菜鸟进步营地</div>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <a href="https://core.dpangzi.com" target="_blank">
+                        <img class="ava" src="https://img.iszy.cc/1644659180128.png"/></a>
+                    <div class="card-header">
+                        <div>
+                            <a href="https://core.dpangzi.com" target="_blank">叫我阿胖</a>
+                        </div>
+                        <div class="info" title="追赶大佬脚步的阿胖">追赶大佬脚步的阿胖</div>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <a href="https://yongtaiq.github.io/" target="_blank">
+                        <img class="ava" src="https://img.iszy.cc/1648013691501.png"/></a>
+                    <div class="card-header">
+                        <div>
+                            <a href="https://yongtaiq.github.io/" target="_blank">闲话茶楼</a>
+                        </div>
+                        <div class="info" title="欢迎来找我随便聊点什么哦">欢迎来找我随便聊点什么哦</div>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <a href="https://dong2000.xyz/links/" target="_blank">
+                        <img class="ava" src="https://dong2000.xyz/wombo.png"/></a>
+                    <div class="card-header">
+                        <div>
+                            <a href="https://dong2000.xyz/links/" target="_blank">Anomie</a>
+                        </div>
+                        <div class="info" title="野夫怒见不平处，磨平胸中万古刀">野夫怒见不平处，磨平胸中万古刀</div>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <a href="https://azurelake.cn" target="_blank">
+                        <img class="ava" src="https://azurelake.cn/Avatar.jpg"/></a>
+                    <div class="card-header">
+                        <div>
+                            <a href="https://azurelake.cn" target="_blank">沧浪湖</a>
+                        </div>
+                        <div class="info" title="沧浪’s Blog">沧浪’s Blog</div>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <a href="https://wcowin.work/link/" target="_blank">
+                        <img class="ava" src="https://s2.loli.net/2024/02/01/gaE47y5fKM6kosV.png"/></a>
+                    <div class="card-header">
+                        <div>
+                            <a href="https://wcowin.work/link/" target="_blank">Wcowin’s Web</a>
+                        </div>
+                        <div class="info" title="循此苦旅，以达星辰">循此苦旅，以达星辰</div>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <a href="https://www.ifb.me/zh/links" target="_blank">
+                        <img class="ava" src="https://www.ifb.me/static/images/avatar.png"/></a>
+                    <div class="card-header">
+                        <div>
+                            <a href="https://www.ifb.me/zh/links" target="_blank">Innovation for Bytes</a>
+                        </div>
+                        <div class="info" title="专注于为读者提供有趣、有用和实际的文章，和大家一起探索、学习技术的最新应用场景。">专注于为读者提供有趣、有用和实际的文章，和大家一起探索、学习技术的最新应用场景。</div>
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+</script>
+<script type="module">
+    function renderFriends() {
+        if (location.pathname !== "/links/") {
+            return
+        }
+        document
+            .getElementById("links")
+            .innerHTML = document
+            .getElementById("friendsContent")
+            .innerHTML;
+    }
+    renderFriends()
+    document.addEventListener('pjax:success', renderFriends)
+</script>
+
+</body>
+</html>
