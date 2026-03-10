@@ -10,12 +10,12 @@
     "up": "taze minor -I"
   },
   "hexo": {
-    "version": "7.3.0"
+    "version": "8.1.1"
   },
   "dependencies": {
     "@waline/hexo-next": "^3.0.1",
     "chalk": "^5.6.2",
-    "hexo": "^7.3.0",
+    "hexo": "^8.1.1",
     "hexo-algoliasearch": "^2.0.1",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-category": "^2.0.0",
@@ -31,7 +31,7 @@
     "hexo-word-counter": "^0.2.2",
     "taze": "^19.10.0"
   },
-  "packageManager": "pnpm@10.30.3",
+  "packageManager": "pnpm@10.32.0",
   "devDependencies": {
     "css": "^3.0.0",
     "js-yaml": "^4.1.1"

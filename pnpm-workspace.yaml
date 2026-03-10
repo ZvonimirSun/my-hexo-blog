@@ -1,3 +1,6 @@
 onlyBuiltDependencies:
   - hexo-util
   - hexo-word-counter
+
+overrides:
+  hexo: ^8.1.1
