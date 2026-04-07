@@ -95,7 +95,16 @@
   <script src="https://cdn.ovooo.cc/jsd/npm/quicklink@3.0.1/dist/quicklink.umd.js" integrity="sha256-44BednzIpUeQJcY8qtLyarFu0UCCTbgmWOvaoehiFQQ=" crossorigin="anonymous" defer></script>
   <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":false,"delay":true,"timeout":3000,"priority":true,"url":"https://www.iszy.cc/posts/Git-hooks-Jekyll/"}</script>
   <script src="/js/third-party/quicklink.js" defer></script>
-<link rel="dns-prefetch" href="https://wl.iszy.xyz">
+<link rel="dns-prefetch" href="https://wl.iszy.xyz"><script>
+window.checkIpPromise = fetch('https://ip.ovooo.cc/json').then(res => res.json()).then(res => {
+    if (res.country !== 'CN') {
+        return true
+    }
+    return false
+}).catch(() => {
+    return false
+})
+</script>
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>

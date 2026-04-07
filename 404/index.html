@@ -35,8 +35,8 @@
 <meta property="og:site_name" content="随遇而安">
 <meta property="og:description" content="你来到这个页面，通常有两个原因。  一、链接错误 原因：博客搬迁造成的旧链接失效。 请输入正确的域名！ 1https:&#x2F;&#x2F;www.iszy.cc 在「标签」中找你需要的内容。  二、维度攻击 不明力量入侵，你想要访问的页面被摧毁了。         pre {           background: black;           border: none;     }">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2026-03-10T05:23:19.707Z">
-<meta property="article:modified_time" content="2026-03-10T05:23:19.707Z">
+<meta property="article:published_time" content="2026-04-07T10:24:01.073Z">
+<meta property="article:modified_time" content="2026-04-07T10:24:01.073Z">
 <meta property="article:author" content="Dirge">
 <meta property="article:tag" content="随遇而安, Dirge, iszy">
 <meta name="twitter:card" content="summary">
@@ -95,7 +95,16 @@
   <script src="https://cdn.ovooo.cc/jsd/npm/quicklink@3.0.1/dist/quicklink.umd.js" integrity="sha256-44BednzIpUeQJcY8qtLyarFu0UCCTbgmWOvaoehiFQQ=" crossorigin="anonymous" defer></script>
   <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":false,"delay":true,"timeout":3000,"priority":true,"url":"https://www.iszy.cc/404/"}</script>
   <script src="/js/third-party/quicklink.js" defer></script>
-<link rel="dns-prefetch" href="https://wl.iszy.xyz">
+<link rel="dns-prefetch" href="https://wl.iszy.xyz"><script>
+window.checkIpPromise = fetch('https://ip.ovooo.cc/json').then(res => res.json()).then(res => {
+    if (res.country !== 'CN') {
+        return true
+    }
+    return false
+}).catch(() => {
+    return false
+})
+</script>
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>

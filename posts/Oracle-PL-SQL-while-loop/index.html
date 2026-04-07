@@ -101,7 +101,16 @@
   <script src="https://cdn.ovooo.cc/jsd/npm/quicklink@3.0.1/dist/quicklink.umd.js" integrity="sha256-44BednzIpUeQJcY8qtLyarFu0UCCTbgmWOvaoehiFQQ=" crossorigin="anonymous" defer></script>
   <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":false,"delay":true,"timeout":3000,"priority":true,"url":"https://www.iszy.cc/posts/Oracle-PL-SQL-while-loop/"}</script>
   <script src="/js/third-party/quicklink.js" defer></script>
-<link rel="dns-prefetch" href="https://wl.iszy.xyz">
+<link rel="dns-prefetch" href="https://wl.iszy.xyz"><script>
+window.checkIpPromise = fetch('https://ip.ovooo.cc/json').then(res => res.json()).then(res => {
+    if (res.country !== 'CN') {
+        return true
+    }
+    return false
+}).catch(() => {
+    return false
+})
+</script>
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
@@ -379,9 +388,9 @@
 </div>
 
           <div class="post-tags">
-              <a href="/tags/Oracle/" rel="tag"><i class="fa fa-tag"></i> Oracle</a>
-              <a href="/tags/SQL/" rel="tag"><i class="fa fa-tag"></i> SQL</a>
               <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" rel="tag"><i class="fa fa-tag"></i> 数据库</a>
+              <a href="/tags/SQL/" rel="tag"><i class="fa fa-tag"></i> SQL</a>
+              <a href="/tags/Oracle/" rel="tag"><i class="fa fa-tag"></i> Oracle</a>
           </div>
 
         
