@@ -1,0 +1,10 @@
+<script>
+window.checkIpPromise = fetch('https://ip.ovooo.cc/json').then(res => res.json()).then(res => {
+    if (res.country !== 'CN') {
+        return true
+    }
+    return false
+}).catch(() => {
+    return false
+})
+</script>
