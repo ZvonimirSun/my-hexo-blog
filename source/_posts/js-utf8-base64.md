@@ -16,7 +16,7 @@ permalink: /posts/c/
 
 这边做了个 Base64 编解码的小工具，供大家使用。
 
-[Base64 编解码](https://tools.iszy.xyz/crypto/base64)
+[Base64 编解码](https://tools.ovooo.cc/base64)
 
 ## Base64 编解码
 
