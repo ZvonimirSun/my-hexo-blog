@@ -45,7 +45,7 @@ textContent、innerText 与 innerHTML 三个接口，在我们想要获取或改
 </html>
 ```
 
-![](https://img.iszy.cc/1652678013076.png)
+![](https://img.ovooo.cc/1652678013076.png)
 
 从结果里我们可以清晰的看出 textContent、innerText 和 innerHTML 的区别。
 
@@ -56,7 +56,6 @@ textContent、innerText 与 innerHTML 三个接口，在我们想要获取或改
 ## 总结差异
 
 1. 行为区别
-
    - `textContent` 和 `innerText` 获取的是元素内容；`innerHTML` 获取的是元素的 html 文本
    - `textContent` 会获取所有元素的内容，包括 `script` 和 `style` 元素；`innerText` 不会
    - `innerText` 会受到 css 影响，不会返回隐藏内容；`textContent` 不会
@@ -64,7 +63,6 @@ textContent、innerText 与 innerHTML 三个接口，在我们想要获取或改
    - 因为 `innerText` 受样式影响，会触发重排，而 `textContent` 不会。
 
 2. 归属区别
-
    - `textContent` 是 `Node` 对象的属性
    - `innerText` 是 `Element` 对象的属性
    - `innerHTML` 是 `HTMLElement` 对象的属性

@@ -18,7 +18,7 @@ tags:
 
 ### 窗体设计
 
-![](https://img.iszy.cc/20190318213117.png)
+![](https://img.ovooo.cc/20190318213117.png)
 
 ### 代码
 

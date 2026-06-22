@@ -49,7 +49,7 @@ warning: Immediate deletion does not wait for confirmation that the running reso
 
 ### 3. 删除 finalizers 相关内容
 
-![](https://img.iszy.cc/1660293510641.png)
+![](https://img.ovooo.cc/1660293510641.png)
 
 ### 4. 运行 kube-proxy
 

@@ -17,7 +17,7 @@ copyright: false
 
 我采用的是一个非常流行的库[require.js](http://requirejs.org/)。
 
-![](https://img.iszy.cc/20190814101519.png)
+![](https://img.ovooo.cc/20190814101519.png)
 
 ## 为什么要用 require.js？
 
@@ -89,7 +89,7 @@ alert("加载成功！");
 require(["moduleA", "moduleB", "moduleC"], function (
   moduleA,
   moduleB,
-  moduleC
+  moduleC,
 ) {
   // some code here
 });

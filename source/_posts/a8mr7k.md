@@ -81,7 +81,7 @@ font:
 
 然后我发现完整展示实际配置内容的较少，且基本上每一个类型都只配置了一个 font family，在其中一篇博文中还表示多在 NexT 主题的这个配置下多 font family 的配置是不支持的，这个我还是感觉比较诧异的，应该会有不少人有这样的需求吧。
 
-![](https://img.iszy.cc/20210225171504.png)
+![](https://img.ovooo.cc/20210225171504.png)
 
 所以根据网上的说法，就有以下两个方法进行字体配置。
 
@@ -90,7 +90,6 @@ font:
    在 NexT 配置中直接进行配置，内容为单个 font-family 值。
 
 2. 复杂配置
-
    1. 在主题配置文件中指定自定义样式文件
 
       ```yaml
@@ -118,16 +117,28 @@ font:
       h5,
       h6,
       .post-body {
-        font-family: EB Garamond, "Noto Serif SC", sans-serif;
+        font-family:
+          EB Garamond,
+          "Noto Serif SC",
+          sans-serif;
       }
 
       .site-title {
-        font-family: Cinzel Decorative, EB Garamond, "Noto Serif SC", sans-serif;
+        font-family:
+          Cinzel Decorative,
+          EB Garamond,
+          "Noto Serif SC",
+          sans-serif;
       }
 
       pre,
       code {
-        font-family: JetBrains Mono, consolas, Menlo, monospace, "Noto Serif SC";
+        font-family:
+          JetBrains Mono,
+          consolas,
+          Menlo,
+          monospace,
+          "Noto Serif SC";
       }
       ```
 

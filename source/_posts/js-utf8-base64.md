@@ -30,7 +30,7 @@ permalink: /posts/c/
 
 其中的使用的算法在[RFC 4648, 第四段](https://datatracker.ietf.org/doc/html/rfc4648#section-4)中进行了描述。
 
-![The Base 64 Alphabet](https://img.iszy.cc/1643809821264.png)
+![The Base 64 Alphabet](https://img.ovooo.cc/1643809821264.png)
 
 可以通过`window.atob(string)`、`window.btoa(base64string)`的方式调用，非常方便。
 
@@ -112,7 +112,7 @@ function utf8_to_b64(str) {
   return btoa(
     encodeURIComponent(str).replace(/%([0-9A-F]{2})/g, function (match, p1) {
       return String.fromCharCode("0x" + p1);
-    })
+    }),
   );
 }
 
@@ -123,7 +123,7 @@ function b64_to_utf8(str) {
       .map(function (c) {
         return "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2);
       })
-      .join("")
+      .join(""),
   );
 }
 
