@@ -7,7 +7,13 @@ on:
     paths-ignore:
       - ".github/**"
       - "source/_drafts/**"
+  repository_dispatch:
+    types:
+      - blog-posts-updated
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   build:
@@ -18,6 +24,19 @@ jobs:
         with:
           fetch-depth: 0
           submodules: true
+      - name: 更新文章子模块
+        run: |
+          git submodule update --remote --checkout source/_posts
+          if git diff --quiet -- source/_posts; then
+            echo "文章子模块已经是最新版本"
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add source/_posts
+          git commit -m "chore: 更新文章子模块"
+          git push origin HEAD:main
       - name: 恢复文件修改时间
         run: |
           git ls-files -z | while read -d '' path; do touch -d "$(git log -1 --format="@%ct" "$path")" "$path"; done
