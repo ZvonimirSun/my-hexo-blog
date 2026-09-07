@@ -774,7 +774,7 @@ baidu_analytics: # <app_id>
 
 # Cloudflare Web Analytics
 # See: https://www.cloudflare.com/web-analytics/
-cloudflare_analytics: c68cf7920b0f4e2a9dd42c7a5b379fd7
+cloudflare_analytics:
 
 # Microsoft Clarity Analytics
 # See: https://clarity.microsoft.com/
